@@ -1,0 +1,11 @@
+machine:
+  timezone: America/New_York
+  node:
+    version: 4.3.0
+
+  post:
+    - npm install -g npm@3.9.3
+
+dependencies:
+  pre:
+    - rm -rf node_modules/brandibble
