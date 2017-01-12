@@ -6,3 +6,5 @@ export const brandibble = new Brandibble({
   brandId: ENV.BRANDIBBLE_BRAND_ID,
   apiEndpoint: ENV.BRANDIBBLE_API_ENDPOINT
 });
+
+export const SAMPLE_MENU_LOCATION_ID = 19;
