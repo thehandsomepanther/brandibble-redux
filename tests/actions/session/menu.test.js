@@ -25,13 +25,13 @@ describe('actions/session/menu', () => {
       expect(actionsCalled).to.have.length.of.at.least(2);
     });
 
-    it('should have MENU_FETCH_PENDING action', () => {
-      action = find(actionsCalled, {type: 'MENU_FETCH_PENDING'});
+    it('should have MENU_FETCH_START action', () => {
+      action = find(actionsCalled, {type: 'MENU_FETCH_START'});
       expect(action).to.exist;
     });
 
     it('should have MENU_FETCH_FULFILLED action', () => {
-      action = find(actionsCalled, {type: 'MENU_FETCH_FULFILLED'});
+      action = find(actionsCalled, {type: 'MENU_FETCH_SUCCESS'});
       expect(action).to.exist;
       expect(action).to.have.property('payload');
     });
