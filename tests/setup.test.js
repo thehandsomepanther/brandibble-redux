@@ -1,5 +1,8 @@
 import Brandibble from 'brandibble';
 import ENV from './config/environment';
+import localforage from 'localforage';
+
+localforage.config({storeName: 'brandibble-redux-test'});
 
 const SAMPLE_MENU_LOCATION_ID = 19;
 
@@ -7,7 +10,8 @@ before(done => {
   let brandibbleRef = new Brandibble({
     apiKey: ENV.BRANDIBBLE_API_KEY,
     brandId: ENV.BRANDIBBLE_BRAND_ID,
-    apiEndpoint: ENV.BRANDIBBLE_API_ENDPOINT
+    apiEndpoint: ENV.BRANDIBBLE_API_ENDPOINT,
+    storage: localforage,
   });
 
   const setAuthToken = () => {
