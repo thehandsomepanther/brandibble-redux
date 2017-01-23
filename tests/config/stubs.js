@@ -2,7 +2,7 @@ import Brandibble from 'brandibble';
 import ENV from './environment';
 import localforage from 'localforage';
 
-localforage.config({storeName: 'brandibble-redux-test'});
+localforage.config({name: 'brandibble-redux-test', storeName: 'brandibble-redux-test'});
 
 export const brandibble = new Brandibble({
   apiKey: ENV.BRANDIBBLE_API_KEY,
