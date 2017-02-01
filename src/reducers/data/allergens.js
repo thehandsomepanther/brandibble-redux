@@ -1,5 +1,5 @@
 import reduxCrud from 'redux-crud';
-const baseReducers = reduxCrud.reducersFor('allergens');
+const baseReducers = reduxCrud.List.reducersFor('allergens');
 
 const initialState = [];
 
