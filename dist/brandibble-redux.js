@@ -41825,17 +41825,17 @@ var FULFILLED = _constants.Status.FULFILLED,
 var _reduxCrud$actionType = _reduxCrud2.default.actionTypesFor('allergens'),
     ALLERGENS_FETCH_START = _reduxCrud$actionType.ALLERGENS_FETCH_START,
     ALLERGENS_FETCH_SUCCESS = _reduxCrud$actionType.ALLERGENS_FETCH_SUCCESS,
-    ALLERGENS_FETCH_REJECTED = _reduxCrud$actionType.ALLERGENS_FETCH_REJECTED;
+    ALLERGENS_FETCH_ERROR = _reduxCrud$actionType.ALLERGENS_FETCH_ERROR;
 
 var _reduxCrud$actionType2 = _reduxCrud2.default.actionTypesFor('locations'),
     LOCATIONS_FETCH_START = _reduxCrud$actionType2.LOCATIONS_FETCH_START,
     LOCATIONS_FETCH_SUCCESS = _reduxCrud$actionType2.LOCATIONS_FETCH_SUCCESS,
-    LOCATIONS_FETCH_REJECTED = _reduxCrud$actionType2.LOCATIONS_FETCH_REJECTED;
+    LOCATIONS_FETCH_ERROR = _reduxCrud$actionType2.LOCATIONS_FETCH_ERROR;
 
 var _reduxCrud$actionType3 = _reduxCrud2.default.actionTypesFor('menus'),
     MENUS_FETCH_START = _reduxCrud$actionType3.MENUS_FETCH_START,
     MENUS_FETCH_SUCCESS = _reduxCrud$actionType3.MENUS_FETCH_SUCCESS,
-    MENUS_FETCH_REJECTED = _reduxCrud$actionType3.MENUS_FETCH_REJECTED;
+    MENUS_FETCH_ERROR = _reduxCrud$actionType3.MENUS_FETCH_ERROR;
 
 var initialState = {
   fetchAllergens: IDLE,
@@ -41852,21 +41852,21 @@ function status() {
       return _extends({}, state, { fetchAllergens: PENDING });
     case ALLERGENS_FETCH_SUCCESS:
       return _extends({}, state, { fetchAllergens: FULFILLED });
-    case ALLERGENS_FETCH_REJECTED:
+    case ALLERGENS_FETCH_ERROR:
       return _extends({}, state, { fetchAllergens: REJECTED });
 
     case LOCATIONS_FETCH_START:
       return _extends({}, state, { fetchLocations: PENDING });
     case LOCATIONS_FETCH_SUCCESS:
       return _extends({}, state, { fetchLocations: FULFILLED });
-    case LOCATIONS_FETCH_REJECTED:
+    case LOCATIONS_FETCH_ERROR:
       return _extends({}, state, { fetchLocations: REJECTED });
 
     case MENUS_FETCH_START:
       return _extends({}, state, { fetchMenu: PENDING });
     case MENUS_FETCH_SUCCESS:
       return _extends({}, state, { fetchMenu: FULFILLED });
-    case MENUS_FETCH_REJECTED:
+    case MENUS_FETCH_ERROR:
       return _extends({}, state, { fetchMenu: REJECTED });
 
     default:
