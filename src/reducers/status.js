@@ -1,4 +1,5 @@
 // TODO: this reducer is untested
+import { VALIDATE_USER } from 'actions/session/user';
 import { Status } from 'utils/constants';
 import reduxCrud from 'redux-crud';
 
@@ -31,6 +32,7 @@ const initialState = {
   fetchAllergens: IDLE,
   fetchLocations: IDLE,
   fetchMenu: IDLE,
+  validateUser: IDLE,
 };
 
 export default function status(state=initialState, action) {
@@ -46,6 +48,10 @@ export default function status(state=initialState, action) {
     case MENUS_FETCH_START: return { ...state,   fetchMenu: PENDING }
     case MENUS_FETCH_SUCCESS: return { ...state, fetchMenu: FULFILLED }
     case MENUS_FETCH_ERROR: return { ...state,  fetchMenu: REJECTED }
+
+    case `${VALIDATE_USER}_START`: return { ...state,   validateUser: PENDING }
+    case `${VALIDATE_USER}_SUCCESS`: return { ...state, validateUser: FULFILLED }
+    case `${VALIDATE_USER}_ERROR`: return { ...state,  validateUser: REJECTED }
 
     default: return state;
   }
