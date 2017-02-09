@@ -1,2 +1,2 @@
 export { fetchMenu } from './menus';
-export { validateUser } from './user';
+export { authenticateUser, unauthenticateUser, validateUser } from './user';
