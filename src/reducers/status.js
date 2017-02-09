@@ -1,5 +1,5 @@
 // TODO: this reducer is untested
-import { SETUP_BRANDIBBLE } from 'actions/setup';
+import { SETUP_BRANDIBBLE, SETUP_BRANDIBBLE_REDUX } from 'actions/setup';
 import { RESOLVE_ORDER } from 'actions/session/order';
 import {
   AUTHENTICATE_USER,
@@ -37,6 +37,7 @@ const {
 
 const initialState = {
   setupBrandibble: IDLE,
+  setupBrandibbleRedux: IDLE,
   fetchAllergens: IDLE,
   fetchLocations: IDLE,
   fetchMenu: IDLE,
@@ -52,6 +53,10 @@ export default function status(state=initialState, action) {
     case `${SETUP_BRANDIBBLE}_PENDING`: return { ...state,   setupBrandibble: PENDING }
     case `${SETUP_BRANDIBBLE}_FULFILLED`: return { ...state, setupBrandibble: FULFILLED }
     case `${SETUP_BRANDIBBLE}_REJECTED`: return { ...state,  setupBrandibble: REJECTED }
+
+    case `${SETUP_BRANDIBBLE_REDUX}_PENDING`: return { ...state,   setupBrandibbleRedux: PENDING }
+    case `${SETUP_BRANDIBBLE_REDUX}_FULFILLED`: return { ...state, setupBrandibbleRedux: FULFILLED }
+    case `${SETUP_BRANDIBBLE_REDUX}_REJECTED`: return { ...state,  setupBrandibbleRedux: REJECTED }
 
     case ALLERGENS_FETCH_START: return { ...state, fetchAllergens: PENDING }
     case ALLERGENS_FETCH_SUCCESS: return { ...state, fetchAllergens: FULFILLED }

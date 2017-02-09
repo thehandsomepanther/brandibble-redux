@@ -1,4 +1,8 @@
+import { resolveOrder } from 'actions/session/order';
+import { resolveUser } from 'actions/session/user';
+
 export const SETUP_BRANDIBBLE = 'SETUP_BRANDIBBLE';
+export const SETUP_BRANDIBBLE_REDUX = 'SETUP_BRANDIBBLE_REDUX';
 
 function _setupBrandibble(brandibble) {
   return {
@@ -7,6 +11,23 @@ function _setupBrandibble(brandibble) {
   }
 }
 
+function _setupBrandibbleRedux(payload) {
+  return { type: SETUP_BRANDIBBLE_REDUX, payload }
+}
+
 export function setupBrandibble(Brandibble) {
   return dispatch => dispatch(_setupBrandibble(Brandibble));
+}
+
+export function setupBrandibbleRedux(Brandibble) {
+  return dispatch => {
+    const payload = dispatch(setupBrandibble(Brandibble)).then(({value}) => {
+      return Promise.all([
+        dispatch(resolveUser(value)),
+        dispatch(resolveOrder(value)),
+      ]);
+    });
+
+    return dispatch(_setupBrandibbleRedux(payload));
+  }
 }
