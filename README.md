@@ -36,6 +36,53 @@ export default combineReducers({
 });
 ```
 
+### Example
+```js
+import App from './components/App';
+import LoadingState from './components/LoadingState';
+import {
+  Brandibble,
+  setupBrandibbleRedux,
+} from 'brandibble-redux';
+import { connect } from 'redux';
+import { Component } from 'react'; // or 'react-native'
+
+const brandibble = new Brandibble({
+  // ...config
+});
+
+const mapStateToProps = state => {
+  const { setupBrandibbleRedux } = state.brandibble.status;
+
+  return {
+    loaded: setupBrandibbleRedux === 'SUCCESS',
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  setup: () => dispatch(setupBrandibbleRedux(brandibble)),
+};
+
+@connect(mapStateToProps, mapDispatchToProps)
+export default class Main extends Component {
+
+  componentWillMount() {
+    setup();
+  }
+
+  render() {
+    const { loaded } = this.props;
+
+    return (
+      <div>
+        { loaded ? <LoadingState /> : <App /> }
+      </div>
+    );
+  }
+}
+
+```
+
 ### Working on Brandibble Redux
 
 ```
