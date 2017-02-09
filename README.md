@@ -72,12 +72,7 @@ export default class Main extends Component {
 
   render() {
     const { loaded } = this.props;
-
-    return (
-      <div>
-        { loaded ? <LoadingState /> : <App /> }
-      </div>
-    );
+    return loaded ? <LoadingState /> : <App />;
   }
 }
 
