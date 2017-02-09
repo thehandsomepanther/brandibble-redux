@@ -1,6 +1,10 @@
 import { expect } from 'chai';
 import { authResponseStub } from '../../config/stubs';
-import { AUTHENTICATE_USER, UNAUTHENTICATE_USER } from 'actions/session/user';
+import {
+  AUTHENTICATE_USER,
+  RESOLVE_USER,
+  UNAUTHENTICATE_USER,
+} from 'actions/session/user';
 import reducer from 'reducers/user/attributes';
 
 const initialState = {};
@@ -18,13 +22,21 @@ describe('reducers/user/attributes', () => {
       type: `${AUTHENTICATE_USER}_FULFILLED`,
       payload,
     });
-    expect(reduced).to.equal(payload.currentUser);
+    expect(reduced).to.equal(payload);
   });
 
   it('handles the UNAUTHENTICATE_USER_FULFILLED action', () => {
-    let reduced = reducer(payload.currentUser, {
+    let reduced = reducer(payload, {
       type: `${UNAUTHENTICATE_USER}_FULFILLED`,
     });
     expect(reduced).to.deep.equal(initialState);
+  });
+
+  it('handles the RESOLVE_USER_FULFILLED action', () => {
+    let reduced = reducer(initialState, {
+      type: `${RESOLVE_USER}_FULFILLED`,
+      payload,
+    });
+    expect(reduced).to.equal(payload);
   });
 });
