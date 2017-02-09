@@ -1,5 +1,6 @@
 // TODO: this reducer is untested
 import { SETUP_BRANDIBBLE } from 'actions/setup';
+import { RESOLVE_ORDER } from 'actions/session/order';
 import {
   AUTHENTICATE_USER,
   UNAUTHENTICATE_USER,
@@ -38,6 +39,7 @@ const initialState = {
   fetchAllergens: IDLE,
   fetchLocations: IDLE,
   fetchMenu: IDLE,
+  resolveOrder: IDLE,
   authenticateUser: IDLE,
   unauthenticateUser: IDLE,
   validateUser: IDLE,
@@ -60,6 +62,10 @@ export default function status(state=initialState, action) {
     case MENUS_FETCH_START: return { ...state,   fetchMenu: PENDING }
     case MENUS_FETCH_SUCCESS: return { ...state, fetchMenu: FULFILLED }
     case MENUS_FETCH_ERROR: return { ...state,  fetchMenu: REJECTED }
+
+    case `${RESOLVE_ORDER}_PENDING`: return { ...state,   resolveOrder: PENDING }
+    case `${RESOLVE_ORDER}_FULFILLED`: return { ...state, resolveOrder: FULFILLED }
+    case `${RESOLVE_ORDER}_REJECTED`: return { ...state,  resolveOrder: REJECTED }
 
     case `${VALIDATE_USER}_PENDING`: return { ...state,   validateUser: PENDING }
     case `${VALIDATE_USER}_FULFILLED`: return { ...state, validateUser: FULFILLED }
