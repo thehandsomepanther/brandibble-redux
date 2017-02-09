@@ -19,5 +19,10 @@ export const customersValidateStub = {
   levelup_connected_email: 'api@brandibble.co',
 };
 
+export const validCredentialsStub = {
+  email: 'sanctuary-testing-email@example.com',
+  password: 'password'
+};
+
 export const SAMPLE_MENU_LOCATION_ID = 19;
 export const SAMPLE_EMAIL = 'sanctuary-testing-email@example.com';
