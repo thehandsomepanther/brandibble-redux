@@ -1,5 +1,10 @@
 // TODO: this reducer is untested
-import { VALIDATE_USER } from 'actions/session/user';
+import { SETUP_BRANDIBBLE } from 'actions/setup';
+import {
+  AUTHENTICATE_USER,
+  UNAUTHENTICATE_USER,
+  VALIDATE_USER,
+} from 'actions/session/user';
 import { Status } from 'utils/constants';
 import reduxCrud from 'redux-crud';
 
@@ -29,14 +34,21 @@ const {
 } = reduxCrud.actionTypesFor('menus');
 
 const initialState = {
+  setupBrandibble: IDLE,
   fetchAllergens: IDLE,
   fetchLocations: IDLE,
   fetchMenu: IDLE,
+  authenticateUser: IDLE,
+  unauthenticateUser: IDLE,
   validateUser: IDLE,
 };
 
 export default function status(state=initialState, action) {
   switch (action.type) {
+    case `${SETUP_BRANDIBBLE}_PENDING`: return { ...state,   setupBrandibble: PENDING }
+    case `${SETUP_BRANDIBBLE}_FULFILLED`: return { ...state, setupBrandibble: FULFILLED }
+    case `${SETUP_BRANDIBBLE}_REJECTED`: return { ...state,  setupBrandibble: REJECTED }
+
     case ALLERGENS_FETCH_START: return { ...state, fetchAllergens: PENDING }
     case ALLERGENS_FETCH_SUCCESS: return { ...state, fetchAllergens: FULFILLED }
     case ALLERGENS_FETCH_ERROR: return { ...state, fetchAllergens: REJECTED }
@@ -52,6 +64,18 @@ export default function status(state=initialState, action) {
     case `${VALIDATE_USER}_PENDING`: return { ...state,   validateUser: PENDING }
     case `${VALIDATE_USER}_FULFILLED`: return { ...state, validateUser: FULFILLED }
     case `${VALIDATE_USER}_REJECTED`: return { ...state,  validateUser: REJECTED }
+
+    case `${AUTHENTICATE_USER}_PENDING`: return { ...state,   authenticateUser: PENDING }
+    case `${AUTHENTICATE_USER}_FULFILLED`: return { ...state, authenticateUser: FULFILLED }
+    case `${AUTHENTICATE_USER}_REJECTED`: return { ...state,  authenticateUser: REJECTED }
+
+    case `${AUTHENTICATE_USER}_PENDING`: return { ...state,   authenticateUser: PENDING }
+    case `${AUTHENTICATE_USER}_FULFILLED`: return { ...state, authenticateUser: FULFILLED }
+    case `${AUTHENTICATE_USER}_REJECTED`: return { ...state,  authenticateUser: REJECTED }
+
+    case `${UNAUTHENTICATE_USER}_PENDING`: return { ...state,   unauthenticateUser: PENDING }
+    case `${UNAUTHENTICATE_USER}_FULFILLED`: return { ...state, unauthenticateUser: FULFILLED }
+    case `${UNAUTHENTICATE_USER}_REJECTED`: return { ...state,  unauthenticateUser: REJECTED }
 
     default: return state;
   }
