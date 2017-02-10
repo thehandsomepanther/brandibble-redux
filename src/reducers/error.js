@@ -1,4 +1,3 @@
-// TODO: reducer is untested
 import reduxCrud from 'redux-crud';
 
 const {
