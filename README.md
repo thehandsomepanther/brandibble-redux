@@ -55,7 +55,7 @@ const mapStateToProps = state => {
   const { setupBrandibbleRedux } = state.brandibble.status;
 
   return {
-    loaded: setupBrandibbleRedux === 'SUCCESS',
+    loaded: setupBrandibbleRedux === 'FULFILLED',
   };
 };
 
