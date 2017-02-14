@@ -3,6 +3,7 @@ import { SETUP_BRANDIBBLE, SETUP_BRANDIBBLE_REDUX } from 'actions/setup';
 import { RESOLVE_ORDER } from 'actions/session/order';
 import {
   AUTHENTICATE_USER,
+  FETCH_USER,
   UNAUTHENTICATE_USER,
   RESET_USER_PASSWORD,
   RESOLVE_USER,
@@ -37,9 +38,6 @@ const {
 } = reduxCrud.actionTypesFor('menus');
 
 const {
-  USER_FETCH_START,
-  USER_FETCH_SUCCESS,
-  USER_FETCH_ERROR,
   USER_UPDATE_START,
   USER_UPDATE_SUCCESS,
   USER_UPDATE_ERROR,
@@ -111,9 +109,9 @@ export default function status(state=initialState, action) {
     case `${RESET_USER_PASSWORD}_FULFILLED`: return { ...state, resetUserPassword: FULFILLED }
     case `${RESET_USER_PASSWORD}_REJECTED`: return { ...state,  resetUserPassword: REJECTED }
 
-    case USER_FETCH_START: return { ...state,   fetchUser: PENDING }
-    case USER_FETCH_SUCCESS: return { ...state, fetchUser: FULFILLED }
-    case USER_FETCH_ERROR: return { ...state,  fetchUser: REJECTED }
+    case `${FETCH_USER}_PENDING`: return { ...state,   fetchUser: PENDING }
+    case `${FETCH_USER}_FULFILLED`: return { ...state, fetchUser: FULFILLED }
+    case `${FETCH_USER}_REJECTED`: return { ...state,  fetchUser: REJECTED }
 
     case USER_UPDATE_START: return { ...state,   updateUser: PENDING }
     case USER_UPDATE_SUCCESS: return { ...state, updateUser: FULFILLED }
