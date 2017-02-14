@@ -1,9 +1,6 @@
 import reduxCrud from 'redux-crud';
 import generateUUID from 'utils/generateUUID';
 const {
-  fetchStart,
-  fetchSuccess,
-  fetchError,
   updateStart,
   updateSuccess,
   updateError,
@@ -16,6 +13,7 @@ export const VALIDATE_USER = 'VALIDATE_USER';
 export const AUTHENTICATE_USER = 'AUTHENTICATE_USER';
 export const UNAUTHENTICATE_USER = 'UNAUTHENTICATE_USER';
 export const RESOLVE_USER = 'RESOLVE_USER';
+export const FETCH_USER = 'FETCH_USER';
 export const RESET_USER_PASSWORD = 'RESET_USER_PASSWORD';
 
 const NO_OP = f => f;
@@ -53,6 +51,13 @@ function _resolveUser(payload) {
   return { type: RESOLVE_USER, payload: payload }
 }
 
+function _fetchUser(brandibble, id) {
+  return {
+    type: FETCH_USER,
+    payload: brandibble.customers.show(id).then(({data}) => data).catch(({errors}) => errors),
+  }
+}
+
 function _resetUserPassword(brandibble, email, success, fail) {
   return {
     type: RESET_USER_PASSWORD,
@@ -72,6 +77,10 @@ export function unauthenticateUser(brandibble, success=NO_OP, fail=NO_OP) {
   return dispatch => dispatch(_unauthenticateUser(brandibble, success, fail));
 }
 
+export function fetchUser(brandibble, id) {
+  return dispatch => dispatch(_fetchUser(brandibble, id));
+}
+
 // TODO - untested
 export function resetUserPassword(brandibble, email, success=NO_OP, fail=NO_OP) {
   return dispatch => dispatch(_resetUserPassword(brandibble, email, success, fail));
@@ -82,15 +91,6 @@ export function resolveUser(brandibble) {
   const payload = adapter.customerToken ? customers.current() : Promise.resolve({});
 
   return dispatch => dispatch(_resolveUser(payload));
-}
-
-export function fetchUser(brandibble, id) {
-  return dispatch => {
-    dispatch(fetchStart());
-    return brandibble.customers.show(id)
-      .then(({data}) => dispatch(fetchSuccess(data)))
-      .catch(({errors}) => dispatch(fetchError(errors)));
-  };
 }
 
 export function createUser(brandibble, data={}) {

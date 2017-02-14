@@ -18,8 +18,6 @@ const {
   USER_CREATE_START,
   USER_CREATE_SUCCESS,
   USER_CREATE_ERROR,
-  USER_FETCH_START,
-  USER_FETCH_SUCCESS,
   USER_UPDATE_START,
   USER_UPDATE_SUCCESS,
 } = reduxCrud.actionTypesFor('user');
@@ -313,13 +311,13 @@ describe('actions/session/user', () => {
             expect(actionsCalled).to.have.length.of.at.least(2);
           });
 
-          it('should have USER_FETCH_START action', () => {
-            action = find(actionsCalled, {type: USER_FETCH_START});
+          it('should have FETCH_USER_PENDING action', () => {
+            action = find(actionsCalled, {type: 'FETCH_USER_PENDING'});
             expect(action).to.exist;
           });
 
-          it('should have USER_FETCH_SUCCESS action', () => {
-            action = find(actionsCalled, {type: USER_FETCH_SUCCESS});
+          it('should have FETCH_USER_FULFILLED action', () => {
+            action = find(actionsCalled, {type: 'FETCH_USER_FULFILLED'});
             expect(action).to.exist;
           });
         });
