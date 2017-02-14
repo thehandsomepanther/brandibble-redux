@@ -71,8 +71,7 @@ export function resolveUser(brandibble) {
   return dispatch => dispatch(_resolveUser(payload));
 }
 
-// TODO - fix and test
-export function fetchUser(branddible, id) {
+export function fetchUser(brandibble, id) {
   return dispatch => {
     dispatch(fetchStart());
     return brandibble.customers.show(id)
@@ -86,17 +85,16 @@ export function createUser(brandibble, data={}) {
     const id = generateUUID()
     dispatch(createStart({record: data, id}));
     return brandibble.customers.create(data)
-      .then(({data}) => dispatch(createSuccess({id})))
+      .then(({data}) => dispatch(createSuccess({id, data})))
       .catch(({errors}) => dispatch(createError(errors, {id, data})));
   };
 }
 
-// TODO - fix and test
-export function updateUser(branddible, id, data={}) {
+export function updateUser(brandibble, id, data={}) {
   return dispatch => {
-    dispatch(updateStart());
-    return brandibble.customers.update(id, data)
-      .then(({data}) => dispatch(updateSucess(data)))
-      .catch(({errors}) => dispatch(updateError({error:errors})));
+    dispatch(updateStart({record: data, id}));
+    return brandibble.customers.updateCurrent(data)
+      .then(({data}) => dispatch(updateSuccess({id, data})))
+      .catch(({errors}) => dispatch(updateError(errors, {id, data})));
   };
 }
