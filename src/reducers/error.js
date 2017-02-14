@@ -8,6 +8,7 @@ import {
 
 // orders
 import { RESOLVE_ORDER } from 'actions/session/order';
+
 // user
 import {
   AUTHENTICATE_USER,
@@ -15,6 +16,16 @@ import {
   UNAUTHENTICATE_USER,
   VALIDATE_USER,
 } from 'actions/session/user';
+
+// addresses
+const {
+  ADDRESSES_FETCH_START,
+  ADDRESSES_FETCH_ERROR,
+  ADDRESSES_CREATE_START,
+  ADDRESSES_CREATE_ERROR,
+  ADDRESSES_DELETE_START,
+  ADDRESSES_DELETE_ERROR,
+} = reduxCrud.actionTypesFor('addresses');
 
 // allergens
 const {
@@ -40,6 +51,10 @@ export const initialState = {
   setupBrandibbleRedux: null,
   // allergens
   fetchAllergens: null,
+  // addresses
+  fetchAddresses: null,
+  createAddress: null,
+  deleteAddress: null,
   // locations
   fetchLocations: null,
   // menu
@@ -65,6 +80,16 @@ export default function error(state=initialState, action) {
     // allergens
     case ALLERGENS_FETCH_START: return { ...state, fetchAllergens: null };
     case ALLERGENS_FETCH_ERROR: return { ...state, fetchAllergens: action.error}
+
+    // addresses
+    case ADDRESSES_FETCH_START: return { ...state, fetchAddresses: null };
+    case ADDRESSES_FETCH_ERROR: return { ...state, fetchAddresses: action.error}
+
+    case ADDRESSES_CREATE_START: return { ...state, createAddress: null };
+    case ADDRESSES_CREATE_ERROR: return { ...state, createAddress: action.error}
+
+    case ADDRESSES_DELETE_START: return { ...state, deleteAddress: null };
+    case ADDRESSES_DELETE_ERROR: return { ...state, deleteAddress: action.error}
 
     // locations
     case LOCATIONS_FETCH_START: return { ...state, fetchLocations: null };
