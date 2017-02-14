@@ -15,6 +15,14 @@ import {
   UNAUTHENTICATE_USER,
   VALIDATE_USER,
 } from 'actions/session/user';
+const {
+  USER_FETCH_START,
+  USER_FETCH_ERROR,
+  USER_UPDATE_START,
+  USER_UPDATE_ERROR,
+  USER_CREATE_START,
+  USER_CREATE_ERROR,
+} = reduxCrud.actionTypesFor('user');
 
 // allergens
 const {
@@ -48,8 +56,11 @@ export const initialState = {
   resolveOrder: null,
   // user
   authenticateUser: null,
+  createUser: null,
+  fetchUser: null,
   resolveUser: null,
   unauthenticateUser: null,
+  updateUser: null,
   validateUser: null,
 };
 
@@ -90,6 +101,15 @@ export default function error(state=initialState, action) {
 
     case `${VALIDATE_USER}_PENDING`: return { ...state, validateUser: null };
     case `${VALIDATE_USER}_REJECTED`: return { ...state, validateUser: action.error}
+
+    case USER_FETCH_START: return { ...state, fetchUser: null };
+    case USER_FETCH_ERROR: return { ...state, fetchUser: action.error}
+
+    case USER_UPDATE_START: return { ...state, updateUser: null };
+    case USER_UPDATE_ERROR: return { ...state, updateUser: action.error}
+
+    case USER_CREATE_START: return { ...state, createUser: null };
+    case USER_CREATE_ERROR: return { ...state, createUser: action.error}
 
     default: return state;
   }
