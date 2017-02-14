@@ -1,3 +1,10 @@
+import reduxCrud from 'redux-crud';
+import generateUUID from 'utils/generateUUID';
+  createStart,
+  createSuccess,
+  createError,
+} = reduxCrud.actionCreatorsFor('user');
+
 export const VALIDATE_USER = 'VALIDATE_USER';
 export const AUTHENTICATE_USER = 'AUTHENTICATE_USER';
 export const UNAUTHENTICATE_USER = 'UNAUTHENTICATE_USER';
@@ -55,4 +62,14 @@ export function resolveUser(brandibble) {
   const payload = adapter.customerToken ? customers.current() : Promise.resolve({});
 
   return dispatch => dispatch(_resolveUser(payload));
+}
+
+export function createUser(brandibble, data={}) {
+  return dispatch => {
+    const id = generateUUID()
+    dispatch(createStart({record: data, id}));
+    return brandibble.customers.create(data)
+      .then(({data}) => dispatch(createSuccess({id})))
+      .catch(({errors}) => dispatch(createError(errors, {id, data})));
+  };
 }

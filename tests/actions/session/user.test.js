@@ -1,14 +1,22 @@
 import { expect } from 'chai';
 import find from 'lodash.find';
+import reduxCrud from 'redux-crud';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
 import { brandibble, SAMPLE_EMAIL, validCredentialsStub } from '../../config/stubs';
 import {
   authenticateUser,
+  createUser,
   resolveUser,
   unauthenticateUser,
   validateUser,
 } from 'actions/session/user';
+
+const {
+  USER_CREATE_START,
+  USER_CREATE_SUCCESS,
+  USER_CREATE_ERROR,
+} = reduxCrud.actionTypesFor('user');
 
 const mockStore = configureStore(reduxMiddleware);
 const success = () =>  this.status = 'success';
@@ -225,6 +233,72 @@ describe('actions/session/user', () => {
 
       it('RESOLVE_USER_FULFILLED action should have an object with no keys', () => {
         expect(Object.keys(action.payload)).to.have.length.of(0);
+      });
+    });
+  });
+
+  describe('createUser', () => {
+    let store, actionsCalled, action;
+
+    describe('valid data', () => {
+      before(done => {
+        store = mockStore();
+        let userData = {
+          first_name: 'Hugh',
+          last_name: 'Francis',
+          email: `sanctuary-testing-${(new Date()).valueOf().toString()}@example.com`,
+          password: 'password',
+        };
+
+        createUser(brandibble, userData)(store.dispatch).then(() => {
+          actionsCalled = store.getActions();
+          done();
+        });
+      });
+
+      it('should call at least 2 actions', () => {
+        expect(actionsCalled).to.have.length.of.at.least(2);
+      });
+
+      it('should have USER_CREATE_START action', () => {
+        action = find(actionsCalled, {type: USER_CREATE_START});
+        expect(action).to.exist;
+      });
+
+      it('should have USER_CREATE_SUCCESS action', () => {
+        action = find(actionsCalled, {type: USER_CREATE_SUCCESS});
+        expect(action).to.exist;
+      });
+    });
+
+    describe('invalid data', () => {
+      before(done => {
+        store = mockStore();
+        let userData = {
+          first_name: 'Hugh',
+          last_name: 'Francis',
+          email: `sanctuary-testing-${(new Date()).valueOf().toString()}@example`,
+          password: 'password',
+        };
+
+        createUser(brandibble, userData)(store.dispatch).then(() => {
+          actionsCalled = store.getActions();
+          done();
+        });
+      });
+
+      it('should call at least 2 actions', () => {
+        expect(actionsCalled).to.have.length.of.at.least(2);
+      });
+
+      it('should have USER_CREATE_START action', () => {
+        action = find(actionsCalled, {type: USER_CREATE_START});
+        expect(action).to.exist;
+      });
+
+      it('should have USER_CREATE_ERROR action', () => {
+        action = find(actionsCalled, {type: USER_CREATE_ERROR});
+        expect(action).to.exist;
       });
     });
   });
