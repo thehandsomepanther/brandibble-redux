@@ -281,7 +281,7 @@ describe('actions/session/user', () => {
 
         before(done => {
           action = find(actionsCalled, {type: USER_CREATE_SUCCESS});
-          id = action.record.data.customer_id;
+          id = action.record.customer_id;
 
           authenticateUser(brandibble, userData)(store.dispatch).then(() => {
             actionsCalled = store.getActions();
@@ -313,7 +313,6 @@ describe('actions/session/user', () => {
           });
 
           it('should have USER_FETCH_SUCCESS action', () => {
-            console.log(actionsCalled)
             action = find(actionsCalled, {type: USER_FETCH_SUCCESS});
             expect(action).to.exist;
           });
@@ -323,7 +322,6 @@ describe('actions/session/user', () => {
           before(done => {
             store.clearActions();
             userData.first_name = 'Boo';
-            console.log(id)
             updateUser(brandibble, id, userData)(store.dispatch).then(() => {
               actionsCalled = store.getActions();
               done();
@@ -340,7 +338,6 @@ describe('actions/session/user', () => {
           });
 
           it('should have USER_UPDATE_SUCCESS action', () => {
-            console.log('user',actionsCalled)
             action = find(actionsCalled, {type: USER_UPDATE_SUCCESS});
             expect(action).to.exist;
           });
