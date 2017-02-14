@@ -4,6 +4,7 @@ export {
   authenticateUser,
   createUser,
   fetchUser,
+  resetUserPassword,
   resolveUser,
   unauthenticateUser,
   updateUser,

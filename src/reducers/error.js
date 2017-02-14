@@ -11,6 +11,7 @@ import { RESOLVE_ORDER } from 'actions/session/order';
 // user
 import {
   AUTHENTICATE_USER,
+  RESET_USER_PASSWORD,
   RESOLVE_USER,
   UNAUTHENTICATE_USER,
   VALIDATE_USER,
@@ -58,6 +59,7 @@ export const initialState = {
   authenticateUser: null,
   createUser: null,
   fetchUser: null,
+  resetUserPassword: null,
   resolveUser: null,
   unauthenticateUser: null,
   updateUser: null,
@@ -101,6 +103,9 @@ export default function error(state=initialState, action) {
 
     case `${VALIDATE_USER}_PENDING`: return { ...state, validateUser: null };
     case `${VALIDATE_USER}_REJECTED`: return { ...state, validateUser: action.error}
+
+    case `${RESET_USER_PASSWORD}_PENDING`: return { ...state, resetUserPassword: null };
+    case `${RESET_USER_PASSWORD}_REJECTED`: return { ...state, resetUserPassword: action.error}
 
     case USER_FETCH_START: return { ...state, fetchUser: null };
     case USER_FETCH_ERROR: return { ...state, fetchUser: action.error}

@@ -16,6 +16,7 @@ export const VALIDATE_USER = 'VALIDATE_USER';
 export const AUTHENTICATE_USER = 'AUTHENTICATE_USER';
 export const UNAUTHENTICATE_USER = 'UNAUTHENTICATE_USER';
 export const RESOLVE_USER = 'RESOLVE_USER';
+export const RESET_USER_PASSWORD = 'RESET_USER_PASSWORD';
 
 const NO_OP = f => f;
 
@@ -52,6 +53,13 @@ function _resolveUser(payload) {
   return { type: RESOLVE_USER, payload: payload }
 }
 
+function _resetUserPassword(brandibble, email, success, fail) {
+  return {
+    type: RESET_USER_PASSWORD,
+    payload: brandibble.customers.resetPassword(email).then(success).catch(({errors}) => { throw fail(errors) }),
+  }
+}
+
 export function validateUser(brandibble, email, success=NO_OP, fail=NO_OP) {
   return dispatch => dispatch(_validateUser(brandibble, email, success, fail));
 }
@@ -62,6 +70,11 @@ export function authenticateUser(brandibble, loginData, success=NO_OP, fail=NO_O
 
 export function unauthenticateUser(brandibble, success=NO_OP, fail=NO_OP) {
   return dispatch => dispatch(_unauthenticateUser(brandibble, success, fail));
+}
+
+// TODO - untested
+export function resetUserPassword(brandibble, email, success=NO_OP, fail=NO_OP) {
+  return dispatch => dispatch(_resetUserPassword(brandibble, email, success, fail));
 }
 
 export function resolveUser(brandibble) {
