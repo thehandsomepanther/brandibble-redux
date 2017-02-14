@@ -1,5 +1,12 @@
 import reduxCrud from 'redux-crud';
 import generateUUID from 'utils/generateUUID';
+const {
+  fetchStart,
+  fetchSuccess,
+  fetchError,
+  updateStart,
+  updateSuccess,
+  updateError,
   createStart,
   createSuccess,
   createError,
@@ -64,6 +71,16 @@ export function resolveUser(brandibble) {
   return dispatch => dispatch(_resolveUser(payload));
 }
 
+// TODO - fix and test
+export function fetchUser(branddible, id) {
+  return dispatch => {
+    dispatch(fetchStart());
+    return brandibble.customers.show(id)
+      .then(({data}) => dispatch(fetchSuccess(data)))
+      .catch(({errors}) => dispatch(fetchError(errors)));
+  };
+}
+
 export function createUser(brandibble, data={}) {
   return dispatch => {
     const id = generateUUID()
@@ -71,5 +88,15 @@ export function createUser(brandibble, data={}) {
     return brandibble.customers.create(data)
       .then(({data}) => dispatch(createSuccess({id})))
       .catch(({errors}) => dispatch(createError(errors, {id, data})));
+  };
+}
+
+// TODO - fix and test
+export function updateUser(branddible, id, data={}) {
+  return dispatch => {
+    dispatch(updateStart());
+    return brandibble.customers.update(id, data)
+      .then(({data}) => dispatch(updateSucess(data)))
+      .catch(({errors}) => dispatch(updateError({error:errors})));
   };
 }

@@ -7,8 +7,10 @@ import { brandibble, SAMPLE_EMAIL, validCredentialsStub } from '../../config/stu
 import {
   authenticateUser,
   createUser,
+  fetchUser,
   resolveUser,
   unauthenticateUser,
+  updateUser,
   validateUser,
 } from 'actions/session/user';
 
@@ -16,6 +18,10 @@ const {
   USER_CREATE_START,
   USER_CREATE_SUCCESS,
   USER_CREATE_ERROR,
+  USER_FETCH_START,
+  USER_FETCH_SUCCESS,
+  USER_UPDATE_START,
+  USER_UPDATE_SUCESS,
 } = reduxCrud.actionTypesFor('user');
 
 const mockStore = configureStore(reduxMiddleware);
