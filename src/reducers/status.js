@@ -35,6 +35,18 @@ const {
   MENUS_FETCH_ERROR,
 } = reduxCrud.actionTypesFor('menus');
 
+const {
+  USER_FETCH_START,
+  USER_FETCH_SUCCESS,
+  USER_FETCH_ERROR,
+  USER_UPDATE_START,
+  USER_UPDATE_SUCCESS,
+  USER_UPDATE_ERROR,
+  USER_CREATE_START,
+  USER_CREATE_SUCCESS,
+  USER_CREATE_ERROR,
+} = reduxCrud.actionTypesFor('user');
+
 const initialState = {
   setupBrandibble: IDLE,
   setupBrandibbleRedux: IDLE,
@@ -43,8 +55,11 @@ const initialState = {
   fetchMenu: IDLE,
   resolveOrder: IDLE,
   authenticateUser: IDLE,
+  createUser: IDLE,
+  fetchUser: IDLE,
   resolveUser: IDLE,
   unauthenticateUser: IDLE,
+  updateUser: IDLE,
   validateUser: IDLE,
 };
 
@@ -89,6 +104,18 @@ export default function status(state=initialState, action) {
     case `${UNAUTHENTICATE_USER}_PENDING`: return { ...state,   unauthenticateUser: PENDING }
     case `${UNAUTHENTICATE_USER}_FULFILLED`: return { ...state, unauthenticateUser: FULFILLED }
     case `${UNAUTHENTICATE_USER}_REJECTED`: return { ...state,  unauthenticateUser: REJECTED }
+
+    case USER_FETCH_START: return { ...state,   fetchUser: PENDING }
+    case USER_FETCH_SUCCESS: return { ...state, fetchUser: FULFILLED }
+    case USER_FETCH_ERROR: return { ...state,  fetchUser: REJECTED }
+
+    case USER_UPDATE_START: return { ...state,   updateUser: PENDING }
+    case USER_UPDATE_SUCCESS: return { ...state, updateUser: FULFILLED }
+    case USER_UPDATE_ERROR: return { ...state,  updateUser: REJECTED }
+
+    case USER_CREATE_START: return { ...state,   createUser: PENDING }
+    case USER_CREATE_SUCCESS: return { ...state, createUser: FULFILLED }
+    case USER_CREATE_ERROR: return { ...state,  createUser: REJECTED }
 
     default: return state;
   }
