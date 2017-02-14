@@ -85,7 +85,7 @@ export function createUser(brandibble, data={}) {
     const id = generateUUID()
     dispatch(createStart({record: data, id}));
     return brandibble.customers.create(data)
-      .then(({data}) => dispatch(createSuccess({id, data})))
+      .then(({data}) => dispatch(createSuccess({id, ...data})))
       .catch(({errors}) => dispatch(createError(errors, {id, data})));
   };
 }
@@ -94,7 +94,7 @@ export function updateUser(brandibble, id, data={}) {
   return dispatch => {
     dispatch(updateStart({record: data, id}));
     return brandibble.customers.updateCurrent(data)
-      .then(({data}) => dispatch(updateSuccess({id, data})))
+      .then(({data}) => dispatch(updateSuccess({id, ...data})))
       .catch(({errors}) => dispatch(updateError(errors, {id, data})));
   };
 }
