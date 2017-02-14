@@ -19,15 +19,24 @@ export const customersValidateStub = {
   is_levelup_user: true,
   levelup_connected_email: 'api@brandibble.co',
 };
+export const addressStub = {
+  city:'New York',
+  latitude: 40.755912,
+  longitude: -73.9709334,
+  state_code:'NY',
+  street_address:'150 East 52nd Street',
+  unit:'1001',
+  zip_code:'10022',
+};
 
 export const orderStub = {
-  'address': {
-    'city':'New York',
-    'customer_address_id':158082,
-    'state_code':'NY',
-    'street_address':'150 East 52nd Street',
-    'unit':'1001',
-    'zip_code':'10022'
+  address: {
+    customer_address_id:158082,
+    city:'New York',
+    state_code:'NY',
+    street_address:'150 East 52nd Street',
+    unit:'1001',
+    zip_code:'10022',
   },
   'cart': [
     {
