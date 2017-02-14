@@ -35,6 +35,18 @@ const {
   MENUS_FETCH_ERROR,
 } = reduxCrud.actionTypesFor('menus');
 
+const {
+  PAYMENTS_FETCH_START,
+  PAYMENTS_FETCH_SUCCESS,
+  PAYMENTS_FETCH_ERROR,
+  PAYMENTS_CREATE_START,
+  PAYMENTS_CREATE_SUCCESS,
+  PAYMENTS_CREATE_ERROR,
+  PAYMENTS_DELETE_START,
+  PAYMENTS_DELETE_SUCCESS,
+  PAYMENTS_DELETE_ERROR,
+} = reduxCrud.actionTypesFor('payments');
+
 const initialState = {
   setupBrandibble: IDLE,
   setupBrandibbleRedux: IDLE,
@@ -42,6 +54,9 @@ const initialState = {
   fetchLocations: IDLE,
   fetchMenu: IDLE,
   resolveOrder: IDLE,
+  fetchPayments: IDLE,
+  createPayment: IDLE,
+  deletePayment: IDLE,
   authenticateUser: IDLE,
   resolveUser: IDLE,
   unauthenticateUser: IDLE,
@@ -73,6 +88,18 @@ export default function status(state=initialState, action) {
     case `${RESOLVE_ORDER}_PENDING`: return { ...state,   resolveOrder: PENDING }
     case `${RESOLVE_ORDER}_FULFILLED`: return { ...state, resolveOrder: FULFILLED }
     case `${RESOLVE_ORDER}_REJECTED`: return { ...state,  resolveOrder: REJECTED }
+
+    case PAYMENTS_FETCH_START: return { ...state, fetchPayments: PENDING }
+    case PAYMENTS_FETCH_SUCCESS: return { ...state, fetchPayments: FULFILLED }
+    case PAYMENTS_FETCH_ERROR: return { ...state, fetchPayments: REJECTED }
+
+    case PAYMENTS_CREATE_START: return { ...state, createPayment: PENDING }
+    case PAYMENTS_CREATE_SUCCESS: return { ...state, createPayment: FULFILLED }
+    case PAYMENTS_CREATE_ERROR: return { ...state, createPayment: REJECTED }
+
+    case PAYMENTS_DELETE_START: return { ...state, deletePayment: PENDING }
+    case PAYMENTS_DELETE_SUCCESS: return { ...state, deletePayment: FULFILLED }
+    case PAYMENTS_DELETE_ERROR: return { ...state, deletePayment: REJECTED }
 
     case `${VALIDATE_USER}_PENDING`: return { ...state,   validateUser: PENDING }
     case `${VALIDATE_USER}_FULFILLED`: return { ...state, validateUser: FULFILLED }
