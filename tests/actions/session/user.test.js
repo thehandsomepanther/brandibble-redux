@@ -21,7 +21,7 @@ const {
   USER_FETCH_START,
   USER_FETCH_SUCCESS,
   USER_UPDATE_START,
-  USER_UPDATE_SUCESS,
+  USER_UPDATE_SUCCESS,
 } = reduxCrud.actionTypesFor('user');
 
 const mockStore = configureStore(reduxMiddleware);
@@ -244,12 +244,12 @@ describe('actions/session/user', () => {
   });
 
   describe('createUser', () => {
-    let store, actionsCalled, action;
+    let store, actionsCalled, action, userData;
 
     describe('valid data', () => {
       before(done => {
         store = mockStore();
-        let userData = {
+        userData = {
           first_name: 'Hugh',
           last_name: 'Francis',
           email: `sanctuary-testing-${(new Date()).valueOf().toString()}@example.com`,
@@ -274,6 +274,78 @@ describe('actions/session/user', () => {
       it('should have USER_CREATE_SUCCESS action', () => {
         action = find(actionsCalled, {type: USER_CREATE_SUCCESS});
         expect(action).to.exist;
+      });
+
+      describe('able to be authenticated', () => {
+        let id;
+
+        before(done => {
+          action = find(actionsCalled, {type: USER_CREATE_SUCCESS});
+          id = action.record.data.customer_id;
+
+          authenticateUser(brandibble, userData)(store.dispatch).then(() => {
+            actionsCalled = store.getActions();
+            done();
+          });
+        });
+
+        it('should have AUTHENTICATE_USER_FULFILLED action', () => {
+          action = find(actionsCalled, {type: 'AUTHENTICATE_USER_FULFILLED'});
+          expect(action).to.exist;
+        });
+
+        describe('fetchUser', () => {
+          before(done => {
+            store.clearActions();
+            fetchUser(brandibble, id)(store.dispatch).then(() => {
+              actionsCalled = store.getActions();
+              done();
+            });
+          });
+
+          it('should call at least 2 actions', () => {
+            expect(actionsCalled).to.have.length.of.at.least(2);
+          });
+
+          it('should have USER_FETCH_START action', () => {
+            action = find(actionsCalled, {type: USER_FETCH_START});
+            expect(action).to.exist;
+          });
+
+          it('should have USER_FETCH_SUCCESS action', () => {
+            console.log(actionsCalled)
+            action = find(actionsCalled, {type: USER_FETCH_SUCCESS});
+            expect(action).to.exist;
+          });
+        });
+
+        describe('updateUser', () => {
+          before(done => {
+            store.clearActions();
+            userData.first_name = 'Boo';
+            console.log(id)
+            updateUser(brandibble, id, userData)(store.dispatch).then(() => {
+              actionsCalled = store.getActions();
+              done();
+            });
+          });
+
+          it('should call at least 2 actions', () => {
+            expect(actionsCalled).to.have.length.of.at.least(2);
+          });
+
+          it('should have USER_UPDATE_START action', () => {
+            action = find(actionsCalled, {type: USER_UPDATE_START});
+            expect(action).to.exist;
+          });
+
+          it('should have USER_UPDATE_SUCCESS action', () => {
+            console.log('user',actionsCalled)
+            action = find(actionsCalled, {type: USER_UPDATE_SUCCESS});
+            expect(action).to.exist;
+          });
+        });
+
       });
     });
 
