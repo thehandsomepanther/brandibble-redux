@@ -20,6 +20,18 @@ const {
 } = Status;
 
 const {
+  ADDRESSES_FETCH_START,
+  ADDRESSES_FETCH_SUCCESS,
+  ADDRESSES_FETCH_ERROR,
+  ADDRESSES_CREATE_START,
+  ADDRESSES_CREATE_SUCCESS,
+  ADDRESSES_CREATE_ERROR,
+  ADDRESSES_DELETE_START,
+  ADDRESSES_DELETE_SUCCESS,
+  ADDRESSES_DELETE_ERROR,
+} = reduxCrud.actionTypesFor('addresses');
+
+const {
   ALLERGENS_FETCH_START,
   ALLERGENS_FETCH_SUCCESS,
   ALLERGENS_FETCH_ERROR,
@@ -49,6 +61,9 @@ const {
 const initialState = {
   setupBrandibble: IDLE,
   setupBrandibbleRedux: IDLE,
+  fetchAddresses: IDLE,
+  createAddress: IDLE,
+  deleteAddress: IDLE,
   fetchAllergens: IDLE,
   fetchLocations: IDLE,
   fetchMenu: IDLE,
@@ -76,6 +91,18 @@ export default function status(state=initialState, action) {
     case ALLERGENS_FETCH_START: return { ...state, fetchAllergens: PENDING }
     case ALLERGENS_FETCH_SUCCESS: return { ...state, fetchAllergens: FULFILLED }
     case ALLERGENS_FETCH_ERROR: return { ...state, fetchAllergens: REJECTED }
+
+    case ADDRESSES_FETCH_START: return { ...state, fetchAddresses: PENDING }
+    case ADDRESSES_FETCH_SUCCESS: return { ...state, fetchAddresses: FULFILLED }
+    case ADDRESSES_FETCH_ERROR: return { ...state, fetchAddresses: REJECTED }
+
+    case ADDRESSES_CREATE_START: return { ...state, createAddress: PENDING }
+    case ADDRESSES_CREATE_SUCCESS: return { ...state, createAddress: FULFILLED }
+    case ADDRESSES_CREATE_ERROR: return { ...state, createAddress: REJECTED }
+
+    case ADDRESSES_DELETE_START: return { ...state, deleteAddress: PENDING }
+    case ADDRESSES_DELETE_SUCCESS: return { ...state, deleteAddress: FULFILLED }
+    case ADDRESSES_DELETE_ERROR: return { ...state, deleteAddress: REJECTED }
 
     case LOCATIONS_FETCH_START: return { ...state,   fetchLocations: PENDING }
     case LOCATIONS_FETCH_SUCCESS: return { ...state, fetchLocations: FULFILLED }
