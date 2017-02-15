@@ -52,7 +52,7 @@ export function unauthenticateUser(brandibble, success=NO_OP, fail=NO_OP) {
 
 export function resolveUser(brandibble) {
   const { adapter, customers } = brandibble;
-  const payload = adapter.customerToken ? customers.current() : Promise.resolve({});
+  const payload = adapter.customerToken ? customers.current().then(({data}) => data) : Promise.resolve({});
 
   return dispatch => dispatch(_resolveUser(payload));
 }
