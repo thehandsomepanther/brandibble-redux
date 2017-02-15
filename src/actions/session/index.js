@@ -1,7 +1,7 @@
 export { fetchAddresses, createAddress, deleteAddress } from './addresses';
 export { fetchMenu } from './menus';
 export { resolveOrder } from './order';
-export {
+export { fetchPayments, createPayment, deletePayment } from './payments';
   authenticateUser,
   createUser,
   fetchUser,

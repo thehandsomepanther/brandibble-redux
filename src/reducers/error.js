@@ -53,6 +53,16 @@ const {
   MENUS_FETCH_ERROR,
 } = reduxCrud.actionTypesFor('menus');
 
+// payments
+const {
+  PAYMENTS_FETCH_START,
+  PAYMENTS_FETCH_ERROR,
+  PAYMENTS_CREATE_START,
+  PAYMENTS_CREATE_ERROR,
+  PAYMENTS_DELETE_START,
+  PAYMENTS_DELETE_ERROR,
+} = reduxCrud.actionTypesFor('payments');
+
 export const initialState = {
   // setup
   setupBrandibble: null,
@@ -69,6 +79,10 @@ export const initialState = {
   fetchMenu: null,
   // orders
   resolveOrder: null,
+  // payments
+  fetchPayments: null,
+  createPayment: null,
+  deletePayment: null,
   // user
   authenticateUser: null,
   createUser: null,
@@ -114,6 +128,16 @@ export default function error(state=initialState, action) {
     // orders
     case `${RESOLVE_ORDER}_PENDING`: return { ...state, resolveOrder: null };
     case `${RESOLVE_ORDER}_REJECTED`: return { ...state, resolveOrder: action.payload}
+
+    // payments
+    case PAYMENTS_FETCH_START: return { ...state, fetchPayments: null };
+    case PAYMENTS_FETCH_ERROR: return { ...state, fetchPayments: action.error}
+
+    case PAYMENTS_CREATE_START: return { ...state, createPayment: null };
+    case PAYMENTS_CREATE_ERROR: return { ...state, createPayment: action.error}
+
+    case PAYMENTS_DELETE_START: return { ...state, deletePayment: null };
+    case PAYMENTS_DELETE_ERROR: return { ...state, deletePayment: action.error}
 
     // users
     case `${AUTHENTICATE_USER}_PENDING`: return { ...state, authenticateUser: null };
