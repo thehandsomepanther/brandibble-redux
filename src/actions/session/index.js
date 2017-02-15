@@ -1,3 +1,4 @@
+export { fetchAddresses, createAddress, deleteAddress } from './addresses';
 export { fetchMenu } from './menus';
 export { resolveOrder } from './order';
 export {
