@@ -104,10 +104,10 @@ export default function error(state=initialState, action) {
     case `${VALIDATE_USER}_REJECTED`: return { ...state, validateUser: action.error}
 
     case `${RESET_USER_PASSWORD}_PENDING`: return { ...state, resetUserPassword: null };
-    case `${RESET_USER_PASSWORD}_REJECTED`: return { ...state, resetUserPassword: action.error}
+    case `${RESET_USER_PASSWORD}_REJECTED`: return { ...state, resetUserPassword: action.payload}
 
     case `${FETCH_USER}_PENDING`: return { ...state, fetchUser: null };
-    case `${FETCH_USER}_REJECTED`: return { ...state, fetchUser: action.error}
+    case `${FETCH_USER}_REJECTED`: return { ...state, fetchUser: action.payload}
 
     case USER_UPDATE_START: return { ...state, updateUser: null };
     case USER_UPDATE_ERROR: return { ...state, updateUser: action.error}
