@@ -5433,7 +5433,7 @@ unauthenticateUser=unauthenticateUser;exports.
 
 resolveUser=resolveUser;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(_ref2){var errors=_ref2.errors;throw fail(errors);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(_ref4){var errors=_ref4.errors;throw fail(errors);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(_ref5){var errors=_ref5.errors;throw fail(errors);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function resolveUser(brandibble){var
 adapter=brandibble.adapter,customers=brandibble.customers;
-var payload=adapter.customerToken?customers.current():Promise.resolve({});
+var payload=adapter.customerToken?customers.current().then(function(_ref6){var data=_ref6.data;return data;}):Promise.resolve({});
 
 return function(dispatch){return dispatch(_resolveUser(payload));};
 }
@@ -37086,10 +37086,10 @@ error;var _reduxCrud=__webpack_require__(21);var _reduxCrud2=_interopRequireDefa
 switch(action.type){
 
 case _setup.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:null});
-case _setup.SETUP_BRANDIBBLE+'_REJECTED':return _extends({},state,{setupBrandibble:action.error});
+case _setup.SETUP_BRANDIBBLE+'_REJECTED':return _extends({},state,{setupBrandibble:action.payload});
 
 case _setup.SETUP_BRANDIBBLE_REDUX+'_PENDING':return _extends({},state,{setupBrandibbleRedux:null});
-case _setup.SETUP_BRANDIBBLE_REDUX+'_REJECTED':return _extends({},state,{setupBrandibbleRedux:action.error});
+case _setup.SETUP_BRANDIBBLE_REDUX+'_REJECTED':return _extends({},state,{setupBrandibbleRedux:action.payload});
 
 
 case ALLERGENS_FETCH_START:return _extends({},state,{fetchAllergens:null});
@@ -37105,20 +37105,20 @@ case MENUS_FETCH_ERROR:return _extends({},state,{fetchMenu:action.error});
 
 
 case _order.RESOLVE_ORDER+'_PENDING':return _extends({},state,{resolveOrder:null});
-case _order.RESOLVE_ORDER+'_REJECTED':return _extends({},state,{resolveOrder:action.error});
+case _order.RESOLVE_ORDER+'_REJECTED':return _extends({},state,{resolveOrder:action.payload});
 
 
 case _user.AUTHENTICATE_USER+'_PENDING':return _extends({},state,{authenticateUser:null});
-case _user.AUTHENTICATE_USER+'_REJECTED':return _extends({},state,{authenticateUser:action.error});
+case _user.AUTHENTICATE_USER+'_REJECTED':return _extends({},state,{authenticateUser:action.payload});
 
 case _user.RESOLVE_USER+'_PENDING':return _extends({},state,{resolveUser:null});
-case _user.RESOLVE_USER+'_REJECTED':return _extends({},state,{resolveUser:action.error});
+case _user.RESOLVE_USER+'_REJECTED':return _extends({},state,{resolveUser:action.payload});
 
 case _user.UNAUTHENTICATE_USER+'_PENDING':return _extends({},state,{unauthenticateUser:null});
-case _user.UNAUTHENTICATE_USER+'_REJECTED':return _extends({},state,{unauthenticateUser:action.error});
+case _user.UNAUTHENTICATE_USER+'_REJECTED':return _extends({},state,{unauthenticateUser:action.payload});
 
 case _user.VALIDATE_USER+'_PENDING':return _extends({},state,{validateUser:null});
-case _user.VALIDATE_USER+'_REJECTED':return _extends({},state,{validateUser:action.error});
+case _user.VALIDATE_USER+'_REJECTED':return _extends({},state,{validateUser:action.payload});
 
 default:return state;}
 
