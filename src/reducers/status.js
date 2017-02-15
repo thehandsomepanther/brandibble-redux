@@ -3,7 +3,9 @@ import { SETUP_BRANDIBBLE, SETUP_BRANDIBBLE_REDUX } from 'actions/setup';
 import { RESOLVE_ORDER } from 'actions/session/order';
 import {
   AUTHENTICATE_USER,
+  FETCH_USER,
   UNAUTHENTICATE_USER,
+  RESET_USER_PASSWORD,
   RESOLVE_USER,
   VALIDATE_USER,
 } from 'actions/session/user';
@@ -35,6 +37,15 @@ const {
   MENUS_FETCH_ERROR,
 } = reduxCrud.actionTypesFor('menus');
 
+const {
+  USER_UPDATE_START,
+  USER_UPDATE_SUCCESS,
+  USER_UPDATE_ERROR,
+  USER_CREATE_START,
+  USER_CREATE_SUCCESS,
+  USER_CREATE_ERROR,
+} = reduxCrud.actionTypesFor('user');
+
 const initialState = {
   setupBrandibble: IDLE,
   setupBrandibbleRedux: IDLE,
@@ -43,8 +54,12 @@ const initialState = {
   fetchMenu: IDLE,
   resolveOrder: IDLE,
   authenticateUser: IDLE,
+  createUser: IDLE,
+  fetchUser: IDLE,
+  resetUserPassword: IDLE,
   resolveUser: IDLE,
   unauthenticateUser: IDLE,
+  updateUser: IDLE,
   validateUser: IDLE,
 };
 
@@ -89,6 +104,22 @@ export default function status(state=initialState, action) {
     case `${UNAUTHENTICATE_USER}_PENDING`: return { ...state,   unauthenticateUser: PENDING }
     case `${UNAUTHENTICATE_USER}_FULFILLED`: return { ...state, unauthenticateUser: FULFILLED }
     case `${UNAUTHENTICATE_USER}_REJECTED`: return { ...state,  unauthenticateUser: REJECTED }
+
+    case `${RESET_USER_PASSWORD}_PENDING`: return { ...state,   resetUserPassword: PENDING }
+    case `${RESET_USER_PASSWORD}_FULFILLED`: return { ...state, resetUserPassword: FULFILLED }
+    case `${RESET_USER_PASSWORD}_REJECTED`: return { ...state,  resetUserPassword: REJECTED }
+
+    case `${FETCH_USER}_PENDING`: return { ...state,   fetchUser: PENDING }
+    case `${FETCH_USER}_FULFILLED`: return { ...state, fetchUser: FULFILLED }
+    case `${FETCH_USER}_REJECTED`: return { ...state,  fetchUser: REJECTED }
+
+    case USER_UPDATE_START: return { ...state,   updateUser: PENDING }
+    case USER_UPDATE_SUCCESS: return { ...state, updateUser: FULFILLED }
+    case USER_UPDATE_ERROR: return { ...state,  updateUser: REJECTED }
+
+    case USER_CREATE_START: return { ...state,   createUser: PENDING }
+    case USER_CREATE_SUCCESS: return { ...state, createUser: FULFILLED }
+    case USER_CREATE_ERROR: return { ...state,  createUser: REJECTED }
 
     default: return state;
   }
