@@ -57,10 +57,10 @@ export default function error(state=initialState, action) {
   switch (action.type) {
     // setup
     case `${SETUP_BRANDIBBLE}_PENDING`: return { ...state, setupBrandibble: null };
-    case `${SETUP_BRANDIBBLE}_REJECTED`: return { ...state, setupBrandibble: action.error}
+    case `${SETUP_BRANDIBBLE}_REJECTED`: return { ...state, setupBrandibble: action.payload}
 
     case `${SETUP_BRANDIBBLE_REDUX}_PENDING`: return { ...state, setupBrandibbleRedux: null };
-    case `${SETUP_BRANDIBBLE_REDUX}_REJECTED`: return { ...state, setupBrandibbleRedux: action.error}
+    case `${SETUP_BRANDIBBLE_REDUX}_REJECTED`: return { ...state, setupBrandibbleRedux: action.payload}
 
     // allergens
     case ALLERGENS_FETCH_START: return { ...state, fetchAllergens: null };
@@ -76,20 +76,20 @@ export default function error(state=initialState, action) {
 
     // orders
     case `${RESOLVE_ORDER}_PENDING`: return { ...state, resolveOrder: null };
-    case `${RESOLVE_ORDER}_REJECTED`: return { ...state, resolveOrder: action.error}
+    case `${RESOLVE_ORDER}_REJECTED`: return { ...state, resolveOrder: action.payload}
 
     // users
     case `${AUTHENTICATE_USER}_PENDING`: return { ...state, authenticateUser: null };
-    case `${AUTHENTICATE_USER}_REJECTED`: return { ...state, authenticateUser: action.error}
+    case `${AUTHENTICATE_USER}_REJECTED`: return { ...state, authenticateUser: action.payload}
 
     case `${RESOLVE_USER}_PENDING`: return { ...state, resolveUser: null };
-    case `${RESOLVE_USER}_REJECTED`: return { ...state, resolveUser: action.error}
+    case `${RESOLVE_USER}_REJECTED`: return { ...state, resolveUser: action.payload}
 
     case `${UNAUTHENTICATE_USER}_PENDING`: return { ...state, unauthenticateUser: null };
-    case `${UNAUTHENTICATE_USER}_REJECTED`: return { ...state, unauthenticateUser: action.error}
+    case `${UNAUTHENTICATE_USER}_REJECTED`: return { ...state, unauthenticateUser: action.payload}
 
     case `${VALIDATE_USER}_PENDING`: return { ...state, validateUser: null };
-    case `${VALIDATE_USER}_REJECTED`: return { ...state, validateUser: action.error}
+    case `${VALIDATE_USER}_REJECTED`: return { ...state, validateUser: action.payload}
 
     default: return state;
   }
