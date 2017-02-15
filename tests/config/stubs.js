@@ -88,6 +88,13 @@ export const validCredentialsStub = {
   password: 'password'
 };
 
+export const cardStub = {
+  'cc_number': 4788250000121443,
+  'cc_expiration': 1018,
+  'cc_cvv': 740,
+  'cc_zip': 10022
+};
+
 export const authResponseStub = {
   'allergens': [
     'Gluten',
