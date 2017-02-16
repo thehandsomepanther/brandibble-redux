@@ -7,7 +7,7 @@
 		exports["BrandibbleRedux"] = factory(require("redux"));
 	else
 		root["BrandibbleRedux"] = factory(root["redux"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_54__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_55__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 515);
+/******/ 	return __webpack_require__(__webpack_require__.s = 521);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -81,7 +81,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _isPlaceholder = __webpack_require__(44);
+var _isPlaceholder = __webpack_require__(45);
 
 
 /**
@@ -1928,7 +1928,7 @@ function loadLocale(name) {
             module && module.exports) {
         try {
             oldLocale = globalLocale._abbr;
-            __webpack_require__(284)("./" + name);
+            __webpack_require__(291)("./" + name);
             // because defineLocale currently also sets the global locale, we
             // want to undo that for lazy loaded locales
             getSetGlobalLocale(oldLocale);
@@ -4416,13 +4416,13 @@ return hooks;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(248)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(73)(module)))
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _isPlaceholder = __webpack_require__(44);
+var _isPlaceholder = __webpack_require__(45);
 
 
 /**
@@ -4450,7 +4450,7 @@ module.exports = function _curry1(fn) {
 
 var _curry1 = __webpack_require__(2);
 var _curry2 = __webpack_require__(0);
-var _isPlaceholder = __webpack_require__(44);
+var _isPlaceholder = __webpack_require__(45);
 
 
 /**
@@ -4492,252 +4492,6 @@ module.exports = function _curry3(fn) {
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {
-  F: __webpack_require__(285),
-  T: __webpack_require__(286),
-  __: __webpack_require__(287),
-  add: __webpack_require__(38),
-  addIndex: __webpack_require__(288),
-  adjust: __webpack_require__(181),
-  all: __webpack_require__(289),
-  allPass: __webpack_require__(290),
-  always: __webpack_require__(27),
-  and: __webpack_require__(182),
-  any: __webpack_require__(183),
-  anyPass: __webpack_require__(291),
-  ap: __webpack_require__(55),
-  aperture: __webpack_require__(292),
-  append: __webpack_require__(293),
-  apply: __webpack_require__(184),
-  applySpec: __webpack_require__(294),
-  ascend: __webpack_require__(295),
-  assoc: __webpack_require__(39),
-  assocPath: __webpack_require__(185),
-  binary: __webpack_require__(296),
-  bind: __webpack_require__(186),
-  both: __webpack_require__(297),
-  call: __webpack_require__(298),
-  chain: __webpack_require__(56),
-  clamp: __webpack_require__(299),
-  clone: __webpack_require__(300),
-  comparator: __webpack_require__(301),
-  complement: __webpack_require__(302),
-  compose: __webpack_require__(57),
-  composeK: __webpack_require__(187),
-  composeP: __webpack_require__(303),
-  concat: __webpack_require__(58),
-  cond: __webpack_require__(304),
-  construct: __webpack_require__(305),
-  constructN: __webpack_require__(188),
-  contains: __webpack_require__(306),
-  converge: __webpack_require__(189),
-  countBy: __webpack_require__(307),
-  curry: __webpack_require__(40),
-  curryN: __webpack_require__(8),
-  dec: __webpack_require__(308),
-  descend: __webpack_require__(309),
-  defaultTo: __webpack_require__(190),
-  difference: __webpack_require__(191),
-  differenceWith: __webpack_require__(192),
-  dissoc: __webpack_require__(193),
-  dissocPath: __webpack_require__(310),
-  divide: __webpack_require__(311),
-  drop: __webpack_require__(194),
-  dropLast: __webpack_require__(312),
-  dropLastWhile: __webpack_require__(313),
-  dropRepeats: __webpack_require__(314),
-  dropRepeatsWith: __webpack_require__(195),
-  dropWhile: __webpack_require__(315),
-  either: __webpack_require__(316),
-  empty: __webpack_require__(196),
-  eqBy: __webpack_require__(317),
-  eqProps: __webpack_require__(318),
-  equals: __webpack_require__(13),
-  evolve: __webpack_require__(319),
-  filter: __webpack_require__(59),
-  find: __webpack_require__(320),
-  findIndex: __webpack_require__(321),
-  findLast: __webpack_require__(322),
-  findLastIndex: __webpack_require__(323),
-  flatten: __webpack_require__(324),
-  flip: __webpack_require__(41),
-  forEach: __webpack_require__(325),
-  forEachObjIndexed: __webpack_require__(326),
-  fromPairs: __webpack_require__(327),
-  groupBy: __webpack_require__(328),
-  groupWith: __webpack_require__(329),
-  gt: __webpack_require__(330),
-  gte: __webpack_require__(331),
-  has: __webpack_require__(332),
-  hasIn: __webpack_require__(333),
-  head: __webpack_require__(334),
-  identical: __webpack_require__(197),
-  identity: __webpack_require__(60),
-  ifElse: __webpack_require__(335),
-  inc: __webpack_require__(336),
-  indexBy: __webpack_require__(337),
-  indexOf: __webpack_require__(338),
-  init: __webpack_require__(339),
-  insert: __webpack_require__(340),
-  insertAll: __webpack_require__(341),
-  intersection: __webpack_require__(376),
-  intersectionWith: __webpack_require__(377),
-  intersperse: __webpack_require__(378),
-  into: __webpack_require__(379),
-  invert: __webpack_require__(380),
-  invertObj: __webpack_require__(381),
-  invoker: __webpack_require__(31),
-  is: __webpack_require__(212),
-  isArrayLike: __webpack_require__(32),
-  isEmpty: __webpack_require__(382),
-  isNil: __webpack_require__(383),
-  join: __webpack_require__(384),
-  juxt: __webpack_require__(213),
-  keys: __webpack_require__(15),
-  keysIn: __webpack_require__(385),
-  last: __webpack_require__(214),
-  lastIndexOf: __webpack_require__(386),
-  length: __webpack_require__(215),
-  lens: __webpack_require__(47),
-  lensIndex: __webpack_require__(387),
-  lensPath: __webpack_require__(388),
-  lensProp: __webpack_require__(389),
-  lift: __webpack_require__(48),
-  liftN: __webpack_require__(216),
-  lt: __webpack_require__(390),
-  lte: __webpack_require__(391),
-  map: __webpack_require__(10),
-  mapAccum: __webpack_require__(392),
-  mapAccumRight: __webpack_require__(393),
-  mapObjIndexed: __webpack_require__(394),
-  match: __webpack_require__(395),
-  mathMod: __webpack_require__(396),
-  max: __webpack_require__(28),
-  maxBy: __webpack_require__(397),
-  mean: __webpack_require__(217),
-  median: __webpack_require__(398),
-  memoize: __webpack_require__(399),
-  merge: __webpack_require__(400),
-  mergeAll: __webpack_require__(401),
-  mergeWith: __webpack_require__(402),
-  mergeWithKey: __webpack_require__(218),
-  min: __webpack_require__(403),
-  minBy: __webpack_require__(404),
-  modulo: __webpack_require__(405),
-  multiply: __webpack_require__(219),
-  nAry: __webpack_require__(49),
-  negate: __webpack_require__(406),
-  none: __webpack_require__(407),
-  not: __webpack_require__(220),
-  nth: __webpack_require__(33),
-  nthArg: __webpack_require__(408),
-  objOf: __webpack_require__(221),
-  of: __webpack_require__(409),
-  omit: __webpack_require__(410),
-  once: __webpack_require__(411),
-  or: __webpack_require__(222),
-  over: __webpack_require__(223),
-  pair: __webpack_require__(412),
-  partial: __webpack_require__(413),
-  partialRight: __webpack_require__(414),
-  partition: __webpack_require__(415),
-  path: __webpack_require__(34),
-  pathEq: __webpack_require__(416),
-  pathOr: __webpack_require__(417),
-  pathSatisfies: __webpack_require__(418),
-  pick: __webpack_require__(419),
-  pickAll: __webpack_require__(224),
-  pickBy: __webpack_require__(420),
-  pipe: __webpack_require__(225),
-  pipeK: __webpack_require__(421),
-  pipeP: __webpack_require__(226),
-  pluck: __webpack_require__(35),
-  prepend: __webpack_require__(227),
-  product: __webpack_require__(422),
-  project: __webpack_require__(423),
-  prop: __webpack_require__(65),
-  propEq: __webpack_require__(424),
-  propIs: __webpack_require__(425),
-  propOr: __webpack_require__(426),
-  propSatisfies: __webpack_require__(427),
-  props: __webpack_require__(428),
-  range: __webpack_require__(429),
-  reduce: __webpack_require__(16),
-  reduceBy: __webpack_require__(50),
-  reduceRight: __webpack_require__(228),
-  reduceWhile: __webpack_require__(430),
-  reduced: __webpack_require__(431),
-  reject: __webpack_require__(51),
-  remove: __webpack_require__(432),
-  repeat: __webpack_require__(433),
-  replace: __webpack_require__(434),
-  reverse: __webpack_require__(52),
-  scan: __webpack_require__(435),
-  sequence: __webpack_require__(229),
-  set: __webpack_require__(436),
-  slice: __webpack_require__(25),
-  sort: __webpack_require__(437),
-  sortBy: __webpack_require__(438),
-  sortWith: __webpack_require__(439),
-  split: __webpack_require__(440),
-  splitAt: __webpack_require__(441),
-  splitEvery: __webpack_require__(442),
-  splitWhen: __webpack_require__(443),
-  subtract: __webpack_require__(444),
-  sum: __webpack_require__(230),
-  symmetricDifference: __webpack_require__(445),
-  symmetricDifferenceWith: __webpack_require__(446),
-  tail: __webpack_require__(66),
-  take: __webpack_require__(231),
-  takeLast: __webpack_require__(447),
-  takeLastWhile: __webpack_require__(448),
-  takeWhile: __webpack_require__(449),
-  tap: __webpack_require__(450),
-  test: __webpack_require__(451),
-  times: __webpack_require__(232),
-  toLower: __webpack_require__(452),
-  toPairs: __webpack_require__(453),
-  toPairsIn: __webpack_require__(454),
-  toString: __webpack_require__(36),
-  toUpper: __webpack_require__(455),
-  transduce: __webpack_require__(456),
-  transpose: __webpack_require__(457),
-  traverse: __webpack_require__(458),
-  trim: __webpack_require__(459),
-  tryCatch: __webpack_require__(460),
-  type: __webpack_require__(67),
-  unapply: __webpack_require__(461),
-  unary: __webpack_require__(462),
-  uncurryN: __webpack_require__(463),
-  unfold: __webpack_require__(464),
-  union: __webpack_require__(465),
-  unionWith: __webpack_require__(466),
-  uniq: __webpack_require__(68),
-  uniqBy: __webpack_require__(233),
-  uniqWith: __webpack_require__(69),
-  unless: __webpack_require__(467),
-  unnest: __webpack_require__(468),
-  until: __webpack_require__(469),
-  update: __webpack_require__(234),
-  useWith: __webpack_require__(235),
-  values: __webpack_require__(236),
-  valuesIn: __webpack_require__(470),
-  view: __webpack_require__(471),
-  when: __webpack_require__(472),
-  where: __webpack_require__(237),
-  whereEq: __webpack_require__(473),
-  without: __webpack_require__(474),
-  xprod: __webpack_require__(475),
-  zip: __webpack_require__(476),
-  zipObj: __webpack_require__(477),
-  zipWith: __webpack_require__(478)
-};
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 var CREATE_ERROR = "createError";
@@ -4766,7 +4520,260 @@ exports.default = {
         UPDATE_ERROR: UPDATE_ERROR,
         UPDATE_START: UPDATE_START,
         UPDATE_SUCCESS: UPDATE_SUCCESS
+    },
+    SPECIAL_KEYS: {
+        BUSY: "busy",
+        CLIENT_GENERATED_ID: "_cid",
+        DELETED: "deleted",
+        PENDING_CREATE: "pendingCreate",
+        PENDING_UPDATE: "pendingUpdate",
     }
+};
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = {
+  F: __webpack_require__(292),
+  T: __webpack_require__(293),
+  __: __webpack_require__(294),
+  add: __webpack_require__(39),
+  addIndex: __webpack_require__(295),
+  adjust: __webpack_require__(183),
+  all: __webpack_require__(296),
+  allPass: __webpack_require__(297),
+  always: __webpack_require__(27),
+  and: __webpack_require__(184),
+  any: __webpack_require__(185),
+  anyPass: __webpack_require__(298),
+  ap: __webpack_require__(56),
+  aperture: __webpack_require__(299),
+  append: __webpack_require__(300),
+  apply: __webpack_require__(186),
+  applySpec: __webpack_require__(301),
+  ascend: __webpack_require__(302),
+  assoc: __webpack_require__(40),
+  assocPath: __webpack_require__(187),
+  binary: __webpack_require__(303),
+  bind: __webpack_require__(188),
+  both: __webpack_require__(304),
+  call: __webpack_require__(305),
+  chain: __webpack_require__(57),
+  clamp: __webpack_require__(306),
+  clone: __webpack_require__(307),
+  comparator: __webpack_require__(308),
+  complement: __webpack_require__(309),
+  compose: __webpack_require__(58),
+  composeK: __webpack_require__(189),
+  composeP: __webpack_require__(310),
+  concat: __webpack_require__(59),
+  cond: __webpack_require__(311),
+  construct: __webpack_require__(312),
+  constructN: __webpack_require__(190),
+  contains: __webpack_require__(313),
+  converge: __webpack_require__(191),
+  countBy: __webpack_require__(314),
+  curry: __webpack_require__(41),
+  curryN: __webpack_require__(8),
+  dec: __webpack_require__(315),
+  descend: __webpack_require__(316),
+  defaultTo: __webpack_require__(192),
+  difference: __webpack_require__(193),
+  differenceWith: __webpack_require__(194),
+  dissoc: __webpack_require__(195),
+  dissocPath: __webpack_require__(317),
+  divide: __webpack_require__(318),
+  drop: __webpack_require__(196),
+  dropLast: __webpack_require__(319),
+  dropLastWhile: __webpack_require__(320),
+  dropRepeats: __webpack_require__(321),
+  dropRepeatsWith: __webpack_require__(197),
+  dropWhile: __webpack_require__(322),
+  either: __webpack_require__(323),
+  empty: __webpack_require__(198),
+  eqBy: __webpack_require__(324),
+  eqProps: __webpack_require__(325),
+  equals: __webpack_require__(14),
+  evolve: __webpack_require__(326),
+  filter: __webpack_require__(60),
+  find: __webpack_require__(327),
+  findIndex: __webpack_require__(328),
+  findLast: __webpack_require__(329),
+  findLastIndex: __webpack_require__(330),
+  flatten: __webpack_require__(331),
+  flip: __webpack_require__(42),
+  forEach: __webpack_require__(332),
+  forEachObjIndexed: __webpack_require__(333),
+  fromPairs: __webpack_require__(334),
+  groupBy: __webpack_require__(335),
+  groupWith: __webpack_require__(336),
+  gt: __webpack_require__(337),
+  gte: __webpack_require__(338),
+  has: __webpack_require__(339),
+  hasIn: __webpack_require__(340),
+  head: __webpack_require__(341),
+  identical: __webpack_require__(199),
+  identity: __webpack_require__(61),
+  ifElse: __webpack_require__(342),
+  inc: __webpack_require__(343),
+  indexBy: __webpack_require__(344),
+  indexOf: __webpack_require__(345),
+  init: __webpack_require__(346),
+  insert: __webpack_require__(347),
+  insertAll: __webpack_require__(348),
+  intersection: __webpack_require__(383),
+  intersectionWith: __webpack_require__(384),
+  intersperse: __webpack_require__(385),
+  into: __webpack_require__(386),
+  invert: __webpack_require__(387),
+  invertObj: __webpack_require__(388),
+  invoker: __webpack_require__(31),
+  is: __webpack_require__(214),
+  isArrayLike: __webpack_require__(32),
+  isEmpty: __webpack_require__(389),
+  isNil: __webpack_require__(390),
+  join: __webpack_require__(391),
+  juxt: __webpack_require__(215),
+  keys: __webpack_require__(16),
+  keysIn: __webpack_require__(392),
+  last: __webpack_require__(216),
+  lastIndexOf: __webpack_require__(393),
+  length: __webpack_require__(217),
+  lens: __webpack_require__(48),
+  lensIndex: __webpack_require__(394),
+  lensPath: __webpack_require__(395),
+  lensProp: __webpack_require__(396),
+  lift: __webpack_require__(49),
+  liftN: __webpack_require__(218),
+  lt: __webpack_require__(397),
+  lte: __webpack_require__(398),
+  map: __webpack_require__(11),
+  mapAccum: __webpack_require__(399),
+  mapAccumRight: __webpack_require__(400),
+  mapObjIndexed: __webpack_require__(401),
+  match: __webpack_require__(402),
+  mathMod: __webpack_require__(403),
+  max: __webpack_require__(28),
+  maxBy: __webpack_require__(404),
+  mean: __webpack_require__(219),
+  median: __webpack_require__(405),
+  memoize: __webpack_require__(406),
+  merge: __webpack_require__(407),
+  mergeAll: __webpack_require__(408),
+  mergeWith: __webpack_require__(409),
+  mergeWithKey: __webpack_require__(220),
+  min: __webpack_require__(410),
+  minBy: __webpack_require__(411),
+  modulo: __webpack_require__(412),
+  multiply: __webpack_require__(221),
+  nAry: __webpack_require__(50),
+  negate: __webpack_require__(413),
+  none: __webpack_require__(414),
+  not: __webpack_require__(222),
+  nth: __webpack_require__(33),
+  nthArg: __webpack_require__(415),
+  objOf: __webpack_require__(223),
+  of: __webpack_require__(416),
+  omit: __webpack_require__(417),
+  once: __webpack_require__(418),
+  or: __webpack_require__(224),
+  over: __webpack_require__(225),
+  pair: __webpack_require__(419),
+  partial: __webpack_require__(420),
+  partialRight: __webpack_require__(421),
+  partition: __webpack_require__(422),
+  path: __webpack_require__(34),
+  pathEq: __webpack_require__(423),
+  pathOr: __webpack_require__(424),
+  pathSatisfies: __webpack_require__(425),
+  pick: __webpack_require__(426),
+  pickAll: __webpack_require__(226),
+  pickBy: __webpack_require__(427),
+  pipe: __webpack_require__(227),
+  pipeK: __webpack_require__(428),
+  pipeP: __webpack_require__(228),
+  pluck: __webpack_require__(35),
+  prepend: __webpack_require__(229),
+  product: __webpack_require__(429),
+  project: __webpack_require__(430),
+  prop: __webpack_require__(66),
+  propEq: __webpack_require__(431),
+  propIs: __webpack_require__(432),
+  propOr: __webpack_require__(433),
+  propSatisfies: __webpack_require__(434),
+  props: __webpack_require__(435),
+  range: __webpack_require__(436),
+  reduce: __webpack_require__(17),
+  reduceBy: __webpack_require__(51),
+  reduceRight: __webpack_require__(230),
+  reduceWhile: __webpack_require__(437),
+  reduced: __webpack_require__(438),
+  reject: __webpack_require__(52),
+  remove: __webpack_require__(439),
+  repeat: __webpack_require__(440),
+  replace: __webpack_require__(441),
+  reverse: __webpack_require__(53),
+  scan: __webpack_require__(442),
+  sequence: __webpack_require__(231),
+  set: __webpack_require__(443),
+  slice: __webpack_require__(25),
+  sort: __webpack_require__(444),
+  sortBy: __webpack_require__(445),
+  sortWith: __webpack_require__(446),
+  split: __webpack_require__(447),
+  splitAt: __webpack_require__(448),
+  splitEvery: __webpack_require__(449),
+  splitWhen: __webpack_require__(450),
+  subtract: __webpack_require__(451),
+  sum: __webpack_require__(232),
+  symmetricDifference: __webpack_require__(452),
+  symmetricDifferenceWith: __webpack_require__(453),
+  tail: __webpack_require__(67),
+  take: __webpack_require__(233),
+  takeLast: __webpack_require__(454),
+  takeLastWhile: __webpack_require__(455),
+  takeWhile: __webpack_require__(456),
+  tap: __webpack_require__(457),
+  test: __webpack_require__(458),
+  times: __webpack_require__(234),
+  toLower: __webpack_require__(459),
+  toPairs: __webpack_require__(460),
+  toPairsIn: __webpack_require__(461),
+  toString: __webpack_require__(36),
+  toUpper: __webpack_require__(462),
+  transduce: __webpack_require__(463),
+  transpose: __webpack_require__(464),
+  traverse: __webpack_require__(465),
+  trim: __webpack_require__(466),
+  tryCatch: __webpack_require__(467),
+  type: __webpack_require__(68),
+  unapply: __webpack_require__(468),
+  unary: __webpack_require__(469),
+  uncurryN: __webpack_require__(470),
+  unfold: __webpack_require__(471),
+  union: __webpack_require__(472),
+  unionWith: __webpack_require__(473),
+  uniq: __webpack_require__(69),
+  uniqBy: __webpack_require__(235),
+  uniqWith: __webpack_require__(70),
+  unless: __webpack_require__(474),
+  unnest: __webpack_require__(475),
+  until: __webpack_require__(476),
+  update: __webpack_require__(236),
+  useWith: __webpack_require__(237),
+  values: __webpack_require__(238),
+  valuesIn: __webpack_require__(477),
+  view: __webpack_require__(478),
+  when: __webpack_require__(479),
+  where: __webpack_require__(239),
+  whereEq: __webpack_require__(480),
+  without: __webpack_require__(481),
+  xprod: __webpack_require__(482),
+  zip: __webpack_require__(483),
+  zipObj: __webpack_require__(484),
+  zipWith: __webpack_require__(485)
 };
 
 
@@ -4774,8 +4781,8 @@ exports.default = {
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _isArray = __webpack_require__(19);
-var _isTransformer = __webpack_require__(64);
+var _isArray = __webpack_require__(20);
+var _isTransformer = __webpack_require__(65);
 
 
 /**
@@ -4835,10 +4842,10 @@ module.exports = {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
+var _arity = __webpack_require__(15);
 var _curry1 = __webpack_require__(2);
 var _curry2 = __webpack_require__(0);
-var _curryN = __webpack_require__(42);
+var _curryN = __webpack_require__(43);
 
 
 /**
@@ -4904,13 +4911,34 @@ module.exports = function _has(prop, obj) {
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+var actionCreatorsFor_1 = __webpack_require__(486);
+var actionTypesFor_1 = __webpack_require__(71);
+var constants_1 = __webpack_require__(4);
+var list_1 = __webpack_require__(489);
+var map_1 = __webpack_require__(503);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = {
+    actionCreatorsFor: actionCreatorsFor_1.default,
+    actionTypesFor: actionTypesFor_1.default,
+    constants: constants_1.default,
+    List: list_1.default,
+    Map: map_1.default,
+};
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _map = __webpack_require__(46);
-var _reduce = __webpack_require__(11);
-var _xmap = __webpack_require__(372);
+var _map = __webpack_require__(47);
+var _reduce = __webpack_require__(12);
+var _xmap = __webpack_require__(379);
 var curryN = __webpack_require__(8);
-var keys = __webpack_require__(15);
+var keys = __webpack_require__(16);
 
 
 /**
@@ -4966,11 +4994,11 @@ module.exports = _curry2(_dispatchable(['map'], _xmap, function map(fn, functor)
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _xwrap = __webpack_require__(211);
-var bind = __webpack_require__(186);
+var _xwrap = __webpack_require__(213);
+var bind = __webpack_require__(188);
 var isArrayLike = __webpack_require__(32);
 
 
@@ -5029,7 +5057,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 /**
@@ -5066,11 +5094,11 @@ module.exports = function _concat(set1, set2) {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _equals = __webpack_require__(347);
+var _equals = __webpack_require__(354);
 
 
 /**
@@ -5104,7 +5132,7 @@ module.exports = _curry2(function equals(a, b) {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = function _arity(n, fn) {
@@ -5127,12 +5155,12 @@ module.exports = function _arity(n, fn) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
 var _has = __webpack_require__(9);
-var _isArguments = __webpack_require__(204);
+var _isArguments = __webpack_require__(206);
 
 
 /**
@@ -5206,11 +5234,11 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var _reduce = __webpack_require__(11);
+var _reduce = __webpack_require__(12);
 
 
 /**
@@ -5260,12 +5288,12 @@ module.exports = _curry3(_reduce);
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var invariants_1 = __webpack_require__(243);
+var invariants_1 = __webpack_require__(245);
 var store_1 = __webpack_require__(22);
 function invariantsList(invariantArgs, config, current, record) {
     var extra = {
@@ -5281,12 +5309,12 @@ exports.default = invariantsList;
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var invariants_1 = __webpack_require__(243);
+var invariants_1 = __webpack_require__(245);
 var store_1 = __webpack_require__(26);
 function invariantsMap(invariantArgs, config, current, record) {
     var extra = {
@@ -5302,7 +5330,7 @@ exports.default = invariantsMap;
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 /**
@@ -5325,7 +5353,7 @@ module.exports = Array.isArray || function _isArray(val) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = function _reduced(x) {
@@ -5338,35 +5366,14 @@ module.exports = function _reduced(x) {
 
 
 /***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var actionCreatorsFor_1 = __webpack_require__(479);
-var actionTypesFor_1 = __webpack_require__(70);
-var constants_1 = __webpack_require__(5);
-var list_1 = __webpack_require__(482);
-var map_1 = __webpack_require__(496);
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
-    actionCreatorsFor: actionCreatorsFor_1.default,
-    actionTypesFor: actionTypesFor_1.default,
-    constants: constants_1.default,
-    List: list_1.default,
-    Map: map_1.default,
-};
-
-
-/***/ }),
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var assert_1 = __webpack_require__(491);
-var remove_1 = __webpack_require__(244);
-var merge_1 = __webpack_require__(492);
+var assert_1 = __webpack_require__(498);
+var remove_1 = __webpack_require__(246);
+var merge_1 = __webpack_require__(499);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
     assert: assert_1.default,
@@ -5377,9 +5384,36 @@ exports.default = {
 
 /***/ }),
 /* 23 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.
+Object.defineProperty(exports,"__esModule",{value:true});exports.RESET_USER_PASSWORD=exports.FETCH_USER=exports.RESOLVE_USER=exports.UNAUTHENTICATE_USER=exports.AUTHENTICATE_USER=exports.VALIDATE_USER=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5431,18 +5465,46 @@ unauthenticateUser=unauthenticateUser;exports.
 
 
 
-resolveUser=resolveUser;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(_ref2){var errors=_ref2.errors;throw fail(errors);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(_ref4){var errors=_ref4.errors;throw fail(errors);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(_ref5){var errors=_ref5.errors;throw fail(errors);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function resolveUser(brandibble){var
-adapter=brandibble.adapter,customers=brandibble.customers;
-var payload=adapter.customerToken?customers.current().then(function(_ref6){var data=_ref6.data;return data;}):Promise.resolve({});
+fetchUser=fetchUser;exports.
 
-return function(dispatch){return dispatch(_resolveUser(payload));};
+
+
+
+resetUserPassword=resetUserPassword;exports.
+
+
+
+resolveUser=resolveUser;exports.
+
+
+
+
+
+
+createUser=createUser;exports.
+
+
+
+
+
+
+
+
+
+updateUser=updateUser;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('user'),updateStart=_reduxCrud$actionCrea.updateStart,updateSuccess=_reduxCrud$actionCrea.updateSuccess,updateError=_reduxCrud$actionCrea.updateError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var FETCH_USER=exports.FETCH_USER='FETCH_USER';var RESET_USER_PASSWORD=exports.RESET_USER_PASSWORD='RESET_USER_PASSWORD';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(_ref2){var errors=_ref2.errors;throw fail(errors);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(_ref4){var errors=_ref4.errors;throw fail(errors);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(_ref5){var errors=_ref5.errors;throw fail(errors);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function _fetchUser(brandibble,id){return{type:FETCH_USER,payload:brandibble.customers.show(id).then(function(_ref6){var data=_ref6.data;return data;}).catch(function(_ref7){var errors=_ref7.errors;return errors;})};}function _resetUserPassword(brandibble,email,success,fail){return{type:RESET_USER_PASSWORD,payload:brandibble.customers.resetPassword(email).then(success).catch(function(_ref8){var errors=_ref8.errors;throw fail(errors);})};}function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function fetchUser(brandibble,id){return function(dispatch){return dispatch(_fetchUser(brandibble,id));};}function resetUserPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetUserPassword(brandibble,email,success,fail));};}function resolveUser(brandibble){var adapter=brandibble.adapter,customers=brandibble.customers;var payload=adapter.customerToken?customers.current().then(function(_ref9){var data=_ref9.data;return data;}):Promise.resolve({});return function(dispatch){return dispatch(_resolveUser(payload));};}function createUser(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.customers.create(data).then(function(_ref10){var data=_ref10.data;return dispatch(createSuccess(_extends({id:id},data)));}).catch(function(_ref11){var errors=_ref11.errors;return dispatch(createError(errors,{id:id,data:data}));});};}function updateUser(brandibble,id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
+return function(dispatch){
+dispatch(updateStart({record:data,id:id}));
+return brandibble.customers.updateCurrent(data).
+then(function(_ref12){var data=_ref12.data;return dispatch(updateSuccess(_extends({id:id},data)));}).
+catch(function(_ref13){var errors=_ref13.errors;return dispatch(updateError(errors,{id:id,data:data}));});
+};
 }
 
 /***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _indexOf = __webpack_require__(203);
+var _indexOf = __webpack_require__(205);
 
 
 module.exports = function _contains(a, list) {
@@ -5493,9 +5555,9 @@ module.exports = _curry3(_checkForMethod('slice', function slice(fromIndex, toIn
 
 "use strict";
 
-var assert_1 = __webpack_require__(505);
-var merge_1 = __webpack_require__(506);
-var remove_1 = __webpack_require__(507);
+var assert_1 = __webpack_require__(512);
+var merge_1 = __webpack_require__(513);
+var remove_1 = __webpack_require__(514);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
     assert: assert_1.default,
@@ -5566,27 +5628,118 @@ module.exports = _curry2(function max(a, b) { return b > a ? b : a; });
 
 /***/ }),
 /* 29 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.
-
-
+Object.defineProperty(exports,"__esModule",{value:true});exports.SET_ORDER_LOCATION_ID=exports.REMOVE_OPTION_FROM_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM=exports.REMOVE_LINE_ITEM=exports.SET_LINE_ITEM_QUANTITY=exports.ADD_LINE_ITEM=exports.RESOLVE_ORDER=undefined;exports.
 
 
 
-resolveOrder=resolveOrder;var RESOLVE_ORDER=exports.RESOLVE_ORDER='RESOLVE_ORDER';function _resolveOrder(payload){return{type:RESOLVE_ORDER,payload:payload};}function resolveOrder(brandibble){var serviceType=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'delivery';var
-orders=brandibble.orders;
-var currentOrder=orders.current();
-var payload=currentOrder?Promise.resolve(currentOrder):orders.create(null,serviceType).then(function(_ref){var data=_ref.data;return data;});
 
-return function(dispatch){return dispatch(_resolveOrder(payload));};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+resolveOrder=resolveOrder;exports.
+
+
+
+
+
+
+
+setOrderLocationId=setOrderLocationId;exports.
+
+
+
+addLineItem=addLineItem;exports.
+
+
+
+
+
+
+
+
+
+setLineItemQuantity=setLineItemQuantity;exports.
+
+
+
+
+
+
+
+
+
+removeLineItem=removeLineItem;exports.
+
+
+
+addOptionToLineItem=addOptionToLineItem;exports.
+
+
+
+removeOptionFromLineItem=removeOptionFromLineItem;var _exception=__webpack_require__(278);var _exception2=_interopRequireDefault(_exception);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var RESOLVE_ORDER=exports.RESOLVE_ORDER='RESOLVE_ORDER';var ADD_LINE_ITEM=exports.ADD_LINE_ITEM='ADD_LINE_ITEM';var SET_LINE_ITEM_QUANTITY=exports.SET_LINE_ITEM_QUANTITY='SET_LINE_ITEM_QUANTITY';var REMOVE_LINE_ITEM=exports.REMOVE_LINE_ITEM='REMOVE_LINE_ITEM';var ADD_OPTION_TO_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM='ADD_OPTION_TO_LINE_ITEM';var REMOVE_OPTION_FROM_LINE_ITEM=exports.REMOVE_OPTION_FROM_LINE_ITEM='REMOVE_OPTION_FROM_LINE_ITEM';var SET_ORDER_LOCATION_ID=exports.SET_ORDER_LOCATION_ID='SET_ORDER_LOCATION_ID';function _resolveOrder(payload){return{type:RESOLVE_ORDER,payload:payload.then(function(order){order;})};}function _addLineItem(order,product,quantity){return{type:ADD_LINE_ITEM,payload:order.addLineItem(product,quantity).then(function(lineItem){order,lineItem;})};}function _setLineItemQuantity(order,lineItem,newQuantity){return{type:SET_LINE_ITEM_QUANTITY,payload:order.setLineItemQuantity(lineItem,newQuantity).then(function(lineItem){order,lineItem;})};}function _removeLineItem(order,lineItem){return{type:REMOVE_LINE_ITEM,payload:order.removeLineItem(lineItem).then(function(remainingLineItems){order,remainingLineItems;})};}function _addOptionToLineItem(order,lineItem,optionGroup,optionItem){return{type:ADD_OPTION_TO_LINE_ITEM,payload:order.addOptionToLineItem(lineItem,optionGroup,optionItem).then(function(lineItem){order,lineItem;})};}function _removeOptionFromLineItem(order,lineItem,optionItem){return{type:REMOVE_OPTION_FROM_LINE_ITEM,payload:order.removeOptionFromLineItem(lineItem,optionItem).then(function(lineItem){order,lineItem;})};}function _setOrderLocationId(order,locationId){return{type:SET_ORDER_LOCATION_ID,payload:order.setLocation(locationId).then(function(order){order;})};}function resolveOrder(brandibble){var serviceType=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'delivery';var orders=brandibble.orders;var currentOrder=orders.current();var payload=currentOrder?Promise.resolve(currentOrder):orders.create(null,serviceType).then(function(_ref){var data=_ref.data;return data;});return function(dispatch){return dispatch(_resolveOrder(payload));};}function setOrderLocationId(currentOrder,locationId){var _arguments=arguments;return function(dispatch){return dispatch(_setOrderLocationId.apply(undefined,_arguments));};}function addLineItem(currentOrder,product){var _arguments2=arguments;var quantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_addLineItem.apply(undefined,_arguments2));};}function setLineItemQuantity(currentOrder,lineItem){var _arguments3=arguments;var newQuantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(newQuantity<1){throw new _exception2.default('updateLineItemQuantity','Please pass quantity more than 1 to this action. Use removeLineItem to remove from order.');}return function(dispatch){return dispatch(_setLineItemQuantity.apply(undefined,_arguments3));};}function removeLineItem(currentOrder,lineItem){var _arguments4=arguments;return function(dispatch){return dispatch(_removeLineItem.apply(undefined,_arguments4));};}function addOptionToLineItem(currentOrder,lineItem,optionGroup,optionItem){var _arguments5=arguments;return function(dispatch){return dispatch(_addOptionToLineItem.apply(undefined,_arguments5));};}function removeOptionFromLineItem(currentOrder,lineItem,optionItem){var _arguments6=arguments;
+return function(dispatch){return dispatch(_removeOptionFromLineItem.apply(undefined,_arguments6));};
 }
 
 /***/ }),
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _isArray = __webpack_require__(19);
+var _isArray = __webpack_require__(20);
 
 
 /**
@@ -5618,7 +5771,7 @@ module.exports = function _checkForMethod(methodname, fn) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isFunction = __webpack_require__(43);
+var _isFunction = __webpack_require__(44);
 var curryN = __webpack_require__(8);
 var toString = __webpack_require__(36);
 
@@ -5665,8 +5818,8 @@ module.exports = _curry2(function invoker(arity, method) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _isArray = __webpack_require__(19);
-var _isString = __webpack_require__(45);
+var _isArray = __webpack_require__(20);
+var _isString = __webpack_require__(46);
 
 
 /**
@@ -5708,7 +5861,7 @@ module.exports = _curry1(function isArrayLike(x) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isString = __webpack_require__(45);
+var _isString = __webpack_require__(46);
 
 
 /**
@@ -5787,8 +5940,8 @@ module.exports = _curry2(function path(paths, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var map = __webpack_require__(10);
-var prop = __webpack_require__(65);
+var map = __webpack_require__(11);
+var prop = __webpack_require__(66);
 
 
 /**
@@ -5821,7 +5974,7 @@ module.exports = _curry2(function pluck(p, list) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _toString = __webpack_require__(359);
+var _toString = __webpack_require__(366);
 
 
 /**
@@ -5903,6 +6056,23 @@ return dispatch(_setupBrandibbleRedux(payload));
 
 /***/ }),
 /* 38 */
+/***/ (function(module, exports) {
+
+Object.defineProperty(exports,"__esModule",{value:true});exports.default=function(){
+var d=new Date().getTime();
+if(window.performance&&typeof window.performance.now==='function'){
+d+=performance.now();
+}
+var uuid='xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){
+var r=(d+Math.random()*16)%16|0;
+d=Math.floor(d/16);
+return(c=='x'?r:r&0x3|0x8).toString(16);
+});
+return uuid;
+};
+
+/***/ }),
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -5931,7 +6101,7 @@ module.exports = _curry2(function add(a, b) {
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -5968,7 +6138,7 @@ module.exports = _curry3(function assoc(prop, val, obj) {
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -6022,11 +6192,11 @@ module.exports = _curry1(function curry(fn) {
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var curry = __webpack_require__(40);
+var curry = __webpack_require__(41);
 
 
 /**
@@ -6060,11 +6230,11 @@ module.exports = _curry1(function flip(fn) {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
-var _isPlaceholder = __webpack_require__(44);
+var _arity = __webpack_require__(15);
+var _isPlaceholder = __webpack_require__(45);
 
 
 /**
@@ -6106,7 +6276,7 @@ module.exports = function _curryN(length, received, fn) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 module.exports = function _isFunction(x) {
@@ -6115,7 +6285,7 @@ module.exports = function _isFunction(x) {
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 module.exports = function _isPlaceholder(a) {
@@ -6126,7 +6296,7 @@ module.exports = function _isPlaceholder(a) {
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 module.exports = function _isString(x) {
@@ -6135,7 +6305,7 @@ module.exports = function _isString(x) {
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = function _map(fn, functor) {
@@ -6151,11 +6321,11 @@ module.exports = function _map(fn, functor) {
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var map = __webpack_require__(10);
+var map = __webpack_require__(11);
 
 
 /**
@@ -6196,11 +6366,11 @@ module.exports = _curry2(function lens(getter, setter) {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var liftN = __webpack_require__(216);
+var liftN = __webpack_require__(218);
 
 
 /**
@@ -6231,7 +6401,7 @@ module.exports = _curry1(function lift(fn) {
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -6285,14 +6455,14 @@ module.exports = _curry2(function nAry(n, fn) {
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _curryN = __webpack_require__(42);
+var _curryN = __webpack_require__(43);
 var _dispatchable = __webpack_require__(6);
 var _has = __webpack_require__(9);
-var _reduce = __webpack_require__(11);
-var _xreduceBy = __webpack_require__(373);
+var _reduce = __webpack_require__(12);
+var _xreduceBy = __webpack_require__(380);
 
 
 /**
@@ -6350,12 +6520,12 @@ module.exports = _curryN(4, [], _dispatchable([], _xreduceBy,
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _complement = __webpack_require__(200);
+var _complement = __webpack_require__(202);
 var _curry2 = __webpack_require__(0);
-var filter = __webpack_require__(59);
+var filter = __webpack_require__(60);
 
 
 /**
@@ -6386,11 +6556,11 @@ module.exports = _curry2(function reject(pred, filterable) {
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _isString = __webpack_require__(45);
+var _isString = __webpack_require__(46);
 
 
 /**
@@ -6424,12 +6594,12 @@ module.exports = _curry1(function reverse(list) {
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
+var r = __webpack_require__(5);
 function wrapArray(recordOrRecords) {
     var isArray = r.is(Array, recordOrRecords);
     return isArray ? recordOrRecords : [recordOrRecords];
@@ -6439,19 +6609,19 @@ exports.default = wrapArray;
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_54__;
+module.exports = __WEBPACK_EXTERNAL_MODULE_55__;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
+var _concat = __webpack_require__(13);
 var _curry2 = __webpack_require__(0);
-var _reduce = __webpack_require__(11);
-var map = __webpack_require__(10);
+var _reduce = __webpack_require__(12);
+var map = __webpack_require__(11);
 
 
 /**
@@ -6488,14 +6658,14 @@ module.exports = _curry2(function ap(applicative, fn) {
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _makeFlat = __webpack_require__(208);
-var _xchain = __webpack_require__(362);
-var map = __webpack_require__(10);
+var _makeFlat = __webpack_require__(210);
+var _xchain = __webpack_require__(369);
+var map = __webpack_require__(11);
 
 
 /**
@@ -6529,11 +6699,11 @@ module.exports = _curry2(_dispatchable(['chain'], _xchain, function chain(fn, mo
 
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pipe = __webpack_require__(225);
-var reverse = __webpack_require__(52);
+var pipe = __webpack_require__(227);
+var reverse = __webpack_require__(53);
 
 
 /**
@@ -6569,12 +6739,12 @@ module.exports = function compose() {
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isArray = __webpack_require__(19);
-var _isFunction = __webpack_require__(43);
+var _isArray = __webpack_require__(20);
+var _isFunction = __webpack_require__(44);
 var toString = __webpack_require__(36);
 
 
@@ -6616,16 +6786,16 @@ module.exports = _curry2(function concat(a, b) {
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _filter = __webpack_require__(202);
-var _isObject = __webpack_require__(207);
-var _reduce = __webpack_require__(11);
-var _xfilter = __webpack_require__(367);
-var keys = __webpack_require__(15);
+var _filter = __webpack_require__(204);
+var _isObject = __webpack_require__(209);
+var _reduce = __webpack_require__(12);
+var _xfilter = __webpack_require__(374);
+var keys = __webpack_require__(16);
 
 
 /**
@@ -6670,11 +6840,11 @@ module.exports = _curry2(_dispatchable(['filter'], _xfilter, function(pred, filt
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _identity = __webpack_require__(63);
+var _identity = __webpack_require__(64);
 
 
 /**
@@ -6700,17 +6870,17 @@ module.exports = _curry1(_identity);
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _objectAssign = __webpack_require__(352);
+var _objectAssign = __webpack_require__(359);
 
 module.exports =
   typeof Object.assign === 'function' ? Object.assign : _objectAssign;
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports) {
 
 module.exports = function _containsWith(pred, x, list) {
@@ -6728,14 +6898,14 @@ module.exports = function _containsWith(pred, x, list) {
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports) {
 
 module.exports = function _identity(x) { return x; };
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports) {
 
 module.exports = function _isTransformer(obj) {
@@ -6744,7 +6914,7 @@ module.exports = function _isTransformer(obj) {
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -6772,7 +6942,7 @@ module.exports = _curry2(function prop(p, obj) { return obj[p]; });
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _checkForMethod = __webpack_require__(30);
@@ -6811,7 +6981,7 @@ module.exports = _curry1(_checkForMethod('tail', slice(1, Infinity)));
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -6848,11 +7018,11 @@ module.exports = _curry1(function type(val) {
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var identity = __webpack_require__(60);
-var uniqBy = __webpack_require__(233);
+var identity = __webpack_require__(61);
+var uniqBy = __webpack_require__(235);
 
 
 /**
@@ -6876,10 +7046,10 @@ module.exports = uniqBy(identity);
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _containsWith = __webpack_require__(62);
+var _containsWith = __webpack_require__(63);
 var _curry2 = __webpack_require__(0);
 
 
@@ -6922,23 +7092,23 @@ module.exports = _curry2(function uniqWith(pred, list) {
 
 
 /***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var actionTypesFor = __webpack_require__(253);
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = actionTypesFor;
-
-
-/***/ }),
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
+var actionTypesFor = __webpack_require__(255);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = actionTypesFor;
+
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var r = __webpack_require__(5);
 function findByKey(collection, key, id) {
     function predicate(record) {
         return record[key] === id;
@@ -6950,7 +7120,35 @@ exports.default = findByKey;
 
 
 /***/ }),
-/* 72 */
+/* 73 */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if(!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if(!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -7013,10 +7211,10 @@ function checkGlobal(value) {
 
 module.exports = root;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(248)(module), __webpack_require__(514)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(73)(module), __webpack_require__(250)))
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7094,7 +7292,7 @@ return af;
 
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7158,7 +7356,7 @@ return arDz;
 
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7289,7 +7487,7 @@ return arLy;
 
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7354,7 +7552,7 @@ return arMa;
 
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7464,7 +7662,7 @@ return arSa;
 
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7528,7 +7726,7 @@ return arTn;
 
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7675,7 +7873,7 @@ return ar;
 
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7785,7 +7983,7 @@ return az;
 
 
 /***/ }),
-/* 81 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7924,7 +8122,7 @@ return be;
 
 
 /***/ }),
-/* 82 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8019,7 +8217,7 @@ return bg;
 
 
 /***/ }),
-/* 83 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8143,7 +8341,7 @@ return bn;
 
 
 /***/ }),
-/* 84 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8267,7 +8465,7 @@ return bo;
 
 
 /***/ }),
-/* 85 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8380,7 +8578,7 @@ return br;
 
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8528,7 +8726,7 @@ return bs;
 
 
 /***/ }),
-/* 87 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8614,7 +8812,7 @@ return ca;
 
 
 /***/ }),
-/* 88 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8791,7 +8989,7 @@ return cs;
 
 
 /***/ }),
-/* 89 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8859,7 +9057,7 @@ return cv;
 
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8945,7 +9143,7 @@ return cy;
 
 
 /***/ }),
-/* 91 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9010,7 +9208,7 @@ return da;
 
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9094,7 +9292,7 @@ return deAt;
 
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9177,7 +9375,7 @@ return de;
 
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9282,7 +9480,7 @@ return dv;
 
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9385,7 +9583,7 @@ return el;
 
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9457,7 +9655,7 @@ return enAu;
 
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9525,7 +9723,7 @@ return enCa;
 
 
 /***/ }),
-/* 98 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9597,7 +9795,7 @@ return enGb;
 
 
 /***/ }),
-/* 99 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9669,7 +9867,7 @@ return enIe;
 
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9741,7 +9939,7 @@ return enNz;
 
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9819,7 +10017,7 @@ return eo;
 
 
 /***/ }),
-/* 102 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9904,7 +10102,7 @@ return esDo;
 
 
 /***/ }),
-/* 103 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9990,7 +10188,7 @@ return es;
 
 
 /***/ }),
-/* 104 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10075,7 +10273,7 @@ return et;
 
 
 /***/ }),
-/* 105 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10146,7 +10344,7 @@ return eu;
 
 
 /***/ }),
-/* 106 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10258,7 +10456,7 @@ return fa;
 
 
 /***/ }),
-/* 107 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10370,7 +10568,7 @@ return fi;
 
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10435,7 +10633,7 @@ return fo;
 
 
 /***/ }),
-/* 109 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10500,7 +10698,7 @@ return frCa;
 
 
 /***/ }),
-/* 110 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10569,7 +10767,7 @@ return frCh;
 
 
 /***/ }),
-/* 111 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10638,7 +10836,7 @@ return fr;
 
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10716,7 +10914,7 @@ return fy;
 
 
 /***/ }),
-/* 113 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10797,7 +10995,7 @@ return gd;
 
 
 /***/ }),
-/* 114 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10879,7 +11077,7 @@ return gl;
 
 
 /***/ }),
-/* 115 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10983,7 +11181,7 @@ return he;
 
 
 /***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11112,7 +11310,7 @@ return hi;
 
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11262,7 +11460,7 @@ return hr;
 
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11376,7 +11574,7 @@ return hu;
 
 
 /***/ }),
-/* 119 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11476,7 +11674,7 @@ return hyAm;
 
 
 /***/ }),
-/* 120 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11564,7 +11762,7 @@ return id;
 
 
 /***/ }),
-/* 121 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11696,7 +11894,7 @@ return is;
 
 
 /***/ }),
-/* 122 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11771,7 +11969,7 @@ return it;
 
 
 /***/ }),
-/* 123 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11852,7 +12050,7 @@ return ja;
 
 
 /***/ }),
-/* 124 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11940,7 +12138,7 @@ return jv;
 
 
 /***/ }),
-/* 125 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12034,7 +12232,7 @@ return ka;
 
 
 /***/ }),
-/* 126 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12126,7 +12324,7 @@ return kk;
 
 
 /***/ }),
-/* 127 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12189,7 +12387,7 @@ return km;
 
 
 /***/ }),
-/* 128 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12259,7 +12457,7 @@ return ko;
 
 
 /***/ }),
-/* 129 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12352,7 +12550,7 @@ return ky;
 
 
 /***/ }),
-/* 130 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12494,7 +12692,7 @@ return lb;
 
 
 /***/ }),
-/* 131 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12569,7 +12767,7 @@ return lo;
 
 
 /***/ }),
-/* 132 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12691,7 +12889,7 @@ return lt;
 
 
 /***/ }),
-/* 133 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12793,7 +12991,7 @@ return lv;
 
 
 /***/ }),
-/* 134 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12909,7 +13107,7 @@ return me;
 
 
 /***/ }),
-/* 135 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12978,7 +13176,7 @@ return mi;
 
 
 /***/ }),
-/* 136 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13073,7 +13271,7 @@ return mk;
 
 
 /***/ }),
-/* 137 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13159,7 +13357,7 @@ return ml;
 
 
 /***/ }),
-/* 138 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13323,7 +13521,7 @@ return mr;
 
 
 /***/ }),
-/* 139 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13411,7 +13609,7 @@ return msMy;
 
 
 /***/ }),
-/* 140 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13498,7 +13696,7 @@ return ms;
 
 
 /***/ }),
-/* 141 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13599,7 +13797,7 @@ return my;
 
 
 /***/ }),
-/* 142 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13667,7 +13865,7 @@ return nb;
 
 
 /***/ }),
-/* 143 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13795,7 +13993,7 @@ return ne;
 
 
 /***/ }),
-/* 144 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13886,7 +14084,7 @@ return nlBe;
 
 
 /***/ }),
-/* 145 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13977,7 +14175,7 @@ return nl;
 
 
 /***/ }),
-/* 146 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14042,7 +14240,7 @@ return nn;
 
 
 /***/ }),
-/* 147 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14171,7 +14369,7 @@ return paIn;
 
 
 /***/ }),
-/* 148 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14281,7 +14479,7 @@ return pl;
 
 
 /***/ }),
-/* 149 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14347,7 +14545,7 @@ return ptBr;
 
 
 /***/ }),
-/* 150 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14417,7 +14615,7 @@ return pt;
 
 
 /***/ }),
-/* 151 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14497,7 +14695,7 @@ return ro;
 
 
 /***/ }),
-/* 152 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14685,7 +14883,7 @@ return ru;
 
 
 /***/ }),
-/* 153 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14751,7 +14949,7 @@ return se;
 
 
 /***/ }),
-/* 154 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14827,7 +15025,7 @@ return si;
 
 
 /***/ }),
-/* 155 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14982,7 +15180,7 @@ return sk;
 
 
 /***/ }),
-/* 156 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15149,7 +15347,7 @@ return sl;
 
 
 /***/ }),
-/* 157 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15224,7 +15422,7 @@ return sq;
 
 
 /***/ }),
-/* 158 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15339,7 +15537,7 @@ return srCyrl;
 
 
 /***/ }),
-/* 159 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15454,7 +15652,7 @@ return sr;
 
 
 /***/ }),
-/* 160 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15548,7 +15746,7 @@ return ss;
 
 
 /***/ }),
-/* 161 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15622,7 +15820,7 @@ return sv;
 
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15686,7 +15884,7 @@ return sw;
 
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15821,7 +16019,7 @@ return ta;
 
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15915,7 +16113,7 @@ return te;
 
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15988,7 +16186,7 @@ return tet;
 
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16060,7 +16258,7 @@ return th;
 
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16127,7 +16325,7 @@ return tlPh;
 
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16252,7 +16450,7 @@ return tlh;
 
 
 /***/ }),
-/* 169 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16347,7 +16545,7 @@ return tr;
 
 
 /***/ }),
-/* 170 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16443,7 +16641,7 @@ return tzl;
 
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16506,7 +16704,7 @@ return tzmLatn;
 
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16569,7 +16767,7 @@ return tzm;
 
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16720,7 +16918,7 @@ return uk;
 
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16783,7 +16981,7 @@ return uz;
 
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16867,7 +17065,7 @@ return vi;
 
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16940,7 +17138,7 @@ return xPseudo;
 
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17005,7 +17203,7 @@ return yo;
 
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17137,7 +17335,7 @@ return zhCn;
 
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17247,7 +17445,7 @@ return zhHk;
 
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17356,10 +17554,10 @@ return zhTw;
 
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
+var _concat = __webpack_require__(13);
 var _curry3 = __webpack_require__(3);
 
 
@@ -17401,7 +17599,7 @@ module.exports = _curry3(function adjust(fn, idx, list) {
 
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -17432,12 +17630,12 @@ module.exports = _curry2(function and(a, b) {
 
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xany = __webpack_require__(209);
+var _xany = __webpack_require__(211);
 
 
 /**
@@ -17478,7 +17676,7 @@ module.exports = _curry2(_dispatchable(['any'], _xany, function any(fn, list) {
 
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -17510,14 +17708,14 @@ module.exports = _curry2(function apply(fn, args) {
 
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
 var _has = __webpack_require__(9);
-var _isArray = __webpack_require__(19);
-var _isInteger = __webpack_require__(205);
-var assoc = __webpack_require__(39);
+var _isArray = __webpack_require__(20);
+var _isInteger = __webpack_require__(207);
+var assoc = __webpack_require__(40);
 
 
 /**
@@ -17564,10 +17762,10 @@ module.exports = _curry3(function assocPath(path, val, obj) {
 
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
+var _arity = __webpack_require__(15);
 var _curry2 = __webpack_require__(0);
 
 
@@ -17601,12 +17799,12 @@ module.exports = _curry2(function bind(fn, thisObj) {
 
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var chain = __webpack_require__(56);
-var compose = __webpack_require__(57);
-var map = __webpack_require__(10);
+var chain = __webpack_require__(57);
+var compose = __webpack_require__(58);
+var map = __webpack_require__(11);
 
 
 /**
@@ -17650,12 +17848,12 @@ module.exports = function composeK() {
 
 
 /***/ }),
-/* 188 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var curry = __webpack_require__(40);
-var nAry = __webpack_require__(49);
+var curry = __webpack_require__(41);
+var nAry = __webpack_require__(50);
 
 
 /**
@@ -17718,15 +17916,15 @@ module.exports = _curry2(function constructN(n, Fn) {
 
 
 /***/ }),
-/* 189 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _map = __webpack_require__(46);
+var _map = __webpack_require__(47);
 var curryN = __webpack_require__(8);
 var max = __webpack_require__(28);
 var pluck = __webpack_require__(35);
-var reduce = __webpack_require__(16);
+var reduce = __webpack_require__(17);
 
 
 /**
@@ -17768,7 +17966,7 @@ module.exports = _curry2(function converge(after, fns) {
 
 
 /***/ }),
-/* 190 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -17802,7 +18000,7 @@ module.exports = _curry2(function defaultTo(d, v) {
 
 
 /***/ }),
-/* 191 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _contains = __webpack_require__(24);
@@ -17844,10 +18042,10 @@ module.exports = _curry2(function difference(first, second) {
 
 
 /***/ }),
-/* 192 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _containsWith = __webpack_require__(62);
+var _containsWith = __webpack_require__(63);
 var _curry3 = __webpack_require__(3);
 
 
@@ -17889,7 +18087,7 @@ module.exports = _curry3(function differenceWith(pred, first, second) {
 
 
 /***/ }),
-/* 193 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -17922,12 +18120,12 @@ module.exports = _curry2(function dissoc(prop, obj) {
 
 
 /***/ }),
-/* 194 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xdrop = __webpack_require__(363);
+var _xdrop = __webpack_require__(370);
 var slice = __webpack_require__(25);
 
 
@@ -17961,13 +18159,13 @@ module.exports = _curry2(_dispatchable(['drop'], _xdrop, function drop(n, xs) {
 
 
 /***/ }),
-/* 195 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xdropRepeatsWith = __webpack_require__(210);
-var last = __webpack_require__(214);
+var _xdropRepeatsWith = __webpack_require__(212);
+var last = __webpack_require__(216);
 
 
 /**
@@ -18010,14 +18208,14 @@ module.exports = _curry2(_dispatchable([], _xdropRepeatsWith, function dropRepea
 
 
 /***/ }),
-/* 196 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _isArguments = __webpack_require__(204);
-var _isArray = __webpack_require__(19);
-var _isObject = __webpack_require__(207);
-var _isString = __webpack_require__(45);
+var _isArguments = __webpack_require__(206);
+var _isArray = __webpack_require__(20);
+var _isObject = __webpack_require__(209);
+var _isString = __webpack_require__(46);
 
 
 /**
@@ -18063,7 +18261,7 @@ module.exports = _curry1(function empty(x) {
 
 
 /***/ }),
-/* 197 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -18105,11 +18303,11 @@ module.exports = _curry2(function identical(a, b) {
 
 
 /***/ }),
-/* 198 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _cloneRegExp = __webpack_require__(199);
-var type = __webpack_require__(67);
+var _cloneRegExp = __webpack_require__(201);
+var type = __webpack_require__(68);
 
 
 /**
@@ -18151,7 +18349,7 @@ module.exports = function _clone(value, refFrom, refTo, deep) {
 
 
 /***/ }),
-/* 199 */
+/* 201 */
 /***/ (function(module, exports) {
 
 module.exports = function _cloneRegExp(pattern) {
@@ -18164,7 +18362,7 @@ module.exports = function _cloneRegExp(pattern) {
 
 
 /***/ }),
-/* 200 */
+/* 202 */
 /***/ (function(module, exports) {
 
 module.exports = function _complement(f) {
@@ -18175,10 +18373,10 @@ module.exports = function _complement(f) {
 
 
 /***/ }),
-/* 201 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
+var _arity = __webpack_require__(15);
 var _curry2 = __webpack_require__(0);
 
 
@@ -18192,7 +18390,7 @@ module.exports = function _createPartialApplicator(concat) {
 
 
 /***/ }),
-/* 202 */
+/* 204 */
 /***/ (function(module, exports) {
 
 module.exports = function _filter(fn, list) {
@@ -18211,10 +18409,10 @@ module.exports = function _filter(fn, list) {
 
 
 /***/ }),
-/* 203 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var equals = __webpack_require__(13);
+var equals = __webpack_require__(14);
 
 
 module.exports = function _indexOf(list, a, idx) {
@@ -18274,7 +18472,7 @@ module.exports = function _indexOf(list, a, idx) {
 
 
 /***/ }),
-/* 204 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _has = __webpack_require__(9);
@@ -18289,7 +18487,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 205 */
+/* 207 */
 /***/ (function(module, exports) {
 
 /**
@@ -18306,7 +18504,7 @@ module.exports = Number.isInteger || function _isInteger(n) {
 
 
 /***/ }),
-/* 206 */
+/* 208 */
 /***/ (function(module, exports) {
 
 module.exports = function _isNumber(x) {
@@ -18315,7 +18513,7 @@ module.exports = function _isNumber(x) {
 
 
 /***/ }),
-/* 207 */
+/* 209 */
 /***/ (function(module, exports) {
 
 module.exports = function _isObject(x) {
@@ -18324,7 +18522,7 @@ module.exports = function _isObject(x) {
 
 
 /***/ }),
-/* 208 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArrayLike = __webpack_require__(32);
@@ -18363,11 +18561,11 @@ module.exports = function _makeFlat(recursive) {
 
 
 /***/ }),
-/* 209 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _reduced = __webpack_require__(20);
+var _reduced = __webpack_require__(21);
 var _xfBase = __webpack_require__(7);
 
 
@@ -18397,7 +18595,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 210 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -18430,7 +18628,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 211 */
+/* 213 */
 /***/ (function(module, exports) {
 
 module.exports = (function() {
@@ -18450,7 +18648,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 212 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -18485,11 +18683,11 @@ module.exports = _curry2(function is(Ctor, val) {
 
 
 /***/ }),
-/* 213 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var converge = __webpack_require__(189);
+var converge = __webpack_require__(191);
 
 
 /**
@@ -18515,7 +18713,7 @@ module.exports = _curry1(function juxt(fns) {
 
 
 /***/ }),
-/* 214 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nth = __webpack_require__(33);
@@ -18545,11 +18743,11 @@ module.exports = nth(-1);
 
 
 /***/ }),
-/* 215 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _isNumber = __webpack_require__(206);
+var _isNumber = __webpack_require__(208);
 
 
 /**
@@ -18573,14 +18771,14 @@ module.exports = _curry1(function length(list) {
 
 
 /***/ }),
-/* 216 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _reduce = __webpack_require__(11);
-var ap = __webpack_require__(55);
+var _reduce = __webpack_require__(12);
+var ap = __webpack_require__(56);
 var curryN = __webpack_require__(8);
-var map = __webpack_require__(10);
+var map = __webpack_require__(11);
 
 
 /**
@@ -18609,11 +18807,11 @@ module.exports = _curry2(function liftN(arity, fn) {
 
 
 /***/ }),
-/* 217 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var sum = __webpack_require__(230);
+var sum = __webpack_require__(232);
 
 
 /**
@@ -18637,7 +18835,7 @@ module.exports = _curry1(function mean(list) {
 
 
 /***/ }),
-/* 218 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -18692,7 +18890,7 @@ module.exports = _curry3(function mergeWithKey(fn, l, r) {
 
 
 /***/ }),
-/* 219 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -18722,7 +18920,7 @@ module.exports = _curry2(function multiply(a, b) { return a * b; });
 
 
 /***/ }),
-/* 220 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -18753,7 +18951,7 @@ module.exports = _curry1(function not(a) {
 
 
 /***/ }),
-/* 221 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -18787,7 +18985,7 @@ module.exports = _curry2(function objOf(key, val) {
 
 
 /***/ }),
-/* 222 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -18819,7 +19017,7 @@ module.exports = _curry2(function or(a, b) {
 
 
 /***/ }),
-/* 223 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -18864,7 +19062,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 224 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -18902,13 +19100,13 @@ module.exports = _curry2(function pickAll(names, obj) {
 
 
 /***/ }),
-/* 225 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
-var _pipe = __webpack_require__(354);
-var reduce = __webpack_require__(16);
-var tail = __webpack_require__(66);
+var _arity = __webpack_require__(15);
+var _pipe = __webpack_require__(361);
+var reduce = __webpack_require__(17);
+var tail = __webpack_require__(67);
 
 
 /**
@@ -18944,13 +19142,13 @@ module.exports = function pipe() {
 
 
 /***/ }),
-/* 226 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
-var _pipeP = __webpack_require__(355);
-var reduce = __webpack_require__(16);
-var tail = __webpack_require__(66);
+var _arity = __webpack_require__(15);
+var _pipeP = __webpack_require__(362);
+var reduce = __webpack_require__(17);
+var tail = __webpack_require__(67);
 
 
 /**
@@ -18981,10 +19179,10 @@ module.exports = function pipeP() {
 
 
 /***/ }),
-/* 227 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
+var _concat = __webpack_require__(13);
 var _curry2 = __webpack_require__(0);
 
 
@@ -19011,7 +19209,7 @@ module.exports = _curry2(function prepend(el, list) {
 
 
 /***/ }),
-/* 228 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -19070,14 +19268,14 @@ module.exports = _curry3(function reduceRight(fn, acc, list) {
 
 
 /***/ }),
-/* 229 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var ap = __webpack_require__(55);
-var map = __webpack_require__(10);
-var prepend = __webpack_require__(227);
-var reduceRight = __webpack_require__(228);
+var ap = __webpack_require__(56);
+var map = __webpack_require__(11);
+var prepend = __webpack_require__(229);
+var reduceRight = __webpack_require__(230);
 
 
 /**
@@ -19114,11 +19312,11 @@ module.exports = _curry2(function sequence(of, traversable) {
 
 
 /***/ }),
-/* 230 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var add = __webpack_require__(38);
-var reduce = __webpack_require__(16);
+var add = __webpack_require__(39);
+var reduce = __webpack_require__(17);
 
 
 /**
@@ -19140,12 +19338,12 @@ module.exports = reduce(add, 0);
 
 
 /***/ }),
-/* 231 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xtake = __webpack_require__(374);
+var _xtake = __webpack_require__(381);
 var slice = __webpack_require__(25);
 
 
@@ -19198,7 +19396,7 @@ module.exports = _curry2(_dispatchable(['take'], _xtake, function take(n, xs) {
 
 
 /***/ }),
-/* 232 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -19244,10 +19442,10 @@ module.exports = _curry2(function times(fn, n) {
 
 
 /***/ }),
-/* 233 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _Set = __webpack_require__(342);
+var _Set = __webpack_require__(349);
 var _curry2 = __webpack_require__(0);
 
 
@@ -19288,11 +19486,11 @@ module.exports = _curry2(function uniqBy(fn, list) {
 
 
 /***/ }),
-/* 234 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var adjust = __webpack_require__(181);
+var adjust = __webpack_require__(183);
 var always = __webpack_require__(27);
 
 
@@ -19324,7 +19522,7 @@ module.exports = _curry3(function update(idx, x, list) {
 
 
 /***/ }),
-/* 235 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -19374,11 +19572,11 @@ module.exports = _curry2(function useWith(fn, transformers) {
 
 
 /***/ }),
-/* 236 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var keys = __webpack_require__(15);
+var keys = __webpack_require__(16);
 
 
 /**
@@ -19411,7 +19609,7 @@ module.exports = _curry1(function values(obj) {
 
 
 /***/ }),
-/* 237 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -19463,48 +19661,52 @@ module.exports = _curry2(function where(spec, testObj) {
 
 
 /***/ }),
-/* 238 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var r = __webpack_require__(4);
-function prepareRecord(record) {
-    var recordStatus = {
-        busy: true,
-        pendingCreate: true,
-    };
-    return r.merge(record, recordStatus);
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 239 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var r = __webpack_require__(4);
-function prepareRecord(record) {
-    var recordStatus = {
-        deleted: true,
-        busy: true,
-    };
-    return r.merge(record, recordStatus);
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
 /* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
-var actionTypesFor_1 = __webpack_require__(70);
-var constants_1 = __webpack_require__(5);
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+function prepareRecord(record) {
+    var recordStatus = (_a = {},
+        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
+        _a[constants_1.default.SPECIAL_KEYS.PENDING_CREATE] = true,
+        _a);
+    return r.merge(record, recordStatus);
+    var _a;
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+function prepareRecord(record) {
+    var recordStatus = (_a = {},
+        _a[constants_1.default.SPECIAL_KEYS.DELETED] = true,
+        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
+        _a);
+    return r.merge(record, recordStatus);
+    var _a;
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 242 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var r = __webpack_require__(5);
+var actionTypesFor_1 = __webpack_require__(71);
+var constants_1 = __webpack_require__(4);
 function reducersFor(resourceName, args, emptyState, reducers) {
     if (args === void 0) { args = {}; }
     if (resourceName == null)
@@ -19551,44 +19753,47 @@ exports.default = reducersFor;
 
 
 /***/ }),
-/* 241 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var r = __webpack_require__(4);
-function prepareRecord(record) {
-    return r.omit(["busy"], record);
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 242 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var r = __webpack_require__(4);
-function prepareRecord(record) {
-    var recordStatus = {
-        busy: true,
-        pendingUpdate: true,
-    };
-    return r.merge(record, recordStatus);
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
 /* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var assertHasKey_1 = __webpack_require__(481);
-var assertNotArray_1 = __webpack_require__(246);
-var makeScope_1 = __webpack_require__(247);
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+function prepareRecord(record) {
+    return r.dissoc(constants_1.default.SPECIAL_KEYS.BUSY, record);
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 244 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+function prepareRecord(record) {
+    var recordStatus = (_a = {},
+        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
+        _a[constants_1.default.SPECIAL_KEYS.PENDING_UPDATE] = true,
+        _a);
+    return r.merge(record, recordStatus);
+    var _a;
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 245 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var assertHasKey_1 = __webpack_require__(488);
+var assertNotArray_1 = __webpack_require__(248);
+var makeScope_1 = __webpack_require__(249);
 function invariants(baseArgs, extraArgs) {
     var config = extraArgs.config;
     if (!config.resourceName)
@@ -19609,12 +19814,12 @@ exports.default = invariants;
 
 
 /***/ }),
-/* 244 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
+var r = __webpack_require__(5);
 function remove(config, current, addedRecord) {
     var key = config.key;
     function predicate(record) {
@@ -19629,12 +19834,12 @@ exports.default = remove;
 
 
 /***/ }),
-/* 245 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
+var r = __webpack_require__(5);
 function default_1(config, reducerName, records) {
     // All given records must have a key
     var haskey = r.has(config.key);
@@ -19648,13 +19853,13 @@ exports.default = default_1;
 
 
 /***/ }),
-/* 246 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var makeScope_1 = __webpack_require__(247);
-var r = __webpack_require__(4);
+var makeScope_1 = __webpack_require__(249);
+var r = __webpack_require__(5);
 function default_1(config, reducerName, record) {
     var scope = makeScope_1.default(config, reducerName);
     var isArray = r.is(Array, record);
@@ -19666,7 +19871,7 @@ exports.default = default_1;
 
 
 /***/ }),
-/* 247 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19679,63 +19884,62 @@ exports.default = makeScope;
 
 
 /***/ }),
-/* 248 */
+/* 250 */
 /***/ (function(module, exports) {
 
-module.exports = function(module) {
-	if(!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if(!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
 
 
 /***/ }),
-/* 249 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});var _data=__webpack_require__(255);Object.keys(_data).forEach(function(key){if(key==="default"||key==="__esModule")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _data[key];}});});var _session=__webpack_require__(257);
+Object.defineProperty(exports,"__esModule",{value:true});var _data=__webpack_require__(257);Object.keys(_data).forEach(function(key){if(key==="default"||key==="__esModule")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _data[key];}});});var _session=__webpack_require__(260);
 Object.keys(_session).forEach(function(key){if(key==="default"||key==="__esModule")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _session[key];}});});var _setup=__webpack_require__(37);
 Object.keys(_setup).forEach(function(key){if(key==="default"||key==="__esModule")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _setup[key];}});});
 
 /***/ }),
-/* 250 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});var _reduxThunk=__webpack_require__(513);var _reduxThunk2=_interopRequireDefault(_reduxThunk);
-var _reduxPromiseMiddleware=__webpack_require__(511);var _reduxPromiseMiddleware2=_interopRequireDefault(_reduxPromiseMiddleware);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
+Object.defineProperty(exports,"__esModule",{value:true});var _reduxThunk=__webpack_require__(520);var _reduxThunk2=_interopRequireDefault(_reduxThunk);
+var _reduxPromiseMiddleware=__webpack_require__(518);var _reduxPromiseMiddleware2=_interopRequireDefault(_reduxPromiseMiddleware);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
 [_reduxThunk2.default,
 
 (0,_reduxPromiseMiddleware2.default)()];
 
 /***/ }),
-/* 251 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});var _redux=__webpack_require__(54);
-var _data=__webpack_require__(260);var _data2=_interopRequireDefault(_data);
-var _error=__webpack_require__(262);var _error2=_interopRequireDefault(_error);
-var _ref=__webpack_require__(263);var _ref2=_interopRequireDefault(_ref);
-var _session=__webpack_require__(264);var _session2=_interopRequireDefault(_session);
-var _status=__webpack_require__(267);var _status2=_interopRequireDefault(_status);
-var _user=__webpack_require__(269);var _user2=_interopRequireDefault(_user);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
+Object.defineProperty(exports,"__esModule",{value:true});var _redux=__webpack_require__(55);
+var _data=__webpack_require__(264);var _data2=_interopRequireDefault(_data);
+var _error=__webpack_require__(266);var _error2=_interopRequireDefault(_error);
+var _ref=__webpack_require__(267);var _ref2=_interopRequireDefault(_ref);
+var _session=__webpack_require__(269);var _session2=_interopRequireDefault(_session);
+var _status=__webpack_require__(273);var _status2=_interopRequireDefault(_status);
+var _user=__webpack_require__(275);var _user2=_interopRequireDefault(_user);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
 (0,_redux.combineReducers)({
 data:_data2.default,
@@ -19746,7 +19950,7 @@ status:_status2.default,
 user:_user2.default});
 
 /***/ }),
-/* 252 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -20266,31 +20470,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _adapter2 = _interopRequireDefault(_adapter);
 
-	var _customers = __webpack_require__(22);
+	var _customers = __webpack_require__(25);
 
 	var _customers2 = _interopRequireDefault(_customers);
 
-	var _locations = __webpack_require__(26);
+	var _locations = __webpack_require__(29);
 
 	var _locations2 = _interopRequireDefault(_locations);
 
-	var _addresses = __webpack_require__(27);
+	var _addresses = __webpack_require__(30);
 
 	var _addresses2 = _interopRequireDefault(_addresses);
 
-	var _menus = __webpack_require__(28);
+	var _menus = __webpack_require__(31);
 
 	var _menus2 = _interopRequireDefault(_menus);
 
-	var _orders = __webpack_require__(29);
+	var _orders = __webpack_require__(32);
 
 	var _orders2 = _interopRequireDefault(_orders);
 
-	var _payments = __webpack_require__(30);
+	var _payments = __webpack_require__(33);
 
 	var _payments2 = _interopRequireDefault(_payments);
 
-	var _allergens = __webpack_require__(31);
+	var _allergens = __webpack_require__(34);
 
 	var _allergens2 = _interopRequireDefault(_allergens);
 
@@ -23086,7 +23290,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _order2 = _interopRequireDefault(_order);
 
-	var _circularJson = __webpack_require__(21);
+	var _circularJson = __webpack_require__(24);
 
 	var _circularJson2 = _interopRequireDefault(_circularJson);
 
@@ -23322,7 +23526,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _utils = __webpack_require__(3);
 
-	var _validations = __webpack_require__(20);
+	var _validations = __webpack_require__(23);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23374,7 +23578,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        lineItem.madeFor = madeFor;
 	        lineItem.instructions = instructions;
 	        lineItem.configuration = configuration;
+	        lineItem._generateOperationMaps();
 	      });
+
 	      return this;
 	    }
 	  }, {
@@ -33452,17 +33658,39 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _lodash8 = _interopRequireDefault(_lodash7);
 
+	var _lodash9 = __webpack_require__(20);
+
+	var _lodash10 = _interopRequireDefault(_lodash9);
+
+	var _lodash11 = __webpack_require__(21);
+
+	var _lodash12 = _interopRequireDefault(_lodash11);
+
+	var _lodash13 = __webpack_require__(22);
+
+	var _lodash14 = _interopRequireDefault(_lodash13);
+
 	var _validate = __webpack_require__(7);
 
 	var _validate2 = _interopRequireDefault(_validate);
 
-	var _validations = __webpack_require__(20);
+	var _validations = __webpack_require__(23);
 
 	var _utils = __webpack_require__(3);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var OptionOperations = {
+	  ADD: "ADD",
+	  REMOVE: "REMOVE"
+	};
+
+	var OptionStatus = {
+	  ABSENT: "ABSENT",
+	  PRESENT: "PRESENT"
+	};
 
 	var LineItem = function () {
 	  function LineItem(product) {
@@ -33481,6 +33709,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.configuration = [];
 	    this.madeFor = "";
 	    this.instructions = "";
+	    this.operationMaps = [];
+
+	    this._generateOperationMaps();
 	  }
 
 	  _createClass(LineItem, [{
@@ -33493,7 +33724,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'addOption',
 	    value: function addOption(group, item) {
 	      var groupConfig = this.configurationForGroup(group);
-	      var canAdd = group.max_options > (groupConfig ? groupConfigoptionItems.length : 0);
+	      var canAdd = group.max_options > (groupConfig ? groupConfig.optionItems.length : 0);
 
 	      if (!canAdd) {
 	        throw {
@@ -33513,6 +33744,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          optionItems: [item]
 	        });
 	      }
+	      this._generateOperationMaps();
 	      return true;
 	    }
 	  }, {
@@ -33520,10 +33752,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function removeOption(item) {
 	      var groupConfig = this.configurationForGroup(item.group_id);
 	      if (groupConfig) {
+	        // TODO: this will remove every option for this id, it should only remove one!
 	        groupConfig.optionItems = (0, _lodash4.default)(groupConfig.optionItems, function (oi) {
 	          return oi.id !== item.id;
 	        });
 	      }
+	      this._generateOperationMaps();
 	      return groupConfig;
 	    }
 	  }, {
@@ -33585,6 +33819,116 @@ return /******/ (function(modules) { // webpackBootstrap
 	          };
 	        })
 	      };
+	    }
+	  }, {
+	    key: '_generateOperationMaps',
+	    value: function _generateOperationMaps() {
+	      var _this2 = this;
+
+	      var maps = (0, _lodash10.default)((0, _lodash6.default)(this.optionGroups(), function (optionGroup) {
+
+	        var configGroup = _this2.configurationForGroup(optionGroup.id);
+	        var currentlySelectedCount = configGroup ? configGroup.optionItems.length : 0;
+	        var canAddMoreToThisGroup = currentlySelectedCount < optionGroup.max_options;
+	        var requiresMoreInThisGroup = currentlySelectedCount < optionGroup.min_options;
+	        var remainingIncludedOptions = optionGroup.included_options - currentlySelectedCount;
+	        var additionalOptionsCount = currentlySelectedCount - optionGroup.included_options;
+	        var extraOptionsWillIncurCost = canAddMoreToThisGroup ? remainingIncludedOptions === 0 : false;
+	        if (remainingIncludedOptions < 0) {
+	          remainingIncludedOptions = 0;
+	        }
+	        if (additionalOptionsCount < 0) {
+	          additionalOptionsCount = 0;
+	        }
+
+	        return {
+	          id: optionGroup.id,
+	          optionGroupData: optionGroup,
+	          name: optionGroup.name,
+	          canAddMoreToThisGroup: canAddMoreToThisGroup,
+	          requiresMoreInThisGroup: requiresMoreInThisGroup,
+	          extraOptionsWillIncurCost: extraOptionsWillIncurCost,
+	          currentlySelectedCount: currentlySelectedCount,
+	          totalAllowedCount: optionGroup.max_options,
+	          remainingIncludedOptions: remainingIncludedOptions,
+	          additionalOptionsCount: additionalOptionsCount,
+	          totalEffectOnPrice: "0.00", /* This is overriden in the pricing loop below */
+	          optionItems: (0, _lodash10.default)((0, _lodash6.default)(optionGroup.option_items, function (option) {
+	            /* Find all currently added options of the same id */
+	            var matchingOptionItems = configGroup ? (0, _lodash4.default)(configGroup.optionItems, { id: option.id }) : [];
+	            var quantity = matchingOptionItems.length;
+	            var presence = quantity > 0 ? OptionStatus.PRESENT : OptionStatus.ABSENT;
+
+	            /* Build the allowd Operations here */
+	            var allowedOperations = [];
+	            if (canAddMoreToThisGroup) {
+	              allowedOperations.push({
+	                operation: OptionOperations.ADD,
+	                costPerOperation: extraOptionsWillIncurCost ? option.price : "0.00"
+	              });
+	            }
+	            if (presence === OptionStatus.PRESENT) {
+	              allowedOperations.push({
+	                operation: OptionOperations.REMOVE,
+	                costPerOperation: "0.00" /* Overriden Later in Pricing Loop */
+	              });
+	            }
+	            return {
+	              optionId: option.id,
+	              optionItemData: option,
+	              costPerUnit: option.price,
+	              presence: presence,
+	              allowedOperations: allowedOperations,
+	              quantity: quantity,
+	              effectOnPrice: "0.00", /* Overriden Later in Pricing Loop */
+	              quantityContributingToPrice: 0 /* Overriden Later in Pricing Loop */
+	            };
+	          }), function (i) {
+	            return i.menu_position;
+	          })
+	        };
+	      }), function (i) {
+	        return i.menu_position;
+	      });
+
+	      /* Loop through all options and determine cost incurred for each */
+	      maps.forEach(function (operationMap) {
+	        /* No additional options are selected, so set everything to "0.00" */
+	        if (operationMap.additionalOptionsCount === 0) {
+	          return;
+	        }
+
+	        /* Additional Options are selected, so sort the optionItems array to find the most expensive */
+	        var mostExpensivePresentOptionItems = (0, _lodash12.default)((0, _lodash10.default)((0, _lodash4.default)(operationMap.optionItems, function (i) {
+	          return i.presence === OptionStatus.PRESENT;
+	        }), function (i) {
+	          return parseFloat(i.costPerUnit);
+	        }));
+
+	        /* Now work backwards from most expensive and attribute item to price */
+	        var catchup = 0;
+	        mostExpensivePresentOptionItems.forEach(function (item) {
+	          var catchupRequired = operationMap.additionalOptionsCount - catchup;
+	          if (catchupRequired >= item.quantity) {
+	            item.effectOnPrice = (parseFloat(item.costPerUnit) * item.quantity).toFixed(2);
+	            item.quantityContributingToPrice = item.quantity;
+	            var removalOperation = (0, _lodash2.default)(item.allowedOperations, function (o) {
+	              return o.operation === OptionOperations.REMOVE;
+	            });
+	            removalOperation.costPerOperation = item.costPerUnit;
+	            catchup += item.quantity;
+	          } else {
+	            item.effectOnPrice = (parseFloat(item.costPerUnit) * item.quantity).toFixed(2);
+	            item.quantityContributingToPrice = item.quantity;
+	            catchup += catchupRequired;
+	          }
+	        });
+	        operationMap.totalEffectOnPrice = (0, _lodash14.default)(mostExpensivePresentOptionItems, function (sum, item) {
+	          return parseFloat(item.effectOnPrice) + sum;
+	        }, 0.00).toFixed(2);
+	      });
+	      this.operationMaps = maps;
+	      return maps;
 	    }
 	  }]);
 
@@ -36013,6 +36357,5069 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global, module) {/**
+	 * lodash (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+	 * Released under MIT license <https://lodash.com/license>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 */
+
+	/** Used as the size to enable large array optimizations. */
+	var LARGE_ARRAY_SIZE = 200;
+
+	/** Used as the `TypeError` message for "Functions" methods. */
+	var FUNC_ERROR_TEXT = 'Expected a function';
+
+	/** Used to stand-in for `undefined` hash values. */
+	var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+	/** Used to compose bitmasks for comparison styles. */
+	var UNORDERED_COMPARE_FLAG = 1,
+	    PARTIAL_COMPARE_FLAG = 2;
+
+	/** Used as references for various `Number` constants. */
+	var INFINITY = 1 / 0,
+	    MAX_SAFE_INTEGER = 9007199254740991;
+
+	/** `Object#toString` result references. */
+	var argsTag = '[object Arguments]',
+	    arrayTag = '[object Array]',
+	    boolTag = '[object Boolean]',
+	    dateTag = '[object Date]',
+	    errorTag = '[object Error]',
+	    funcTag = '[object Function]',
+	    genTag = '[object GeneratorFunction]',
+	    mapTag = '[object Map]',
+	    numberTag = '[object Number]',
+	    objectTag = '[object Object]',
+	    promiseTag = '[object Promise]',
+	    regexpTag = '[object RegExp]',
+	    setTag = '[object Set]',
+	    stringTag = '[object String]',
+	    symbolTag = '[object Symbol]',
+	    weakMapTag = '[object WeakMap]';
+
+	var arrayBufferTag = '[object ArrayBuffer]',
+	    dataViewTag = '[object DataView]',
+	    float32Tag = '[object Float32Array]',
+	    float64Tag = '[object Float64Array]',
+	    int8Tag = '[object Int8Array]',
+	    int16Tag = '[object Int16Array]',
+	    int32Tag = '[object Int32Array]',
+	    uint8Tag = '[object Uint8Array]',
+	    uint8ClampedTag = '[object Uint8ClampedArray]',
+	    uint16Tag = '[object Uint16Array]',
+	    uint32Tag = '[object Uint32Array]';
+
+	/** Used to match property names within property paths. */
+	var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+	    reIsPlainProp = /^\w*$/,
+	    reLeadingDot = /^\./,
+	    rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+	/**
+	 * Used to match `RegExp`
+	 * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+	 */
+	var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+	/** Used to match backslashes in property paths. */
+	var reEscapeChar = /\\(\\)?/g;
+
+	/** Used to detect host constructors (Safari). */
+	var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+	/** Used to detect unsigned integer values. */
+	var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+	/** Used to identify `toStringTag` values of typed arrays. */
+	var typedArrayTags = {};
+	typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+	typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+	typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+	typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+	typedArrayTags[uint32Tag] = true;
+	typedArrayTags[argsTag] = typedArrayTags[arrayTag] =
+	typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+	typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+	typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+	typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+	typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+	typedArrayTags[setTag] = typedArrayTags[stringTag] =
+	typedArrayTags[weakMapTag] = false;
+
+	/** Detect free variable `global` from Node.js. */
+	var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+	/** Detect free variable `self`. */
+	var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+	/** Used as a reference to the global object. */
+	var root = freeGlobal || freeSelf || Function('return this')();
+
+	/** Detect free variable `exports`. */
+	var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+	/** Detect free variable `module`. */
+	var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+	/** Detect the popular CommonJS extension `module.exports`. */
+	var moduleExports = freeModule && freeModule.exports === freeExports;
+
+	/** Detect free variable `process` from Node.js. */
+	var freeProcess = moduleExports && freeGlobal.process;
+
+	/** Used to access faster Node.js helpers. */
+	var nodeUtil = (function() {
+	  try {
+	    return freeProcess && freeProcess.binding('util');
+	  } catch (e) {}
+	}());
+
+	/* Node.js helper references. */
+	var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+
+	/**
+	 * A faster alternative to `Function#apply`, this function invokes `func`
+	 * with the `this` binding of `thisArg` and the arguments of `args`.
+	 *
+	 * @private
+	 * @param {Function} func The function to invoke.
+	 * @param {*} thisArg The `this` binding of `func`.
+	 * @param {Array} args The arguments to invoke `func` with.
+	 * @returns {*} Returns the result of `func`.
+	 */
+	function apply(func, thisArg, args) {
+	  switch (args.length) {
+	    case 0: return func.call(thisArg);
+	    case 1: return func.call(thisArg, args[0]);
+	    case 2: return func.call(thisArg, args[0], args[1]);
+	    case 3: return func.call(thisArg, args[0], args[1], args[2]);
+	  }
+	  return func.apply(thisArg, args);
+	}
+
+	/**
+	 * A specialized version of `_.map` for arrays without support for iteratee
+	 * shorthands.
+	 *
+	 * @private
+	 * @param {Array} [array] The array to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @returns {Array} Returns the new mapped array.
+	 */
+	function arrayMap(array, iteratee) {
+	  var index = -1,
+	      length = array ? array.length : 0,
+	      result = Array(length);
+
+	  while (++index < length) {
+	    result[index] = iteratee(array[index], index, array);
+	  }
+	  return result;
+	}
+
+	/**
+	 * Appends the elements of `values` to `array`.
+	 *
+	 * @private
+	 * @param {Array} array The array to modify.
+	 * @param {Array} values The values to append.
+	 * @returns {Array} Returns `array`.
+	 */
+	function arrayPush(array, values) {
+	  var index = -1,
+	      length = values.length,
+	      offset = array.length;
+
+	  while (++index < length) {
+	    array[offset + index] = values[index];
+	  }
+	  return array;
+	}
+
+	/**
+	 * A specialized version of `_.some` for arrays without support for iteratee
+	 * shorthands.
+	 *
+	 * @private
+	 * @param {Array} [array] The array to iterate over.
+	 * @param {Function} predicate The function invoked per iteration.
+	 * @returns {boolean} Returns `true` if any element passes the predicate check,
+	 *  else `false`.
+	 */
+	function arraySome(array, predicate) {
+	  var index = -1,
+	      length = array ? array.length : 0;
+
+	  while (++index < length) {
+	    if (predicate(array[index], index, array)) {
+	      return true;
+	    }
+	  }
+	  return false;
+	}
+
+	/**
+	 * The base implementation of `_.property` without support for deep paths.
+	 *
+	 * @private
+	 * @param {string} key The key of the property to get.
+	 * @returns {Function} Returns the new accessor function.
+	 */
+	function baseProperty(key) {
+	  return function(object) {
+	    return object == null ? undefined : object[key];
+	  };
+	}
+
+	/**
+	 * The base implementation of `_.sortBy` which uses `comparer` to define the
+	 * sort order of `array` and replaces criteria objects with their corresponding
+	 * values.
+	 *
+	 * @private
+	 * @param {Array} array The array to sort.
+	 * @param {Function} comparer The function to define sort order.
+	 * @returns {Array} Returns `array`.
+	 */
+	function baseSortBy(array, comparer) {
+	  var length = array.length;
+
+	  array.sort(comparer);
+	  while (length--) {
+	    array[length] = array[length].value;
+	  }
+	  return array;
+	}
+
+	/**
+	 * The base implementation of `_.times` without support for iteratee shorthands
+	 * or max array length checks.
+	 *
+	 * @private
+	 * @param {number} n The number of times to invoke `iteratee`.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @returns {Array} Returns the array of results.
+	 */
+	function baseTimes(n, iteratee) {
+	  var index = -1,
+	      result = Array(n);
+
+	  while (++index < n) {
+	    result[index] = iteratee(index);
+	  }
+	  return result;
+	}
+
+	/**
+	 * The base implementation of `_.unary` without support for storing metadata.
+	 *
+	 * @private
+	 * @param {Function} func The function to cap arguments for.
+	 * @returns {Function} Returns the new capped function.
+	 */
+	function baseUnary(func) {
+	  return function(value) {
+	    return func(value);
+	  };
+	}
+
+	/**
+	 * Gets the value at `key` of `object`.
+	 *
+	 * @private
+	 * @param {Object} [object] The object to query.
+	 * @param {string} key The key of the property to get.
+	 * @returns {*} Returns the property value.
+	 */
+	function getValue(object, key) {
+	  return object == null ? undefined : object[key];
+	}
+
+	/**
+	 * Checks if `value` is a host object in IE < 9.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+	 */
+	function isHostObject(value) {
+	  // Many host objects are `Object` objects that can coerce to strings
+	  // despite having improperly defined `toString` methods.
+	  var result = false;
+	  if (value != null && typeof value.toString != 'function') {
+	    try {
+	      result = !!(value + '');
+	    } catch (e) {}
+	  }
+	  return result;
+	}
+
+	/**
+	 * Converts `map` to its key-value pairs.
+	 *
+	 * @private
+	 * @param {Object} map The map to convert.
+	 * @returns {Array} Returns the key-value pairs.
+	 */
+	function mapToArray(map) {
+	  var index = -1,
+	      result = Array(map.size);
+
+	  map.forEach(function(value, key) {
+	    result[++index] = [key, value];
+	  });
+	  return result;
+	}
+
+	/**
+	 * Creates a unary function that invokes `func` with its argument transformed.
+	 *
+	 * @private
+	 * @param {Function} func The function to wrap.
+	 * @param {Function} transform The argument transform.
+	 * @returns {Function} Returns the new function.
+	 */
+	function overArg(func, transform) {
+	  return function(arg) {
+	    return func(transform(arg));
+	  };
+	}
+
+	/**
+	 * Converts `set` to an array of its values.
+	 *
+	 * @private
+	 * @param {Object} set The set to convert.
+	 * @returns {Array} Returns the values.
+	 */
+	function setToArray(set) {
+	  var index = -1,
+	      result = Array(set.size);
+
+	  set.forEach(function(value) {
+	    result[++index] = value;
+	  });
+	  return result;
+	}
+
+	/** Used for built-in method references. */
+	var arrayProto = Array.prototype,
+	    funcProto = Function.prototype,
+	    objectProto = Object.prototype;
+
+	/** Used to detect overreaching core-js shims. */
+	var coreJsData = root['__core-js_shared__'];
+
+	/** Used to detect methods masquerading as native. */
+	var maskSrcKey = (function() {
+	  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+	  return uid ? ('Symbol(src)_1.' + uid) : '';
+	}());
+
+	/** Used to resolve the decompiled source of functions. */
+	var funcToString = funcProto.toString;
+
+	/** Used to check objects for own properties. */
+	var hasOwnProperty = objectProto.hasOwnProperty;
+
+	/**
+	 * Used to resolve the
+	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+	 * of values.
+	 */
+	var objectToString = objectProto.toString;
+
+	/** Used to detect if a method is native. */
+	var reIsNative = RegExp('^' +
+	  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+	  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+	);
+
+	/** Built-in value references. */
+	var Symbol = root.Symbol,
+	    Uint8Array = root.Uint8Array,
+	    propertyIsEnumerable = objectProto.propertyIsEnumerable,
+	    splice = arrayProto.splice,
+	    spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;
+
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeKeys = overArg(Object.keys, Object),
+	    nativeMax = Math.max;
+
+	/* Built-in method references that are verified to be native. */
+	var DataView = getNative(root, 'DataView'),
+	    Map = getNative(root, 'Map'),
+	    Promise = getNative(root, 'Promise'),
+	    Set = getNative(root, 'Set'),
+	    WeakMap = getNative(root, 'WeakMap'),
+	    nativeCreate = getNative(Object, 'create');
+
+	/** Used to detect maps, sets, and weakmaps. */
+	var dataViewCtorString = toSource(DataView),
+	    mapCtorString = toSource(Map),
+	    promiseCtorString = toSource(Promise),
+	    setCtorString = toSource(Set),
+	    weakMapCtorString = toSource(WeakMap);
+
+	/** Used to convert symbols to primitives and strings. */
+	var symbolProto = Symbol ? Symbol.prototype : undefined,
+	    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined,
+	    symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+	/**
+	 * Creates a hash object.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [entries] The key-value pairs to cache.
+	 */
+	function Hash(entries) {
+	  var index = -1,
+	      length = entries ? entries.length : 0;
+
+	  this.clear();
+	  while (++index < length) {
+	    var entry = entries[index];
+	    this.set(entry[0], entry[1]);
+	  }
+	}
+
+	/**
+	 * Removes all key-value entries from the hash.
+	 *
+	 * @private
+	 * @name clear
+	 * @memberOf Hash
+	 */
+	function hashClear() {
+	  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+	}
+
+	/**
+	 * Removes `key` and its value from the hash.
+	 *
+	 * @private
+	 * @name delete
+	 * @memberOf Hash
+	 * @param {Object} hash The hash to modify.
+	 * @param {string} key The key of the value to remove.
+	 * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+	 */
+	function hashDelete(key) {
+	  return this.has(key) && delete this.__data__[key];
+	}
+
+	/**
+	 * Gets the hash value for `key`.
+	 *
+	 * @private
+	 * @name get
+	 * @memberOf Hash
+	 * @param {string} key The key of the value to get.
+	 * @returns {*} Returns the entry value.
+	 */
+	function hashGet(key) {
+	  var data = this.__data__;
+	  if (nativeCreate) {
+	    var result = data[key];
+	    return result === HASH_UNDEFINED ? undefined : result;
+	  }
+	  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+	}
+
+	/**
+	 * Checks if a hash value for `key` exists.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf Hash
+	 * @param {string} key The key of the entry to check.
+	 * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+	 */
+	function hashHas(key) {
+	  var data = this.__data__;
+	  return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+	}
+
+	/**
+	 * Sets the hash `key` to `value`.
+	 *
+	 * @private
+	 * @name set
+	 * @memberOf Hash
+	 * @param {string} key The key of the value to set.
+	 * @param {*} value The value to set.
+	 * @returns {Object} Returns the hash instance.
+	 */
+	function hashSet(key, value) {
+	  var data = this.__data__;
+	  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+	  return this;
+	}
+
+	// Add methods to `Hash`.
+	Hash.prototype.clear = hashClear;
+	Hash.prototype['delete'] = hashDelete;
+	Hash.prototype.get = hashGet;
+	Hash.prototype.has = hashHas;
+	Hash.prototype.set = hashSet;
+
+	/**
+	 * Creates an list cache object.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [entries] The key-value pairs to cache.
+	 */
+	function ListCache(entries) {
+	  var index = -1,
+	      length = entries ? entries.length : 0;
+
+	  this.clear();
+	  while (++index < length) {
+	    var entry = entries[index];
+	    this.set(entry[0], entry[1]);
+	  }
+	}
+
+	/**
+	 * Removes all key-value entries from the list cache.
+	 *
+	 * @private
+	 * @name clear
+	 * @memberOf ListCache
+	 */
+	function listCacheClear() {
+	  this.__data__ = [];
+	}
+
+	/**
+	 * Removes `key` and its value from the list cache.
+	 *
+	 * @private
+	 * @name delete
+	 * @memberOf ListCache
+	 * @param {string} key The key of the value to remove.
+	 * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+	 */
+	function listCacheDelete(key) {
+	  var data = this.__data__,
+	      index = assocIndexOf(data, key);
+
+	  if (index < 0) {
+	    return false;
+	  }
+	  var lastIndex = data.length - 1;
+	  if (index == lastIndex) {
+	    data.pop();
+	  } else {
+	    splice.call(data, index, 1);
+	  }
+	  return true;
+	}
+
+	/**
+	 * Gets the list cache value for `key`.
+	 *
+	 * @private
+	 * @name get
+	 * @memberOf ListCache
+	 * @param {string} key The key of the value to get.
+	 * @returns {*} Returns the entry value.
+	 */
+	function listCacheGet(key) {
+	  var data = this.__data__,
+	      index = assocIndexOf(data, key);
+
+	  return index < 0 ? undefined : data[index][1];
+	}
+
+	/**
+	 * Checks if a list cache value for `key` exists.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf ListCache
+	 * @param {string} key The key of the entry to check.
+	 * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+	 */
+	function listCacheHas(key) {
+	  return assocIndexOf(this.__data__, key) > -1;
+	}
+
+	/**
+	 * Sets the list cache `key` to `value`.
+	 *
+	 * @private
+	 * @name set
+	 * @memberOf ListCache
+	 * @param {string} key The key of the value to set.
+	 * @param {*} value The value to set.
+	 * @returns {Object} Returns the list cache instance.
+	 */
+	function listCacheSet(key, value) {
+	  var data = this.__data__,
+	      index = assocIndexOf(data, key);
+
+	  if (index < 0) {
+	    data.push([key, value]);
+	  } else {
+	    data[index][1] = value;
+	  }
+	  return this;
+	}
+
+	// Add methods to `ListCache`.
+	ListCache.prototype.clear = listCacheClear;
+	ListCache.prototype['delete'] = listCacheDelete;
+	ListCache.prototype.get = listCacheGet;
+	ListCache.prototype.has = listCacheHas;
+	ListCache.prototype.set = listCacheSet;
+
+	/**
+	 * Creates a map cache object to store key-value pairs.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [entries] The key-value pairs to cache.
+	 */
+	function MapCache(entries) {
+	  var index = -1,
+	      length = entries ? entries.length : 0;
+
+	  this.clear();
+	  while (++index < length) {
+	    var entry = entries[index];
+	    this.set(entry[0], entry[1]);
+	  }
+	}
+
+	/**
+	 * Removes all key-value entries from the map.
+	 *
+	 * @private
+	 * @name clear
+	 * @memberOf MapCache
+	 */
+	function mapCacheClear() {
+	  this.__data__ = {
+	    'hash': new Hash,
+	    'map': new (Map || ListCache),
+	    'string': new Hash
+	  };
+	}
+
+	/**
+	 * Removes `key` and its value from the map.
+	 *
+	 * @private
+	 * @name delete
+	 * @memberOf MapCache
+	 * @param {string} key The key of the value to remove.
+	 * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+	 */
+	function mapCacheDelete(key) {
+	  return getMapData(this, key)['delete'](key);
+	}
+
+	/**
+	 * Gets the map value for `key`.
+	 *
+	 * @private
+	 * @name get
+	 * @memberOf MapCache
+	 * @param {string} key The key of the value to get.
+	 * @returns {*} Returns the entry value.
+	 */
+	function mapCacheGet(key) {
+	  return getMapData(this, key).get(key);
+	}
+
+	/**
+	 * Checks if a map value for `key` exists.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf MapCache
+	 * @param {string} key The key of the entry to check.
+	 * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+	 */
+	function mapCacheHas(key) {
+	  return getMapData(this, key).has(key);
+	}
+
+	/**
+	 * Sets the map `key` to `value`.
+	 *
+	 * @private
+	 * @name set
+	 * @memberOf MapCache
+	 * @param {string} key The key of the value to set.
+	 * @param {*} value The value to set.
+	 * @returns {Object} Returns the map cache instance.
+	 */
+	function mapCacheSet(key, value) {
+	  getMapData(this, key).set(key, value);
+	  return this;
+	}
+
+	// Add methods to `MapCache`.
+	MapCache.prototype.clear = mapCacheClear;
+	MapCache.prototype['delete'] = mapCacheDelete;
+	MapCache.prototype.get = mapCacheGet;
+	MapCache.prototype.has = mapCacheHas;
+	MapCache.prototype.set = mapCacheSet;
+
+	/**
+	 *
+	 * Creates an array cache object to store unique values.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [values] The values to cache.
+	 */
+	function SetCache(values) {
+	  var index = -1,
+	      length = values ? values.length : 0;
+
+	  this.__data__ = new MapCache;
+	  while (++index < length) {
+	    this.add(values[index]);
+	  }
+	}
+
+	/**
+	 * Adds `value` to the array cache.
+	 *
+	 * @private
+	 * @name add
+	 * @memberOf SetCache
+	 * @alias push
+	 * @param {*} value The value to cache.
+	 * @returns {Object} Returns the cache instance.
+	 */
+	function setCacheAdd(value) {
+	  this.__data__.set(value, HASH_UNDEFINED);
+	  return this;
+	}
+
+	/**
+	 * Checks if `value` is in the array cache.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf SetCache
+	 * @param {*} value The value to search for.
+	 * @returns {number} Returns `true` if `value` is found, else `false`.
+	 */
+	function setCacheHas(value) {
+	  return this.__data__.has(value);
+	}
+
+	// Add methods to `SetCache`.
+	SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+	SetCache.prototype.has = setCacheHas;
+
+	/**
+	 * Creates a stack cache object to store key-value pairs.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [entries] The key-value pairs to cache.
+	 */
+	function Stack(entries) {
+	  this.__data__ = new ListCache(entries);
+	}
+
+	/**
+	 * Removes all key-value entries from the stack.
+	 *
+	 * @private
+	 * @name clear
+	 * @memberOf Stack
+	 */
+	function stackClear() {
+	  this.__data__ = new ListCache;
+	}
+
+	/**
+	 * Removes `key` and its value from the stack.
+	 *
+	 * @private
+	 * @name delete
+	 * @memberOf Stack
+	 * @param {string} key The key of the value to remove.
+	 * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+	 */
+	function stackDelete(key) {
+	  return this.__data__['delete'](key);
+	}
+
+	/**
+	 * Gets the stack value for `key`.
+	 *
+	 * @private
+	 * @name get
+	 * @memberOf Stack
+	 * @param {string} key The key of the value to get.
+	 * @returns {*} Returns the entry value.
+	 */
+	function stackGet(key) {
+	  return this.__data__.get(key);
+	}
+
+	/**
+	 * Checks if a stack value for `key` exists.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf Stack
+	 * @param {string} key The key of the entry to check.
+	 * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+	 */
+	function stackHas(key) {
+	  return this.__data__.has(key);
+	}
+
+	/**
+	 * Sets the stack `key` to `value`.
+	 *
+	 * @private
+	 * @name set
+	 * @memberOf Stack
+	 * @param {string} key The key of the value to set.
+	 * @param {*} value The value to set.
+	 * @returns {Object} Returns the stack cache instance.
+	 */
+	function stackSet(key, value) {
+	  var cache = this.__data__;
+	  if (cache instanceof ListCache) {
+	    var pairs = cache.__data__;
+	    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+	      pairs.push([key, value]);
+	      return this;
+	    }
+	    cache = this.__data__ = new MapCache(pairs);
+	  }
+	  cache.set(key, value);
+	  return this;
+	}
+
+	// Add methods to `Stack`.
+	Stack.prototype.clear = stackClear;
+	Stack.prototype['delete'] = stackDelete;
+	Stack.prototype.get = stackGet;
+	Stack.prototype.has = stackHas;
+	Stack.prototype.set = stackSet;
+
+	/**
+	 * Creates an array of the enumerable property names of the array-like `value`.
+	 *
+	 * @private
+	 * @param {*} value The value to query.
+	 * @param {boolean} inherited Specify returning inherited property names.
+	 * @returns {Array} Returns the array of property names.
+	 */
+	function arrayLikeKeys(value, inherited) {
+	  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+	  // Safari 9 makes `arguments.length` enumerable in strict mode.
+	  var result = (isArray(value) || isArguments(value))
+	    ? baseTimes(value.length, String)
+	    : [];
+
+	  var length = result.length,
+	      skipIndexes = !!length;
+
+	  for (var key in value) {
+	    if ((inherited || hasOwnProperty.call(value, key)) &&
+	        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
+	      result.push(key);
+	    }
+	  }
+	  return result;
+	}
+
+	/**
+	 * Gets the index at which the `key` is found in `array` of key-value pairs.
+	 *
+	 * @private
+	 * @param {Array} array The array to inspect.
+	 * @param {*} key The key to search for.
+	 * @returns {number} Returns the index of the matched value, else `-1`.
+	 */
+	function assocIndexOf(array, key) {
+	  var length = array.length;
+	  while (length--) {
+	    if (eq(array[length][0], key)) {
+	      return length;
+	    }
+	  }
+	  return -1;
+	}
+
+	/**
+	 * The base implementation of `_.forEach` without support for iteratee shorthands.
+	 *
+	 * @private
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @returns {Array|Object} Returns `collection`.
+	 */
+	var baseEach = createBaseEach(baseForOwn);
+
+	/**
+	 * The base implementation of `_.flatten` with support for restricting flattening.
+	 *
+	 * @private
+	 * @param {Array} array The array to flatten.
+	 * @param {number} depth The maximum recursion depth.
+	 * @param {boolean} [predicate=isFlattenable] The function invoked per iteration.
+	 * @param {boolean} [isStrict] Restrict to values that pass `predicate` checks.
+	 * @param {Array} [result=[]] The initial result value.
+	 * @returns {Array} Returns the new flattened array.
+	 */
+	function baseFlatten(array, depth, predicate, isStrict, result) {
+	  var index = -1,
+	      length = array.length;
+
+	  predicate || (predicate = isFlattenable);
+	  result || (result = []);
+
+	  while (++index < length) {
+	    var value = array[index];
+	    if (depth > 0 && predicate(value)) {
+	      if (depth > 1) {
+	        // Recursively flatten arrays (susceptible to call stack limits).
+	        baseFlatten(value, depth - 1, predicate, isStrict, result);
+	      } else {
+	        arrayPush(result, value);
+	      }
+	    } else if (!isStrict) {
+	      result[result.length] = value;
+	    }
+	  }
+	  return result;
+	}
+
+	/**
+	 * The base implementation of `baseForOwn` which iterates over `object`
+	 * properties returned by `keysFunc` and invokes `iteratee` for each property.
+	 * Iteratee functions may exit iteration early by explicitly returning `false`.
+	 *
+	 * @private
+	 * @param {Object} object The object to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @param {Function} keysFunc The function to get the keys of `object`.
+	 * @returns {Object} Returns `object`.
+	 */
+	var baseFor = createBaseFor();
+
+	/**
+	 * The base implementation of `_.forOwn` without support for iteratee shorthands.
+	 *
+	 * @private
+	 * @param {Object} object The object to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @returns {Object} Returns `object`.
+	 */
+	function baseForOwn(object, iteratee) {
+	  return object && baseFor(object, iteratee, keys);
+	}
+
+	/**
+	 * The base implementation of `_.get` without support for default values.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @param {Array|string} path The path of the property to get.
+	 * @returns {*} Returns the resolved value.
+	 */
+	function baseGet(object, path) {
+	  path = isKey(path, object) ? [path] : castPath(path);
+
+	  var index = 0,
+	      length = path.length;
+
+	  while (object != null && index < length) {
+	    object = object[toKey(path[index++])];
+	  }
+	  return (index && index == length) ? object : undefined;
+	}
+
+	/**
+	 * The base implementation of `getTag`.
+	 *
+	 * @private
+	 * @param {*} value The value to query.
+	 * @returns {string} Returns the `toStringTag`.
+	 */
+	function baseGetTag(value) {
+	  return objectToString.call(value);
+	}
+
+	/**
+	 * The base implementation of `_.hasIn` without support for deep paths.
+	 *
+	 * @private
+	 * @param {Object} [object] The object to query.
+	 * @param {Array|string} key The key to check.
+	 * @returns {boolean} Returns `true` if `key` exists, else `false`.
+	 */
+	function baseHasIn(object, key) {
+	  return object != null && key in Object(object);
+	}
+
+	/**
+	 * The base implementation of `_.isEqual` which supports partial comparisons
+	 * and tracks traversed objects.
+	 *
+	 * @private
+	 * @param {*} value The value to compare.
+	 * @param {*} other The other value to compare.
+	 * @param {Function} [customizer] The function to customize comparisons.
+	 * @param {boolean} [bitmask] The bitmask of comparison flags.
+	 *  The bitmask may be composed of the following flags:
+	 *     1 - Unordered comparison
+	 *     2 - Partial comparison
+	 * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+	 * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+	 */
+	function baseIsEqual(value, other, customizer, bitmask, stack) {
+	  if (value === other) {
+	    return true;
+	  }
+	  if (value == null || other == null || (!isObject(value) && !isObjectLike(other))) {
+	    return value !== value && other !== other;
+	  }
+	  return baseIsEqualDeep(value, other, baseIsEqual, customizer, bitmask, stack);
+	}
+
+	/**
+	 * A specialized version of `baseIsEqual` for arrays and objects which performs
+	 * deep comparisons and tracks traversed objects enabling objects with circular
+	 * references to be compared.
+	 *
+	 * @private
+	 * @param {Object} object The object to compare.
+	 * @param {Object} other The other object to compare.
+	 * @param {Function} equalFunc The function to determine equivalents of values.
+	 * @param {Function} [customizer] The function to customize comparisons.
+	 * @param {number} [bitmask] The bitmask of comparison flags. See `baseIsEqual`
+	 *  for more details.
+	 * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+	 * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+	 */
+	function baseIsEqualDeep(object, other, equalFunc, customizer, bitmask, stack) {
+	  var objIsArr = isArray(object),
+	      othIsArr = isArray(other),
+	      objTag = arrayTag,
+	      othTag = arrayTag;
+
+	  if (!objIsArr) {
+	    objTag = getTag(object);
+	    objTag = objTag == argsTag ? objectTag : objTag;
+	  }
+	  if (!othIsArr) {
+	    othTag = getTag(other);
+	    othTag = othTag == argsTag ? objectTag : othTag;
+	  }
+	  var objIsObj = objTag == objectTag && !isHostObject(object),
+	      othIsObj = othTag == objectTag && !isHostObject(other),
+	      isSameTag = objTag == othTag;
+
+	  if (isSameTag && !objIsObj) {
+	    stack || (stack = new Stack);
+	    return (objIsArr || isTypedArray(object))
+	      ? equalArrays(object, other, equalFunc, customizer, bitmask, stack)
+	      : equalByTag(object, other, objTag, equalFunc, customizer, bitmask, stack);
+	  }
+	  if (!(bitmask & PARTIAL_COMPARE_FLAG)) {
+	    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+	        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
+
+	    if (objIsWrapped || othIsWrapped) {
+	      var objUnwrapped = objIsWrapped ? object.value() : object,
+	          othUnwrapped = othIsWrapped ? other.value() : other;
+
+	      stack || (stack = new Stack);
+	      return equalFunc(objUnwrapped, othUnwrapped, customizer, bitmask, stack);
+	    }
+	  }
+	  if (!isSameTag) {
+	    return false;
+	  }
+	  stack || (stack = new Stack);
+	  return equalObjects(object, other, equalFunc, customizer, bitmask, stack);
+	}
+
+	/**
+	 * The base implementation of `_.isMatch` without support for iteratee shorthands.
+	 *
+	 * @private
+	 * @param {Object} object The object to inspect.
+	 * @param {Object} source The object of property values to match.
+	 * @param {Array} matchData The property names, values, and compare flags to match.
+	 * @param {Function} [customizer] The function to customize comparisons.
+	 * @returns {boolean} Returns `true` if `object` is a match, else `false`.
+	 */
+	function baseIsMatch(object, source, matchData, customizer) {
+	  var index = matchData.length,
+	      length = index,
+	      noCustomizer = !customizer;
+
+	  if (object == null) {
+	    return !length;
+	  }
+	  object = Object(object);
+	  while (index--) {
+	    var data = matchData[index];
+	    if ((noCustomizer && data[2])
+	          ? data[1] !== object[data[0]]
+	          : !(data[0] in object)
+	        ) {
+	      return false;
+	    }
+	  }
+	  while (++index < length) {
+	    data = matchData[index];
+	    var key = data[0],
+	        objValue = object[key],
+	        srcValue = data[1];
+
+	    if (noCustomizer && data[2]) {
+	      if (objValue === undefined && !(key in object)) {
+	        return false;
+	      }
+	    } else {
+	      var stack = new Stack;
+	      if (customizer) {
+	        var result = customizer(objValue, srcValue, key, object, source, stack);
+	      }
+	      if (!(result === undefined
+	            ? baseIsEqual(srcValue, objValue, customizer, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG, stack)
+	            : result
+	          )) {
+	        return false;
+	      }
+	    }
+	  }
+	  return true;
+	}
+
+	/**
+	 * The base implementation of `_.isNative` without bad shim checks.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a native function,
+	 *  else `false`.
+	 */
+	function baseIsNative(value) {
+	  if (!isObject(value) || isMasked(value)) {
+	    return false;
+	  }
+	  var pattern = (isFunction(value) || isHostObject(value)) ? reIsNative : reIsHostCtor;
+	  return pattern.test(toSource(value));
+	}
+
+	/**
+	 * The base implementation of `_.isTypedArray` without Node.js optimizations.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+	 */
+	function baseIsTypedArray(value) {
+	  return isObjectLike(value) &&
+	    isLength(value.length) && !!typedArrayTags[objectToString.call(value)];
+	}
+
+	/**
+	 * The base implementation of `_.iteratee`.
+	 *
+	 * @private
+	 * @param {*} [value=_.identity] The value to convert to an iteratee.
+	 * @returns {Function} Returns the iteratee.
+	 */
+	function baseIteratee(value) {
+	  // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.
+	  // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.
+	  if (typeof value == 'function') {
+	    return value;
+	  }
+	  if (value == null) {
+	    return identity;
+	  }
+	  if (typeof value == 'object') {
+	    return isArray(value)
+	      ? baseMatchesProperty(value[0], value[1])
+	      : baseMatches(value);
+	  }
+	  return property(value);
+	}
+
+	/**
+	 * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @returns {Array} Returns the array of property names.
+	 */
+	function baseKeys(object) {
+	  if (!isPrototype(object)) {
+	    return nativeKeys(object);
+	  }
+	  var result = [];
+	  for (var key in Object(object)) {
+	    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+	      result.push(key);
+	    }
+	  }
+	  return result;
+	}
+
+	/**
+	 * The base implementation of `_.map` without support for iteratee shorthands.
+	 *
+	 * @private
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @returns {Array} Returns the new mapped array.
+	 */
+	function baseMap(collection, iteratee) {
+	  var index = -1,
+	      result = isArrayLike(collection) ? Array(collection.length) : [];
+
+	  baseEach(collection, function(value, key, collection) {
+	    result[++index] = iteratee(value, key, collection);
+	  });
+	  return result;
+	}
+
+	/**
+	 * The base implementation of `_.matches` which doesn't clone `source`.
+	 *
+	 * @private
+	 * @param {Object} source The object of property values to match.
+	 * @returns {Function} Returns the new spec function.
+	 */
+	function baseMatches(source) {
+	  var matchData = getMatchData(source);
+	  if (matchData.length == 1 && matchData[0][2]) {
+	    return matchesStrictComparable(matchData[0][0], matchData[0][1]);
+	  }
+	  return function(object) {
+	    return object === source || baseIsMatch(object, source, matchData);
+	  };
+	}
+
+	/**
+	 * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
+	 *
+	 * @private
+	 * @param {string} path The path of the property to get.
+	 * @param {*} srcValue The value to match.
+	 * @returns {Function} Returns the new spec function.
+	 */
+	function baseMatchesProperty(path, srcValue) {
+	  if (isKey(path) && isStrictComparable(srcValue)) {
+	    return matchesStrictComparable(toKey(path), srcValue);
+	  }
+	  return function(object) {
+	    var objValue = get(object, path);
+	    return (objValue === undefined && objValue === srcValue)
+	      ? hasIn(object, path)
+	      : baseIsEqual(srcValue, objValue, undefined, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG);
+	  };
+	}
+
+	/**
+	 * The base implementation of `_.orderBy` without param guards.
+	 *
+	 * @private
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function[]|Object[]|string[]} iteratees The iteratees to sort by.
+	 * @param {string[]} orders The sort orders of `iteratees`.
+	 * @returns {Array} Returns the new sorted array.
+	 */
+	function baseOrderBy(collection, iteratees, orders) {
+	  var index = -1;
+	  iteratees = arrayMap(iteratees.length ? iteratees : [identity], baseUnary(baseIteratee));
+
+	  var result = baseMap(collection, function(value, key, collection) {
+	    var criteria = arrayMap(iteratees, function(iteratee) {
+	      return iteratee(value);
+	    });
+	    return { 'criteria': criteria, 'index': ++index, 'value': value };
+	  });
+
+	  return baseSortBy(result, function(object, other) {
+	    return compareMultiple(object, other, orders);
+	  });
+	}
+
+	/**
+	 * A specialized version of `baseProperty` which supports deep paths.
+	 *
+	 * @private
+	 * @param {Array|string} path The path of the property to get.
+	 * @returns {Function} Returns the new accessor function.
+	 */
+	function basePropertyDeep(path) {
+	  return function(object) {
+	    return baseGet(object, path);
+	  };
+	}
+
+	/**
+	 * The base implementation of `_.rest` which doesn't validate or coerce arguments.
+	 *
+	 * @private
+	 * @param {Function} func The function to apply a rest parameter to.
+	 * @param {number} [start=func.length-1] The start position of the rest parameter.
+	 * @returns {Function} Returns the new function.
+	 */
+	function baseRest(func, start) {
+	  start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
+	  return function() {
+	    var args = arguments,
+	        index = -1,
+	        length = nativeMax(args.length - start, 0),
+	        array = Array(length);
+
+	    while (++index < length) {
+	      array[index] = args[start + index];
+	    }
+	    index = -1;
+	    var otherArgs = Array(start + 1);
+	    while (++index < start) {
+	      otherArgs[index] = args[index];
+	    }
+	    otherArgs[start] = array;
+	    return apply(func, this, otherArgs);
+	  };
+	}
+
+	/**
+	 * The base implementation of `_.toString` which doesn't convert nullish
+	 * values to empty strings.
+	 *
+	 * @private
+	 * @param {*} value The value to process.
+	 * @returns {string} Returns the string.
+	 */
+	function baseToString(value) {
+	  // Exit early for strings to avoid a performance hit in some environments.
+	  if (typeof value == 'string') {
+	    return value;
+	  }
+	  if (isSymbol(value)) {
+	    return symbolToString ? symbolToString.call(value) : '';
+	  }
+	  var result = (value + '');
+	  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+	}
+
+	/**
+	 * Casts `value` to a path array if it's not one.
+	 *
+	 * @private
+	 * @param {*} value The value to inspect.
+	 * @returns {Array} Returns the cast property path array.
+	 */
+	function castPath(value) {
+	  return isArray(value) ? value : stringToPath(value);
+	}
+
+	/**
+	 * Compares values to sort them in ascending order.
+	 *
+	 * @private
+	 * @param {*} value The value to compare.
+	 * @param {*} other The other value to compare.
+	 * @returns {number} Returns the sort order indicator for `value`.
+	 */
+	function compareAscending(value, other) {
+	  if (value !== other) {
+	    var valIsDefined = value !== undefined,
+	        valIsNull = value === null,
+	        valIsReflexive = value === value,
+	        valIsSymbol = isSymbol(value);
+
+	    var othIsDefined = other !== undefined,
+	        othIsNull = other === null,
+	        othIsReflexive = other === other,
+	        othIsSymbol = isSymbol(other);
+
+	    if ((!othIsNull && !othIsSymbol && !valIsSymbol && value > other) ||
+	        (valIsSymbol && othIsDefined && othIsReflexive && !othIsNull && !othIsSymbol) ||
+	        (valIsNull && othIsDefined && othIsReflexive) ||
+	        (!valIsDefined && othIsReflexive) ||
+	        !valIsReflexive) {
+	      return 1;
+	    }
+	    if ((!valIsNull && !valIsSymbol && !othIsSymbol && value < other) ||
+	        (othIsSymbol && valIsDefined && valIsReflexive && !valIsNull && !valIsSymbol) ||
+	        (othIsNull && valIsDefined && valIsReflexive) ||
+	        (!othIsDefined && valIsReflexive) ||
+	        !othIsReflexive) {
+	      return -1;
+	    }
+	  }
+	  return 0;
+	}
+
+	/**
+	 * Used by `_.orderBy` to compare multiple properties of a value to another
+	 * and stable sort them.
+	 *
+	 * If `orders` is unspecified, all values are sorted in ascending order. Otherwise,
+	 * specify an order of "desc" for descending or "asc" for ascending sort order
+	 * of corresponding values.
+	 *
+	 * @private
+	 * @param {Object} object The object to compare.
+	 * @param {Object} other The other object to compare.
+	 * @param {boolean[]|string[]} orders The order to sort by for each property.
+	 * @returns {number} Returns the sort order indicator for `object`.
+	 */
+	function compareMultiple(object, other, orders) {
+	  var index = -1,
+	      objCriteria = object.criteria,
+	      othCriteria = other.criteria,
+	      length = objCriteria.length,
+	      ordersLength = orders.length;
+
+	  while (++index < length) {
+	    var result = compareAscending(objCriteria[index], othCriteria[index]);
+	    if (result) {
+	      if (index >= ordersLength) {
+	        return result;
+	      }
+	      var order = orders[index];
+	      return result * (order == 'desc' ? -1 : 1);
+	    }
+	  }
+	  // Fixes an `Array#sort` bug in the JS engine embedded in Adobe applications
+	  // that causes it, under certain circumstances, to provide the same value for
+	  // `object` and `other`. See https://github.com/jashkenas/underscore/pull/1247
+	  // for more details.
+	  //
+	  // This also ensures a stable sort in V8 and other engines.
+	  // See https://bugs.chromium.org/p/v8/issues/detail?id=90 for more details.
+	  return object.index - other.index;
+	}
+
+	/**
+	 * Creates a `baseEach` or `baseEachRight` function.
+	 *
+	 * @private
+	 * @param {Function} eachFunc The function to iterate over a collection.
+	 * @param {boolean} [fromRight] Specify iterating from right to left.
+	 * @returns {Function} Returns the new base function.
+	 */
+	function createBaseEach(eachFunc, fromRight) {
+	  return function(collection, iteratee) {
+	    if (collection == null) {
+	      return collection;
+	    }
+	    if (!isArrayLike(collection)) {
+	      return eachFunc(collection, iteratee);
+	    }
+	    var length = collection.length,
+	        index = fromRight ? length : -1,
+	        iterable = Object(collection);
+
+	    while ((fromRight ? index-- : ++index < length)) {
+	      if (iteratee(iterable[index], index, iterable) === false) {
+	        break;
+	      }
+	    }
+	    return collection;
+	  };
+	}
+
+	/**
+	 * Creates a base function for methods like `_.forIn` and `_.forOwn`.
+	 *
+	 * @private
+	 * @param {boolean} [fromRight] Specify iterating from right to left.
+	 * @returns {Function} Returns the new base function.
+	 */
+	function createBaseFor(fromRight) {
+	  return function(object, iteratee, keysFunc) {
+	    var index = -1,
+	        iterable = Object(object),
+	        props = keysFunc(object),
+	        length = props.length;
+
+	    while (length--) {
+	      var key = props[fromRight ? length : ++index];
+	      if (iteratee(iterable[key], key, iterable) === false) {
+	        break;
+	      }
+	    }
+	    return object;
+	  };
+	}
+
+	/**
+	 * A specialized version of `baseIsEqualDeep` for arrays with support for
+	 * partial deep comparisons.
+	 *
+	 * @private
+	 * @param {Array} array The array to compare.
+	 * @param {Array} other The other array to compare.
+	 * @param {Function} equalFunc The function to determine equivalents of values.
+	 * @param {Function} customizer The function to customize comparisons.
+	 * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+	 *  for more details.
+	 * @param {Object} stack Tracks traversed `array` and `other` objects.
+	 * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+	 */
+	function equalArrays(array, other, equalFunc, customizer, bitmask, stack) {
+	  var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+	      arrLength = array.length,
+	      othLength = other.length;
+
+	  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+	    return false;
+	  }
+	  // Assume cyclic values are equal.
+	  var stacked = stack.get(array);
+	  if (stacked && stack.get(other)) {
+	    return stacked == other;
+	  }
+	  var index = -1,
+	      result = true,
+	      seen = (bitmask & UNORDERED_COMPARE_FLAG) ? new SetCache : undefined;
+
+	  stack.set(array, other);
+	  stack.set(other, array);
+
+	  // Ignore non-index properties.
+	  while (++index < arrLength) {
+	    var arrValue = array[index],
+	        othValue = other[index];
+
+	    if (customizer) {
+	      var compared = isPartial
+	        ? customizer(othValue, arrValue, index, other, array, stack)
+	        : customizer(arrValue, othValue, index, array, other, stack);
+	    }
+	    if (compared !== undefined) {
+	      if (compared) {
+	        continue;
+	      }
+	      result = false;
+	      break;
+	    }
+	    // Recursively compare arrays (susceptible to call stack limits).
+	    if (seen) {
+	      if (!arraySome(other, function(othValue, othIndex) {
+	            if (!seen.has(othIndex) &&
+	                (arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack))) {
+	              return seen.add(othIndex);
+	            }
+	          })) {
+	        result = false;
+	        break;
+	      }
+	    } else if (!(
+	          arrValue === othValue ||
+	            equalFunc(arrValue, othValue, customizer, bitmask, stack)
+	        )) {
+	      result = false;
+	      break;
+	    }
+	  }
+	  stack['delete'](array);
+	  stack['delete'](other);
+	  return result;
+	}
+
+	/**
+	 * A specialized version of `baseIsEqualDeep` for comparing objects of
+	 * the same `toStringTag`.
+	 *
+	 * **Note:** This function only supports comparing values with tags of
+	 * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+	 *
+	 * @private
+	 * @param {Object} object The object to compare.
+	 * @param {Object} other The other object to compare.
+	 * @param {string} tag The `toStringTag` of the objects to compare.
+	 * @param {Function} equalFunc The function to determine equivalents of values.
+	 * @param {Function} customizer The function to customize comparisons.
+	 * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+	 *  for more details.
+	 * @param {Object} stack Tracks traversed `object` and `other` objects.
+	 * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+	 */
+	function equalByTag(object, other, tag, equalFunc, customizer, bitmask, stack) {
+	  switch (tag) {
+	    case dataViewTag:
+	      if ((object.byteLength != other.byteLength) ||
+	          (object.byteOffset != other.byteOffset)) {
+	        return false;
+	      }
+	      object = object.buffer;
+	      other = other.buffer;
+
+	    case arrayBufferTag:
+	      if ((object.byteLength != other.byteLength) ||
+	          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+	        return false;
+	      }
+	      return true;
+
+	    case boolTag:
+	    case dateTag:
+	    case numberTag:
+	      // Coerce booleans to `1` or `0` and dates to milliseconds.
+	      // Invalid dates are coerced to `NaN`.
+	      return eq(+object, +other);
+
+	    case errorTag:
+	      return object.name == other.name && object.message == other.message;
+
+	    case regexpTag:
+	    case stringTag:
+	      // Coerce regexes to strings and treat strings, primitives and objects,
+	      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+	      // for more details.
+	      return object == (other + '');
+
+	    case mapTag:
+	      var convert = mapToArray;
+
+	    case setTag:
+	      var isPartial = bitmask & PARTIAL_COMPARE_FLAG;
+	      convert || (convert = setToArray);
+
+	      if (object.size != other.size && !isPartial) {
+	        return false;
+	      }
+	      // Assume cyclic values are equal.
+	      var stacked = stack.get(object);
+	      if (stacked) {
+	        return stacked == other;
+	      }
+	      bitmask |= UNORDERED_COMPARE_FLAG;
+
+	      // Recursively compare objects (susceptible to call stack limits).
+	      stack.set(object, other);
+	      var result = equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask, stack);
+	      stack['delete'](object);
+	      return result;
+
+	    case symbolTag:
+	      if (symbolValueOf) {
+	        return symbolValueOf.call(object) == symbolValueOf.call(other);
+	      }
+	  }
+	  return false;
+	}
+
+	/**
+	 * A specialized version of `baseIsEqualDeep` for objects with support for
+	 * partial deep comparisons.
+	 *
+	 * @private
+	 * @param {Object} object The object to compare.
+	 * @param {Object} other The other object to compare.
+	 * @param {Function} equalFunc The function to determine equivalents of values.
+	 * @param {Function} customizer The function to customize comparisons.
+	 * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+	 *  for more details.
+	 * @param {Object} stack Tracks traversed `object` and `other` objects.
+	 * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+	 */
+	function equalObjects(object, other, equalFunc, customizer, bitmask, stack) {
+	  var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+	      objProps = keys(object),
+	      objLength = objProps.length,
+	      othProps = keys(other),
+	      othLength = othProps.length;
+
+	  if (objLength != othLength && !isPartial) {
+	    return false;
+	  }
+	  var index = objLength;
+	  while (index--) {
+	    var key = objProps[index];
+	    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
+	      return false;
+	    }
+	  }
+	  // Assume cyclic values are equal.
+	  var stacked = stack.get(object);
+	  if (stacked && stack.get(other)) {
+	    return stacked == other;
+	  }
+	  var result = true;
+	  stack.set(object, other);
+	  stack.set(other, object);
+
+	  var skipCtor = isPartial;
+	  while (++index < objLength) {
+	    key = objProps[index];
+	    var objValue = object[key],
+	        othValue = other[key];
+
+	    if (customizer) {
+	      var compared = isPartial
+	        ? customizer(othValue, objValue, key, other, object, stack)
+	        : customizer(objValue, othValue, key, object, other, stack);
+	    }
+	    // Recursively compare objects (susceptible to call stack limits).
+	    if (!(compared === undefined
+	          ? (objValue === othValue || equalFunc(objValue, othValue, customizer, bitmask, stack))
+	          : compared
+	        )) {
+	      result = false;
+	      break;
+	    }
+	    skipCtor || (skipCtor = key == 'constructor');
+	  }
+	  if (result && !skipCtor) {
+	    var objCtor = object.constructor,
+	        othCtor = other.constructor;
+
+	    // Non `Object` object instances with different constructors are not equal.
+	    if (objCtor != othCtor &&
+	        ('constructor' in object && 'constructor' in other) &&
+	        !(typeof objCtor == 'function' && objCtor instanceof objCtor &&
+	          typeof othCtor == 'function' && othCtor instanceof othCtor)) {
+	      result = false;
+	    }
+	  }
+	  stack['delete'](object);
+	  stack['delete'](other);
+	  return result;
+	}
+
+	/**
+	 * Gets the data for `map`.
+	 *
+	 * @private
+	 * @param {Object} map The map to query.
+	 * @param {string} key The reference key.
+	 * @returns {*} Returns the map data.
+	 */
+	function getMapData(map, key) {
+	  var data = map.__data__;
+	  return isKeyable(key)
+	    ? data[typeof key == 'string' ? 'string' : 'hash']
+	    : data.map;
+	}
+
+	/**
+	 * Gets the property names, values, and compare flags of `object`.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @returns {Array} Returns the match data of `object`.
+	 */
+	function getMatchData(object) {
+	  var result = keys(object),
+	      length = result.length;
+
+	  while (length--) {
+	    var key = result[length],
+	        value = object[key];
+
+	    result[length] = [key, value, isStrictComparable(value)];
+	  }
+	  return result;
+	}
+
+	/**
+	 * Gets the native function at `key` of `object`.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @param {string} key The key of the method to get.
+	 * @returns {*} Returns the function if it's native, else `undefined`.
+	 */
+	function getNative(object, key) {
+	  var value = getValue(object, key);
+	  return baseIsNative(value) ? value : undefined;
+	}
+
+	/**
+	 * Gets the `toStringTag` of `value`.
+	 *
+	 * @private
+	 * @param {*} value The value to query.
+	 * @returns {string} Returns the `toStringTag`.
+	 */
+	var getTag = baseGetTag;
+
+	// Fallback for data views, maps, sets, and weak maps in IE 11,
+	// for data views in Edge < 14, and promises in Node.js.
+	if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+	    (Map && getTag(new Map) != mapTag) ||
+	    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+	    (Set && getTag(new Set) != setTag) ||
+	    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+	  getTag = function(value) {
+	    var result = objectToString.call(value),
+	        Ctor = result == objectTag ? value.constructor : undefined,
+	        ctorString = Ctor ? toSource(Ctor) : undefined;
+
+	    if (ctorString) {
+	      switch (ctorString) {
+	        case dataViewCtorString: return dataViewTag;
+	        case mapCtorString: return mapTag;
+	        case promiseCtorString: return promiseTag;
+	        case setCtorString: return setTag;
+	        case weakMapCtorString: return weakMapTag;
+	      }
+	    }
+	    return result;
+	  };
+	}
+
+	/**
+	 * Checks if `path` exists on `object`.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @param {Array|string} path The path to check.
+	 * @param {Function} hasFunc The function to check properties.
+	 * @returns {boolean} Returns `true` if `path` exists, else `false`.
+	 */
+	function hasPath(object, path, hasFunc) {
+	  path = isKey(path, object) ? [path] : castPath(path);
+
+	  var result,
+	      index = -1,
+	      length = path.length;
+
+	  while (++index < length) {
+	    var key = toKey(path[index]);
+	    if (!(result = object != null && hasFunc(object, key))) {
+	      break;
+	    }
+	    object = object[key];
+	  }
+	  if (result) {
+	    return result;
+	  }
+	  var length = object ? object.length : 0;
+	  return !!length && isLength(length) && isIndex(key, length) &&
+	    (isArray(object) || isArguments(object));
+	}
+
+	/**
+	 * Checks if `value` is a flattenable `arguments` object or array.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
+	 */
+	function isFlattenable(value) {
+	  return isArray(value) || isArguments(value) ||
+	    !!(spreadableSymbol && value && value[spreadableSymbol]);
+	}
+
+	/**
+	 * Checks if `value` is a valid array-like index.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+	 * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+	 */
+	function isIndex(value, length) {
+	  length = length == null ? MAX_SAFE_INTEGER : length;
+	  return !!length &&
+	    (typeof value == 'number' || reIsUint.test(value)) &&
+	    (value > -1 && value % 1 == 0 && value < length);
+	}
+
+	/**
+	 * Checks if the given arguments are from an iteratee call.
+	 *
+	 * @private
+	 * @param {*} value The potential iteratee value argument.
+	 * @param {*} index The potential iteratee index or key argument.
+	 * @param {*} object The potential iteratee object argument.
+	 * @returns {boolean} Returns `true` if the arguments are from an iteratee call,
+	 *  else `false`.
+	 */
+	function isIterateeCall(value, index, object) {
+	  if (!isObject(object)) {
+	    return false;
+	  }
+	  var type = typeof index;
+	  if (type == 'number'
+	        ? (isArrayLike(object) && isIndex(index, object.length))
+	        : (type == 'string' && index in object)
+	      ) {
+	    return eq(object[index], value);
+	  }
+	  return false;
+	}
+
+	/**
+	 * Checks if `value` is a property name and not a property path.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @param {Object} [object] The object to query keys on.
+	 * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+	 */
+	function isKey(value, object) {
+	  if (isArray(value)) {
+	    return false;
+	  }
+	  var type = typeof value;
+	  if (type == 'number' || type == 'symbol' || type == 'boolean' ||
+	      value == null || isSymbol(value)) {
+	    return true;
+	  }
+	  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
+	    (object != null && value in Object(object));
+	}
+
+	/**
+	 * Checks if `value` is suitable for use as unique object key.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+	 */
+	function isKeyable(value) {
+	  var type = typeof value;
+	  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
+	    ? (value !== '__proto__')
+	    : (value === null);
+	}
+
+	/**
+	 * Checks if `func` has its source masked.
+	 *
+	 * @private
+	 * @param {Function} func The function to check.
+	 * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+	 */
+	function isMasked(func) {
+	  return !!maskSrcKey && (maskSrcKey in func);
+	}
+
+	/**
+	 * Checks if `value` is likely a prototype object.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+	 */
+	function isPrototype(value) {
+	  var Ctor = value && value.constructor,
+	      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+	  return value === proto;
+	}
+
+	/**
+	 * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` if suitable for strict
+	 *  equality comparisons, else `false`.
+	 */
+	function isStrictComparable(value) {
+	  return value === value && !isObject(value);
+	}
+
+	/**
+	 * A specialized version of `matchesProperty` for source values suitable
+	 * for strict equality comparisons, i.e. `===`.
+	 *
+	 * @private
+	 * @param {string} key The key of the property to get.
+	 * @param {*} srcValue The value to match.
+	 * @returns {Function} Returns the new spec function.
+	 */
+	function matchesStrictComparable(key, srcValue) {
+	  return function(object) {
+	    if (object == null) {
+	      return false;
+	    }
+	    return object[key] === srcValue &&
+	      (srcValue !== undefined || (key in Object(object)));
+	  };
+	}
+
+	/**
+	 * Converts `string` to a property path array.
+	 *
+	 * @private
+	 * @param {string} string The string to convert.
+	 * @returns {Array} Returns the property path array.
+	 */
+	var stringToPath = memoize(function(string) {
+	  string = toString(string);
+
+	  var result = [];
+	  if (reLeadingDot.test(string)) {
+	    result.push('');
+	  }
+	  string.replace(rePropName, function(match, number, quote, string) {
+	    result.push(quote ? string.replace(reEscapeChar, '$1') : (number || match));
+	  });
+	  return result;
+	});
+
+	/**
+	 * Converts `value` to a string key if it's not a string or symbol.
+	 *
+	 * @private
+	 * @param {*} value The value to inspect.
+	 * @returns {string|symbol} Returns the key.
+	 */
+	function toKey(value) {
+	  if (typeof value == 'string' || isSymbol(value)) {
+	    return value;
+	  }
+	  var result = (value + '');
+	  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+	}
+
+	/**
+	 * Converts `func` to its source code.
+	 *
+	 * @private
+	 * @param {Function} func The function to process.
+	 * @returns {string} Returns the source code.
+	 */
+	function toSource(func) {
+	  if (func != null) {
+	    try {
+	      return funcToString.call(func);
+	    } catch (e) {}
+	    try {
+	      return (func + '');
+	    } catch (e) {}
+	  }
+	  return '';
+	}
+
+	/**
+	 * Creates an array of elements, sorted in ascending order by the results of
+	 * running each element in a collection thru each iteratee. This method
+	 * performs a stable sort, that is, it preserves the original sort order of
+	 * equal elements. The iteratees are invoked with one argument: (value).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Collection
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {...(Function|Function[])} [iteratees=[_.identity]]
+	 *  The iteratees to sort by.
+	 * @returns {Array} Returns the new sorted array.
+	 * @example
+	 *
+	 * var users = [
+	 *   { 'user': 'fred',   'age': 48 },
+	 *   { 'user': 'barney', 'age': 36 },
+	 *   { 'user': 'fred',   'age': 40 },
+	 *   { 'user': 'barney', 'age': 34 }
+	 * ];
+	 *
+	 * _.sortBy(users, function(o) { return o.user; });
+	 * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
+	 *
+	 * _.sortBy(users, ['user', 'age']);
+	 * // => objects for [['barney', 34], ['barney', 36], ['fred', 40], ['fred', 48]]
+	 *
+	 * _.sortBy(users, 'user', function(o) {
+	 *   return Math.floor(o.age / 10);
+	 * });
+	 * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
+	 */
+	var sortBy = baseRest(function(collection, iteratees) {
+	  if (collection == null) {
+	    return [];
+	  }
+	  var length = iteratees.length;
+	  if (length > 1 && isIterateeCall(collection, iteratees[0], iteratees[1])) {
+	    iteratees = [];
+	  } else if (length > 2 && isIterateeCall(iteratees[0], iteratees[1], iteratees[2])) {
+	    iteratees = [iteratees[0]];
+	  }
+	  return baseOrderBy(collection, baseFlatten(iteratees, 1), []);
+	});
+
+	/**
+	 * Creates a function that memoizes the result of `func`. If `resolver` is
+	 * provided, it determines the cache key for storing the result based on the
+	 * arguments provided to the memoized function. By default, the first argument
+	 * provided to the memoized function is used as the map cache key. The `func`
+	 * is invoked with the `this` binding of the memoized function.
+	 *
+	 * **Note:** The cache is exposed as the `cache` property on the memoized
+	 * function. Its creation may be customized by replacing the `_.memoize.Cache`
+	 * constructor with one whose instances implement the
+	 * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+	 * method interface of `delete`, `get`, `has`, and `set`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Function
+	 * @param {Function} func The function to have its output memoized.
+	 * @param {Function} [resolver] The function to resolve the cache key.
+	 * @returns {Function} Returns the new memoized function.
+	 * @example
+	 *
+	 * var object = { 'a': 1, 'b': 2 };
+	 * var other = { 'c': 3, 'd': 4 };
+	 *
+	 * var values = _.memoize(_.values);
+	 * values(object);
+	 * // => [1, 2]
+	 *
+	 * values(other);
+	 * // => [3, 4]
+	 *
+	 * object.a = 2;
+	 * values(object);
+	 * // => [1, 2]
+	 *
+	 * // Modify the result cache.
+	 * values.cache.set(object, ['a', 'b']);
+	 * values(object);
+	 * // => ['a', 'b']
+	 *
+	 * // Replace `_.memoize.Cache`.
+	 * _.memoize.Cache = WeakMap;
+	 */
+	function memoize(func, resolver) {
+	  if (typeof func != 'function' || (resolver && typeof resolver != 'function')) {
+	    throw new TypeError(FUNC_ERROR_TEXT);
+	  }
+	  var memoized = function() {
+	    var args = arguments,
+	        key = resolver ? resolver.apply(this, args) : args[0],
+	        cache = memoized.cache;
+
+	    if (cache.has(key)) {
+	      return cache.get(key);
+	    }
+	    var result = func.apply(this, args);
+	    memoized.cache = cache.set(key, result);
+	    return result;
+	  };
+	  memoized.cache = new (memoize.Cache || MapCache);
+	  return memoized;
+	}
+
+	// Assign cache to `_.memoize`.
+	memoize.Cache = MapCache;
+
+	/**
+	 * Performs a
+	 * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+	 * comparison between two values to determine if they are equivalent.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to compare.
+	 * @param {*} other The other value to compare.
+	 * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+	 * @example
+	 *
+	 * var object = { 'a': 1 };
+	 * var other = { 'a': 1 };
+	 *
+	 * _.eq(object, object);
+	 * // => true
+	 *
+	 * _.eq(object, other);
+	 * // => false
+	 *
+	 * _.eq('a', 'a');
+	 * // => true
+	 *
+	 * _.eq('a', Object('a'));
+	 * // => false
+	 *
+	 * _.eq(NaN, NaN);
+	 * // => true
+	 */
+	function eq(value, other) {
+	  return value === other || (value !== value && other !== other);
+	}
+
+	/**
+	 * Checks if `value` is likely an `arguments` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isArguments(function() { return arguments; }());
+	 * // => true
+	 *
+	 * _.isArguments([1, 2, 3]);
+	 * // => false
+	 */
+	function isArguments(value) {
+	  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+	  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+	    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
+	}
+
+	/**
+	 * Checks if `value` is classified as an `Array` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+	 * @example
+	 *
+	 * _.isArray([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArray(document.body.children);
+	 * // => false
+	 *
+	 * _.isArray('abc');
+	 * // => false
+	 *
+	 * _.isArray(_.noop);
+	 * // => false
+	 */
+	var isArray = Array.isArray;
+
+	/**
+	 * Checks if `value` is array-like. A value is considered array-like if it's
+	 * not a function and has a `value.length` that's an integer greater than or
+	 * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+	 * @example
+	 *
+	 * _.isArrayLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArrayLike(document.body.children);
+	 * // => true
+	 *
+	 * _.isArrayLike('abc');
+	 * // => true
+	 *
+	 * _.isArrayLike(_.noop);
+	 * // => false
+	 */
+	function isArrayLike(value) {
+	  return value != null && isLength(value.length) && !isFunction(value);
+	}
+
+	/**
+	 * This method is like `_.isArrayLike` except that it also checks if `value`
+	 * is an object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an array-like object,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isArrayLikeObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArrayLikeObject(document.body.children);
+	 * // => true
+	 *
+	 * _.isArrayLikeObject('abc');
+	 * // => false
+	 *
+	 * _.isArrayLikeObject(_.noop);
+	 * // => false
+	 */
+	function isArrayLikeObject(value) {
+	  return isObjectLike(value) && isArrayLike(value);
+	}
+
+	/**
+	 * Checks if `value` is classified as a `Function` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+	 * @example
+	 *
+	 * _.isFunction(_);
+	 * // => true
+	 *
+	 * _.isFunction(/abc/);
+	 * // => false
+	 */
+	function isFunction(value) {
+	  // The use of `Object#toString` avoids issues with the `typeof` operator
+	  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+	  var tag = isObject(value) ? objectToString.call(value) : '';
+	  return tag == funcTag || tag == genTag;
+	}
+
+	/**
+	 * Checks if `value` is a valid array-like length.
+	 *
+	 * **Note:** This method is loosely based on
+	 * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+	 * @example
+	 *
+	 * _.isLength(3);
+	 * // => true
+	 *
+	 * _.isLength(Number.MIN_VALUE);
+	 * // => false
+	 *
+	 * _.isLength(Infinity);
+	 * // => false
+	 *
+	 * _.isLength('3');
+	 * // => false
+	 */
+	function isLength(value) {
+	  return typeof value == 'number' &&
+	    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+	}
+
+	/**
+	 * Checks if `value` is the
+	 * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+	 * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(_.noop);
+	 * // => true
+	 *
+	 * _.isObject(null);
+	 * // => false
+	 */
+	function isObject(value) {
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
+	}
+
+	/**
+	 * Checks if `value` is classified as a `Symbol` primitive or object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+	 * @example
+	 *
+	 * _.isSymbol(Symbol.iterator);
+	 * // => true
+	 *
+	 * _.isSymbol('abc');
+	 * // => false
+	 */
+	function isSymbol(value) {
+	  return typeof value == 'symbol' ||
+	    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+	}
+
+	/**
+	 * Checks if `value` is classified as a typed array.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 3.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+	 * @example
+	 *
+	 * _.isTypedArray(new Uint8Array);
+	 * // => true
+	 *
+	 * _.isTypedArray([]);
+	 * // => false
+	 */
+	var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+
+	/**
+	 * Converts `value` to a string. An empty string is returned for `null`
+	 * and `undefined` values. The sign of `-0` is preserved.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to process.
+	 * @returns {string} Returns the string.
+	 * @example
+	 *
+	 * _.toString(null);
+	 * // => ''
+	 *
+	 * _.toString(-0);
+	 * // => '-0'
+	 *
+	 * _.toString([1, 2, 3]);
+	 * // => '1,2,3'
+	 */
+	function toString(value) {
+	  return value == null ? '' : baseToString(value);
+	}
+
+	/**
+	 * Gets the value at `path` of `object`. If the resolved value is
+	 * `undefined`, the `defaultValue` is returned in its place.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 3.7.0
+	 * @category Object
+	 * @param {Object} object The object to query.
+	 * @param {Array|string} path The path of the property to get.
+	 * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+	 * @returns {*} Returns the resolved value.
+	 * @example
+	 *
+	 * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+	 *
+	 * _.get(object, 'a[0].b.c');
+	 * // => 3
+	 *
+	 * _.get(object, ['a', '0', 'b', 'c']);
+	 * // => 3
+	 *
+	 * _.get(object, 'a.b.c', 'default');
+	 * // => 'default'
+	 */
+	function get(object, path, defaultValue) {
+	  var result = object == null ? undefined : baseGet(object, path);
+	  return result === undefined ? defaultValue : result;
+	}
+
+	/**
+	 * Checks if `path` is a direct or inherited property of `object`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Object
+	 * @param {Object} object The object to query.
+	 * @param {Array|string} path The path to check.
+	 * @returns {boolean} Returns `true` if `path` exists, else `false`.
+	 * @example
+	 *
+	 * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+	 *
+	 * _.hasIn(object, 'a');
+	 * // => true
+	 *
+	 * _.hasIn(object, 'a.b');
+	 * // => true
+	 *
+	 * _.hasIn(object, ['a', 'b']);
+	 * // => true
+	 *
+	 * _.hasIn(object, 'b');
+	 * // => false
+	 */
+	function hasIn(object, path) {
+	  return object != null && hasPath(object, path, baseHasIn);
+	}
+
+	/**
+	 * Creates an array of the own enumerable property names of `object`.
+	 *
+	 * **Note:** Non-object values are coerced to objects. See the
+	 * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+	 * for more details.
+	 *
+	 * @static
+	 * @since 0.1.0
+	 * @memberOf _
+	 * @category Object
+	 * @param {Object} object The object to query.
+	 * @returns {Array} Returns the array of property names.
+	 * @example
+	 *
+	 * function Foo() {
+	 *   this.a = 1;
+	 *   this.b = 2;
+	 * }
+	 *
+	 * Foo.prototype.c = 3;
+	 *
+	 * _.keys(new Foo);
+	 * // => ['a', 'b'] (iteration order is not guaranteed)
+	 *
+	 * _.keys('hi');
+	 * // => ['0', '1']
+	 */
+	function keys(object) {
+	  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+	}
+
+	/**
+	 * This method returns the first argument it receives.
+	 *
+	 * @static
+	 * @since 0.1.0
+	 * @memberOf _
+	 * @category Util
+	 * @param {*} value Any value.
+	 * @returns {*} Returns `value`.
+	 * @example
+	 *
+	 * var object = { 'a': 1 };
+	 *
+	 * console.log(_.identity(object) === object);
+	 * // => true
+	 */
+	function identity(value) {
+	  return value;
+	}
+
+	/**
+	 * Creates a function that returns the value at `path` of a given object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 2.4.0
+	 * @category Util
+	 * @param {Array|string} path The path of the property to get.
+	 * @returns {Function} Returns the new accessor function.
+	 * @example
+	 *
+	 * var objects = [
+	 *   { 'a': { 'b': 2 } },
+	 *   { 'a': { 'b': 1 } }
+	 * ];
+	 *
+	 * _.map(objects, _.property('a.b'));
+	 * // => [2, 1]
+	 *
+	 * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
+	 * // => [1, 2]
+	 */
+	function property(path) {
+	  return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
+	}
+
+	module.exports = sortBy;
+
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(8)(module)))
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	/**
+	 * lodash 4.0.1 (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 * Available under MIT license <https://lodash.com/license>
+	 */
+
+	/** Used for built-in method references. */
+	var arrayProto = Array.prototype;
+
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeReverse = arrayProto.reverse;
+
+	/**
+	 * Reverses `array` so that the first element becomes the last, the second
+	 * element becomes the second to last, and so on.
+	 *
+	 * **Note:** This method mutates `array` and is based on
+	 * [`Array#reverse`](https://mdn.io/Array/reverse).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Array
+	 * @returns {Array} Returns `array`.
+	 * @example
+	 *
+	 * var array = [1, 2, 3];
+	 *
+	 * _.reverse(array);
+	 * // => [3, 2, 1]
+	 *
+	 * console.log(array);
+	 * // => [3, 2, 1]
+	 */
+	function reverse(array) {
+	  return array ? nativeReverse.call(array) : array;
+	}
+
+	module.exports = reverse;
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global, module) {/**
+	 * lodash (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+	 * Released under MIT license <https://lodash.com/license>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 */
+
+	/** Used as the size to enable large array optimizations. */
+	var LARGE_ARRAY_SIZE = 200;
+
+	/** Used as the `TypeError` message for "Functions" methods. */
+	var FUNC_ERROR_TEXT = 'Expected a function';
+
+	/** Used to stand-in for `undefined` hash values. */
+	var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+	/** Used to compose bitmasks for comparison styles. */
+	var UNORDERED_COMPARE_FLAG = 1,
+	    PARTIAL_COMPARE_FLAG = 2;
+
+	/** Used as references for various `Number` constants. */
+	var INFINITY = 1 / 0,
+	    MAX_SAFE_INTEGER = 9007199254740991;
+
+	/** `Object#toString` result references. */
+	var argsTag = '[object Arguments]',
+	    arrayTag = '[object Array]',
+	    boolTag = '[object Boolean]',
+	    dateTag = '[object Date]',
+	    errorTag = '[object Error]',
+	    funcTag = '[object Function]',
+	    genTag = '[object GeneratorFunction]',
+	    mapTag = '[object Map]',
+	    numberTag = '[object Number]',
+	    objectTag = '[object Object]',
+	    promiseTag = '[object Promise]',
+	    regexpTag = '[object RegExp]',
+	    setTag = '[object Set]',
+	    stringTag = '[object String]',
+	    symbolTag = '[object Symbol]',
+	    weakMapTag = '[object WeakMap]';
+
+	var arrayBufferTag = '[object ArrayBuffer]',
+	    dataViewTag = '[object DataView]',
+	    float32Tag = '[object Float32Array]',
+	    float64Tag = '[object Float64Array]',
+	    int8Tag = '[object Int8Array]',
+	    int16Tag = '[object Int16Array]',
+	    int32Tag = '[object Int32Array]',
+	    uint8Tag = '[object Uint8Array]',
+	    uint8ClampedTag = '[object Uint8ClampedArray]',
+	    uint16Tag = '[object Uint16Array]',
+	    uint32Tag = '[object Uint32Array]';
+
+	/** Used to match property names within property paths. */
+	var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+	    reIsPlainProp = /^\w*$/,
+	    reLeadingDot = /^\./,
+	    rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+	/**
+	 * Used to match `RegExp`
+	 * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+	 */
+	var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+	/** Used to match backslashes in property paths. */
+	var reEscapeChar = /\\(\\)?/g;
+
+	/** Used to detect host constructors (Safari). */
+	var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+	/** Used to detect unsigned integer values. */
+	var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+	/** Used to identify `toStringTag` values of typed arrays. */
+	var typedArrayTags = {};
+	typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+	typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+	typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+	typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+	typedArrayTags[uint32Tag] = true;
+	typedArrayTags[argsTag] = typedArrayTags[arrayTag] =
+	typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+	typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+	typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+	typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+	typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+	typedArrayTags[setTag] = typedArrayTags[stringTag] =
+	typedArrayTags[weakMapTag] = false;
+
+	/** Detect free variable `global` from Node.js. */
+	var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+	/** Detect free variable `self`. */
+	var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+	/** Used as a reference to the global object. */
+	var root = freeGlobal || freeSelf || Function('return this')();
+
+	/** Detect free variable `exports`. */
+	var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+	/** Detect free variable `module`. */
+	var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+	/** Detect the popular CommonJS extension `module.exports`. */
+	var moduleExports = freeModule && freeModule.exports === freeExports;
+
+	/** Detect free variable `process` from Node.js. */
+	var freeProcess = moduleExports && freeGlobal.process;
+
+	/** Used to access faster Node.js helpers. */
+	var nodeUtil = (function() {
+	  try {
+	    return freeProcess && freeProcess.binding('util');
+	  } catch (e) {}
+	}());
+
+	/* Node.js helper references. */
+	var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+
+	/**
+	 * A specialized version of `_.reduce` for arrays without support for
+	 * iteratee shorthands.
+	 *
+	 * @private
+	 * @param {Array} [array] The array to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @param {*} [accumulator] The initial value.
+	 * @param {boolean} [initAccum] Specify using the first element of `array` as
+	 *  the initial value.
+	 * @returns {*} Returns the accumulated value.
+	 */
+	function arrayReduce(array, iteratee, accumulator, initAccum) {
+	  var index = -1,
+	      length = array ? array.length : 0;
+
+	  if (initAccum && length) {
+	    accumulator = array[++index];
+	  }
+	  while (++index < length) {
+	    accumulator = iteratee(accumulator, array[index], index, array);
+	  }
+	  return accumulator;
+	}
+
+	/**
+	 * A specialized version of `_.some` for arrays without support for iteratee
+	 * shorthands.
+	 *
+	 * @private
+	 * @param {Array} [array] The array to iterate over.
+	 * @param {Function} predicate The function invoked per iteration.
+	 * @returns {boolean} Returns `true` if any element passes the predicate check,
+	 *  else `false`.
+	 */
+	function arraySome(array, predicate) {
+	  var index = -1,
+	      length = array ? array.length : 0;
+
+	  while (++index < length) {
+	    if (predicate(array[index], index, array)) {
+	      return true;
+	    }
+	  }
+	  return false;
+	}
+
+	/**
+	 * The base implementation of `_.property` without support for deep paths.
+	 *
+	 * @private
+	 * @param {string} key The key of the property to get.
+	 * @returns {Function} Returns the new accessor function.
+	 */
+	function baseProperty(key) {
+	  return function(object) {
+	    return object == null ? undefined : object[key];
+	  };
+	}
+
+	/**
+	 * The base implementation of `_.reduce` and `_.reduceRight`, without support
+	 * for iteratee shorthands, which iterates over `collection` using `eachFunc`.
+	 *
+	 * @private
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @param {*} accumulator The initial value.
+	 * @param {boolean} initAccum Specify using the first or last element of
+	 *  `collection` as the initial value.
+	 * @param {Function} eachFunc The function to iterate over `collection`.
+	 * @returns {*} Returns the accumulated value.
+	 */
+	function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
+	  eachFunc(collection, function(value, index, collection) {
+	    accumulator = initAccum
+	      ? (initAccum = false, value)
+	      : iteratee(accumulator, value, index, collection);
+	  });
+	  return accumulator;
+	}
+
+	/**
+	 * The base implementation of `_.times` without support for iteratee shorthands
+	 * or max array length checks.
+	 *
+	 * @private
+	 * @param {number} n The number of times to invoke `iteratee`.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @returns {Array} Returns the array of results.
+	 */
+	function baseTimes(n, iteratee) {
+	  var index = -1,
+	      result = Array(n);
+
+	  while (++index < n) {
+	    result[index] = iteratee(index);
+	  }
+	  return result;
+	}
+
+	/**
+	 * The base implementation of `_.unary` without support for storing metadata.
+	 *
+	 * @private
+	 * @param {Function} func The function to cap arguments for.
+	 * @returns {Function} Returns the new capped function.
+	 */
+	function baseUnary(func) {
+	  return function(value) {
+	    return func(value);
+	  };
+	}
+
+	/**
+	 * Gets the value at `key` of `object`.
+	 *
+	 * @private
+	 * @param {Object} [object] The object to query.
+	 * @param {string} key The key of the property to get.
+	 * @returns {*} Returns the property value.
+	 */
+	function getValue(object, key) {
+	  return object == null ? undefined : object[key];
+	}
+
+	/**
+	 * Checks if `value` is a host object in IE < 9.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+	 */
+	function isHostObject(value) {
+	  // Many host objects are `Object` objects that can coerce to strings
+	  // despite having improperly defined `toString` methods.
+	  var result = false;
+	  if (value != null && typeof value.toString != 'function') {
+	    try {
+	      result = !!(value + '');
+	    } catch (e) {}
+	  }
+	  return result;
+	}
+
+	/**
+	 * Converts `map` to its key-value pairs.
+	 *
+	 * @private
+	 * @param {Object} map The map to convert.
+	 * @returns {Array} Returns the key-value pairs.
+	 */
+	function mapToArray(map) {
+	  var index = -1,
+	      result = Array(map.size);
+
+	  map.forEach(function(value, key) {
+	    result[++index] = [key, value];
+	  });
+	  return result;
+	}
+
+	/**
+	 * Creates a unary function that invokes `func` with its argument transformed.
+	 *
+	 * @private
+	 * @param {Function} func The function to wrap.
+	 * @param {Function} transform The argument transform.
+	 * @returns {Function} Returns the new function.
+	 */
+	function overArg(func, transform) {
+	  return function(arg) {
+	    return func(transform(arg));
+	  };
+	}
+
+	/**
+	 * Converts `set` to an array of its values.
+	 *
+	 * @private
+	 * @param {Object} set The set to convert.
+	 * @returns {Array} Returns the values.
+	 */
+	function setToArray(set) {
+	  var index = -1,
+	      result = Array(set.size);
+
+	  set.forEach(function(value) {
+	    result[++index] = value;
+	  });
+	  return result;
+	}
+
+	/** Used for built-in method references. */
+	var arrayProto = Array.prototype,
+	    funcProto = Function.prototype,
+	    objectProto = Object.prototype;
+
+	/** Used to detect overreaching core-js shims. */
+	var coreJsData = root['__core-js_shared__'];
+
+	/** Used to detect methods masquerading as native. */
+	var maskSrcKey = (function() {
+	  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+	  return uid ? ('Symbol(src)_1.' + uid) : '';
+	}());
+
+	/** Used to resolve the decompiled source of functions. */
+	var funcToString = funcProto.toString;
+
+	/** Used to check objects for own properties. */
+	var hasOwnProperty = objectProto.hasOwnProperty;
+
+	/**
+	 * Used to resolve the
+	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+	 * of values.
+	 */
+	var objectToString = objectProto.toString;
+
+	/** Used to detect if a method is native. */
+	var reIsNative = RegExp('^' +
+	  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+	  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+	);
+
+	/** Built-in value references. */
+	var Symbol = root.Symbol,
+	    Uint8Array = root.Uint8Array,
+	    propertyIsEnumerable = objectProto.propertyIsEnumerable,
+	    splice = arrayProto.splice;
+
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeKeys = overArg(Object.keys, Object);
+
+	/* Built-in method references that are verified to be native. */
+	var DataView = getNative(root, 'DataView'),
+	    Map = getNative(root, 'Map'),
+	    Promise = getNative(root, 'Promise'),
+	    Set = getNative(root, 'Set'),
+	    WeakMap = getNative(root, 'WeakMap'),
+	    nativeCreate = getNative(Object, 'create');
+
+	/** Used to detect maps, sets, and weakmaps. */
+	var dataViewCtorString = toSource(DataView),
+	    mapCtorString = toSource(Map),
+	    promiseCtorString = toSource(Promise),
+	    setCtorString = toSource(Set),
+	    weakMapCtorString = toSource(WeakMap);
+
+	/** Used to convert symbols to primitives and strings. */
+	var symbolProto = Symbol ? Symbol.prototype : undefined,
+	    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined,
+	    symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+	/**
+	 * Creates a hash object.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [entries] The key-value pairs to cache.
+	 */
+	function Hash(entries) {
+	  var index = -1,
+	      length = entries ? entries.length : 0;
+
+	  this.clear();
+	  while (++index < length) {
+	    var entry = entries[index];
+	    this.set(entry[0], entry[1]);
+	  }
+	}
+
+	/**
+	 * Removes all key-value entries from the hash.
+	 *
+	 * @private
+	 * @name clear
+	 * @memberOf Hash
+	 */
+	function hashClear() {
+	  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+	}
+
+	/**
+	 * Removes `key` and its value from the hash.
+	 *
+	 * @private
+	 * @name delete
+	 * @memberOf Hash
+	 * @param {Object} hash The hash to modify.
+	 * @param {string} key The key of the value to remove.
+	 * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+	 */
+	function hashDelete(key) {
+	  return this.has(key) && delete this.__data__[key];
+	}
+
+	/**
+	 * Gets the hash value for `key`.
+	 *
+	 * @private
+	 * @name get
+	 * @memberOf Hash
+	 * @param {string} key The key of the value to get.
+	 * @returns {*} Returns the entry value.
+	 */
+	function hashGet(key) {
+	  var data = this.__data__;
+	  if (nativeCreate) {
+	    var result = data[key];
+	    return result === HASH_UNDEFINED ? undefined : result;
+	  }
+	  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+	}
+
+	/**
+	 * Checks if a hash value for `key` exists.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf Hash
+	 * @param {string} key The key of the entry to check.
+	 * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+	 */
+	function hashHas(key) {
+	  var data = this.__data__;
+	  return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+	}
+
+	/**
+	 * Sets the hash `key` to `value`.
+	 *
+	 * @private
+	 * @name set
+	 * @memberOf Hash
+	 * @param {string} key The key of the value to set.
+	 * @param {*} value The value to set.
+	 * @returns {Object} Returns the hash instance.
+	 */
+	function hashSet(key, value) {
+	  var data = this.__data__;
+	  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+	  return this;
+	}
+
+	// Add methods to `Hash`.
+	Hash.prototype.clear = hashClear;
+	Hash.prototype['delete'] = hashDelete;
+	Hash.prototype.get = hashGet;
+	Hash.prototype.has = hashHas;
+	Hash.prototype.set = hashSet;
+
+	/**
+	 * Creates an list cache object.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [entries] The key-value pairs to cache.
+	 */
+	function ListCache(entries) {
+	  var index = -1,
+	      length = entries ? entries.length : 0;
+
+	  this.clear();
+	  while (++index < length) {
+	    var entry = entries[index];
+	    this.set(entry[0], entry[1]);
+	  }
+	}
+
+	/**
+	 * Removes all key-value entries from the list cache.
+	 *
+	 * @private
+	 * @name clear
+	 * @memberOf ListCache
+	 */
+	function listCacheClear() {
+	  this.__data__ = [];
+	}
+
+	/**
+	 * Removes `key` and its value from the list cache.
+	 *
+	 * @private
+	 * @name delete
+	 * @memberOf ListCache
+	 * @param {string} key The key of the value to remove.
+	 * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+	 */
+	function listCacheDelete(key) {
+	  var data = this.__data__,
+	      index = assocIndexOf(data, key);
+
+	  if (index < 0) {
+	    return false;
+	  }
+	  var lastIndex = data.length - 1;
+	  if (index == lastIndex) {
+	    data.pop();
+	  } else {
+	    splice.call(data, index, 1);
+	  }
+	  return true;
+	}
+
+	/**
+	 * Gets the list cache value for `key`.
+	 *
+	 * @private
+	 * @name get
+	 * @memberOf ListCache
+	 * @param {string} key The key of the value to get.
+	 * @returns {*} Returns the entry value.
+	 */
+	function listCacheGet(key) {
+	  var data = this.__data__,
+	      index = assocIndexOf(data, key);
+
+	  return index < 0 ? undefined : data[index][1];
+	}
+
+	/**
+	 * Checks if a list cache value for `key` exists.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf ListCache
+	 * @param {string} key The key of the entry to check.
+	 * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+	 */
+	function listCacheHas(key) {
+	  return assocIndexOf(this.__data__, key) > -1;
+	}
+
+	/**
+	 * Sets the list cache `key` to `value`.
+	 *
+	 * @private
+	 * @name set
+	 * @memberOf ListCache
+	 * @param {string} key The key of the value to set.
+	 * @param {*} value The value to set.
+	 * @returns {Object} Returns the list cache instance.
+	 */
+	function listCacheSet(key, value) {
+	  var data = this.__data__,
+	      index = assocIndexOf(data, key);
+
+	  if (index < 0) {
+	    data.push([key, value]);
+	  } else {
+	    data[index][1] = value;
+	  }
+	  return this;
+	}
+
+	// Add methods to `ListCache`.
+	ListCache.prototype.clear = listCacheClear;
+	ListCache.prototype['delete'] = listCacheDelete;
+	ListCache.prototype.get = listCacheGet;
+	ListCache.prototype.has = listCacheHas;
+	ListCache.prototype.set = listCacheSet;
+
+	/**
+	 * Creates a map cache object to store key-value pairs.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [entries] The key-value pairs to cache.
+	 */
+	function MapCache(entries) {
+	  var index = -1,
+	      length = entries ? entries.length : 0;
+
+	  this.clear();
+	  while (++index < length) {
+	    var entry = entries[index];
+	    this.set(entry[0], entry[1]);
+	  }
+	}
+
+	/**
+	 * Removes all key-value entries from the map.
+	 *
+	 * @private
+	 * @name clear
+	 * @memberOf MapCache
+	 */
+	function mapCacheClear() {
+	  this.__data__ = {
+	    'hash': new Hash,
+	    'map': new (Map || ListCache),
+	    'string': new Hash
+	  };
+	}
+
+	/**
+	 * Removes `key` and its value from the map.
+	 *
+	 * @private
+	 * @name delete
+	 * @memberOf MapCache
+	 * @param {string} key The key of the value to remove.
+	 * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+	 */
+	function mapCacheDelete(key) {
+	  return getMapData(this, key)['delete'](key);
+	}
+
+	/**
+	 * Gets the map value for `key`.
+	 *
+	 * @private
+	 * @name get
+	 * @memberOf MapCache
+	 * @param {string} key The key of the value to get.
+	 * @returns {*} Returns the entry value.
+	 */
+	function mapCacheGet(key) {
+	  return getMapData(this, key).get(key);
+	}
+
+	/**
+	 * Checks if a map value for `key` exists.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf MapCache
+	 * @param {string} key The key of the entry to check.
+	 * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+	 */
+	function mapCacheHas(key) {
+	  return getMapData(this, key).has(key);
+	}
+
+	/**
+	 * Sets the map `key` to `value`.
+	 *
+	 * @private
+	 * @name set
+	 * @memberOf MapCache
+	 * @param {string} key The key of the value to set.
+	 * @param {*} value The value to set.
+	 * @returns {Object} Returns the map cache instance.
+	 */
+	function mapCacheSet(key, value) {
+	  getMapData(this, key).set(key, value);
+	  return this;
+	}
+
+	// Add methods to `MapCache`.
+	MapCache.prototype.clear = mapCacheClear;
+	MapCache.prototype['delete'] = mapCacheDelete;
+	MapCache.prototype.get = mapCacheGet;
+	MapCache.prototype.has = mapCacheHas;
+	MapCache.prototype.set = mapCacheSet;
+
+	/**
+	 *
+	 * Creates an array cache object to store unique values.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [values] The values to cache.
+	 */
+	function SetCache(values) {
+	  var index = -1,
+	      length = values ? values.length : 0;
+
+	  this.__data__ = new MapCache;
+	  while (++index < length) {
+	    this.add(values[index]);
+	  }
+	}
+
+	/**
+	 * Adds `value` to the array cache.
+	 *
+	 * @private
+	 * @name add
+	 * @memberOf SetCache
+	 * @alias push
+	 * @param {*} value The value to cache.
+	 * @returns {Object} Returns the cache instance.
+	 */
+	function setCacheAdd(value) {
+	  this.__data__.set(value, HASH_UNDEFINED);
+	  return this;
+	}
+
+	/**
+	 * Checks if `value` is in the array cache.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf SetCache
+	 * @param {*} value The value to search for.
+	 * @returns {number} Returns `true` if `value` is found, else `false`.
+	 */
+	function setCacheHas(value) {
+	  return this.__data__.has(value);
+	}
+
+	// Add methods to `SetCache`.
+	SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+	SetCache.prototype.has = setCacheHas;
+
+	/**
+	 * Creates a stack cache object to store key-value pairs.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Array} [entries] The key-value pairs to cache.
+	 */
+	function Stack(entries) {
+	  this.__data__ = new ListCache(entries);
+	}
+
+	/**
+	 * Removes all key-value entries from the stack.
+	 *
+	 * @private
+	 * @name clear
+	 * @memberOf Stack
+	 */
+	function stackClear() {
+	  this.__data__ = new ListCache;
+	}
+
+	/**
+	 * Removes `key` and its value from the stack.
+	 *
+	 * @private
+	 * @name delete
+	 * @memberOf Stack
+	 * @param {string} key The key of the value to remove.
+	 * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+	 */
+	function stackDelete(key) {
+	  return this.__data__['delete'](key);
+	}
+
+	/**
+	 * Gets the stack value for `key`.
+	 *
+	 * @private
+	 * @name get
+	 * @memberOf Stack
+	 * @param {string} key The key of the value to get.
+	 * @returns {*} Returns the entry value.
+	 */
+	function stackGet(key) {
+	  return this.__data__.get(key);
+	}
+
+	/**
+	 * Checks if a stack value for `key` exists.
+	 *
+	 * @private
+	 * @name has
+	 * @memberOf Stack
+	 * @param {string} key The key of the entry to check.
+	 * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+	 */
+	function stackHas(key) {
+	  return this.__data__.has(key);
+	}
+
+	/**
+	 * Sets the stack `key` to `value`.
+	 *
+	 * @private
+	 * @name set
+	 * @memberOf Stack
+	 * @param {string} key The key of the value to set.
+	 * @param {*} value The value to set.
+	 * @returns {Object} Returns the stack cache instance.
+	 */
+	function stackSet(key, value) {
+	  var cache = this.__data__;
+	  if (cache instanceof ListCache) {
+	    var pairs = cache.__data__;
+	    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+	      pairs.push([key, value]);
+	      return this;
+	    }
+	    cache = this.__data__ = new MapCache(pairs);
+	  }
+	  cache.set(key, value);
+	  return this;
+	}
+
+	// Add methods to `Stack`.
+	Stack.prototype.clear = stackClear;
+	Stack.prototype['delete'] = stackDelete;
+	Stack.prototype.get = stackGet;
+	Stack.prototype.has = stackHas;
+	Stack.prototype.set = stackSet;
+
+	/**
+	 * Creates an array of the enumerable property names of the array-like `value`.
+	 *
+	 * @private
+	 * @param {*} value The value to query.
+	 * @param {boolean} inherited Specify returning inherited property names.
+	 * @returns {Array} Returns the array of property names.
+	 */
+	function arrayLikeKeys(value, inherited) {
+	  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+	  // Safari 9 makes `arguments.length` enumerable in strict mode.
+	  var result = (isArray(value) || isArguments(value))
+	    ? baseTimes(value.length, String)
+	    : [];
+
+	  var length = result.length,
+	      skipIndexes = !!length;
+
+	  for (var key in value) {
+	    if ((inherited || hasOwnProperty.call(value, key)) &&
+	        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
+	      result.push(key);
+	    }
+	  }
+	  return result;
+	}
+
+	/**
+	 * Gets the index at which the `key` is found in `array` of key-value pairs.
+	 *
+	 * @private
+	 * @param {Array} array The array to inspect.
+	 * @param {*} key The key to search for.
+	 * @returns {number} Returns the index of the matched value, else `-1`.
+	 */
+	function assocIndexOf(array, key) {
+	  var length = array.length;
+	  while (length--) {
+	    if (eq(array[length][0], key)) {
+	      return length;
+	    }
+	  }
+	  return -1;
+	}
+
+	/**
+	 * The base implementation of `_.forEach` without support for iteratee shorthands.
+	 *
+	 * @private
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @returns {Array|Object} Returns `collection`.
+	 */
+	var baseEach = createBaseEach(baseForOwn);
+
+	/**
+	 * The base implementation of `baseForOwn` which iterates over `object`
+	 * properties returned by `keysFunc` and invokes `iteratee` for each property.
+	 * Iteratee functions may exit iteration early by explicitly returning `false`.
+	 *
+	 * @private
+	 * @param {Object} object The object to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @param {Function} keysFunc The function to get the keys of `object`.
+	 * @returns {Object} Returns `object`.
+	 */
+	var baseFor = createBaseFor();
+
+	/**
+	 * The base implementation of `_.forOwn` without support for iteratee shorthands.
+	 *
+	 * @private
+	 * @param {Object} object The object to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @returns {Object} Returns `object`.
+	 */
+	function baseForOwn(object, iteratee) {
+	  return object && baseFor(object, iteratee, keys);
+	}
+
+	/**
+	 * The base implementation of `_.get` without support for default values.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @param {Array|string} path The path of the property to get.
+	 * @returns {*} Returns the resolved value.
+	 */
+	function baseGet(object, path) {
+	  path = isKey(path, object) ? [path] : castPath(path);
+
+	  var index = 0,
+	      length = path.length;
+
+	  while (object != null && index < length) {
+	    object = object[toKey(path[index++])];
+	  }
+	  return (index && index == length) ? object : undefined;
+	}
+
+	/**
+	 * The base implementation of `getTag`.
+	 *
+	 * @private
+	 * @param {*} value The value to query.
+	 * @returns {string} Returns the `toStringTag`.
+	 */
+	function baseGetTag(value) {
+	  return objectToString.call(value);
+	}
+
+	/**
+	 * The base implementation of `_.hasIn` without support for deep paths.
+	 *
+	 * @private
+	 * @param {Object} [object] The object to query.
+	 * @param {Array|string} key The key to check.
+	 * @returns {boolean} Returns `true` if `key` exists, else `false`.
+	 */
+	function baseHasIn(object, key) {
+	  return object != null && key in Object(object);
+	}
+
+	/**
+	 * The base implementation of `_.isEqual` which supports partial comparisons
+	 * and tracks traversed objects.
+	 *
+	 * @private
+	 * @param {*} value The value to compare.
+	 * @param {*} other The other value to compare.
+	 * @param {Function} [customizer] The function to customize comparisons.
+	 * @param {boolean} [bitmask] The bitmask of comparison flags.
+	 *  The bitmask may be composed of the following flags:
+	 *     1 - Unordered comparison
+	 *     2 - Partial comparison
+	 * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+	 * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+	 */
+	function baseIsEqual(value, other, customizer, bitmask, stack) {
+	  if (value === other) {
+	    return true;
+	  }
+	  if (value == null || other == null || (!isObject(value) && !isObjectLike(other))) {
+	    return value !== value && other !== other;
+	  }
+	  return baseIsEqualDeep(value, other, baseIsEqual, customizer, bitmask, stack);
+	}
+
+	/**
+	 * A specialized version of `baseIsEqual` for arrays and objects which performs
+	 * deep comparisons and tracks traversed objects enabling objects with circular
+	 * references to be compared.
+	 *
+	 * @private
+	 * @param {Object} object The object to compare.
+	 * @param {Object} other The other object to compare.
+	 * @param {Function} equalFunc The function to determine equivalents of values.
+	 * @param {Function} [customizer] The function to customize comparisons.
+	 * @param {number} [bitmask] The bitmask of comparison flags. See `baseIsEqual`
+	 *  for more details.
+	 * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+	 * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+	 */
+	function baseIsEqualDeep(object, other, equalFunc, customizer, bitmask, stack) {
+	  var objIsArr = isArray(object),
+	      othIsArr = isArray(other),
+	      objTag = arrayTag,
+	      othTag = arrayTag;
+
+	  if (!objIsArr) {
+	    objTag = getTag(object);
+	    objTag = objTag == argsTag ? objectTag : objTag;
+	  }
+	  if (!othIsArr) {
+	    othTag = getTag(other);
+	    othTag = othTag == argsTag ? objectTag : othTag;
+	  }
+	  var objIsObj = objTag == objectTag && !isHostObject(object),
+	      othIsObj = othTag == objectTag && !isHostObject(other),
+	      isSameTag = objTag == othTag;
+
+	  if (isSameTag && !objIsObj) {
+	    stack || (stack = new Stack);
+	    return (objIsArr || isTypedArray(object))
+	      ? equalArrays(object, other, equalFunc, customizer, bitmask, stack)
+	      : equalByTag(object, other, objTag, equalFunc, customizer, bitmask, stack);
+	  }
+	  if (!(bitmask & PARTIAL_COMPARE_FLAG)) {
+	    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+	        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
+
+	    if (objIsWrapped || othIsWrapped) {
+	      var objUnwrapped = objIsWrapped ? object.value() : object,
+	          othUnwrapped = othIsWrapped ? other.value() : other;
+
+	      stack || (stack = new Stack);
+	      return equalFunc(objUnwrapped, othUnwrapped, customizer, bitmask, stack);
+	    }
+	  }
+	  if (!isSameTag) {
+	    return false;
+	  }
+	  stack || (stack = new Stack);
+	  return equalObjects(object, other, equalFunc, customizer, bitmask, stack);
+	}
+
+	/**
+	 * The base implementation of `_.isMatch` without support for iteratee shorthands.
+	 *
+	 * @private
+	 * @param {Object} object The object to inspect.
+	 * @param {Object} source The object of property values to match.
+	 * @param {Array} matchData The property names, values, and compare flags to match.
+	 * @param {Function} [customizer] The function to customize comparisons.
+	 * @returns {boolean} Returns `true` if `object` is a match, else `false`.
+	 */
+	function baseIsMatch(object, source, matchData, customizer) {
+	  var index = matchData.length,
+	      length = index,
+	      noCustomizer = !customizer;
+
+	  if (object == null) {
+	    return !length;
+	  }
+	  object = Object(object);
+	  while (index--) {
+	    var data = matchData[index];
+	    if ((noCustomizer && data[2])
+	          ? data[1] !== object[data[0]]
+	          : !(data[0] in object)
+	        ) {
+	      return false;
+	    }
+	  }
+	  while (++index < length) {
+	    data = matchData[index];
+	    var key = data[0],
+	        objValue = object[key],
+	        srcValue = data[1];
+
+	    if (noCustomizer && data[2]) {
+	      if (objValue === undefined && !(key in object)) {
+	        return false;
+	      }
+	    } else {
+	      var stack = new Stack;
+	      if (customizer) {
+	        var result = customizer(objValue, srcValue, key, object, source, stack);
+	      }
+	      if (!(result === undefined
+	            ? baseIsEqual(srcValue, objValue, customizer, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG, stack)
+	            : result
+	          )) {
+	        return false;
+	      }
+	    }
+	  }
+	  return true;
+	}
+
+	/**
+	 * The base implementation of `_.isNative` without bad shim checks.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a native function,
+	 *  else `false`.
+	 */
+	function baseIsNative(value) {
+	  if (!isObject(value) || isMasked(value)) {
+	    return false;
+	  }
+	  var pattern = (isFunction(value) || isHostObject(value)) ? reIsNative : reIsHostCtor;
+	  return pattern.test(toSource(value));
+	}
+
+	/**
+	 * The base implementation of `_.isTypedArray` without Node.js optimizations.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+	 */
+	function baseIsTypedArray(value) {
+	  return isObjectLike(value) &&
+	    isLength(value.length) && !!typedArrayTags[objectToString.call(value)];
+	}
+
+	/**
+	 * The base implementation of `_.iteratee`.
+	 *
+	 * @private
+	 * @param {*} [value=_.identity] The value to convert to an iteratee.
+	 * @returns {Function} Returns the iteratee.
+	 */
+	function baseIteratee(value) {
+	  // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.
+	  // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.
+	  if (typeof value == 'function') {
+	    return value;
+	  }
+	  if (value == null) {
+	    return identity;
+	  }
+	  if (typeof value == 'object') {
+	    return isArray(value)
+	      ? baseMatchesProperty(value[0], value[1])
+	      : baseMatches(value);
+	  }
+	  return property(value);
+	}
+
+	/**
+	 * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @returns {Array} Returns the array of property names.
+	 */
+	function baseKeys(object) {
+	  if (!isPrototype(object)) {
+	    return nativeKeys(object);
+	  }
+	  var result = [];
+	  for (var key in Object(object)) {
+	    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+	      result.push(key);
+	    }
+	  }
+	  return result;
+	}
+
+	/**
+	 * The base implementation of `_.matches` which doesn't clone `source`.
+	 *
+	 * @private
+	 * @param {Object} source The object of property values to match.
+	 * @returns {Function} Returns the new spec function.
+	 */
+	function baseMatches(source) {
+	  var matchData = getMatchData(source);
+	  if (matchData.length == 1 && matchData[0][2]) {
+	    return matchesStrictComparable(matchData[0][0], matchData[0][1]);
+	  }
+	  return function(object) {
+	    return object === source || baseIsMatch(object, source, matchData);
+	  };
+	}
+
+	/**
+	 * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
+	 *
+	 * @private
+	 * @param {string} path The path of the property to get.
+	 * @param {*} srcValue The value to match.
+	 * @returns {Function} Returns the new spec function.
+	 */
+	function baseMatchesProperty(path, srcValue) {
+	  if (isKey(path) && isStrictComparable(srcValue)) {
+	    return matchesStrictComparable(toKey(path), srcValue);
+	  }
+	  return function(object) {
+	    var objValue = get(object, path);
+	    return (objValue === undefined && objValue === srcValue)
+	      ? hasIn(object, path)
+	      : baseIsEqual(srcValue, objValue, undefined, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG);
+	  };
+	}
+
+	/**
+	 * A specialized version of `baseProperty` which supports deep paths.
+	 *
+	 * @private
+	 * @param {Array|string} path The path of the property to get.
+	 * @returns {Function} Returns the new accessor function.
+	 */
+	function basePropertyDeep(path) {
+	  return function(object) {
+	    return baseGet(object, path);
+	  };
+	}
+
+	/**
+	 * The base implementation of `_.toString` which doesn't convert nullish
+	 * values to empty strings.
+	 *
+	 * @private
+	 * @param {*} value The value to process.
+	 * @returns {string} Returns the string.
+	 */
+	function baseToString(value) {
+	  // Exit early for strings to avoid a performance hit in some environments.
+	  if (typeof value == 'string') {
+	    return value;
+	  }
+	  if (isSymbol(value)) {
+	    return symbolToString ? symbolToString.call(value) : '';
+	  }
+	  var result = (value + '');
+	  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+	}
+
+	/**
+	 * Casts `value` to a path array if it's not one.
+	 *
+	 * @private
+	 * @param {*} value The value to inspect.
+	 * @returns {Array} Returns the cast property path array.
+	 */
+	function castPath(value) {
+	  return isArray(value) ? value : stringToPath(value);
+	}
+
+	/**
+	 * Creates a `baseEach` or `baseEachRight` function.
+	 *
+	 * @private
+	 * @param {Function} eachFunc The function to iterate over a collection.
+	 * @param {boolean} [fromRight] Specify iterating from right to left.
+	 * @returns {Function} Returns the new base function.
+	 */
+	function createBaseEach(eachFunc, fromRight) {
+	  return function(collection, iteratee) {
+	    if (collection == null) {
+	      return collection;
+	    }
+	    if (!isArrayLike(collection)) {
+	      return eachFunc(collection, iteratee);
+	    }
+	    var length = collection.length,
+	        index = fromRight ? length : -1,
+	        iterable = Object(collection);
+
+	    while ((fromRight ? index-- : ++index < length)) {
+	      if (iteratee(iterable[index], index, iterable) === false) {
+	        break;
+	      }
+	    }
+	    return collection;
+	  };
+	}
+
+	/**
+	 * Creates a base function for methods like `_.forIn` and `_.forOwn`.
+	 *
+	 * @private
+	 * @param {boolean} [fromRight] Specify iterating from right to left.
+	 * @returns {Function} Returns the new base function.
+	 */
+	function createBaseFor(fromRight) {
+	  return function(object, iteratee, keysFunc) {
+	    var index = -1,
+	        iterable = Object(object),
+	        props = keysFunc(object),
+	        length = props.length;
+
+	    while (length--) {
+	      var key = props[fromRight ? length : ++index];
+	      if (iteratee(iterable[key], key, iterable) === false) {
+	        break;
+	      }
+	    }
+	    return object;
+	  };
+	}
+
+	/**
+	 * A specialized version of `baseIsEqualDeep` for arrays with support for
+	 * partial deep comparisons.
+	 *
+	 * @private
+	 * @param {Array} array The array to compare.
+	 * @param {Array} other The other array to compare.
+	 * @param {Function} equalFunc The function to determine equivalents of values.
+	 * @param {Function} customizer The function to customize comparisons.
+	 * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+	 *  for more details.
+	 * @param {Object} stack Tracks traversed `array` and `other` objects.
+	 * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+	 */
+	function equalArrays(array, other, equalFunc, customizer, bitmask, stack) {
+	  var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+	      arrLength = array.length,
+	      othLength = other.length;
+
+	  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+	    return false;
+	  }
+	  // Assume cyclic values are equal.
+	  var stacked = stack.get(array);
+	  if (stacked && stack.get(other)) {
+	    return stacked == other;
+	  }
+	  var index = -1,
+	      result = true,
+	      seen = (bitmask & UNORDERED_COMPARE_FLAG) ? new SetCache : undefined;
+
+	  stack.set(array, other);
+	  stack.set(other, array);
+
+	  // Ignore non-index properties.
+	  while (++index < arrLength) {
+	    var arrValue = array[index],
+	        othValue = other[index];
+
+	    if (customizer) {
+	      var compared = isPartial
+	        ? customizer(othValue, arrValue, index, other, array, stack)
+	        : customizer(arrValue, othValue, index, array, other, stack);
+	    }
+	    if (compared !== undefined) {
+	      if (compared) {
+	        continue;
+	      }
+	      result = false;
+	      break;
+	    }
+	    // Recursively compare arrays (susceptible to call stack limits).
+	    if (seen) {
+	      if (!arraySome(other, function(othValue, othIndex) {
+	            if (!seen.has(othIndex) &&
+	                (arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack))) {
+	              return seen.add(othIndex);
+	            }
+	          })) {
+	        result = false;
+	        break;
+	      }
+	    } else if (!(
+	          arrValue === othValue ||
+	            equalFunc(arrValue, othValue, customizer, bitmask, stack)
+	        )) {
+	      result = false;
+	      break;
+	    }
+	  }
+	  stack['delete'](array);
+	  stack['delete'](other);
+	  return result;
+	}
+
+	/**
+	 * A specialized version of `baseIsEqualDeep` for comparing objects of
+	 * the same `toStringTag`.
+	 *
+	 * **Note:** This function only supports comparing values with tags of
+	 * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+	 *
+	 * @private
+	 * @param {Object} object The object to compare.
+	 * @param {Object} other The other object to compare.
+	 * @param {string} tag The `toStringTag` of the objects to compare.
+	 * @param {Function} equalFunc The function to determine equivalents of values.
+	 * @param {Function} customizer The function to customize comparisons.
+	 * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+	 *  for more details.
+	 * @param {Object} stack Tracks traversed `object` and `other` objects.
+	 * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+	 */
+	function equalByTag(object, other, tag, equalFunc, customizer, bitmask, stack) {
+	  switch (tag) {
+	    case dataViewTag:
+	      if ((object.byteLength != other.byteLength) ||
+	          (object.byteOffset != other.byteOffset)) {
+	        return false;
+	      }
+	      object = object.buffer;
+	      other = other.buffer;
+
+	    case arrayBufferTag:
+	      if ((object.byteLength != other.byteLength) ||
+	          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+	        return false;
+	      }
+	      return true;
+
+	    case boolTag:
+	    case dateTag:
+	    case numberTag:
+	      // Coerce booleans to `1` or `0` and dates to milliseconds.
+	      // Invalid dates are coerced to `NaN`.
+	      return eq(+object, +other);
+
+	    case errorTag:
+	      return object.name == other.name && object.message == other.message;
+
+	    case regexpTag:
+	    case stringTag:
+	      // Coerce regexes to strings and treat strings, primitives and objects,
+	      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+	      // for more details.
+	      return object == (other + '');
+
+	    case mapTag:
+	      var convert = mapToArray;
+
+	    case setTag:
+	      var isPartial = bitmask & PARTIAL_COMPARE_FLAG;
+	      convert || (convert = setToArray);
+
+	      if (object.size != other.size && !isPartial) {
+	        return false;
+	      }
+	      // Assume cyclic values are equal.
+	      var stacked = stack.get(object);
+	      if (stacked) {
+	        return stacked == other;
+	      }
+	      bitmask |= UNORDERED_COMPARE_FLAG;
+
+	      // Recursively compare objects (susceptible to call stack limits).
+	      stack.set(object, other);
+	      var result = equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask, stack);
+	      stack['delete'](object);
+	      return result;
+
+	    case symbolTag:
+	      if (symbolValueOf) {
+	        return symbolValueOf.call(object) == symbolValueOf.call(other);
+	      }
+	  }
+	  return false;
+	}
+
+	/**
+	 * A specialized version of `baseIsEqualDeep` for objects with support for
+	 * partial deep comparisons.
+	 *
+	 * @private
+	 * @param {Object} object The object to compare.
+	 * @param {Object} other The other object to compare.
+	 * @param {Function} equalFunc The function to determine equivalents of values.
+	 * @param {Function} customizer The function to customize comparisons.
+	 * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+	 *  for more details.
+	 * @param {Object} stack Tracks traversed `object` and `other` objects.
+	 * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+	 */
+	function equalObjects(object, other, equalFunc, customizer, bitmask, stack) {
+	  var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+	      objProps = keys(object),
+	      objLength = objProps.length,
+	      othProps = keys(other),
+	      othLength = othProps.length;
+
+	  if (objLength != othLength && !isPartial) {
+	    return false;
+	  }
+	  var index = objLength;
+	  while (index--) {
+	    var key = objProps[index];
+	    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
+	      return false;
+	    }
+	  }
+	  // Assume cyclic values are equal.
+	  var stacked = stack.get(object);
+	  if (stacked && stack.get(other)) {
+	    return stacked == other;
+	  }
+	  var result = true;
+	  stack.set(object, other);
+	  stack.set(other, object);
+
+	  var skipCtor = isPartial;
+	  while (++index < objLength) {
+	    key = objProps[index];
+	    var objValue = object[key],
+	        othValue = other[key];
+
+	    if (customizer) {
+	      var compared = isPartial
+	        ? customizer(othValue, objValue, key, other, object, stack)
+	        : customizer(objValue, othValue, key, object, other, stack);
+	    }
+	    // Recursively compare objects (susceptible to call stack limits).
+	    if (!(compared === undefined
+	          ? (objValue === othValue || equalFunc(objValue, othValue, customizer, bitmask, stack))
+	          : compared
+	        )) {
+	      result = false;
+	      break;
+	    }
+	    skipCtor || (skipCtor = key == 'constructor');
+	  }
+	  if (result && !skipCtor) {
+	    var objCtor = object.constructor,
+	        othCtor = other.constructor;
+
+	    // Non `Object` object instances with different constructors are not equal.
+	    if (objCtor != othCtor &&
+	        ('constructor' in object && 'constructor' in other) &&
+	        !(typeof objCtor == 'function' && objCtor instanceof objCtor &&
+	          typeof othCtor == 'function' && othCtor instanceof othCtor)) {
+	      result = false;
+	    }
+	  }
+	  stack['delete'](object);
+	  stack['delete'](other);
+	  return result;
+	}
+
+	/**
+	 * Gets the data for `map`.
+	 *
+	 * @private
+	 * @param {Object} map The map to query.
+	 * @param {string} key The reference key.
+	 * @returns {*} Returns the map data.
+	 */
+	function getMapData(map, key) {
+	  var data = map.__data__;
+	  return isKeyable(key)
+	    ? data[typeof key == 'string' ? 'string' : 'hash']
+	    : data.map;
+	}
+
+	/**
+	 * Gets the property names, values, and compare flags of `object`.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @returns {Array} Returns the match data of `object`.
+	 */
+	function getMatchData(object) {
+	  var result = keys(object),
+	      length = result.length;
+
+	  while (length--) {
+	    var key = result[length],
+	        value = object[key];
+
+	    result[length] = [key, value, isStrictComparable(value)];
+	  }
+	  return result;
+	}
+
+	/**
+	 * Gets the native function at `key` of `object`.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @param {string} key The key of the method to get.
+	 * @returns {*} Returns the function if it's native, else `undefined`.
+	 */
+	function getNative(object, key) {
+	  var value = getValue(object, key);
+	  return baseIsNative(value) ? value : undefined;
+	}
+
+	/**
+	 * Gets the `toStringTag` of `value`.
+	 *
+	 * @private
+	 * @param {*} value The value to query.
+	 * @returns {string} Returns the `toStringTag`.
+	 */
+	var getTag = baseGetTag;
+
+	// Fallback for data views, maps, sets, and weak maps in IE 11,
+	// for data views in Edge < 14, and promises in Node.js.
+	if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+	    (Map && getTag(new Map) != mapTag) ||
+	    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+	    (Set && getTag(new Set) != setTag) ||
+	    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+	  getTag = function(value) {
+	    var result = objectToString.call(value),
+	        Ctor = result == objectTag ? value.constructor : undefined,
+	        ctorString = Ctor ? toSource(Ctor) : undefined;
+
+	    if (ctorString) {
+	      switch (ctorString) {
+	        case dataViewCtorString: return dataViewTag;
+	        case mapCtorString: return mapTag;
+	        case promiseCtorString: return promiseTag;
+	        case setCtorString: return setTag;
+	        case weakMapCtorString: return weakMapTag;
+	      }
+	    }
+	    return result;
+	  };
+	}
+
+	/**
+	 * Checks if `path` exists on `object`.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @param {Array|string} path The path to check.
+	 * @param {Function} hasFunc The function to check properties.
+	 * @returns {boolean} Returns `true` if `path` exists, else `false`.
+	 */
+	function hasPath(object, path, hasFunc) {
+	  path = isKey(path, object) ? [path] : castPath(path);
+
+	  var result,
+	      index = -1,
+	      length = path.length;
+
+	  while (++index < length) {
+	    var key = toKey(path[index]);
+	    if (!(result = object != null && hasFunc(object, key))) {
+	      break;
+	    }
+	    object = object[key];
+	  }
+	  if (result) {
+	    return result;
+	  }
+	  var length = object ? object.length : 0;
+	  return !!length && isLength(length) && isIndex(key, length) &&
+	    (isArray(object) || isArguments(object));
+	}
+
+	/**
+	 * Checks if `value` is a valid array-like index.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+	 * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+	 */
+	function isIndex(value, length) {
+	  length = length == null ? MAX_SAFE_INTEGER : length;
+	  return !!length &&
+	    (typeof value == 'number' || reIsUint.test(value)) &&
+	    (value > -1 && value % 1 == 0 && value < length);
+	}
+
+	/**
+	 * Checks if `value` is a property name and not a property path.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @param {Object} [object] The object to query keys on.
+	 * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+	 */
+	function isKey(value, object) {
+	  if (isArray(value)) {
+	    return false;
+	  }
+	  var type = typeof value;
+	  if (type == 'number' || type == 'symbol' || type == 'boolean' ||
+	      value == null || isSymbol(value)) {
+	    return true;
+	  }
+	  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
+	    (object != null && value in Object(object));
+	}
+
+	/**
+	 * Checks if `value` is suitable for use as unique object key.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+	 */
+	function isKeyable(value) {
+	  var type = typeof value;
+	  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
+	    ? (value !== '__proto__')
+	    : (value === null);
+	}
+
+	/**
+	 * Checks if `func` has its source masked.
+	 *
+	 * @private
+	 * @param {Function} func The function to check.
+	 * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+	 */
+	function isMasked(func) {
+	  return !!maskSrcKey && (maskSrcKey in func);
+	}
+
+	/**
+	 * Checks if `value` is likely a prototype object.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+	 */
+	function isPrototype(value) {
+	  var Ctor = value && value.constructor,
+	      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+	  return value === proto;
+	}
+
+	/**
+	 * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` if suitable for strict
+	 *  equality comparisons, else `false`.
+	 */
+	function isStrictComparable(value) {
+	  return value === value && !isObject(value);
+	}
+
+	/**
+	 * A specialized version of `matchesProperty` for source values suitable
+	 * for strict equality comparisons, i.e. `===`.
+	 *
+	 * @private
+	 * @param {string} key The key of the property to get.
+	 * @param {*} srcValue The value to match.
+	 * @returns {Function} Returns the new spec function.
+	 */
+	function matchesStrictComparable(key, srcValue) {
+	  return function(object) {
+	    if (object == null) {
+	      return false;
+	    }
+	    return object[key] === srcValue &&
+	      (srcValue !== undefined || (key in Object(object)));
+	  };
+	}
+
+	/**
+	 * Converts `string` to a property path array.
+	 *
+	 * @private
+	 * @param {string} string The string to convert.
+	 * @returns {Array} Returns the property path array.
+	 */
+	var stringToPath = memoize(function(string) {
+	  string = toString(string);
+
+	  var result = [];
+	  if (reLeadingDot.test(string)) {
+	    result.push('');
+	  }
+	  string.replace(rePropName, function(match, number, quote, string) {
+	    result.push(quote ? string.replace(reEscapeChar, '$1') : (number || match));
+	  });
+	  return result;
+	});
+
+	/**
+	 * Converts `value` to a string key if it's not a string or symbol.
+	 *
+	 * @private
+	 * @param {*} value The value to inspect.
+	 * @returns {string|symbol} Returns the key.
+	 */
+	function toKey(value) {
+	  if (typeof value == 'string' || isSymbol(value)) {
+	    return value;
+	  }
+	  var result = (value + '');
+	  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+	}
+
+	/**
+	 * Converts `func` to its source code.
+	 *
+	 * @private
+	 * @param {Function} func The function to process.
+	 * @returns {string} Returns the source code.
+	 */
+	function toSource(func) {
+	  if (func != null) {
+	    try {
+	      return funcToString.call(func);
+	    } catch (e) {}
+	    try {
+	      return (func + '');
+	    } catch (e) {}
+	  }
+	  return '';
+	}
+
+	/**
+	 * Reduces `collection` to a value which is the accumulated result of running
+	 * each element in `collection` thru `iteratee`, where each successive
+	 * invocation is supplied the return value of the previous. If `accumulator`
+	 * is not given, the first element of `collection` is used as the initial
+	 * value. The iteratee is invoked with four arguments:
+	 * (accumulator, value, index|key, collection).
+	 *
+	 * Many lodash methods are guarded to work as iteratees for methods like
+	 * `_.reduce`, `_.reduceRight`, and `_.transform`.
+	 *
+	 * The guarded methods are:
+	 * `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,
+	 * and `sortBy`
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Collection
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+	 * @param {*} [accumulator] The initial value.
+	 * @returns {*} Returns the accumulated value.
+	 * @see _.reduceRight
+	 * @example
+	 *
+	 * _.reduce([1, 2], function(sum, n) {
+	 *   return sum + n;
+	 * }, 0);
+	 * // => 3
+	 *
+	 * _.reduce({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {
+	 *   (result[value] || (result[value] = [])).push(key);
+	 *   return result;
+	 * }, {});
+	 * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
+	 */
+	function reduce(collection, iteratee, accumulator) {
+	  var func = isArray(collection) ? arrayReduce : baseReduce,
+	      initAccum = arguments.length < 3;
+
+	  return func(collection, baseIteratee(iteratee, 4), accumulator, initAccum, baseEach);
+	}
+
+	/**
+	 * Creates a function that memoizes the result of `func`. If `resolver` is
+	 * provided, it determines the cache key for storing the result based on the
+	 * arguments provided to the memoized function. By default, the first argument
+	 * provided to the memoized function is used as the map cache key. The `func`
+	 * is invoked with the `this` binding of the memoized function.
+	 *
+	 * **Note:** The cache is exposed as the `cache` property on the memoized
+	 * function. Its creation may be customized by replacing the `_.memoize.Cache`
+	 * constructor with one whose instances implement the
+	 * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+	 * method interface of `delete`, `get`, `has`, and `set`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Function
+	 * @param {Function} func The function to have its output memoized.
+	 * @param {Function} [resolver] The function to resolve the cache key.
+	 * @returns {Function} Returns the new memoized function.
+	 * @example
+	 *
+	 * var object = { 'a': 1, 'b': 2 };
+	 * var other = { 'c': 3, 'd': 4 };
+	 *
+	 * var values = _.memoize(_.values);
+	 * values(object);
+	 * // => [1, 2]
+	 *
+	 * values(other);
+	 * // => [3, 4]
+	 *
+	 * object.a = 2;
+	 * values(object);
+	 * // => [1, 2]
+	 *
+	 * // Modify the result cache.
+	 * values.cache.set(object, ['a', 'b']);
+	 * values(object);
+	 * // => ['a', 'b']
+	 *
+	 * // Replace `_.memoize.Cache`.
+	 * _.memoize.Cache = WeakMap;
+	 */
+	function memoize(func, resolver) {
+	  if (typeof func != 'function' || (resolver && typeof resolver != 'function')) {
+	    throw new TypeError(FUNC_ERROR_TEXT);
+	  }
+	  var memoized = function() {
+	    var args = arguments,
+	        key = resolver ? resolver.apply(this, args) : args[0],
+	        cache = memoized.cache;
+
+	    if (cache.has(key)) {
+	      return cache.get(key);
+	    }
+	    var result = func.apply(this, args);
+	    memoized.cache = cache.set(key, result);
+	    return result;
+	  };
+	  memoized.cache = new (memoize.Cache || MapCache);
+	  return memoized;
+	}
+
+	// Assign cache to `_.memoize`.
+	memoize.Cache = MapCache;
+
+	/**
+	 * Performs a
+	 * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+	 * comparison between two values to determine if they are equivalent.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to compare.
+	 * @param {*} other The other value to compare.
+	 * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+	 * @example
+	 *
+	 * var object = { 'a': 1 };
+	 * var other = { 'a': 1 };
+	 *
+	 * _.eq(object, object);
+	 * // => true
+	 *
+	 * _.eq(object, other);
+	 * // => false
+	 *
+	 * _.eq('a', 'a');
+	 * // => true
+	 *
+	 * _.eq('a', Object('a'));
+	 * // => false
+	 *
+	 * _.eq(NaN, NaN);
+	 * // => true
+	 */
+	function eq(value, other) {
+	  return value === other || (value !== value && other !== other);
+	}
+
+	/**
+	 * Checks if `value` is likely an `arguments` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isArguments(function() { return arguments; }());
+	 * // => true
+	 *
+	 * _.isArguments([1, 2, 3]);
+	 * // => false
+	 */
+	function isArguments(value) {
+	  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+	  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+	    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
+	}
+
+	/**
+	 * Checks if `value` is classified as an `Array` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+	 * @example
+	 *
+	 * _.isArray([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArray(document.body.children);
+	 * // => false
+	 *
+	 * _.isArray('abc');
+	 * // => false
+	 *
+	 * _.isArray(_.noop);
+	 * // => false
+	 */
+	var isArray = Array.isArray;
+
+	/**
+	 * Checks if `value` is array-like. A value is considered array-like if it's
+	 * not a function and has a `value.length` that's an integer greater than or
+	 * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+	 * @example
+	 *
+	 * _.isArrayLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArrayLike(document.body.children);
+	 * // => true
+	 *
+	 * _.isArrayLike('abc');
+	 * // => true
+	 *
+	 * _.isArrayLike(_.noop);
+	 * // => false
+	 */
+	function isArrayLike(value) {
+	  return value != null && isLength(value.length) && !isFunction(value);
+	}
+
+	/**
+	 * This method is like `_.isArrayLike` except that it also checks if `value`
+	 * is an object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an array-like object,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isArrayLikeObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArrayLikeObject(document.body.children);
+	 * // => true
+	 *
+	 * _.isArrayLikeObject('abc');
+	 * // => false
+	 *
+	 * _.isArrayLikeObject(_.noop);
+	 * // => false
+	 */
+	function isArrayLikeObject(value) {
+	  return isObjectLike(value) && isArrayLike(value);
+	}
+
+	/**
+	 * Checks if `value` is classified as a `Function` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+	 * @example
+	 *
+	 * _.isFunction(_);
+	 * // => true
+	 *
+	 * _.isFunction(/abc/);
+	 * // => false
+	 */
+	function isFunction(value) {
+	  // The use of `Object#toString` avoids issues with the `typeof` operator
+	  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+	  var tag = isObject(value) ? objectToString.call(value) : '';
+	  return tag == funcTag || tag == genTag;
+	}
+
+	/**
+	 * Checks if `value` is a valid array-like length.
+	 *
+	 * **Note:** This method is loosely based on
+	 * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+	 * @example
+	 *
+	 * _.isLength(3);
+	 * // => true
+	 *
+	 * _.isLength(Number.MIN_VALUE);
+	 * // => false
+	 *
+	 * _.isLength(Infinity);
+	 * // => false
+	 *
+	 * _.isLength('3');
+	 * // => false
+	 */
+	function isLength(value) {
+	  return typeof value == 'number' &&
+	    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+	}
+
+	/**
+	 * Checks if `value` is the
+	 * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+	 * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(_.noop);
+	 * // => true
+	 *
+	 * _.isObject(null);
+	 * // => false
+	 */
+	function isObject(value) {
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
+	}
+
+	/**
+	 * Checks if `value` is classified as a `Symbol` primitive or object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+	 * @example
+	 *
+	 * _.isSymbol(Symbol.iterator);
+	 * // => true
+	 *
+	 * _.isSymbol('abc');
+	 * // => false
+	 */
+	function isSymbol(value) {
+	  return typeof value == 'symbol' ||
+	    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+	}
+
+	/**
+	 * Checks if `value` is classified as a typed array.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 3.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+	 * @example
+	 *
+	 * _.isTypedArray(new Uint8Array);
+	 * // => true
+	 *
+	 * _.isTypedArray([]);
+	 * // => false
+	 */
+	var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+
+	/**
+	 * Converts `value` to a string. An empty string is returned for `null`
+	 * and `undefined` values. The sign of `-0` is preserved.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to process.
+	 * @returns {string} Returns the string.
+	 * @example
+	 *
+	 * _.toString(null);
+	 * // => ''
+	 *
+	 * _.toString(-0);
+	 * // => '-0'
+	 *
+	 * _.toString([1, 2, 3]);
+	 * // => '1,2,3'
+	 */
+	function toString(value) {
+	  return value == null ? '' : baseToString(value);
+	}
+
+	/**
+	 * Gets the value at `path` of `object`. If the resolved value is
+	 * `undefined`, the `defaultValue` is returned in its place.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 3.7.0
+	 * @category Object
+	 * @param {Object} object The object to query.
+	 * @param {Array|string} path The path of the property to get.
+	 * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+	 * @returns {*} Returns the resolved value.
+	 * @example
+	 *
+	 * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+	 *
+	 * _.get(object, 'a[0].b.c');
+	 * // => 3
+	 *
+	 * _.get(object, ['a', '0', 'b', 'c']);
+	 * // => 3
+	 *
+	 * _.get(object, 'a.b.c', 'default');
+	 * // => 'default'
+	 */
+	function get(object, path, defaultValue) {
+	  var result = object == null ? undefined : baseGet(object, path);
+	  return result === undefined ? defaultValue : result;
+	}
+
+	/**
+	 * Checks if `path` is a direct or inherited property of `object`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Object
+	 * @param {Object} object The object to query.
+	 * @param {Array|string} path The path to check.
+	 * @returns {boolean} Returns `true` if `path` exists, else `false`.
+	 * @example
+	 *
+	 * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+	 *
+	 * _.hasIn(object, 'a');
+	 * // => true
+	 *
+	 * _.hasIn(object, 'a.b');
+	 * // => true
+	 *
+	 * _.hasIn(object, ['a', 'b']);
+	 * // => true
+	 *
+	 * _.hasIn(object, 'b');
+	 * // => false
+	 */
+	function hasIn(object, path) {
+	  return object != null && hasPath(object, path, baseHasIn);
+	}
+
+	/**
+	 * Creates an array of the own enumerable property names of `object`.
+	 *
+	 * **Note:** Non-object values are coerced to objects. See the
+	 * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+	 * for more details.
+	 *
+	 * @static
+	 * @since 0.1.0
+	 * @memberOf _
+	 * @category Object
+	 * @param {Object} object The object to query.
+	 * @returns {Array} Returns the array of property names.
+	 * @example
+	 *
+	 * function Foo() {
+	 *   this.a = 1;
+	 *   this.b = 2;
+	 * }
+	 *
+	 * Foo.prototype.c = 3;
+	 *
+	 * _.keys(new Foo);
+	 * // => ['a', 'b'] (iteration order is not guaranteed)
+	 *
+	 * _.keys('hi');
+	 * // => ['0', '1']
+	 */
+	function keys(object) {
+	  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+	}
+
+	/**
+	 * This method returns the first argument it receives.
+	 *
+	 * @static
+	 * @since 0.1.0
+	 * @memberOf _
+	 * @category Util
+	 * @param {*} value Any value.
+	 * @returns {*} Returns `value`.
+	 * @example
+	 *
+	 * var object = { 'a': 1 };
+	 *
+	 * console.log(_.identity(object) === object);
+	 * // => true
+	 */
+	function identity(value) {
+	  return value;
+	}
+
+	/**
+	 * Creates a function that returns the value at `path` of a given object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 2.4.0
+	 * @category Util
+	 * @param {Array|string} path The path of the property to get.
+	 * @returns {Function} Returns the new accessor function.
+	 * @example
+	 *
+	 * var objects = [
+	 *   { 'a': { 'b': 2 } },
+	 *   { 'a': { 'b': 1 } }
+	 * ];
+	 *
+	 * _.map(objects, _.property('a.b'));
+	 * // => [2, 1]
+	 *
+	 * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
+	 * // => [1, 2]
+	 */
+	function property(path) {
+	  return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
+	}
+
+	module.exports = reduce;
+
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(8)(module)))
+
+/***/ },
+/* 23 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36101,7 +41508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 21 */
+/* 24 */
 /***/ function(module, exports) {
 
 	/*!
@@ -36291,7 +41698,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	this.parse = parseRecursion;
 
 /***/ },
-/* 22 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36302,7 +41709,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _querystring = __webpack_require__(23);
+	var _querystring = __webpack_require__(26);
 
 	var _querystring2 = _interopRequireDefault(_querystring);
 
@@ -36411,17 +41818,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Customers;
 
 /***/ },
-/* 23 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	exports.decode = exports.parse = __webpack_require__(24);
-	exports.encode = exports.stringify = __webpack_require__(25);
+	exports.decode = exports.parse = __webpack_require__(27);
+	exports.encode = exports.stringify = __webpack_require__(28);
 
 
 /***/ },
-/* 24 */
+/* 27 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -36507,7 +41914,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 25 */
+/* 28 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -36577,7 +41984,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 26 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36623,7 +42030,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Locations;
 
 /***/ },
-/* 27 */
+/* 30 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36666,7 +42073,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Addresses;
 
 /***/ },
-/* 28 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36712,7 +42119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Menus;
 
 /***/ },
-/* 29 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36775,7 +42182,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Orders;
 
 /***/ },
-/* 30 */
+/* 33 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36823,7 +42230,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Payments;
 
 /***/ },
-/* 31 */
+/* 34 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36861,11 +42268,11 @@ return /******/ (function(modules) { // webpackBootstrap
 ;
 
 /***/ }),
-/* 253 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var snakeCase = __webpack_require__(281);
-var trim      = __webpack_require__(282);
+var snakeCase = __webpack_require__(288);
+var trim      = __webpack_require__(289);
 
 function addGroup(resource, actionTypes, group) {
   var upperResource = snakeCase(resource).toUpperCase();
@@ -36903,13 +42310,13 @@ module.exports = function(resource) {
 
 
 /***/ }),
-/* 254 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.
 
 
-fetchAllergens=fetchAllergens;var _reduxCrud=__webpack_require__(21);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('allergens'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchAllergens(brandibbleRef){
+fetchAllergens=fetchAllergens;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('allergens'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchAllergens(brandibbleRef){
 return function(dispatch){
 dispatch(fetchStart());
 return brandibbleRef.allergens.all().
@@ -36919,20 +42326,20 @@ catch(function(errors){return dispatch(fetchError(errors));});
 }
 
 /***/ }),
-/* 255 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});var _allergens=__webpack_require__(254);Object.defineProperty(exports,'fetchAllergens',{enumerable:true,get:function get(){return _allergens.fetchAllergens;}});var _locations=__webpack_require__(256);Object.defineProperty(exports,'fetchLocations',{enumerable:true,get:function get(){return _locations.
+Object.defineProperty(exports,"__esModule",{value:true});var _allergens=__webpack_require__(256);Object.defineProperty(exports,'fetchAllergens',{enumerable:true,get:function get(){return _allergens.fetchAllergens;}});var _locations=__webpack_require__(258);Object.defineProperty(exports,'fetchLocations',{enumerable:true,get:function get(){return _locations.
 fetchLocations;}});Object.defineProperty(exports,'findLocationByAddress',{enumerable:true,get:function get(){return _locations.findLocationByAddress;}});
 
 /***/ }),
-/* 256 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.
 
 
-fetchLocations=fetchLocations;var _reduxCrud=__webpack_require__(21);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('locations'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchLocations(brandibble){var query=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};
+fetchLocations=fetchLocations;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('locations'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchLocations(brandibble){var query=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};
 return function(dispatch){
 dispatch(fetchStart());
 return brandibble.locations.index(query).
@@ -36942,15 +42349,71 @@ catch(function(_ref2){var errors=_ref2.errors;return dispatch(fetchError(errors)
 }
 
 /***/ }),
-/* 257 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});var _menus=__webpack_require__(258);Object.defineProperty(exports,'fetchMenu',{enumerable:true,get:function get(){return _menus.fetchMenu;}});var _order=__webpack_require__(29);Object.defineProperty(exports,'resolveOrder',{enumerable:true,get:function get(){return _order.
-resolveOrder;}});var _user=__webpack_require__(23);Object.defineProperty(exports,'authenticateUser',{enumerable:true,get:function get(){return _user.
-authenticateUser;}});Object.defineProperty(exports,'unauthenticateUser',{enumerable:true,get:function get(){return _user.unauthenticateUser;}});Object.defineProperty(exports,'validateUser',{enumerable:true,get:function get(){return _user.validateUser;}});
+Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+fetchAddresses=fetchAddresses;exports.
+
+
+
+
+
+
+
+
+createAddress=createAddress;exports.
+
+
+
+
+
+
+
+
+
+deleteAddress=deleteAddress;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('addresses'),createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError,deleteStart=_reduxCrud$actionCrea.deleteStart,deleteSuccess=_reduxCrud$actionCrea.deleteSuccess,deleteError=_reduxCrud$actionCrea.deleteError,fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchAddresses(brandibble){return function(dispatch){dispatch(fetchStart());return brandibble.addresses.all().then(function(_ref){var data=_ref.data;return dispatch(fetchSuccess(data));}).catch(function(_ref2){var errors=_ref2.errors;return dispatch(fetchError(errors));});};}function createAddress(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.addresses.create(data).then(function(_ref3){var data=_ref3.data;return dispatch(createSuccess(_extends({id:id},data[0])));}).catch(function(_ref4){var errors=_ref4.errors;return dispatch(createError(errors,{id:id,data:data}));});};}function deleteAddress(brandibble,id){
+return function(dispatch){
+dispatch(deleteStart({id:id}));
+return brandibble.addresses.delete(id).
+then(function(){return dispatch(deleteSuccess({id:id}));}).
+catch(function(_ref5){var errors=_ref5.errors;return dispatch(fetchError(errors,{id:id}));});
+};
+}
 
 /***/ }),
-/* 258 */
+/* 260 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:true});var _addresses=__webpack_require__(259);Object.defineProperty(exports,'fetchAddresses',{enumerable:true,get:function get(){return _addresses.fetchAddresses;}});Object.defineProperty(exports,'createAddress',{enumerable:true,get:function get(){return _addresses.createAddress;}});Object.defineProperty(exports,'deleteAddress',{enumerable:true,get:function get(){return _addresses.deleteAddress;}});var _menus=__webpack_require__(261);Object.defineProperty(exports,'fetchMenu',{enumerable:true,get:function get(){return _menus.
+fetchMenu;}});var _order=__webpack_require__(29);Object.defineProperty(exports,'resolveOrder',{enumerable:true,get:function get(){return _order.
+resolveOrder;}});var _payments=__webpack_require__(262);Object.defineProperty(exports,'fetchPayments',{enumerable:true,get:function get(){return _payments.
+fetchPayments;}});Object.defineProperty(exports,'createPayment',{enumerable:true,get:function get(){return _payments.createPayment;}});Object.defineProperty(exports,'deletePayment',{enumerable:true,get:function get(){return _payments.deletePayment;}});var _user=__webpack_require__(23);Object.defineProperty(exports,'authenticateUser',{enumerable:true,get:function get(){return _user.
+
+authenticateUser;}});Object.defineProperty(exports,'createUser',{enumerable:true,get:function get(){return _user.
+createUser;}});Object.defineProperty(exports,'fetchUser',{enumerable:true,get:function get(){return _user.
+fetchUser;}});Object.defineProperty(exports,'resetUserPassword',{enumerable:true,get:function get(){return _user.
+resetUserPassword;}});Object.defineProperty(exports,'resolveUser',{enumerable:true,get:function get(){return _user.
+resolveUser;}});Object.defineProperty(exports,'unauthenticateUser',{enumerable:true,get:function get(){return _user.
+unauthenticateUser;}});Object.defineProperty(exports,'updateUser',{enumerable:true,get:function get(){return _user.
+updateUser;}});Object.defineProperty(exports,'validateUser',{enumerable:true,get:function get(){return _user.
+validateUser;}});
+
+/***/ }),
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.
@@ -36961,7 +42424,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.
 
 
 
-fetchMenu=fetchMenu;var _moment=__webpack_require__(1);var _moment2=_interopRequireDefault(_moment);var _reduxCrud=__webpack_require__(21);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(272);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('menus'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;var NO_OP=function NO_OP(f){return f;};var NOW=new Date();function fetchMenu(brandibble,locationId){var serviceType=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'delivery';var requestedAt=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NOW;var success=arguments.length>4&&arguments[4]!==undefined?arguments[4]:NO_OP;var fail=arguments.length>5&&arguments[5]!==undefined?arguments[5]:NO_OP;
+fetchMenu=fetchMenu;var _moment=__webpack_require__(1);var _moment2=_interopRequireDefault(_moment);var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('menus'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;var NO_OP=function NO_OP(f){return f;};var NOW=new Date();function fetchMenu(brandibble,locationId){var serviceType=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'delivery';var requestedAt=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NOW;var success=arguments.length>4&&arguments[4]!==undefined?arguments[4]:NO_OP;var fail=arguments.length>5&&arguments[5]!==undefined?arguments[5]:NO_OP;
 var requestedAtFormatted=new Date((0,_moment2.default)(requestedAt));
 return function(dispatch){
 dispatch(fetchStart());
@@ -36980,7 +42443,53 @@ return fail(errors);
 }
 
 /***/ }),
-/* 259 */
+/* 262 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+fetchPayments=fetchPayments;exports.
+
+
+
+
+
+
+
+
+createPayment=createPayment;exports.
+
+
+
+
+
+
+
+
+
+deletePayment=deletePayment;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('payments'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError,deleteStart=_reduxCrud$actionCrea.deleteStart,deleteSuccess=_reduxCrud$actionCrea.deleteSuccess,deleteError=_reduxCrud$actionCrea.deleteError;function fetchPayments(brandibble){return function(dispatch){dispatch(fetchStart());return brandibble.payments.all().then(function(_ref){var data=_ref.data;return dispatch(fetchSuccess(data));}).catch(function(_ref2){var errors=_ref2.errors;return dispatch(fetchError(errors));});};}function createPayment(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.payments.create(data).then(function(_ref3){var data=_ref3.data;return dispatch(createSuccess(_extends({id:id},data[0])));}).catch(function(_ref4){var errors=_ref4.errors;return dispatch(createError(errors,{id:id,data:data}));});};}function deletePayment(brandibble,id){
+return function(dispatch){
+dispatch(deleteStart({id:id}));
+return brandibble.payments.delete(id).
+then(function(){return dispatch(deleteSuccess({id:id}));}).
+catch(function(_ref5){var errors=_ref5.errors;return dispatch(fetchError(errors,{id:id}));});
+};
+}
+
+/***/ }),
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=
@@ -36988,7 +42497,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
-allergens;var _reduxCrud=__webpack_require__(21);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.List.reducersFor('allergens');var initialState=[];function allergens(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+allergens;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.List.reducersFor('allergens');var initialState=[];function allergens(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 default:
 return baseReducers(state,action);}
@@ -36996,19 +42505,19 @@ return baseReducers(state,action);}
 }
 
 /***/ }),
-/* 260 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});var _redux=__webpack_require__(54);
-var _allergens=__webpack_require__(259);var _allergens2=_interopRequireDefault(_allergens);
-var _locations=__webpack_require__(261);var _locations2=_interopRequireDefault(_locations);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
+Object.defineProperty(exports,"__esModule",{value:true});var _redux=__webpack_require__(55);
+var _allergens=__webpack_require__(263);var _allergens2=_interopRequireDefault(_allergens);
+var _locations=__webpack_require__(265);var _locations2=_interopRequireDefault(_locations);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
 (0,_redux.combineReducers)({
 allergens:_allergens2.default,
 locations:_locations2.default});
 
 /***/ }),
-/* 261 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=
@@ -37016,7 +42525,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
-locations;var _reduxCrud=__webpack_require__(21);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.List.reducersFor('locations',{key:'location_id'});var initialState=[];function locations(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+locations;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.List.reducersFor('locations',{key:'location_id'});var initialState=[];function locations(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 default:
 return baseReducers(state,action);}
@@ -37024,7 +42533,7 @@ return baseReducers(state,action);}
 }
 
 /***/ }),
-/* 262 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
@@ -37082,7 +42591,48 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=un
 
 
 
-error;var _reduxCrud=__webpack_require__(21);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _setup=__webpack_require__(37);var _order=__webpack_require__(29);var _user=__webpack_require__(23);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('allergens'),ALLERGENS_FETCH_START=_reduxCrud$actionType.ALLERGENS_FETCH_START,ALLERGENS_FETCH_ERROR=_reduxCrud$actionType.ALLERGENS_FETCH_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('locations'),LOCATIONS_FETCH_START=_reduxCrud$actionType2.LOCATIONS_FETCH_START,LOCATIONS_FETCH_ERROR=_reduxCrud$actionType2.LOCATIONS_FETCH_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('menus'),MENUS_FETCH_START=_reduxCrud$actionType3.MENUS_FETCH_START,MENUS_FETCH_ERROR=_reduxCrud$actionType3.MENUS_FETCH_ERROR;var initialState=exports.initialState={setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,fetchLocations:null,fetchMenu:null,resolveOrder:null,authenticateUser:null,resolveUser:null,unauthenticateUser:null,validateUser:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _setup=__webpack_require__(37);var _order=__webpack_require__(29);var _user=__webpack_require__(23);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('addresses'),ADDRESSES_FETCH_START=_reduxCrud$actionType2.ADDRESSES_FETCH_START,ADDRESSES_FETCH_ERROR=_reduxCrud$actionType2.ADDRESSES_FETCH_ERROR,ADDRESSES_CREATE_START=_reduxCrud$actionType2.ADDRESSES_CREATE_START,ADDRESSES_CREATE_ERROR=_reduxCrud$actionType2.ADDRESSES_CREATE_ERROR,ADDRESSES_DELETE_START=_reduxCrud$actionType2.ADDRESSES_DELETE_START,ADDRESSES_DELETE_ERROR=_reduxCrud$actionType2.ADDRESSES_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('allergens'),ALLERGENS_FETCH_START=_reduxCrud$actionType3.ALLERGENS_FETCH_START,ALLERGENS_FETCH_ERROR=_reduxCrud$actionType3.ALLERGENS_FETCH_ERROR;var _reduxCrud$actionType4=_reduxCrud2.default.actionTypesFor('locations'),LOCATIONS_FETCH_START=_reduxCrud$actionType4.LOCATIONS_FETCH_START,LOCATIONS_FETCH_ERROR=_reduxCrud$actionType4.LOCATIONS_FETCH_ERROR;var _reduxCrud$actionType5=_reduxCrud2.default.actionTypesFor('menus'),MENUS_FETCH_START=_reduxCrud$actionType5.MENUS_FETCH_START,MENUS_FETCH_ERROR=_reduxCrud$actionType5.MENUS_FETCH_ERROR;var _reduxCrud$actionType6=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType6.PAYMENTS_FETCH_START,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType6.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType6.PAYMENTS_CREATE_START,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType6.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType6.PAYMENTS_DELETE_START,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType6.PAYMENTS_DELETE_ERROR;var initialState=exports.initialState={setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocations:null,fetchMenu:null,resolveOrder:null,fetchPayments:null,createPayment:null,deletePayment:null,authenticateUser:null,createUser:null,fetchUser:null,resetUserPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 
 case _setup.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:null});
@@ -37094,6 +42644,16 @@ case _setup.SETUP_BRANDIBBLE_REDUX+'_REJECTED':return _extends({},state,{setupBr
 
 case ALLERGENS_FETCH_START:return _extends({},state,{fetchAllergens:null});
 case ALLERGENS_FETCH_ERROR:return _extends({},state,{fetchAllergens:action.error});
+
+
+case ADDRESSES_FETCH_START:return _extends({},state,{fetchAddresses:null});
+case ADDRESSES_FETCH_ERROR:return _extends({},state,{fetchAddresses:action.error});
+
+case ADDRESSES_CREATE_START:return _extends({},state,{createAddress:null});
+case ADDRESSES_CREATE_ERROR:return _extends({},state,{createAddress:action.error});
+
+case ADDRESSES_DELETE_START:return _extends({},state,{deleteAddress:null});
+case ADDRESSES_DELETE_ERROR:return _extends({},state,{deleteAddress:action.error});
 
 
 case LOCATIONS_FETCH_START:return _extends({},state,{fetchLocations:null});
@@ -37108,6 +42668,16 @@ case _order.RESOLVE_ORDER+'_PENDING':return _extends({},state,{resolveOrder:null
 case _order.RESOLVE_ORDER+'_REJECTED':return _extends({},state,{resolveOrder:action.payload});
 
 
+case PAYMENTS_FETCH_START:return _extends({},state,{fetchPayments:null});
+case PAYMENTS_FETCH_ERROR:return _extends({},state,{fetchPayments:action.error});
+
+case PAYMENTS_CREATE_START:return _extends({},state,{createPayment:null});
+case PAYMENTS_CREATE_ERROR:return _extends({},state,{createPayment:action.error});
+
+case PAYMENTS_DELETE_START:return _extends({},state,{deletePayment:null});
+case PAYMENTS_DELETE_ERROR:return _extends({},state,{deletePayment:action.error});
+
+
 case _user.AUTHENTICATE_USER+'_PENDING':return _extends({},state,{authenticateUser:null});
 case _user.AUTHENTICATE_USER+'_REJECTED':return _extends({},state,{authenticateUser:action.payload});
 
@@ -37120,12 +42690,24 @@ case _user.UNAUTHENTICATE_USER+'_REJECTED':return _extends({},state,{unauthentic
 case _user.VALIDATE_USER+'_PENDING':return _extends({},state,{validateUser:null});
 case _user.VALIDATE_USER+'_REJECTED':return _extends({},state,{validateUser:action.payload});
 
+case _user.RESET_USER_PASSWORD+'_PENDING':return _extends({},state,{resetUserPassword:null});
+case _user.RESET_USER_PASSWORD+'_REJECTED':return _extends({},state,{resetUserPassword:action.payload});
+
+case _user.FETCH_USER+'_PENDING':return _extends({},state,{fetchUser:null});
+case _user.FETCH_USER+'_REJECTED':return _extends({},state,{fetchUser:action.payload});
+
+case USER_UPDATE_START:return _extends({},state,{updateUser:null});
+case USER_UPDATE_ERROR:return _extends({},state,{updateUser:action.error});
+
+case USER_CREATE_START:return _extends({},state,{createUser:null});
+case USER_CREATE_ERROR:return _extends({},state,{createUser:action.error});
+
 default:return state;}
 
 }
 
 /***/ }),
-/* 263 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=
@@ -37142,19 +42724,7 @@ return state;}
 }
 
 /***/ }),
-/* 264 */
-/***/ (function(module, exports, __webpack_require__) {
-
-Object.defineProperty(exports,"__esModule",{value:true});var _redux=__webpack_require__(54);
-var _menus=__webpack_require__(265);var _menus2=_interopRequireDefault(_menus);
-var _order=__webpack_require__(266);var _order2=_interopRequireDefault(_order);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
-
-(0,_redux.combineReducers)({
-menus:_menus2.default,
-order:_order2.default});
-
-/***/ }),
-/* 265 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=
@@ -37162,7 +42732,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
-allergens;var _reduxCrud=__webpack_require__(21);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('menus');var initialState={};function allergens(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+addresses;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('addresses',{key:'customer_address_id'});var initialState={};function addresses(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 default:
 return baseReducers(state,action);}
@@ -37170,23 +42740,114 @@ return baseReducers(state,action);}
 }
 
 /***/ }),
-/* 266 */
+/* 269 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:true});var _redux=__webpack_require__(55);
+var _addresses=__webpack_require__(268);var _addresses2=_interopRequireDefault(_addresses);
+var _menus=__webpack_require__(270);var _menus2=_interopRequireDefault(_menus);
+var _order=__webpack_require__(271);var _order2=_interopRequireDefault(_order);
+var _payments=__webpack_require__(272);var _payments2=_interopRequireDefault(_payments);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
+
+(0,_redux.combineReducers)({
+addresses:_addresses2.default,
+menus:_menus2.default,
+order:_order2.default,
+payments:_payments2.default});
+
+/***/ }),
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
-order;var _order=__webpack_require__(29);var initialState={};function order(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+allergens;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('menus');var initialState={};function allergens(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+switch(action.type){
+default:
+return baseReducers(state,action);}
+
+}
+
+/***/ }),
+/* 271 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+order;var _lodash=__webpack_require__(287);var _lodash2=_interopRequireDefault(_lodash);var _order=__webpack_require__(29);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState={ref:null,orderData:null,lineItemsData:null};function _buildFormattedLineItemsHash(ref){return(0,_lodash2.default)(ref.cart.lineItems,function(li){var uuid=li.uuid,quantity=li.quantity,madeFor=li.madeFor,instructions=li.instructions,product=li.product,operationMaps=li.operationMaps;return{uuid:uuid,quantity:quantity,madeFor:madeFor,instructions:instructions,isValid:li.isValid(),errors:li.errors(),productData:product,optionGroupMappings:operationMaps};});}function order(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _order.RESOLVE_ORDER+'_FULFILLED':
-return action.payload;
+case _order.SET_ORDER_LOCATION_ID+'_FULFILLED':
+case _order.ADD_LINE_ITEM+'_FULFILLED':
+case _order.SET_LINE_ITEM_QUANTITY+'_FULFILLED':
+case _order.REMOVE_LINE_ITEM+'_FULFILLED':
+case _order.ADD_OPTION_TO_LINE_ITEM+'_FULFILLED':
+case _order.REMOVE_OPTION_FROM_LINE_ITEM+'_FULFILLED':
+var ref=action.payload.order;
+return _extends({},
+state,{
+ref:ref,
+orderData:ref.format(),
+lineItemsData:_buildFormattedLineItemsHash(ref)});
+
 default:
 return state;}
 
 }
 
 /***/ }),
-/* 267 */
+/* 272 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:true});exports.default=
+
+
+
+
+addresses;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('payments',{key:'customer_card_id'});var initialState={};function addresses(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+switch(action.type){
+default:
+return baseReducers(state,action);}
+
+}
+
+/***/ }),
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
@@ -37239,7 +42900,52 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-status;var _setup=__webpack_require__(37);var _order=__webpack_require__(29);var _user=__webpack_require__(23);var _constants=__webpack_require__(271);var _reduxCrud=__webpack_require__(21);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('allergens'),ALLERGENS_FETCH_START=_reduxCrud$actionType.ALLERGENS_FETCH_START,ALLERGENS_FETCH_SUCCESS=_reduxCrud$actionType.ALLERGENS_FETCH_SUCCESS,ALLERGENS_FETCH_ERROR=_reduxCrud$actionType.ALLERGENS_FETCH_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('locations'),LOCATIONS_FETCH_START=_reduxCrud$actionType2.LOCATIONS_FETCH_START,LOCATIONS_FETCH_SUCCESS=_reduxCrud$actionType2.LOCATIONS_FETCH_SUCCESS,LOCATIONS_FETCH_ERROR=_reduxCrud$actionType2.LOCATIONS_FETCH_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('menus'),MENUS_FETCH_START=_reduxCrud$actionType3.MENUS_FETCH_START,MENUS_FETCH_SUCCESS=_reduxCrud$actionType3.MENUS_FETCH_SUCCESS,MENUS_FETCH_ERROR=_reduxCrud$actionType3.MENUS_FETCH_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,fetchAllergens:IDLE,fetchLocations:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,authenticateUser:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,validateUser:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+status;var _setup=__webpack_require__(37);var _order=__webpack_require__(29);var _user=__webpack_require__(23);var _constants=__webpack_require__(277);var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('addresses'),ADDRESSES_FETCH_START=_reduxCrud$actionType.ADDRESSES_FETCH_START,ADDRESSES_FETCH_SUCCESS=_reduxCrud$actionType.ADDRESSES_FETCH_SUCCESS,ADDRESSES_FETCH_ERROR=_reduxCrud$actionType.ADDRESSES_FETCH_ERROR,ADDRESSES_CREATE_START=_reduxCrud$actionType.ADDRESSES_CREATE_START,ADDRESSES_CREATE_SUCCESS=_reduxCrud$actionType.ADDRESSES_CREATE_SUCCESS,ADDRESSES_CREATE_ERROR=_reduxCrud$actionType.ADDRESSES_CREATE_ERROR,ADDRESSES_DELETE_START=_reduxCrud$actionType.ADDRESSES_DELETE_START,ADDRESSES_DELETE_SUCCESS=_reduxCrud$actionType.ADDRESSES_DELETE_SUCCESS,ADDRESSES_DELETE_ERROR=_reduxCrud$actionType.ADDRESSES_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('allergens'),ALLERGENS_FETCH_START=_reduxCrud$actionType2.ALLERGENS_FETCH_START,ALLERGENS_FETCH_SUCCESS=_reduxCrud$actionType2.ALLERGENS_FETCH_SUCCESS,ALLERGENS_FETCH_ERROR=_reduxCrud$actionType2.ALLERGENS_FETCH_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('locations'),LOCATIONS_FETCH_START=_reduxCrud$actionType3.LOCATIONS_FETCH_START,LOCATIONS_FETCH_SUCCESS=_reduxCrud$actionType3.LOCATIONS_FETCH_SUCCESS,LOCATIONS_FETCH_ERROR=_reduxCrud$actionType3.LOCATIONS_FETCH_ERROR;var _reduxCrud$actionType4=_reduxCrud2.default.actionTypesFor('menus'),MENUS_FETCH_START=_reduxCrud$actionType4.MENUS_FETCH_START,MENUS_FETCH_SUCCESS=_reduxCrud$actionType4.MENUS_FETCH_SUCCESS,MENUS_FETCH_ERROR=_reduxCrud$actionType4.MENUS_FETCH_ERROR;var _reduxCrud$actionType5=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType5.PAYMENTS_FETCH_START,PAYMENTS_FETCH_SUCCESS=_reduxCrud$actionType5.PAYMENTS_FETCH_SUCCESS,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType5.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType5.PAYMENTS_CREATE_START,PAYMENTS_CREATE_SUCCESS=_reduxCrud$actionType5.PAYMENTS_CREATE_SUCCESS,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType5.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType5.PAYMENTS_DELETE_START,PAYMENTS_DELETE_SUCCESS=_reduxCrud$actionType5.PAYMENTS_DELETE_SUCCESS,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType5.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType6=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType6.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType6.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType6.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType6.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType6.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType6.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,fetchLocations:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,fetchPayments:IDLE,createPayment:IDLE,deletePayment:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _setup.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:PENDING});
 case _setup.SETUP_BRANDIBBLE+'_FULFILLED':return _extends({},state,{setupBrandibble:FULFILLED});
@@ -37253,6 +42959,18 @@ case ALLERGENS_FETCH_START:return _extends({},state,{fetchAllergens:PENDING});
 case ALLERGENS_FETCH_SUCCESS:return _extends({},state,{fetchAllergens:FULFILLED});
 case ALLERGENS_FETCH_ERROR:return _extends({},state,{fetchAllergens:REJECTED});
 
+case ADDRESSES_FETCH_START:return _extends({},state,{fetchAddresses:PENDING});
+case ADDRESSES_FETCH_SUCCESS:return _extends({},state,{fetchAddresses:FULFILLED});
+case ADDRESSES_FETCH_ERROR:return _extends({},state,{fetchAddresses:REJECTED});
+
+case ADDRESSES_CREATE_START:return _extends({},state,{createAddress:PENDING});
+case ADDRESSES_CREATE_SUCCESS:return _extends({},state,{createAddress:FULFILLED});
+case ADDRESSES_CREATE_ERROR:return _extends({},state,{createAddress:REJECTED});
+
+case ADDRESSES_DELETE_START:return _extends({},state,{deleteAddress:PENDING});
+case ADDRESSES_DELETE_SUCCESS:return _extends({},state,{deleteAddress:FULFILLED});
+case ADDRESSES_DELETE_ERROR:return _extends({},state,{deleteAddress:REJECTED});
+
 case LOCATIONS_FETCH_START:return _extends({},state,{fetchLocations:PENDING});
 case LOCATIONS_FETCH_SUCCESS:return _extends({},state,{fetchLocations:FULFILLED});
 case LOCATIONS_FETCH_ERROR:return _extends({},state,{fetchLocations:REJECTED});
@@ -37264,6 +42982,18 @@ case MENUS_FETCH_ERROR:return _extends({},state,{fetchMenu:REJECTED});
 case _order.RESOLVE_ORDER+'_PENDING':return _extends({},state,{resolveOrder:PENDING});
 case _order.RESOLVE_ORDER+'_FULFILLED':return _extends({},state,{resolveOrder:FULFILLED});
 case _order.RESOLVE_ORDER+'_REJECTED':return _extends({},state,{resolveOrder:REJECTED});
+
+case PAYMENTS_FETCH_START:return _extends({},state,{fetchPayments:PENDING});
+case PAYMENTS_FETCH_SUCCESS:return _extends({},state,{fetchPayments:FULFILLED});
+case PAYMENTS_FETCH_ERROR:return _extends({},state,{fetchPayments:REJECTED});
+
+case PAYMENTS_CREATE_START:return _extends({},state,{createPayment:PENDING});
+case PAYMENTS_CREATE_SUCCESS:return _extends({},state,{createPayment:FULFILLED});
+case PAYMENTS_CREATE_ERROR:return _extends({},state,{createPayment:REJECTED});
+
+case PAYMENTS_DELETE_START:return _extends({},state,{deletePayment:PENDING});
+case PAYMENTS_DELETE_SUCCESS:return _extends({},state,{deletePayment:FULFILLED});
+case PAYMENTS_DELETE_ERROR:return _extends({},state,{deletePayment:REJECTED});
 
 case _user.VALIDATE_USER+'_PENDING':return _extends({},state,{validateUser:PENDING});
 case _user.VALIDATE_USER+'_FULFILLED':return _extends({},state,{validateUser:FULFILLED});
@@ -37281,12 +43011,28 @@ case _user.UNAUTHENTICATE_USER+'_PENDING':return _extends({},state,{unauthentica
 case _user.UNAUTHENTICATE_USER+'_FULFILLED':return _extends({},state,{unauthenticateUser:FULFILLED});
 case _user.UNAUTHENTICATE_USER+'_REJECTED':return _extends({},state,{unauthenticateUser:REJECTED});
 
+case _user.RESET_USER_PASSWORD+'_PENDING':return _extends({},state,{resetUserPassword:PENDING});
+case _user.RESET_USER_PASSWORD+'_FULFILLED':return _extends({},state,{resetUserPassword:FULFILLED});
+case _user.RESET_USER_PASSWORD+'_REJECTED':return _extends({},state,{resetUserPassword:REJECTED});
+
+case _user.FETCH_USER+'_PENDING':return _extends({},state,{fetchUser:PENDING});
+case _user.FETCH_USER+'_FULFILLED':return _extends({},state,{fetchUser:FULFILLED});
+case _user.FETCH_USER+'_REJECTED':return _extends({},state,{fetchUser:REJECTED});
+
+case USER_UPDATE_START:return _extends({},state,{updateUser:PENDING});
+case USER_UPDATE_SUCCESS:return _extends({},state,{updateUser:FULFILLED});
+case USER_UPDATE_ERROR:return _extends({},state,{updateUser:REJECTED});
+
+case USER_CREATE_START:return _extends({},state,{createUser:PENDING});
+case USER_CREATE_SUCCESS:return _extends({},state,{createUser:FULFILLED});
+case USER_CREATE_ERROR:return _extends({},state,{createUser:REJECTED});
+
 default:return state;}
 
 }
 
 /***/ }),
-/* 268 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=
@@ -37296,11 +43042,22 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
-attributes;var _user=__webpack_require__(23);var initialState={};function attributes(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+
+
+
+
+
+attributes;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _user=__webpack_require__(23);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_CREATE_SUCCESS=_reduxCrud$actionType.USER_CREATE_SUCCESS,USER_UPDATE_SUCCESS=_reduxCrud$actionType.USER_UPDATE_SUCCESS;var initialState={};function attributes(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _user.RESOLVE_USER+'_FULFILLED':
 case _user.AUTHENTICATE_USER+'_FULFILLED':
+case _user.FETCH_USER+'_FULFILLED':
 return action.payload;
+case USER_CREATE_SUCCESS:
+case USER_UPDATE_SUCCESS:
+return action.record;
 case _user.UNAUTHENTICATE_USER+'_FULFILLED':
 return initialState;
 default:
@@ -37309,19 +43066,19 @@ return state;}
 }
 
 /***/ }),
-/* 269 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});var _redux=__webpack_require__(54);
-var _attributes=__webpack_require__(268);var _attributes2=_interopRequireDefault(_attributes);
-var _validations=__webpack_require__(270);var _validations2=_interopRequireDefault(_validations);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
+Object.defineProperty(exports,"__esModule",{value:true});var _redux=__webpack_require__(55);
+var _attributes=__webpack_require__(274);var _attributes2=_interopRequireDefault(_attributes);
+var _validations=__webpack_require__(276);var _validations2=_interopRequireDefault(_validations);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
 (0,_redux.combineReducers)({
 attributes:_attributes2.default,
 validations:_validations2.default});
 
 /***/ }),
-/* 270 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=
@@ -37337,7 +43094,7 @@ return state;}
 }
 
 /***/ }),
-/* 271 */
+/* 277 */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var Status=exports.Status={
@@ -37347,24 +43104,16 @@ FULFILLED:'FULFILLED',
 REJECTED:'REJECTED'};
 
 /***/ }),
-/* 272 */
+/* 278 */
 /***/ (function(module, exports) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.default=function(){
-var d=new Date().getTime();
-if(window.performance&&typeof window.performance.now==='function'){
-d+=performance.now();
-}
-var uuid='xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){
-var r=(d+Math.random()*16)%16|0;
-d=Math.floor(d/16);
-return(c=='x'?r:r&0x3|0x8).toString(16);
-});
-return uuid;
+Object.defineProperty(exports,"__esModule",{value:true});exports.default=BrandibbleReduxException;function BrandibbleReduxException(action,message){
+this.message='brandibble-redux: *'+action+'* '+(message||'An unknown exception was triggered.');
+this.stack=new Error().stack;
 };
 
 /***/ }),
-/* 273 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37422,7 +43171,7 @@ module.exports = invariant;
 
 
 /***/ }),
-/* 274 */
+/* 280 */
 /***/ (function(module, exports) {
 
 /**
@@ -37450,7 +43199,7 @@ module.exports = baseToString;
 
 
 /***/ }),
-/* 275 */
+/* 281 */
 /***/ (function(module, exports) {
 
 /**
@@ -37483,7 +43232,7 @@ module.exports = charsLeftIndex;
 
 
 /***/ }),
-/* 276 */
+/* 282 */
 /***/ (function(module, exports) {
 
 /**
@@ -37515,7 +43264,7 @@ module.exports = charsRightIndex;
 
 
 /***/ }),
-/* 277 */
+/* 283 */
 /***/ (function(module, exports) {
 
 /**
@@ -37653,7 +43402,7 @@ module.exports = isIterateeCall;
 
 
 /***/ }),
-/* 278 */
+/* 284 */
 /***/ (function(module, exports) {
 
 /**
@@ -37698,7 +43447,7 @@ module.exports = trimmedLeftIndex;
 
 
 /***/ }),
-/* 279 */
+/* 285 */
 /***/ (function(module, exports) {
 
 /**
@@ -37742,7 +43491,7 @@ module.exports = trimmedRightIndex;
 
 
 /***/ }),
-/* 280 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -37753,7 +43502,7 @@ module.exports = trimmedRightIndex;
  * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <https://lodash.com/license>
  */
-var root = __webpack_require__(72);
+var root = __webpack_require__(74);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -37931,7 +43680,2380 @@ module.exports = deburr;
 
 
 /***/ }),
-/* 281 */
+/* 287 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, module) {/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the size to enable large array optimizations. */
+var LARGE_ARRAY_SIZE = 200;
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/** Used to compose bitmasks for comparison styles. */
+var UNORDERED_COMPARE_FLAG = 1,
+    PARTIAL_COMPARE_FLAG = 2;
+
+/** Used as references for various `Number` constants. */
+var INFINITY = 1 / 0,
+    MAX_SAFE_INTEGER = 9007199254740991;
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    objectTag = '[object Object]',
+    promiseTag = '[object Promise]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    symbolTag = '[object Symbol]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    dataViewTag = '[object DataView]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/** Used to match property names within property paths. */
+var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+    reIsPlainProp = /^\w*$/,
+    reLeadingDot = /^\./,
+    rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to match backslashes in property paths. */
+var reEscapeChar = /\\(\\)?/g;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/** Used to identify `toStringTag` values of typed arrays. */
+var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] =
+typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+typedArrayTags[setTag] = typedArrayTags[stringTag] =
+typedArrayTags[weakMapTag] = false;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Detect free variable `exports`. */
+var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    return freeProcess && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+/* Node.js helper references. */
+var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+
+/**
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */
+function arrayMap(array, iteratee) {
+  var index = -1,
+      length = array ? array.length : 0,
+      result = Array(length);
+
+  while (++index < length) {
+    result[index] = iteratee(array[index], index, array);
+  }
+  return result;
+}
+
+/**
+ * A specialized version of `_.some` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {boolean} Returns `true` if any element passes the predicate check,
+ *  else `false`.
+ */
+function arraySome(array, predicate) {
+  var index = -1,
+      length = array ? array.length : 0;
+
+  while (++index < length) {
+    if (predicate(array[index], index, array)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * The base implementation of `_.property` without support for deep paths.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */
+function baseProperty(key) {
+  return function(object) {
+    return object == null ? undefined : object[key];
+  };
+}
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+/**
+ * Checks if `value` is a host object in IE < 9.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+ */
+function isHostObject(value) {
+  // Many host objects are `Object` objects that can coerce to strings
+  // despite having improperly defined `toString` methods.
+  var result = false;
+  if (value != null && typeof value.toString != 'function') {
+    try {
+      result = !!(value + '');
+    } catch (e) {}
+  }
+  return result;
+}
+
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */
+function mapToArray(map) {
+  var index = -1,
+      result = Array(map.size);
+
+  map.forEach(function(value, key) {
+    result[++index] = [key, value];
+  });
+  return result;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */
+function setToArray(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = value;
+  });
+  return result;
+}
+
+/** Used for built-in method references. */
+var arrayProto = Array.prototype,
+    funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = root['__core-js_shared__'];
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = (function() {
+  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+  return uid ? ('Symbol(src)_1.' + uid) : '';
+}());
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' +
+  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+);
+
+/** Built-in value references. */
+var Symbol = root.Symbol,
+    Uint8Array = root.Uint8Array,
+    propertyIsEnumerable = objectProto.propertyIsEnumerable,
+    splice = arrayProto.splice;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeKeys = overArg(Object.keys, Object);
+
+/* Built-in method references that are verified to be native. */
+var DataView = getNative(root, 'DataView'),
+    Map = getNative(root, 'Map'),
+    Promise = getNative(root, 'Promise'),
+    Set = getNative(root, 'Set'),
+    WeakMap = getNative(root, 'WeakMap'),
+    nativeCreate = getNative(Object, 'create');
+
+/** Used to detect maps, sets, and weakmaps. */
+var dataViewCtorString = toSource(DataView),
+    mapCtorString = toSource(Map),
+    promiseCtorString = toSource(Promise),
+    setCtorString = toSource(Set),
+    weakMapCtorString = toSource(WeakMap);
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol ? Symbol.prototype : undefined,
+    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined,
+    symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Hash(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */
+function hashClear() {
+  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+}
+
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function hashDelete(key) {
+  return this.has(key) && delete this.__data__[key];
+}
+
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function hashGet(key) {
+  var data = this.__data__;
+  if (nativeCreate) {
+    var result = data[key];
+    return result === HASH_UNDEFINED ? undefined : result;
+  }
+  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function hashHas(key) {
+  var data = this.__data__;
+  return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+}
+
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */
+function hashSet(key, value) {
+  var data = this.__data__;
+  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+  return this;
+}
+
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function ListCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */
+function listCacheClear() {
+  this.__data__ = [];
+}
+
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function listCacheDelete(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    return false;
+  }
+  var lastIndex = data.length - 1;
+  if (index == lastIndex) {
+    data.pop();
+  } else {
+    splice.call(data, index, 1);
+  }
+  return true;
+}
+
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function listCacheGet(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  return index < 0 ? undefined : data[index][1];
+}
+
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function listCacheHas(key) {
+  return assocIndexOf(this.__data__, key) > -1;
+}
+
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */
+function listCacheSet(key, value) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    data.push([key, value]);
+  } else {
+    data[index][1] = value;
+  }
+  return this;
+}
+
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function MapCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */
+function mapCacheClear() {
+  this.__data__ = {
+    'hash': new Hash,
+    'map': new (Map || ListCache),
+    'string': new Hash
+  };
+}
+
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function mapCacheDelete(key) {
+  return getMapData(this, key)['delete'](key);
+}
+
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapCacheGet(key) {
+  return getMapData(this, key).get(key);
+}
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function mapCacheHas(key) {
+  return getMapData(this, key).has(key);
+}
+
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */
+function mapCacheSet(key, value) {
+  getMapData(this, key).set(key, value);
+  return this;
+}
+
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+
+/**
+ *
+ * Creates an array cache object to store unique values.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
+ */
+function SetCache(values) {
+  var index = -1,
+      length = values ? values.length : 0;
+
+  this.__data__ = new MapCache;
+  while (++index < length) {
+    this.add(values[index]);
+  }
+}
+
+/**
+ * Adds `value` to the array cache.
+ *
+ * @private
+ * @name add
+ * @memberOf SetCache
+ * @alias push
+ * @param {*} value The value to cache.
+ * @returns {Object} Returns the cache instance.
+ */
+function setCacheAdd(value) {
+  this.__data__.set(value, HASH_UNDEFINED);
+  return this;
+}
+
+/**
+ * Checks if `value` is in the array cache.
+ *
+ * @private
+ * @name has
+ * @memberOf SetCache
+ * @param {*} value The value to search for.
+ * @returns {number} Returns `true` if `value` is found, else `false`.
+ */
+function setCacheHas(value) {
+  return this.__data__.has(value);
+}
+
+// Add methods to `SetCache`.
+SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+SetCache.prototype.has = setCacheHas;
+
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Stack(entries) {
+  this.__data__ = new ListCache(entries);
+}
+
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */
+function stackClear() {
+  this.__data__ = new ListCache;
+}
+
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function stackDelete(key) {
+  return this.__data__['delete'](key);
+}
+
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function stackGet(key) {
+  return this.__data__.get(key);
+}
+
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function stackHas(key) {
+  return this.__data__.has(key);
+}
+
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */
+function stackSet(key, value) {
+  var cache = this.__data__;
+  if (cache instanceof ListCache) {
+    var pairs = cache.__data__;
+    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+      pairs.push([key, value]);
+      return this;
+    }
+    cache = this.__data__ = new MapCache(pairs);
+  }
+  cache.set(key, value);
+  return this;
+}
+
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  // Safari 9 makes `arguments.length` enumerable in strict mode.
+  var result = (isArray(value) || isArguments(value))
+    ? baseTimes(value.length, String)
+    : [];
+
+  var length = result.length,
+      skipIndexes = !!length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty.call(value, key)) &&
+        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+/**
+ * The base implementation of `_.forEach` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array|Object} Returns `collection`.
+ */
+var baseEach = createBaseEach(baseForOwn);
+
+/**
+ * The base implementation of `baseForOwn` which iterates over `object`
+ * properties returned by `keysFunc` and invokes `iteratee` for each property.
+ * Iteratee functions may exit iteration early by explicitly returning `false`.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @returns {Object} Returns `object`.
+ */
+var baseFor = createBaseFor();
+
+/**
+ * The base implementation of `_.forOwn` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Object} Returns `object`.
+ */
+function baseForOwn(object, iteratee) {
+  return object && baseFor(object, iteratee, keys);
+}
+
+/**
+ * The base implementation of `_.get` without support for default values.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @returns {*} Returns the resolved value.
+ */
+function baseGet(object, path) {
+  path = isKey(path, object) ? [path] : castPath(path);
+
+  var index = 0,
+      length = path.length;
+
+  while (object != null && index < length) {
+    object = object[toKey(path[index++])];
+  }
+  return (index && index == length) ? object : undefined;
+}
+
+/**
+ * The base implementation of `getTag`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  return objectToString.call(value);
+}
+
+/**
+ * The base implementation of `_.hasIn` without support for deep paths.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */
+function baseHasIn(object, key) {
+  return object != null && key in Object(object);
+}
+
+/**
+ * The base implementation of `_.isEqual` which supports partial comparisons
+ * and tracks traversed objects.
+ *
+ * @private
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {boolean} [bitmask] The bitmask of comparison flags.
+ *  The bitmask may be composed of the following flags:
+ *     1 - Unordered comparison
+ *     2 - Partial comparison
+ * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ */
+function baseIsEqual(value, other, customizer, bitmask, stack) {
+  if (value === other) {
+    return true;
+  }
+  if (value == null || other == null || (!isObject(value) && !isObjectLike(other))) {
+    return value !== value && other !== other;
+  }
+  return baseIsEqualDeep(value, other, baseIsEqual, customizer, bitmask, stack);
+}
+
+/**
+ * A specialized version of `baseIsEqual` for arrays and objects which performs
+ * deep comparisons and tracks traversed objects enabling objects with circular
+ * references to be compared.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {number} [bitmask] The bitmask of comparison flags. See `baseIsEqual`
+ *  for more details.
+ * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function baseIsEqualDeep(object, other, equalFunc, customizer, bitmask, stack) {
+  var objIsArr = isArray(object),
+      othIsArr = isArray(other),
+      objTag = arrayTag,
+      othTag = arrayTag;
+
+  if (!objIsArr) {
+    objTag = getTag(object);
+    objTag = objTag == argsTag ? objectTag : objTag;
+  }
+  if (!othIsArr) {
+    othTag = getTag(other);
+    othTag = othTag == argsTag ? objectTag : othTag;
+  }
+  var objIsObj = objTag == objectTag && !isHostObject(object),
+      othIsObj = othTag == objectTag && !isHostObject(other),
+      isSameTag = objTag == othTag;
+
+  if (isSameTag && !objIsObj) {
+    stack || (stack = new Stack);
+    return (objIsArr || isTypedArray(object))
+      ? equalArrays(object, other, equalFunc, customizer, bitmask, stack)
+      : equalByTag(object, other, objTag, equalFunc, customizer, bitmask, stack);
+  }
+  if (!(bitmask & PARTIAL_COMPARE_FLAG)) {
+    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
+
+    if (objIsWrapped || othIsWrapped) {
+      var objUnwrapped = objIsWrapped ? object.value() : object,
+          othUnwrapped = othIsWrapped ? other.value() : other;
+
+      stack || (stack = new Stack);
+      return equalFunc(objUnwrapped, othUnwrapped, customizer, bitmask, stack);
+    }
+  }
+  if (!isSameTag) {
+    return false;
+  }
+  stack || (stack = new Stack);
+  return equalObjects(object, other, equalFunc, customizer, bitmask, stack);
+}
+
+/**
+ * The base implementation of `_.isMatch` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to inspect.
+ * @param {Object} source The object of property values to match.
+ * @param {Array} matchData The property names, values, and compare flags to match.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @returns {boolean} Returns `true` if `object` is a match, else `false`.
+ */
+function baseIsMatch(object, source, matchData, customizer) {
+  var index = matchData.length,
+      length = index,
+      noCustomizer = !customizer;
+
+  if (object == null) {
+    return !length;
+  }
+  object = Object(object);
+  while (index--) {
+    var data = matchData[index];
+    if ((noCustomizer && data[2])
+          ? data[1] !== object[data[0]]
+          : !(data[0] in object)
+        ) {
+      return false;
+    }
+  }
+  while (++index < length) {
+    data = matchData[index];
+    var key = data[0],
+        objValue = object[key],
+        srcValue = data[1];
+
+    if (noCustomizer && data[2]) {
+      if (objValue === undefined && !(key in object)) {
+        return false;
+      }
+    } else {
+      var stack = new Stack;
+      if (customizer) {
+        var result = customizer(objValue, srcValue, key, object, source, stack);
+      }
+      if (!(result === undefined
+            ? baseIsEqual(srcValue, objValue, customizer, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG, stack)
+            : result
+          )) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!isObject(value) || isMasked(value)) {
+    return false;
+  }
+  var pattern = (isFunction(value) || isHostObject(value)) ? reIsNative : reIsHostCtor;
+  return pattern.test(toSource(value));
+}
+
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */
+function baseIsTypedArray(value) {
+  return isObjectLike(value) &&
+    isLength(value.length) && !!typedArrayTags[objectToString.call(value)];
+}
+
+/**
+ * The base implementation of `_.iteratee`.
+ *
+ * @private
+ * @param {*} [value=_.identity] The value to convert to an iteratee.
+ * @returns {Function} Returns the iteratee.
+ */
+function baseIteratee(value) {
+  // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.
+  // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.
+  if (typeof value == 'function') {
+    return value;
+  }
+  if (value == null) {
+    return identity;
+  }
+  if (typeof value == 'object') {
+    return isArray(value)
+      ? baseMatchesProperty(value[0], value[1])
+      : baseMatches(value);
+  }
+  return property(value);
+}
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!isPrototype(object)) {
+    return nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `_.map` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */
+function baseMap(collection, iteratee) {
+  var index = -1,
+      result = isArrayLike(collection) ? Array(collection.length) : [];
+
+  baseEach(collection, function(value, key, collection) {
+    result[++index] = iteratee(value, key, collection);
+  });
+  return result;
+}
+
+/**
+ * The base implementation of `_.matches` which doesn't clone `source`.
+ *
+ * @private
+ * @param {Object} source The object of property values to match.
+ * @returns {Function} Returns the new spec function.
+ */
+function baseMatches(source) {
+  var matchData = getMatchData(source);
+  if (matchData.length == 1 && matchData[0][2]) {
+    return matchesStrictComparable(matchData[0][0], matchData[0][1]);
+  }
+  return function(object) {
+    return object === source || baseIsMatch(object, source, matchData);
+  };
+}
+
+/**
+ * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
+ *
+ * @private
+ * @param {string} path The path of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */
+function baseMatchesProperty(path, srcValue) {
+  if (isKey(path) && isStrictComparable(srcValue)) {
+    return matchesStrictComparable(toKey(path), srcValue);
+  }
+  return function(object) {
+    var objValue = get(object, path);
+    return (objValue === undefined && objValue === srcValue)
+      ? hasIn(object, path)
+      : baseIsEqual(srcValue, objValue, undefined, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG);
+  };
+}
+
+/**
+ * A specialized version of `baseProperty` which supports deep paths.
+ *
+ * @private
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */
+function basePropertyDeep(path) {
+  return function(object) {
+    return baseGet(object, path);
+  };
+}
+
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */
+function baseToString(value) {
+  // Exit early for strings to avoid a performance hit in some environments.
+  if (typeof value == 'string') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return symbolToString ? symbolToString.call(value) : '';
+  }
+  var result = (value + '');
+  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+}
+
+/**
+ * Casts `value` to a path array if it's not one.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {Array} Returns the cast property path array.
+ */
+function castPath(value) {
+  return isArray(value) ? value : stringToPath(value);
+}
+
+/**
+ * Creates a `baseEach` or `baseEachRight` function.
+ *
+ * @private
+ * @param {Function} eachFunc The function to iterate over a collection.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */
+function createBaseEach(eachFunc, fromRight) {
+  return function(collection, iteratee) {
+    if (collection == null) {
+      return collection;
+    }
+    if (!isArrayLike(collection)) {
+      return eachFunc(collection, iteratee);
+    }
+    var length = collection.length,
+        index = fromRight ? length : -1,
+        iterable = Object(collection);
+
+    while ((fromRight ? index-- : ++index < length)) {
+      if (iteratee(iterable[index], index, iterable) === false) {
+        break;
+      }
+    }
+    return collection;
+  };
+}
+
+/**
+ * Creates a base function for methods like `_.forIn` and `_.forOwn`.
+ *
+ * @private
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */
+function createBaseFor(fromRight) {
+  return function(object, iteratee, keysFunc) {
+    var index = -1,
+        iterable = Object(object),
+        props = keysFunc(object),
+        length = props.length;
+
+    while (length--) {
+      var key = props[fromRight ? length : ++index];
+      if (iteratee(iterable[key], key, iterable) === false) {
+        break;
+      }
+    }
+    return object;
+  };
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for arrays with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Array} array The array to compare.
+ * @param {Array} other The other array to compare.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+ *  for more details.
+ * @param {Object} stack Tracks traversed `array` and `other` objects.
+ * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+ */
+function equalArrays(array, other, equalFunc, customizer, bitmask, stack) {
+  var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+      arrLength = array.length,
+      othLength = other.length;
+
+  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+    return false;
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(array);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var index = -1,
+      result = true,
+      seen = (bitmask & UNORDERED_COMPARE_FLAG) ? new SetCache : undefined;
+
+  stack.set(array, other);
+  stack.set(other, array);
+
+  // Ignore non-index properties.
+  while (++index < arrLength) {
+    var arrValue = array[index],
+        othValue = other[index];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, arrValue, index, other, array, stack)
+        : customizer(arrValue, othValue, index, array, other, stack);
+    }
+    if (compared !== undefined) {
+      if (compared) {
+        continue;
+      }
+      result = false;
+      break;
+    }
+    // Recursively compare arrays (susceptible to call stack limits).
+    if (seen) {
+      if (!arraySome(other, function(othValue, othIndex) {
+            if (!seen.has(othIndex) &&
+                (arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack))) {
+              return seen.add(othIndex);
+            }
+          })) {
+        result = false;
+        break;
+      }
+    } else if (!(
+          arrValue === othValue ||
+            equalFunc(arrValue, othValue, customizer, bitmask, stack)
+        )) {
+      result = false;
+      break;
+    }
+  }
+  stack['delete'](array);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for comparing objects of
+ * the same `toStringTag`.
+ *
+ * **Note:** This function only supports comparing values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {string} tag The `toStringTag` of the objects to compare.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+ *  for more details.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalByTag(object, other, tag, equalFunc, customizer, bitmask, stack) {
+  switch (tag) {
+    case dataViewTag:
+      if ((object.byteLength != other.byteLength) ||
+          (object.byteOffset != other.byteOffset)) {
+        return false;
+      }
+      object = object.buffer;
+      other = other.buffer;
+
+    case arrayBufferTag:
+      if ((object.byteLength != other.byteLength) ||
+          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+        return false;
+      }
+      return true;
+
+    case boolTag:
+    case dateTag:
+    case numberTag:
+      // Coerce booleans to `1` or `0` and dates to milliseconds.
+      // Invalid dates are coerced to `NaN`.
+      return eq(+object, +other);
+
+    case errorTag:
+      return object.name == other.name && object.message == other.message;
+
+    case regexpTag:
+    case stringTag:
+      // Coerce regexes to strings and treat strings, primitives and objects,
+      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+      // for more details.
+      return object == (other + '');
+
+    case mapTag:
+      var convert = mapToArray;
+
+    case setTag:
+      var isPartial = bitmask & PARTIAL_COMPARE_FLAG;
+      convert || (convert = setToArray);
+
+      if (object.size != other.size && !isPartial) {
+        return false;
+      }
+      // Assume cyclic values are equal.
+      var stacked = stack.get(object);
+      if (stacked) {
+        return stacked == other;
+      }
+      bitmask |= UNORDERED_COMPARE_FLAG;
+
+      // Recursively compare objects (susceptible to call stack limits).
+      stack.set(object, other);
+      var result = equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask, stack);
+      stack['delete'](object);
+      return result;
+
+    case symbolTag:
+      if (symbolValueOf) {
+        return symbolValueOf.call(object) == symbolValueOf.call(other);
+      }
+  }
+  return false;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for objects with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+ *  for more details.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalObjects(object, other, equalFunc, customizer, bitmask, stack) {
+  var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+      objProps = keys(object),
+      objLength = objProps.length,
+      othProps = keys(other),
+      othLength = othProps.length;
+
+  if (objLength != othLength && !isPartial) {
+    return false;
+  }
+  var index = objLength;
+  while (index--) {
+    var key = objProps[index];
+    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
+      return false;
+    }
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(object);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var result = true;
+  stack.set(object, other);
+  stack.set(other, object);
+
+  var skipCtor = isPartial;
+  while (++index < objLength) {
+    key = objProps[index];
+    var objValue = object[key],
+        othValue = other[key];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, objValue, key, other, object, stack)
+        : customizer(objValue, othValue, key, object, other, stack);
+    }
+    // Recursively compare objects (susceptible to call stack limits).
+    if (!(compared === undefined
+          ? (objValue === othValue || equalFunc(objValue, othValue, customizer, bitmask, stack))
+          : compared
+        )) {
+      result = false;
+      break;
+    }
+    skipCtor || (skipCtor = key == 'constructor');
+  }
+  if (result && !skipCtor) {
+    var objCtor = object.constructor,
+        othCtor = other.constructor;
+
+    // Non `Object` object instances with different constructors are not equal.
+    if (objCtor != othCtor &&
+        ('constructor' in object && 'constructor' in other) &&
+        !(typeof objCtor == 'function' && objCtor instanceof objCtor &&
+          typeof othCtor == 'function' && othCtor instanceof othCtor)) {
+      result = false;
+    }
+  }
+  stack['delete'](object);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */
+function getMapData(map, key) {
+  var data = map.__data__;
+  return isKeyable(key)
+    ? data[typeof key == 'string' ? 'string' : 'hash']
+    : data.map;
+}
+
+/**
+ * Gets the property names, values, and compare flags of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the match data of `object`.
+ */
+function getMatchData(object) {
+  var result = keys(object),
+      length = result.length;
+
+  while (length--) {
+    var key = result[length],
+        value = object[key];
+
+    result[length] = [key, value, isStrictComparable(value)];
+  }
+  return result;
+}
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = getValue(object, key);
+  return baseIsNative(value) ? value : undefined;
+}
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+var getTag = baseGetTag;
+
+// Fallback for data views, maps, sets, and weak maps in IE 11,
+// for data views in Edge < 14, and promises in Node.js.
+if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+    (Map && getTag(new Map) != mapTag) ||
+    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+    (Set && getTag(new Set) != setTag) ||
+    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+  getTag = function(value) {
+    var result = objectToString.call(value),
+        Ctor = result == objectTag ? value.constructor : undefined,
+        ctorString = Ctor ? toSource(Ctor) : undefined;
+
+    if (ctorString) {
+      switch (ctorString) {
+        case dataViewCtorString: return dataViewTag;
+        case mapCtorString: return mapTag;
+        case promiseCtorString: return promiseTag;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
+      }
+    }
+    return result;
+  };
+}
+
+/**
+ * Checks if `path` exists on `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @param {Function} hasFunc The function to check properties.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ */
+function hasPath(object, path, hasFunc) {
+  path = isKey(path, object) ? [path] : castPath(path);
+
+  var result,
+      index = -1,
+      length = path.length;
+
+  while (++index < length) {
+    var key = toKey(path[index]);
+    if (!(result = object != null && hasFunc(object, key))) {
+      break;
+    }
+    object = object[key];
+  }
+  if (result) {
+    return result;
+  }
+  var length = object ? object.length : 0;
+  return !!length && isLength(length) && isIndex(key, length) &&
+    (isArray(object) || isArguments(object));
+}
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */
+function isKey(value, object) {
+  if (isArray(value)) {
+    return false;
+  }
+  var type = typeof value;
+  if (type == 'number' || type == 'symbol' || type == 'boolean' ||
+      value == null || isSymbol(value)) {
+    return true;
+  }
+  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
+    (object != null && value in Object(object));
+}
+
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */
+function isKeyable(value) {
+  var type = typeof value;
+  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
+    ? (value !== '__proto__')
+    : (value === null);
+}
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && (maskSrcKey in func);
+}
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
+}
+
+/**
+ * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` if suitable for strict
+ *  equality comparisons, else `false`.
+ */
+function isStrictComparable(value) {
+  return value === value && !isObject(value);
+}
+
+/**
+ * A specialized version of `matchesProperty` for source values suitable
+ * for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */
+function matchesStrictComparable(key, srcValue) {
+  return function(object) {
+    if (object == null) {
+      return false;
+    }
+    return object[key] === srcValue &&
+      (srcValue !== undefined || (key in Object(object)));
+  };
+}
+
+/**
+ * Converts `string` to a property path array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the property path array.
+ */
+var stringToPath = memoize(function(string) {
+  string = toString(string);
+
+  var result = [];
+  if (reLeadingDot.test(string)) {
+    result.push('');
+  }
+  string.replace(rePropName, function(match, number, quote, string) {
+    result.push(quote ? string.replace(reEscapeChar, '$1') : (number || match));
+  });
+  return result;
+});
+
+/**
+ * Converts `value` to a string key if it's not a string or symbol.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {string|symbol} Returns the key.
+ */
+function toKey(value) {
+  if (typeof value == 'string' || isSymbol(value)) {
+    return value;
+  }
+  var result = (value + '');
+  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+}
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to process.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return (func + '');
+    } catch (e) {}
+  }
+  return '';
+}
+
+/**
+ * Creates an array of values by running each element in `collection` thru
+ * `iteratee`. The iteratee is invoked with three arguments:
+ * (value, index|key, collection).
+ *
+ * Many lodash methods are guarded to work as iteratees for methods like
+ * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
+ *
+ * The guarded methods are:
+ * `ary`, `chunk`, `curry`, `curryRight`, `drop`, `dropRight`, `every`,
+ * `fill`, `invert`, `parseInt`, `random`, `range`, `rangeRight`, `repeat`,
+ * `sampleSize`, `slice`, `some`, `sortBy`, `split`, `take`, `takeRight`,
+ * `template`, `trim`, `trimEnd`, `trimStart`, and `words`
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ * @example
+ *
+ * function square(n) {
+ *   return n * n;
+ * }
+ *
+ * _.map([4, 8], square);
+ * // => [16, 64]
+ *
+ * _.map({ 'a': 4, 'b': 8 }, square);
+ * // => [16, 64] (iteration order is not guaranteed)
+ *
+ * var users = [
+ *   { 'user': 'barney' },
+ *   { 'user': 'fred' }
+ * ];
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.map(users, 'user');
+ * // => ['barney', 'fred']
+ */
+function map(collection, iteratee) {
+  var func = isArray(collection) ? arrayMap : baseMap;
+  return func(collection, baseIteratee(iteratee, 3));
+}
+
+/**
+ * Creates a function that memoizes the result of `func`. If `resolver` is
+ * provided, it determines the cache key for storing the result based on the
+ * arguments provided to the memoized function. By default, the first argument
+ * provided to the memoized function is used as the map cache key. The `func`
+ * is invoked with the `this` binding of the memoized function.
+ *
+ * **Note:** The cache is exposed as the `cache` property on the memoized
+ * function. Its creation may be customized by replacing the `_.memoize.Cache`
+ * constructor with one whose instances implement the
+ * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+ * method interface of `delete`, `get`, `has`, and `set`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to have its output memoized.
+ * @param {Function} [resolver] The function to resolve the cache key.
+ * @returns {Function} Returns the new memoized function.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': 2 };
+ * var other = { 'c': 3, 'd': 4 };
+ *
+ * var values = _.memoize(_.values);
+ * values(object);
+ * // => [1, 2]
+ *
+ * values(other);
+ * // => [3, 4]
+ *
+ * object.a = 2;
+ * values(object);
+ * // => [1, 2]
+ *
+ * // Modify the result cache.
+ * values.cache.set(object, ['a', 'b']);
+ * values(object);
+ * // => ['a', 'b']
+ *
+ * // Replace `_.memoize.Cache`.
+ * _.memoize.Cache = WeakMap;
+ */
+function memoize(func, resolver) {
+  if (typeof func != 'function' || (resolver && typeof resolver != 'function')) {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  var memoized = function() {
+    var args = arguments,
+        key = resolver ? resolver.apply(this, args) : args[0],
+        cache = memoized.cache;
+
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    var result = func.apply(this, args);
+    memoized.cache = cache.set(key, result);
+    return result;
+  };
+  memoized.cache = new (memoize.Cache || MapCache);
+  return memoized;
+}
+
+// Assign cache to `_.memoize`.
+memoize.Cache = MapCache;
+
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */
+function eq(value, other) {
+  return value === other || (value !== value && other !== other);
+}
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+function isArguments(value) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
+}
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+/**
+ * This method is like `_.isArrayLike` except that it also checks if `value`
+ * is an object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array-like object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArrayLikeObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLikeObject(document.body.children);
+ * // => true
+ *
+ * _.isArrayLikeObject('abc');
+ * // => false
+ *
+ * _.isArrayLikeObject(_.noop);
+ * // => false
+ */
+function isArrayLikeObject(value) {
+  return isObjectLike(value) && isArrayLike(value);
+}
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+  var tag = isObject(value) ? objectToString.call(value) : '';
+  return tag == funcTag || tag == genTag;
+}
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+}
+
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */
+var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */
+function toString(value) {
+  return value == null ? '' : baseToString(value);
+}
+
+/**
+ * Gets the value at `path` of `object`. If the resolved value is
+ * `undefined`, the `defaultValue` is returned in its place.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.7.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+ * @returns {*} Returns the resolved value.
+ * @example
+ *
+ * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+ *
+ * _.get(object, 'a[0].b.c');
+ * // => 3
+ *
+ * _.get(object, ['a', '0', 'b', 'c']);
+ * // => 3
+ *
+ * _.get(object, 'a.b.c', 'default');
+ * // => 'default'
+ */
+function get(object, path, defaultValue) {
+  var result = object == null ? undefined : baseGet(object, path);
+  return result === undefined ? defaultValue : result;
+}
+
+/**
+ * Checks if `path` is a direct or inherited property of `object`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ * @example
+ *
+ * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+ *
+ * _.hasIn(object, 'a');
+ * // => true
+ *
+ * _.hasIn(object, 'a.b');
+ * // => true
+ *
+ * _.hasIn(object, ['a', 'b']);
+ * // => true
+ *
+ * _.hasIn(object, 'b');
+ * // => false
+ */
+function hasIn(object, path) {
+  return object != null && hasPath(object, path, baseHasIn);
+}
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */
+function identity(value) {
+  return value;
+}
+
+/**
+ * Creates a function that returns the value at `path` of a given object.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ * @example
+ *
+ * var objects = [
+ *   { 'a': { 'b': 2 } },
+ *   { 'a': { 'b': 1 } }
+ * ];
+ *
+ * _.map(objects, _.property('a.b'));
+ * // => [2, 1]
+ *
+ * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
+ * // => [1, 2]
+ */
+function property(path) {
+  return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
+}
+
+module.exports = map;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(250), __webpack_require__(73)(module)))
+
+/***/ }),
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -37942,8 +46064,8 @@ module.exports = deburr;
  * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <https://lodash.com/license>
  */
-var deburr = __webpack_require__(280),
-    words = __webpack_require__(283);
+var deburr = __webpack_require__(286),
+    words = __webpack_require__(290);
 
 /**
  * A specialized version of `_.reduce` for arrays without support for
@@ -38009,7 +46131,7 @@ module.exports = snakeCase;
 
 
 /***/ }),
-/* 282 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -38020,12 +46142,12 @@ module.exports = snakeCase;
  * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <https://lodash.com/license>
  */
-var baseToString = __webpack_require__(274),
-    charsLeftIndex = __webpack_require__(275),
-    charsRightIndex = __webpack_require__(276),
-    isIterateeCall = __webpack_require__(277),
-    trimmedLeftIndex = __webpack_require__(278),
-    trimmedRightIndex = __webpack_require__(279);
+var baseToString = __webpack_require__(280),
+    charsLeftIndex = __webpack_require__(281),
+    charsRightIndex = __webpack_require__(282),
+    isIterateeCall = __webpack_require__(283),
+    trimmedLeftIndex = __webpack_require__(284),
+    trimmedRightIndex = __webpack_require__(285);
 
 /**
  * Removes leading and trailing whitespace or specified characters from `string`.
@@ -38065,7 +46187,7 @@ module.exports = trim;
 
 
 /***/ }),
-/* 283 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -38076,7 +46198,7 @@ module.exports = trim;
  * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <https://lodash.com/license>
  */
-var root = __webpack_require__(72);
+var root = __webpack_require__(74);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -38269,226 +46391,226 @@ module.exports = words;
 
 
 /***/ }),
-/* 284 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 73,
-	"./af.js": 73,
-	"./ar": 79,
-	"./ar-dz": 74,
-	"./ar-dz.js": 74,
-	"./ar-ly": 75,
-	"./ar-ly.js": 75,
-	"./ar-ma": 76,
-	"./ar-ma.js": 76,
-	"./ar-sa": 77,
-	"./ar-sa.js": 77,
-	"./ar-tn": 78,
-	"./ar-tn.js": 78,
-	"./ar.js": 79,
-	"./az": 80,
-	"./az.js": 80,
-	"./be": 81,
-	"./be.js": 81,
-	"./bg": 82,
-	"./bg.js": 82,
-	"./bn": 83,
-	"./bn.js": 83,
-	"./bo": 84,
-	"./bo.js": 84,
-	"./br": 85,
-	"./br.js": 85,
-	"./bs": 86,
-	"./bs.js": 86,
-	"./ca": 87,
-	"./ca.js": 87,
-	"./cs": 88,
-	"./cs.js": 88,
-	"./cv": 89,
-	"./cv.js": 89,
-	"./cy": 90,
-	"./cy.js": 90,
-	"./da": 91,
-	"./da.js": 91,
-	"./de": 93,
-	"./de-at": 92,
-	"./de-at.js": 92,
-	"./de.js": 93,
-	"./dv": 94,
-	"./dv.js": 94,
-	"./el": 95,
-	"./el.js": 95,
-	"./en-au": 96,
-	"./en-au.js": 96,
-	"./en-ca": 97,
-	"./en-ca.js": 97,
-	"./en-gb": 98,
-	"./en-gb.js": 98,
-	"./en-ie": 99,
-	"./en-ie.js": 99,
-	"./en-nz": 100,
-	"./en-nz.js": 100,
-	"./eo": 101,
-	"./eo.js": 101,
-	"./es": 103,
-	"./es-do": 102,
-	"./es-do.js": 102,
-	"./es.js": 103,
-	"./et": 104,
-	"./et.js": 104,
-	"./eu": 105,
-	"./eu.js": 105,
-	"./fa": 106,
-	"./fa.js": 106,
-	"./fi": 107,
-	"./fi.js": 107,
-	"./fo": 108,
-	"./fo.js": 108,
-	"./fr": 111,
-	"./fr-ca": 109,
-	"./fr-ca.js": 109,
-	"./fr-ch": 110,
-	"./fr-ch.js": 110,
-	"./fr.js": 111,
-	"./fy": 112,
-	"./fy.js": 112,
-	"./gd": 113,
-	"./gd.js": 113,
-	"./gl": 114,
-	"./gl.js": 114,
-	"./he": 115,
-	"./he.js": 115,
-	"./hi": 116,
-	"./hi.js": 116,
-	"./hr": 117,
-	"./hr.js": 117,
-	"./hu": 118,
-	"./hu.js": 118,
-	"./hy-am": 119,
-	"./hy-am.js": 119,
-	"./id": 120,
-	"./id.js": 120,
-	"./is": 121,
-	"./is.js": 121,
-	"./it": 122,
-	"./it.js": 122,
-	"./ja": 123,
-	"./ja.js": 123,
-	"./jv": 124,
-	"./jv.js": 124,
-	"./ka": 125,
-	"./ka.js": 125,
-	"./kk": 126,
-	"./kk.js": 126,
-	"./km": 127,
-	"./km.js": 127,
-	"./ko": 128,
-	"./ko.js": 128,
-	"./ky": 129,
-	"./ky.js": 129,
-	"./lb": 130,
-	"./lb.js": 130,
-	"./lo": 131,
-	"./lo.js": 131,
-	"./lt": 132,
-	"./lt.js": 132,
-	"./lv": 133,
-	"./lv.js": 133,
-	"./me": 134,
-	"./me.js": 134,
-	"./mi": 135,
-	"./mi.js": 135,
-	"./mk": 136,
-	"./mk.js": 136,
-	"./ml": 137,
-	"./ml.js": 137,
-	"./mr": 138,
-	"./mr.js": 138,
-	"./ms": 140,
-	"./ms-my": 139,
-	"./ms-my.js": 139,
-	"./ms.js": 140,
-	"./my": 141,
-	"./my.js": 141,
-	"./nb": 142,
-	"./nb.js": 142,
-	"./ne": 143,
-	"./ne.js": 143,
-	"./nl": 145,
-	"./nl-be": 144,
-	"./nl-be.js": 144,
-	"./nl.js": 145,
-	"./nn": 146,
-	"./nn.js": 146,
-	"./pa-in": 147,
-	"./pa-in.js": 147,
-	"./pl": 148,
-	"./pl.js": 148,
-	"./pt": 150,
-	"./pt-br": 149,
-	"./pt-br.js": 149,
-	"./pt.js": 150,
-	"./ro": 151,
-	"./ro.js": 151,
-	"./ru": 152,
-	"./ru.js": 152,
-	"./se": 153,
-	"./se.js": 153,
-	"./si": 154,
-	"./si.js": 154,
-	"./sk": 155,
-	"./sk.js": 155,
-	"./sl": 156,
-	"./sl.js": 156,
-	"./sq": 157,
-	"./sq.js": 157,
-	"./sr": 159,
-	"./sr-cyrl": 158,
-	"./sr-cyrl.js": 158,
-	"./sr.js": 159,
-	"./ss": 160,
-	"./ss.js": 160,
-	"./sv": 161,
-	"./sv.js": 161,
-	"./sw": 162,
-	"./sw.js": 162,
-	"./ta": 163,
-	"./ta.js": 163,
-	"./te": 164,
-	"./te.js": 164,
-	"./tet": 165,
-	"./tet.js": 165,
-	"./th": 166,
-	"./th.js": 166,
-	"./tl-ph": 167,
-	"./tl-ph.js": 167,
-	"./tlh": 168,
-	"./tlh.js": 168,
-	"./tr": 169,
-	"./tr.js": 169,
-	"./tzl": 170,
-	"./tzl.js": 170,
-	"./tzm": 172,
-	"./tzm-latn": 171,
-	"./tzm-latn.js": 171,
-	"./tzm.js": 172,
-	"./uk": 173,
-	"./uk.js": 173,
-	"./uz": 174,
-	"./uz.js": 174,
-	"./vi": 175,
-	"./vi.js": 175,
-	"./x-pseudo": 176,
-	"./x-pseudo.js": 176,
-	"./yo": 177,
-	"./yo.js": 177,
-	"./zh-cn": 178,
-	"./zh-cn.js": 178,
-	"./zh-hk": 179,
-	"./zh-hk.js": 179,
-	"./zh-tw": 180,
-	"./zh-tw.js": 180
+	"./af": 75,
+	"./af.js": 75,
+	"./ar": 81,
+	"./ar-dz": 76,
+	"./ar-dz.js": 76,
+	"./ar-ly": 77,
+	"./ar-ly.js": 77,
+	"./ar-ma": 78,
+	"./ar-ma.js": 78,
+	"./ar-sa": 79,
+	"./ar-sa.js": 79,
+	"./ar-tn": 80,
+	"./ar-tn.js": 80,
+	"./ar.js": 81,
+	"./az": 82,
+	"./az.js": 82,
+	"./be": 83,
+	"./be.js": 83,
+	"./bg": 84,
+	"./bg.js": 84,
+	"./bn": 85,
+	"./bn.js": 85,
+	"./bo": 86,
+	"./bo.js": 86,
+	"./br": 87,
+	"./br.js": 87,
+	"./bs": 88,
+	"./bs.js": 88,
+	"./ca": 89,
+	"./ca.js": 89,
+	"./cs": 90,
+	"./cs.js": 90,
+	"./cv": 91,
+	"./cv.js": 91,
+	"./cy": 92,
+	"./cy.js": 92,
+	"./da": 93,
+	"./da.js": 93,
+	"./de": 95,
+	"./de-at": 94,
+	"./de-at.js": 94,
+	"./de.js": 95,
+	"./dv": 96,
+	"./dv.js": 96,
+	"./el": 97,
+	"./el.js": 97,
+	"./en-au": 98,
+	"./en-au.js": 98,
+	"./en-ca": 99,
+	"./en-ca.js": 99,
+	"./en-gb": 100,
+	"./en-gb.js": 100,
+	"./en-ie": 101,
+	"./en-ie.js": 101,
+	"./en-nz": 102,
+	"./en-nz.js": 102,
+	"./eo": 103,
+	"./eo.js": 103,
+	"./es": 105,
+	"./es-do": 104,
+	"./es-do.js": 104,
+	"./es.js": 105,
+	"./et": 106,
+	"./et.js": 106,
+	"./eu": 107,
+	"./eu.js": 107,
+	"./fa": 108,
+	"./fa.js": 108,
+	"./fi": 109,
+	"./fi.js": 109,
+	"./fo": 110,
+	"./fo.js": 110,
+	"./fr": 113,
+	"./fr-ca": 111,
+	"./fr-ca.js": 111,
+	"./fr-ch": 112,
+	"./fr-ch.js": 112,
+	"./fr.js": 113,
+	"./fy": 114,
+	"./fy.js": 114,
+	"./gd": 115,
+	"./gd.js": 115,
+	"./gl": 116,
+	"./gl.js": 116,
+	"./he": 117,
+	"./he.js": 117,
+	"./hi": 118,
+	"./hi.js": 118,
+	"./hr": 119,
+	"./hr.js": 119,
+	"./hu": 120,
+	"./hu.js": 120,
+	"./hy-am": 121,
+	"./hy-am.js": 121,
+	"./id": 122,
+	"./id.js": 122,
+	"./is": 123,
+	"./is.js": 123,
+	"./it": 124,
+	"./it.js": 124,
+	"./ja": 125,
+	"./ja.js": 125,
+	"./jv": 126,
+	"./jv.js": 126,
+	"./ka": 127,
+	"./ka.js": 127,
+	"./kk": 128,
+	"./kk.js": 128,
+	"./km": 129,
+	"./km.js": 129,
+	"./ko": 130,
+	"./ko.js": 130,
+	"./ky": 131,
+	"./ky.js": 131,
+	"./lb": 132,
+	"./lb.js": 132,
+	"./lo": 133,
+	"./lo.js": 133,
+	"./lt": 134,
+	"./lt.js": 134,
+	"./lv": 135,
+	"./lv.js": 135,
+	"./me": 136,
+	"./me.js": 136,
+	"./mi": 137,
+	"./mi.js": 137,
+	"./mk": 138,
+	"./mk.js": 138,
+	"./ml": 139,
+	"./ml.js": 139,
+	"./mr": 140,
+	"./mr.js": 140,
+	"./ms": 142,
+	"./ms-my": 141,
+	"./ms-my.js": 141,
+	"./ms.js": 142,
+	"./my": 143,
+	"./my.js": 143,
+	"./nb": 144,
+	"./nb.js": 144,
+	"./ne": 145,
+	"./ne.js": 145,
+	"./nl": 147,
+	"./nl-be": 146,
+	"./nl-be.js": 146,
+	"./nl.js": 147,
+	"./nn": 148,
+	"./nn.js": 148,
+	"./pa-in": 149,
+	"./pa-in.js": 149,
+	"./pl": 150,
+	"./pl.js": 150,
+	"./pt": 152,
+	"./pt-br": 151,
+	"./pt-br.js": 151,
+	"./pt.js": 152,
+	"./ro": 153,
+	"./ro.js": 153,
+	"./ru": 154,
+	"./ru.js": 154,
+	"./se": 155,
+	"./se.js": 155,
+	"./si": 156,
+	"./si.js": 156,
+	"./sk": 157,
+	"./sk.js": 157,
+	"./sl": 158,
+	"./sl.js": 158,
+	"./sq": 159,
+	"./sq.js": 159,
+	"./sr": 161,
+	"./sr-cyrl": 160,
+	"./sr-cyrl.js": 160,
+	"./sr.js": 161,
+	"./ss": 162,
+	"./ss.js": 162,
+	"./sv": 163,
+	"./sv.js": 163,
+	"./sw": 164,
+	"./sw.js": 164,
+	"./ta": 165,
+	"./ta.js": 165,
+	"./te": 166,
+	"./te.js": 166,
+	"./tet": 167,
+	"./tet.js": 167,
+	"./th": 168,
+	"./th.js": 168,
+	"./tl-ph": 169,
+	"./tl-ph.js": 169,
+	"./tlh": 170,
+	"./tlh.js": 170,
+	"./tr": 171,
+	"./tr.js": 171,
+	"./tzl": 172,
+	"./tzl.js": 172,
+	"./tzm": 174,
+	"./tzm-latn": 173,
+	"./tzm-latn.js": 173,
+	"./tzm.js": 174,
+	"./uk": 175,
+	"./uk.js": 175,
+	"./uz": 176,
+	"./uz.js": 176,
+	"./vi": 177,
+	"./vi.js": 177,
+	"./x-pseudo": 178,
+	"./x-pseudo.js": 178,
+	"./yo": 179,
+	"./yo.js": 179,
+	"./zh-cn": 180,
+	"./zh-cn.js": 180,
+	"./zh-hk": 181,
+	"./zh-hk.js": 181,
+	"./zh-tw": 182,
+	"./zh-tw.js": 182
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -38504,11 +46626,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 284;
+webpackContext.id = 291;
 
 
 /***/ }),
-/* 285 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var always = __webpack_require__(27);
@@ -38533,7 +46655,7 @@ module.exports = always(false);
 
 
 /***/ }),
-/* 286 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var always = __webpack_require__(27);
@@ -38558,7 +46680,7 @@ module.exports = always(true);
 
 
 /***/ }),
-/* 287 */
+/* 294 */
 /***/ (function(module, exports) {
 
 /**
@@ -38591,10 +46713,10 @@ module.exports = {'@@functional/placeholder': true};
 
 
 /***/ }),
-/* 288 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
+var _concat = __webpack_require__(13);
 var _curry1 = __webpack_require__(2);
 var curryN = __webpack_require__(8);
 
@@ -38640,12 +46762,12 @@ module.exports = _curry1(function addIndex(fn) {
 
 
 /***/ }),
-/* 289 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xall = __webpack_require__(360);
+var _xall = __webpack_require__(367);
 
 
 /**
@@ -38685,14 +46807,14 @@ module.exports = _curry2(_dispatchable(['all'], _xall, function all(fn, list) {
 
 
 /***/ }),
-/* 290 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
 var curryN = __webpack_require__(8);
 var max = __webpack_require__(28);
 var pluck = __webpack_require__(35);
-var reduce = __webpack_require__(16);
+var reduce = __webpack_require__(17);
 
 
 /**
@@ -38736,14 +46858,14 @@ module.exports = _curry1(function allPass(preds) {
 
 
 /***/ }),
-/* 291 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
 var curryN = __webpack_require__(8);
 var max = __webpack_require__(28);
 var pluck = __webpack_require__(35);
-var reduce = __webpack_require__(16);
+var reduce = __webpack_require__(17);
 
 
 /**
@@ -38788,13 +46910,13 @@ module.exports = _curry1(function anyPass(preds) {
 
 
 /***/ }),
-/* 292 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _aperture = __webpack_require__(343);
+var _aperture = __webpack_require__(350);
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xaperture = __webpack_require__(361);
+var _xaperture = __webpack_require__(368);
 
 
 /**
@@ -38822,10 +46944,10 @@ module.exports = _curry2(_dispatchable([], _xaperture, _aperture));
 
 
 /***/ }),
-/* 293 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
+var _concat = __webpack_require__(13);
 var _curry2 = __webpack_require__(0);
 
 
@@ -38855,17 +46977,17 @@ module.exports = _curry2(function append(el, list) {
 
 
 /***/ }),
-/* 294 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var apply = __webpack_require__(184);
+var apply = __webpack_require__(186);
 var curryN = __webpack_require__(8);
-var map = __webpack_require__(10);
+var map = __webpack_require__(11);
 var max = __webpack_require__(28);
 var pluck = __webpack_require__(35);
-var reduce = __webpack_require__(16);
-var values = __webpack_require__(236);
+var reduce = __webpack_require__(17);
+var values = __webpack_require__(238);
 
 
 /**
@@ -38905,7 +47027,7 @@ module.exports = _curry1(function applySpec(spec) {
 
 
 /***/ }),
-/* 295 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -38940,11 +47062,11 @@ module.exports = _curry3(function ascend(fn, a, b) {
 
 
 /***/ }),
-/* 296 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var nAry = __webpack_require__(49);
+var nAry = __webpack_require__(50);
 
 
 /**
@@ -38980,13 +47102,13 @@ module.exports = _curry1(function binary(fn) {
 
 
 /***/ }),
-/* 297 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isFunction = __webpack_require__(43);
-var and = __webpack_require__(182);
-var lift = __webpack_require__(48);
+var _isFunction = __webpack_require__(44);
+var and = __webpack_require__(184);
+var lift = __webpack_require__(49);
 
 
 /**
@@ -39027,10 +47149,10 @@ module.exports = _curry2(function both(f, g) {
 
 
 /***/ }),
-/* 298 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var curry = __webpack_require__(40);
+var curry = __webpack_require__(41);
 
 
 /**
@@ -39070,7 +47192,7 @@ module.exports = curry(function call(fn) {
 
 
 /***/ }),
-/* 299 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -39106,10 +47228,10 @@ module.exports = _curry3(function clamp(min, max, value) {
 
 
 /***/ }),
-/* 300 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _clone = __webpack_require__(198);
+var _clone = __webpack_require__(200);
 var _curry1 = __webpack_require__(2);
 
 
@@ -39142,7 +47264,7 @@ module.exports = _curry1(function clone(value) {
 
 
 /***/ }),
-/* 301 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -39176,11 +47298,11 @@ module.exports = _curry1(function comparator(pred) {
 
 
 /***/ }),
-/* 302 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var lift = __webpack_require__(48);
-var not = __webpack_require__(220);
+var lift = __webpack_require__(49);
+var not = __webpack_require__(222);
 
 
 /**
@@ -39209,11 +47331,11 @@ module.exports = lift(not);
 
 
 /***/ }),
-/* 303 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pipeP = __webpack_require__(226);
-var reverse = __webpack_require__(52);
+var pipeP = __webpack_require__(228);
+var reverse = __webpack_require__(53);
 
 
 /**
@@ -39259,14 +47381,14 @@ module.exports = function composeP() {
 
 
 /***/ }),
-/* 304 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
+var _arity = __webpack_require__(15);
 var _curry1 = __webpack_require__(2);
-var map = __webpack_require__(10);
+var map = __webpack_require__(11);
 var max = __webpack_require__(28);
-var reduce = __webpack_require__(16);
+var reduce = __webpack_require__(17);
 
 
 /**
@@ -39312,11 +47434,11 @@ module.exports = _curry1(function cond(pairs) {
 
 
 /***/ }),
-/* 305 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var constructN = __webpack_require__(188);
+var constructN = __webpack_require__(190);
 
 
 /**
@@ -39356,7 +47478,7 @@ module.exports = _curry1(function construct(Fn) {
 
 
 /***/ }),
-/* 306 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _contains = __webpack_require__(24);
@@ -39387,10 +47509,10 @@ module.exports = _curry2(_contains);
 
 
 /***/ }),
-/* 307 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var reduceBy = __webpack_require__(50);
+var reduceBy = __webpack_require__(51);
 
 
 /**
@@ -39421,10 +47543,10 @@ module.exports = reduceBy(function(acc, elem) { return acc + 1; }, 0);
 
 
 /***/ }),
-/* 308 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var add = __webpack_require__(38);
+var add = __webpack_require__(39);
 
 
 /**
@@ -39446,7 +47568,7 @@ module.exports = add(-1);
 
 
 /***/ }),
-/* 309 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -39481,12 +47603,12 @@ module.exports = _curry3(function descend(fn, a, b) {
 
 
 /***/ }),
-/* 310 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var assoc = __webpack_require__(39);
-var dissoc = __webpack_require__(193);
+var assoc = __webpack_require__(40);
+var dissoc = __webpack_require__(195);
 
 
 /**
@@ -39522,7 +47644,7 @@ module.exports = _curry2(function dissocPath(path, obj) {
 
 
 /***/ }),
-/* 311 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -39554,13 +47676,13 @@ module.exports = _curry2(function divide(a, b) { return a / b; });
 
 
 /***/ }),
-/* 312 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _dropLast = __webpack_require__(345);
-var _xdropLast = __webpack_require__(364);
+var _dropLast = __webpack_require__(352);
+var _xdropLast = __webpack_require__(371);
 
 
 /**
@@ -39588,13 +47710,13 @@ module.exports = _curry2(_dispatchable([], _xdropLast, _dropLast));
 
 
 /***/ }),
-/* 313 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _dropLastWhile = __webpack_require__(346);
-var _xdropLastWhile = __webpack_require__(365);
+var _dropLastWhile = __webpack_require__(353);
+var _xdropLastWhile = __webpack_require__(372);
 
 
 /**
@@ -39623,14 +47745,14 @@ module.exports = _curry2(_dispatchable([], _xdropLastWhile, _dropLastWhile));
 
 
 /***/ }),
-/* 314 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
 var _dispatchable = __webpack_require__(6);
-var _xdropRepeatsWith = __webpack_require__(210);
-var dropRepeatsWith = __webpack_require__(195);
-var equals = __webpack_require__(13);
+var _xdropRepeatsWith = __webpack_require__(212);
+var dropRepeatsWith = __webpack_require__(197);
+var equals = __webpack_require__(14);
 
 
 /**
@@ -39655,12 +47777,12 @@ module.exports = _curry1(_dispatchable([], _xdropRepeatsWith(equals), dropRepeat
 
 
 /***/ }),
-/* 315 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xdropWhile = __webpack_require__(366);
+var _xdropWhile = __webpack_require__(373);
 
 
 /**
@@ -39699,13 +47821,13 @@ module.exports = _curry2(_dispatchable(['dropWhile'], _xdropWhile, function drop
 
 
 /***/ }),
-/* 316 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isFunction = __webpack_require__(43);
-var lift = __webpack_require__(48);
-var or = __webpack_require__(222);
+var _isFunction = __webpack_require__(44);
+var lift = __webpack_require__(49);
+var or = __webpack_require__(224);
 
 
 /**
@@ -39745,11 +47867,11 @@ module.exports = _curry2(function either(f, g) {
 
 
 /***/ }),
-/* 317 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var equals = __webpack_require__(13);
+var equals = __webpack_require__(14);
 
 
 /**
@@ -39775,11 +47897,11 @@ module.exports = _curry3(function eqBy(f, x, y) {
 
 
 /***/ }),
-/* 318 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var equals = __webpack_require__(13);
+var equals = __webpack_require__(14);
 
 
 /**
@@ -39809,7 +47931,7 @@ module.exports = _curry3(function eqProps(prop, obj1, obj2) {
 
 
 /***/ }),
-/* 319 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -39857,12 +47979,12 @@ module.exports = _curry2(function evolve(transformations, object) {
 
 
 /***/ }),
-/* 320 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xfind = __webpack_require__(368);
+var _xfind = __webpack_require__(375);
 
 
 /**
@@ -39902,12 +48024,12 @@ module.exports = _curry2(_dispatchable(['find'], _xfind, function find(fn, list)
 
 
 /***/ }),
-/* 321 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xfindIndex = __webpack_require__(369);
+var _xfindIndex = __webpack_require__(376);
 
 
 /**
@@ -39946,12 +48068,12 @@ module.exports = _curry2(_dispatchable([], _xfindIndex, function findIndex(fn, l
 
 
 /***/ }),
-/* 322 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xfindLast = __webpack_require__(370);
+var _xfindLast = __webpack_require__(377);
 
 
 /**
@@ -39988,12 +48110,12 @@ module.exports = _curry2(_dispatchable([], _xfindLast, function findLast(fn, lis
 
 
 /***/ }),
-/* 323 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xfindLastIndex = __webpack_require__(371);
+var _xfindLastIndex = __webpack_require__(378);
 
 
 /**
@@ -40031,11 +48153,11 @@ module.exports = _curry2(_dispatchable([], _xfindLastIndex, function findLastInd
 
 
 /***/ }),
-/* 324 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _makeFlat = __webpack_require__(208);
+var _makeFlat = __webpack_require__(210);
 
 
 /**
@@ -40059,7 +48181,7 @@ module.exports = _curry1(_makeFlat(true));
 
 
 /***/ }),
-/* 325 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _checkForMethod = __webpack_require__(30);
@@ -40112,11 +48234,11 @@ module.exports = _curry2(_checkForMethod('forEach', function forEach(fn, list) {
 
 
 /***/ }),
-/* 326 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var keys = __webpack_require__(15);
+var keys = __webpack_require__(16);
 
 
 /**
@@ -40154,7 +48276,7 @@ module.exports = _curry2(function forEachObjIndexed(fn, obj) {
 
 
 /***/ }),
-/* 327 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -40188,12 +48310,12 @@ module.exports = _curry1(function fromPairs(pairs) {
 
 
 /***/ }),
-/* 328 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _checkForMethod = __webpack_require__(30);
 var _curry2 = __webpack_require__(0);
-var reduceBy = __webpack_require__(50);
+var reduceBy = __webpack_require__(51);
 
 /**
  * Splits a list into sub-lists stored in an object, based on the result of
@@ -40245,7 +48367,7 @@ module.exports = _curry2(_checkForMethod('groupBy', reduceBy(function(acc, item)
 
 
 /***/ }),
-/* 329 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -40293,7 +48415,7 @@ module.exports = _curry2(function(fn, list) {
 
 
 /***/ }),
-/* 330 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -40324,7 +48446,7 @@ module.exports = _curry2(function gt(a, b) { return a > b; });
 
 
 /***/ }),
-/* 331 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -40355,7 +48477,7 @@ module.exports = _curry2(function gte(a, b) { return a >= b; });
 
 
 /***/ }),
-/* 332 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -40390,7 +48512,7 @@ module.exports = _curry2(_has);
 
 
 /***/ }),
-/* 333 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -40428,7 +48550,7 @@ module.exports = _curry2(function hasIn(prop, obj) {
 
 
 /***/ }),
-/* 334 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nth = __webpack_require__(33);
@@ -40459,7 +48581,7 @@ module.exports = nth(0);
 
 
 /***/ }),
-/* 335 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -40501,10 +48623,10 @@ module.exports = _curry3(function ifElse(condition, onTrue, onFalse) {
 
 
 /***/ }),
-/* 336 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var add = __webpack_require__(38);
+var add = __webpack_require__(39);
 
 
 /**
@@ -40526,10 +48648,10 @@ module.exports = add(1);
 
 
 /***/ }),
-/* 337 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var reduceBy = __webpack_require__(50);
+var reduceBy = __webpack_require__(51);
 
 
 /**
@@ -40558,12 +48680,12 @@ module.exports = reduceBy(function(acc, elem) { return elem; }, null);
 
 
 /***/ }),
-/* 338 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _indexOf = __webpack_require__(203);
-var _isArray = __webpack_require__(19);
+var _indexOf = __webpack_require__(205);
+var _isArray = __webpack_require__(20);
 
 
 /**
@@ -40593,7 +48715,7 @@ module.exports = _curry2(function indexOf(target, xs) {
 
 
 /***/ }),
-/* 339 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var slice = __webpack_require__(25);
@@ -40627,7 +48749,7 @@ module.exports = slice(0, -1);
 
 
 /***/ }),
-/* 340 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -40660,7 +48782,7 @@ module.exports = _curry3(function insert(idx, elt, list) {
 
 
 /***/ }),
-/* 341 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -40693,7 +48815,7 @@ module.exports = _curry3(function insertAll(idx, elts, list) {
 
 
 /***/ }),
-/* 342 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _contains = __webpack_require__(24);
@@ -40870,7 +48992,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 343 */
+/* 350 */
 /***/ (function(module, exports) {
 
 module.exports = function _aperture(n, list) {
@@ -40886,7 +49008,7 @@ module.exports = function _aperture(n, list) {
 
 
 /***/ }),
-/* 344 */
+/* 351 */
 /***/ (function(module, exports) {
 
 module.exports = function _arrayFromIterator(iter) {
@@ -40900,10 +49022,10 @@ module.exports = function _arrayFromIterator(iter) {
 
 
 /***/ }),
-/* 345 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var take = __webpack_require__(231);
+var take = __webpack_require__(233);
 
 module.exports = function dropLast(n, xs) {
   return take(n < xs.length ? xs.length - n : 0, xs);
@@ -40911,7 +49033,7 @@ module.exports = function dropLast(n, xs) {
 
 
 /***/ }),
-/* 346 */
+/* 353 */
 /***/ (function(module, exports) {
 
 module.exports = function dropLastWhile(pred, list) {
@@ -40924,15 +49046,15 @@ module.exports = function dropLastWhile(pred, list) {
 
 
 /***/ }),
-/* 347 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arrayFromIterator = __webpack_require__(344);
-var _functionName = __webpack_require__(350);
+var _arrayFromIterator = __webpack_require__(351);
+var _functionName = __webpack_require__(357);
 var _has = __webpack_require__(9);
-var identical = __webpack_require__(197);
-var keys = __webpack_require__(15);
-var type = __webpack_require__(67);
+var identical = __webpack_require__(199);
+var keys = __webpack_require__(16);
+var type = __webpack_require__(68);
 
 
 module.exports = function _equals(a, b, stackA, stackB) {
@@ -41039,11 +49161,11 @@ module.exports = function _equals(a, b, stackA, stackB) {
 
 
 /***/ }),
-/* 348 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _forceReduced = __webpack_require__(349);
-var _reduce = __webpack_require__(11);
+var _forceReduced = __webpack_require__(356);
+var _reduce = __webpack_require__(12);
 var _xfBase = __webpack_require__(7);
 var isArrayLike = __webpack_require__(32);
 
@@ -41077,7 +49199,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 349 */
+/* 356 */
 /***/ (function(module, exports) {
 
 module.exports = function _forceReduced(x) {
@@ -41089,7 +49211,7 @@ module.exports = function _forceReduced(x) {
 
 
 /***/ }),
-/* 350 */
+/* 357 */
 /***/ (function(module, exports) {
 
 module.exports = function _functionName(f) {
@@ -41100,7 +49222,7 @@ module.exports = function _functionName(f) {
 
 
 /***/ }),
-/* 351 */
+/* 358 */
 /***/ (function(module, exports) {
 
 module.exports = function _isRegExp(x) {
@@ -41109,7 +49231,7 @@ module.exports = function _isRegExp(x) {
 
 
 /***/ }),
-/* 352 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _has = __webpack_require__(9);
@@ -41139,14 +49261,14 @@ module.exports = function _objectAssign(target) {
 
 
 /***/ }),
-/* 353 */
+/* 360 */
 /***/ (function(module, exports) {
 
 module.exports = function _of(x) { return [x]; };
 
 
 /***/ }),
-/* 354 */
+/* 361 */
 /***/ (function(module, exports) {
 
 module.exports = function _pipe(f, g) {
@@ -41157,7 +49279,7 @@ module.exports = function _pipe(f, g) {
 
 
 /***/ }),
-/* 355 */
+/* 362 */
 /***/ (function(module, exports) {
 
 module.exports = function _pipeP(f, g) {
@@ -41171,7 +49293,7 @@ module.exports = function _pipeP(f, g) {
 
 
 /***/ }),
-/* 356 */
+/* 363 */
 /***/ (function(module, exports) {
 
 module.exports = function _quote(s) {
@@ -41190,14 +49312,14 @@ module.exports = function _quote(s) {
 
 
 /***/ }),
-/* 357 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _assign = __webpack_require__(61);
-var _identity = __webpack_require__(63);
-var _isTransformer = __webpack_require__(64);
+var _assign = __webpack_require__(62);
+var _identity = __webpack_require__(64);
+var _isTransformer = __webpack_require__(65);
 var isArrayLike = __webpack_require__(32);
-var objOf = __webpack_require__(221);
+var objOf = __webpack_require__(223);
 
 
 module.exports = (function() {
@@ -41244,7 +49366,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 358 */
+/* 365 */
 /***/ (function(module, exports) {
 
 /**
@@ -41272,15 +49394,15 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 359 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _contains = __webpack_require__(24);
-var _map = __webpack_require__(46);
-var _quote = __webpack_require__(356);
-var _toISOString = __webpack_require__(358);
-var keys = __webpack_require__(15);
-var reject = __webpack_require__(51);
+var _map = __webpack_require__(47);
+var _quote = __webpack_require__(363);
+var _toISOString = __webpack_require__(365);
+var keys = __webpack_require__(16);
+var reject = __webpack_require__(52);
 
 
 module.exports = function _toString(x, seen) {
@@ -41324,11 +49446,11 @@ module.exports = function _toString(x, seen) {
 
 
 /***/ }),
-/* 360 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _reduced = __webpack_require__(20);
+var _reduced = __webpack_require__(21);
 var _xfBase = __webpack_require__(7);
 
 
@@ -41358,10 +49480,10 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 361 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
+var _concat = __webpack_require__(13);
 var _curry2 = __webpack_require__(0);
 var _xfBase = __webpack_require__(7);
 
@@ -41400,12 +49522,12 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 362 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _flatCat = __webpack_require__(348);
-var map = __webpack_require__(10);
+var _flatCat = __webpack_require__(355);
+var map = __webpack_require__(11);
 
 
 module.exports = _curry2(function _xchain(f, xf) {
@@ -41414,7 +49536,7 @@ module.exports = _curry2(function _xchain(f, xf) {
 
 
 /***/ }),
-/* 363 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -41441,7 +49563,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 364 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -41481,11 +49603,11 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 365 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _reduce = __webpack_require__(11);
+var _reduce = __webpack_require__(12);
 var _xfBase = __webpack_require__(7);
 
 module.exports = (function() {
@@ -41522,7 +49644,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 366 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -41551,7 +49673,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 367 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -41574,11 +49696,11 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 368 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _reduced = __webpack_require__(20);
+var _reduced = __webpack_require__(21);
 var _xfBase = __webpack_require__(7);
 
 
@@ -41608,11 +49730,11 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 369 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _reduced = __webpack_require__(20);
+var _reduced = __webpack_require__(21);
 var _xfBase = __webpack_require__(7);
 
 
@@ -41644,7 +49766,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 370 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -41672,7 +49794,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 371 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -41703,7 +49825,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 372 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -41726,10 +49848,10 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 373 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _curryN = __webpack_require__(42);
+var _curryN = __webpack_require__(43);
 var _has = __webpack_require__(9);
 var _xfBase = __webpack_require__(7);
 
@@ -41772,11 +49894,11 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 374 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _reduced = __webpack_require__(20);
+var _reduced = __webpack_require__(21);
 var _xfBase = __webpack_require__(7);
 
 module.exports = (function() {
@@ -41798,11 +49920,11 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 375 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _reduced = __webpack_require__(20);
+var _reduced = __webpack_require__(21);
 var _xfBase = __webpack_require__(7);
 
 
@@ -41822,14 +49944,14 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 376 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _contains = __webpack_require__(24);
 var _curry2 = __webpack_require__(0);
-var _filter = __webpack_require__(202);
-var flip = __webpack_require__(41);
-var uniq = __webpack_require__(68);
+var _filter = __webpack_require__(204);
+var flip = __webpack_require__(42);
+var uniq = __webpack_require__(69);
 
 
 /**
@@ -41863,12 +49985,12 @@ module.exports = _curry2(function intersection(list1, list2) {
 
 
 /***/ }),
-/* 377 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _containsWith = __webpack_require__(62);
+var _containsWith = __webpack_require__(63);
 var _curry3 = __webpack_require__(3);
-var uniqWith = __webpack_require__(69);
+var uniqWith = __webpack_require__(70);
 
 
 /**
@@ -41928,7 +50050,7 @@ module.exports = _curry3(function intersectionWith(pred, list1, list2) {
 
 
 /***/ }),
-/* 378 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _checkForMethod = __webpack_require__(30);
@@ -41969,14 +50091,14 @@ module.exports = _curry2(_checkForMethod('intersperse', function intersperse(sep
 
 
 /***/ }),
-/* 379 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _clone = __webpack_require__(198);
+var _clone = __webpack_require__(200);
 var _curry3 = __webpack_require__(3);
-var _isTransformer = __webpack_require__(64);
-var _reduce = __webpack_require__(11);
-var _stepCat = __webpack_require__(357);
+var _isTransformer = __webpack_require__(65);
+var _reduce = __webpack_require__(12);
+var _stepCat = __webpack_require__(364);
 
 
 /**
@@ -42024,12 +50146,12 @@ module.exports = _curry3(function into(acc, xf, list) {
 
 
 /***/ }),
-/* 380 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
 var _has = __webpack_require__(9);
-var keys = __webpack_require__(15);
+var keys = __webpack_require__(16);
 
 
 /**
@@ -42072,11 +50194,11 @@ module.exports = _curry1(function invert(obj) {
 
 
 /***/ }),
-/* 381 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var keys = __webpack_require__(15);
+var keys = __webpack_require__(16);
 
 
 /**
@@ -42121,12 +50243,12 @@ module.exports = _curry1(function invertObj(obj) {
 
 
 /***/ }),
-/* 382 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var empty = __webpack_require__(196);
-var equals = __webpack_require__(13);
+var empty = __webpack_require__(198);
+var equals = __webpack_require__(14);
 
 
 /**
@@ -42156,7 +50278,7 @@ module.exports = _curry1(function isEmpty(x) {
 
 
 /***/ }),
-/* 383 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -42183,7 +50305,7 @@ module.exports = _curry1(function isNil(x) { return x == null; });
 
 
 /***/ }),
-/* 384 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var invoker = __webpack_require__(31);
@@ -42212,7 +50334,7 @@ module.exports = invoker(1, 'join');
 
 
 /***/ }),
-/* 385 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -42249,12 +50371,12 @@ module.exports = _curry1(function keysIn(obj) {
 
 
 /***/ }),
-/* 386 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isArray = __webpack_require__(19);
-var equals = __webpack_require__(13);
+var _isArray = __webpack_require__(20);
+var equals = __webpack_require__(14);
 
 
 /**
@@ -42293,13 +50415,13 @@ module.exports = _curry2(function lastIndexOf(target, xs) {
 
 
 /***/ }),
-/* 387 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var lens = __webpack_require__(47);
+var lens = __webpack_require__(48);
 var nth = __webpack_require__(33);
-var update = __webpack_require__(234);
+var update = __webpack_require__(236);
 
 
 /**
@@ -42328,12 +50450,12 @@ module.exports = _curry1(function lensIndex(n) {
 
 
 /***/ }),
-/* 388 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var assocPath = __webpack_require__(185);
-var lens = __webpack_require__(47);
+var assocPath = __webpack_require__(187);
+var lens = __webpack_require__(48);
 var path = __webpack_require__(34);
 
 
@@ -42367,13 +50489,13 @@ module.exports = _curry1(function lensPath(p) {
 
 
 /***/ }),
-/* 389 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var assoc = __webpack_require__(39);
-var lens = __webpack_require__(47);
-var prop = __webpack_require__(65);
+var assoc = __webpack_require__(40);
+var lens = __webpack_require__(48);
+var prop = __webpack_require__(66);
 
 
 /**
@@ -42402,7 +50524,7 @@ module.exports = _curry1(function lensProp(k) {
 
 
 /***/ }),
-/* 390 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -42433,7 +50555,7 @@ module.exports = _curry2(function lt(a, b) { return a < b; });
 
 
 /***/ }),
-/* 391 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -42464,7 +50586,7 @@ module.exports = _curry2(function lte(a, b) { return a <= b; });
 
 
 /***/ }),
-/* 392 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -42519,7 +50641,7 @@ module.exports = _curry3(function mapAccum(fn, acc, list) {
 
 
 /***/ }),
-/* 393 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -42576,12 +50698,12 @@ module.exports = _curry3(function mapAccumRight(fn, acc, list) {
 
 
 /***/ }),
-/* 394 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _reduce = __webpack_require__(11);
-var keys = __webpack_require__(15);
+var _reduce = __webpack_require__(12);
+var keys = __webpack_require__(16);
 
 
 /**
@@ -42614,7 +50736,7 @@ module.exports = _curry2(function mapObjIndexed(fn, obj) {
 
 
 /***/ }),
-/* 395 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -42647,11 +50769,11 @@ module.exports = _curry2(function match(rx, str) {
 
 
 /***/ }),
-/* 396 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isInteger = __webpack_require__(205);
+var _isInteger = __webpack_require__(207);
 
 
 /**
@@ -42694,7 +50816,7 @@ module.exports = _curry2(function mathMod(m, p) {
 
 
 /***/ }),
-/* 397 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -42730,11 +50852,11 @@ module.exports = _curry3(function maxBy(f, a, b) {
 
 
 /***/ }),
-/* 398 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var mean = __webpack_require__(217);
+var mean = __webpack_require__(219);
 
 
 /**
@@ -42767,10 +50889,10 @@ module.exports = _curry1(function median(list) {
 
 
 /***/ }),
-/* 399 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
+var _arity = __webpack_require__(15);
 var _curry1 = __webpack_require__(2);
 var _has = __webpack_require__(9);
 var toString = __webpack_require__(36);
@@ -42815,10 +50937,10 @@ module.exports = _curry1(function memoize(fn) {
 
 
 /***/ }),
-/* 400 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _assign = __webpack_require__(61);
+var _assign = __webpack_require__(62);
 var _curry2 = __webpack_require__(0);
 
 
@@ -42851,10 +50973,10 @@ module.exports = _curry2(function merge(l, r) {
 
 
 /***/ }),
-/* 401 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _assign = __webpack_require__(61);
+var _assign = __webpack_require__(62);
 var _curry1 = __webpack_require__(2);
 
 
@@ -42881,11 +51003,11 @@ module.exports = _curry1(function mergeAll(list) {
 
 
 /***/ }),
-/* 402 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var mergeWithKey = __webpack_require__(218);
+var mergeWithKey = __webpack_require__(220);
 
 
 /**
@@ -42920,7 +51042,7 @@ module.exports = _curry3(function mergeWith(fn, l, r) {
 
 
 /***/ }),
-/* 403 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -42947,7 +51069,7 @@ module.exports = _curry2(function min(a, b) { return b < a ? b : a; });
 
 
 /***/ }),
-/* 404 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -42983,7 +51105,7 @@ module.exports = _curry3(function minBy(f, a, b) {
 
 
 /***/ }),
-/* 405 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -43018,7 +51140,7 @@ module.exports = _curry2(function modulo(a, b) { return a % b; });
 
 
 /***/ }),
-/* 406 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -43042,14 +51164,14 @@ module.exports = _curry1(function negate(n) { return -n; });
 
 
 /***/ }),
-/* 407 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _complement = __webpack_require__(200);
+var _complement = __webpack_require__(202);
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xany = __webpack_require__(209);
-var any = __webpack_require__(183);
+var _xany = __webpack_require__(211);
+var any = __webpack_require__(185);
 
 
 /**
@@ -43078,7 +51200,7 @@ module.exports = _curry2(_complement(_dispatchable(['any'], _xany, any)));
 
 
 /***/ }),
-/* 408 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -43113,11 +51235,11 @@ module.exports = _curry1(function nthArg(n) {
 
 
 /***/ }),
-/* 409 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _of = __webpack_require__(353);
+var _of = __webpack_require__(360);
 
 
 /**
@@ -43142,7 +51264,7 @@ module.exports = _curry1(_of);
 
 
 /***/ }),
-/* 410 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _contains = __webpack_require__(24);
@@ -43177,10 +51299,10 @@ module.exports = _curry2(function omit(names, obj) {
 
 
 /***/ }),
-/* 411 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
+var _arity = __webpack_require__(15);
 var _curry1 = __webpack_require__(2);
 
 
@@ -43218,7 +51340,7 @@ module.exports = _curry1(function once(fn) {
 
 
 /***/ }),
-/* 412 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -43244,11 +51366,11 @@ module.exports = _curry2(function pair(fst, snd) { return [fst, snd]; });
 
 
 /***/ }),
-/* 413 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
-var _createPartialApplicator = __webpack_require__(201);
+var _concat = __webpack_require__(13);
+var _createPartialApplicator = __webpack_require__(203);
 
 
 /**
@@ -43283,12 +51405,12 @@ module.exports = _createPartialApplicator(_concat);
 
 
 /***/ }),
-/* 414 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
-var _createPartialApplicator = __webpack_require__(201);
-var flip = __webpack_require__(41);
+var _concat = __webpack_require__(13);
+var _createPartialApplicator = __webpack_require__(203);
+var flip = __webpack_require__(42);
 
 
 /**
@@ -43319,12 +51441,12 @@ module.exports = _createPartialApplicator(flip(_concat));
 
 
 /***/ }),
-/* 415 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var filter = __webpack_require__(59);
-var juxt = __webpack_require__(213);
-var reject = __webpack_require__(51);
+var filter = __webpack_require__(60);
+var juxt = __webpack_require__(215);
+var reject = __webpack_require__(52);
 
 
 /**
@@ -43354,11 +51476,11 @@ module.exports = juxt([filter, reject]);
 
 
 /***/ }),
-/* 416 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var equals = __webpack_require__(13);
+var equals = __webpack_require__(14);
 var path = __webpack_require__(34);
 
 
@@ -43392,11 +51514,11 @@ module.exports = _curry3(function pathEq(_path, val, obj) {
 
 
 /***/ }),
-/* 417 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var defaultTo = __webpack_require__(190);
+var defaultTo = __webpack_require__(192);
 var path = __webpack_require__(34);
 
 
@@ -43425,7 +51547,7 @@ module.exports = _curry3(function pathOr(d, p, obj) {
 
 
 /***/ }),
-/* 418 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -43457,7 +51579,7 @@ module.exports = _curry3(function pathSatisfies(pred, propPath, obj) {
 
 
 /***/ }),
-/* 419 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -43495,7 +51617,7 @@ module.exports = _curry2(function pick(names, obj) {
 
 
 /***/ }),
-/* 420 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -43533,11 +51655,11 @@ module.exports = _curry2(function pickBy(test, obj) {
 
 
 /***/ }),
-/* 421 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var composeK = __webpack_require__(187);
-var reverse = __webpack_require__(52);
+var composeK = __webpack_require__(189);
+var reverse = __webpack_require__(53);
 
 /**
  * Returns the left-to-right Kleisli composition of the provided functions,
@@ -43582,11 +51704,11 @@ module.exports = function pipeK() {
 
 
 /***/ }),
-/* 422 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var multiply = __webpack_require__(219);
-var reduce = __webpack_require__(16);
+var multiply = __webpack_require__(221);
+var reduce = __webpack_require__(17);
 
 
 /**
@@ -43608,13 +51730,13 @@ module.exports = reduce(multiply, 1);
 
 
 /***/ }),
-/* 423 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _map = __webpack_require__(46);
-var identity = __webpack_require__(60);
-var pickAll = __webpack_require__(224);
-var useWith = __webpack_require__(235);
+var _map = __webpack_require__(47);
+var identity = __webpack_require__(61);
+var pickAll = __webpack_require__(226);
+var useWith = __webpack_require__(237);
 
 
 /**
@@ -43640,11 +51762,11 @@ module.exports = useWith(_map, [pickAll, identity]); // passing `identity` gives
 
 
 /***/ }),
-/* 424 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var equals = __webpack_require__(13);
+var equals = __webpack_require__(14);
 
 
 /**
@@ -43677,11 +51799,11 @@ module.exports = _curry3(function propEq(name, val, obj) {
 
 
 /***/ }),
-/* 425 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var is = __webpack_require__(212);
+var is = __webpack_require__(214);
 
 
 /**
@@ -43710,7 +51832,7 @@ module.exports = _curry3(function propIs(type, name, obj) {
 
 
 /***/ }),
-/* 426 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -43749,7 +51871,7 @@ module.exports = _curry3(function propOr(val, p, obj) {
 
 
 /***/ }),
-/* 427 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -43779,7 +51901,7 @@ module.exports = _curry3(function propSatisfies(pred, name, obj) {
 
 
 /***/ }),
-/* 428 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -43820,11 +51942,11 @@ module.exports = _curry2(function props(ps, obj) {
 
 
 /***/ }),
-/* 429 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isNumber = __webpack_require__(206);
+var _isNumber = __webpack_require__(208);
 
 
 /**
@@ -43858,12 +51980,12 @@ module.exports = _curry2(function range(from, to) {
 
 
 /***/ }),
-/* 430 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _curryN = __webpack_require__(42);
-var _reduce = __webpack_require__(11);
-var _reduced = __webpack_require__(20);
+var _curryN = __webpack_require__(43);
+var _reduce = __webpack_require__(12);
+var _reduced = __webpack_require__(21);
 
 
 /**
@@ -43903,11 +52025,11 @@ module.exports = _curryN(4, [], function _reduceWhile(pred, fn, a, list) {
 
 
 /***/ }),
-/* 431 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _reduced = __webpack_require__(20);
+var _reduced = __webpack_require__(21);
 
 /**
  * Returns a value wrapped to indicate that it is the final value of the reduce
@@ -43937,7 +52059,7 @@ module.exports = _curry1(_reduced);
 
 
 /***/ }),
-/* 432 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -43970,12 +52092,12 @@ module.exports = _curry3(function remove(start, count, list) {
 
 
 /***/ }),
-/* 433 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var always = __webpack_require__(27);
-var times = __webpack_require__(232);
+var times = __webpack_require__(234);
 
 
 /**
@@ -44006,7 +52128,7 @@ module.exports = _curry2(function repeat(value, n) {
 
 
 /***/ }),
-/* 434 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -44038,7 +52160,7 @@ module.exports = _curry3(function replace(regex, replacement, str) {
 
 
 /***/ }),
-/* 435 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -44078,12 +52200,12 @@ module.exports = _curry3(function scan(fn, acc, list) {
 
 
 /***/ }),
-/* 436 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
 var always = __webpack_require__(27);
-var over = __webpack_require__(223);
+var over = __webpack_require__(225);
 
 
 /**
@@ -44114,7 +52236,7 @@ module.exports = _curry3(function set(lens, v, x) {
 
 
 /***/ }),
-/* 437 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -44146,7 +52268,7 @@ module.exports = _curry2(function sort(comparator, list) {
 
 
 /***/ }),
-/* 438 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -44194,7 +52316,7 @@ module.exports = _curry2(function sortBy(fn, list) {
 
 
 /***/ }),
-/* 439 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -44246,7 +52368,7 @@ module.exports = _curry2(function sortWith(fns, list) {
 
 
 /***/ }),
-/* 440 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var invoker = __webpack_require__(31);
@@ -44276,11 +52398,11 @@ module.exports = invoker(1, 'split');
 
 
 /***/ }),
-/* 441 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var length = __webpack_require__(215);
+var length = __webpack_require__(217);
 var slice = __webpack_require__(25);
 
 
@@ -44308,7 +52430,7 @@ module.exports = _curry2(function splitAt(index, array) {
 
 
 /***/ }),
-/* 442 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -44346,7 +52468,7 @@ module.exports = _curry2(function splitEvery(n, list) {
 
 
 /***/ }),
-/* 443 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -44386,7 +52508,7 @@ module.exports = _curry2(function splitWhen(pred, list) {
 
 
 /***/ }),
-/* 444 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -44421,12 +52543,12 @@ module.exports = _curry2(function subtract(a, b) {
 
 
 /***/ }),
-/* 445 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var concat = __webpack_require__(58);
-var difference = __webpack_require__(191);
+var concat = __webpack_require__(59);
+var difference = __webpack_require__(193);
 
 
 /**
@@ -44453,12 +52575,12 @@ module.exports = _curry2(function symmetricDifference(list1, list2) {
 
 
 /***/ }),
-/* 446 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var concat = __webpack_require__(58);
-var differenceWith = __webpack_require__(192);
+var concat = __webpack_require__(59);
+var differenceWith = __webpack_require__(194);
 
 
 /**
@@ -44489,11 +52611,11 @@ module.exports = _curry3(function symmetricDifferenceWith(pred, list1, list2) {
 
 
 /***/ }),
-/* 447 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var drop = __webpack_require__(194);
+var drop = __webpack_require__(196);
 
 
 /**
@@ -44524,7 +52646,7 @@ module.exports = _curry2(function takeLast(n, xs) {
 
 
 /***/ }),
-/* 448 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -44562,12 +52684,12 @@ module.exports = _curry2(function takeLastWhile(fn, list) {
 
 
 /***/ }),
-/* 449 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xtakeWhile = __webpack_require__(375);
+var _xtakeWhile = __webpack_require__(382);
 
 
 /**
@@ -44607,7 +52729,7 @@ module.exports = _curry2(_dispatchable(['takeWhile'], _xtakeWhile, function take
 
 
 /***/ }),
-/* 450 */
+/* 457 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -44638,12 +52760,12 @@ module.exports = _curry2(function tap(fn, x) {
 
 
 /***/ }),
-/* 451 */
+/* 458 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _cloneRegExp = __webpack_require__(199);
+var _cloneRegExp = __webpack_require__(201);
 var _curry2 = __webpack_require__(0);
-var _isRegExp = __webpack_require__(351);
+var _isRegExp = __webpack_require__(358);
 var toString = __webpack_require__(36);
 
 
@@ -44673,7 +52795,7 @@ module.exports = _curry2(function test(pattern, str) {
 
 
 /***/ }),
-/* 452 */
+/* 459 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var invoker = __webpack_require__(31);
@@ -44698,7 +52820,7 @@ module.exports = invoker(0, 'toLowerCase');
 
 
 /***/ }),
-/* 453 */
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -44735,7 +52857,7 @@ module.exports = _curry1(function toPairs(obj) {
 
 
 /***/ }),
-/* 454 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -44772,7 +52894,7 @@ module.exports = _curry1(function toPairsIn(obj) {
 
 
 /***/ }),
-/* 455 */
+/* 462 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var invoker = __webpack_require__(31);
@@ -44797,11 +52919,11 @@ module.exports = invoker(0, 'toUpperCase');
 
 
 /***/ }),
-/* 456 */
+/* 463 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _reduce = __webpack_require__(11);
-var _xwrap = __webpack_require__(211);
+var _reduce = __webpack_require__(12);
+var _xwrap = __webpack_require__(213);
 var curryN = __webpack_require__(8);
 
 
@@ -44855,7 +52977,7 @@ module.exports = curryN(4, function transduce(xf, fn, acc, list) {
 
 
 /***/ }),
-/* 457 */
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -44906,12 +53028,12 @@ module.exports = _curry1(function transpose(outerlist) {
 
 
 /***/ }),
-/* 458 */
+/* 465 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var map = __webpack_require__(10);
-var sequence = __webpack_require__(229);
+var map = __webpack_require__(11);
+var sequence = __webpack_require__(231);
 
 
 /**
@@ -44946,7 +53068,7 @@ module.exports = _curry3(function traverse(of, f, traversable) {
 
 
 /***/ }),
-/* 459 */
+/* 466 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -44988,11 +53110,11 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 460 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _arity = __webpack_require__(14);
-var _concat = __webpack_require__(12);
+var _arity = __webpack_require__(15);
+var _concat = __webpack_require__(13);
 var _curry2 = __webpack_require__(0);
 
 
@@ -45029,7 +53151,7 @@ module.exports = _curry2(function _tryCatch(tryer, catcher) {
 
 
 /***/ }),
-/* 461 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -45067,11 +53189,11 @@ module.exports = _curry1(function unapply(fn) {
 
 
 /***/ }),
-/* 462 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var nAry = __webpack_require__(49);
+var nAry = __webpack_require__(50);
 
 
 /**
@@ -45107,7 +53229,7 @@ module.exports = _curry1(function unary(fn) {
 
 
 /***/ }),
-/* 463 */
+/* 470 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -45151,7 +53273,7 @@ module.exports = _curry2(function uncurryN(depth, fn) {
 
 
 /***/ }),
-/* 464 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -45194,13 +53316,13 @@ module.exports = _curry2(function unfold(fn, seed) {
 
 
 /***/ }),
-/* 465 */
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
+var _concat = __webpack_require__(13);
 var _curry2 = __webpack_require__(0);
-var compose = __webpack_require__(57);
-var uniq = __webpack_require__(68);
+var compose = __webpack_require__(58);
+var uniq = __webpack_require__(69);
 
 
 /**
@@ -45224,12 +53346,12 @@ module.exports = _curry2(compose(uniq, _concat));
 
 
 /***/ }),
-/* 466 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _concat = __webpack_require__(12);
+var _concat = __webpack_require__(13);
 var _curry3 = __webpack_require__(3);
-var uniqWith = __webpack_require__(69);
+var uniqWith = __webpack_require__(70);
 
 
 /**
@@ -45260,7 +53382,7 @@ module.exports = _curry3(function unionWith(pred, list1, list2) {
 
 
 /***/ }),
-/* 467 */
+/* 474 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -45297,11 +53419,11 @@ module.exports = _curry3(function unless(pred, whenFalseFn, x) {
 
 
 /***/ }),
-/* 468 */
+/* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _identity = __webpack_require__(63);
-var chain = __webpack_require__(56);
+var _identity = __webpack_require__(64);
+var chain = __webpack_require__(57);
 
 
 /**
@@ -45325,7 +53447,7 @@ module.exports = chain(_identity);
 
 
 /***/ }),
-/* 469 */
+/* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -45360,7 +53482,7 @@ module.exports = _curry3(function until(pred, fn, init) {
 
 
 /***/ }),
-/* 470 */
+/* 477 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
@@ -45397,7 +53519,7 @@ module.exports = _curry1(function valuesIn(obj) {
 
 
 /***/ }),
-/* 471 */
+/* 478 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -45439,7 +53561,7 @@ module.exports = (function() {
 
 
 /***/ }),
-/* 472 */
+/* 479 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -45479,13 +53601,13 @@ module.exports = _curry3(function when(pred, whenTrueFn, x) {
 
 
 /***/ }),
-/* 473 */
+/* 480 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var equals = __webpack_require__(13);
-var map = __webpack_require__(10);
-var where = __webpack_require__(237);
+var equals = __webpack_require__(14);
+var map = __webpack_require__(11);
+var where = __webpack_require__(239);
 
 
 /**
@@ -45521,13 +53643,13 @@ module.exports = _curry2(function whereEq(spec, testObj) {
 
 
 /***/ }),
-/* 474 */
+/* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _contains = __webpack_require__(24);
 var _curry2 = __webpack_require__(0);
-var flip = __webpack_require__(41);
-var reject = __webpack_require__(51);
+var flip = __webpack_require__(42);
+var reject = __webpack_require__(52);
 
 
 /**
@@ -45555,7 +53677,7 @@ module.exports = _curry2(function(xs, list) {
 
 
 /***/ }),
-/* 475 */
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -45598,7 +53720,7 @@ module.exports = _curry2(function xprod(a, b) { // = xprodWith(prepend); (takes 
 
 
 /***/ }),
-/* 476 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -45636,7 +53758,7 @@ module.exports = _curry2(function zip(a, b) {
 
 
 /***/ }),
-/* 477 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
@@ -45672,7 +53794,7 @@ module.exports = _curry2(function zipObj(keys, values) {
 
 
 /***/ }),
-/* 478 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
@@ -45715,17 +53837,17 @@ module.exports = _curry3(function zipWith(fn, a, b) {
 
 
 /***/ }),
-/* 479 */
+/* 486 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
-var invariant = __webpack_require__(273);
-var actionTypesFor_1 = __webpack_require__(70);
-var assertNotArray_1 = __webpack_require__(246);
-var constants_1 = __webpack_require__(5);
-var getDefaultConfig_1 = __webpack_require__(480);
+var r = __webpack_require__(5);
+var invariant = __webpack_require__(279);
+var actionTypesFor_1 = __webpack_require__(71);
+var assertNotArray_1 = __webpack_require__(248);
+var constants_1 = __webpack_require__(4);
+var getDefaultConfig_1 = __webpack_require__(487);
 // const invariant = require("invariant")
 function actionCreatorsFor(resourceName, config) {
     if (resourceName == null)
@@ -45865,7 +53987,7 @@ exports.default = actionCreatorsFor;
 
 
 /***/ }),
-/* 480 */
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45881,13 +54003,13 @@ exports.default = getDefaultConfig;
 
 
 /***/ }),
-/* 481 */
+/* 488 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
-var wrapArray_1 = __webpack_require__(53);
+var r = __webpack_require__(5);
+var wrapArray_1 = __webpack_require__(54);
 function assertHasKey(config, scope, recordOrRecords) {
     var key = config.key;
     var records = wrapArray_1.default(recordOrRecords);
@@ -45902,12 +54024,12 @@ exports.default = assertHasKey;
 
 
 /***/ }),
-/* 482 */
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var reducersFor_1 = __webpack_require__(490);
+var reducersFor_1 = __webpack_require__(497);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
     reducersFor: reducersFor_1.default,
@@ -45915,14 +54037,14 @@ exports.default = {
 
 
 /***/ }),
-/* 483 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(17);
-var remove_1 = __webpack_require__(244);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(18);
+var remove_1 = __webpack_require__(246);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -45937,14 +54059,14 @@ exports.default = error;
 
 
 /***/ }),
-/* 484 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var start_1 = __webpack_require__(238);
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(17);
+var start_1 = __webpack_require__(240);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
 var invariantArgs = {
@@ -45962,29 +54084,36 @@ exports.default = start;
 
 
 /***/ }),
-/* 485 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(17);
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(18);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
     canBeArray: false,
 };
-function success(config, current, addedRecord, clientGenKey) {
+function success(config, current, addedRecord, clientGeneratedKey) {
     invariants_1.default(invariantArgs, config, current, addedRecord);
     var key = config.key;
     var done = false;
+    // Keep the clientGeneratedKey if provided
+    if (clientGeneratedKey != null) {
+        addedRecord = r.merge(addedRecord, (_a = {},
+            _a[constants_1.default.SPECIAL_KEYS.CLIENT_GENERATED_ID] = clientGeneratedKey,
+            _a));
+    }
     // Update existing records
     var updatedCollection = current.map(function (record) {
         var recordKey = record[key];
         if (recordKey == null)
             throw new Error('Expected record to have ' + key);
         var isSameKey = recordKey === addedRecord[key];
-        var isSameClientGetKey = (clientGenKey != null && clientGenKey === recordKey);
+        var isSameClientGetKey = (clientGeneratedKey != null && clientGeneratedKey === recordKey);
         if (isSameKey || isSameClientGetKey) {
             done = true;
             return addedRecord;
@@ -45998,21 +54127,22 @@ function success(config, current, addedRecord, clientGenKey) {
         updatedCollection = updatedCollection.concat([addedRecord]);
     }
     return updatedCollection;
+    var _a;
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = success;
 
 
 /***/ }),
-/* 486 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
-var constants_1 = __webpack_require__(5);
-var findByKey_1 = __webpack_require__(71);
-var invariants_1 = __webpack_require__(17);
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+var findByKey_1 = __webpack_require__(72);
+var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_ERROR;
 var invariantArgs = {
@@ -46032,15 +54162,15 @@ exports.default = error;
 
 
 /***/ }),
-/* 487 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var start_1 = __webpack_require__(239);
-var constants_1 = __webpack_require__(5);
-var findByKey_1 = __webpack_require__(71);
-var invariants_1 = __webpack_require__(17);
+var start_1 = __webpack_require__(241);
+var constants_1 = __webpack_require__(4);
+var findByKey_1 = __webpack_require__(72);
+var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_START;
 var invariantArgs = {
@@ -46060,14 +54190,14 @@ exports.default = start;
 
 
 /***/ }),
-/* 488 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
-var invariants_1 = __webpack_require__(17);
-var constants_1 = __webpack_require__(5);
+var r = __webpack_require__(5);
+var invariants_1 = __webpack_require__(18);
+var constants_1 = __webpack_require__(4);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -46087,16 +54217,16 @@ exports.default = success;
 
 
 /***/ }),
-/* 489 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var assertAllHaveKeys_1 = __webpack_require__(245);
-var constants_1 = __webpack_require__(5);
+var assertAllHaveKeys_1 = __webpack_require__(247);
+var constants_1 = __webpack_require__(4);
 var store_1 = __webpack_require__(22);
-var wrapArray_1 = __webpack_require__(53);
-var invariants_1 = __webpack_require__(17);
+var wrapArray_1 = __webpack_require__(54);
+var invariants_1 = __webpack_require__(18);
 var reducerName = constants_1.default.REDUCER_NAMES.FETCH_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -46115,23 +54245,23 @@ exports.default = success;
 
 
 /***/ }),
-/* 490 */
+/* 497 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var reducersFor_1 = __webpack_require__(240);
-var error_1 = __webpack_require__(483);
-var start_1 = __webpack_require__(484);
-var success_1 = __webpack_require__(485);
-var error_2 = __webpack_require__(486);
-var start_2 = __webpack_require__(487);
-var success_2 = __webpack_require__(488);
-var success_3 = __webpack_require__(489);
-var error_3 = __webpack_require__(493);
-var start_3 = __webpack_require__(494);
-var success_4 = __webpack_require__(495);
-var r = __webpack_require__(4);
+var reducersFor_1 = __webpack_require__(242);
+var error_1 = __webpack_require__(490);
+var start_1 = __webpack_require__(491);
+var success_1 = __webpack_require__(492);
+var error_2 = __webpack_require__(493);
+var start_2 = __webpack_require__(494);
+var success_2 = __webpack_require__(495);
+var success_3 = __webpack_require__(496);
+var error_3 = __webpack_require__(500);
+var start_3 = __webpack_require__(501);
+var success_4 = __webpack_require__(502);
+var r = __webpack_require__(5);
 var baseReducers = {
     createError: error_1.default,
     createStart: start_1.default,
@@ -46154,12 +54284,12 @@ exports.default = reducersFor;
 
 
 /***/ }),
-/* 491 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
+var r = __webpack_require__(5);
 function assert(scope, current) {
     var isArray = r.is(Array, current);
     if (!isArray)
@@ -46170,12 +54300,12 @@ exports.default = assert;
 
 
 /***/ }),
-/* 492 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var wrapArray_1 = __webpack_require__(53);
+var wrapArray_1 = __webpack_require__(54);
 /*
 Replaces an existing record in a list
 Or adds if not there
@@ -46210,15 +54340,15 @@ exports.default = merge;
 
 
 /***/ }),
-/* 493 */
+/* 500 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var error_1 = __webpack_require__(241);
-var constants_1 = __webpack_require__(5);
-var findByKey_1 = __webpack_require__(71);
-var invariants_1 = __webpack_require__(17);
+var error_1 = __webpack_require__(243);
+var constants_1 = __webpack_require__(4);
+var findByKey_1 = __webpack_require__(72);
+var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_ERROR;
 var invariantArgs = {
@@ -46241,14 +54371,14 @@ exports.default = error;
 
 
 /***/ }),
-/* 494 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var start_1 = __webpack_require__(242);
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(17);
+var start_1 = __webpack_require__(244);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
 var invariantArgs = {
@@ -46267,13 +54397,13 @@ exports.default = start;
 
 
 /***/ }),
-/* 495 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(17);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
 var invariantArgs = {
@@ -46289,12 +54419,12 @@ exports.default = success;
 
 
 /***/ }),
-/* 496 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var reducersFor_1 = __webpack_require__(504);
+var reducersFor_1 = __webpack_require__(511);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
     reducersFor: reducersFor_1.default,
@@ -46302,13 +54432,13 @@ exports.default = {
 
 
 /***/ }),
-/* 497 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(18);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
 var invariantArgs = {
@@ -46324,14 +54454,14 @@ exports.default = error;
 
 
 /***/ }),
-/* 498 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var start_1 = __webpack_require__(238);
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(18);
+var start_1 = __webpack_require__(240);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
 var invariantArgs = {
@@ -46349,47 +54479,32 @@ exports.default = start;
 
 
 /***/ }),
-/* 499 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(18);
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(19);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
     canBeArray: false,
 };
-function success(config, current, addedRecord, clientGenKey) {
+function success(config, current, addedRecord, clientGeneratedKey) {
     invariants_1.default(invariantArgs, config, current, addedRecord);
     var key = config.key;
-    var done = false;
     var addedRecordKey = addedRecord[key];
-    // Update existing records
-    var updatedCollection = r.map(function (existingRecord) {
-        var recordKey = existingRecord[key];
-        if (recordKey == null)
-            throw new Error('Expected record to have ' + key);
-        var isSameKey = recordKey === addedRecordKey;
-        var isSameClientGetKey = (clientGenKey != null && clientGenKey === recordKey);
-        if (isSameKey || isSameClientGetKey) {
-            done = true;
-            return addedRecord;
-        }
-        else {
-            return existingRecord;
-        }
-    })(current);
-    // Add if not updated
-    if (!done) {
-        var merge = (_a = {},
-            _a[addedRecordKey] = addedRecord,
-            _a);
-        updatedCollection = r.merge(updatedCollection, merge);
+    var addedRecordKeyLens = r.lensProp(addedRecordKey);
+    // Keep the cuid in the record if there is one
+    if (clientGeneratedKey != null) {
+        addedRecord = r.merge(addedRecord, (_a = {},
+            _a[constants_1.default.SPECIAL_KEYS.CLIENT_GENERATED_ID] = clientGeneratedKey,
+            _a));
     }
-    return updatedCollection;
+    var currentWithoutClientGeneratedKey = r.dissoc(clientGeneratedKey, current);
+    return r.set(addedRecordKeyLens, addedRecord, currentWithoutClientGeneratedKey);
     var _a;
 }
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -46397,14 +54512,14 @@ exports.default = success;
 
 
 /***/ }),
-/* 500 */
+/* 507 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(18);
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(19);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -46431,14 +54546,14 @@ exports.default = error;
 
 
 /***/ }),
-/* 501 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var start_1 = __webpack_require__(239);
-var invariants_1 = __webpack_require__(18);
-var constants_1 = __webpack_require__(5);
+var start_1 = __webpack_require__(241);
+var invariants_1 = __webpack_require__(19);
+var constants_1 = __webpack_require__(4);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_START;
 var invariantArgs = {
@@ -46463,14 +54578,14 @@ exports.default = start;
 
 
 /***/ }),
-/* 502 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
-var invariants_1 = __webpack_require__(18);
-var constants_1 = __webpack_require__(5);
+var r = __webpack_require__(5);
+var invariants_1 = __webpack_require__(19);
+var constants_1 = __webpack_require__(4);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -46490,16 +54605,16 @@ exports.default = success;
 
 
 /***/ }),
-/* 503 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
-var assertAllHaveKeys_1 = __webpack_require__(245);
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(18);
-var wrapArray_1 = __webpack_require__(53);
+var r = __webpack_require__(5);
+var assertAllHaveKeys_1 = __webpack_require__(247);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(19);
+var wrapArray_1 = __webpack_require__(54);
 var reducerName = constants_1.default.REDUCER_NAMES.FETCH_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -46519,23 +54634,23 @@ exports.default = success;
 
 
 /***/ }),
-/* 504 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var reducersFor_1 = __webpack_require__(240);
-var error_1 = __webpack_require__(497);
-var start_1 = __webpack_require__(498);
-var success_1 = __webpack_require__(499);
-var error_2 = __webpack_require__(500);
-var start_2 = __webpack_require__(501);
-var success_2 = __webpack_require__(502);
-var success_3 = __webpack_require__(503);
-var error_3 = __webpack_require__(508);
-var start_3 = __webpack_require__(509);
-var success_4 = __webpack_require__(510);
-var r = __webpack_require__(4);
+var reducersFor_1 = __webpack_require__(242);
+var error_1 = __webpack_require__(504);
+var start_1 = __webpack_require__(505);
+var success_1 = __webpack_require__(506);
+var error_2 = __webpack_require__(507);
+var start_2 = __webpack_require__(508);
+var success_2 = __webpack_require__(509);
+var success_3 = __webpack_require__(510);
+var error_3 = __webpack_require__(515);
+var start_3 = __webpack_require__(516);
+var success_4 = __webpack_require__(517);
+var r = __webpack_require__(5);
 var baseReducers = {
     createError: error_1.default,
     createStart: start_1.default,
@@ -46558,12 +54673,12 @@ exports.default = reducersFor;
 
 
 /***/ }),
-/* 505 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
+var r = __webpack_require__(5);
 function assertValidStore(scope, current) {
     if (!r.is(Object, current))
         throw new Error(scope + ': Expected current to be an object');
@@ -46573,12 +54688,12 @@ exports.default = assertValidStore;
 
 
 /***/ }),
-/* 506 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
+var r = __webpack_require__(5);
 /*
 Adds or replace one record
 */
@@ -46593,12 +54708,12 @@ exports.default = replace;
 
 
 /***/ }),
-/* 507 */
+/* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var r = __webpack_require__(4);
+var r = __webpack_require__(5);
 function remove(config, current, record) {
     var key = config.key;
     var recordKey = record[key];
@@ -46609,14 +54724,14 @@ exports.default = remove;
 
 
 /***/ }),
-/* 508 */
+/* 515 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var error_1 = __webpack_require__(241);
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(18);
+var error_1 = __webpack_require__(243);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_ERROR;
 var invariantArgs = {
@@ -46639,14 +54754,14 @@ exports.default = error;
 
 
 /***/ }),
-/* 509 */
+/* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var start_1 = __webpack_require__(242);
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(18);
+var start_1 = __webpack_require__(244);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
 var invariantArgs = {
@@ -46665,13 +54780,13 @@ exports.default = start;
 
 
 /***/ }),
-/* 510 */
+/* 517 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var constants_1 = __webpack_require__(5);
-var invariants_1 = __webpack_require__(18);
+var constants_1 = __webpack_require__(4);
+var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
 var invariantArgs = {
@@ -46687,7 +54802,7 @@ exports.default = success;
 
 
 /***/ }),
-/* 511 */
+/* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46705,7 +54820,7 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 exports.default = promiseMiddleware;
 
-var _isPromise = __webpack_require__(512);
+var _isPromise = __webpack_require__(519);
 
 var _isPromise2 = _interopRequireDefault(_isPromise);
 
@@ -46862,7 +54977,7 @@ function promiseMiddleware() {
 }
 
 /***/ }),
-/* 512 */
+/* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46884,7 +54999,7 @@ function isPromise(value) {
 }
 
 /***/ }),
-/* 513 */
+/* 520 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46913,41 +55028,14 @@ thunk.withExtraArgument = createThunkMiddleware;
 exports['default'] = thunk;
 
 /***/ }),
-/* 514 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 515 */
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.brandibbleMiddleware=exports.reducer=exports.Brandibble=undefined;var _actions=__webpack_require__(249);
+Object.defineProperty(exports,"__esModule",{value:true});exports.brandibbleMiddleware=exports.reducer=exports.Brandibble=undefined;var _actions=__webpack_require__(251);
 
 
 
-Object.keys(_actions).forEach(function(key){if(key==="default"||key==="__esModule")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _actions[key];}});});var _middleware=__webpack_require__(250);var _middleware2=_interopRequireDefault(_middleware);var _reducers=__webpack_require__(251);var _reducers2=_interopRequireDefault(_reducers);var _brandibble=__webpack_require__(252);var _brandibble2=_interopRequireDefault(_brandibble);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+Object.keys(_actions).forEach(function(key){if(key==="default"||key==="__esModule")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _actions[key];}});});var _middleware=__webpack_require__(252);var _middleware2=_interopRequireDefault(_middleware);var _reducers=__webpack_require__(253);var _reducers2=_interopRequireDefault(_reducers);var _brandibble=__webpack_require__(254);var _brandibble2=_interopRequireDefault(_brandibble);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 var Brandibble=exports.Brandibble=_brandibble2.default;
 var reducer=exports.reducer=_reducers2.default;
 var brandibbleMiddleware=exports.brandibbleMiddleware=_middleware2.default;
