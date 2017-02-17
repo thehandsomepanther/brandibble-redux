@@ -1,5 +1,5 @@
 import reduxCrud from 'redux-crud';
-const { fetchStart, fetchSuccess, fetchError } = reduxCrud.actionCreatorsFor('customerOrders');
+const { fetchStart, fetchSuccess, fetchError } = reduxCrud.actionCreatorsFor('customerOrders', {key: 'orders_id'});
 
 export function fetchCustomerOrders(brandibble, customerId, query={}) {
   return dispatch => {
