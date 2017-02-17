@@ -10,7 +10,7 @@ const {
   deleteStart,
   deleteSuccess,
   deleteError,
-} = reduxCrud.actionCreatorsFor('payments');
+} = reduxCrud.actionCreatorsFor('payments', {key: 'customer_card_id'});
 
 export function fetchPayments(brandibble) {
   return dispatch => {

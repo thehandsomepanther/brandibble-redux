@@ -1,5 +1,5 @@
 import reduxCrud from 'redux-crud';
-const { fetchStart, fetchSuccess, fetchError } = reduxCrud.actionCreatorsFor('locations');
+const { fetchStart, fetchSuccess, fetchError } = reduxCrud.actionCreatorsFor('locations', {key: 'location_id'});
 
 export function fetchLocations(brandibble, query={}) {
   return dispatch => {

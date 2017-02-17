@@ -10,7 +10,7 @@ const {
   fetchStart,
   fetchSuccess,
   fetchError,
-} = reduxCrud.actionCreatorsFor('addresses');
+} = reduxCrud.actionCreatorsFor('addresses', {key: 'customer_address_id'});
 
 export function fetchAddresses(brandibble) {
   return dispatch => {
