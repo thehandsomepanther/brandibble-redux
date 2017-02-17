@@ -6,6 +6,6 @@ export function fetchCustomerOrders(brandibble, customerId, status={}) {
     dispatch(fetchStart());
     return brandibble.customers.orders(customerId, status)
       .then(({ data }) => dispatch(fetchSuccess(data, customerId)))
-      .catch(({ errors }) => { debugger; dispatch(fetchError(errors)) });
+      .catch(({ errors }) => dispatch(fetchError(errors)));
   };
 }
