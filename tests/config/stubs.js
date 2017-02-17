@@ -1020,3 +1020,97 @@ export const productStub = {
   "width": null
 };
 
+export const customerOrdersStub = [
+  {
+    "address": {
+      "city": "New York",
+      "customer_address_id": 158082,
+      "formatted_address": "150 E 52nd St, New York, NY 10022, USA",
+      "in_delivery_zone": true,
+      "latitude": 40.7571765,
+      "longitude": -73.9707321,
+      "state_code": "NY",
+      "street_address": "150 East 52nd Street",
+      "unit": "1001",
+      "zip_code": "10022"
+    },
+    "credit_card": {
+      "card_type": "Visa",
+      "customer_card_id": 73394,
+      "last4": "1443"
+    },
+    "items": [
+      {
+        "id": 3876,
+        "instructions": "",
+        "made_for": "",
+        "name": "Organic Iced Tea",
+        "option_groups": [],
+        "price": 2.38,
+        "quantity": 1,
+        "total_price": 2.38
+      },
+      {
+        "id": 5688,
+        "instructions": "",
+        "made_for": "",
+        "name": "Charred Chicken",
+        "option_groups": [
+          {
+            "id": 473,
+            "option_items": [
+              {
+                "id": 9431,
+                "name": "Classic Brown Rice",
+                "price": 0.0
+              }
+            ]
+          },
+          {
+            "id": 474,
+            "option_items": [
+              {
+                "id": 14491,
+                "name": "Kale, Curry & Delicata Squash",
+                "price": 0.0
+              },
+              {
+                "id": 14491,
+                "name": "Kale, Curry & Delicata Squash",
+                "price": 0.0
+              }
+            ]
+          },
+          {
+            "id": 76,
+            "option_items": [
+              {
+                "id": 7917,
+                "name": "Avocado",
+                "price": 1.58
+              }
+            ]
+          }
+        ],
+        "price": 11.62,
+        "quantity": 1,
+        "total_price": 13.2
+      }
+    ],
+    "location_id": 20,
+    "location_name": "Midtown East",
+    "order_type": "olo",
+    "order_type_str": "Online Order",
+    "orders_id": 613723,
+    "payment_type": "credit",
+    "phone": "202-834-3641",
+    "requested_date": "01/23/2017",
+    "requested_time": "1:38 PM",
+    "service_type": "delivery",
+    "service_type_str": "Delivery",
+    "submitted_date": "01/23/2017",
+    "submitted_time": "12:38 PM",
+    "timezone": "US/Eastern",
+    "total": 26.46
+  }
+]
