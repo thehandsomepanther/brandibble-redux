@@ -10,7 +10,7 @@ const {
   fetchStart,
   fetchSuccess,
   fetchError,
-} = reduxCrud.actionCreatorsFor('addresses');
+} = reduxCrud.actionCreatorsFor('addresses', {key: 'customer_address_id'});
 
 export function fetchAddresses(brandibble) {
   return dispatch => {
@@ -24,18 +24,18 @@ export function fetchAddresses(brandibble) {
 export function createAddress(brandibble, data={}) {
   return dispatch => {
     const id = generateUUID();
-    dispatch(createStart({record: data, id}));
+    dispatch(createStart({record: data, customer_address_id: id}));
     return brandibble.addresses.create(data)
-      .then(({data}) => dispatch(createSuccess({id, ...data[0]})))
-      .catch(({errors}) => dispatch(createError(errors, {id, data})));
+      .then(({data}) => dispatch(createSuccess({customer_address_id: id, ...data[0]})))
+      .catch(({errors}) => dispatch(createError(errors, {customer_address_id: id, data})));
   };
 }
 
 export function deleteAddress(brandibble, id) {
   return dispatch => {
-    dispatch(deleteStart({id}));
+    dispatch(deleteStart({customer_address_id: id}));
     return brandibble.addresses.delete(id)
-      .then(() => dispatch(deleteSuccess({id})))
-      .catch(({errors}) => dispatch(fetchError(errors, {id})));
+      .then(() => dispatch(deleteSuccess({customer_address_id: id})))
+      .catch(({errors}) => dispatch(fetchError(errors, {customer_address_id: id})));
   };
 }
