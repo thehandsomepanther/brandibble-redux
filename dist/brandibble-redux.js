@@ -42332,7 +42332,7 @@ catch(function(errors){return dispatch(fetchError(errors));});
 Object.defineProperty(exports,"__esModule",{value:true});exports.
 
 
-fetchCustomerOrders=fetchCustomerOrders;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('customerOrders'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchCustomerOrders(brandibble,customerId){var query=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
+fetchCustomerOrders=fetchCustomerOrders;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('customerOrders',{key:'orders_id'}),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchCustomerOrders(brandibble,customerId){var query=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
 return function(dispatch){
 dispatch(fetchStart());
 return brandibble.customers.orders(customerId,query).
@@ -42356,7 +42356,7 @@ fetchLocations;}});Object.defineProperty(exports,'findLocationByAddress',{enumer
 Object.defineProperty(exports,"__esModule",{value:true});exports.
 
 
-fetchLocations=fetchLocations;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('locations'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchLocations(brandibble){var query=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};
+fetchLocations=fetchLocations;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('locations',{key:'location_id'}),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchLocations(brandibble){var query=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};
 return function(dispatch){
 dispatch(fetchStart());
 return brandibble.locations.index(query).
@@ -42402,12 +42402,12 @@ createAddress=createAddress;exports.
 
 
 
-deleteAddress=deleteAddress;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('addresses'),createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError,deleteStart=_reduxCrud$actionCrea.deleteStart,deleteSuccess=_reduxCrud$actionCrea.deleteSuccess,deleteError=_reduxCrud$actionCrea.deleteError,fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchAddresses(brandibble){return function(dispatch){dispatch(fetchStart());return brandibble.addresses.all().then(function(_ref){var data=_ref.data;return dispatch(fetchSuccess(data));}).catch(function(_ref2){var errors=_ref2.errors;return dispatch(fetchError(errors));});};}function createAddress(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.addresses.create(data).then(function(_ref3){var data=_ref3.data;return dispatch(createSuccess(_extends({id:id},data[0])));}).catch(function(_ref4){var errors=_ref4.errors;return dispatch(createError(errors,{id:id,data:data}));});};}function deleteAddress(brandibble,id){
+deleteAddress=deleteAddress;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('addresses',{key:'customer_address_id'}),createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError,deleteStart=_reduxCrud$actionCrea.deleteStart,deleteSuccess=_reduxCrud$actionCrea.deleteSuccess,deleteError=_reduxCrud$actionCrea.deleteError,fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError;function fetchAddresses(brandibble){return function(dispatch){dispatch(fetchStart());return brandibble.addresses.all().then(function(_ref){var data=_ref.data;return dispatch(fetchSuccess(data));}).catch(function(_ref2){var errors=_ref2.errors;return dispatch(fetchError(errors));});};}function createAddress(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,customer_address_id:id}));return brandibble.addresses.create(data).then(function(_ref3){var data=_ref3.data;return dispatch(createSuccess(_extends({customer_address_id:id},data[0])));}).catch(function(_ref4){var errors=_ref4.errors;return dispatch(createError(errors,{customer_address_id:id,data:data}));});};}function deleteAddress(brandibble,id){
 return function(dispatch){
-dispatch(deleteStart({id:id}));
+dispatch(deleteStart({customer_address_id:id}));
 return brandibble.addresses.delete(id).
-then(function(){return dispatch(deleteSuccess({id:id}));}).
-catch(function(_ref5){var errors=_ref5.errors;return dispatch(fetchError(errors,{id:id}));});
+then(function(){return dispatch(deleteSuccess({customer_address_id:id}));}).
+catch(function(_ref5){var errors=_ref5.errors;return dispatch(fetchError(errors,{customer_address_id:id}));});
 };
 }
 
@@ -42496,12 +42496,12 @@ createPayment=createPayment;exports.
 
 
 
-deletePayment=deletePayment;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('payments'),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError,deleteStart=_reduxCrud$actionCrea.deleteStart,deleteSuccess=_reduxCrud$actionCrea.deleteSuccess,deleteError=_reduxCrud$actionCrea.deleteError;function fetchPayments(brandibble){return function(dispatch){dispatch(fetchStart());return brandibble.payments.all().then(function(_ref){var data=_ref.data;return dispatch(fetchSuccess(data));}).catch(function(_ref2){var errors=_ref2.errors;return dispatch(fetchError(errors));});};}function createPayment(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.payments.create(data).then(function(_ref3){var data=_ref3.data;return dispatch(createSuccess(_extends({id:id},data[0])));}).catch(function(_ref4){var errors=_ref4.errors;return dispatch(createError(errors,{id:id,data:data}));});};}function deletePayment(brandibble,id){
+deletePayment=deletePayment;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('payments',{key:'customer_card_id'}),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError,deleteStart=_reduxCrud$actionCrea.deleteStart,deleteSuccess=_reduxCrud$actionCrea.deleteSuccess,deleteError=_reduxCrud$actionCrea.deleteError;function fetchPayments(brandibble){return function(dispatch){dispatch(fetchStart());return brandibble.payments.all().then(function(_ref){var data=_ref.data;return dispatch(fetchSuccess(data));}).catch(function(_ref2){var errors=_ref2.errors;return dispatch(fetchError(errors));});};}function createPayment(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,customer_card_id:id}));return brandibble.payments.create(data).then(function(_ref3){var data=_ref3.data;return dispatch(createSuccess(_extends({id:id},data[0])));}).catch(function(_ref4){var errors=_ref4.errors;return dispatch(createError(errors,{id:id,data:data}));});};}function deletePayment(brandibble,id){
 return function(dispatch){
-dispatch(deleteStart({id:id}));
+dispatch(deleteStart({customer_card_id:id}));
 return brandibble.payments.delete(id).
-then(function(){return dispatch(deleteSuccess({id:id}));}).
-catch(function(_ref5){var errors=_ref5.errors;return dispatch(fetchError(errors,{id:id}));});
+then(function(){return dispatch(deleteSuccess({customer_card_id:id}));}).
+catch(function(_ref5){var errors=_ref5.errors;return dispatch(fetchError(errors,{customer_card_id:id}));});
 };
 }
 
