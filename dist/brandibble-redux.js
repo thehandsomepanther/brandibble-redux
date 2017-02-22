@@ -4492,49 +4492,6 @@ module.exports = function _curry3(fn) {
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-var CREATE_ERROR = "createError";
-var CREATE_START = "createStart";
-var CREATE_SUCCESS = "createSuccess";
-var DELETE_ERROR = "deleteError";
-var DELETE_START = "deleteStart";
-var DELETE_SUCCESS = "deleteSuccess";
-var FETCH_SUCCESS = "fetchSuccess";
-var UPDATE_ERROR = "updateError";
-var UPDATE_START = "updateStart";
-var UPDATE_SUCCESS = "updateSuccess";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
-    DEFAULT_KEY: "id",
-    STORE_LIST: "STORE_LIST",
-    STORE_MAP: "STORE_MAP",
-    REDUCER_NAMES: {
-        CREATE_ERROR: CREATE_ERROR,
-        CREATE_START: CREATE_START,
-        CREATE_SUCCESS: CREATE_SUCCESS,
-        DELETE_ERROR: DELETE_ERROR,
-        DELETE_START: DELETE_START,
-        DELETE_SUCCESS: DELETE_SUCCESS,
-        FETCH_SUCCESS: FETCH_SUCCESS,
-        UPDATE_ERROR: UPDATE_ERROR,
-        UPDATE_START: UPDATE_START,
-        UPDATE_SUCCESS: UPDATE_SUCCESS
-    },
-    SPECIAL_KEYS: {
-        BUSY: "busy",
-        CLIENT_GENERATED_ID: "_cid",
-        DELETED: "deleted",
-        PENDING_CREATE: "pendingCreate",
-        PENDING_UPDATE: "pendingUpdate",
-    }
-};
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
 module.exports = {
   F: __webpack_require__(294),
   T: __webpack_require__(295),
@@ -4778,6 +4735,42 @@ module.exports = {
 
 
 /***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var CREATE_ERROR = "createError";
+var CREATE_START = "createStart";
+var CREATE_SUCCESS = "createSuccess";
+var DELETE_ERROR = "deleteError";
+var DELETE_START = "deleteStart";
+var DELETE_SUCCESS = "deleteSuccess";
+var FETCH_SUCCESS = "fetchSuccess";
+var UPDATE_ERROR = "updateError";
+var UPDATE_START = "updateStart";
+var UPDATE_SUCCESS = "updateSuccess";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = {
+    DEFAULT_KEY: "id",
+    STORE_LIST: "STORE_LIST",
+    STORE_MAP: "STORE_MAP",
+    REDUCER_NAMES: {
+        CREATE_ERROR: CREATE_ERROR,
+        CREATE_START: CREATE_START,
+        CREATE_SUCCESS: CREATE_SUCCESS,
+        DELETE_ERROR: DELETE_ERROR,
+        DELETE_START: DELETE_START,
+        DELETE_SUCCESS: DELETE_SUCCESS,
+        FETCH_SUCCESS: FETCH_SUCCESS,
+        UPDATE_ERROR: UPDATE_ERROR,
+        UPDATE_START: UPDATE_START,
+        UPDATE_SUCCESS: UPDATE_SUCCESS
+    }
+};
+
+
+/***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4846,7 +4839,7 @@ module.exports = {
 
 var actionCreatorsFor_1 = __webpack_require__(488);
 var actionTypesFor_1 = __webpack_require__(71);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var list_1 = __webpack_require__(491);
 var map_1 = __webpack_require__(505);
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -5386,7 +5379,31 @@ exports.default = {
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.RESET_USER_PASSWORD=exports.FETCH_USER=exports.RESOLVE_USER=exports.UNAUTHENTICATE_USER=exports.AUTHENTICATE_USER=exports.VALIDATE_USER=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.
+Object.defineProperty(exports,"__esModule",{value:true});exports.REMOVE_ALLERGENS=exports.ADD_ALLERGENS=exports.RESET_USER_PASSWORD=exports.FETCH_USER=exports.RESOLVE_USER=exports.UNAUTHENTICATE_USER=exports.AUTHENTICATE_USER=exports.VALIDATE_USER=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5461,6 +5478,16 @@ authenticateUser=authenticateUser;exports.
 
 
 
+
+addAllergens=addAllergens;exports.
+
+
+
+
+removeAllergens=removeAllergens;exports.
+
+
+
 unauthenticateUser=unauthenticateUser;exports.
 
 
@@ -5491,12 +5518,12 @@ createUser=createUser;exports.
 
 
 
-updateUser=updateUser;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('user'),updateStart=_reduxCrud$actionCrea.updateStart,updateSuccess=_reduxCrud$actionCrea.updateSuccess,updateError=_reduxCrud$actionCrea.updateError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var FETCH_USER=exports.FETCH_USER='FETCH_USER';var RESET_USER_PASSWORD=exports.RESET_USER_PASSWORD='RESET_USER_PASSWORD';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(_ref2){var errors=_ref2.errors;throw fail(errors);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(_ref4){var errors=_ref4.errors;throw fail(errors);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(_ref5){var errors=_ref5.errors;throw fail(errors);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function _fetchUser(brandibble,id){return{type:FETCH_USER,payload:brandibble.customers.show(id).then(function(_ref6){var data=_ref6.data;return data;}).catch(function(_ref7){var errors=_ref7.errors;return errors;})};}function _resetUserPassword(brandibble,email,success,fail){return{type:RESET_USER_PASSWORD,payload:brandibble.customers.resetPassword(email).then(success).catch(function(_ref8){var errors=_ref8.errors;throw fail(errors);})};}function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function fetchUser(brandibble,id){return function(dispatch){return dispatch(_fetchUser(brandibble,id));};}function resetUserPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetUserPassword(brandibble,email,success,fail));};}function resolveUser(brandibble){var adapter=brandibble.adapter,customers=brandibble.customers;var payload=adapter.customerToken?customers.current().then(function(_ref9){var data=_ref9.data;return data;}):Promise.resolve({});return function(dispatch){return dispatch(_resolveUser(payload));};}function createUser(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.customers.create(data).then(function(_ref10){var data=_ref10.data;return dispatch(createSuccess(_extends({id:id},data)));}).catch(function(_ref11){var errors=_ref11.errors;return dispatch(createError(errors,{id:id,data:data}));});};}function updateUser(brandibble,id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
+updateUser=updateUser;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(38);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('user'),updateStart=_reduxCrud$actionCrea.updateStart,updateSuccess=_reduxCrud$actionCrea.updateSuccess,updateError=_reduxCrud$actionCrea.updateError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var FETCH_USER=exports.FETCH_USER='FETCH_USER';var RESET_USER_PASSWORD=exports.RESET_USER_PASSWORD='RESET_USER_PASSWORD';var ADD_ALLERGENS=exports.ADD_ALLERGENS='ADD_ALLERGENS';var REMOVE_ALLERGENS=exports.REMOVE_ALLERGENS='REMOVE_ALLERGENS';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(_ref2){var errors=_ref2.errors;throw fail(errors);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(_ref4){var errors=_ref4.errors;throw fail(errors);})};}function _addAllergens(brandibble,allergens,success,fail){return{type:ADD_ALLERGENS,payload:brandibble.allergens.create(allergens).then(function(_ref5){var data=_ref5.data;success(data);return data;}).catch(function(_ref6){var errors=_ref6.errors;throw fail(errors);})};}function _removeAllergens(brandibble,allergens,success,fail){return{type:REMOVE_ALLERGENS,payload:brandibble.allergens.remove(allergens).then(function(_ref7){var data=_ref7.data;success(data);return data;}).catch(function(_ref8){var errors=_ref8.errors;throw fail(errors);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(_ref9){var errors=_ref9.errors;throw fail(errors);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function _fetchUser(brandibble,id){return{type:FETCH_USER,payload:brandibble.customers.show(id).then(function(_ref10){var data=_ref10.data;return data;}).catch(function(_ref11){var errors=_ref11.errors;return errors;})};}function _resetUserPassword(brandibble,email,success,fail){return{type:RESET_USER_PASSWORD,payload:brandibble.customers.resetPassword(email).then(success).catch(function(_ref12){var errors=_ref12.errors;throw fail(errors);})};}function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function addAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_addAllergens(brandibble,allergens,success,fail));};}function removeAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_removeAllergens(brandibble,allergens,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function fetchUser(brandibble,id){return function(dispatch){return dispatch(_fetchUser(brandibble,id));};}function resetUserPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetUserPassword(brandibble,email,success,fail));};}function resolveUser(brandibble){var adapter=brandibble.adapter,customers=brandibble.customers;var payload=adapter.customerToken?customers.current().then(function(_ref13){var data=_ref13.data;return data;}):Promise.resolve({});return function(dispatch){return dispatch(_resolveUser(payload));};}function createUser(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.customers.create(data).then(function(_ref14){var data=_ref14.data;return dispatch(createSuccess(_extends({id:id},data)));}).catch(function(_ref15){var errors=_ref15.errors;return dispatch(createError(errors,{id:id,data:data}));});};}function updateUser(brandibble,id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
 return function(dispatch){
 dispatch(updateStart({record:data,id:id}));
 return brandibble.customers.updateCurrent(data).
-then(function(_ref12){var data=_ref12.data;return dispatch(updateSuccess(_extends({id:id},data)));}).
-catch(function(_ref13){var errors=_ref13.errors;return dispatch(updateError(errors,{id:id,data:data}));});
+then(function(_ref16){var data=_ref16.data;return dispatch(updateSuccess(_extends({id:id},data)));}).
+catch(function(_ref17){var errors=_ref17.errors;return dispatch(updateError(errors,{id:id,data:data}));});
 };
 }
 
@@ -6599,7 +6626,7 @@ module.exports = _curry1(function reverse(list) {
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function wrapArray(recordOrRecords) {
     var isArray = r.is(Array, recordOrRecords);
     return isArray ? recordOrRecords : [recordOrRecords];
@@ -7108,7 +7135,7 @@ exports.default = actionTypesFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function findByKey(collection, key, id) {
     function predicate(record) {
         return record[key] === id;
@@ -19666,15 +19693,13 @@ module.exports = _curry2(function where(spec, testObj) {
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_CREATE] = true,
-        _a);
+    var recordStatus = {
+        busy: true,
+        pendingCreate: true,
+    };
     return r.merge(record, recordStatus);
-    var _a;
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19685,15 +19710,13 @@ exports.prepareRecord = prepareRecord;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.DELETED] = true,
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a);
+    var recordStatus = {
+        deleted: true,
+        busy: true,
+    };
     return r.merge(record, recordStatus);
-    var _a;
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19704,9 +19727,9 @@ exports.prepareRecord = prepareRecord;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var actionTypesFor_1 = __webpack_require__(71);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 function reducersFor(resourceName, args, emptyState, reducers) {
     if (args === void 0) { args = {}; }
     if (resourceName == null)
@@ -19758,10 +19781,9 @@ exports.default = reducersFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    return r.dissoc(constants_1.default.SPECIAL_KEYS.BUSY, record);
+    return r.omit(["busy"], record);
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19772,15 +19794,13 @@ exports.prepareRecord = prepareRecord;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_UPDATE] = true,
-        _a);
+    var recordStatus = {
+        busy: true,
+        pendingUpdate: true,
+    };
     return r.merge(record, recordStatus);
-    var _a;
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19819,7 +19839,7 @@ exports.default = invariants;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function remove(config, current, addedRecord) {
     var key = config.key;
     function predicate(record) {
@@ -19839,7 +19859,7 @@ exports.default = remove;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function default_1(config, reducerName, records) {
     // All given records must have a key
     var haskey = r.has(config.key);
@@ -19859,7 +19879,7 @@ exports.default = default_1;
 "use strict";
 
 var makeScope_1 = __webpack_require__(249);
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function default_1(config, reducerName, record) {
     var scope = makeScope_1.default(config, reducerName);
     var isArray = r.is(Array, record);
@@ -23325,17 +23345,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var statusText = response.statusText;
 
 	  if (status >= 200 && status < 300) {
-	    if (statusText === 'NO CONTENT') {
+	    if (statusText === 'NO CONTENT' || status === 204) {
 	      return true;
 	    }
-	    return response.json();
+	    try {
+	      return response.json();
+	    } catch (e) {
+	      return 'Brandibble.js: Response body could not be parsed as JSON. (Status Code: ' + status + ')';
+	    }
 	  }
 	  if (status === 500) {
 	    throw FiveHundredError;
 	  }
-	  return response.json().then(function (error) {
-	    throw error;
-	  });
+	  try {
+	    return response.json().then(function (error) {
+	      throw error;
+	    });
+	  } catch (e) {
+	    throw 'Brandibble.js: Response body could not be parsed as JSON. (Status Code: ' + status + ')';
+	  }
 	}
 
 	var Adapter = function () {
@@ -42255,6 +42283,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function all() {
 	      return this.adapter.request('GET', 'allergens');
 	    }
+	  }, {
+	    key: 'create',
+	    value: function create(allergensArr) {
+	      var data = {
+	        allergens: allergensArr
+	      };
+	      return this.adapter.request('POST', 'customers/' + this.adapter.customerId() + '/allergens', data);
+	    }
+	  }, {
+	    key: 'remove',
+	    value: function remove(allergensArr) {
+	      var data = {
+	        allergens: allergensArr
+	      };
+	      return this.adapter.request('DELETE', 'customers/' + this.adapter.customerId() + '/allergens', data);
+	    }
 	  }]);
 
 	  return Allergens;
@@ -42427,7 +42471,9 @@ resetUserPassword;}});Object.defineProperty(exports,'resolveUser',{enumerable:tr
 resolveUser;}});Object.defineProperty(exports,'unauthenticateUser',{enumerable:true,get:function get(){return _user.
 unauthenticateUser;}});Object.defineProperty(exports,'updateUser',{enumerable:true,get:function get(){return _user.
 updateUser;}});Object.defineProperty(exports,'validateUser',{enumerable:true,get:function get(){return _user.
-validateUser;}});
+validateUser;}});Object.defineProperty(exports,'addAllergens',{enumerable:true,get:function get(){return _user.
+addAllergens;}});Object.defineProperty(exports,'removeAllergens',{enumerable:true,get:function get(){return _user.
+removeAllergens;}});
 
 /***/ }),
 /* 262 */
@@ -42667,7 +42713,11 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=un
 
 
 
-error;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _setup=__webpack_require__(37);var _order=__webpack_require__(29);var _user=__webpack_require__(23);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('addresses'),ADDRESSES_FETCH_START=_reduxCrud$actionType2.ADDRESSES_FETCH_START,ADDRESSES_FETCH_ERROR=_reduxCrud$actionType2.ADDRESSES_FETCH_ERROR,ADDRESSES_CREATE_START=_reduxCrud$actionType2.ADDRESSES_CREATE_START,ADDRESSES_CREATE_ERROR=_reduxCrud$actionType2.ADDRESSES_CREATE_ERROR,ADDRESSES_DELETE_START=_reduxCrud$actionType2.ADDRESSES_DELETE_START,ADDRESSES_DELETE_ERROR=_reduxCrud$actionType2.ADDRESSES_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('allergens'),ALLERGENS_FETCH_START=_reduxCrud$actionType3.ALLERGENS_FETCH_START,ALLERGENS_FETCH_ERROR=_reduxCrud$actionType3.ALLERGENS_FETCH_ERROR;var _reduxCrud$actionType4=_reduxCrud2.default.actionTypesFor('locations'),LOCATIONS_FETCH_START=_reduxCrud$actionType4.LOCATIONS_FETCH_START,LOCATIONS_FETCH_ERROR=_reduxCrud$actionType4.LOCATIONS_FETCH_ERROR;var _reduxCrud$actionType5=_reduxCrud2.default.actionTypesFor('menus'),MENUS_FETCH_START=_reduxCrud$actionType5.MENUS_FETCH_START,MENUS_FETCH_ERROR=_reduxCrud$actionType5.MENUS_FETCH_ERROR;var _reduxCrud$actionType6=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType6.PAYMENTS_FETCH_START,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType6.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType6.PAYMENTS_CREATE_START,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType6.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType6.PAYMENTS_DELETE_START,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType6.PAYMENTS_DELETE_ERROR;var initialState=exports.initialState={setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocations:null,fetchMenu:null,resolveOrder:null,fetchPayments:null,createPayment:null,deletePayment:null,authenticateUser:null,createUser:null,fetchUser:null,resetUserPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+
+
+error;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _setup=__webpack_require__(37);var _order=__webpack_require__(29);var _user=__webpack_require__(23);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('addresses'),ADDRESSES_FETCH_START=_reduxCrud$actionType2.ADDRESSES_FETCH_START,ADDRESSES_FETCH_ERROR=_reduxCrud$actionType2.ADDRESSES_FETCH_ERROR,ADDRESSES_CREATE_START=_reduxCrud$actionType2.ADDRESSES_CREATE_START,ADDRESSES_CREATE_ERROR=_reduxCrud$actionType2.ADDRESSES_CREATE_ERROR,ADDRESSES_DELETE_START=_reduxCrud$actionType2.ADDRESSES_DELETE_START,ADDRESSES_DELETE_ERROR=_reduxCrud$actionType2.ADDRESSES_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('allergens'),ALLERGENS_FETCH_START=_reduxCrud$actionType3.ALLERGENS_FETCH_START,ALLERGENS_FETCH_ERROR=_reduxCrud$actionType3.ALLERGENS_FETCH_ERROR;var _reduxCrud$actionType4=_reduxCrud2.default.actionTypesFor('locations'),LOCATIONS_FETCH_START=_reduxCrud$actionType4.LOCATIONS_FETCH_START,LOCATIONS_FETCH_ERROR=_reduxCrud$actionType4.LOCATIONS_FETCH_ERROR;var _reduxCrud$actionType5=_reduxCrud2.default.actionTypesFor('menus'),MENUS_FETCH_START=_reduxCrud$actionType5.MENUS_FETCH_START,MENUS_FETCH_ERROR=_reduxCrud$actionType5.MENUS_FETCH_ERROR;var _reduxCrud$actionType6=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType6.PAYMENTS_FETCH_START,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType6.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType6.PAYMENTS_CREATE_START,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType6.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType6.PAYMENTS_DELETE_START,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType6.PAYMENTS_DELETE_ERROR;var initialState=exports.initialState={setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocations:null,fetchMenu:null,resolveOrder:null,fetchPayments:null,createPayment:null,deletePayment:null,authenticateUser:null,createUser:null,fetchUser:null,resetUserPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 
 case _setup.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:null});
@@ -42715,6 +42765,14 @@ case PAYMENTS_DELETE_ERROR:return _extends({},state,{deletePayment:action.error}
 
 case _user.AUTHENTICATE_USER+'_PENDING':return _extends({},state,{authenticateUser:null});
 case _user.AUTHENTICATE_USER+'_REJECTED':return _extends({},state,{authenticateUser:action.payload});
+
+case _user.ADD_ALLERGENS+'_PENDING':return _extends({},state,{addAllergens:null});
+case _user.ADD_ALLERGENS+'_FULFILLED':return _extends({},state,{addAllergens:action.payload});
+case _user.ADD_ALLERGENS+'_REJECTED':return _extends({},state,{addAllergens:action.error});
+
+case _user.REMOVE_ALLERGENS+'_PENDING':return _extends({},state,{removeAllergens:null});
+case _user.REMOVE_ALLERGENS+'_FULFILLED':return _extends({},state,{removeAllergens:action.payload});
+case _user.REMOVE_ALLERGENS+'_REJECTED':return _extends({},state,{removeAllergens:action.error});
 
 case _user.RESOLVE_USER+'_PENDING':return _extends({},state,{resolveUser:null});
 case _user.RESOLVE_USER+'_REJECTED':return _extends({},state,{resolveUser:action.payload});
@@ -42987,7 +43045,11 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-status;var _setup=__webpack_require__(37);var _order=__webpack_require__(29);var _user=__webpack_require__(23);var _constants=__webpack_require__(279);var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('addresses'),ADDRESSES_FETCH_START=_reduxCrud$actionType.ADDRESSES_FETCH_START,ADDRESSES_FETCH_SUCCESS=_reduxCrud$actionType.ADDRESSES_FETCH_SUCCESS,ADDRESSES_FETCH_ERROR=_reduxCrud$actionType.ADDRESSES_FETCH_ERROR,ADDRESSES_CREATE_START=_reduxCrud$actionType.ADDRESSES_CREATE_START,ADDRESSES_CREATE_SUCCESS=_reduxCrud$actionType.ADDRESSES_CREATE_SUCCESS,ADDRESSES_CREATE_ERROR=_reduxCrud$actionType.ADDRESSES_CREATE_ERROR,ADDRESSES_DELETE_START=_reduxCrud$actionType.ADDRESSES_DELETE_START,ADDRESSES_DELETE_SUCCESS=_reduxCrud$actionType.ADDRESSES_DELETE_SUCCESS,ADDRESSES_DELETE_ERROR=_reduxCrud$actionType.ADDRESSES_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('allergens'),ALLERGENS_FETCH_START=_reduxCrud$actionType2.ALLERGENS_FETCH_START,ALLERGENS_FETCH_SUCCESS=_reduxCrud$actionType2.ALLERGENS_FETCH_SUCCESS,ALLERGENS_FETCH_ERROR=_reduxCrud$actionType2.ALLERGENS_FETCH_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('locations'),LOCATIONS_FETCH_START=_reduxCrud$actionType3.LOCATIONS_FETCH_START,LOCATIONS_FETCH_SUCCESS=_reduxCrud$actionType3.LOCATIONS_FETCH_SUCCESS,LOCATIONS_FETCH_ERROR=_reduxCrud$actionType3.LOCATIONS_FETCH_ERROR;var _reduxCrud$actionType4=_reduxCrud2.default.actionTypesFor('customerOrders'),CUSTOMER_ORDERS_FETCH_START=_reduxCrud$actionType4.CUSTOMER_ORDERS_FETCH_START,CUSTOMER_ORDERS_FETCH_SUCCESS=_reduxCrud$actionType4.CUSTOMER_ORDERS_FETCH_SUCCESS,CUSTOMER_ORDERS_FETCH_ERROR=_reduxCrud$actionType4.CUSTOMER_ORDERS_FETCH_ERROR;var _reduxCrud$actionType5=_reduxCrud2.default.actionTypesFor('menus'),MENUS_FETCH_START=_reduxCrud$actionType5.MENUS_FETCH_START,MENUS_FETCH_SUCCESS=_reduxCrud$actionType5.MENUS_FETCH_SUCCESS,MENUS_FETCH_ERROR=_reduxCrud$actionType5.MENUS_FETCH_ERROR;var _reduxCrud$actionType6=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType6.PAYMENTS_FETCH_START,PAYMENTS_FETCH_SUCCESS=_reduxCrud$actionType6.PAYMENTS_FETCH_SUCCESS,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType6.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType6.PAYMENTS_CREATE_START,PAYMENTS_CREATE_SUCCESS=_reduxCrud$actionType6.PAYMENTS_CREATE_SUCCESS,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType6.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType6.PAYMENTS_DELETE_START,PAYMENTS_DELETE_SUCCESS=_reduxCrud$actionType6.PAYMENTS_DELETE_SUCCESS,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType6.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType7=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType7.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType7.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType7.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType7.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType7.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType7.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,fetchLocations:IDLE,fetchCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,fetchPayments:IDLE,createPayment:IDLE,deletePayment:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+
+
+status;var _setup=__webpack_require__(37);var _order=__webpack_require__(29);var _user=__webpack_require__(23);var _constants=__webpack_require__(279);var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('addresses'),ADDRESSES_FETCH_START=_reduxCrud$actionType.ADDRESSES_FETCH_START,ADDRESSES_FETCH_SUCCESS=_reduxCrud$actionType.ADDRESSES_FETCH_SUCCESS,ADDRESSES_FETCH_ERROR=_reduxCrud$actionType.ADDRESSES_FETCH_ERROR,ADDRESSES_CREATE_START=_reduxCrud$actionType.ADDRESSES_CREATE_START,ADDRESSES_CREATE_SUCCESS=_reduxCrud$actionType.ADDRESSES_CREATE_SUCCESS,ADDRESSES_CREATE_ERROR=_reduxCrud$actionType.ADDRESSES_CREATE_ERROR,ADDRESSES_DELETE_START=_reduxCrud$actionType.ADDRESSES_DELETE_START,ADDRESSES_DELETE_SUCCESS=_reduxCrud$actionType.ADDRESSES_DELETE_SUCCESS,ADDRESSES_DELETE_ERROR=_reduxCrud$actionType.ADDRESSES_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('allergens'),ALLERGENS_FETCH_START=_reduxCrud$actionType2.ALLERGENS_FETCH_START,ALLERGENS_FETCH_SUCCESS=_reduxCrud$actionType2.ALLERGENS_FETCH_SUCCESS,ALLERGENS_FETCH_ERROR=_reduxCrud$actionType2.ALLERGENS_FETCH_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('locations'),LOCATIONS_FETCH_START=_reduxCrud$actionType3.LOCATIONS_FETCH_START,LOCATIONS_FETCH_SUCCESS=_reduxCrud$actionType3.LOCATIONS_FETCH_SUCCESS,LOCATIONS_FETCH_ERROR=_reduxCrud$actionType3.LOCATIONS_FETCH_ERROR;var _reduxCrud$actionType4=_reduxCrud2.default.actionTypesFor('customerOrders'),CUSTOMER_ORDERS_FETCH_START=_reduxCrud$actionType4.CUSTOMER_ORDERS_FETCH_START,CUSTOMER_ORDERS_FETCH_SUCCESS=_reduxCrud$actionType4.CUSTOMER_ORDERS_FETCH_SUCCESS,CUSTOMER_ORDERS_FETCH_ERROR=_reduxCrud$actionType4.CUSTOMER_ORDERS_FETCH_ERROR;var _reduxCrud$actionType5=_reduxCrud2.default.actionTypesFor('menus'),MENUS_FETCH_START=_reduxCrud$actionType5.MENUS_FETCH_START,MENUS_FETCH_SUCCESS=_reduxCrud$actionType5.MENUS_FETCH_SUCCESS,MENUS_FETCH_ERROR=_reduxCrud$actionType5.MENUS_FETCH_ERROR;var _reduxCrud$actionType6=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType6.PAYMENTS_FETCH_START,PAYMENTS_FETCH_SUCCESS=_reduxCrud$actionType6.PAYMENTS_FETCH_SUCCESS,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType6.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType6.PAYMENTS_CREATE_START,PAYMENTS_CREATE_SUCCESS=_reduxCrud$actionType6.PAYMENTS_CREATE_SUCCESS,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType6.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType6.PAYMENTS_DELETE_START,PAYMENTS_DELETE_SUCCESS=_reduxCrud$actionType6.PAYMENTS_DELETE_SUCCESS,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType6.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType7=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType7.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType7.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType7.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType7.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType7.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType7.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLocations:IDLE,fetchCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,fetchPayments:IDLE,createPayment:IDLE,deletePayment:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _setup.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:PENDING});
 case _setup.SETUP_BRANDIBBLE+'_FULFILLED':return _extends({},state,{setupBrandibble:FULFILLED});
@@ -43045,6 +43107,14 @@ case _user.VALIDATE_USER+'_PENDING':return _extends({},state,{validateUser:PENDI
 case _user.VALIDATE_USER+'_FULFILLED':return _extends({},state,{validateUser:FULFILLED});
 case _user.VALIDATE_USER+'_REJECTED':return _extends({},state,{validateUser:REJECTED});
 
+case _user.ADD_ALLERGENS+'_PENDING':return _extends({},state,{addAllergens:PENDING});
+case _user.ADD_ALLERGENS+'_FULFILLED':return _extends({},state,{addAllergens:FULFILLED});
+case _user.ADD_ALLERGENS+'_REJECTED':return _extends({},state,{addAllergens:REJECTED});
+
+case _user.REMOVE_ALLERGENS+'_PENDING':return _extends({},state,{removeAllergens:PENDING});
+case _user.REMOVE_ALLERGENS+'_FULFILLED':return _extends({},state,{removeAllergens:FULFILLED});
+case _user.REMOVE_ALLERGENS+'_REJECTED':return _extends({},state,{removeAllergens:REJECTED});
+
 case _user.AUTHENTICATE_USER+'_PENDING':return _extends({},state,{authenticateUser:PENDING});
 case _user.AUTHENTICATE_USER+'_FULFILLED':return _extends({},state,{authenticateUser:FULFILLED});
 case _user.AUTHENTICATE_USER+'_REJECTED':return _extends({},state,{authenticateUser:REJECTED});
@@ -43081,7 +43151,7 @@ default:return state;}
 /* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.default=
+Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
 
 
 
@@ -43095,12 +43165,35 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
-attributes;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _user=__webpack_require__(23);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_CREATE_SUCCESS=_reduxCrud$actionType.USER_CREATE_SUCCESS,USER_UPDATE_SUCCESS=_reduxCrud$actionType.USER_UPDATE_SUCCESS;var initialState={};function attributes(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+
+
+
+
+
+
+
+
+attributes;var _reduxCrud=__webpack_require__(8);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _user=__webpack_require__(23);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_CREATE_SUCCESS=_reduxCrud$actionType.USER_CREATE_SUCCESS,USER_UPDATE_SUCCESS=_reduxCrud$actionType.USER_UPDATE_SUCCESS;var initialState={};function removeAllergens(removeArr,currentArr){var newArr=[];for(var i=0;i<currentArr.length;i++){if(removeArr.indexOf(currentArr[i])<0)newArr.push(currentArr[i]);}return newArr;}function attributes(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _user.RESOLVE_USER+'_FULFILLED':
 case _user.AUTHENTICATE_USER+'_FULFILLED':
 case _user.FETCH_USER+'_FULFILLED':
 return action.payload;
+
+case _user.ADD_ALLERGENS+'_FULFILLED':
+return _extends({},
+state,{
+allergens:state.allergens.concat(action.payload.added)});
+
+
+case _user.REMOVE_ALLERGENS+'_FULFILLED':
+return _extends({},
+state,{
+allergens:removeAllergens(action.payload.removed,state.allergens)});
+
+
 case USER_CREATE_SUCCESS:
 case USER_UPDATE_SUCCESS:
 return action.record;
@@ -53888,11 +53981,11 @@ module.exports = _curry3(function zipWith(fn, a, b) {
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var invariant = __webpack_require__(281);
 var actionTypesFor_1 = __webpack_require__(71);
 var assertNotArray_1 = __webpack_require__(248);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var getDefaultConfig_1 = __webpack_require__(489);
 // const invariant = require("invariant")
 function actionCreatorsFor(resourceName, config) {
@@ -54054,7 +54147,7 @@ exports.default = getDefaultConfig;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var wrapArray_1 = __webpack_require__(54);
 function assertHasKey(config, scope, recordOrRecords) {
     var key = config.key;
@@ -54088,7 +54181,7 @@ exports.default = {
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var remove_1 = __webpack_require__(246);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
@@ -54111,7 +54204,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(240);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
@@ -54135,31 +54228,24 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
     canBeArray: false,
 };
-function success(config, current, addedRecord, clientGeneratedKey) {
+function success(config, current, addedRecord, clientGenKey) {
     invariants_1.default(invariantArgs, config, current, addedRecord);
     var key = config.key;
     var done = false;
-    // Keep the clientGeneratedKey if provided
-    if (clientGeneratedKey != null) {
-        addedRecord = r.merge(addedRecord, (_a = {},
-            _a[constants_1.default.SPECIAL_KEYS.CLIENT_GENERATED_ID] = clientGeneratedKey,
-            _a));
-    }
     // Update existing records
     var updatedCollection = current.map(function (record) {
         var recordKey = record[key];
         if (recordKey == null)
             throw new Error('Expected record to have ' + key);
         var isSameKey = recordKey === addedRecord[key];
-        var isSameClientGetKey = (clientGeneratedKey != null && clientGeneratedKey === recordKey);
+        var isSameClientGetKey = (clientGenKey != null && clientGenKey === recordKey);
         if (isSameKey || isSameClientGetKey) {
             done = true;
             return addedRecord;
@@ -54173,7 +54259,6 @@ function success(config, current, addedRecord, clientGeneratedKey) {
         updatedCollection = updatedCollection.concat([addedRecord]);
     }
     return updatedCollection;
-    var _a;
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = success;
@@ -54185,8 +54270,8 @@ exports.default = success;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var findByKey_1 = __webpack_require__(72);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
@@ -54214,7 +54299,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(241);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var findByKey_1 = __webpack_require__(72);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
@@ -54241,9 +54326,9 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var invariants_1 = __webpack_require__(18);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -54269,7 +54354,7 @@ exports.default = success;
 "use strict";
 
 var assertAllHaveKeys_1 = __webpack_require__(247);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var store_1 = __webpack_require__(22);
 var wrapArray_1 = __webpack_require__(54);
 var invariants_1 = __webpack_require__(18);
@@ -54307,7 +54392,7 @@ var success_3 = __webpack_require__(498);
 var error_3 = __webpack_require__(502);
 var start_3 = __webpack_require__(503);
 var success_4 = __webpack_require__(504);
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var baseReducers = {
     createError: error_1.default,
     createStart: start_1.default,
@@ -54335,7 +54420,7 @@ exports.default = reducersFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function assert(scope, current) {
     var isArray = r.is(Array, current);
     if (!isArray)
@@ -54392,7 +54477,7 @@ exports.default = merge;
 "use strict";
 
 var error_1 = __webpack_require__(243);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var findByKey_1 = __webpack_require__(72);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
@@ -54423,7 +54508,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(244);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
@@ -54448,7 +54533,7 @@ exports.default = start;
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
@@ -54483,7 +54568,7 @@ exports.default = {
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
@@ -54506,7 +54591,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(240);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
@@ -54530,27 +54615,42 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
     canBeArray: false,
 };
-function success(config, current, addedRecord, clientGeneratedKey) {
+function success(config, current, addedRecord, clientGenKey) {
     invariants_1.default(invariantArgs, config, current, addedRecord);
     var key = config.key;
+    var done = false;
     var addedRecordKey = addedRecord[key];
-    var addedRecordKeyLens = r.lensProp(addedRecordKey);
-    // Keep the cuid in the record if there is one
-    if (clientGeneratedKey != null) {
-        addedRecord = r.merge(addedRecord, (_a = {},
-            _a[constants_1.default.SPECIAL_KEYS.CLIENT_GENERATED_ID] = clientGeneratedKey,
-            _a));
+    // Update existing records
+    var updatedCollection = r.map(function (existingRecord) {
+        var recordKey = existingRecord[key];
+        if (recordKey == null)
+            throw new Error('Expected record to have ' + key);
+        var isSameKey = recordKey === addedRecordKey;
+        var isSameClientGetKey = (clientGenKey != null && clientGenKey === recordKey);
+        if (isSameKey || isSameClientGetKey) {
+            done = true;
+            return addedRecord;
+        }
+        else {
+            return existingRecord;
+        }
+    })(current);
+    // Add if not updated
+    if (!done) {
+        var merge = (_a = {},
+            _a[addedRecordKey] = addedRecord,
+            _a);
+        updatedCollection = r.merge(updatedCollection, merge);
     }
-    var currentWithoutClientGeneratedKey = r.dissoc(clientGeneratedKey, current);
-    return r.set(addedRecordKeyLens, addedRecord, currentWithoutClientGeneratedKey);
+    return updatedCollection;
     var _a;
 }
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -54563,8 +54663,8 @@ exports.default = success;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_ERROR;
 var invariantArgs = {
@@ -54599,7 +54699,7 @@ exports.default = error;
 
 var start_1 = __webpack_require__(241);
 var invariants_1 = __webpack_require__(19);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_START;
 var invariantArgs = {
@@ -54629,9 +54729,9 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -54656,9 +54756,9 @@ exports.default = success;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var assertAllHaveKeys_1 = __webpack_require__(247);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var wrapArray_1 = __webpack_require__(54);
 var reducerName = constants_1.default.REDUCER_NAMES.FETCH_SUCCESS;
@@ -54696,7 +54796,7 @@ var success_3 = __webpack_require__(512);
 var error_3 = __webpack_require__(517);
 var start_3 = __webpack_require__(518);
 var success_4 = __webpack_require__(519);
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var baseReducers = {
     createError: error_1.default,
     createStart: start_1.default,
@@ -54724,7 +54824,7 @@ exports.default = reducersFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function assertValidStore(scope, current) {
     if (!r.is(Object, current))
         throw new Error(scope + ': Expected current to be an object');
@@ -54739,7 +54839,7 @@ exports.default = assertValidStore;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 /*
 Adds or replace one record
 */
@@ -54759,7 +54859,7 @@ exports.default = replace;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function remove(config, current, record) {
     var key = config.key;
     var recordKey = record[key];
@@ -54776,7 +54876,7 @@ exports.default = remove;
 "use strict";
 
 var error_1 = __webpack_require__(243);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_ERROR;
@@ -54806,7 +54906,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(244);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
@@ -54831,7 +54931,7 @@ exports.default = start;
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
