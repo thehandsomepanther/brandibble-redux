@@ -10,10 +10,7 @@ export const SET_ORDER_LOCATION_ID = 'SET_ORDER_LOCATION_ID';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
-  return {
-    type: RESOLVE_ORDER,
-    payload: payload
-  };
+  return { type: RESOLVE_ORDER, payload };
 }
 
 function _addLineItem(order, product, quantity) {
