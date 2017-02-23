@@ -59,10 +59,10 @@ function _setOrderLocationId(order, locationId) {
 }
 
 /* Public Functions */
-export function resolveOrder(brandibble, serviceType='delivery') {
+export function resolveOrder(brandibble, locationId=null, serviceType='delivery') {
   const { orders } = brandibble;
   const order = orders.current();
-  const payload = order ? Promise.resolve({order}) : orders.create(null, serviceType).then(({data}) => {return {order: data}});
+  const payload = order ? Promise.resolve({order}) : orders.create(locationId, serviceType).then(({data}) => {return {order: data}});
 
   return dispatch => dispatch(_resolveOrder(payload));
 }
