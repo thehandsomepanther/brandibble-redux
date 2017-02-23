@@ -4492,49 +4492,6 @@ module.exports = function _curry3(fn) {
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-var CREATE_ERROR = "createError";
-var CREATE_START = "createStart";
-var CREATE_SUCCESS = "createSuccess";
-var DELETE_ERROR = "deleteError";
-var DELETE_START = "deleteStart";
-var DELETE_SUCCESS = "deleteSuccess";
-var FETCH_SUCCESS = "fetchSuccess";
-var UPDATE_ERROR = "updateError";
-var UPDATE_START = "updateStart";
-var UPDATE_SUCCESS = "updateSuccess";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
-    DEFAULT_KEY: "id",
-    STORE_LIST: "STORE_LIST",
-    STORE_MAP: "STORE_MAP",
-    REDUCER_NAMES: {
-        CREATE_ERROR: CREATE_ERROR,
-        CREATE_START: CREATE_START,
-        CREATE_SUCCESS: CREATE_SUCCESS,
-        DELETE_ERROR: DELETE_ERROR,
-        DELETE_START: DELETE_START,
-        DELETE_SUCCESS: DELETE_SUCCESS,
-        FETCH_SUCCESS: FETCH_SUCCESS,
-        UPDATE_ERROR: UPDATE_ERROR,
-        UPDATE_START: UPDATE_START,
-        UPDATE_SUCCESS: UPDATE_SUCCESS
-    },
-    SPECIAL_KEYS: {
-        BUSY: "busy",
-        CLIENT_GENERATED_ID: "_cid",
-        DELETED: "deleted",
-        PENDING_CREATE: "pendingCreate",
-        PENDING_UPDATE: "pendingUpdate",
-    }
-};
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
 module.exports = {
   F: __webpack_require__(294),
   T: __webpack_require__(295),
@@ -4778,6 +4735,42 @@ module.exports = {
 
 
 /***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var CREATE_ERROR = "createError";
+var CREATE_START = "createStart";
+var CREATE_SUCCESS = "createSuccess";
+var DELETE_ERROR = "deleteError";
+var DELETE_START = "deleteStart";
+var DELETE_SUCCESS = "deleteSuccess";
+var FETCH_SUCCESS = "fetchSuccess";
+var UPDATE_ERROR = "updateError";
+var UPDATE_START = "updateStart";
+var UPDATE_SUCCESS = "updateSuccess";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = {
+    DEFAULT_KEY: "id",
+    STORE_LIST: "STORE_LIST",
+    STORE_MAP: "STORE_MAP",
+    REDUCER_NAMES: {
+        CREATE_ERROR: CREATE_ERROR,
+        CREATE_START: CREATE_START,
+        CREATE_SUCCESS: CREATE_SUCCESS,
+        DELETE_ERROR: DELETE_ERROR,
+        DELETE_START: DELETE_START,
+        DELETE_SUCCESS: DELETE_SUCCESS,
+        FETCH_SUCCESS: FETCH_SUCCESS,
+        UPDATE_ERROR: UPDATE_ERROR,
+        UPDATE_START: UPDATE_START,
+        UPDATE_SUCCESS: UPDATE_SUCCESS
+    }
+};
+
+
+/***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4915,7 +4908,7 @@ module.exports = function _has(prop, obj) {
 
 var actionCreatorsFor_1 = __webpack_require__(488);
 var actionTypesFor_1 = __webpack_require__(73);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var list_1 = __webpack_require__(491);
 var map_1 = __webpack_require__(505);
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -5722,9 +5715,6 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.SET_ORDER_LOCAT
 
 
 
-
-
-
 resolveOrder=resolveOrder;exports.
 
 
@@ -5765,7 +5755,7 @@ addOptionToLineItem=addOptionToLineItem;exports.
 
 
 
-removeOptionFromLineItem=removeOptionFromLineItem;var _exception=__webpack_require__(280);var _exception2=_interopRequireDefault(_exception);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var RESOLVE_ORDER=exports.RESOLVE_ORDER='RESOLVE_ORDER';var ADD_LINE_ITEM=exports.ADD_LINE_ITEM='ADD_LINE_ITEM';var SET_LINE_ITEM_QUANTITY=exports.SET_LINE_ITEM_QUANTITY='SET_LINE_ITEM_QUANTITY';var REMOVE_LINE_ITEM=exports.REMOVE_LINE_ITEM='REMOVE_LINE_ITEM';var ADD_OPTION_TO_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM='ADD_OPTION_TO_LINE_ITEM';var REMOVE_OPTION_FROM_LINE_ITEM=exports.REMOVE_OPTION_FROM_LINE_ITEM='REMOVE_OPTION_FROM_LINE_ITEM';var SET_ORDER_LOCATION_ID=exports.SET_ORDER_LOCATION_ID='SET_ORDER_LOCATION_ID';function _resolveOrder(payload){return{type:RESOLVE_ORDER,payload:payload.then(function(order){order;})};}function _addLineItem(order,product,quantity){return{type:ADD_LINE_ITEM,payload:order.addLineItem(product,quantity).then(function(lineItem){order,lineItem;})};}function _setLineItemQuantity(order,lineItem,newQuantity){return{type:SET_LINE_ITEM_QUANTITY,payload:order.setLineItemQuantity(lineItem,newQuantity).then(function(lineItem){order,lineItem;})};}function _removeLineItem(order,lineItem){return{type:REMOVE_LINE_ITEM,payload:order.removeLineItem(lineItem).then(function(remainingLineItems){order,remainingLineItems;})};}function _addOptionToLineItem(order,lineItem,optionGroup,optionItem){return{type:ADD_OPTION_TO_LINE_ITEM,payload:order.addOptionToLineItem(lineItem,optionGroup,optionItem).then(function(lineItem){order,lineItem;})};}function _removeOptionFromLineItem(order,lineItem,optionItem){return{type:REMOVE_OPTION_FROM_LINE_ITEM,payload:order.removeOptionFromLineItem(lineItem,optionItem).then(function(lineItem){order,lineItem;})};}function _setOrderLocationId(order,locationId){return{type:SET_ORDER_LOCATION_ID,payload:order.setLocation(locationId).then(function(order){order;})};}function resolveOrder(brandibble){var serviceType=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'delivery';var orders=brandibble.orders;var currentOrder=orders.current();var payload=currentOrder?Promise.resolve(currentOrder):orders.create(null,serviceType).then(function(_ref){var data=_ref.data;return data;});return function(dispatch){return dispatch(_resolveOrder(payload));};}function setOrderLocationId(currentOrder,locationId){var _arguments=arguments;return function(dispatch){return dispatch(_setOrderLocationId.apply(undefined,_arguments));};}function addLineItem(currentOrder,product){var _arguments2=arguments;var quantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_addLineItem.apply(undefined,_arguments2));};}function setLineItemQuantity(currentOrder,lineItem){var _arguments3=arguments;var newQuantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(newQuantity<1){throw new _exception2.default('updateLineItemQuantity','Please pass quantity more than 1 to this action. Use removeLineItem to remove from order.');}return function(dispatch){return dispatch(_setLineItemQuantity.apply(undefined,_arguments3));};}function removeLineItem(currentOrder,lineItem){var _arguments4=arguments;return function(dispatch){return dispatch(_removeLineItem.apply(undefined,_arguments4));};}function addOptionToLineItem(currentOrder,lineItem,optionGroup,optionItem){var _arguments5=arguments;return function(dispatch){return dispatch(_addOptionToLineItem.apply(undefined,_arguments5));};}function removeOptionFromLineItem(currentOrder,lineItem,optionItem){var _arguments6=arguments;
+removeOptionFromLineItem=removeOptionFromLineItem;var _exception=__webpack_require__(280);var _exception2=_interopRequireDefault(_exception);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var RESOLVE_ORDER=exports.RESOLVE_ORDER='RESOLVE_ORDER';var ADD_LINE_ITEM=exports.ADD_LINE_ITEM='ADD_LINE_ITEM';var SET_LINE_ITEM_QUANTITY=exports.SET_LINE_ITEM_QUANTITY='SET_LINE_ITEM_QUANTITY';var REMOVE_LINE_ITEM=exports.REMOVE_LINE_ITEM='REMOVE_LINE_ITEM';var ADD_OPTION_TO_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM='ADD_OPTION_TO_LINE_ITEM';var REMOVE_OPTION_FROM_LINE_ITEM=exports.REMOVE_OPTION_FROM_LINE_ITEM='REMOVE_OPTION_FROM_LINE_ITEM';var SET_ORDER_LOCATION_ID=exports.SET_ORDER_LOCATION_ID='SET_ORDER_LOCATION_ID';function _resolveOrder(payload){return{type:RESOLVE_ORDER,payload:payload};}function _addLineItem(order,product,quantity){return{type:ADD_LINE_ITEM,payload:order.addLineItem(product,quantity).then(function(lineItem){order,lineItem;})};}function _setLineItemQuantity(order,lineItem,newQuantity){return{type:SET_LINE_ITEM_QUANTITY,payload:order.setLineItemQuantity(lineItem,newQuantity).then(function(lineItem){order,lineItem;})};}function _removeLineItem(order,lineItem){return{type:REMOVE_LINE_ITEM,payload:order.removeLineItem(lineItem).then(function(remainingLineItems){order,remainingLineItems;})};}function _addOptionToLineItem(order,lineItem,optionGroup,optionItem){return{type:ADD_OPTION_TO_LINE_ITEM,payload:order.addOptionToLineItem(lineItem,optionGroup,optionItem).then(function(lineItem){order,lineItem;})};}function _removeOptionFromLineItem(order,lineItem,optionItem){return{type:REMOVE_OPTION_FROM_LINE_ITEM,payload:order.removeOptionFromLineItem(lineItem,optionItem).then(function(lineItem){order,lineItem;})};}function _setOrderLocationId(order,locationId){return{type:SET_ORDER_LOCATION_ID,payload:order.setLocation(locationId).then(function(order){order;})};}function resolveOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'delivery';var orders=brandibble.orders;var order=orders.current();var payload=order?Promise.resolve({order:order}):orders.create(locationId,serviceType).then(function(_ref){var data=_ref.data;return{order:data};});return function(dispatch){return dispatch(_resolveOrder(payload));};}function setOrderLocationId(currentOrder,locationId){var _arguments=arguments;return function(dispatch){return dispatch(_setOrderLocationId.apply(undefined,_arguments));};}function addLineItem(currentOrder,product){var _arguments2=arguments;var quantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_addLineItem.apply(undefined,_arguments2));};}function setLineItemQuantity(currentOrder,lineItem){var _arguments3=arguments;var newQuantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(newQuantity<1){throw new _exception2.default('updateLineItemQuantity','Please pass quantity more than 1 to this action. Use removeLineItem to remove from order.');}return function(dispatch){return dispatch(_setLineItemQuantity.apply(undefined,_arguments3));};}function removeLineItem(currentOrder,lineItem){var _arguments4=arguments;return function(dispatch){return dispatch(_removeLineItem.apply(undefined,_arguments4));};}function addOptionToLineItem(currentOrder,lineItem,optionGroup,optionItem){var _arguments5=arguments;return function(dispatch){return dispatch(_addOptionToLineItem.apply(undefined,_arguments5));};}function removeOptionFromLineItem(currentOrder,lineItem,optionItem){var _arguments6=arguments;
 return function(dispatch){return dispatch(_removeOptionFromLineItem.apply(undefined,_arguments6));};
 }
 
@@ -6183,12 +6173,12 @@ setupBrandibble=setupBrandibble;exports.
 
 
 
-setupBrandibbleRedux=setupBrandibbleRedux;var _order=__webpack_require__(29);var _user=__webpack_require__(23);var SETUP_BRANDIBBLE=exports.SETUP_BRANDIBBLE='SETUP_BRANDIBBLE';var SETUP_BRANDIBBLE_REDUX=exports.SETUP_BRANDIBBLE_REDUX='SETUP_BRANDIBBLE_REDUX';function _setupBrandibble(brandibble){return{type:SETUP_BRANDIBBLE,payload:brandibble.setup()};}function _setupBrandibbleRedux(payload){return{type:SETUP_BRANDIBBLE_REDUX,payload:payload};}function setupBrandibble(Brandibble){return function(dispatch){return dispatch(_setupBrandibble(Brandibble));};}function setupBrandibbleRedux(Brandibble){
+setupBrandibbleRedux=setupBrandibbleRedux;var _order=__webpack_require__(29);var _user=__webpack_require__(23);var SETUP_BRANDIBBLE=exports.SETUP_BRANDIBBLE='SETUP_BRANDIBBLE';var SETUP_BRANDIBBLE_REDUX=exports.SETUP_BRANDIBBLE_REDUX='SETUP_BRANDIBBLE_REDUX';function _setupBrandibble(brandibble){return{type:SETUP_BRANDIBBLE,payload:brandibble.setup()};}function _setupBrandibbleRedux(payload){return{type:SETUP_BRANDIBBLE_REDUX,payload:payload};}function setupBrandibble(Brandibble){return function(dispatch){return dispatch(_setupBrandibble(Brandibble));};}function setupBrandibbleRedux(Brandibble){var defaultLocationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var defaultServiceType=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'delivery';
 return function(dispatch){
 var payload=dispatch(setupBrandibble(Brandibble)).then(function(_ref){var value=_ref.value;
 return Promise.all([
 dispatch((0,_user.resolveUser)(value)),
-dispatch((0,_order.resolveOrder)(value))]);
+dispatch((0,_order.resolveOrder)(value,defaultLocationId,defaultServiceType))]);
 
 });
 
@@ -6741,7 +6731,7 @@ module.exports = _curry1(function reverse(list) {
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function wrapArray(recordOrRecords) {
     var isArray = r.is(Array, recordOrRecords);
     return isArray ? recordOrRecords : [recordOrRecords];
@@ -7250,7 +7240,7 @@ exports.default = actionTypesFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function findByKey(collection, key, id) {
     function predicate(record) {
         return record[key] === id;
@@ -19808,15 +19798,13 @@ module.exports = _curry2(function where(spec, testObj) {
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_CREATE] = true,
-        _a);
+    var recordStatus = {
+        busy: true,
+        pendingCreate: true,
+    };
     return r.merge(record, recordStatus);
-    var _a;
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19827,15 +19815,13 @@ exports.prepareRecord = prepareRecord;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.DELETED] = true,
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a);
+    var recordStatus = {
+        deleted: true,
+        busy: true,
+    };
     return r.merge(record, recordStatus);
-    var _a;
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19846,9 +19832,9 @@ exports.prepareRecord = prepareRecord;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var actionTypesFor_1 = __webpack_require__(73);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 function reducersFor(resourceName, args, emptyState, reducers) {
     if (args === void 0) { args = {}; }
     if (resourceName == null)
@@ -19900,10 +19886,9 @@ exports.default = reducersFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    return r.dissoc(constants_1.default.SPECIAL_KEYS.BUSY, record);
+    return r.omit(["busy"], record);
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19914,15 +19899,13 @@ exports.prepareRecord = prepareRecord;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_UPDATE] = true,
-        _a);
+    var recordStatus = {
+        busy: true,
+        pendingUpdate: true,
+    };
     return r.merge(record, recordStatus);
-    var _a;
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19961,7 +19944,7 @@ exports.default = invariants;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function remove(config, current, addedRecord) {
     var key = config.key;
     function predicate(record) {
@@ -19981,7 +19964,7 @@ exports.default = remove;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function default_1(config, reducerName, records) {
     // All given records must have a key
     var haskey = r.has(config.key);
@@ -20001,7 +19984,7 @@ exports.default = default_1;
 "use strict";
 
 var makeScope_1 = __webpack_require__(251);
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function default_1(config, reducerName, record) {
     var scope = makeScope_1.default(config, reducerName);
     var isArray = r.is(Array, record);
@@ -20181,28 +20164,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    arrayBuffer: 'ArrayBuffer' in self
 	  }
 
-	  if (support.arrayBuffer) {
-	    var viewClasses = [
-	      '[object Int8Array]',
-	      '[object Uint8Array]',
-	      '[object Uint8ClampedArray]',
-	      '[object Int16Array]',
-	      '[object Uint16Array]',
-	      '[object Int32Array]',
-	      '[object Uint32Array]',
-	      '[object Float32Array]',
-	      '[object Float64Array]'
-	    ]
-
-	    var isDataView = function(obj) {
-	      return obj && DataView.prototype.isPrototypeOf(obj)
-	    }
-
-	    var isArrayBufferView = ArrayBuffer.isView || function(obj) {
-	      return obj && viewClasses.indexOf(Object.prototype.toString.call(obj)) > -1
-	    }
-	  }
-
 	  function normalizeName(name) {
 	    if (typeof name !== 'string') {
 	      name = String(name)
@@ -20335,36 +20296,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  function readBlobAsArrayBuffer(blob) {
 	    var reader = new FileReader()
-	    var promise = fileReaderReady(reader)
 	    reader.readAsArrayBuffer(blob)
-	    return promise
+	    return fileReaderReady(reader)
 	  }
 
 	  function readBlobAsText(blob) {
 	    var reader = new FileReader()
-	    var promise = fileReaderReady(reader)
 	    reader.readAsText(blob)
-	    return promise
-	  }
-
-	  function readArrayBufferAsText(buf) {
-	    var view = new Uint8Array(buf)
-	    var chars = new Array(view.length)
-
-	    for (var i = 0; i < view.length; i++) {
-	      chars[i] = String.fromCharCode(view[i])
-	    }
-	    return chars.join('')
-	  }
-
-	  function bufferClone(buf) {
-	    if (buf.slice) {
-	      return buf.slice(0)
-	    } else {
-	      var view = new Uint8Array(buf.byteLength)
-	      view.set(new Uint8Array(buf))
-	      return view.buffer
-	    }
+	    return fileReaderReady(reader)
 	  }
 
 	  function Body() {
@@ -20372,9 +20311,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    this._initBody = function(body) {
 	      this._bodyInit = body
-	      if (!body) {
-	        this._bodyText = ''
-	      } else if (typeof body === 'string') {
+	      if (typeof body === 'string') {
 	        this._bodyText = body
 	      } else if (support.blob && Blob.prototype.isPrototypeOf(body)) {
 	        this._bodyBlob = body
@@ -20382,12 +20319,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this._bodyFormData = body
 	      } else if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body)) {
 	        this._bodyText = body.toString()
-	      } else if (support.arrayBuffer && support.blob && isDataView(body)) {
-	        this._bodyArrayBuffer = bufferClone(body.buffer)
-	        // IE 10-11 can't handle a DataView body.
-	        this._bodyInit = new Blob([this._bodyArrayBuffer])
-	      } else if (support.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(body) || isArrayBufferView(body))) {
-	        this._bodyArrayBuffer = bufferClone(body)
+	      } else if (!body) {
+	        this._bodyText = ''
+	      } else if (support.arrayBuffer && ArrayBuffer.prototype.isPrototypeOf(body)) {
+	        // Only support ArrayBuffers for POST method.
+	        // Receiving ArrayBuffers happens via Blobs, instead.
 	      } else {
 	        throw new Error('unsupported BodyInit type')
 	      }
@@ -20412,8 +20348,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        if (this._bodyBlob) {
 	          return Promise.resolve(this._bodyBlob)
-	        } else if (this._bodyArrayBuffer) {
-	          return Promise.resolve(new Blob([this._bodyArrayBuffer]))
 	        } else if (this._bodyFormData) {
 	          throw new Error('could not read FormData body as blob')
 	        } else {
@@ -20422,28 +20356,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      this.arrayBuffer = function() {
-	        if (this._bodyArrayBuffer) {
-	          return consumed(this) || Promise.resolve(this._bodyArrayBuffer)
+	        return this.blob().then(readBlobAsArrayBuffer)
+	      }
+
+	      this.text = function() {
+	        var rejected = consumed(this)
+	        if (rejected) {
+	          return rejected
+	        }
+
+	        if (this._bodyBlob) {
+	          return readBlobAsText(this._bodyBlob)
+	        } else if (this._bodyFormData) {
+	          throw new Error('could not read FormData body as text')
 	        } else {
-	          return this.blob().then(readBlobAsArrayBuffer)
+	          return Promise.resolve(this._bodyText)
 	        }
 	      }
-	    }
-
-	    this.text = function() {
-	      var rejected = consumed(this)
-	      if (rejected) {
-	        return rejected
-	      }
-
-	      if (this._bodyBlob) {
-	        return readBlobAsText(this._bodyBlob)
-	      } else if (this._bodyArrayBuffer) {
-	        return Promise.resolve(readArrayBufferAsText(this._bodyArrayBuffer))
-	      } else if (this._bodyFormData) {
-	        throw new Error('could not read FormData body as text')
-	      } else {
-	        return Promise.resolve(this._bodyText)
+	    } else {
+	      this.text = function() {
+	        var rejected = consumed(this)
+	        return rejected ? rejected : Promise.resolve(this._bodyText)
 	      }
 	    }
 
@@ -20471,10 +20404,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Request(input, options) {
 	    options = options || {}
 	    var body = options.body
-
-	    if (typeof input === 'string') {
-	      this.url = input
-	    } else {
+	    if (Request.prototype.isPrototypeOf(input)) {
 	      if (input.bodyUsed) {
 	        throw new TypeError('Already read')
 	      }
@@ -20485,10 +20415,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      this.method = input.method
 	      this.mode = input.mode
-	      if (!body && input._bodyInit != null) {
+	      if (!body) {
 	        body = input._bodyInit
 	        input.bodyUsed = true
 	      }
+	    } else {
+	      this.url = input
 	    }
 
 	    this.credentials = options.credentials || this.credentials || 'omit'
@@ -20506,7 +20438,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  Request.prototype.clone = function() {
-	    return new Request(this, { body: this._bodyInit })
+	    return new Request(this)
 	  }
 
 	  function decode(body) {
@@ -20522,17 +20454,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return form
 	  }
 
-	  function parseHeaders(rawHeaders) {
-	    var headers = new Headers()
-	    rawHeaders.split('\r\n').forEach(function(line) {
-	      var parts = line.split(':')
-	      var key = parts.shift().trim()
-	      if (key) {
-	        var value = parts.join(':').trim()
-	        headers.append(key, value)
-	      }
+	  function headers(xhr) {
+	    var head = new Headers()
+	    var pairs = (xhr.getAllResponseHeaders() || '').trim().split('\n')
+	    pairs.forEach(function(header) {
+	      var split = header.trim().split(':')
+	      var key = split.shift().trim()
+	      var value = split.join(':').trim()
+	      head.append(key, value)
 	    })
-	    return headers
+	    return head
 	  }
 
 	  Body.call(Request.prototype)
@@ -20543,10 +20474,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    this.type = 'default'
-	    this.status = 'status' in options ? options.status : 200
+	    this.status = options.status
 	    this.ok = this.status >= 200 && this.status < 300
-	    this.statusText = 'statusText' in options ? options.statusText : 'OK'
-	    this.headers = new Headers(options.headers)
+	    this.statusText = options.statusText
+	    this.headers = options.headers instanceof Headers ? options.headers : new Headers(options.headers)
 	    this.url = options.url || ''
 	    this._initBody(bodyInit)
 	  }
@@ -20584,16 +20515,35 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  self.fetch = function(input, init) {
 	    return new Promise(function(resolve, reject) {
-	      var request = new Request(input, init)
+	      var request
+	      if (Request.prototype.isPrototypeOf(input) && !init) {
+	        request = input
+	      } else {
+	        request = new Request(input, init)
+	      }
+
 	      var xhr = new XMLHttpRequest()
+
+	      function responseURL() {
+	        if ('responseURL' in xhr) {
+	          return xhr.responseURL
+	        }
+
+	        // Avoid security warnings on getResponseHeader when not allowed by CORS
+	        if (/^X-Request-URL:/m.test(xhr.getAllResponseHeaders())) {
+	          return xhr.getResponseHeader('X-Request-URL')
+	        }
+
+	        return
+	      }
 
 	      xhr.onload = function() {
 	        var options = {
 	          status: xhr.status,
 	          statusText: xhr.statusText,
-	          headers: parseHeaders(xhr.getAllResponseHeaders() || '')
+	          headers: headers(xhr),
+	          url: responseURL()
 	        }
-	        options.url = 'responseURL' in xhr ? xhr.responseURL : options.headers.get('X-Request-URL')
 	        var body = 'response' in xhr ? xhr.response : xhr.responseText
 	        resolve(new Response(body, options))
 	      }
@@ -20724,13 +20674,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var Brandibble = function () {
 	  function Brandibble(_ref) {
-	    var apiKey = _ref.apiKey,
-	        brandId = _ref.brandId,
-	        apiEndpoint = _ref.apiEndpoint,
-	        apiVersion = _ref.apiVersion,
-	        _ref$origin = _ref.origin,
-	        origin = _ref$origin === undefined ? null : _ref$origin,
-	        storage = _ref.storage;
+	    var apiKey = _ref.apiKey;
+	    var brandId = _ref.brandId;
+	    var apiEndpoint = _ref.apiEndpoint;
+	    var apiVersion = _ref.apiVersion;
+	    var _ref$origin = _ref.origin;
+	    var origin = _ref$origin === undefined ? null : _ref$origin;
+	    var storage = _ref.storage;
 
 	    _classCallCheck(this, Brandibble);
 
@@ -20812,7 +20762,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function queryStringBuilder() {
-	  var queryObject = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	  var queryObject = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
 	  return Object.keys(queryObject).map(function (k) {
 	    return encodeURIComponent(k) + '=' + encodeURIComponent(queryObject[k]);
@@ -22120,40 +22070,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	var cachedSetTimeout;
 	var cachedClearTimeout;
 
-	function defaultSetTimout() {
-	    throw new Error('setTimeout has not been defined');
-	}
-	function defaultClearTimeout () {
-	    throw new Error('clearTimeout has not been defined');
-	}
 	(function () {
 	    try {
-	        if (typeof setTimeout === 'function') {
-	            cachedSetTimeout = setTimeout;
-	        } else {
-	            cachedSetTimeout = defaultSetTimout;
-	        }
+	        cachedSetTimeout = setTimeout;
 	    } catch (e) {
-	        cachedSetTimeout = defaultSetTimout;
+	        cachedSetTimeout = function () {
+	            throw new Error('setTimeout is not defined');
+	        }
 	    }
 	    try {
-	        if (typeof clearTimeout === 'function') {
-	            cachedClearTimeout = clearTimeout;
-	        } else {
-	            cachedClearTimeout = defaultClearTimeout;
-	        }
+	        cachedClearTimeout = clearTimeout;
 	    } catch (e) {
-	        cachedClearTimeout = defaultClearTimeout;
+	        cachedClearTimeout = function () {
+	            throw new Error('clearTimeout is not defined');
+	        }
 	    }
 	} ())
 	function runTimeout(fun) {
 	    if (cachedSetTimeout === setTimeout) {
 	        //normal enviroments in sane situations
-	        return setTimeout(fun, 0);
-	    }
-	    // if setTimeout wasn't available but was latter defined
-	    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-	        cachedSetTimeout = setTimeout;
 	        return setTimeout(fun, 0);
 	    }
 	    try {
@@ -22174,11 +22109,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	function runClearTimeout(marker) {
 	    if (cachedClearTimeout === clearTimeout) {
 	        //normal enviroments in sane situations
-	        return clearTimeout(marker);
-	    }
-	    // if clearTimeout wasn't available but was latter defined
-	    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-	        cachedClearTimeout = clearTimeout;
 	        return clearTimeout(marker);
 	    }
 	    try {
@@ -23475,6 +23405,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _utils = __webpack_require__(3);
@@ -23514,8 +23446,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function handleResponse(response) {
-	  var status = response.status,
-	      statusText = response.statusText;
+	  var status = response.status;
+	  var statusText = response.statusText;
 
 	  if (status >= 200 && status < 300) {
 	    if (statusText === 'NO CONTENT' || status === 204) {
@@ -23541,10 +23473,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var Adapter = function () {
 	  function Adapter(_ref) {
-	    var apiKey = _ref.apiKey,
-	        apiBase = _ref.apiBase,
-	        origin = _ref.origin,
-	        storage = _ref.storage;
+	    var apiKey = _ref.apiKey;
+	    var apiBase = _ref.apiBase;
+	    var origin = _ref.origin;
+	    var storage = _ref.storage;
 
 	    _classCallCheck(this, Adapter);
 
@@ -23586,16 +23518,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return this.storage.getItem('currentOrder').then(function (serializedOrder) {
 	        if (!serializedOrder) return;
 
-	        var _CircularJSON$parse = _circularJson2.default.parse(serializedOrder),
-	            locationId = _CircularJSON$parse.locationId,
-	            serviceType = _CircularJSON$parse.serviceType,
-	            miscOptions = _CircularJSON$parse.miscOptions,
-	            requestedAt = _CircularJSON$parse.requestedAt,
-	            cart = _CircularJSON$parse.cart,
-	            paymentType = _CircularJSON$parse.paymentType,
-	            customer = _CircularJSON$parse.customer,
-	            address = _CircularJSON$parse.address,
-	            creditCard = _CircularJSON$parse.creditCard;
+	        var _CircularJSON$parse = _circularJson2.default.parse(serializedOrder);
+
+	        var locationId = _CircularJSON$parse.locationId;
+	        var serviceType = _CircularJSON$parse.serviceType;
+	        var miscOptions = _CircularJSON$parse.miscOptions;
+	        var requestedAt = _CircularJSON$parse.requestedAt;
+	        var cart = _CircularJSON$parse.cart;
+	        var paymentType = _CircularJSON$parse.paymentType;
+	        var customer = _CircularJSON$parse.customer;
+	        var address = _CircularJSON$parse.address;
+	        var creditCard = _CircularJSON$parse.creditCard;
+
 
 	        var order = new _order2.default(_this2, locationId, serviceType, paymentType, miscOptions);
 	        if (address) {
@@ -23620,15 +23554,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'persistCurrentOrder',
 	    value: function persistCurrentOrder(order) {
+	      var _this3 = this;
+
 	      this.currentOrder = order;
 	      /* Ensure raw Credit Card data isn't persisted to this.storage */
 	      if (order.creditCard) {
-	        var creditCardData = Object.assign({}, order.creditCard);
+	        var _ret = function () {
+	          var creditCardData = Object.assign({}, order.creditCard);
 
-	        return this.storage.setItem('currentOrder', _circularJson2.default.stringify(sanitizeCreditCard(order))).then(function () {
-	          order.creditCard = creditCardData;
-	          return order;
-	        });
+	          return {
+	            v: _this3.storage.setItem('currentOrder', _circularJson2.default.stringify(sanitizeCreditCard(order))).then(function () {
+	              order.creditCard = creditCardData;
+	              return order;
+	            })
+	          };
+	        }();
+
+	        if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
 	      }
 	      return this.storage.setItem('currentOrder', _circularJson2.default.stringify(order)).then(function () {
 	        return order;
@@ -23637,30 +23579,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'flushCurrentOrder',
 	    value: function flushCurrentOrder() {
-	      var _this3 = this;
+	      var _this4 = this;
 
 	      return this.storage.removeItem('currentOrder').then(function (res) {
-	        _this3.currentOrder = null;
+	        _this4.currentOrder = null;
 	        return res;
 	      });
 	    }
 	  }, {
 	    key: 'restoreCustomerToken',
 	    value: function restoreCustomerToken() {
-	      var _this4 = this;
+	      var _this5 = this;
 
 	      return this.storage.getItem('customerToken').then(function (customerToken) {
-	        return _this4.customerToken = customerToken;
+	        return _this5.customerToken = customerToken;
 	      });
 	    }
 	  }, {
 	    key: 'persistCustomerToken',
 	    value: function persistCustomerToken(customerToken) {
-	      var _this5 = this;
+	      var _this6 = this;
 
 	      return this.storage.setItem('customerToken', customerToken).then(function () {
-	        return _this5.storage.getItem('customerToken').then(function (token) {
-	          return _this5.customerToken = token;
+	        return _this6.storage.getItem('customerToken').then(function (token) {
+	          return _this6.customerToken = token;
 	        });
 	      });
 	    }
@@ -23703,6 +23645,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _cart7 = __webpack_require__(12);
@@ -23731,9 +23675,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var Order = function () {
 	  function Order(adapter, location_id) {
-	    var serviceType = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'delivery';
-	    var paymentType = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : _utils.PaymentTypes.CASH;
-	    var miscOptions = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : defaultOptions;
+	    var serviceType = arguments.length <= 2 || arguments[2] === undefined ? 'delivery' : arguments[2];
+	    var paymentType = arguments.length <= 3 || arguments[3] === undefined ? _utils.PaymentTypes.CASH : arguments[3];
+	    var miscOptions = arguments.length <= 4 || arguments[4] === undefined ? defaultOptions : arguments[4];
 
 	    _classCallCheck(this, Order);
 
@@ -23752,15 +23696,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function rehydrateCart() {
 	      var _this = this;
 
-	      var serializedCart = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	      var serializedCart = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
 	      (serializedCart['lineItems'] || []).forEach(function (serializedLineItem) {
-	        var product = serializedLineItem.product,
-	            quantity = serializedLineItem.quantity,
-	            madeFor = serializedLineItem.madeFor,
-	            instructions = serializedLineItem.instructions,
-	            configuration = serializedLineItem.configuration,
-	            uuid = serializedLineItem.uuid;
+	        var product = serializedLineItem.product;
+	        var quantity = serializedLineItem.quantity;
+	        var madeFor = serializedLineItem.madeFor;
+	        var instructions = serializedLineItem.instructions;
+	        var configuration = serializedLineItem.configuration;
+	        var uuid = serializedLineItem.uuid;
 	        /* Important: add directly from cart to avoid new writes to localforage */
 
 	        var lineItem = _this.cart.addLineItem(product, quantity, uuid);
@@ -23775,7 +23719,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'setRequestedAt',
 	    value: function setRequestedAt() {
-	      var timestampOrAsap = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ASAP_STRING;
+	      var timestampOrAsap = arguments.length <= 0 || arguments[0] === undefined ? ASAP_STRING : arguments[0];
 
 	      if (timestampOrAsap === ASAP_STRING) {
 	        this.requestedAt = ASAP_STRING;
@@ -23810,7 +23754,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function setPaymentMethod() {
 	      var _this2 = this;
 
-	      var paymentType = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _utils.PaymentTypes.CASH;
+	      var paymentType = arguments.length <= 0 || arguments[0] === undefined ? _utils.PaymentTypes.CASH : arguments[0];
 	      var cardOrCashTip = arguments[1];
 
 	      this.paymentType = paymentType;
@@ -23868,7 +23812,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'setLocation',
 	    value: function setLocation() {
-	      var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	      var id = arguments.length <= 0 || arguments[0] === undefined ? null : arguments[0];
 
 	      if (id) {
 	        this.locationId = id;
@@ -23884,13 +23828,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'addLineItem',
 	    value: function addLineItem() {
-	      if (this.locationId) {
-	        var _cart;
+	      var _this3 = this,
+	          _arguments = arguments;
 
-	        var lineItem = (_cart = this.cart).addLineItem.apply(_cart, arguments);
-	        return this.adapter.persistCurrentOrder(this).then(function () {
-	          return lineItem;
-	        });
+	      if (this.locationId) {
+	        var _ret = function () {
+	          var _cart;
+
+	          var lineItem = (_cart = _this3.cart).addLineItem.apply(_cart, _arguments);
+	          return {
+	            v: _this3.adapter.persistCurrentOrder(_this3).then(function () {
+	              return lineItem;
+	            })
+	          };
+	        }();
+
+	        if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
 	      }
 	      return Promise.reject('Location ID cannot be blank');
 	    }
@@ -23973,18 +23926,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (!this.address) {
 	        return {};
 	      }
-	      var _address = this.address,
-	          customer_address_id = _address.customer_address_id,
-	          city = _address.city,
-	          longitude = _address.longitude,
-	          latitude = _address.latitude,
-	          state_code = _address.state_code,
-	          street_address = _address.street_address,
-	          zip_code = _address.zip_code,
-	          unit = _address.unit,
-	          company = _address.company,
-	          contact_name = _address.contact_name,
-	          contact_phone = _address.contact_phone;
+	      var _address = this.address;
+	      var customer_address_id = _address.customer_address_id;
+	      var city = _address.city;
+	      var longitude = _address.longitude;
+	      var latitude = _address.latitude;
+	      var state_code = _address.state_code;
+	      var street_address = _address.street_address;
+	      var zip_code = _address.zip_code;
+	      var unit = _address.unit;
+	      var company = _address.company;
+	      var contact_name = _address.contact_name;
+	      var contact_phone = _address.contact_phone;
 
 	      if (customer_address_id) {
 	        return { customer_address_id: customer_address_id };
@@ -23999,12 +23952,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (!this.creditCard) {
 	        return {};
 	      }
-	      var _creditCard = this.creditCard,
-	          customer_card_id = _creditCard.customer_card_id,
-	          cc_expiration = _creditCard.cc_expiration,
-	          cc_number = _creditCard.cc_number,
-	          cc_zip = _creditCard.cc_zip,
-	          cc_cvv = _creditCard.cc_cvv;
+	      var _creditCard = this.creditCard;
+	      var customer_card_id = _creditCard.customer_card_id;
+	      var cc_expiration = _creditCard.cc_expiration;
+	      var cc_number = _creditCard.cc_number;
+	      var cc_zip = _creditCard.cc_zip;
+	      var cc_cvv = _creditCard.cc_cvv;
 
 	      if (customer_card_id) {
 	        return { customer_card_id: customer_card_id };
@@ -24014,10 +23967,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'format',
 	    value: function format() {
-	      var _miscOptions = this.miscOptions,
-	          include_utensils = _miscOptions.include_utensils,
-	          notes_for_store = _miscOptions.notes_for_store,
-	          tip = _miscOptions.tip;
+	      var _miscOptions = this.miscOptions;
+	      var include_utensils = _miscOptions.include_utensils;
+	      var notes_for_store = _miscOptions.notes_for_store;
+	      var tip = _miscOptions.tip;
 
 
 	      var payload = {
@@ -24103,7 +24056,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'addLineItem',
 	    value: function addLineItem(product) {
-	      var quantity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+	      var quantity = arguments.length <= 1 || arguments[1] === undefined ? 1 : arguments[1];
 	      var uuid = arguments[2];
 
 	      var lineItem = new _lineItem2.default(product, quantity, uuid);
@@ -24140,7 +24093,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'setLineItemQuantity',
 	    value: function setLineItemQuantity(lineItem) {
-	      var quantity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+	      var quantity = arguments.length <= 1 || arguments[1] === undefined ? 1 : arguments[1];
 
 	      var match = (0, _lodash4.default)(this.lineItems, { uuid: lineItem.uuid });
 	      if (match) {
@@ -33818,7 +33771,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -33874,7 +33827,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var LineItem = function () {
 	  function LineItem(product) {
-	    var quantity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+	    var quantity = arguments.length <= 1 || arguments[1] === undefined ? 1 : arguments[1];
 	    var uuid = arguments[2];
 
 	    _classCallCheck(this, LineItem);
@@ -41972,7 +41925,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'orders',
 	    value: function orders(customerId) {
-	      var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	      var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
 	      var query = _querystring2.default.stringify(params);
 	      return this.adapter.request('GET', 'customers/' + customerId + '/orders?' + query);
@@ -42284,8 +42237,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _createClass(Menus, [{
 	    key: 'build',
 	    value: function build(location_id) {
-	      var service_type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'delivery';
-	      var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Date();
+	      var service_type = arguments.length <= 1 || arguments[1] === undefined ? 'delivery' : arguments[1];
+	      var date = arguments.length <= 2 || arguments[2] === undefined ? new Date() : arguments[2];
 
 	      var isISOString = (0, _validate2.default)({ timestamp: date }, { timestamp: { format: _utils.ISO8601_PATTERN } });
 	      var requested_at = isISOString ? date.toISOString().split('.')[0] + 'Z' : date;
@@ -42342,7 +42295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'validate',
 	    value: function validate(orderObj) {
-	      var testChanges = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	      var testChanges = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
 	      var body = orderObj.formatForValidation();
 	      Object.assign(body, testChanges);
@@ -43087,9 +43040,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-
-
-payments;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _payments=__webpack_require__(38);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('payments',{key:'customer_card_id'});var initialState={};function setDefault(state,id){var newState={};console.log(state,'oldState');Object.keys(state).forEach(function(paymentId){var payment=state[paymentId];if(id.toString()===paymentId)newState[paymentId]=_extends({},payment,{is_default:true});else newState[paymentId]=_extends({},payment,{is_default:false});});console.log(newState,'newState');return newState;}function payments(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+payments;var _reduxCrud=__webpack_require__(10);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _payments=__webpack_require__(38);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('payments',{key:'customer_card_id'});var initialState={};function setDefault(state,id){var newState={};Object.keys(state).forEach(function(paymentId){var payment=state[paymentId];if(id.toString()===paymentId)newState[paymentId]=_extends({},payment,{is_default:true});else newState[paymentId]=_extends({},payment,{is_default:false});});return newState;}function payments(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _payments.SET_DEFAULT_PAYMENT+'_FULFILLED':
 return setDefault(state,action.payload);
@@ -54155,11 +54106,11 @@ module.exports = _curry3(function zipWith(fn, a, b) {
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var invariant = __webpack_require__(281);
 var actionTypesFor_1 = __webpack_require__(73);
 var assertNotArray_1 = __webpack_require__(250);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var getDefaultConfig_1 = __webpack_require__(489);
 // const invariant = require("invariant")
 function actionCreatorsFor(resourceName, config) {
@@ -54321,7 +54272,7 @@ exports.default = getDefaultConfig;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var wrapArray_1 = __webpack_require__(56);
 function assertHasKey(config, scope, recordOrRecords) {
     var key = config.key;
@@ -54355,7 +54306,7 @@ exports.default = {
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var remove_1 = __webpack_require__(248);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
@@ -54378,7 +54329,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(242);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
@@ -54402,31 +54353,24 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
     canBeArray: false,
 };
-function success(config, current, addedRecord, clientGeneratedKey) {
+function success(config, current, addedRecord, clientGenKey) {
     invariants_1.default(invariantArgs, config, current, addedRecord);
     var key = config.key;
     var done = false;
-    // Keep the clientGeneratedKey if provided
-    if (clientGeneratedKey != null) {
-        addedRecord = r.merge(addedRecord, (_a = {},
-            _a[constants_1.default.SPECIAL_KEYS.CLIENT_GENERATED_ID] = clientGeneratedKey,
-            _a));
-    }
     // Update existing records
     var updatedCollection = current.map(function (record) {
         var recordKey = record[key];
         if (recordKey == null)
             throw new Error('Expected record to have ' + key);
         var isSameKey = recordKey === addedRecord[key];
-        var isSameClientGetKey = (clientGeneratedKey != null && clientGeneratedKey === recordKey);
+        var isSameClientGetKey = (clientGenKey != null && clientGenKey === recordKey);
         if (isSameKey || isSameClientGetKey) {
             done = true;
             return addedRecord;
@@ -54440,7 +54384,6 @@ function success(config, current, addedRecord, clientGeneratedKey) {
         updatedCollection = updatedCollection.concat([addedRecord]);
     }
     return updatedCollection;
-    var _a;
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = success;
@@ -54452,8 +54395,8 @@ exports.default = success;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var findByKey_1 = __webpack_require__(74);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
@@ -54481,7 +54424,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(243);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var findByKey_1 = __webpack_require__(74);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
@@ -54508,9 +54451,9 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var invariants_1 = __webpack_require__(18);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -54536,7 +54479,7 @@ exports.default = success;
 "use strict";
 
 var assertAllHaveKeys_1 = __webpack_require__(249);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var store_1 = __webpack_require__(22);
 var wrapArray_1 = __webpack_require__(56);
 var invariants_1 = __webpack_require__(18);
@@ -54574,7 +54517,7 @@ var success_3 = __webpack_require__(498);
 var error_3 = __webpack_require__(502);
 var start_3 = __webpack_require__(503);
 var success_4 = __webpack_require__(504);
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var baseReducers = {
     createError: error_1.default,
     createStart: start_1.default,
@@ -54602,7 +54545,7 @@ exports.default = reducersFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function assert(scope, current) {
     var isArray = r.is(Array, current);
     if (!isArray)
@@ -54659,7 +54602,7 @@ exports.default = merge;
 "use strict";
 
 var error_1 = __webpack_require__(245);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var findByKey_1 = __webpack_require__(74);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
@@ -54690,7 +54633,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(246);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
@@ -54715,7 +54658,7 @@ exports.default = start;
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
@@ -54750,7 +54693,7 @@ exports.default = {
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
@@ -54773,7 +54716,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(242);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
@@ -54797,27 +54740,42 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
     canBeArray: false,
 };
-function success(config, current, addedRecord, clientGeneratedKey) {
+function success(config, current, addedRecord, clientGenKey) {
     invariants_1.default(invariantArgs, config, current, addedRecord);
     var key = config.key;
+    var done = false;
     var addedRecordKey = addedRecord[key];
-    var addedRecordKeyLens = r.lensProp(addedRecordKey);
-    // Keep the cuid in the record if there is one
-    if (clientGeneratedKey != null) {
-        addedRecord = r.merge(addedRecord, (_a = {},
-            _a[constants_1.default.SPECIAL_KEYS.CLIENT_GENERATED_ID] = clientGeneratedKey,
-            _a));
+    // Update existing records
+    var updatedCollection = r.map(function (existingRecord) {
+        var recordKey = existingRecord[key];
+        if (recordKey == null)
+            throw new Error('Expected record to have ' + key);
+        var isSameKey = recordKey === addedRecordKey;
+        var isSameClientGetKey = (clientGenKey != null && clientGenKey === recordKey);
+        if (isSameKey || isSameClientGetKey) {
+            done = true;
+            return addedRecord;
+        }
+        else {
+            return existingRecord;
+        }
+    })(current);
+    // Add if not updated
+    if (!done) {
+        var merge = (_a = {},
+            _a[addedRecordKey] = addedRecord,
+            _a);
+        updatedCollection = r.merge(updatedCollection, merge);
     }
-    var currentWithoutClientGeneratedKey = r.dissoc(clientGeneratedKey, current);
-    return r.set(addedRecordKeyLens, addedRecord, currentWithoutClientGeneratedKey);
+    return updatedCollection;
     var _a;
 }
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -54830,8 +54788,8 @@ exports.default = success;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_ERROR;
 var invariantArgs = {
@@ -54866,7 +54824,7 @@ exports.default = error;
 
 var start_1 = __webpack_require__(243);
 var invariants_1 = __webpack_require__(19);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_START;
 var invariantArgs = {
@@ -54896,9 +54854,9 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -54923,9 +54881,9 @@ exports.default = success;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var assertAllHaveKeys_1 = __webpack_require__(249);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var wrapArray_1 = __webpack_require__(56);
 var reducerName = constants_1.default.REDUCER_NAMES.FETCH_SUCCESS;
@@ -54963,7 +54921,7 @@ var success_3 = __webpack_require__(512);
 var error_3 = __webpack_require__(517);
 var start_3 = __webpack_require__(518);
 var success_4 = __webpack_require__(519);
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var baseReducers = {
     createError: error_1.default,
     createStart: start_1.default,
@@ -54991,7 +54949,7 @@ exports.default = reducersFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function assertValidStore(scope, current) {
     if (!r.is(Object, current))
         throw new Error(scope + ': Expected current to be an object');
@@ -55006,7 +54964,7 @@ exports.default = assertValidStore;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 /*
 Adds or replace one record
 */
@@ -55026,7 +54984,7 @@ exports.default = replace;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function remove(config, current, record) {
     var key = config.key;
     var recordKey = record[key];
@@ -55043,7 +55001,7 @@ exports.default = remove;
 "use strict";
 
 var error_1 = __webpack_require__(245);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_ERROR;
@@ -55073,7 +55031,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(246);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
@@ -55098,7 +55056,7 @@ exports.default = start;
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
