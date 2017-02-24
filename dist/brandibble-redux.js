@@ -4492,49 +4492,6 @@ module.exports = function _curry3(fn) {
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-var CREATE_ERROR = "createError";
-var CREATE_START = "createStart";
-var CREATE_SUCCESS = "createSuccess";
-var DELETE_ERROR = "deleteError";
-var DELETE_START = "deleteStart";
-var DELETE_SUCCESS = "deleteSuccess";
-var FETCH_SUCCESS = "fetchSuccess";
-var UPDATE_ERROR = "updateError";
-var UPDATE_START = "updateStart";
-var UPDATE_SUCCESS = "updateSuccess";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
-    DEFAULT_KEY: "id",
-    STORE_LIST: "STORE_LIST",
-    STORE_MAP: "STORE_MAP",
-    REDUCER_NAMES: {
-        CREATE_ERROR: CREATE_ERROR,
-        CREATE_START: CREATE_START,
-        CREATE_SUCCESS: CREATE_SUCCESS,
-        DELETE_ERROR: DELETE_ERROR,
-        DELETE_START: DELETE_START,
-        DELETE_SUCCESS: DELETE_SUCCESS,
-        FETCH_SUCCESS: FETCH_SUCCESS,
-        UPDATE_ERROR: UPDATE_ERROR,
-        UPDATE_START: UPDATE_START,
-        UPDATE_SUCCESS: UPDATE_SUCCESS
-    },
-    SPECIAL_KEYS: {
-        BUSY: "busy",
-        CLIENT_GENERATED_ID: "_cid",
-        DELETED: "deleted",
-        PENDING_CREATE: "pendingCreate",
-        PENDING_UPDATE: "pendingUpdate",
-    }
-};
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
 module.exports = {
   F: __webpack_require__(294),
   T: __webpack_require__(295),
@@ -4778,6 +4735,42 @@ module.exports = {
 
 
 /***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var CREATE_ERROR = "createError";
+var CREATE_START = "createStart";
+var CREATE_SUCCESS = "createSuccess";
+var DELETE_ERROR = "deleteError";
+var DELETE_START = "deleteStart";
+var DELETE_SUCCESS = "deleteSuccess";
+var FETCH_SUCCESS = "fetchSuccess";
+var UPDATE_ERROR = "updateError";
+var UPDATE_START = "updateStart";
+var UPDATE_SUCCESS = "updateSuccess";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = {
+    DEFAULT_KEY: "id",
+    STORE_LIST: "STORE_LIST",
+    STORE_MAP: "STORE_MAP",
+    REDUCER_NAMES: {
+        CREATE_ERROR: CREATE_ERROR,
+        CREATE_START: CREATE_START,
+        CREATE_SUCCESS: CREATE_SUCCESS,
+        DELETE_ERROR: DELETE_ERROR,
+        DELETE_START: DELETE_START,
+        DELETE_SUCCESS: DELETE_SUCCESS,
+        FETCH_SUCCESS: FETCH_SUCCESS,
+        UPDATE_ERROR: UPDATE_ERROR,
+        UPDATE_START: UPDATE_START,
+        UPDATE_SUCCESS: UPDATE_SUCCESS
+    }
+};
+
+
+/***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4915,7 +4908,7 @@ module.exports = function _has(prop, obj) {
 
 var actionCreatorsFor_1 = __webpack_require__(488);
 var actionTypesFor_1 = __webpack_require__(73);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var list_1 = __webpack_require__(491);
 var map_1 = __webpack_require__(505);
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -6738,7 +6731,7 @@ module.exports = _curry1(function reverse(list) {
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function wrapArray(recordOrRecords) {
     var isArray = r.is(Array, recordOrRecords);
     return isArray ? recordOrRecords : [recordOrRecords];
@@ -7247,7 +7240,7 @@ exports.default = actionTypesFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function findByKey(collection, key, id) {
     function predicate(record) {
         return record[key] === id;
@@ -19815,15 +19808,13 @@ module.exports = _curry2(function where(spec, testObj) {
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_CREATE] = true,
-        _a);
+    var recordStatus = {
+        busy: true,
+        pendingCreate: true,
+    };
     return r.merge(record, recordStatus);
-    var _a;
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19834,15 +19825,13 @@ exports.prepareRecord = prepareRecord;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.DELETED] = true,
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a);
+    var recordStatus = {
+        deleted: true,
+        busy: true,
+    };
     return r.merge(record, recordStatus);
-    var _a;
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19853,9 +19842,9 @@ exports.prepareRecord = prepareRecord;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var actionTypesFor_1 = __webpack_require__(73);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 function reducersFor(resourceName, args, emptyState, reducers) {
     if (args === void 0) { args = {}; }
     if (resourceName == null)
@@ -19907,10 +19896,9 @@ exports.default = reducersFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    return r.dissoc(constants_1.default.SPECIAL_KEYS.BUSY, record);
+    return r.omit(["busy"], record);
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19921,15 +19909,13 @@ exports.prepareRecord = prepareRecord;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
 function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_UPDATE] = true,
-        _a);
+    var recordStatus = {
+        busy: true,
+        pendingUpdate: true,
+    };
     return r.merge(record, recordStatus);
-    var _a;
 }
 exports.prepareRecord = prepareRecord;
 
@@ -19968,7 +19954,7 @@ exports.default = invariants;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function remove(config, current, addedRecord) {
     var key = config.key;
     function predicate(record) {
@@ -19988,7 +19974,7 @@ exports.default = remove;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function default_1(config, reducerName, records) {
     // All given records must have a key
     var haskey = r.has(config.key);
@@ -20008,7 +19994,7 @@ exports.default = default_1;
 "use strict";
 
 var makeScope_1 = __webpack_require__(252);
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function default_1(config, reducerName, record) {
     var scope = makeScope_1.default(config, reducerName);
     var isArray = r.is(Array, record);
@@ -42573,8 +42559,16 @@ catch(function(_ref5){var errors=_ref5.errors;return dispatch(fetchError(errors,
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _addresses=__webpack_require__(262);Object.defineProperty(exports,'fetchAddresses',{enumerable:true,get:function get(){return _addresses.fetchAddresses;}});Object.defineProperty(exports,'createAddress',{enumerable:true,get:function get(){return _addresses.createAddress;}});Object.defineProperty(exports,'deleteAddress',{enumerable:true,get:function get(){return _addresses.deleteAddress;}});var _menus=__webpack_require__(264);Object.defineProperty(exports,'fetchMenu',{enumerable:true,get:function get(){return _menus.
-fetchMenu;}});var _order=__webpack_require__(29);Object.defineProperty(exports,'resolveOrder',{enumerable:true,get:function get(){return _order.
-resolveOrder;}});var _payments=__webpack_require__(38);Object.defineProperty(exports,'fetchPayments',{enumerable:true,get:function get(){return _payments.
+fetchMenu;}});var _order=__webpack_require__(29);Object.defineProperty(exports,'addLineItem',{enumerable:true,get:function get(){return _order.
+
+addLineItem;}});Object.defineProperty(exports,'addOptionToLineItem',{enumerable:true,get:function get(){return _order.
+addOptionToLineItem;}});Object.defineProperty(exports,'removeLineItem',{enumerable:true,get:function get(){return _order.
+removeLineItem;}});Object.defineProperty(exports,'removeOptionFromLineItem',{enumerable:true,get:function get(){return _order.
+removeOptionFromLineItem;}});Object.defineProperty(exports,'resolveOrder',{enumerable:true,get:function get(){return _order.
+resolveOrder;}});Object.defineProperty(exports,'setLineItemQuantity',{enumerable:true,get:function get(){return _order.
+setLineItemQuantity;}});Object.defineProperty(exports,'setOrderLocationId',{enumerable:true,get:function get(){return _order.
+setOrderLocationId;}});var _payments=__webpack_require__(38);Object.defineProperty(exports,'fetchPayments',{enumerable:true,get:function get(){return _payments.
+
 
 fetchPayments;}});Object.defineProperty(exports,'createPayment',{enumerable:true,get:function get(){return _payments.
 createPayment;}});Object.defineProperty(exports,'deletePayment',{enumerable:true,get:function get(){return _payments.
@@ -54120,11 +54114,11 @@ module.exports = _curry3(function zipWith(fn, a, b) {
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var invariant = __webpack_require__(281);
 var actionTypesFor_1 = __webpack_require__(73);
 var assertNotArray_1 = __webpack_require__(251);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var getDefaultConfig_1 = __webpack_require__(489);
 // const invariant = require("invariant")
 function actionCreatorsFor(resourceName, config) {
@@ -54286,7 +54280,7 @@ exports.default = getDefaultConfig;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var wrapArray_1 = __webpack_require__(56);
 function assertHasKey(config, scope, recordOrRecords) {
     var key = config.key;
@@ -54320,7 +54314,7 @@ exports.default = {
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var remove_1 = __webpack_require__(249);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
@@ -54343,7 +54337,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(243);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
@@ -54367,31 +54361,24 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
     canBeArray: false,
 };
-function success(config, current, addedRecord, clientGeneratedKey) {
+function success(config, current, addedRecord, clientGenKey) {
     invariants_1.default(invariantArgs, config, current, addedRecord);
     var key = config.key;
     var done = false;
-    // Keep the clientGeneratedKey if provided
-    if (clientGeneratedKey != null) {
-        addedRecord = r.merge(addedRecord, (_a = {},
-            _a[constants_1.default.SPECIAL_KEYS.CLIENT_GENERATED_ID] = clientGeneratedKey,
-            _a));
-    }
     // Update existing records
     var updatedCollection = current.map(function (record) {
         var recordKey = record[key];
         if (recordKey == null)
             throw new Error('Expected record to have ' + key);
         var isSameKey = recordKey === addedRecord[key];
-        var isSameClientGetKey = (clientGeneratedKey != null && clientGeneratedKey === recordKey);
+        var isSameClientGetKey = (clientGenKey != null && clientGenKey === recordKey);
         if (isSameKey || isSameClientGetKey) {
             done = true;
             return addedRecord;
@@ -54405,7 +54392,6 @@ function success(config, current, addedRecord, clientGeneratedKey) {
         updatedCollection = updatedCollection.concat([addedRecord]);
     }
     return updatedCollection;
-    var _a;
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = success;
@@ -54417,8 +54403,8 @@ exports.default = success;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var findByKey_1 = __webpack_require__(74);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
@@ -54446,7 +54432,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(244);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var findByKey_1 = __webpack_require__(74);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
@@ -54473,9 +54459,9 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var invariants_1 = __webpack_require__(18);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -54501,7 +54487,7 @@ exports.default = success;
 "use strict";
 
 var assertAllHaveKeys_1 = __webpack_require__(250);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var store_1 = __webpack_require__(22);
 var wrapArray_1 = __webpack_require__(56);
 var invariants_1 = __webpack_require__(18);
@@ -54539,7 +54525,7 @@ var success_3 = __webpack_require__(498);
 var error_3 = __webpack_require__(502);
 var start_3 = __webpack_require__(503);
 var success_4 = __webpack_require__(504);
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var baseReducers = {
     createError: error_1.default,
     createStart: start_1.default,
@@ -54567,7 +54553,7 @@ exports.default = reducersFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function assert(scope, current) {
     var isArray = r.is(Array, current);
     if (!isArray)
@@ -54624,7 +54610,7 @@ exports.default = merge;
 "use strict";
 
 var error_1 = __webpack_require__(246);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var findByKey_1 = __webpack_require__(74);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
@@ -54655,7 +54641,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(247);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
@@ -54680,7 +54666,7 @@ exports.default = start;
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(22);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
@@ -54715,7 +54701,7 @@ exports.default = {
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
@@ -54738,7 +54724,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(243);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
@@ -54762,27 +54748,42 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
     canBeArray: false,
 };
-function success(config, current, addedRecord, clientGeneratedKey) {
+function success(config, current, addedRecord, clientGenKey) {
     invariants_1.default(invariantArgs, config, current, addedRecord);
     var key = config.key;
+    var done = false;
     var addedRecordKey = addedRecord[key];
-    var addedRecordKeyLens = r.lensProp(addedRecordKey);
-    // Keep the cuid in the record if there is one
-    if (clientGeneratedKey != null) {
-        addedRecord = r.merge(addedRecord, (_a = {},
-            _a[constants_1.default.SPECIAL_KEYS.CLIENT_GENERATED_ID] = clientGeneratedKey,
-            _a));
+    // Update existing records
+    var updatedCollection = r.map(function (existingRecord) {
+        var recordKey = existingRecord[key];
+        if (recordKey == null)
+            throw new Error('Expected record to have ' + key);
+        var isSameKey = recordKey === addedRecordKey;
+        var isSameClientGetKey = (clientGenKey != null && clientGenKey === recordKey);
+        if (isSameKey || isSameClientGetKey) {
+            done = true;
+            return addedRecord;
+        }
+        else {
+            return existingRecord;
+        }
+    })(current);
+    // Add if not updated
+    if (!done) {
+        var merge = (_a = {},
+            _a[addedRecordKey] = addedRecord,
+            _a);
+        updatedCollection = r.merge(updatedCollection, merge);
     }
-    var currentWithoutClientGeneratedKey = r.dissoc(clientGeneratedKey, current);
-    return r.set(addedRecordKeyLens, addedRecord, currentWithoutClientGeneratedKey);
+    return updatedCollection;
     var _a;
 }
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -54795,8 +54796,8 @@ exports.default = success;
 
 "use strict";
 
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
+var r = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_ERROR;
 var invariantArgs = {
@@ -54831,7 +54832,7 @@ exports.default = error;
 
 var start_1 = __webpack_require__(244);
 var invariants_1 = __webpack_require__(19);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_START;
 var invariantArgs = {
@@ -54861,9 +54862,9 @@ exports.default = start;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -54888,9 +54889,9 @@ exports.default = success;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var assertAllHaveKeys_1 = __webpack_require__(250);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var wrapArray_1 = __webpack_require__(56);
 var reducerName = constants_1.default.REDUCER_NAMES.FETCH_SUCCESS;
@@ -54928,7 +54929,7 @@ var success_3 = __webpack_require__(512);
 var error_3 = __webpack_require__(517);
 var start_3 = __webpack_require__(518);
 var success_4 = __webpack_require__(519);
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 var baseReducers = {
     createError: error_1.default,
     createStart: start_1.default,
@@ -54956,7 +54957,7 @@ exports.default = reducersFor;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function assertValidStore(scope, current) {
     if (!r.is(Object, current))
         throw new Error(scope + ': Expected current to be an object');
@@ -54971,7 +54972,7 @@ exports.default = assertValidStore;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 /*
 Adds or replace one record
 */
@@ -54991,7 +54992,7 @@ exports.default = replace;
 
 "use strict";
 
-var r = __webpack_require__(5);
+var r = __webpack_require__(4);
 function remove(config, current, record) {
     var key = config.key;
     var recordKey = record[key];
@@ -55008,7 +55009,7 @@ exports.default = remove;
 "use strict";
 
 var error_1 = __webpack_require__(246);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_ERROR;
@@ -55038,7 +55039,7 @@ exports.default = error;
 "use strict";
 
 var start_1 = __webpack_require__(247);
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
@@ -55063,7 +55064,7 @@ exports.default = start;
 
 "use strict";
 
-var constants_1 = __webpack_require__(4);
+var constants_1 = __webpack_require__(5);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(26);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
