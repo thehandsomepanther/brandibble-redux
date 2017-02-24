@@ -1,6 +1,14 @@
 export { fetchAddresses, createAddress, deleteAddress } from './addresses';
 export { fetchMenu } from './menus';
-export { resolveOrder } from './order';
+export {
+  addLineItem,
+  addOptionToLineItem,
+  removeLineItem,
+  removeOptionFromLineItem,
+  resolveOrder,
+  setLineItemQuantity,
+  setOrderLocationId,
+} from './order';
 export {
   fetchPayments,
   createPayment,
