@@ -19,12 +19,12 @@ export function setupBrandibble(Brandibble) {
   return dispatch => dispatch(_setupBrandibble(Brandibble));
 }
 
-export function setupBrandibbleRedux(Brandibble) {
+export function setupBrandibbleRedux(Brandibble, defaultLocationId=null, defaultServiceType='delivery') {
   return dispatch => {
     const payload = dispatch(setupBrandibble(Brandibble)).then(({value}) => {
       return Promise.all([
         dispatch(resolveUser(value)),
-        dispatch(resolveOrder(value)),
+        dispatch(resolveOrder(value, defaultLocationId, defaultServiceType)),
       ]);
     });
 

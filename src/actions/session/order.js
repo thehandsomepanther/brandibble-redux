@@ -10,10 +10,7 @@ export const SET_ORDER_LOCATION_ID = 'SET_ORDER_LOCATION_ID';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
-  return {
-    type: RESOLVE_ORDER,
-    payload: payload.then(order => { order })
-  };
+  return { type: RESOLVE_ORDER, payload };
 }
 
 function _addLineItem(order, product, quantity) {
@@ -59,10 +56,10 @@ function _setOrderLocationId(order, locationId) {
 }
 
 /* Public Functions */
-export function resolveOrder(brandibble, serviceType='delivery') {
+export function resolveOrder(brandibble, locationId=null, serviceType='delivery') {
   const { orders } = brandibble;
-  const currentOrder = orders.current();
-  const payload = currentOrder ? Promise.resolve(currentOrder) : orders.create(null, serviceType).then(({data}) => data);
+  const order = orders.current();
+  const payload = order ? Promise.resolve({order}) : orders.create(locationId, serviceType).then(({data}) => {return {order: data}});
 
   return dispatch => dispatch(_resolveOrder(payload));
 }
