@@ -1,8 +1,8 @@
 {
   "name": "brandibble-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Redux Framework for Brandibble.co",
-  "repository": "https://github.com/sanctuarycomputer/brandibble-redux.js",
+  "repository": "https://github.com/sanctuarycomputer/brandibble-redux",
   "engines": {
     "node": ">=7.6.0",
     "npm": ">=4.3.0"
