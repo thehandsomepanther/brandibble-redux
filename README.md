@@ -1,5 +1,9 @@
 # Brandibble Redux
 
+[![npm](https://img.shields.io/npm/v/brandibble-redux.svg?style=flat-square)](https://www.npmjs.com/package/brandibble-redux)
+[![CircleCI Status](https://img.shields.io/circleci/project/github/sanctuarycomputer/brandibble-redux/master.svg?label=circle&maxAge=43200&style=flat-square)](https://circleci.com/gh/sanctuarycomputer/brandibble-redux)
+[![Open Source Love](https://img.shields.io/npm/l/brandibble-redux.svg?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
+
 A set of actions, reducers, and redux middleware for Brandibble.
 
 ### Configuration
@@ -79,14 +83,11 @@ export default class Main extends Component {
 ```
 
 ### Working on Brandibble Redux
-
+**IMPORTANT:** Set an environment variable called `BRANDIBBLE_API_KEY` with your Brandibble API key before running tests.
 ```
 git clone https://github.com/sanctuarycomputer/brandibble-redux
 cd brandibble-redux
 npm install
-
-// Now you can run your build with:
-npm run build
 
 // Run tests (in chrome) with:
 npm test
