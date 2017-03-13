@@ -57,6 +57,14 @@ function _setOrderLocationId(order, locationId) {
   };
 }
 
+function _setPaymentMethod(order, type, card) {
+  return {
+    type: SET_PAYMENT_METHOD,
+    payload: order.setPaymentMethod(type, card).then(order => ({ order })),
+  };
+}
+
+
 /* Public Functions */
 export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery') {
   const { orders } = brandibble;
@@ -87,13 +95,6 @@ export function setLineItemQuantity(currentOrder, lineItem, newQuantity = 1) {
     );
   }
   return dispatch => dispatch(_setLineItemQuantity(...arguments));
-}
-
-function _setPaymentMethod(order, type, card) {
-  return {
-    type: SET_PAYMENT_METHOD,
-    payload: order.setPaymentMethod(type, card).then(data => ({ order, data })),
-  };
 }
 
 export function setPaymentMethod(currentOrder, type, card) {
