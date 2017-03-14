@@ -10,6 +10,7 @@ import {
   addLineItem,
   removeLineItem,
   setLineItemQuantity,
+  submitOrder,
   addOptionToLineItem,
   removeOptionFromLineItem,
 } from 'actions/session/order';
@@ -199,5 +200,17 @@ describe('actions/session/order', () => {
       action = find(actionsCalled, { type: 'SET_LINE_ITEM_QUANTITY_FULFILLED' });
       expect(action).to.exist;
     });
+  });
+
+  describe('submitOrder', () => {
+    before(async () => {
+      store = mockStore();
+      const order = makeUnpersistedOrder();
+      order.cart.addLineItem(productStub, 1);
+      await submitOrder(brandibble, order)(store.dispatch);
+      actionsCalled = store.getActions();
+    });
+
+    it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
   });
 });
