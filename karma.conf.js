@@ -19,6 +19,7 @@ module.exports = (config) => {
     ],
     frameworks: ['mocha', 'chai'],
     plugins: [
+      'karma-babel-preprocessor',
       'karma-chrome-launcher',
       'karma-chai',
       'karma-mocha',
@@ -26,7 +27,7 @@ module.exports = (config) => {
       'karma-webpack',
     ],
     preprocessors: {
-      'tests/**/*.test.js': ['webpack', 'sourcemap'],
+      'tests/**/*.test.js': ['babel', 'webpack', 'sourcemap'],
     },
     reporters: ['progress'],
     singleRun: !!process.env.CI,
