@@ -5,6 +5,7 @@ import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
 import {
+  setOrderAddress,
   setOrderLocationId,
   setPaymentMethod,
   resolveOrder,
@@ -17,6 +18,7 @@ import {
   removeOptionFromLineItem,
 } from 'actions/session/order';
 import {
+  addressStub,
   authResponseStub,
   brandibble,
   cardStub,
@@ -69,6 +71,27 @@ describe('actions/session/order', () => {
 
     it('should have a payload', () => {
       action = find(actionsCalled, { type: 'SET_ORDER_LOCATION_ID_FULFILLED' });
+      expect(action).to.have.a.property('payload');
+    });
+  });
+
+  describe('setOrderAddress', () => {
+    before(() => {
+      store = mockStore();
+      return setOrderAddress(makeUnpersistedOrder(), addressStub)(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
+
+    it('should have SET_ORDER_ADDRESS_PENDING action', () => {
+      action = find(actionsCalled, { type: 'SET_ORDER_ADDRESS_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have a payload', () => {
+      action = find(actionsCalled, { type: 'SET_ORDER_ADDRESS_FULFILLED' });
       expect(action).to.have.a.property('payload');
     });
   });
