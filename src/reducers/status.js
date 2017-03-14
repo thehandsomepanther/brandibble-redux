@@ -4,6 +4,7 @@ import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 import {
   RESOLVE_ORDER,
   SET_ORDER_LOCATION_ID,
+  SUBMIT_ORDER,
 } from 'actions/session/order';
 import {
   AUTHENTICATE_USER,
@@ -97,6 +98,7 @@ const initialState = {
   fetchMenu: IDLE,
   resolveOrder: IDLE,
   setOrderLocationId: IDLE,
+  submitOrder: IDLE,
   fetchPayments: IDLE,
   createPayment: IDLE,
   setDefaultPayment: IDLE,
@@ -164,6 +166,10 @@ export default function status(state = initialState, action) {
     case `${SET_ORDER_LOCATION_ID}_PENDING`: return { ...state, setOrderLocationId: PENDING };
     case `${SET_ORDER_LOCATION_ID}_FULFILLED`: return { ...state, setOrderLocationId: FULFILLED };
     case `${SET_ORDER_LOCATION_ID}_REJECTED`: return { ...state, setOrderLocationId: REJECTED };
+
+    case `${SUBMIT_ORDER}_PENDING`: return { ...state, submitOrder: PENDING };
+    case `${SUBMIT_ORDER}_FULFILLED`: return { ...state, submitOrder: FULFILLED };
+    case `${SUBMIT_ORDER}_REJECTED`: return { ...state, submitOrder: REJECTED };
 
     case PAYMENTS_FETCH_START: return { ...state, fetchPayments: PENDING };
     case PAYMENTS_FETCH_SUCCESS: return { ...state, fetchPayments: FULFILLED };

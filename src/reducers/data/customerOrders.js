@@ -3,10 +3,12 @@ import {
   FETCH_PAST_CUSTOMER_ORDERS,
   FETCH_UPCOMING_CUSTOMER_ORDERS,
 } from 'actions/data/customerOrders';
+import { SUBMIT_ORDER } from 'actions/session/order';
 
 const initialState = {
   all: null,
   past: null,
+  session: [],
   upcoming: null,
 };
 
@@ -26,6 +28,11 @@ export default function customerOrders(state = initialState, action) {
       return {
         ...state,
         upcoming: action.payload,
+      };
+    case `${SUBMIT_ORDER}_FULFILLED`:
+      return {
+        ...state,
+        session: state.session.push(action.payload),
       };
     default:
       return state;

@@ -8,8 +8,10 @@ export const REMOVE_LINE_ITEM = 'REMOVE_LINE_ITEM';
 export const ADD_OPTION_TO_LINE_ITEM = 'ADD_OPTION_TO_LINE_ITEM';
 export const REMOVE_OPTION_FROM_LINE_ITEM = 'REMOVE_OPTION_FROM_LINE_ITEM';
 export const SET_ORDER_LOCATION_ID = 'SET_ORDER_LOCATION_ID';
+export const SUBMIT_ORDER = 'SUBMIT_ORDER';
 export const BIND_CUSTOMER_TO_ORDER = 'BIND_CUSTOMER_TO_ORDER';
 export const SET_PAYMENT_METHOD = 'SET_PAYMENT_METHOD';
+export const SET_ORDER_ADDRESS = 'SET_ORDER_ADDRESS';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
@@ -58,6 +60,13 @@ function _setOrderLocationId(order, locationId) {
   };
 }
 
+function _setOrderAddress(order, address) {
+  return {
+    type: SET_ORDER_ADDRESS,
+    payload: order.setAddress(address).then(order => ({ order })),
+  };
+}
+
 function _bindCustomerToOrder(order, customer) {
   return {
     type: BIND_CUSTOMER_TO_ORDER,
@@ -73,6 +82,13 @@ function _setPaymentMethod(order, type, card) {
 }
 
 
+function _submitOrder(brandibble, order) {
+  return {
+    type: SUBMIT_ORDER,
+    payload: brandibble.orders.submit(order).then(({ data }) => data),
+  };
+}
+
 /* Public Functions */
 export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery') {
   const { orders } = brandibble;
@@ -83,6 +99,10 @@ export function resolveOrder(brandibble, locationId = null, serviceType = 'deliv
 
 export function setOrderLocationId(currentOrder, locationId) {
   return dispatch => dispatch(_setOrderLocationId(...arguments));
+}
+
+export function setOrderAddress(...args) {
+  return dispatch => dispatch(_setOrderAddress(...args));
 }
 
 export function addLineItem(currentOrder, product, quantity = 1) {
@@ -123,4 +143,8 @@ export function removeOptionFromLineItem(currentOrder, lineItem, optionItem) {
 
 export function bindCustomerToOrder(...args) {
   return dispatch => dispatch(_bindCustomerToOrder(...args));
+}
+
+export function submitOrder(...args) {
+  return dispatch => dispatch(_submitOrder(...args));
 }

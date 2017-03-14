@@ -4,7 +4,9 @@ import { expect } from 'chai';
 import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
+import { fetchMenu } from 'actions/session/menus';
 import {
+  setOrderAddress,
   setOrderLocationId,
   setPaymentMethod,
   resolveOrder,
@@ -12,15 +14,18 @@ import {
   bindCustomerToOrder,
   removeLineItem,
   setLineItemQuantity,
+  submitOrder,
   addOptionToLineItem,
   removeOptionFromLineItem,
 } from 'actions/session/order';
 import {
+  addressStub,
   authResponseStub,
   brandibble,
   cardStub,
   makeUnpersistedOrder,
   productStub,
+  SAMPLE_MENU_LOCATION_ID,
 } from '../../config/stubs';
 
 const mockStore = configureStore(reduxMiddleware);
@@ -68,6 +73,27 @@ describe('actions/session/order', () => {
 
     it('should have a payload', () => {
       action = find(actionsCalled, { type: 'SET_ORDER_LOCATION_ID_FULFILLED' });
+      expect(action).to.have.a.property('payload');
+    });
+  });
+
+  describe('setOrderAddress', () => {
+    before(() => {
+      store = mockStore();
+      return setOrderAddress(makeUnpersistedOrder(), addressStub)(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
+
+    it('should have SET_ORDER_ADDRESS_PENDING action', () => {
+      action = find(actionsCalled, { type: 'SET_ORDER_ADDRESS_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have a payload', () => {
+      action = find(actionsCalled, { type: 'SET_ORDER_ADDRESS_FULFILLED' });
       expect(action).to.have.a.property('payload');
     });
   });
@@ -238,6 +264,39 @@ describe('actions/session/order', () => {
     it('should have BIND_CUSTOMER_TO_ORDER_FULFILLED action', () => {
       action = find(actionsCalled, { type: 'BIND_CUSTOMER_TO_ORDER_FULFILLED' });
       expect(action).to.exist;
+    });
+  });
+
+  describe('submitOrder', () => {
+    before(() => {
+      store = mockStore();
+      const order = makeUnpersistedOrder();
+
+      return fetchMenu(brandibble, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(({ menu }) => {
+        const product = menu[0].children[menu[0].children.length - 1].items[0];
+        order.cart.addLineItem(product, product.id);
+
+        return setOrderLocationId(order, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(() => {
+          return setOrderAddress(order, addressStub)(store.dispatch).then(() => {
+            return bindCustomerToOrder(order, authResponseStub)(store.dispatch).then(() => {
+              return setPaymentMethod(order, 'credit', cardStub)(store.dispatch).then(() => {
+                store.clearActions();
+
+                return submitOrder(brandibble, order)(store.dispatch).then(() => {
+                  actionsCalled = store.getActions();
+                });
+              });
+            });
+          });
+        });
+      });
+    });
+
+    it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
+
+    it('should have a payload', () => {
+      action = find(actionsCalled, { type: 'SUBMIT_ORDER_FULFILLED' });
+      expect(action).to.have.a.property('payload');
     });
   });
 });
