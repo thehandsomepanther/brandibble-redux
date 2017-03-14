@@ -6,15 +6,23 @@ import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
 import {
   setOrderLocationId,
+  setPaymentMethod,
   resolveOrder,
   addLineItem,
+  bindCustomerToOrder,
   removeLineItem,
   setLineItemQuantity,
   submitOrder,
   addOptionToLineItem,
   removeOptionFromLineItem,
 } from 'actions/session/order';
-import { brandibble, makeUnpersistedOrder, productStub } from '../../config/stubs';
+import {
+  authResponseStub,
+  brandibble,
+  cardStub,
+  makeUnpersistedOrder,
+  productStub,
+} from '../../config/stubs';
 
 const mockStore = configureStore(reduxMiddleware);
 
@@ -62,6 +70,22 @@ describe('actions/session/order', () => {
     it('should have a payload', () => {
       action = find(actionsCalled, { type: 'SET_ORDER_LOCATION_ID_FULFILLED' });
       expect(action).to.have.a.property('payload');
+    });
+  });
+
+  describe('setPaymentMethod', () => {
+    before(() => {
+      store = mockStore();
+      return setPaymentMethod(makeUnpersistedOrder(), 'credit', cardStub)(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
+
+    it('should have SET_PAYMENT_METHOD_FULFILLED action', () => {
+      action = find(actionsCalled, { type: 'SET_PAYMENT_METHOD_FULFILLED' });
+      expect(action).to.exist.and.have.property('payload').to.have.property('order');
     });
   });
 
@@ -198,6 +222,22 @@ describe('actions/session/order', () => {
 
     it('should have SET_LINE_ITEM_QUANTITY_FULFILLED action', () => {
       action = find(actionsCalled, { type: 'SET_LINE_ITEM_QUANTITY_FULFILLED' });
+      expect(action).to.exist;
+    });
+  });
+
+  describe('bindCustomerToOrder', () => {
+    before(() => {
+      store = mockStore();
+      return bindCustomerToOrder(makeUnpersistedOrder(), authResponseStub)(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
+
+    it('should have BIND_CUSTOMER_TO_ORDER_FULFILLED action', () => {
+      action = find(actionsCalled, { type: 'BIND_CUSTOMER_TO_ORDER_FULFILLED' });
       expect(action).to.exist;
     });
   });
