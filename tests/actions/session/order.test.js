@@ -268,19 +268,28 @@ describe('actions/session/order', () => {
   });
 
   describe('submitOrder', () => {
-    before(async () => {
+    before(() => {
       store = mockStore();
       const order = makeUnpersistedOrder();
-      const { menu } = await fetchMenu(brandibble, SAMPLE_MENU_LOCATION_ID)(store.dispatch);
-      const product = menu[0].children[menu[0].children.length - 1].items[0];
-      order.cart.addLineItem(product, product.id);
-      await setOrderLocationId(order, SAMPLE_MENU_LOCATION_ID)(store.dispatch);
-      await setOrderAddress(order, addressStub)(store.dispatch);
-      await bindCustomerToOrder(order, authResponseStub)(store.dispatch);
-      await setPaymentMethod(order, 'credit', cardStub)(store.dispatch);
-      store.clearActions();
-      await submitOrder(brandibble, order)(store.dispatch);
-      actionsCalled = store.getActions();
+
+      return fetchMenu(brandibble, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(({ menu }) => {
+        const product = menu[0].children[menu[0].children.length - 1].items[0];
+        order.cart.addLineItem(product, product.id);
+
+        return setOrderLocationId(order, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(() => {
+          return setOrderAddress(order, addressStub)(store.dispatch).then(() => {
+            return bindCustomerToOrder(order, authResponseStub)(store.dispatch).then(() => {
+              return setPaymentMethod(order, 'credit', cardStub)(store.dispatch).then(() => {
+                store.clearActions();
+
+                return submitOrder(brandibble, order)(store.dispatch).then(() => {
+                  actionsCalled = store.getActions();
+                });
+              });
+            });
+          });
+        });
+      });
     });
 
     it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
