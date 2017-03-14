@@ -4,6 +4,7 @@ import { expect } from 'chai';
 import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
+import { fetchMenu } from 'actions/session/menus';
 import {
   setOrderAddress,
   setOrderLocationId,
@@ -24,6 +25,7 @@ import {
   cardStub,
   makeUnpersistedOrder,
   productStub,
+  SAMPLE_MENU_LOCATION_ID,
 } from '../../config/stubs';
 
 const mockStore = configureStore(reduxMiddleware);
@@ -269,11 +271,23 @@ describe('actions/session/order', () => {
     before(async () => {
       store = mockStore();
       const order = makeUnpersistedOrder();
-      order.cart.addLineItem(productStub, 1);
+      const { menu } = await fetchMenu(brandibble, SAMPLE_MENU_LOCATION_ID)(store.dispatch);
+      const product = menu[0].children[menu[0].children.length - 1].items[0];
+      order.cart.addLineItem(product, product.id);
+      await setOrderLocationId(order, SAMPLE_MENU_LOCATION_ID)(store.dispatch);
+      await setOrderAddress(order, addressStub)(store.dispatch);
+      await bindCustomerToOrder(order, authResponseStub)(store.dispatch);
+      await setPaymentMethod(order, 'credit', cardStub)(store.dispatch);
+      store.clearActions();
       await submitOrder(brandibble, order)(store.dispatch);
       actionsCalled = store.getActions();
     });
 
-    it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
+    it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
+
+    it('should have a payload', () => {
+      action = find(actionsCalled, { type: 'SUBMIT_ORDER_FULFILLED' });
+      expect(action).to.have.a.property('payload');
+    });
   });
 });

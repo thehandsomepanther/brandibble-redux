@@ -85,7 +85,7 @@ function _setPaymentMethod(order, type, card) {
 function _submitOrder(brandibble, order) {
   return {
     type: SUBMIT_ORDER,
-    payload: brandibble.orders.submit(order),
+    payload: brandibble.orders.submit(order).then(({ data }) => data),
   };
 }
 
