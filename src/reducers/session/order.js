@@ -10,6 +10,7 @@ import {
   SET_ORDER_ADDRESS,
   SET_ORDER_LOCATION_ID,
   SET_PAYMENT_METHOD,
+  SUBMIT_ORDER,
 } from 'actions/session/order';
 
 const initialState = {
@@ -54,6 +55,8 @@ export default function order(state = initialState, action) {
         lineItemsData: _buildFormattedLineItemsHash(ref),
       };
     }
+    case `${SUBMIT_ORDER}_FULFILLED`:
+      return initialState;
     default:
       return state;
   }
