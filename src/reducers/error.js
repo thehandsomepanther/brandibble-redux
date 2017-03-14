@@ -7,7 +7,10 @@ import {
 } from 'actions/setup';
 
 // orders
-import { RESOLVE_ORDER } from 'actions/session/order';
+import {
+  RESOLVE_ORDER,
+  SUBMIT_ORDER,
+} from 'actions/session/order';
 
 //  payments
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
@@ -98,6 +101,7 @@ export const initialState = {
   fetchMenu: null,
   // orders
   resolveOrder: null,
+  submitOrder: null,
   // payments
   fetchPayments: null,
   createPayment: null,
@@ -158,6 +162,9 @@ export default function error(state = initialState, action) {
     // orders
     case `${RESOLVE_ORDER}_PENDING`: return { ...state, resolveOrder: null };
     case `${RESOLVE_ORDER}_REJECTED`: return { ...state, resolveOrder: action.payload };
+
+    case `${SUBMIT_ORDER}_PENDING`: return { ...state, submitOrder: null };
+    case `${SUBMIT_ORDER}_REJECTED`: return { ...state, submitOrder: action.payload };
 
     // payments
     case PAYMENTS_FETCH_START: return { ...state, fetchPayments: null };
