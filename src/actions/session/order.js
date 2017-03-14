@@ -8,6 +8,7 @@ export const REMOVE_LINE_ITEM = 'REMOVE_LINE_ITEM';
 export const ADD_OPTION_TO_LINE_ITEM = 'ADD_OPTION_TO_LINE_ITEM';
 export const REMOVE_OPTION_FROM_LINE_ITEM = 'REMOVE_OPTION_FROM_LINE_ITEM';
 export const SET_ORDER_LOCATION_ID = 'SET_ORDER_LOCATION_ID';
+export const SUBMIT_ORDER = 'SUBMIT_ORDER';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
@@ -56,6 +57,13 @@ function _setOrderLocationId(order, locationId) {
   };
 }
 
+function _submitOrder(brandibble, order) {
+  return {
+    type: SUBMIT_ORDER,
+    payload: brandibble.orders.submit(order),
+  };
+}
+
 /* Public Functions */
 export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery') {
   const { orders } = brandibble;
@@ -98,4 +106,8 @@ export function addOptionToLineItem(currentOrder, lineItem, optionGroup, optionI
 
 export function removeOptionFromLineItem(currentOrder, lineItem, optionItem) {
   return dispatch => dispatch(_removeOptionFromLineItem(...arguments));
+}
+
+export function submitOrder(...args) {
+  return dispatch => dispatch(_submitOrder(...args));
 }
