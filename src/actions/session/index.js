@@ -3,12 +3,15 @@ export { fetchMenu } from './menus';
 export {
   addLineItem,
   addOptionToLineItem,
+  bindCustomerToOrder,
   removeLineItem,
   removeOptionFromLineItem,
   resolveOrder,
   setLineItemQuantity,
+  setOrderAddress,
   setOrderLocationId,
   setPaymentMethod,
+  submitOrder,
 } from './order';
 export {
   fetchPayments,
