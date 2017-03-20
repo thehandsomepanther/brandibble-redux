@@ -58,7 +58,9 @@ export default function order(state = initialState, action) {
       };
     }
     case `${SUBMIT_ORDER}_FULFILLED`:
-      return initialState;
+      return {
+        ...initialState,
+      };
     default:
       return state;
   }
