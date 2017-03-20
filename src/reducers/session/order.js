@@ -11,6 +11,7 @@ import {
   SET_ORDER_LOCATION_ID,
   SET_PAYMENT_METHOD,
   SUBMIT_ORDER,
+  SET_PROMO,
 } from 'actions/session/order';
 
 const initialState = {
@@ -46,6 +47,7 @@ export default function order(state = initialState, action) {
     case `${REMOVE_LINE_ITEM}_FULFILLED`:
     case `${ADD_OPTION_TO_LINE_ITEM}_FULFILLED`:
     case `${SET_PAYMENT_METHOD}_FULFILLED`:
+    case `${SET_PROMO}_FULFILLED`:
     case `${REMOVE_OPTION_FROM_LINE_ITEM}_FULFILLED`: {
       const ref = action.payload.order;
       return {

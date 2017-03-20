@@ -12,6 +12,7 @@ export {
   setOrderLocationId,
   setPaymentMethod,
   submitOrder,
+  setPromo,
 } from './order';
 export {
   fetchPayments,

@@ -12,6 +12,7 @@ export const SUBMIT_ORDER = 'SUBMIT_ORDER';
 export const BIND_CUSTOMER_TO_ORDER = 'BIND_CUSTOMER_TO_ORDER';
 export const SET_PAYMENT_METHOD = 'SET_PAYMENT_METHOD';
 export const SET_ORDER_ADDRESS = 'SET_ORDER_ADDRESS';
+export const SET_PROMO = 'SET_PROMO';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
@@ -81,6 +82,12 @@ function _setPaymentMethod(order, type, card) {
   };
 }
 
+function _setPromo(order, promo) {
+  return {
+    type: SET_PROMO,
+    payload: order.setPromo(promo).then(order => ({ order })),
+  };
+}
 
 function _submitOrder(brandibble, order) {
   return {
@@ -127,6 +134,10 @@ export function setLineItemQuantity(currentOrder, lineItem, newQuantity = 1) {
 
 export function setPaymentMethod(currentOrder, type, card) {
   return dispatch => dispatch(_setPaymentMethod(currentOrder, type, card));
+}
+
+export function setPromo(currentOrder, promo) {
+  return dispatch => dispatch(_setPromo(currentOrder, promo));
 }
 
 export function removeLineItem(currentOrder, lineItem) {
