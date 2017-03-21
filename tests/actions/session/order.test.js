@@ -83,8 +83,6 @@ describe('actions/session/order', () => {
       store = mockStore();
       return setPromoCode(makeUnpersistedOrder(), 'waow')(store.dispatch).then(() => {
         actionsCalled = store.getActions();
-        // console.log(actionsCalled, 'actionsCalled');
-        // debugger
       });
     });
 
