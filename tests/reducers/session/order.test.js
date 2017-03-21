@@ -5,6 +5,7 @@ import {
   SET_ORDER_LOCATION_ID,
   ADD_LINE_ITEM,
   ADD_OPTION_TO_LINE_ITEM,
+  SET_PROMO_CODE,
 } from 'actions/session/order';
 import reducer from 'reducers/session/order';
 import { makeUnpersistedOrder, productStub } from '../../config/stubs';
@@ -37,6 +38,17 @@ describe('reducers/session/order', () => {
     expect(reduced.orderData).to.be.present;
     expect(reduced.orderData.location_id).to.be.present;
     expect(reduced.lineItemsData).to.be.present;
+  });
+
+  it('handles the SET_PROMO_CODE action', () => {
+    const dummyOrder = makeUnpersistedOrder();
+    const reduced = reducer(initialState, {
+      type: `${SET_PROMO_CODE}_FULFILLED`,
+      payload: { order: dummyOrder },
+    });
+    expect(reduced.ref).to.deep.equal(dummyOrder);
+    expect(reduced.orderData).to.be.present;
+    expect(reduced.orderData.promo_code).to.be.present;
   });
 
   /* Note: The below all trigger the same case in the reducer, so no point testing them all. */

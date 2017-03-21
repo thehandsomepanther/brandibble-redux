@@ -50,5 +50,6 @@
     "redux-promise-middleware": "^4.2.0",
     "redux-thunk": "^2.2.0",
     "webpack": "^2.2.0"
-  }
+  },
+  "dependencies": {}
 }

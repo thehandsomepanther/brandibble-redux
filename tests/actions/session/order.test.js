@@ -17,6 +17,7 @@ import {
   submitOrder,
   addOptionToLineItem,
   removeOptionFromLineItem,
+  setPromoCode,
 } from 'actions/session/order';
 import {
   addressStub,
@@ -73,6 +74,27 @@ describe('actions/session/order', () => {
 
     it('should have a payload', () => {
       action = find(actionsCalled, { type: 'SET_ORDER_LOCATION_ID_FULFILLED' });
+      expect(action).to.have.a.property('payload');
+    });
+  });
+
+  describe('setPromoCode', () => {
+    before(() => {
+      store = mockStore();
+      return setPromoCode(makeUnpersistedOrder(), 'waow')(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+        // console.log(actionsCalled, 'actionsCalled');
+        // debugger
+      });
+    });
+
+    it('should have SET_PROMO_CODE_PENDING action', () => {
+      action = find(actionsCalled, { type: 'SET_PROMO_CODE_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have a payload', () => {
+      action = find(actionsCalled, { type: 'SET_PROMO_CODE_FULFILLED' });
       expect(action).to.have.a.property('payload');
     });
   });
