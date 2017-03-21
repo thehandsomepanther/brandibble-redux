@@ -13,6 +13,7 @@ export const BIND_CUSTOMER_TO_ORDER = 'BIND_CUSTOMER_TO_ORDER';
 export const SET_PAYMENT_METHOD = 'SET_PAYMENT_METHOD';
 export const SET_ORDER_ADDRESS = 'SET_ORDER_ADDRESS';
 export const SET_PROMO_CODE = 'SET_PROMO_CODE';
+export const SET_REQUESTED_AT = 'SET_REQUESTED_AT';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
@@ -89,6 +90,13 @@ function _setPromoCode(order, promo) {
   };
 }
 
+function _setRequestedAt(order, time) {
+  return {
+    type: SET_REQUESTED_AT,
+    payload: order.setRequestedAt(time).then(order => ({ order })),
+  };
+}
+
 function _submitOrder(brandibble, order) {
   return {
     type: SUBMIT_ORDER,
@@ -134,6 +142,10 @@ export function setLineItemQuantity(currentOrder, lineItem, newQuantity = 1) {
 
 export function setPaymentMethod(currentOrder, type, card) {
   return dispatch => dispatch(_setPaymentMethod(currentOrder, type, card));
+}
+
+export function setRequestedAt(currentOrder, time) {
+  return dispatch => dispatch(_setRequestedAt(currentOrder, time));
 }
 
 export function setPromoCode(currentOrder, promo) {

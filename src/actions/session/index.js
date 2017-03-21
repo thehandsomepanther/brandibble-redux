@@ -13,6 +13,7 @@ export {
   setPaymentMethod,
   submitOrder,
   setPromoCode,
+  setRequestedAt,
 } from './order';
 export {
   fetchPayments,
