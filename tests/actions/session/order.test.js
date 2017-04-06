@@ -18,6 +18,7 @@ import {
   addOptionToLineItem,
   removeOptionFromLineItem,
   setPromoCode,
+  setRequestedAt,
 } from 'actions/session/order';
 import {
   addressStub,
@@ -93,6 +94,25 @@ describe('actions/session/order', () => {
 
     it('should have a payload', () => {
       action = find(actionsCalled, { type: 'SET_PROMO_CODE_FULFILLED' });
+      expect(action).to.have.a.property('payload');
+    });
+  });
+
+  describe('setRequestedAt', () => {
+    before(() => {
+      store = mockStore();
+      return setRequestedAt(makeUnpersistedOrder(), '2017-03-22T17:50:29Z')(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should have SET_REQUESTED_AT_PENDING action', () => {
+      action = find(actionsCalled, { type: 'SET_REQUESTED_AT_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have a payload', () => {
+      action = find(actionsCalled, { type: 'SET_REQUESTED_AT_FULFILLED' });
       expect(action).to.have.a.property('payload');
     });
   });
