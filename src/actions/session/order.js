@@ -15,6 +15,7 @@ export const SET_ORDER_ADDRESS = 'SET_ORDER_ADDRESS';
 export const SET_PROMO_CODE = 'SET_PROMO_CODE';
 export const SET_REQUESTED_AT = 'SET_REQUESTED_AT';
 export const CREATE_NEW_ORDER = 'CREATE_NEW_ORDER';
+export const VALIDATE_CURRENT_ORDER = 'VALIDATE_CURRENT_ORDER';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
@@ -112,6 +113,14 @@ function _createNewOrder(data) {
   };
 }
 
+function _validateCurrentOrder(data) {
+  return {
+    type: VALIDATE_CURRENT_ORDER,
+    payload: data,
+  };
+}
+
+/* Public Functions */
 export function createNewOrder(brandibble, location, serviceType) {
   return (dispatch) => {
     const { orders } = brandibble;
@@ -123,12 +132,20 @@ export function createNewOrder(brandibble, location, serviceType) {
   };
 }
 
-/* Public Functions */
 export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery') {
   const { orders } = brandibble;
   const order = orders.current();
   const payload = order ? Promise.resolve({ order }) : orders.create(locationId, serviceType).then(order => ({ order }));
   return dispatch => dispatch(_resolveOrder(payload));
+}
+
+export function validateCurrentOrder(brandibble, data = {}) {
+  return (dispatch) => {
+    const { orders } = brandibble;
+    const order = orders.current();
+    const payload = orders.validate(order, data).then(res => res);
+    return dispatch(_validateCurrentOrder(payload));
+  };
 }
 
 export function setOrderLocationId(currentOrder, locationId) {
