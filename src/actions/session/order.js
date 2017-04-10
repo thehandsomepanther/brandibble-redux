@@ -14,6 +14,7 @@ export const SET_PAYMENT_METHOD = 'SET_PAYMENT_METHOD';
 export const SET_ORDER_ADDRESS = 'SET_ORDER_ADDRESS';
 export const SET_PROMO_CODE = 'SET_PROMO_CODE';
 export const SET_REQUESTED_AT = 'SET_REQUESTED_AT';
+export const CREATE_NEW_ORDER = 'CREATE_NEW_ORDER';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
@@ -101,6 +102,24 @@ function _submitOrder(brandibble, order) {
   return {
     type: SUBMIT_ORDER,
     payload: brandibble.orders.submit(order).then(({ data }) => data),
+  };
+}
+
+function _createNewOrder(data) {
+  return {
+    type: CREATE_NEW_ORDER,
+    payload: data,
+  };
+}
+
+export function createNewOrder(brandibble, location, serviceType) {
+  return (dispatch) => {
+    const { orders } = brandibble;
+    orders.create(location.location_id, serviceType)
+    .then((order) => {
+      dispatch(_createNewOrder({ order }));
+      dispatch(setOrderAddress(order, location));
+    });
   };
 }
 

@@ -10,9 +10,9 @@ import {
   SET_ORDER_ADDRESS,
   SET_ORDER_LOCATION_ID,
   SET_PAYMENT_METHOD,
-  SUBMIT_ORDER,
   SET_PROMO_CODE,
   SET_REQUESTED_AT,
+  CREATE_NEW_ORDER,
 } from 'actions/session/order';
 
 const initialState = {
@@ -50,7 +50,8 @@ export default function order(state = initialState, action) {
     case `${SET_PAYMENT_METHOD}_FULFILLED`:
     case `${SET_PROMO_CODE}_FULFILLED`:
     case `${SET_REQUESTED_AT}_FULFILLED`:
-    case `${REMOVE_OPTION_FROM_LINE_ITEM}_FULFILLED`: {
+    case `${REMOVE_OPTION_FROM_LINE_ITEM}_FULFILLED`:
+    case CREATE_NEW_ORDER: {
       const ref = action.payload.order;
       return {
         ...state,
@@ -59,10 +60,7 @@ export default function order(state = initialState, action) {
         lineItemsData: _buildFormattedLineItemsHash(ref),
       };
     }
-    case `${SUBMIT_ORDER}_FULFILLED`:
-      return {
-        ...initialState,
-      };
+
     default:
       return state;
   }
