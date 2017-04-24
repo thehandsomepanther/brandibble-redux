@@ -1,9 +1,8 @@
 /* global describe it */
 import { expect } from 'chai';
-import { authResponseStub, brandibble } from '../config/stubs';
-import { AUTHENTICATE_USER } from 'actions/session/user';
 import { SETUP_BRANDIBBLE } from 'actions/setup';
 import reducer from 'reducers/ref';
+import { brandibble } from '../config/stubs';
 
 const initialState = {};
 
