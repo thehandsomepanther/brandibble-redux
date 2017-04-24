@@ -167,9 +167,12 @@ describe('actions/session/order', () => {
           return setOrderAddress(order, addressStub)(store.dispatch).then(() => {
             return bindCustomerToOrder(order, authResponseStub)(store.dispatch).then(() => {
               return setPaymentMethod(order, 'credit', cardStub)(store.dispatch).then(() => {
-                store.clearActions();
-                return validateCurrentOrder(brandibble)(store.dispatch).then(() => {
-                  actionsCalled = store.getActions();
+                // hack to reset any previously set promo codes
+                return setPromoCode(order, '')(store.dispatch).then(() => {
+                  store.clearActions();
+                  return validateCurrentOrder(brandibble)(store.dispatch).then(() => {
+                    actionsCalled = store.getActions();
+                  });
                 });
               });
             });
