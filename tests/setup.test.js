@@ -1,4 +1,4 @@
-/* global window describe it */
+/* global window describe it before */
 import { brandibble } from './config/stubs';
 
 const SAMPLE_MENU_LOCATION_ID = 19;

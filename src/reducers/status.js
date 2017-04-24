@@ -6,6 +6,7 @@ import {
   SET_ORDER_LOCATION_ID,
   SUBMIT_ORDER,
   SET_PROMO_CODE,
+  VALIDATE_CURRENT_CART,
   VALIDATE_CURRENT_ORDER,
   SET_REQUESTED_AT,
   CREATE_NEW_ORDER,
@@ -121,6 +122,7 @@ const initialState = {
   unauthenticateUser: IDLE,
   updateUser: IDLE,
   validateUser: IDLE,
+  validateCurrentCart: IDLE,
   validateCurrentOrder: IDLE,
   createNewOrder: IDLE,
 };
@@ -238,6 +240,10 @@ export default function status(state = initialState, action) {
     case `${FETCH_LEVELUP_QR_CODE}_PENDING`: return { ...state, resolveUser: PENDING };
     case `${FETCH_LEVELUP_QR_CODE}_FULFILLED`: return { ...state, resolveUser: FULFILLED };
     case `${FETCH_LEVELUP_QR_CODE}_REJECTED`: return { ...state, resolveUser: REJECTED };
+
+    case `${VALIDATE_CURRENT_CART}_PENDING`: return { ...state, validateCurrentCart: PENDING };
+    case `${VALIDATE_CURRENT_CART}_FULFILLED`: return { ...state, validateCurrentCart: FULFILLED };
+    case `${VALIDATE_CURRENT_CART}_REJECTED`: return { ...state, validateCurrentCart: REJECTED };
 
     case `${VALIDATE_CURRENT_ORDER}_PENDING`: return { ...state, validateCurrentOrder: PENDING };
     case `${VALIDATE_CURRENT_ORDER}_FULFILLED`: return { ...state, validateCurrentOrder: FULFILLED };

@@ -19,6 +19,7 @@ import {
   removeOptionFromLineItem,
   setPromoCode,
   setRequestedAt,
+  validateCurrentCart,
   validateCurrentOrder,
 } from 'actions/session/order';
 import {
@@ -118,7 +119,7 @@ describe('actions/session/order', () => {
     });
   });
 
-  describe('validateCurrentOrder', () => {
+  describe('validateCurrentCart', () => {
     before(() => {
       store = mockStore();
       const order = makeUnpersistedOrder();
@@ -132,7 +133,7 @@ describe('actions/session/order', () => {
             return bindCustomerToOrder(order, authResponseStub)(store.dispatch).then(() => {
               return setPaymentMethod(order, 'credit', cardStub)(store.dispatch).then(() => {
                 store.clearActions();
-                return validateCurrentOrder(brandibble)(store.dispatch).then(() => {
+                return validateCurrentCart(brandibble)(store.dispatch).then(() => {
                   actionsCalled = store.getActions();
                 });
               });
@@ -142,13 +143,13 @@ describe('actions/session/order', () => {
       });
     });
 
-    it('should have VALIDATE_CURRENT_ORDER_PENDING action', () => {
-      action = find(actionsCalled, { type: 'VALIDATE_CURRENT_ORDER_PENDING' });
+    it('should have VALIDATE_CURRENT_CART_PENDING action', () => {
+      action = find(actionsCalled, { type: 'VALIDATE_CURRENT_CART_PENDING' });
       expect(action).to.exist;
     });
 
     it('should have a payload', () => {
-      action = find(actionsCalled, { type: 'VALIDATE_CURRENT_ORDER_FULFILLED' });
+      action = find(actionsCalled, { type: 'VALIDATE_CURRENT_CART_FULFILLED' });
       expect(action).to.have.a.property('payload');
     });
   });
@@ -166,9 +167,12 @@ describe('actions/session/order', () => {
           return setOrderAddress(order, addressStub)(store.dispatch).then(() => {
             return bindCustomerToOrder(order, authResponseStub)(store.dispatch).then(() => {
               return setPaymentMethod(order, 'credit', cardStub)(store.dispatch).then(() => {
-                store.clearActions();
-                return validateCurrentOrder(brandibble)(store.dispatch).then(() => {
-                  actionsCalled = store.getActions();
+                // hack to reset any previously set promo codes
+                return setPromoCode(order, '')(store.dispatch).then(() => {
+                  store.clearActions();
+                  return validateCurrentOrder(brandibble)(store.dispatch).then(() => {
+                    actionsCalled = store.getActions();
+                  });
                 });
               });
             });

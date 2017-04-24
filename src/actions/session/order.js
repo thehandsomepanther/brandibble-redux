@@ -16,6 +16,7 @@ export const SET_PROMO_CODE = 'SET_PROMO_CODE';
 export const SET_REQUESTED_AT = 'SET_REQUESTED_AT';
 export const CREATE_NEW_ORDER = 'CREATE_NEW_ORDER';
 export const VALIDATE_CURRENT_ORDER = 'VALIDATE_CURRENT_ORDER';
+export const VALIDATE_CURRENT_CART = 'VALIDATE_CURRENT_CART';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
@@ -113,6 +114,13 @@ function _createNewOrder(data) {
   };
 }
 
+function _validateCurrentCart(data) {
+  return {
+    type: VALIDATE_CURRENT_CART,
+    payload: data,
+  };
+}
+
 function _validateCurrentOrder(data) {
   return {
     type: VALIDATE_CURRENT_ORDER,
@@ -136,6 +144,15 @@ export function resolveOrder(brandibble, locationId = null, serviceType = 'deliv
   const order = orders.current();
   const payload = order ? Promise.resolve({ order }) : orders.create(locationId, serviceType).then(order => ({ order }));
   return dispatch => dispatch(_resolveOrder(payload));
+}
+
+export function validateCurrentCart(brandibble, data = {}) {
+  return (dispatch) => {
+    const { orders } = brandibble;
+    const order = orders.current();
+    const payload = orders.validateCart(order, data).then(res => res);
+    return dispatch(_validateCurrentCart(payload));
+  };
 }
 
 export function validateCurrentOrder(brandibble, data = {}) {
