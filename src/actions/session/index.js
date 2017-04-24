@@ -15,6 +15,7 @@ export {
   setPromoCode,
   setRequestedAt,
   createNewOrder,
+  validateCurrentCart,
   validateCurrentOrder,
 } from './order';
 export {
