@@ -14,6 +14,7 @@ import {
   SET_REQUESTED_AT,
   CREATE_NEW_ORDER,
   VALIDATE_CURRENT_ORDER,
+  VALIDATE_CURRENT_CART,
 } from 'actions/session/order';
 
 const initialState = {
@@ -21,6 +22,7 @@ const initialState = {
   orderData: null,
   lineItemsData: null,
   validated: null,
+  validatedCart: null,
 };
 
 function _buildFormattedLineItemsHash(ref) {
@@ -67,6 +69,13 @@ export default function order(state = initialState, action) {
       return {
         ...state,
         validated: action.payload,
+      };
+    }
+
+    case `${VALIDATE_CURRENT_CART}_FULFILLED`: {
+      return {
+        ...state,
+        validatedCart: action.payload,
       };
     }
 
