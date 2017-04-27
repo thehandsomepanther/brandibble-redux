@@ -1001,53 +1001,6 @@ export const productStub = {
   width: null,
 };
 
-// export const lineItemStub = {
-//   id: 5688,
-//   instructions: '',
-//   made_for: '',
-//   name: 'Charred Chicken',
-//   option_groups: [
-//     {
-//       id: 473,
-//       option_items: [
-//         {
-//           id: 9431,
-//           name: 'Classic Brown Rice',
-//           price: 0.0,
-//         },
-//       ],
-//     },
-//     {
-//       id: 474,
-//       option_items: [
-//         {
-//           id: 14491,
-//           name: 'Kale, Curry & Delicata Squash',
-//           price: 0.0,
-//         },
-//         {
-//           id: 14491,
-//           name: 'Kale, Curry & Delicata Squash',
-//           price: 0.0,
-//         },
-//       ],
-//     },
-//     {
-//       id: 76,
-//       option_items: [
-//         {
-//           id: 7917,
-//           name: 'Avocado',
-//           price: 1.58,
-//         },
-//       ],
-//     },
-//   ],
-//   price: 11.62,
-//   quantity: 1,
-//   total_price: 13.2,
-// };
-
 export const customerOrdersStub = [
   {
     address: {
