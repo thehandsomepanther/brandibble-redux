@@ -23,6 +23,46 @@ export const customersValidateStub = {
   is_levelup_user: true,
   levelup_connected_email: 'api@brandibble.co',
 };
+
+export const validatedCartStub = {
+  data: {
+    address: {
+      city: 'New York',
+      latitude: 40.7198007,
+      longitude: -74.0005745,
+      state_code: 'NY',
+      street_address: '30 Howard St',
+      zip_code: '10013',
+    },
+    cart: [
+      {
+        id: 15521,
+        instructions: '',
+        made_for: '',
+        option_groups: [],
+        quantity: 1,
+      },
+    ],
+    credit_card: {
+      customer_card_id: 82250,
+    },
+    customer: {
+      customer_id: 115446,
+    },
+    discount: 0,
+    include_utensils: true,
+    location_id: 371,
+    notes_for_store: '',
+    payment_type: 'credit',
+    promo_code: '',
+    requested_at: 'asap',
+    service_type: 'pickup',
+    subtotal: 3.24,
+    tax: 0.29,
+    total: 3.53,
+  },
+};
+
 export const addressStub = {
   city: 'New York',
   latitude: 40.755912,

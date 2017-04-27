@@ -7,9 +7,10 @@ import {
   ADD_OPTION_TO_LINE_ITEM,
   SET_PROMO_CODE,
   SET_REQUESTED_AT,
+  VALIDATE_CURRENT_CART,
 } from 'actions/session/order';
 import reducer from 'reducers/session/order';
-import { makeUnpersistedOrder, productStub } from '../../config/stubs';
+import { makeUnpersistedOrder, productStub, validatedCartStub } from '../../config/stubs';
 
 const initialState = {};
 
@@ -27,6 +28,15 @@ describe('reducers/session/order', () => {
     expect(reduced.ref).to.deep.equal(dummyOrder);
     expect(reduced.orderData).to.be.present;
     expect(reduced.lineItemsData).to.be.present;
+  });
+
+  it('handles the VALIDATE_CURRENT_CART_FULFILLED action', () => {
+    const reduced = reducer(initialState, {
+      type: `${VALIDATE_CURRENT_CART}_FULFILLED`,
+      payload: { validatedCartStub },
+    });
+    expect(reduced.validatedCart).to.be.present;
+    expect(reduced.validatedCart).to.deep.equal({ validatedCartStub });
   });
 
   it('handles the SET_CURRENT_ORDER_ID action', () => {
