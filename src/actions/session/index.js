@@ -25,6 +25,12 @@ export {
   setDefaultPayment,
 } from './payments';
 export {
+  fetchFavorites,
+  createFavorite,
+  updateFavorite,
+  deleteFavorite,
+} from './favorites';
+export {
   authenticateUser,
   createUser,
   fetchLevelUpLoyalty,
