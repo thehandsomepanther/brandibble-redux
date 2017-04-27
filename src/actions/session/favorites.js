@@ -31,7 +31,7 @@ export function createFavorite(brandibble, name, lineItem) {
     const id = generateUUID();
     dispatch(createStart({ record: { name, lineItem }, favorite_item_id: id }));
     return brandibble.favorites.create(name, lineItem)
-      .then(({ data }) => dispatch(createSuccess({ favorite_item_id: id, ...data[0] })))
+      .then(({ data }) => dispatch(createSuccess({ favorite_item_id: id, ...data })))
       .catch(({ errors }) => dispatch(createError(errors, { favorite_item_id: id, data: { name, lineItem } })));
   };
 }
@@ -40,7 +40,7 @@ export function updateFavorite(brandibble, id, name, lineItem) {
   return (dispatch) => {
     dispatch(updateStart({ favorite_item_id: id, record: { name, lineItem } }));
     return brandibble.favorites.update(id, name, lineItem)
-      .then(({ data }) => dispatch(updateSuccess({ favorite_item_id: id, ...data[0] })))
+      .then(({ data }) => dispatch(updateSuccess({ favorite_item_id: id, ...data })))
       .catch(({ errors }) => dispatch(updateError(errors, { favorite_item_id: id, data: { name, lineItem } })));
   };
 }
