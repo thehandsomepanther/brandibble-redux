@@ -83,6 +83,18 @@ const {
   PAYMENTS_DELETE_ERROR,
 } = reduxCrud.actionTypesFor('payments');
 
+// favorites
+const {
+  FAVORITES_FETCH_START,
+  FAVORITES_FETCH_ERROR,
+  FAVORITES_CREATE_START,
+  FAVORITES_CREATE_ERROR,
+  FAVORITES_UPDATE_START,
+  FAVORITES_UPDATE_ERROR,
+  FAVORITES_DELETE_START,
+  FAVORITES_DELETE_ERROR,
+} = reduxCrud.actionTypesFor('favorites');
+
 export const initialState = {
   // setup
   setupBrandibble: null,
@@ -111,6 +123,11 @@ export const initialState = {
   createPayment: null,
   deletePayment: null,
   setDefaultPayment: null,
+  // favorites
+  fetchFavorites: null,
+  createFavorite: null,
+  updateFavorite: null,
+  deleteFavorite: null,
   // user
   authenticateUser: null,
   createUser: null,
@@ -189,6 +206,22 @@ export default function error(state = initialState, action) {
 
     case PAYMENTS_DELETE_START: return { ...state, deletePayment: null };
     case PAYMENTS_DELETE_ERROR: return { ...state, deletePayment: action.error };
+
+    case `${SET_DEFAULT_PAYMENT}_PENDING`: return { ...state, setDefaultPayment: null };
+    case `${SET_DEFAULT_PAYMENT}_REJECTED`: return { ...state, setDefaultPayment: action.payload };
+
+    // favorites
+    case FAVORITES_FETCH_START: return { ...state, fetchFavorites: null };
+    case FAVORITES_FETCH_ERROR: return { ...state, fetchFavorites: action.error };
+
+    case FAVORITES_CREATE_START: return { ...state, createFavorite: null };
+    case FAVORITES_CREATE_ERROR: return { ...state, createFavorite: action.error };
+
+    case FAVORITES_UPDATE_START: return { ...state, updateFavorite: null };
+    case FAVORITES_UPDATE_ERROR: return { ...state, updateFavorite: action.error };
+
+    case FAVORITES_DELETE_START: return { ...state, deleteFavorite: null };
+    case FAVORITES_DELETE_ERROR: return { ...state, deleteFavorite: action.error };
 
     case `${SET_DEFAULT_PAYMENT}_PENDING`: return { ...state, setDefaultPayment: null };
     case `${SET_DEFAULT_PAYMENT}_REJECTED`: return { ...state, setDefaultPayment: action.payload };
