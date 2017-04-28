@@ -223,9 +223,6 @@ export default function error(state = initialState, action) {
     case FAVORITES_DELETE_START: return { ...state, deleteFavorite: null };
     case FAVORITES_DELETE_ERROR: return { ...state, deleteFavorite: action.error };
 
-    case `${SET_DEFAULT_PAYMENT}_PENDING`: return { ...state, setDefaultPayment: null };
-    case `${SET_DEFAULT_PAYMENT}_REJECTED`: return { ...state, setDefaultPayment: action.payload };
-
     // users
     case `${AUTHENTICATE_USER}_PENDING`: return { ...state, authenticateUser: null };
     case `${AUTHENTICATE_USER}_REJECTED`: return { ...state, authenticateUser: action.payload };
