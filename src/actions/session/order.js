@@ -1,5 +1,6 @@
 /* eslint no-shadow:1, no-unused-vars:1, prefer-rest-params:1 */
 import BrandibbleReduxException from 'utils/exception';
+import { Defaults } from 'utils/constants';
 
 export const RESOLVE_ORDER = 'RESOLVE_ORDER';
 export const ADD_LINE_ITEM = 'ADD_LINE_ITEM';
@@ -129,20 +130,20 @@ function _validateCurrentOrder(data) {
 }
 
 /* Public Functions */
-export function createNewOrder(brandibble, location = null, serviceType, paymentType = 'credit') {
+export function createNewOrder(brandibble, location = null, serviceType, paymentType = 'credit', miscOptions = Defaults.miscOptions) {
   return (dispatch) => {
     const { orders } = brandibble;
     let locationId = null;
     if (location) locationId = location.location_id;
-    const payload = orders.create(locationId, serviceType, paymentType).then(order => ({ order }));
+    const payload = orders.create(locationId, serviceType, paymentType, miscOptions).then(order => ({ order }));
     return dispatch(_createNewOrder(payload));
   };
 }
 
-export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery', paymentType = 'credit') {
+export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery', paymentType = 'credit', miscOptions = Defaults.miscOptions) {
   const { orders } = brandibble;
   const order = orders.current();
-  const payload = order ? Promise.resolve({ order }) : orders.create(locationId, serviceType, paymentType).then(order => ({ order }));
+  const payload = order ? Promise.resolve({ order }) : orders.create(locationId, serviceType, paymentType, miscOptions).then(res => ({ order: res }));
   return dispatch => dispatch(_resolveOrder(payload));
 }
 
