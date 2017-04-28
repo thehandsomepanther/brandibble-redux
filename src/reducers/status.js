@@ -81,6 +81,21 @@ const {
 } = reduxCrud.actionTypesFor('payments');
 
 const {
+  FAVORITES_FETCH_START,
+  FAVORITES_FETCH_SUCCESS,
+  FAVORITES_FETCH_ERROR,
+  FAVORITES_CREATE_START,
+  FAVORITES_CREATE_SUCCESS,
+  FAVORITES_CREATE_ERROR,
+  FAVORITES_UPDATE_START,
+  FAVORITES_UPDATE_SUCCESS,
+  FAVORITES_UPDATE_ERROR,
+  FAVORITES_DELETE_START,
+  FAVORITES_DELETE_SUCCESS,
+  FAVORITES_DELETE_ERROR,
+} = reduxCrud.actionTypesFor('favorites');
+
+const {
   USER_UPDATE_START,
   USER_UPDATE_SUCCESS,
   USER_UPDATE_ERROR,
@@ -114,6 +129,10 @@ const initialState = {
   createPayment: IDLE,
   setDefaultPayment: IDLE,
   deletePayment: IDLE,
+  fetchFavorites: IDLE,
+  createFavorite: IDLE,
+  updateFavorite: IDLE,
+  deleteFavorite: IDLE,
   authenticateUser: IDLE,
   createUser: IDLE,
   fetchUser: IDLE,
@@ -212,6 +231,22 @@ export default function status(state = initialState, action) {
     case `${SET_DEFAULT_PAYMENT}_PENDING`: return { ...state, setDefaultPayment: PENDING };
     case `${SET_DEFAULT_PAYMENT}_FULFILLED`: return { ...state, setDefaultPayment: FULFILLED };
     case `${SET_DEFAULT_PAYMENT}_REJECTED`: return { ...state, setDefaultPayment: REJECTED };
+
+    case FAVORITES_FETCH_START: return { ...state, fetchFavorites: PENDING };
+    case FAVORITES_FETCH_SUCCESS: return { ...state, fetchFavorites: FULFILLED };
+    case FAVORITES_FETCH_ERROR: return { ...state, fetchFavorites: REJECTED };
+
+    case FAVORITES_CREATE_START: return { ...state, createFavorite: PENDING };
+    case FAVORITES_CREATE_SUCCESS: return { ...state, createFavorite: FULFILLED };
+    case FAVORITES_CREATE_ERROR: return { ...state, createFavorite: REJECTED };
+
+    case FAVORITES_UPDATE_START: return { ...state, updateFavorite: PENDING };
+    case FAVORITES_UPDATE_SUCCESS: return { ...state, updateFavorite: FULFILLED };
+    case FAVORITES_UPDATE_ERROR: return { ...state, updateFavorite: REJECTED };
+
+    case FAVORITES_DELETE_START: return { ...state, deleteFavorite: PENDING };
+    case FAVORITES_DELETE_SUCCESS: return { ...state, deleteFavorite: FULFILLED };
+    case FAVORITES_DELETE_ERROR: return { ...state, deleteFavorite: REJECTED };
 
     case `${VALIDATE_USER}_PENDING`: return { ...state, validateUser: PENDING };
     case `${VALIDATE_USER}_FULFILLED`: return { ...state, validateUser: FULFILLED };

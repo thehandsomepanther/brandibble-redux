@@ -16,6 +16,10 @@ export function makeUnpersistedOrder() {
   return new brandibble.Order(brandibble.adapter, 19);
 }
 
+export function buildLineItem() {
+  return new brandibble.LineItem(productStub, 1);
+}
+
 export const customersValidateStub = {
   is_brandibble_active: true,
   is_brandibble_customer: true,
