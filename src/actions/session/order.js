@@ -129,20 +129,20 @@ function _validateCurrentOrder(data) {
 }
 
 /* Public Functions */
-export function createNewOrder(brandibble, location = null, serviceType) {
+export function createNewOrder(brandibble, location = null, serviceType, paymentType = 'credit') {
   return (dispatch) => {
     const { orders } = brandibble;
     let locationId = null;
     if (location) locationId = location.location_id;
-    const payload = orders.create(locationId, serviceType).then(order => ({ order }));
+    const payload = orders.create(locationId, serviceType, paymentType).then(order => ({ order }));
     return dispatch(_createNewOrder(payload));
   };
 }
 
-export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery') {
+export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery', paymentType = 'credit') {
   const { orders } = brandibble;
   const order = orders.current();
-  const payload = order ? Promise.resolve({ order }) : orders.create(locationId, serviceType).then(order => ({ order }));
+  const payload = order ? Promise.resolve({ order }) : orders.create(locationId, serviceType, paymentType).then(order => ({ order }));
   return dispatch => dispatch(_resolveOrder(payload));
 }
 
