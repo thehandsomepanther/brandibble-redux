@@ -1,6 +1,6 @@
 {
   "name": "brandibble-redux",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "A Redux Framework for Brandibble.co",
   "repository": "https://github.com/sanctuarycomputer/brandibble-redux",
   "engines": {
@@ -25,7 +25,7 @@
     "babel-eslint": "^7.1.1",
     "babel-loader": "^7.0.0",
     "babel-preset-react-native": "^1.9.1",
-    "brandibble": "~1.4.0",
+    "brandibble": "~1.5.0",
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
