@@ -40,7 +40,7 @@ function _authenticateUser(brandibble, loginData, success, fail) {
     type: AUTHENTICATE_USER,
     payload: brandibble.customers.authenticate(loginData).then(({ data }) => {
       success(data);
-      return data;
+      return { brandibble, data };
     })
     .catch(({ errors }) => { throw fail(errors); }),
   };
@@ -71,7 +71,11 @@ function _removeAllergens(brandibble, allergens, success, fail) {
 function _unauthenticateUser(brandibble, success, fail) {
   return {
     type: UNAUTHENTICATE_USER,
-    payload: brandibble.customers.invalidate().then(success).catch(({ errors }) => { throw fail(errors); }),
+    payload: brandibble.customers.invalidate().then(() => {
+      success();
+      return brandibble;
+    })
+    .catch(({ errors }) => { throw fail(errors); }),
   };
 }
 
