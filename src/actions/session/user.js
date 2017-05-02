@@ -72,8 +72,7 @@ function _unauthenticateUser(brandibble, success, fail) {
   return {
     type: UNAUTHENTICATE_USER,
     payload: brandibble.customers.invalidate().then(() => {
-      success();
-      return brandibble;
+      return { brandibble, data: success() };
     })
     .catch(({ errors }) => { throw fail(errors); }),
   };
