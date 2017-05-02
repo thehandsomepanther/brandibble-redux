@@ -164,7 +164,7 @@ describe('actions/session/user', () => {
       });
 
       it('should handle success callback', () => {
-        expect(response).to.equal('success');
+        expect(response.data).to.equal('success');
       });
     });
   });
@@ -198,7 +198,7 @@ describe('actions/session/user', () => {
     describe('when unauthorized', () => {
       before(() => {
         store = mockStore();
-        return unauthenticateUser(brandibble, validCredentialsStub)(store.dispatch).then(() => {
+        return unauthenticateUser(brandibble)(store.dispatch).then(() => {
           return resolveUser(brandibble)(store.dispatch).then(() => {
             actionsCalled = store.getActions();
             action = find(actionsCalled, { type: 'RESOLVE_USER_FULFILLED' });
