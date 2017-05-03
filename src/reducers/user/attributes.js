@@ -26,9 +26,11 @@ function removeAllergens(removeArr, currentArr) {
 export default function attributes(state = initialState, action) {
   switch (action.type) {
     case `${RESOLVE_USER}_FULFILLED`:
-    case `${AUTHENTICATE_USER}_FULFILLED`:
     case `${FETCH_USER}_FULFILLED`:
       return action.payload;
+
+    case `${AUTHENTICATE_USER}_FULFILLED`:
+      return action.payload.data;
 
     case `${ADD_ALLERGENS}_FULFILLED`:
       return {
