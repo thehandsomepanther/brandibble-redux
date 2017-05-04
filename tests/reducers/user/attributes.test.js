@@ -15,7 +15,7 @@ describe('reducers/user/attributes', () => {
   it('handles the AUTHENTICATE_USER_FULFILLED action', () => {
     const reduced = reducer(initialState, {
       type: `${AUTHENTICATE_USER}_FULFILLED`,
-      payload: { data: payload },
+      payload,
     });
     expect(reduced).to.equal(payload);
   });
