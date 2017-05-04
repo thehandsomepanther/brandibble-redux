@@ -19,7 +19,7 @@ describe('actions/data/customerOrders', () => {
   before(() => {
     store = mockStore();
     return authenticateUser(brandibble, validCredentialsStub)(store.dispatch).then((res) => {
-      customerId = res.value.data.customer_id;
+      customerId = res.value.customer_id;
       store.clearActions();
     });
   });
