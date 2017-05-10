@@ -7,6 +7,9 @@ export function fetchLocations(brandibble, query = {}) {
     dispatch(fetchStart());
     return brandibble.locations.index(query)
       .then(({ data }) => dispatch(fetchSuccess(data)))
-      .catch(({ errors }) => dispatch(fetchError(errors)));
+      .catch(response => {
+        const { errors } = response;
+        return dispatch(fetchError(errors || response));
+      });
   };
 }

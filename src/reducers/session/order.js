@@ -1,6 +1,7 @@
 import map from 'lodash.map';
 import {
   ADD_LINE_ITEM,
+  PUSH_LINE_ITEM,
   ADD_OPTION_TO_LINE_ITEM,
   BIND_CUSTOMER_TO_ORDER,
   REMOVE_LINE_ITEM,
@@ -48,6 +49,7 @@ export default function order(state = initialState, action) {
     case `${SET_ORDER_LOCATION_ID}_FULFILLED`:
     case `${SET_ORDER_ADDRESS}_FULFILLED`:
     case `${ADD_LINE_ITEM}_FULFILLED`:
+    case `${PUSH_LINE_ITEM}_FULFILLED`:
     case `${SET_LINE_ITEM_QUANTITY}_FULFILLED`:
     case `${REMOVE_LINE_ITEM}_FULFILLED`:
     case `${ADD_OPTION_TO_LINE_ITEM}_FULFILLED`:

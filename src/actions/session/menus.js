@@ -18,9 +18,10 @@ export function fetchMenu(brandibble, locationId, serviceType = 'delivery', requ
         dispatch(fetchSuccess(menuData));
         return success(menuData);
       })
-      .catch(({ errors }) => {
-        dispatch(fetchError(errors));
-        return fail(errors);
+      .catch(response => {
+        const { errors } = response;
+        dispatch(fetchError(errors || response));
+        return fail(errors || response);
       });
   };
 }
