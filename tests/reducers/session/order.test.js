@@ -4,13 +4,14 @@ import {
   RESOLVE_ORDER,
   SET_ORDER_LOCATION_ID,
   ADD_LINE_ITEM,
+  PUSH_LINE_ITEM,
   ADD_OPTION_TO_LINE_ITEM,
   SET_PROMO_CODE,
   SET_REQUESTED_AT,
   VALIDATE_CURRENT_CART,
 } from 'actions/session/order';
 import reducer from 'reducers/session/order';
-import { makeUnpersistedOrder, productStub, validatedCartStub } from '../../config/stubs';
+import { makeUnpersistedOrder, productStub, validatedCartStub, buildLineItem } from '../../config/stubs';
 
 const initialState = {};
 
@@ -79,6 +80,19 @@ describe('reducers/session/order', () => {
     const lineItem = dummyOrder.cart.addLineItem(productStub, 1);
     const reduced = reducer(initialState, {
       type: `${ADD_LINE_ITEM}_FULFILLED`,
+      payload: { order: dummyOrder, lineItem },
+    });
+    expect(reduced.ref).to.deep.equal(dummyOrder);
+    expect(reduced.orderData).to.be.present;
+    expect(reduced.lineItemsData.length).to.equal(1);
+    expect(reduced.lineItemsData[0].optionGroupMappings).to.be.present;
+  });
+
+  it('handles the PUSH_LINE_ITEM_FULFILLED action', () => {
+    const dummyOrder = makeUnpersistedOrder();
+    const lineItem = dummyOrder.cart.addLineItem(productStub, 1);
+    const reduced = reducer(initialState, {
+      type: `${PUSH_LINE_ITEM}_FULFILLED`,
       payload: { order: dummyOrder, lineItem },
     });
     expect(reduced.ref).to.deep.equal(dummyOrder);
