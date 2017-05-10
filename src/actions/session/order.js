@@ -139,11 +139,9 @@ function _validateCurrentOrder(data) {
 }
 
 /* Public Functions */
-export function createNewOrder(brandibble, location = null, serviceType, paymentType = 'credit', miscOptions = Defaults.miscOptions) {
+export function createNewOrder(brandibble, locationId = null, serviceType, paymentType = 'credit', miscOptions = Defaults.miscOptions) {
   return (dispatch) => {
     const { orders } = brandibble;
-    let locationId = null;
-    if (location) locationId = location.location_id;
     const payload = orders.create(locationId, serviceType, paymentType, miscOptions).then(order => ({ order }));
     return dispatch(_createNewOrder(payload));
   };
