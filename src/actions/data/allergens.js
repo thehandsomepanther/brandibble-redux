@@ -7,6 +7,9 @@ export function fetchAllergens(brandibbleRef) {
     dispatch(fetchStart());
     return brandibbleRef.allergens.all()
       .then(res => dispatch(fetchSuccess(res.data)))
-      .catch(errors => dispatch(fetchError(errors)));
+      .catch(response => {
+        const { errors } = response;
+        return dispatch(fetchError(errors || response));
+      });
   };
 }
