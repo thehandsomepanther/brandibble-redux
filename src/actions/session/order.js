@@ -4,6 +4,7 @@ import { Defaults } from 'utils/constants';
 
 export const RESOLVE_ORDER = 'RESOLVE_ORDER';
 export const ADD_LINE_ITEM = 'ADD_LINE_ITEM';
+export const PUSH_LINE_ITEM = 'PUSH_LINE_ITEM';
 export const SET_LINE_ITEM_QUANTITY = 'SET_LINE_ITEM_QUANTITY';
 export const REMOVE_LINE_ITEM = 'REMOVE_LINE_ITEM';
 export const ADD_OPTION_TO_LINE_ITEM = 'ADD_OPTION_TO_LINE_ITEM';
@@ -28,6 +29,14 @@ function _addLineItem(order, product, quantity) {
   return {
     type: ADD_LINE_ITEM,
     payload: order.addLineItem(product, quantity).then(lineItem => ({ order, lineItem })),
+  };
+}
+
+/* This can be used to add an already built lineItem to cart */
+function _pushLineItem(order, lineItem) {
+  return {
+    type: PUSH_LINE_ITEM,
+    payload: order.pushLineItem(lineItem).then(lineItem => ({ order, lineItem })),
   };
 }
 
@@ -181,6 +190,16 @@ export function addLineItem(currentOrder, product, quantity = 1) {
     );
   }
   return dispatch => dispatch(_addLineItem(...arguments));
+}
+
+export function pushLineItem(currentOrder, lineItem) {
+  if (!currentOrder.locationId) {
+    throw new BrandibbleReduxException(
+      'addLineItem',
+      'Please set a Location ID for this order.',
+    );
+  }
+  return dispatch => dispatch(_pushLineItem(...arguments));
 }
 
 export function setLineItemQuantity(currentOrder, lineItem, newQuantity = 1) {
