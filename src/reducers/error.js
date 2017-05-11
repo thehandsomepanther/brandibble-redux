@@ -2,6 +2,7 @@ import reduxCrud from 'redux-crud';
 
 // setup
 import {
+  SEND_SUPPORT_TICKET,
   SETUP_BRANDIBBLE,
   SETUP_BRANDIBBLE_REDUX,
 } from 'actions/application';
@@ -108,7 +109,8 @@ const {
 } = reduxCrud.actionTypesFor('ratings');
 
 export const initialState = {
-  // setup
+  // application
+  sendSupportTicket: null,
   setupBrandibble: null,
   setupBrandibbleRedux: null,
   // allergens
@@ -162,12 +164,15 @@ export const initialState = {
 
 export default function error(state = initialState, action) {
   switch (action.type) {
-    // setup
+    // application
     case `${SETUP_BRANDIBBLE}_PENDING`: return { ...state, setupBrandibble: null };
     case `${SETUP_BRANDIBBLE}_REJECTED`: return { ...state, setupBrandibble: action.payload };
 
     case `${SETUP_BRANDIBBLE_REDUX}_PENDING`: return { ...state, setupBrandibbleRedux: null };
     case `${SETUP_BRANDIBBLE_REDUX}_REJECTED`: return { ...state, setupBrandibbleRedux: action.payload };
+
+    case `${SEND_SUPPORT_TICKET}_PENDING`: return { ...state, sendSupportTicket: null };
+    case `${SEND_SUPPORT_TICKET}_REJECTED`: return { ...state, sendSupportTicket: action.payload };
 
     // customer orders
     case `${FETCH_ALL_CUSTOMER_ORDERS}_PENDING`: return { ...state, fetchAllCustomerOrders: null };
