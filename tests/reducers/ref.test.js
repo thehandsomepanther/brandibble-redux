@@ -1,6 +1,6 @@
 /* global describe it */
 import { expect } from 'chai';
-import { SETUP_BRANDIBBLE } from 'actions/setup';
+import { SETUP_BRANDIBBLE } from 'actions/application';
 import reducer from 'reducers/ref';
 import { brandibble } from '../config/stubs';
 

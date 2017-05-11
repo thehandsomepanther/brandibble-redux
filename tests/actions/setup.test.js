@@ -4,12 +4,12 @@ import { expect } from 'chai';
 import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
-import { setupBrandibble, setupBrandibbleRedux } from 'actions/setup';
+import { setupBrandibble, setupBrandibbleRedux } from 'actions/application';
 import { brandibble } from '../config/stubs';
 
 const mockStore = configureStore(reduxMiddleware);
 
-describe('actions/setup', () => {
+describe('actions/application', () => {
   let store, action, actionsCalled;
   describe('setupBrandibble', () => {
     before(() => {

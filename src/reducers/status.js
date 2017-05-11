@@ -1,5 +1,5 @@
 // TODO: this reducer is untested
-import { SETUP_BRANDIBBLE, SETUP_BRANDIBBLE_REDUX } from 'actions/setup';
+import { SETUP_BRANDIBBLE, SETUP_BRANDIBBLE_REDUX } from 'actions/application';
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 import {
   RESOLVE_ORDER,

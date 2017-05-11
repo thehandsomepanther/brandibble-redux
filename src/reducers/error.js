@@ -4,7 +4,7 @@ import reduxCrud from 'redux-crud';
 import {
   SETUP_BRANDIBBLE,
   SETUP_BRANDIBBLE_REDUX,
-} from 'actions/setup';
+} from 'actions/application';
 
 // orders
 import {

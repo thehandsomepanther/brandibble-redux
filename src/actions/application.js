@@ -4,22 +4,22 @@ import { resolveUser } from 'actions/session/user';
 export const SETUP_BRANDIBBLE = 'SETUP_BRANDIBBLE';
 export const SETUP_BRANDIBBLE_REDUX = 'SETUP_BRANDIBBLE_REDUX';
 
-function _setupBrandibble(brandibble) {
+const _setupBrandibble = (brandibble) => {
   return {
     type: SETUP_BRANDIBBLE,
     payload: brandibble.setup(),
   };
-}
+};
 
-function _setupBrandibbleRedux(payload) {
+const _setupBrandibbleRedux = (payload) => {
   return { type: SETUP_BRANDIBBLE_REDUX, payload };
-}
+};
 
-export function setupBrandibble(Brandibble) {
+export const setupBrandibble = (Brandibble) => {
   return dispatch => dispatch(_setupBrandibble(Brandibble));
-}
+};
 
-export function setupBrandibbleRedux(Brandibble, defaultLocationId = null, defaultServiceType = 'delivery') {
+export const setupBrandibbleRedux = (Brandibble, defaultLocationId = null, defaultServiceType = 'delivery') => {
   return (dispatch) => {
     const payload = dispatch(setupBrandibble(Brandibble)).then(({ value }) => {
       return Promise.all([
@@ -30,4 +30,4 @@ export function setupBrandibbleRedux(Brandibble, defaultLocationId = null, defau
 
     return dispatch(_setupBrandibbleRedux(payload));
   };
-}
+};
