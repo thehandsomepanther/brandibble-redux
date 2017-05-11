@@ -32,6 +32,12 @@ export {
   deleteFavorite,
 } from './favorites';
 export {
+  fetchRating,
+  createRating,
+  updateRating,
+  deleteRating,
+} from './ratings';
+export {
   authenticateUser,
   createUser,
   fetchLevelUpLoyalty,
