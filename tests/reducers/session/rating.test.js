@@ -1,7 +1,7 @@
 /* global describe it */
 import { expect } from 'chai';
 import reduxCrud from 'redux-crud';
-import reducer from 'reducers/session/payments';
+import reducer from 'reducers/session/ratings';
 
 const {
   RATINGS_FETCH_SUCCESS,
