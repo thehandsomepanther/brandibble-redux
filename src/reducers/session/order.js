@@ -16,6 +16,7 @@ import {
   CREATE_NEW_ORDER,
   VALIDATE_CURRENT_ORDER,
   VALIDATE_CURRENT_CART,
+  SUBMIT_ORDER,
 } from 'actions/session/order';
 
 const initialState = {
@@ -65,6 +66,14 @@ export default function order(state = initialState, action) {
         orderData: ref.format(),
         lineItemsData: _buildFormattedLineItemsHash(ref),
       };
+    }
+
+    case `${SUBMIT_ORDER}_FULFILLED`: {
+      return {
+        ...state,
+        validated: null,
+        validatedCart: null,
+      }
     }
 
     case `${VALIDATE_CURRENT_ORDER}_FULFILLED`: {
