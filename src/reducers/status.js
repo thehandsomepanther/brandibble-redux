@@ -96,6 +96,21 @@ const {
 } = reduxCrud.actionTypesFor('favorites');
 
 const {
+  RATINGS_FETCH_START,
+  RATINGS_FETCH_SUCCESS,
+  RATINGS_FETCH_ERROR,
+  RATINGS_CREATE_START,
+  RATINGS_CREATE_SUCCESS,
+  RATINGS_CREATE_ERROR,
+  RATINGS_UPDATE_START,
+  RATINGS_UPDATE_SUCCESS,
+  RATINGS_UPDATE_ERROR,
+  RATINGS_DELETE_START,
+  RATINGS_DELETE_SUCCESS,
+  RATINGS_DELETE_ERROR,
+} = reduxCrud.actionTypesFor('ratings');
+
+const {
   USER_UPDATE_START,
   USER_UPDATE_SUCCESS,
   USER_UPDATE_ERROR,
@@ -133,6 +148,10 @@ const initialState = {
   createFavorite: IDLE,
   updateFavorite: IDLE,
   deleteFavorite: IDLE,
+  fetchRating: IDLE,
+  createRating: IDLE,
+  updateRating: IDLE,
+  deleteRating: IDLE,
   authenticateUser: IDLE,
   createUser: IDLE,
   fetchUser: IDLE,
@@ -247,6 +266,22 @@ export default function status(state = initialState, action) {
     case FAVORITES_DELETE_START: return { ...state, deleteFavorite: PENDING };
     case FAVORITES_DELETE_SUCCESS: return { ...state, deleteFavorite: FULFILLED };
     case FAVORITES_DELETE_ERROR: return { ...state, deleteFavorite: REJECTED };
+
+    case RATINGS_FETCH_START: return { ...state, fetchRating: PENDING };
+    case RATINGS_FETCH_SUCCESS: return { ...state, fetchRating: FULFILLED };
+    case RATINGS_FETCH_ERROR: return { ...state, fetchRating: REJECTED };
+
+    case RATINGS_CREATE_START: return { ...state, createRating: PENDING };
+    case RATINGS_CREATE_SUCCESS: return { ...state, createRating: FULFILLED };
+    case RATINGS_CREATE_ERROR: return { ...state, createRating: REJECTED };
+
+    case RATINGS_UPDATE_START: return { ...state, updateRating: PENDING };
+    case RATINGS_UPDATE_SUCCESS: return { ...state, updateRating: FULFILLED };
+    case RATINGS_UPDATE_ERROR: return { ...state, updateRating: REJECTED };
+
+    case RATINGS_DELETE_START: return { ...state, deleteRating: PENDING };
+    case RATINGS_DELETE_SUCCESS: return { ...state, deleteRating: FULFILLED };
+    case RATINGS_DELETE_ERROR: return { ...state, deleteRating: REJECTED };
 
     case `${VALIDATE_USER}_PENDING`: return { ...state, validateUser: PENDING };
     case `${VALIDATE_USER}_FULFILLED`: return { ...state, validateUser: FULFILLED };
