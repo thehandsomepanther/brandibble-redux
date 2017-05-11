@@ -11,6 +11,7 @@ import {
   setPaymentMethod,
   resolveOrder,
   addLineItem,
+  pushLineItem,
   bindCustomerToOrder,
   removeLineItem,
   setLineItemQuantity,
@@ -30,6 +31,7 @@ import {
   makeUnpersistedOrder,
   productStub,
   SAMPLE_MENU_LOCATION_ID,
+  buildLineItem,
 } from '../../config/stubs';
 
 const mockStore = configureStore(reduxMiddleware);
@@ -255,6 +257,27 @@ describe('actions/session/order', () => {
       expect(() => {
         addLineItem(order, productStub, 1)(store.dispatch);
       }).to.throw;
+    });
+  });
+
+  describe('pushLineItem', () => {
+    before(() => {
+      store = mockStore();
+      return pushLineItem(makeUnpersistedOrder(), buildLineItem())(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
+
+    it('should have PUSH_LINE_ITEM_PENDING action', () => {
+      action = find(actionsCalled, { type: 'PUSH_LINE_ITEM_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have PUSH_LINE_ITEM_FULFILLED action', () => {
+      action = find(actionsCalled, { type: 'PUSH_LINE_ITEM_FULFILLED' });
+      expect(action).to.exist;
     });
   });
 
