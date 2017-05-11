@@ -2,6 +2,7 @@ export { fetchAddresses, createAddress, deleteAddress } from './addresses';
 export { fetchMenu } from './menus';
 export {
   addLineItem,
+  pushLineItem,
   addOptionToLineItem,
   bindCustomerToOrder,
   removeLineItem,
