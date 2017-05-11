@@ -3,23 +3,31 @@ import { resolveUser } from 'actions/session/user';
 
 export const SETUP_BRANDIBBLE = 'SETUP_BRANDIBBLE';
 export const SETUP_BRANDIBBLE_REDUX = 'SETUP_BRANDIBBLE_REDUX';
+export const SEND_SUPPORT_TICKET = 'SEND_SUPPORT_TICKET';
 
-function _setupBrandibble(brandibble) {
+const _setupBrandibble = (brandibble) => {
   return {
     type: SETUP_BRANDIBBLE,
     payload: brandibble.setup(),
   };
-}
+};
 
-function _setupBrandibbleRedux(payload) {
+const _setupBrandibbleRedux = (payload) => {
   return { type: SETUP_BRANDIBBLE_REDUX, payload };
-}
+};
 
-export function setupBrandibble(Brandibble) {
+const _sendSupportTicket = (brandibble, data) => {
+  return {
+    type: SEND_SUPPORT_TICKET,
+    payload: brandibble.sendSupportTicket(data),
+  };
+};
+
+export const setupBrandibble = (Brandibble) => {
   return dispatch => dispatch(_setupBrandibble(Brandibble));
-}
+};
 
-export function setupBrandibbleRedux(Brandibble, defaultLocationId = null, defaultServiceType = 'delivery') {
+export const setupBrandibbleRedux = (Brandibble, defaultLocationId = null, defaultServiceType = 'delivery') => {
   return (dispatch) => {
     const payload = dispatch(setupBrandibble(Brandibble)).then(({ value }) => {
       return Promise.all([
@@ -30,4 +38,9 @@ export function setupBrandibbleRedux(Brandibble, defaultLocationId = null, defau
 
     return dispatch(_setupBrandibbleRedux(payload));
   };
-}
+};
+
+// subject, body, email, name
+export const sendSupportTicket = (brandibble, data = {}) => {
+  return dispatch => dispatch(_sendSupportTicket(brandibble, data));
+};

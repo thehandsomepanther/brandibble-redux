@@ -1,5 +1,9 @@
 // TODO: this reducer is untested
-import { SETUP_BRANDIBBLE, SETUP_BRANDIBBLE_REDUX } from 'actions/setup';
+import {
+  SEND_SUPPORT_TICKET,
+  SETUP_BRANDIBBLE,
+  SETUP_BRANDIBBLE_REDUX,
+} from 'actions/application';
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 import {
   RESOLVE_ORDER,
@@ -122,6 +126,7 @@ const {
 const initialState = {
   setupBrandibble: IDLE,
   setupBrandibbleRedux: IDLE,
+  sendSupportTicket: IDLE,
   fetchAddresses: IDLE,
   createAddress: IDLE,
   deleteAddress: IDLE,
@@ -174,6 +179,10 @@ export default function status(state = initialState, action) {
     case `${SETUP_BRANDIBBLE_REDUX}_PENDING`: return { ...state, setupBrandibbleRedux: PENDING };
     case `${SETUP_BRANDIBBLE_REDUX}_FULFILLED`: return { ...state, setupBrandibbleRedux: FULFILLED };
     case `${SETUP_BRANDIBBLE_REDUX}_REJECTED`: return { ...state, setupBrandibbleRedux: REJECTED };
+
+    case `${SEND_SUPPORT_TICKET}_PENDING`: return { ...state, sendSupportTicket: PENDING };
+    case `${SEND_SUPPORT_TICKET}_FULFILLED`: return { ...state, sendSupportTicket: FULFILLED };
+    case `${SEND_SUPPORT_TICKET}_REJECTED`: return { ...state, sendSupportTicket: REJECTED };
 
     case ALLERGENS_FETCH_START: return { ...state, fetchAllergens: PENDING };
     case ALLERGENS_FETCH_SUCCESS: return { ...state, fetchAllergens: FULFILLED };

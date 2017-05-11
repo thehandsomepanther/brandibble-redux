@@ -31,10 +31,10 @@ function _validateUser(brandibble, email, success, fail) {
       success(data);
       return data;
     })
-    .catch(response => {
+    .catch((response) => {
       const { errors } = response;
       throw fail(errors || response);
-    })
+    }),
   };
 }
 
@@ -45,10 +45,10 @@ function _authenticateUser(brandibble, loginData, success, fail) {
       success(data);
       return data;
     })
-    .catch(response => {
+    .catch((response) => {
       const { errors } = response;
       throw fail(errors || response);
-    })
+    }),
   };
 }
 
@@ -59,10 +59,10 @@ function _addAllergens(brandibble, allergens, success, fail) {
       success(data);
       return data;
     })
-    .catch(response => {
+    .catch((response) => {
       const { errors } = response;
       throw fail(errors || response);
-    })
+    }),
   };
 }
 
@@ -73,17 +73,17 @@ function _removeAllergens(brandibble, allergens, success, fail) {
       success(data);
       return data;
     })
-    .catch(response => {
+    .catch((response) => {
       const { errors } = response;
       throw fail(errors || response);
-    })
+    }),
   };
 }
 
 function _unauthenticateUser(brandibble, success, fail) {
   return {
     type: UNAUTHENTICATE_USER,
-    payload: brandibble.customers.invalidate().then(success).catch(response => {
+    payload: brandibble.customers.invalidate().then(success).catch((response) => {
       const { errors } = response;
       throw fail(errors || response);
     }),
@@ -97,7 +97,7 @@ function _resolveUser(payload) {
 function _fetchUser(brandibble, id) {
   return {
     type: FETCH_USER,
-    payload: brandibble.customers.show(id).then(({ data }) => data).catch(response => {
+    payload: brandibble.customers.show(id).then(({ data }) => data).catch((response) => {
       const { errors } = response;
       return errors || response;
     }),
@@ -107,7 +107,7 @@ function _fetchUser(brandibble, id) {
 function _resetUserPassword(brandibble, email, success, fail) {
   return {
     type: RESET_USER_PASSWORD,
-    payload: brandibble.customers.resetPassword(email).then(success).catch(response => {
+    payload: brandibble.customers.resetPassword(email).then(success).catch((response) => {
       const { errors } = response;
       throw fail(errors || response);
     }),
@@ -120,7 +120,7 @@ const _fetchLevelUpQRCode = (brandibble, body, success, fail) => {
     payload: brandibble.customers.currentLevelUpQRCode(body).then(({ data }) => {
       success(data.qr_code);
       return data.qr_code;
-    }).catch(response => {
+    }).catch((response) => {
       const { errors } = response;
       throw fail(errors || response);
     }),
@@ -133,7 +133,7 @@ const _fetchLevelUpLoyalty = (brandibble, success, fail) => {
     payload: brandibble.customers.currentLevelUpLoyalty().then(({ data }) => {
       success(data.loyalty);
       return data.loyalty;
-    }).catch(response => {
+    }).catch((response) => {
       const { errors } = response;
       throw fail(errors || response);
     }),
@@ -192,7 +192,7 @@ export function createUser(brandibble, data = {}) {
     dispatch(createStart({ record: data, id }));
     return brandibble.customers.create(data)
       .then(({ data }) => dispatch(createSuccess({ id, ...data })))
-      .catch(response => {
+      .catch((response) => {
         const { errors } = response;
         return dispatch(createError(errors || response, { id, data }));
       });
@@ -204,7 +204,7 @@ export function updateUser(brandibble, id, data = {}) {
     dispatch(updateStart({ record: data, id }));
     return brandibble.customers.updateCurrent(data)
       .then(({ data }) => dispatch(updateSuccess({ id, ...data })))
-      .catch(response => {
+      .catch((response) => {
         const { errors } = response;
         return dispatch(updateError(errors || response, { id, data }));
       });

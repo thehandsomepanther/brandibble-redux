@@ -18,7 +18,7 @@ export function fetchMenu(brandibble, locationId, serviceType = 'delivery', requ
         dispatch(fetchSuccess(menuData));
         return success(menuData);
       })
-      .catch(response => {
+      .catch((response) => {
         const { errors } = response;
         dispatch(fetchError(errors || response));
         return fail(errors || response);
