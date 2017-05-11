@@ -59,7 +59,11 @@ describe('actions/application', () => {
   describe('sendSupportTicket', () => {
     before(() => {
       store = mockStore();
-      return sendSupportTicket(brandibble, { subject: 'help!', body: 'i need avocado!' })(store.dispatch).then(() => {
+      return sendSupportTicket(brandibble, {
+        subject: 'help!',
+        body: 'i need avocado!',
+        email: 'dev@sanctuary.computer',
+      })(store.dispatch).then(() => {
         actionsCalled = store.getActions();
       });
     });
