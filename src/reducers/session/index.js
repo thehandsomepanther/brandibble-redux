@@ -4,6 +4,7 @@ import menus from './menus';
 import order from './order';
 import payments from './payments';
 import favorites from './favorites';
+import ratings from './ratings';
 
 export default combineReducers({
   addresses,
@@ -11,4 +12,5 @@ export default combineReducers({
   order,
   payments,
   favorites,
+  ratings,
 });
