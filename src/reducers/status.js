@@ -312,13 +312,13 @@ export default function status(state = initialState, action) {
     case `${RESOLVE_USER}_FULFILLED`: return { ...state, resolveUser: FULFILLED };
     case `${RESOLVE_USER}_REJECTED`: return { ...state, resolveUser: REJECTED };
 
-    case `${FETCH_LEVELUP_LOYALTY}_PENDING`: return { ...state, resolveUser: PENDING };
-    case `${FETCH_LEVELUP_LOYALTY}_FULFILLED`: return { ...state, resolveUser: FULFILLED };
-    case `${FETCH_LEVELUP_LOYALTY}_REJECTED`: return { ...state, resolveUser: REJECTED };
+    case `${FETCH_LEVELUP_LOYALTY}_PENDING`: return { ...state, fetchLevelUpLoyalty: PENDING };
+    case `${FETCH_LEVELUP_LOYALTY}_FULFILLED`: return { ...state, fetchLevelUpLoyalty: FULFILLED };
+    case `${FETCH_LEVELUP_LOYALTY}_REJECTED`: return { ...state, fetchLevelUpLoyalty: REJECTED };
 
-    case `${FETCH_LEVELUP_QR_CODE}_PENDING`: return { ...state, resolveUser: PENDING };
-    case `${FETCH_LEVELUP_QR_CODE}_FULFILLED`: return { ...state, resolveUser: FULFILLED };
-    case `${FETCH_LEVELUP_QR_CODE}_REJECTED`: return { ...state, resolveUser: REJECTED };
+    case `${FETCH_LEVELUP_QR_CODE}_PENDING`: return { ...state, fetchLevelUpQRCode: PENDING };
+    case `${FETCH_LEVELUP_QR_CODE}_FULFILLED`: return { ...state, fetchLevelUpQRCode: FULFILLED };
+    case `${FETCH_LEVELUP_QR_CODE}_REJECTED`: return { ...state, fetchLevelUpQRCode: REJECTED };
 
     case `${VALIDATE_CURRENT_CART}_PENDING`: return { ...state, validateCurrentCart: PENDING };
     case `${VALIDATE_CURRENT_CART}_FULFILLED`: return { ...state, validateCurrentCart: FULFILLED };
