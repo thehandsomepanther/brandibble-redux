@@ -2,9 +2,10 @@ import reduxCrud from 'redux-crud';
 
 // setup
 import {
+  SEND_SUPPORT_TICKET,
   SETUP_BRANDIBBLE,
   SETUP_BRANDIBBLE_REDUX,
-} from 'actions/setup';
+} from 'actions/application';
 
 // orders
 import {
@@ -95,8 +96,21 @@ const {
   FAVORITES_DELETE_ERROR,
 } = reduxCrud.actionTypesFor('favorites');
 
+// ratings
+const {
+  RATINGS_FETCH_START,
+  RATINGS_FETCH_ERROR,
+  RATINGS_CREATE_START,
+  RATINGS_CREATE_ERROR,
+  RATINGS_UPDATE_START,
+  RATINGS_UPDATE_ERROR,
+  RATINGS_DELETE_START,
+  RATINGS_DELETE_ERROR,
+} = reduxCrud.actionTypesFor('ratings');
+
 export const initialState = {
-  // setup
+  // application
+  sendSupportTicket: null,
   setupBrandibble: null,
   setupBrandibbleRedux: null,
   // allergens
@@ -128,6 +142,11 @@ export const initialState = {
   createFavorite: null,
   updateFavorite: null,
   deleteFavorite: null,
+  // ratings
+  fetchRating: null,
+  createRating: null,
+  updateRating: null,
+  deleteRating: null,
   // user
   authenticateUser: null,
   createUser: null,
@@ -145,12 +164,15 @@ export const initialState = {
 
 export default function error(state = initialState, action) {
   switch (action.type) {
-    // setup
+    // application
     case `${SETUP_BRANDIBBLE}_PENDING`: return { ...state, setupBrandibble: null };
     case `${SETUP_BRANDIBBLE}_REJECTED`: return { ...state, setupBrandibble: action.payload };
 
     case `${SETUP_BRANDIBBLE_REDUX}_PENDING`: return { ...state, setupBrandibbleRedux: null };
     case `${SETUP_BRANDIBBLE_REDUX}_REJECTED`: return { ...state, setupBrandibbleRedux: action.payload };
+
+    case `${SEND_SUPPORT_TICKET}_PENDING`: return { ...state, sendSupportTicket: null };
+    case `${SEND_SUPPORT_TICKET}_REJECTED`: return { ...state, sendSupportTicket: action.payload };
 
     // customer orders
     case `${FETCH_ALL_CUSTOMER_ORDERS}_PENDING`: return { ...state, fetchAllCustomerOrders: null };
@@ -222,6 +244,19 @@ export default function error(state = initialState, action) {
 
     case FAVORITES_DELETE_START: return { ...state, deleteFavorite: null };
     case FAVORITES_DELETE_ERROR: return { ...state, deleteFavorite: action.error };
+
+    // ratings
+    case RATINGS_FETCH_START: return { ...state, fetchRating: null };
+    case RATINGS_FETCH_ERROR: return { ...state, fetchRating: action.error };
+
+    case RATINGS_CREATE_START: return { ...state, createRating: null };
+    case RATINGS_CREATE_ERROR: return { ...state, createRating: action.error };
+
+    case RATINGS_UPDATE_START: return { ...state, updateRating: null };
+    case RATINGS_UPDATE_ERROR: return { ...state, updateRating: action.error };
+
+    case RATINGS_DELETE_START: return { ...state, deleteRating: null };
+    case RATINGS_DELETE_ERROR: return { ...state, deleteRating: action.error };
 
     // users
     case `${AUTHENTICATE_USER}_PENDING`: return { ...state, authenticateUser: null };

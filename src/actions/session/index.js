@@ -2,6 +2,7 @@ export { fetchAddresses, createAddress, deleteAddress } from './addresses';
 export { fetchMenu } from './menus';
 export {
   addLineItem,
+  pushLineItem,
   addOptionToLineItem,
   bindCustomerToOrder,
   removeLineItem,
@@ -31,6 +32,12 @@ export {
   updateFavorite,
   deleteFavorite,
 } from './favorites';
+export {
+  fetchRating,
+  createRating,
+  updateRating,
+  deleteRating,
+} from './ratings';
 export {
   authenticateUser,
   createUser,
