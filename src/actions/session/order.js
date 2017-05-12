@@ -19,7 +19,7 @@ export const SET_REQUESTED_AT = 'SET_REQUESTED_AT';
 export const CREATE_NEW_ORDER = 'CREATE_NEW_ORDER';
 export const VALIDATE_CURRENT_ORDER = 'VALIDATE_CURRENT_ORDER';
 export const VALIDATE_CURRENT_CART = 'VALIDATE_CURRENT_CART';
-export const SET_LINE_ITEM_MADEFOR = 'SET_LINE_ITEM_MADEFOR';
+export const SET_LINE_ITEM_MADE_FOR = 'SET_LINE_ITEM_MADEFOR';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
@@ -50,7 +50,7 @@ function _setLineItemQuantity(order, lineItem, newQuantity) {
 
 function _setLineItemMadeFor(order, lineItem, madeFor) {
   return {
-    type: SET_LINE_ITEM_MADEFOR,
+    type: SET_LINE_ITEM_MADE_FOR,
     payload: order.setLineItemMadeFor(lineItem, madeFor).then(lineItem => ({ order, lineItem })),
   };
 }
