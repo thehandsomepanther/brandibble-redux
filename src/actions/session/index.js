@@ -8,6 +8,7 @@ export {
   removeOptionFromLineItem,
   resolveOrder,
   setLineItemQuantity,
+  setLineItemMadeFor,
   setOrderAddress,
   setOrderLocationId,
   setPaymentMethod,
