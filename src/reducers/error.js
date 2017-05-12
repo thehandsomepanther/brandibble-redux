@@ -276,11 +276,11 @@ export default function error(state = initialState, action) {
     case `${UNAUTHENTICATE_USER}_PENDING`: return { ...state, unauthenticateUser: null };
     case `${UNAUTHENTICATE_USER}_REJECTED`: return { ...state, unauthenticateUser: action.payload };
 
-    case `${FETCH_LEVELUP_LOYALTY}_PENDING`: return { ...state, authenticateUser: null };
-    case `${FETCH_LEVELUP_LOYALTY}_REJECTED`: return { ...state, authenticateUser: action.payload };
+    case `${FETCH_LEVELUP_LOYALTY}_PENDING`: return { ...state, fetchLevelUpLoyalty: null };
+    case `${FETCH_LEVELUP_LOYALTY}_REJECTED`: return { ...state, fetchLevelUpLoyalty: action.payload };
 
-    case `${FETCH_LEVELUP_QR_CODE}_PENDING`: return { ...state, authenticateUser: null };
-    case `${FETCH_LEVELUP_QR_CODE}_REJECTED`: return { ...state, authenticateUser: action.payload };
+    case `${FETCH_LEVELUP_QR_CODE}_PENDING`: return { ...state, fetchLevelUpQRCode: null };
+    case `${FETCH_LEVELUP_QR_CODE}_REJECTED`: return { ...state, fetchLevelUpQRCode: action.payload };
 
     case `${VALIDATE_USER}_PENDING`: return { ...state, validateUser: null };
     case `${VALIDATE_USER}_REJECTED`: return { ...state, validateUser: action.payload };
