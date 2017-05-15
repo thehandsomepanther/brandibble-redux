@@ -9,6 +9,7 @@ import {
 
 // orders
 import {
+  ADD_LINE_ITEM,
   RESOLVE_ORDER,
   SUBMIT_ORDER,
   VALIDATE_CURRENT_CART,
@@ -130,6 +131,7 @@ export const initialState = {
   // menu
   fetchMenu: null,
   // orders
+  addLineItem: null,
   resolveOrder: null,
   submitOrder: null,
   // payments
@@ -209,6 +211,9 @@ export default function error(state = initialState, action) {
     // orders
     case `${RESOLVE_ORDER}_PENDING`: return { ...state, resolveOrder: null };
     case `${RESOLVE_ORDER}_REJECTED`: return { ...state, resolveOrder: action.payload };
+
+    case `${ADD_LINE_ITEM}_PENDING`: return { ...state, addLineItem: null };
+    case `${ADD_LINE_ITEM}_REJECTED`: return { ...state, addLineItem: action.payload };
 
     case `${SUBMIT_ORDER}_PENDING`: return { ...state, submitOrder: null };
     case `${SUBMIT_ORDER}_REJECTED`: return { ...state, submitOrder: action.payload };
