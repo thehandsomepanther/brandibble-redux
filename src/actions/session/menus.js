@@ -21,7 +21,7 @@ export function fetchMenu(brandibble, locationId, serviceType = 'delivery', requ
       .catch((response) => {
         const { errors } = response;
         dispatch(fetchError(errors || response));
-        return fail(errors || response);
+        throw fail(errors || response);
       });
   };
 }
