@@ -21,6 +21,8 @@ export const ADD_ALLERGENS = 'ADD_ALLERGENS';
 export const REMOVE_ALLERGENS = 'REMOVE_ALLERGENS';
 export const FETCH_LEVELUP_QR_CODE = 'FETCH_LEVELUP_QR_CODE';
 export const FETCH_LEVELUP_LOYALTY = 'FETCH_LEVELUP_LOYALTY';
+export const CONNECT_LEVELUP = 'CONNECT_LEVELUP';
+export const DISCONNECT_LEVELUP = 'DISCONNECT_LEVELUP';
 
 const NO_OP = f => f;
 
@@ -140,6 +142,28 @@ const _fetchLevelUpLoyalty = (brandibble, success, fail) => {
   };
 };
 
+const _connectLevelUp = (brandibble, customerId, email, password) => {
+  return {
+    type: CONNECT_LEVELUP,
+    payload: brandibble.customers.levelUpConnect(customerId, email, password)
+    .catch((response) => {
+      const { errors } = response;
+      throw errors || response;
+    }),
+  };
+};
+
+const _disconnectLevelUp = (brandibble, customerId) => {
+  return {
+    type: DISCONNECT_LEVELUP,
+    payload: brandibble.customer.levelUpDisconnect(customerId)
+    .catch((response) => {
+      const { errors } = response;
+      throw errors || response;
+    }),
+  };
+};
+
 export function validateUser(brandibble, email, success = NO_OP, fail = NO_OP) {
   return dispatch => dispatch(_validateUser(brandibble, email, success, fail));
 }
@@ -165,14 +189,6 @@ export function unauthenticateUser(brandibble, success = NO_OP, fail = NO_OP) {
 export function fetchUser(brandibble, id) {
   return dispatch => dispatch(_fetchUser(brandibble, id));
 }
-
-export const fetchLevelUpQRCode = (brandibble, data = {}, success = NO_OP, fail = NO_OP) => {
-  return dispatch => dispatch(_fetchLevelUpQRCode(brandibble, data, success, fail));
-};
-
-export const fetchLevelUpLoyalty = (brandibble, success = NO_OP, fail = NO_OP) => {
-  return dispatch => dispatch(_fetchLevelUpLoyalty(brandibble, success, fail));
-};
 
 // TODO - untested
 export function resetUserPassword(brandibble, email, success = NO_OP, fail = NO_OP) {
@@ -210,3 +226,19 @@ export function updateUser(brandibble, id, data = {}) {
       });
   };
 }
+
+export const fetchLevelUpQRCode = (brandibble, data = {}, success = NO_OP, fail = NO_OP) => {
+  return dispatch => dispatch(_fetchLevelUpQRCode(brandibble, data, success, fail));
+};
+
+export const fetchLevelUpLoyalty = (brandibble, success = NO_OP, fail = NO_OP) => {
+  return dispatch => dispatch(_fetchLevelUpLoyalty(brandibble, success, fail));
+};
+
+export const connectLevelUp = (brandibble, customerId, email, password) => {
+  return dispatch => dispatch(_connectLevelUp(brandibble, customerId, email, password));
+};
+
+export const disconnectLevelUp = (brandibble, customerId) => {
+  return dispatch => dispatch(_disconnectLevelUp(brandibble, customerId));
+};
