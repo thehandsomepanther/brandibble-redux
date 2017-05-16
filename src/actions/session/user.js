@@ -169,8 +169,8 @@ const _connectLevelUp = (brandibble, customerId, email, password) => {
 
 const _disconnectLevelUp = (brandibble, customerId) => {
   return {
-    type: CONNECT_LEVELUP,
-    payload: brandibble.customers.levelUpDisonnect(customerId)
+    type: DISCONNECT_LEVELUP,
+    payload: brandibble.customers.levelUpDisconnect(customerId)
     .catch((response) => {
       const { errors } = response;
       throw errors || response;

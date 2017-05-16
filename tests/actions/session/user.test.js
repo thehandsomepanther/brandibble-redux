@@ -315,7 +315,7 @@ describe('actions/session/user', () => {
         describe('connectLevelUp', () => {
           before(() => {
             store.clearActions();
-            return connectLevelUp(brandibble, 1, 'email@example.com', 'password')(store.dispatch).catch(() => {
+            return connectLevelUp(brandibble, 1, 'example@email.com', 'password')(store.dispatch).catch(() => {
               actionsCalled = store.getActions();
             });
           });
@@ -336,11 +336,14 @@ describe('actions/session/user', () => {
             });
           });
 
+          it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
+
           it('should have DISCONNECT_LEVELUP_PENDING action', () => {
             action = find(actionsCalled, { type: 'DISCONNECT_LEVELUP_PENDING' });
             expect(action).to.exist;
           });
         });
+
 
         describe('fetchUser', () => {
           before(() => {
