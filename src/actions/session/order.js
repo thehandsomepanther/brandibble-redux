@@ -20,6 +20,7 @@ export const CREATE_NEW_ORDER = 'CREATE_NEW_ORDER';
 export const VALIDATE_CURRENT_ORDER = 'VALIDATE_CURRENT_ORDER';
 export const VALIDATE_CURRENT_CART = 'VALIDATE_CURRENT_CART';
 export const SET_LINE_ITEM_MADE_FOR = 'SET_LINE_ITEM_MADE_FOR';
+export const SET_LINE_ITEM_INSTRUCTIONS = 'SET_LINE_ITEM_INSTRUCTIONS';
 
 /* Private Action Creators */
 function _resolveOrder(payload) {
@@ -52,6 +53,13 @@ function _setLineItemMadeFor(order, lineItem, madeFor) {
   return {
     type: SET_LINE_ITEM_MADE_FOR,
     payload: order.setLineItemMadeFor(lineItem, madeFor).then(lineItem => ({ order, lineItem })),
+  };
+}
+
+function _setLineItemInstructions(order, lineItem, instructions) {
+  return {
+    type: SET_LINE_ITEM_INSTRUCTIONS,
+    payload: order.setLineItemInstructions(lineItem, instructions).then(lineItem => ({ order, lineItem })),
   };
 }
 
@@ -220,6 +228,10 @@ export function setLineItemQuantity(currentOrder, lineItem, newQuantity = 1) {
 
 export function setLineItemMadeFor(currentOrder, lineItem, madeFor = '') {
   return dispatch => dispatch(_setLineItemMadeFor(...arguments));
+}
+
+export function setLineItemInstructions(currentOrder, lineItem, instructions = '') {
+  return dispatch => dispatch(_setLineItemInstructions(...arguments));
 }
 
 export function setPaymentMethod(currentOrder, type, card) {

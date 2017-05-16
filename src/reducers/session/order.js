@@ -18,6 +18,7 @@ import {
   VALIDATE_CURRENT_CART,
   SUBMIT_ORDER,
   SET_LINE_ITEM_MADE_FOR,
+  SET_LINE_ITEM_INSTRUCTIONS
 } from 'actions/session/order';
 
 const initialState = {
@@ -54,6 +55,7 @@ export default function order(state = initialState, action) {
     case `${PUSH_LINE_ITEM}_FULFILLED`:
     case `${SET_LINE_ITEM_QUANTITY}_FULFILLED`:
     case `${SET_LINE_ITEM_MADE_FOR}_FULFILLED`:
+    case `${SET_LINE_ITEM_INSTRUCTIONS}_FULFILLED`:
     case `${REMOVE_LINE_ITEM}_FULFILLED`:
     case `${ADD_OPTION_TO_LINE_ITEM}_FULFILLED`:
     case `${SET_PAYMENT_METHOD}_FULFILLED`:
