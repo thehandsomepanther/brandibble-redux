@@ -46,6 +46,7 @@ export {
   updateLevelUpConnection,
   connectLevelUp,
   disconnectLevelUp,
+  fetchLevelUpPaymentMethod,
   fetchUser,
   resetUserPassword,
   resolveUser,

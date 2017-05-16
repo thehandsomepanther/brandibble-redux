@@ -1,11 +1,16 @@
 /* global describe it */
 import { expect } from 'chai';
-import { FETCH_LEVELUP_LOYALTY, FETCH_LEVELUP_QR_CODE } from 'actions/session/user';
+import {
+  FETCH_LEVELUP_LOYALTY,
+  FETCH_LEVELUP_QR_CODE,
+  FETCH_LEVELUP_PAYMENT_METHOD,
+} from 'actions/session/user';
 import reducer from 'reducers/user/levelup';
 
 const initialState = {
   loyalty: {},
   qr_code: null,
+  payment_method: null,
 };
 
 describe('reducers/user/levelup', () => {
@@ -29,5 +34,14 @@ describe('reducers/user/levelup', () => {
       payload,
     });
     expect(reduced.qr_code).to.equal(payload);
+  });
+
+  it('handles the FETCH_LEVELUP_PAYMENT_METHOD_FULFILLED action', () => {
+    const payload = { description: 'Visa 1234' };
+    const reduced = reducer(initialState, {
+      type: `${FETCH_LEVELUP_PAYMENT_METHOD}_FULFILLED`,
+      payload,
+    });
+    expect(reduced.payment_method).to.equal(payload);
   });
 });

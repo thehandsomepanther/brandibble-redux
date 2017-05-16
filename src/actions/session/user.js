@@ -24,6 +24,7 @@ export const FETCH_LEVELUP_LOYALTY = 'FETCH_LEVELUP_LOYALTY';
 export const UPDATE_LEVELUP_CONNECTION = 'UPDATE_LEVELUP_CONNECTION';
 export const CONNECT_LEVELUP = 'CONNECT_LEVELUP';
 export const DISCONNECT_LEVELUP = 'DISCONNECT_LEVELUP';
+export const FETCH_LEVELUP_PAYMENT_METHOD = 'FETCH_LEVELUP_PAYMENT_METHOD';
 
 const NO_OP = f => f;
 
@@ -178,6 +179,19 @@ const _disconnectLevelUp = (brandibble, customerId) => {
   };
 };
 
+const _fetchLevelUpPaymentMethod = (brandibble, customerId) => {
+  return {
+    type: FETCH_LEVELUP_PAYMENT_METHOD,
+    payload: brandibble.customers.levelUpPaymentMethod(customerId).then(({ data }) => {
+      return data.payment_method;
+    })
+    .catch((response) => {
+      const { errors } = response;
+      throw errors || response;
+    }),
+  };
+};
+
 export function validateUser(brandibble, email, success = NO_OP, fail = NO_OP) {
   return dispatch => dispatch(_validateUser(brandibble, email, success, fail));
 }
@@ -260,4 +274,8 @@ export const connectLevelUp = (brandibble, customerId, email, password) => {
 
 export const disconnectLevelUp = (brandibble, customerId) => {
   return dispatch => dispatch(_disconnectLevelUp(brandibble, customerId));
+};
+
+export const fetchLevelUpPaymentMethod = (brandibble, customerId) => {
+  return dispatch => dispatch(_fetchLevelUpPaymentMethod(brandibble, customerId));
 };
