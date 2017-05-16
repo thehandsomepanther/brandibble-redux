@@ -13,3 +13,15 @@ export function fetchLocations(brandibble, query = {}) {
       });
   };
 }
+
+export function fetchLocation(brandibble, locationId, lat, lng) {
+  return (dispatch) => {
+    dispatch(fetchStart());
+    return brandibble.locations.show(locationId, lat, lng)
+      .then(({ data }) => dispatch(fetchSuccess(data)))
+      .catch(response => {
+        const { errors } = response;
+        return dispatch(fetchError(errors || response));
+      });
+  };
+}
