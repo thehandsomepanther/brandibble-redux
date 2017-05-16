@@ -10,6 +10,7 @@ import {
   createUser,
   fetchLevelUpLoyalty,
   fetchLevelUpQRCode,
+  updateLevelUpConnection,
   fetchUser,
   resolveUser,
   unauthenticateUser,
@@ -289,6 +290,22 @@ describe('actions/session/user', () => {
 
           it('should have FETCH_LEVELUP_QR_CODE_PENDING action', () => {
             action = find(actionsCalled, { type: 'FETCH_LEVELUP_QR_CODE_PENDING' });
+            expect(action).to.exist;
+          });
+        });
+
+        describe('updateLevelUpConnection', () => {
+          before(() => {
+            store.clearActions();
+            return updateLevelUpConnection(brandibble, 1, 'password')(store.dispatch).catch(() => {
+              actionsCalled = store.getActions();
+            });
+          });
+
+          it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
+
+          it('should have UPDATE_LEVELUP_CONNECTION_PENDING action', () => {
+            action = find(actionsCalled, { type: 'UPDATE_LEVELUP_CONNECTION_PENDING' });
             expect(action).to.exist;
           });
         });
