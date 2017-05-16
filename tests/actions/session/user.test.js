@@ -10,6 +10,8 @@ import {
   createUser,
   fetchLevelUpLoyalty,
   fetchLevelUpQRCode,
+  connectLevelUp,
+  disconnectLevelUp,
   fetchUser,
   resolveUser,
   unauthenticateUser,
@@ -289,6 +291,38 @@ describe('actions/session/user', () => {
 
           it('should have FETCH_LEVELUP_QR_CODE_PENDING action', () => {
             action = find(actionsCalled, { type: 'FETCH_LEVELUP_QR_CODE_PENDING' });
+            expect(action).to.exist;
+          });
+        });
+
+        describe('connectLevelUp', () => {
+          before(() => {
+            store.clearActions();
+            return connectLevelUp(brandibble, 1, 'email@example.com', 'password')(store.dispatch).catch(() => {
+              actionsCalled = store.getActions();
+            });
+          });
+
+          it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
+
+          it('should have CONNECT_LEVELUP_PENDING action', () => {
+            action = find(actionsCalled, { type: 'CONNECT_LEVELUP_PENDING' });
+            expect(action).to.exist;
+          });
+        });
+
+        describe('disconnectLevelUp', () => {
+          before(() => {
+            store.clearActions();
+            return disconnectLevelUp(brandibble, 1)(store.dispatch).catch(() => {
+              actionsCalled = store.getActions();
+            });
+          });
+
+          it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
+
+          it('should have DISCONNECT_LEVELUP_PENDING action', () => {
+            action = find(actionsCalled, { type: 'DISCONNECT_LEVELUP_PENDING' });
             expect(action).to.exist;
           });
         });

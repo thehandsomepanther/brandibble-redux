@@ -20,6 +20,8 @@ import {
   AUTHENTICATE_USER,
   FETCH_LEVELUP_LOYALTY,
   FETCH_LEVELUP_QR_CODE,
+  CONNECT_LEVELUP,
+  DISCONNECT_LEVELUP,
   FETCH_USER,
   UNAUTHENTICATE_USER,
   RESET_USER_PASSWORD,
@@ -136,6 +138,8 @@ const initialState = {
   removeAllergens: IDLE,
   fetchLevelUpLoyalty: IDLE,
   fetchLevelUpQRCode: IDLE,
+  connectLevelUp: IDLE,
+  disconnectLevelUp: IDLE,
   fetchLocations: IDLE,
   fetchAllCustomerOrders: IDLE,
   fetchPastCustomerOrders: IDLE,
@@ -325,6 +329,14 @@ export default function status(state = initialState, action) {
     case `${FETCH_LEVELUP_QR_CODE}_PENDING`: return { ...state, fetchLevelUpQRCode: PENDING };
     case `${FETCH_LEVELUP_QR_CODE}_FULFILLED`: return { ...state, fetchLevelUpQRCode: FULFILLED };
     case `${FETCH_LEVELUP_QR_CODE}_REJECTED`: return { ...state, fetchLevelUpQRCode: REJECTED };
+
+    case `${CONNECT_LEVELUP}_PENDING`: return { ...state, connectLevelUp: PENDING };
+    case `${CONNECT_LEVELUP}_FULFILLED`: return { ...state, connectLevelUp: FULFILLED };
+    case `${CONNECT_LEVELUP}_REJECTED`: return { ...state, connectLevelUp: REJECTED };
+
+    case `${DISCONNECT_LEVELUP}_PENDING`: return { ...state, disconnectLevelUp: PENDING };
+    case `${DISCONNECT_LEVELUP}_FULFILLED`: return { ...state, disconnectLevelUp: FULFILLED };
+    case `${DISCONNECT_LEVELUP}_REJECTED`: return { ...state, disconnectLevelUp: REJECTED };
 
     case `${VALIDATE_CURRENT_CART}_PENDING`: return { ...state, validateCurrentCart: PENDING };
     case `${VALIDATE_CURRENT_CART}_FULFILLED`: return { ...state, validateCurrentCart: FULFILLED };
