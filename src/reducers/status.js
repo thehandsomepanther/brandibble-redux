@@ -20,6 +20,7 @@ import {
   AUTHENTICATE_USER,
   FETCH_LEVELUP_LOYALTY,
   FETCH_LEVELUP_QR_CODE,
+  UPDATE_LEVELUP_CONNECTION,
   CONNECT_LEVELUP,
   DISCONNECT_LEVELUP,
   FETCH_USER,
@@ -138,6 +139,7 @@ const initialState = {
   removeAllergens: IDLE,
   fetchLevelUpLoyalty: IDLE,
   fetchLevelUpQRCode: IDLE,
+  updateLevelUpConnection: IDLE,
   connectLevelUp: IDLE,
   disconnectLevelUp: IDLE,
   fetchLocations: IDLE,
@@ -329,6 +331,10 @@ export default function status(state = initialState, action) {
     case `${FETCH_LEVELUP_QR_CODE}_PENDING`: return { ...state, fetchLevelUpQRCode: PENDING };
     case `${FETCH_LEVELUP_QR_CODE}_FULFILLED`: return { ...state, fetchLevelUpQRCode: FULFILLED };
     case `${FETCH_LEVELUP_QR_CODE}_REJECTED`: return { ...state, fetchLevelUpQRCode: REJECTED };
+
+    case `${UPDATE_LEVELUP_CONNECTION}_PENDING`: return { ...state, updateLevelUpConnection: PENDING };
+    case `${UPDATE_LEVELUP_CONNECTION}_FULFILLED`: return { ...state, updateLevelUpConnection: FULFILLED };
+    case `${UPDATE_LEVELUP_CONNECTION}_REJECTED`: return { ...state, updateLevelUpConnection: REJECTED };
 
     case `${CONNECT_LEVELUP}_PENDING`: return { ...state, connectLevelUp: PENDING };
     case `${CONNECT_LEVELUP}_FULFILLED`: return { ...state, connectLevelUp: FULFILLED };

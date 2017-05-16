@@ -21,6 +21,7 @@ export const ADD_ALLERGENS = 'ADD_ALLERGENS';
 export const REMOVE_ALLERGENS = 'REMOVE_ALLERGENS';
 export const FETCH_LEVELUP_QR_CODE = 'FETCH_LEVELUP_QR_CODE';
 export const FETCH_LEVELUP_LOYALTY = 'FETCH_LEVELUP_LOYALTY';
+export const UPDATE_LEVELUP_CONNECTION = 'UPDATE_LEVELUP_CONNECTION';
 export const CONNECT_LEVELUP = 'CONNECT_LEVELUP';
 export const DISCONNECT_LEVELUP = 'DISCONNECT_LEVELUP';
 
@@ -116,6 +117,8 @@ function _resetUserPassword(brandibble, email, success, fail) {
   };
 }
 
+// Level Up Actions
+
 const _fetchLevelUpQRCode = (brandibble, body, success, fail) => {
   return {
     type: FETCH_LEVELUP_QR_CODE,
@@ -142,6 +145,17 @@ const _fetchLevelUpLoyalty = (brandibble, success, fail) => {
   };
 };
 
+const _updateLevelUpConnection = (brandibble, customerId, password) => {
+  return {
+    type: UPDATE_LEVELUP_CONNECTION,
+    payload: brandibble.customers.levelUpUpdate(customerId, password)
+    .catch((response) => {
+      const { errors } = response;
+      throw errors || response;
+    }),
+  };
+};
+
 const _connectLevelUp = (brandibble, customerId, email, password) => {
   return {
     type: CONNECT_LEVELUP,
@@ -155,8 +169,8 @@ const _connectLevelUp = (brandibble, customerId, email, password) => {
 
 const _disconnectLevelUp = (brandibble, customerId) => {
   return {
-    type: DISCONNECT_LEVELUP,
-    payload: brandibble.customers.levelUpDisconnect(customerId)
+    type: CONNECT_LEVELUP,
+    payload: brandibble.customers.levelUpDisonnect(customerId)
     .catch((response) => {
       const { errors } = response;
       throw errors || response;
@@ -227,12 +241,17 @@ export function updateUser(brandibble, id, data = {}) {
   };
 }
 
+// Level Up Action Creators
 export const fetchLevelUpQRCode = (brandibble, data = {}, success = NO_OP, fail = NO_OP) => {
   return dispatch => dispatch(_fetchLevelUpQRCode(brandibble, data, success, fail));
 };
 
 export const fetchLevelUpLoyalty = (brandibble, success = NO_OP, fail = NO_OP) => {
   return dispatch => dispatch(_fetchLevelUpLoyalty(brandibble, success, fail));
+};
+
+export const updateLevelUpConnection = (brandibble, customerId, password) => {
+  return dispatch => dispatch(_updateLevelUpConnection(brandibble, customerId, password));
 };
 
 export const connectLevelUp = (brandibble, customerId, email, password) => {
