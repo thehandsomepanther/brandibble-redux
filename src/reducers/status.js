@@ -15,6 +15,8 @@ import {
   VALIDATE_CURRENT_ORDER,
   SET_REQUESTED_AT,
   CREATE_NEW_ORDER,
+  SET_LINE_ITEM_MADE_FOR,
+  SET_LINE_ITEM_INSTRUCTIONS
 } from 'actions/session/order';
 import {
   AUTHENTICATE_USER,
@@ -177,6 +179,8 @@ const initialState = {
   validateUser: IDLE,
   validateCurrentCart: IDLE,
   validateCurrentOrder: IDLE,
+  setLineItemMadeFor: IDLE,
+  setLineItemInstructions: IDLE,
   createNewOrder: IDLE,
 };
 
@@ -241,6 +245,14 @@ export default function status(state = initialState, action) {
     case `${SET_REQUESTED_AT}_PENDING`: return { ...state, setRequestedAt: PENDING };
     case `${SET_REQUESTED_AT}_FULFILLED`: return { ...state, setRequestedAt: FULFILLED };
     case `${SET_REQUESTED_AT}_REJECTED`: return { ...state, setRequestedAt: REJECTED };
+
+    case `${SET_LINE_ITEM_MADE_FOR}_PENDING`: return { ...state, setLineItemMadeFor: PENDING };
+    case `${SET_LINE_ITEM_MADE_FOR}_FULFILLED`: return { ...state, setLineItemMadeFor: FULFILLED };
+    case `${SET_LINE_ITEM_MADE_FOR}_REJECTED`: return { ...state, setLineItemMadeFor: REJECTED };
+
+    case `${SET_LINE_ITEM_INSTRUCTIONS}_PENDING`: return { ...state, setLineItemInstructions: PENDING };
+    case `${SET_LINE_ITEM_INSTRUCTIONS}_FULFILLED`: return { ...state, setLineItemInstructions: FULFILLED };
+    case `${SET_LINE_ITEM_INSTRUCTIONS}_REJECTED`: return { ...state, setLineItemInstructions: REJECTED };
 
     case `${CREATE_NEW_ORDER}_PENDING`: return { ...state, createNewOrder: PENDING };
     case `${CREATE_NEW_ORDER}_FULFILLED`: return { ...state, createNewOrder: FULFILLED };

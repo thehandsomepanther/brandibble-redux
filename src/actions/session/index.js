@@ -10,6 +10,7 @@ export {
   resolveOrder,
   setLineItemQuantity,
   setLineItemMadeFor,
+  setLineItemInstructions,
   setOrderAddress,
   setOrderLocationId,
   setPaymentMethod,

@@ -14,6 +14,8 @@ import {
   SUBMIT_ORDER,
   VALIDATE_CURRENT_CART,
   VALIDATE_CURRENT_ORDER,
+  SET_LINE_ITEM_MADE_FOR,
+  SET_LINE_ITEM_INSTRUCTIONS
 } from 'actions/session/order';
 
 //  payments
@@ -138,6 +140,8 @@ export const initialState = {
   addLineItem: null,
   resolveOrder: null,
   submitOrder: null,
+  setLineItemMadeFor: null,
+  setLineItemInstructions: null,
   // payments
   fetchPayments: null,
   createPayment: null,
@@ -231,6 +235,12 @@ export default function error(state = initialState, action) {
 
     case `${VALIDATE_CURRENT_ORDER}_PENDING`: return { ...state, validateCurrentOrder: null };
     case `${VALIDATE_CURRENT_ORDER}_REJECTED`: return { ...state, validateCurrentOrder: action.payload };
+
+    case `${SET_LINE_ITEM_MADE_FOR}_PENDING`: return { ...state, setLineItemMadeFor: null };
+    case `${SET_LINE_ITEM_MADE_FOR}_REJECTED`: return { ...state, setLineItemMadeFor: action.payload };
+
+    case `${SET_LINE_ITEM_INSTRUCTIONS}_PENDING`: return { ...state, setLineItemInstructions: null };
+    case `${SET_LINE_ITEM_INSTRUCTIONS}_REJECTED`: return { ...state, setLineItemInstructions: action.payload };
 
     // payments
     case PAYMENTS_FETCH_START: return { ...state, fetchPayments: null };

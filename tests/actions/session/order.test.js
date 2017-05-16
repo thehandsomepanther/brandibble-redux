@@ -16,6 +16,7 @@ import {
   removeLineItem,
   setLineItemQuantity,
   setLineItemMadeFor,
+  setLineItemInstructions,
   submitOrder,
   addOptionToLineItem,
   removeOptionFromLineItem,
@@ -412,6 +413,30 @@ describe('actions/session/order', () => {
       expect(action).to.exist;
     });
   });
+
+  describe('setLineItemInstructions', () => {
+    before(() => {
+      store = mockStore();
+      const order = makeUnpersistedOrder();
+      const lineItem = order.cart.addLineItem(productStub, 1);
+      return setLineItemInstructions(order, lineItem, 'Sauce on side')(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
+
+    it('should have SET_LINE_ITEM_INSTRUCTIONS_PENDING action', () => {
+      action = find(actionsCalled, { type: 'SET_LINE_ITEM_INSTRUCTIONS_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have SET_LINE_ITEM_INSTRUCTIONS_FULFILLED action', () => {
+      action = find(actionsCalled, { type: 'SET_LINE_ITEM_INSTRUCTIONS_FULFILLED' });
+      expect(action).to.exist;
+    });
+  });
+
 
   describe('bindCustomerToOrder', () => {
     before(() => {
