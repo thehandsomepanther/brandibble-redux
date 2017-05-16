@@ -182,7 +182,7 @@ const _disconnectLevelUp = (brandibble, customerId) => {
 const _fetchLevelUpPaymentMethod = (brandibble, customerId) => {
   return {
     type: FETCH_LEVELUP_PAYMENT_METHOD,
-    payload: brandibble.customer.levelUpPaymentMethod(customerId).then(({ data }) => {
+    payload: brandibble.customers.levelUpPaymentMethod(customerId).then(({ data }) => {
       return data.payment_method;
     })
     .catch((response) => {

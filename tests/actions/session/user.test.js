@@ -13,6 +13,7 @@ import {
   updateLevelUpConnection,
   connectLevelUp,
   disconnectLevelUp,
+  fetchLevelUpPaymentMethod,
   fetchUser,
   resolveUser,
   unauthenticateUser,
@@ -344,6 +345,21 @@ describe('actions/session/user', () => {
           });
         });
 
+        describe('fetchLevelUpPaymentMethod', () => {
+          before(() => {
+            store.clearActions();
+            return fetchLevelUpPaymentMethod(brandibble, 1)(store.dispatch).catch(() => {
+              actionsCalled = store.getActions();
+            });
+          });
+
+          it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
+
+          it('should have FETCH_LEVELUP_PAYMENT_METHOD_PENDING action', () => {
+            action = find(actionsCalled, { type: 'FETCH_LEVELUP_PAYMENT_METHOD_PENDING' });
+            expect(action).to.exist;
+          });
+        });
 
         describe('fetchUser', () => {
           before(() => {

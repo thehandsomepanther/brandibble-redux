@@ -34,6 +34,7 @@ import {
   UPDATE_LEVELUP_CONNECTION,
   CONNECT_LEVELUP,
   DISCONNECT_LEVELUP,
+  FETCH_LEVELUP_PAYMENT_METHOD,
   FETCH_USER,
   RESET_USER_PASSWORD,
   RESOLVE_USER,
@@ -160,6 +161,7 @@ export const initialState = {
   updateLevelUpConnection: null,
   connectLevelUp: null,
   disconnectLevelUp: null,
+  fetchLevelUpPaymentMethod: null,
   fetchUser: null,
   resetUserPassword: null,
   resolveUser: null,
@@ -301,6 +303,9 @@ export default function error(state = initialState, action) {
 
     case `${DISCONNECT_LEVELUP}_PENDING`: return { ...state, disconnectLevelUp: null };
     case `${DISCONNECT_LEVELUP}_REJECTED`: return { ...state, disconnectLevelUp: action.payload };
+
+    case `${FETCH_LEVELUP_PAYMENT_METHOD}_PENDING`: return { ...state, fetchLevelUpPaymentMethod: null };
+    case `${FETCH_LEVELUP_PAYMENT_METHOD}_REJECTED`: return { ...state, fetchLevelUpPaymentMethod: action.payload };
 
     case `${VALIDATE_USER}_PENDING`: return { ...state, validateUser: null };
     case `${VALIDATE_USER}_REJECTED`: return { ...state, validateUser: action.payload };

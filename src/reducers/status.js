@@ -23,6 +23,7 @@ import {
   UPDATE_LEVELUP_CONNECTION,
   CONNECT_LEVELUP,
   DISCONNECT_LEVELUP,
+  FETCH_LEVELUP_PAYMENT_METHOD,
   FETCH_USER,
   UNAUTHENTICATE_USER,
   RESET_USER_PASSWORD,
@@ -142,6 +143,7 @@ const initialState = {
   updateLevelUpConnection: IDLE,
   connectLevelUp: IDLE,
   disconnectLevelUp: IDLE,
+  fetchLevelUpPaymentMethod: IDLE,
   fetchLocations: IDLE,
   fetchAllCustomerOrders: IDLE,
   fetchPastCustomerOrders: IDLE,
@@ -343,6 +345,10 @@ export default function status(state = initialState, action) {
     case `${DISCONNECT_LEVELUP}_PENDING`: return { ...state, disconnectLevelUp: PENDING };
     case `${DISCONNECT_LEVELUP}_FULFILLED`: return { ...state, disconnectLevelUp: FULFILLED };
     case `${DISCONNECT_LEVELUP}_REJECTED`: return { ...state, disconnectLevelUp: REJECTED };
+
+    case `${FETCH_LEVELUP_PAYMENT_METHOD}_PENDING`: return { ...state, fetchLevelUpPaymentMethod: PENDING };
+    case `${FETCH_LEVELUP_PAYMENT_METHOD}_FULFILLED`: return { ...state, fetchLevelUpPaymentMethod: FULFILLED };
+    case `${FETCH_LEVELUP_PAYMENT_METHOD}_REJECTED`: return { ...state, fetchLevelUpPaymentMethod: REJECTED };
 
     case `${VALIDATE_CURRENT_CART}_PENDING`: return { ...state, validateCurrentCart: PENDING };
     case `${VALIDATE_CURRENT_CART}_FULFILLED`: return { ...state, validateCurrentCart: FULFILLED };
