@@ -81,6 +81,12 @@ const {
   MENUS_FETCH_ERROR,
 } = reduxCrud.actionTypesFor('menus');
 
+// display menu
+const {
+  DISPLAY_MENU_FETCH_START,
+  DISPLAY_MENU_FETCH_ERROR,
+} = reduxCrud.actionTypesFor('displayMenu');
+
 // payments
 const {
   PAYMENTS_FETCH_START,
@@ -136,6 +142,7 @@ export const initialState = {
   fetchLocations: null,
   // menu
   fetchMenu: null,
+  fetchDisplayMenu: null,
   // orders
   addLineItem: null,
   resolveOrder: null,
@@ -219,6 +226,10 @@ export default function error(state = initialState, action) {
     // menu
     case MENUS_FETCH_START: return { ...state, fetchMenu: null };
     case MENUS_FETCH_ERROR: return { ...state, fetchMenu: action.error };
+
+    // display menu
+    case DISPLAY_MENU_FETCH_START: return { ...state, fetchDisplayMenu: null };
+    case DISPLAY_MENU_FETCH_ERROR: return { ...state, fetchDisplayMenu: action.error };
 
     // orders
     case `${RESOLVE_ORDER}_PENDING`: return { ...state, resolveOrder: null };
