@@ -6,7 +6,6 @@ import {
   RESOLVE_USER,
   UNAUTHENTICATE_USER,
   ADD_ALLERGENS,
-  DISCONNECT_LEVELUP,
   REMOVE_ALLERGENS,
 } from 'actions/session/user';
 
