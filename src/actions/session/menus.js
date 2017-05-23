@@ -25,3 +25,22 @@ export function fetchMenu(brandibble, locationId, serviceType = 'delivery', requ
       });
   };
 }
+
+export function fetchDisplayMenu(brandibble, locationId, serviceType = 'delivery', requestedAt = NOW, success = NO_OP, fail = NO_OP) {
+  const requestedAtFormatted = new Date(moment(requestedAt));
+  return (dispatch) => {
+    dispatch(fetchStart());
+    return brandibble.menus.display(locationId, serviceType, requestedAtFormatted)
+      .then(({ data }) => {
+        const menuData = data;
+        menuData.id = generateUUID();
+        dispatch(fetchSuccess(menuData));
+        return success(menuData);
+      })
+      .catch((response) => {
+        const { errors } = response;
+        dispatch(fetchError(errors || response));
+        throw fail(errors || response);
+      });
+  };
+}
