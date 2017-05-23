@@ -1,5 +1,6 @@
 export { fetchAddresses, createAddress, deleteAddress } from './addresses';
-export { fetchMenu, fetchDisplayMenu } from './menus';
+export { fetchMenu } from './menus';
+export { fetchDisplayMenu } from './displayMenu';
 export {
   addLineItem,
   pushLineItem,
