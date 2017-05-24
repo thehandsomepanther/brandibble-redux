@@ -15,6 +15,7 @@ import {
   VALIDATE_CURRENT_CART,
   VALIDATE_CURRENT_ORDER,
   SET_LINE_ITEM_MADE_FOR,
+  SET_PAYMENT_METHOD,
   SET_LINE_ITEM_INSTRUCTIONS
 } from 'actions/session/order';
 
@@ -153,6 +154,7 @@ export const initialState = {
   fetchPayments: null,
   createPayment: null,
   deletePayment: null,
+  setPaymentMethod: null,
   setDefaultPayment: null,
   // favorites
   fetchFavorites: null,
@@ -191,6 +193,9 @@ export default function error(state = initialState, action) {
 
     case `${SETUP_BRANDIBBLE_REDUX}_PENDING`: return { ...state, setupBrandibbleRedux: null };
     case `${SETUP_BRANDIBBLE_REDUX}_REJECTED`: return { ...state, setupBrandibbleRedux: action.payload };
+
+    case `${SET_PAYMENT_METHOD}_PENDING`: return { ...state, setPaymentMethod: null };
+    case `${SET_PAYMENT_METHOD}_REJECTED`: return { ...state, setPaymentMethod: action.payload };
 
     case `${SEND_SUPPORT_TICKET}_PENDING`: return { ...state, sendSupportTicket: null };
     case `${SEND_SUPPORT_TICKET}_REJECTED`: return { ...state, sendSupportTicket: action.payload };
