@@ -150,10 +150,6 @@ const _updateLevelUpConnection = (brandibble, customerId, password) => {
   return {
     type: UPDATE_LEVELUP_CONNECTION,
     payload: brandibble.customers.levelUpUpdate(customerId, password)
-    .catch((response) => {
-      const { errors } = response;
-      throw errors || response;
-    }),
   };
 };
 
@@ -161,10 +157,6 @@ const _connectLevelUp = (brandibble, customerId, email, password) => {
   return {
     type: CONNECT_LEVELUP,
     payload: brandibble.customers.levelUpConnect(customerId, email, password)
-    .catch((response) => {
-      const { errors } = response;
-      throw errors || response;
-    }),
   };
 };
 
