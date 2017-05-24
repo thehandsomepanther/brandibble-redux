@@ -155,7 +155,7 @@ function _validateCurrentOrder(data) {
 }
 
 /* Public Functions */
-export function createNewOrder(brandibble, locationId = null, serviceType, paymentType = 'credit', miscOptions = Defaults.miscOptions) {
+export function createNewOrder(brandibble, locationId = null, serviceType, paymentType = null, miscOptions = Defaults.miscOptions) {
   return (dispatch) => {
     const { orders } = brandibble;
     const payload = orders.create(locationId, serviceType, paymentType, miscOptions).then(order => ({ order }));
@@ -163,7 +163,7 @@ export function createNewOrder(brandibble, locationId = null, serviceType, payme
   };
 }
 
-export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery', paymentType = 'credit', miscOptions = Defaults.miscOptions) {
+export function resolveOrder(brandibble, locationId = null, serviceType = 'delivery', paymentType = null, miscOptions = Defaults.miscOptions) {
   const { orders } = brandibble;
   const order = orders.current();
   const payload = order ? Promise.resolve({ order }) : orders.create(locationId, serviceType, paymentType, miscOptions).then(res => ({ order: res }));

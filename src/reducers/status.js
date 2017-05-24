@@ -16,7 +16,8 @@ import {
   SET_REQUESTED_AT,
   CREATE_NEW_ORDER,
   SET_LINE_ITEM_MADE_FOR,
-  SET_LINE_ITEM_INSTRUCTIONS
+  SET_LINE_ITEM_INSTRUCTIONS,
+  SET_PAYMENT_METHOD,
 } from 'actions/session/order';
 import {
   AUTHENTICATE_USER,
@@ -167,6 +168,7 @@ const initialState = {
   setPromoCode: IDLE,
   createPayment: IDLE,
   setDefaultPayment: IDLE,
+  setPaymentMethod: IDLE,
   deletePayment: IDLE,
   fetchFavorites: IDLE,
   createFavorite: IDLE,
@@ -224,6 +226,10 @@ export default function status(state = initialState, action) {
     case LOCATIONS_FETCH_START: return { ...state, fetchLocations: PENDING };
     case LOCATIONS_FETCH_SUCCESS: return { ...state, fetchLocations: FULFILLED };
     case LOCATIONS_FETCH_ERROR: return { ...state, fetchLocations: REJECTED };
+
+    case `${SET_PAYMENT_METHOD}_PENDING`: return { ...state, setPaymentMethod: PENDING };
+    case `${SET_PAYMENT_METHOD}_FULFILLED`: return { ...state, setPaymentMethod: FULFILLED };
+    case `${SET_PAYMENT_METHOD}_REJECTED`: return { ...state, setPaymentMethod: REJECTED };
 
     case `${FETCH_ALL_CUSTOMER_ORDERS}_PENDING`: return { ...state, fetchAllCustomerOrders: PENDING };
     case `${FETCH_ALL_CUSTOMER_ORDERS}_FULFILLED`: return { ...state, fetchAllCustomerOrders: FULFILLED };
