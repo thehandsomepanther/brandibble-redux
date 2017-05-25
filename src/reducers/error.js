@@ -39,6 +39,7 @@ import {
   FETCH_LEVELUP_PAYMENT_METHOD,
   FETCH_USER,
   RESET_USER_PASSWORD,
+  RESET_LEVELUP_PASSWORD,
   RESOLVE_USER,
   UNAUTHENTICATE_USER,
   VALIDATE_USER,
@@ -168,6 +169,7 @@ export const initialState = {
   fetchLevelUpPaymentMethod: null,
   fetchUser: null,
   resetUserPassword: null,
+  resetLevelUpPassword: null,
   resolveUser: null,
   unauthenticateUser: null,
   updateUser: null,
@@ -322,6 +324,9 @@ export default function error(state = initialState, action) {
 
     case `${RESET_USER_PASSWORD}_PENDING`: return { ...state, resetUserPassword: null };
     case `${RESET_USER_PASSWORD}_REJECTED`: return { ...state, resetUserPassword: action.payload };
+
+    case `${RESET_LEVELUP_PASSWORD}_PENDING`: return { ...state, resetLevelUpPassword: null };
+    case `${RESET_LEVELUP_PASSWORD}_REJECTED`: return { ...state, resetLevelUpPassword: action.payload };
 
     case `${FETCH_USER}_PENDING`: return { ...state, fetchUser: null };
     case `${FETCH_USER}_REJECTED`: return { ...state, fetchUser: action.payload };
