@@ -30,6 +30,7 @@ import {
   FETCH_USER,
   UNAUTHENTICATE_USER,
   RESET_USER_PASSWORD,
+  RESET_LEVELUP_PASSWORD,
   RESOLVE_USER,
   VALIDATE_USER,
   ADD_ALLERGENS,
@@ -182,6 +183,7 @@ const initialState = {
   createUser: IDLE,
   fetchUser: IDLE,
   resetUserPassword: IDLE,
+  resetLevelUpPassword: IDLE,
   resolveUser: IDLE,
   unauthenticateUser: IDLE,
   updateUser: IDLE,
@@ -394,6 +396,10 @@ export default function status(state = initialState, action) {
     case `${RESET_USER_PASSWORD}_PENDING`: return { ...state, resetUserPassword: PENDING };
     case `${RESET_USER_PASSWORD}_FULFILLED`: return { ...state, resetUserPassword: FULFILLED };
     case `${RESET_USER_PASSWORD}_REJECTED`: return { ...state, resetUserPassword: REJECTED };
+
+    case `${RESET_LEVELUP_PASSWORD}_PENDING`: return { ...state, resetLevelUpPassword: PENDING };
+    case `${RESET_LEVELUP_PASSWORD}_FULFILLED`: return { ...state, resetLevelUpPassword: FULFILLED };
+    case `${RESET_LEVELUP_PASSWORD}_REJECTED`: return { ...state, resetLevelUpPassword: REJECTED };
 
     case `${FETCH_USER}_PENDING`: return { ...state, fetchUser: PENDING };
     case `${FETCH_USER}_FULFILLED`: return { ...state, fetchUser: FULFILLED };

@@ -17,6 +17,7 @@ export const UNAUTHENTICATE_USER = 'UNAUTHENTICATE_USER';
 export const RESOLVE_USER = 'RESOLVE_USER';
 export const FETCH_USER = 'FETCH_USER';
 export const RESET_USER_PASSWORD = 'RESET_USER_PASSWORD';
+export const RESET_LEVELUP_PASSWORD = 'RESET_LEVELUP_PASSWORD';
 export const ADD_ALLERGENS = 'ADD_ALLERGENS';
 export const REMOVE_ALLERGENS = 'REMOVE_ALLERGENS';
 export const FETCH_LEVELUP_QR_CODE = 'FETCH_LEVELUP_QR_CODE';
@@ -118,6 +119,16 @@ function _resetUserPassword(brandibble, email, success, fail) {
   };
 }
 
+function _resetLevelUpPassword(brandibble, email, success, fail) {
+  return {
+    type: RESET_LEVELUP_PASSWORD,
+    payload: brandibble.customers.resetLevelUpPassword(email).then(success).catch((response) => {
+      const { errors } = response;
+      throw fail(errors || response);
+    }),
+  };
+}
+
 // Level Up Actions
 
 const _fetchLevelUpQRCode = (brandibble, body, success, fail) => {
@@ -213,6 +224,10 @@ export function fetchUser(brandibble, id) {
 // TODO - untested
 export function resetUserPassword(brandibble, email, success = NO_OP, fail = NO_OP) {
   return dispatch => dispatch(_resetUserPassword(brandibble, email, success, fail));
+}
+
+export function resetLevelUpPassword(brandibble, email, success = NO_OP, fail = NO_OP) {
+  return dispatch => dispatch(_resetLevelUpPassword(brandibble, email, success, fail));
 }
 
 export function resolveUser(brandibble) {
