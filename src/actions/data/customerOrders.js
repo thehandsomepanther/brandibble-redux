@@ -9,17 +9,17 @@ function _fetchAllCustomerOrders(brandibble, customerId) {
   };
 }
 
-function _fetchPastCustomerOrders(brandibble, customerId) {
+function _fetchPastCustomerOrders(brandibble, customerId, limit = 10) {
   return {
     type: FETCH_PAST_CUSTOMER_ORDERS,
-    payload: brandibble.customers.orders(customerId, { status: 'past' }),
+    payload: brandibble.customers.orders(customerId, { status: 'past', limit }),
   };
 }
 
-function _fetchUpcomingCustomerOrders(brandibble, customerId) {
+function _fetchUpcomingCustomerOrders(brandibble, customerId, limit = 10) {
   return {
     type: FETCH_UPCOMING_CUSTOMER_ORDERS,
-    payload: brandibble.customers.orders(customerId, { status: 'upcoming' }),
+    payload: brandibble.customers.orders(customerId, { status: 'upcoming', limit }),
   };
 }
 
