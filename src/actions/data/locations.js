@@ -15,7 +15,7 @@ export function fetchLocations(brandibble, query = {}) {
         let orderableLocations = filter(data, location => {
           return (!location.is_closed && !location.is_coming_soon);
         });
-        dispatch(fetchSuccess(orderableLocations))
+        return dispatch(fetchSuccess(orderableLocations));
       })
       .catch(response => {
         const { errors } = response;
