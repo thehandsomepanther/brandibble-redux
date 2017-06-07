@@ -4,6 +4,10 @@ import {
   FETCH_UPCOMING_CUSTOMER_ORDERS,
 } from 'actions/data/customerOrders';
 
+import {
+  UNAUTHENTICATE_USER
+} from 'actions/session/user';
+
 const initialState = {
   all: null,
   past: null,
@@ -28,6 +32,8 @@ export default function customerOrders(state = initialState, action) {
         ...state,
         upcoming: action.payload,
       };
+    case `${UNAUTHENTICATE_USER}_FULFILLED`:
+      return initialState;
     default:
       return state;
   }
