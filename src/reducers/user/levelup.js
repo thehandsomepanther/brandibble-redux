@@ -4,6 +4,10 @@ import {
   FETCH_LEVELUP_PAYMENT_METHOD,
 } from 'actions/session/user';
 
+import {
+  UNAUTHENTICATE_USER
+} from 'actions/session/user';
+
 const initialState = {
   loyalty: {},
   qr_code: null,
@@ -27,6 +31,8 @@ export default function levelup(state = initialState, action) {
         ...state,
         payment_method: action.payload,
       };
+    case `${UNAUTHENTICATE_USER}_FULFILLED`:
+      return initialState;
     default:
       return state;
   }
