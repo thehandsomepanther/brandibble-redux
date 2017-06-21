@@ -119,10 +119,10 @@ function _setPromoCode(order, promo) {
   };
 }
 
-function _setRequestedAt(order, time) {
+function _setRequestedAt(order, time, wantsFuture) {
   return {
     type: SET_REQUESTED_AT,
-    payload: order.setRequestedAt(time).then(order => ({ order })),
+    payload: order.setRequestedAt(time, wantsFuture).then(order => ({ order })),
   };
 }
 
@@ -238,8 +238,8 @@ export function setPaymentMethod(currentOrder, type, card) {
   return dispatch => dispatch(_setPaymentMethod(currentOrder, type, card));
 }
 
-export function setRequestedAt(currentOrder, time) {
-  return dispatch => dispatch(_setRequestedAt(currentOrder, time));
+export function setRequestedAt(currentOrder, time, wantsFuture = false) {
+  return dispatch => dispatch(_setRequestedAt(currentOrder, time, wantsFuture));
 }
 
 export function setPromoCode(currentOrder, promo) {
