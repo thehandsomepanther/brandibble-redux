@@ -130,7 +130,7 @@ describe('actions/session/order', () => {
 
       return fetchMenu(brandibble, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(({ menu }) => {
         const product = menu[0].children[menu[0].children.length - 1].items[0];
-        order.cart.addLineItem(product, product.id);
+        order.cart.addLineItem(product, 1, product.id);
 
         return setOrderLocationId(order, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(() => {
           return setOrderAddress(order, addressStub)(store.dispatch).then(() => {
@@ -165,7 +165,7 @@ describe('actions/session/order', () => {
 
       return fetchMenu(brandibble, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(({ menu }) => {
         const product = menu[0].children[menu[0].children.length - 1].items[0];
-        order.cart.addLineItem(product, product.id);
+        order.cart.addLineItem(product, 1, product.id);
 
         return setOrderLocationId(order, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(() => {
           return setOrderAddress(order, addressStub)(store.dispatch).then(() => {
@@ -461,7 +461,7 @@ describe('actions/session/order', () => {
 
       return fetchMenu(brandibble, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(({ menu }) => {
         const product = menu[0].children[menu[0].children.length - 1].items[0];
-        order.cart.addLineItem(product, product.id);
+        order.cart.addLineItem(product, 1, product.id);
 
         return setOrderLocationId(order, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(() => {
           return setOrderAddress(order, addressStub)(store.dispatch).then(() => {
