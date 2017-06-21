@@ -67,7 +67,7 @@ export default function order(state = initialState, action) {
       return {
         ...state,
         ref,
-        orderData: ref.format(),
+        orderData: { ...ref.format(), wantsFutureOrder: ref.wantsFutureOrder },
         lineItemsData: _buildFormattedLineItemsHash(ref),
       };
     }
