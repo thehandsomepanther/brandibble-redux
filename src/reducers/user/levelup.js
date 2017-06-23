@@ -2,6 +2,7 @@ import {
   FETCH_LEVELUP_LOYALTY,
   FETCH_LEVELUP_QR_CODE,
   FETCH_LEVELUP_PAYMENT_METHOD,
+  DISCONNECT_LEVELUP,
 } from 'actions/session/user';
 
 import {
@@ -32,6 +33,7 @@ export default function levelup(state = initialState, action) {
         payment_method: action.payload,
       };
     case `${UNAUTHENTICATE_USER}_FULFILLED`:
+    case `${DISCONNECT_LEVELUP}_FULFILLED`:
       return initialState;
     default:
       return state;
