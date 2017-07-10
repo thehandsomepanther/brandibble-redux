@@ -1,4 +1,4 @@
 export default (response) => {
   const { errors } = response;
-  return errors || response;
+  throw errors || response;
 };
