@@ -1,17 +1,12 @@
-import reduxCrud from 'redux-crud';
-import {
-  UNAUTHENTICATE_USER
-} from 'actions/session/user';
-
-const baseReducers = reduxCrud.List.reducersFor('allergens');
+import { FETCH_ALLERGENS } from 'actions/data/allergens';
 
 const initialState = [];
 
-export default function allergens(state = initialState, action) {
+export default (state = initialState, action) => {
   switch (action.type) {
-    case `${UNAUTHENTICATE_USER}_FULFILLED`:
-      return initialState;
+    case `${FETCH_ALLERGENS}_FULFILLED`:
+      return action.payload;
     default:
-      return baseReducers(state, action);
+      return state;
   }
-}
+};

@@ -4,6 +4,7 @@ import {
   SETUP_BRANDIBBLE,
   SETUP_BRANDIBBLE_REDUX,
 } from 'actions/application';
+import { FETCH_ALLERGENS } from 'actions/data/allergens';
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 import {
   ADD_LINE_ITEM,
@@ -66,12 +67,6 @@ const {
   ADDRESSES_DELETE_SUCCESS,
   ADDRESSES_DELETE_ERROR,
 } = reduxCrud.actionTypesFor('addresses');
-
-const {
-  ALLERGENS_FETCH_START,
-  ALLERGENS_FETCH_SUCCESS,
-  ALLERGENS_FETCH_ERROR,
-} = reduxCrud.actionTypesFor('allergens');
 
 const {
   MENUS_FETCH_START,
@@ -208,9 +203,9 @@ export default function status(state = initialState, action) {
     case `${SEND_SUPPORT_TICKET}_FULFILLED`: return { ...state, sendSupportTicket: FULFILLED };
     case `${SEND_SUPPORT_TICKET}_REJECTED`: return { ...state, sendSupportTicket: REJECTED };
 
-    case ALLERGENS_FETCH_START: return { ...state, fetchAllergens: PENDING };
-    case ALLERGENS_FETCH_SUCCESS: return { ...state, fetchAllergens: FULFILLED };
-    case ALLERGENS_FETCH_ERROR: return { ...state, fetchAllergens: REJECTED };
+    case `${FETCH_ALLERGENS}_PENDING`: return { ...state, fetchAllergens: PENDING };
+    case `${FETCH_ALLERGENS}_FULFILLED`: return { ...state, fetchAllergens: FULFILLED };
+    case `${FETCH_ALLERGENS}_REJECTED`: return { ...state, fetchAllergens: REJECTED };
 
     case ADDRESSES_FETCH_START: return { ...state, fetchAddresses: PENDING };
     case ADDRESSES_FETCH_SUCCESS: return { ...state, fetchAddresses: FULFILLED };
