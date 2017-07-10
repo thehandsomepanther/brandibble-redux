@@ -25,7 +25,7 @@ export const setupBrandibbleRedux = (brandibble, data = setupBrandibbleReduxDefa
       dispatch(resolveUser(value)),
       dispatch(resolveOrder(value, defaultLocationId, defaultServiceType)),
     ]);
-  });
+  }).catch(handleErrors);
 
   return dispatch(fireAction(SETUP_BRANDIBBLE_REDUX, payload));
 };
@@ -38,6 +38,8 @@ const sendSupportTicketDefaults = {
   subject: null,
 };
 export const sendSupportTicket = (brandibble, data = sendSupportTicketDefaults) => (dispatch) => {
-  const payload = brandibble.sendSupportTicket(Object.assign({}, sendSupportTicketDefaults, data));
+  const payload = brandibble
+    .sendSupportTicket(Object.assign({}, sendSupportTicketDefaults, data))
+    .catch(handleErrors);
   return dispatch(fireAction(SEND_SUPPORT_TICKET, payload));
 };
