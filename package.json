@@ -50,6 +50,7 @@
     "redux-mock-store": "^1.2.2",
     "redux-promise-middleware": "4.2.1",
     "redux-thunk": "^2.2.0",
+    "seamless-immutable": "^7.1.2",
     "webpack": "^2.5.1"
   },
   "dependencies": {}
