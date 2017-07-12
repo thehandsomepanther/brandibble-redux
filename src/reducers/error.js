@@ -7,6 +7,9 @@ import {
   SETUP_BRANDIBBLE_REDUX,
 } from 'actions/application';
 
+// allergens
+import { FETCH_ALLERGENS } from 'actions/data/allergens';
+
 // orders
 import {
   ADD_LINE_ITEM,
@@ -64,12 +67,6 @@ const {
   ADDRESSES_DELETE_START,
   ADDRESSES_DELETE_ERROR,
 } = reduxCrud.actionTypesFor('addresses');
-
-// allergens
-const {
-  ALLERGENS_FETCH_START,
-  ALLERGENS_FETCH_ERROR,
-} = reduxCrud.actionTypesFor('allergens');
 
 // locations
 const {
@@ -213,8 +210,8 @@ export default function error(state = initialState, action) {
     case `${FETCH_UPCOMING_CUSTOMER_ORDERS}_REJECTED`: return { ...state, fetchUpcomingCustomerOrders: action.payload };
 
     // allergens
-    case ALLERGENS_FETCH_START: return { ...state, fetchAllergens: null };
-    case ALLERGENS_FETCH_ERROR: return { ...state, fetchAllergens: action.error };
+    case `${FETCH_ALLERGENS}_PENDING`: return { ...state, fetchAllergens: null };
+    case `${FETCH_ALLERGENS}_REJECTED`: return { ...state, fetchAllergens: action.payload };
 
     // addresses
     case ADDRESSES_FETCH_START: return { ...state, fetchAddresses: null };
