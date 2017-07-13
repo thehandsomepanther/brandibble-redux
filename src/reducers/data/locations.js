@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
       return state.setIn(['locationsById', payload.location_id], payload);
     case `${FETCH_LOCATIONS}_FULFILLED`:
       return state.merge({
-        locationsById: state.locationsById.merge(Immutable.asObject(payload, (location) => {
+        locationsById: state.locationsById.replace(Immutable.asObject(payload, (location) => {
           return [location.location_id, location];
         })),
       });
