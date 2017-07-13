@@ -77,12 +77,6 @@ const {
 } = reduxCrud.actionTypesFor('menus');
 
 const {
-  DISPLAY_MENU_FETCH_START,
-  DISPLAY_MENU_FETCH_SUCCESS,
-  DISPLAY_MENU_FETCH_ERROR,
-} = reduxCrud.actionTypesFor('displayMenu');
-
-const {
   PAYMENTS_FETCH_START,
   PAYMENTS_FETCH_SUCCESS,
   PAYMENTS_FETCH_ERROR,
@@ -243,10 +237,6 @@ export default function status(state = initialState, action) {
     case MENUS_FETCH_START: return { ...state, fetchMenu: PENDING };
     case MENUS_FETCH_SUCCESS: return { ...state, fetchMenu: FULFILLED };
     case MENUS_FETCH_ERROR: return { ...state, fetchMenu: REJECTED };
-
-    case DISPLAY_MENU_FETCH_START: return { ...state, fetchDisplayMenu: PENDING };
-    case DISPLAY_MENU_FETCH_SUCCESS: return { ...state, fetchDisplayMenu: FULFILLED };
-    case DISPLAY_MENU_FETCH_ERROR: return { ...state, fetchDisplayMenu: REJECTED };
 
     case `${RESOLVE_ORDER}_PENDING`: return { ...state, resolveOrder: PENDING };
     case `${RESOLVE_ORDER}_FULFILLED`: return { ...state, resolveOrder: FULFILLED };
