@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case `${FETCH_ALLERGENS}_FULFILLED`:
       return state.merge({
-        allergensById: state.allergensById.merge(Immutable.asObject(action.payload, (allergen) => {
+        allergensById: state.allergensById.replace(Immutable.asObject(action.payload, (allergen) => {
           return [allergen.id, allergen];
         })),
       });
