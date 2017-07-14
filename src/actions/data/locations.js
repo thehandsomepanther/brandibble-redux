@@ -1,3 +1,4 @@
+import filter from 'lodash.filter';
 import fireAction from 'utils/fireAction';
 import handleErrors from 'utils/handleErrors';
 
@@ -18,7 +19,7 @@ export const fetchLocations = (brandibble, query = {}) => (dispatch) => {
     // when JC properly implements the orderable flag.
     // Pls Note: is_closed does not correspond to opening hours,
     // it's related to temporary & permanently closed locations.
-    const orderableLocations = data.filter((location) => {
+    const orderableLocations = filter(data, (location) => {
       return (!location.is_closed && !location.is_coming_soon);
     });
     return orderableLocations;
