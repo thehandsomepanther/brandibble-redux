@@ -21,6 +21,10 @@ import {
   SET_PAYMENT_METHOD,
 } from 'actions/session/order';
 import {
+  FETCH_LOCATIONS,
+  FETCH_LOCATION,
+} from 'actions/data/locations';
+import {
   AUTHENTICATE_USER,
   FETCH_LEVELUP_LOYALTY,
   FETCH_LEVELUP_QR_CODE,
@@ -63,12 +67,6 @@ const {
   ADDRESSES_DELETE_SUCCESS,
   ADDRESSES_DELETE_ERROR,
 } = reduxCrud.actionTypesFor('addresses');
-
-const {
-  LOCATIONS_FETCH_START,
-  LOCATIONS_FETCH_SUCCESS,
-  LOCATIONS_FETCH_ERROR,
-} = reduxCrud.actionTypesFor('locations');
 
 const {
   MENUS_FETCH_START,
@@ -143,6 +141,7 @@ const initialState = {
   connectLevelUp: IDLE,
   disconnectLevelUp: IDLE,
   fetchLevelUpPaymentMethod: IDLE,
+  fetchLocation: IDLE,
   fetchLocations: IDLE,
   fetchAllCustomerOrders: IDLE,
   fetchPastCustomerOrders: IDLE,
@@ -214,9 +213,13 @@ export default function status(state = initialState, action) {
     case ADDRESSES_DELETE_SUCCESS: return { ...state, deleteAddress: FULFILLED };
     case ADDRESSES_DELETE_ERROR: return { ...state, deleteAddress: REJECTED };
 
-    case LOCATIONS_FETCH_START: return { ...state, fetchLocations: PENDING };
-    case LOCATIONS_FETCH_SUCCESS: return { ...state, fetchLocations: FULFILLED };
-    case LOCATIONS_FETCH_ERROR: return { ...state, fetchLocations: REJECTED };
+    case `${FETCH_LOCATIONS}_PENDING`: return { ...state, fetchLocations: PENDING };
+    case `${FETCH_LOCATIONS}_FULFILLED`: return { ...state, fetchLocations: FULFILLED };
+    case `${FETCH_LOCATIONS}_REJECTED`: return { ...state, fetchLocations: REJECTED };
+
+    case `${FETCH_LOCATION}_PENDING`: return { ...state, fetchLocation: PENDING };
+    case `${FETCH_LOCATION}_FULFILLED`: return { ...state, fetchLocation: FULFILLED };
+    case `${FETCH_LOCATION}_REJECTED`: return { ...state, fetchLocation: REJECTED };
 
     case `${SET_PAYMENT_METHOD}_PENDING`: return { ...state, setPaymentMethod: PENDING };
     case `${SET_PAYMENT_METHOD}_FULFILLED`: return { ...state, setPaymentMethod: FULFILLED };

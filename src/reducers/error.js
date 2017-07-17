@@ -22,6 +22,12 @@ import {
   SET_LINE_ITEM_INSTRUCTIONS
 } from 'actions/session/order';
 
+// locations
+import {
+  FETCH_LOCATION,
+  FETCH_LOCATIONS,
+} from 'actions/data/locations';
+
 //  payments
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 
@@ -67,12 +73,6 @@ const {
   ADDRESSES_DELETE_START,
   ADDRESSES_DELETE_ERROR,
 } = reduxCrud.actionTypesFor('addresses');
-
-// locations
-const {
-  LOCATIONS_FETCH_START,
-  LOCATIONS_FETCH_ERROR,
-} = reduxCrud.actionTypesFor('locations');
 
 // menu
 const {
@@ -132,6 +132,7 @@ export const initialState = {
   createAddress: null,
   deleteAddress: null,
   // locations
+  fetchLocation: null,
   fetchLocations: null,
   // menu
   fetchMenu: null,
@@ -217,8 +218,11 @@ export default function error(state = initialState, action) {
     case ADDRESSES_DELETE_ERROR: return { ...state, deleteAddress: action.error };
 
     // locations
-    case LOCATIONS_FETCH_START: return { ...state, fetchLocations: null };
-    case LOCATIONS_FETCH_ERROR: return { ...state, fetchLocations: action.error };
+    case `${FETCH_LOCATIONS}_PENDING`: return { ...state, fetchLocations: null };
+    case `${FETCH_LOCATIONS}_REJECTED`: return { ...state, fetchLocations: action.payload };
+
+    case `${FETCH_LOCATION}_PENDING`: return { ...state, fetchLocation: null };
+    case `${FETCH_LOCATION}_REJECTED`: return { ...state, fetchLocation: action.payload };
 
     // menu
     case MENUS_FETCH_START: return { ...state, fetchMenu: null };
