@@ -1,11 +1,11 @@
-/* global describe afterEach before beforeEach it */
+/* global describe afterEach before it */
 /* eslint one-var-declaration-per-line:1, one-var:1 */
 import { expect } from 'chai';
 import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
 import { authenticateUser } from 'actions/session/user';
-import { fetchPastCustomerOrders } from 'actions/data/customerOrders';
+import { fetchAllCustomerOrders } from 'actions/data/customerOrders';
 import {
   createRating,
   deleteRating,
@@ -25,7 +25,7 @@ describe('actions/session/ratings', () => {
     store = mockStore();
     return authenticateUser(brandibble, validCredentialsStub)(store.dispatch).then((authResponse) => {
       const { customer_id } = authResponse.value;
-      return fetchPastCustomerOrders(brandibble, customer_id)(store.dispatch).then((fetchResponse) => {
+      return fetchAllCustomerOrders(brandibble, customer_id)(store.dispatch).then((fetchResponse) => {
         orders_id = fetchResponse.value.data[0].orders_id;
         store.clearActions();
       });
