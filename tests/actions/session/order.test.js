@@ -1,10 +1,11 @@
-/* global describe afterEach before beforeEach it */
+/* global describe before it */
 /* eslint one-var-declaration-per-line:1, one-var:1 */
 import { expect } from 'chai';
 import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
 import { fetchMenu } from 'actions/session/menus';
+import { authenticateUser } from 'actions/session/user';
 import {
   setOrderAddress,
   setOrderLocationId,
@@ -34,6 +35,7 @@ import {
   productStub,
   SAMPLE_MENU_LOCATION_ID,
   buildLineItem,
+  validCredentialsStub,
 } from '../../config/stubs';
 
 const mockStore = configureStore(reduxMiddleware);
@@ -465,14 +467,16 @@ describe('actions/session/order', () => {
 
         return setOrderLocationId(order, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(() => {
           return setOrderAddress(order, addressStub)(store.dispatch).then(() => {
-            return bindCustomerToOrder(order, authResponseStub)(store.dispatch).then(() => {
-              return setPaymentMethod(order, 'credit', cardStub)(store.dispatch).then(() => {
-                // hack to reset any previously set promo codes
-                return setPromoCode(makeUnpersistedOrder(), '')(store.dispatch).then(() => {
-                  store.clearActions();
+            return authenticateUser(brandibble, validCredentialsStub)(store.dispatch).then((res) => {
+              return bindCustomerToOrder(order, res.action.payload)(store.dispatch).then(() => {
+                return setPaymentMethod(order, 'credit', cardStub)(store.dispatch).then(() => {
+                  // hack to reset any previously set promo codes
+                  return setPromoCode(makeUnpersistedOrder(), '')(store.dispatch).then(() => {
+                    store.clearActions();
 
-                  return submitOrder(brandibble, order)(store.dispatch).then(() => {
-                    actionsCalled = store.getActions();
+                    return submitOrder(brandibble, order)(store.dispatch).then(() => {
+                      actionsCalled = store.getActions();
+                    });
                   });
                 });
               });
