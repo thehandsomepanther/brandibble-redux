@@ -16,10 +16,6 @@ export function makeUnpersistedOrder() {
   return new brandibble.Order(brandibble.adapter, 19);
 }
 
-export function buildLineItem() {
-  return new brandibble.LineItem(productStub, 1);
-}
-
 export const customersValidateStub = {
   is_brandibble_active: true,
   is_brandibble_customer: true,
@@ -310,7 +306,7 @@ export const productStub = {
   display_options: 0,
   end_date: null,
   height: null,
-  id: 3956,
+  id: 3876,
   large_image_url: '//s3.amazonaws.com/betterboh/u/img/prod/6/1461592134_ChickenLemon_or_Charred.jpg',
   length: null,
   menu_position: 2,
@@ -1139,3 +1135,5 @@ export const customerOrdersStub = [
     total: 26.46,
   },
 ];
+
+export const buildLineItem = () => new brandibble.LineItem(productStub, 1);
