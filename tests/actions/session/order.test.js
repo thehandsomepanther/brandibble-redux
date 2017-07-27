@@ -39,6 +39,8 @@ import {
 } from '../../config/stubs';
 
 const mockStore = configureStore(reduxMiddleware);
+// don't need this when creating a new address
+delete addressStub.customer_address_id;
 
 describe('actions/session/order', () => {
   let store, action, actionsCalled;

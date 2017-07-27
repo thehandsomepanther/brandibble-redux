@@ -4,6 +4,11 @@ import {
   SETUP_BRANDIBBLE,
   SETUP_BRANDIBBLE_REDUX,
 } from 'actions/application';
+import {
+  CREATE_ADDRESS,
+  DELETE_ADDRESS,
+  FETCH_ADDRESSES,
+} from 'actions/session/addresses';
 import { FETCH_ALLERGENS } from 'actions/data/allergens';
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 import {
@@ -55,18 +60,6 @@ const {
   PENDING,
   REJECTED,
 } = Status;
-
-const {
-  ADDRESSES_FETCH_START,
-  ADDRESSES_FETCH_SUCCESS,
-  ADDRESSES_FETCH_ERROR,
-  ADDRESSES_CREATE_START,
-  ADDRESSES_CREATE_SUCCESS,
-  ADDRESSES_CREATE_ERROR,
-  ADDRESSES_DELETE_START,
-  ADDRESSES_DELETE_SUCCESS,
-  ADDRESSES_DELETE_ERROR,
-} = reduxCrud.actionTypesFor('addresses');
 
 const {
   MENUS_FETCH_START,
@@ -201,17 +194,17 @@ export default function status(state = initialState, action) {
     case `${FETCH_ALLERGENS}_FULFILLED`: return { ...state, fetchAllergens: FULFILLED };
     case `${FETCH_ALLERGENS}_REJECTED`: return { ...state, fetchAllergens: REJECTED };
 
-    case ADDRESSES_FETCH_START: return { ...state, fetchAddresses: PENDING };
-    case ADDRESSES_FETCH_SUCCESS: return { ...state, fetchAddresses: FULFILLED };
-    case ADDRESSES_FETCH_ERROR: return { ...state, fetchAddresses: REJECTED };
+    case `${FETCH_ADDRESSES}_PENDING`: return { ...state, fetchAddresses: PENDING };
+    case `${FETCH_ADDRESSES}_FULFILLED`: return { ...state, fetchAddresses: FULFILLED };
+    case `${FETCH_ADDRESSES}_REJECTED`: return { ...state, fetchAddresses: REJECTED };
 
-    case ADDRESSES_CREATE_START: return { ...state, createAddress: PENDING };
-    case ADDRESSES_CREATE_SUCCESS: return { ...state, createAddress: FULFILLED };
-    case ADDRESSES_CREATE_ERROR: return { ...state, createAddress: REJECTED };
+    case `${CREATE_ADDRESS}_PENDING`: return { ...state, createAddress: PENDING };
+    case `${CREATE_ADDRESS}_FULFILLED`: return { ...state, createAddress: FULFILLED };
+    case `${CREATE_ADDRESS}_REJECTED`: return { ...state, createAddress: REJECTED };
 
-    case ADDRESSES_DELETE_START: return { ...state, deleteAddress: PENDING };
-    case ADDRESSES_DELETE_SUCCESS: return { ...state, deleteAddress: FULFILLED };
-    case ADDRESSES_DELETE_ERROR: return { ...state, deleteAddress: REJECTED };
+    case `${DELETE_ADDRESS}_PENDING`: return { ...state, deleteAddress: PENDING };
+    case `${DELETE_ADDRESS}_FULFILLED`: return { ...state, deleteAddress: FULFILLED };
+    case `${DELETE_ADDRESS}_REJECTED`: return { ...state, deleteAddress: REJECTED };
 
     case `${FETCH_LOCATIONS}_PENDING`: return { ...state, fetchLocations: PENDING };
     case `${FETCH_LOCATIONS}_FULFILLED`: return { ...state, fetchLocations: FULFILLED };
