@@ -10,6 +10,7 @@ import {
   FETCH_ADDRESSES,
 } from 'actions/session/addresses';
 import { FETCH_ALLERGENS } from 'actions/data/allergens';
+import { FETCH_MENU } from 'actions/session/menus';
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 import {
   ADD_LINE_ITEM,
@@ -60,12 +61,6 @@ const {
   PENDING,
   REJECTED,
 } = Status;
-
-const {
-  MENUS_FETCH_START,
-  MENUS_FETCH_SUCCESS,
-  MENUS_FETCH_ERROR,
-} = reduxCrud.actionTypesFor('menus');
 
 const {
   PAYMENTS_FETCH_START,
@@ -232,6 +227,10 @@ export default function status(state = initialState, action) {
     case MENUS_FETCH_START: return { ...state, fetchMenu: PENDING };
     case MENUS_FETCH_SUCCESS: return { ...state, fetchMenu: FULFILLED };
     case MENUS_FETCH_ERROR: return { ...state, fetchMenu: REJECTED };
+
+    case `${FETCH_MENU}_PENDING`: return { ...state, fetchMenu: PENDING };
+    case `${FETCH_MENU}_FULFILLED`: return { ...state, fetchMenu: FULFILLED };
+    case `${FETCH_MENU}_REJECTED`: return { ...state, fetchMenu: REJECTED };
 
     case `${RESOLVE_ORDER}_PENDING`: return { ...state, resolveOrder: PENDING };
     case `${RESOLVE_ORDER}_FULFILLED`: return { ...state, resolveOrder: FULFILLED };

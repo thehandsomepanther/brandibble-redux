@@ -4,6 +4,8 @@ import generateUUID from 'utils/generateUUID';
 
 const { fetchStart, fetchSuccess, fetchError } = reduxCrud.actionCreatorsFor('menus');
 
+export const FETCH_MENU = 'FETCH_MENU';
+
 const NO_OP = f => f;
 const NOW = new Date();
 
