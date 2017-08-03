@@ -7,6 +7,13 @@ import {
   SETUP_BRANDIBBLE_REDUX,
 } from 'actions/application';
 
+// addresses
+import {
+  CREATE_ADDRESS,
+  DELETE_ADDRESS,
+  FETCH_ADDRESSES,
+} from 'actions/session/addresses';
+
 // allergens
 import { FETCH_ALLERGENS } from 'actions/data/allergens';
 
@@ -71,16 +78,6 @@ const {
   USER_CREATE_START,
   USER_CREATE_ERROR,
 } = reduxCrud.actionTypesFor('user');
-
-// addresses
-const {
-  ADDRESSES_FETCH_START,
-  ADDRESSES_FETCH_ERROR,
-  ADDRESSES_CREATE_START,
-  ADDRESSES_CREATE_ERROR,
-  ADDRESSES_DELETE_START,
-  ADDRESSES_DELETE_ERROR,
-} = reduxCrud.actionTypesFor('addresses');
 
 // menu
 const {
@@ -204,14 +201,14 @@ export default function error(state = initialState, action) {
     case `${FETCH_ALLERGENS}_REJECTED`: return { ...state, fetchAllergens: action.payload };
 
     // addresses
-    case ADDRESSES_FETCH_START: return { ...state, fetchAddresses: null };
-    case ADDRESSES_FETCH_ERROR: return { ...state, fetchAddresses: action.error };
+    case `${FETCH_ADDRESSES}_PENDING`: return { ...state, fetchAddresses: null };
+    case `${FETCH_ADDRESSES}_REJECTED`: return { ...state, fetchAddresses: action.payload };
 
-    case ADDRESSES_CREATE_START: return { ...state, createAddress: null };
-    case ADDRESSES_CREATE_ERROR: return { ...state, createAddress: action.error };
+    case `${CREATE_ADDRESS}_PENDING`: return { ...state, createAddress: null };
+    case `${CREATE_ADDRESS}_REJECTED`: return { ...state, createAddress: action.payload };
 
-    case ADDRESSES_DELETE_START: return { ...state, deleteAddress: null };
-    case ADDRESSES_DELETE_ERROR: return { ...state, deleteAddress: action.error };
+    case `${DELETE_ADDRESS}_PENDING`: return { ...state, deleteAddress: null };
+    case `${DELETE_ADDRESS}_REJECTED`: return { ...state, deleteAddress: action.payload };
 
     // locations
     case `${FETCH_LOCATIONS}_PENDING`: return { ...state, fetchLocations: null };
