@@ -140,7 +140,6 @@ const initialState = {
   fetchPastCustomerOrders: IDLE,
   fetchUpcomingCustomerOrders: IDLE,
   fetchMenu: IDLE,
-  fetchDisplayMenu: IDLE,
   resolveOrder: IDLE,
   setOrderLocationId: IDLE,
   submitOrder: IDLE,
