@@ -23,7 +23,7 @@ export default (state = initialState, action) => {
       });
     case `${DELETE_FAVORITE}_FULFILLED`:
       return state.merge({
-        favoritesById: state.favoritesById.without(payload),
+        favoritesById: state.favoritesById.without(key => key === payload),
       });
     case `${UPDATE_FAVORITE}_FULFILLED`:
     case `${CREATE_FAVORITE}_FULFILLED`:
