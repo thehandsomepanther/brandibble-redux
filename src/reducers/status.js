@@ -10,7 +10,7 @@ import {
   FETCH_ADDRESSES,
 } from 'actions/session/addresses';
 import { FETCH_ALLERGENS } from 'actions/data/allergens';
-import { FETCH_MENU } from 'actions/session/menu';
+import { FETCH_MENU } from 'actions/session/menus';
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 import {
   ADD_LINE_ITEM,

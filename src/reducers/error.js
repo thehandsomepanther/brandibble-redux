@@ -18,7 +18,7 @@ import {
 import { FETCH_ALLERGENS } from 'actions/data/allergens';
 
 // menu
-import { FETCH_MENU } from 'actions/session/menu';
+import { FETCH_MENU } from 'actions/session/menus';
 
 // orders
 import {

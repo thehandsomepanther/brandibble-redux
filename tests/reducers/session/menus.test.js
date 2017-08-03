@@ -1,9 +1,11 @@
 /* global describe it */
 import { expect } from 'chai';
-import { FETCH_MENU } from 'actions/session/menu';
-import reducer, { initialState } from 'reducers/session/menu';
+import reduxCrud from 'redux-crud';
+import reducer from 'reducers/session/menus';
 import { menusStub } from '../../config/stubs';
 
+const { MENUS_FETCH_SUCCESS } = reduxCrud.actionTypesFor('menus');
+const initialState = {};
 const payload = menusStub;
 
 describe('reducers/session/menus', () => {
@@ -11,10 +13,10 @@ describe('reducers/session/menus', () => {
     expect(reducer(initialState, {})).to.equal(initialState);
   });
 
-  it(`handles the ${FETCH_MENU}_FULFILLED action`, () => {
+  it('handles the MENUS_FETCH_SUCCESS action', () => {
     const reduced = reducer(initialState, {
-      type: `${FETCH_MENU}_FULFILLED`,
-      payload,
+      type: MENUS_FETCH_SUCCESS,
+      records: payload,
     });
     expect(reduced[payload.id]).to.equal(payload);
   });
