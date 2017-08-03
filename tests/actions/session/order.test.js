@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
-import { fetchMenu } from 'actions/session/menus';
+import { fetchMenu } from 'actions/session/menu';
 import { authenticateUser } from 'actions/session/user';
 import {
   setOrderAddress,

@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
-import { fetchMenu, FETCH_MENU } from 'actions/session/menus';
+import { fetchMenu, FETCH_MENU } from 'actions/session/menu';
 import { brandibble, SAMPLE_MENU_LOCATION_ID } from '../../config/stubs';
 
 const mockStore = configureStore(reduxMiddleware);

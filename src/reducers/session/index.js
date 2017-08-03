@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import addresses from './addresses';
-import menus from './menus';
+import menu from './menu';
 import order from './order';
 import payments from './payments';
 import favorites from './favorites';
@@ -8,7 +8,7 @@ import ratings from './ratings';
 
 export default combineReducers({
   addresses,
-  menus,
+  menu,
   order,
   payments,
   favorites,
