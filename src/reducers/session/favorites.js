@@ -23,7 +23,9 @@ export default (state = initialState, action) => {
       });
     case `${DELETE_FAVORITE}_FULFILLED`:
       return state.merge({
-        favoritesById: state.favoritesById.without(key => key === payload),
+        favoritesById: state.favoritesById.without((v, k) => {
+          return k === `${payload}` && v.favorite_item_id === payload;
+        }),
       });
     case `${UPDATE_FAVORITE}_FULFILLED`:
     case `${CREATE_FAVORITE}_FULFILLED`:
