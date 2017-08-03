@@ -224,10 +224,6 @@ export default function status(state = initialState, action) {
     case `${FETCH_UPCOMING_CUSTOMER_ORDERS}_FULFILLED`: return { ...state, fetchUpcomingCustomerOrders: FULFILLED };
     case `${FETCH_UPCOMING_CUSTOMER_ORDERS}_REJECTED`: return { ...state, fetchUpcomingCustomerOrders: REJECTED };
 
-    case MENUS_FETCH_START: return { ...state, fetchMenu: PENDING };
-    case MENUS_FETCH_SUCCESS: return { ...state, fetchMenu: FULFILLED };
-    case MENUS_FETCH_ERROR: return { ...state, fetchMenu: REJECTED };
-
     case `${FETCH_MENU}_PENDING`: return { ...state, fetchMenu: PENDING };
     case `${FETCH_MENU}_FULFILLED`: return { ...state, fetchMenu: FULFILLED };
     case `${FETCH_MENU}_REJECTED`: return { ...state, fetchMenu: REJECTED };

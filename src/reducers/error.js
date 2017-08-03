@@ -29,7 +29,7 @@ import {
   VALIDATE_CURRENT_ORDER,
   SET_LINE_ITEM_MADE_FOR,
   SET_PAYMENT_METHOD,
-  SET_LINE_ITEM_INSTRUCTIONS
+  SET_LINE_ITEM_INSTRUCTIONS,
 } from 'actions/session/order';
 
 // locations
