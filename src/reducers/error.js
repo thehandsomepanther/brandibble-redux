@@ -20,6 +20,14 @@ import { FETCH_ALLERGENS } from 'actions/data/allergens';
 // menu
 import { FETCH_MENU } from 'actions/session/menus';
 
+// favorites
+import {
+  CREATE_FAVORITE,
+  DELETE_FAVORITE,
+  FETCH_FAVORITES,
+  UPDATE_FAVORITE,
+} from 'actions/session/favorites';
+
 // orders
 import {
   ADD_LINE_ITEM,
@@ -83,18 +91,6 @@ const {
   PAYMENTS_DELETE_START,
   PAYMENTS_DELETE_ERROR,
 } = reduxCrud.actionTypesFor('payments');
-
-// favorites
-const {
-  FAVORITES_FETCH_START,
-  FAVORITES_FETCH_ERROR,
-  FAVORITES_CREATE_START,
-  FAVORITES_CREATE_ERROR,
-  FAVORITES_UPDATE_START,
-  FAVORITES_UPDATE_ERROR,
-  FAVORITES_DELETE_START,
-  FAVORITES_DELETE_ERROR,
-} = reduxCrud.actionTypesFor('favorites');
 
 // ratings
 const {
@@ -258,17 +254,17 @@ export default function error(state = initialState, action) {
     case `${SET_DEFAULT_PAYMENT}_REJECTED`: return { ...state, setDefaultPayment: action.payload };
 
     // favorites
-    case FAVORITES_FETCH_START: return { ...state, fetchFavorites: null };
-    case FAVORITES_FETCH_ERROR: return { ...state, fetchFavorites: action.error };
+    case `${FETCH_FAVORITES}_PENDING`: return { ...state, fetchFavorites: null };
+    case `${FETCH_FAVORITES}_REJECTED`: return { ...state, fetchFavorites: action.payload };
 
-    case FAVORITES_CREATE_START: return { ...state, createFavorite: null };
-    case FAVORITES_CREATE_ERROR: return { ...state, createFavorite: action.error };
+    case `${CREATE_FAVORITE}_PENDING`: return { ...state, createFavorite: null };
+    case `${CREATE_FAVORITE}_REJECTED`: return { ...state, createFavorite: action.payload };
 
-    case FAVORITES_UPDATE_START: return { ...state, updateFavorite: null };
-    case FAVORITES_UPDATE_ERROR: return { ...state, updateFavorite: action.error };
+    case `${UPDATE_FAVORITE}_PENDING`: return { ...state, updateFavorite: null };
+    case `${UPDATE_FAVORITE}_REJECTED`: return { ...state, updateFavorite: action.payload };
 
-    case FAVORITES_DELETE_START: return { ...state, deleteFavorite: null };
-    case FAVORITES_DELETE_ERROR: return { ...state, deleteFavorite: action.error };
+    case `${DELETE_FAVORITE}_PENDING`: return { ...state, deleteFavorite: null };
+    case `${DELETE_FAVORITE}_REJECTED`: return { ...state, deleteFavorite: action.payload };
 
     // ratings
     case RATINGS_FETCH_START: return { ...state, fetchRating: null };

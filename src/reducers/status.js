@@ -11,6 +11,12 @@ import {
 } from 'actions/session/addresses';
 import { FETCH_ALLERGENS } from 'actions/data/allergens';
 import { FETCH_MENU } from 'actions/session/menus';
+import {
+  CREATE_FAVORITE,
+  DELETE_FAVORITE,
+  FETCH_FAVORITES,
+  UPDATE_FAVORITE,
+} from 'actions/session/favorites';
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 import {
   ADD_LINE_ITEM,
@@ -73,21 +79,6 @@ const {
   PAYMENTS_DELETE_SUCCESS,
   PAYMENTS_DELETE_ERROR,
 } = reduxCrud.actionTypesFor('payments');
-
-const {
-  FAVORITES_FETCH_START,
-  FAVORITES_FETCH_SUCCESS,
-  FAVORITES_FETCH_ERROR,
-  FAVORITES_CREATE_START,
-  FAVORITES_CREATE_SUCCESS,
-  FAVORITES_CREATE_ERROR,
-  FAVORITES_UPDATE_START,
-  FAVORITES_UPDATE_SUCCESS,
-  FAVORITES_UPDATE_ERROR,
-  FAVORITES_DELETE_START,
-  FAVORITES_DELETE_SUCCESS,
-  FAVORITES_DELETE_ERROR,
-} = reduxCrud.actionTypesFor('favorites');
 
 const {
   RATINGS_FETCH_START,
@@ -280,21 +271,21 @@ export default function status(state = initialState, action) {
     case `${SET_DEFAULT_PAYMENT}_FULFILLED`: return { ...state, setDefaultPayment: FULFILLED };
     case `${SET_DEFAULT_PAYMENT}_REJECTED`: return { ...state, setDefaultPayment: REJECTED };
 
-    case FAVORITES_FETCH_START: return { ...state, fetchFavorites: PENDING };
-    case FAVORITES_FETCH_SUCCESS: return { ...state, fetchFavorites: FULFILLED };
-    case FAVORITES_FETCH_ERROR: return { ...state, fetchFavorites: REJECTED };
+    case `${FETCH_FAVORITES}_PENDING`: return { ...state, fetchFavorites: PENDING };
+    case `${FETCH_FAVORITES}_FULFILLED`: return { ...state, fetchFavorites: FULFILLED };
+    case `${FETCH_FAVORITES}_REJECTED`: return { ...state, fetchFavorites: REJECTED };
 
-    case FAVORITES_CREATE_START: return { ...state, createFavorite: PENDING };
-    case FAVORITES_CREATE_SUCCESS: return { ...state, createFavorite: FULFILLED };
-    case FAVORITES_CREATE_ERROR: return { ...state, createFavorite: REJECTED };
+    case `${CREATE_FAVORITE}_PENDING`: return { ...state, createFavorite: PENDING };
+    case `${CREATE_FAVORITE}_FULFILLED`: return { ...state, createFavorite: FULFILLED };
+    case `${CREATE_FAVORITE}_REJECTED`: return { ...state, createFavorite: REJECTED };
 
-    case FAVORITES_UPDATE_START: return { ...state, updateFavorite: PENDING };
-    case FAVORITES_UPDATE_SUCCESS: return { ...state, updateFavorite: FULFILLED };
-    case FAVORITES_UPDATE_ERROR: return { ...state, updateFavorite: REJECTED };
+    case `${UPDATE_FAVORITE}_PENDING`: return { ...state, updateFavorite: PENDING };
+    case `${UPDATE_FAVORITE}_FULFILLED`: return { ...state, updateFavorite: FULFILLED };
+    case `${UPDATE_FAVORITE}_REJECTED`: return { ...state, updateFavorite: REJECTED };
 
-    case FAVORITES_DELETE_START: return { ...state, deleteFavorite: PENDING };
-    case FAVORITES_DELETE_SUCCESS: return { ...state, deleteFavorite: FULFILLED };
-    case FAVORITES_DELETE_ERROR: return { ...state, deleteFavorite: REJECTED };
+    case `${DELETE_FAVORITE}_PENDING`: return { ...state, deleteFavorite: PENDING };
+    case `${DELETE_FAVORITE}_FULFILLED`: return { ...state, deleteFavorite: FULFILLED };
+    case `${DELETE_FAVORITE}_REJECTED`: return { ...state, deleteFavorite: REJECTED };
 
     case RATINGS_FETCH_START: return { ...state, fetchRating: PENDING };
     case RATINGS_FETCH_SUCCESS: return { ...state, fetchRating: FULFILLED };
