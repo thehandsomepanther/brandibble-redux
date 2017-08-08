@@ -132,7 +132,8 @@ describe('actions/session/order', () => {
       store = mockStore();
       const order = makeUnpersistedOrder();
 
-      return fetchMenu(brandibble, SAMPLE_MENU_LOCATION_ID)(store.dispatch).then(({ menu }) => {
+      return fetchMenu(brandibble, { locationId: SAMPLE_MENU_LOCATION_ID })(store.dispatch).then((response) => {
+        console.log(response, 'res')
         const product = menu[0].children[menu[0].children.length - 1].items[0];
         order.cart.addLineItem(product, 1, product.id);
 
