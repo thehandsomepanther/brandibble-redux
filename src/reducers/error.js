@@ -17,6 +17,9 @@ import {
 // allergens
 import { FETCH_ALLERGENS } from 'actions/data/allergens';
 
+// menu
+import { FETCH_MENU } from 'actions/session/menus';
+
 // favorites
 import {
   CREATE_FAVORITE,
@@ -34,7 +37,7 @@ import {
   VALIDATE_CURRENT_ORDER,
   SET_LINE_ITEM_MADE_FOR,
   SET_PAYMENT_METHOD,
-  SET_LINE_ITEM_INSTRUCTIONS
+  SET_LINE_ITEM_INSTRUCTIONS,
 } from 'actions/session/order';
 
 // locations
@@ -84,12 +87,6 @@ const {
   USER_CREATE_START,
   USER_CREATE_ERROR,
 } = reduxCrud.actionTypesFor('user');
-
-// menu
-const {
-  MENUS_FETCH_START,
-  MENUS_FETCH_ERROR,
-} = reduxCrud.actionTypesFor('menus');
 
 // payments
 const {
@@ -230,8 +227,8 @@ export default function error(state = initialState, action) {
     case `${FETCH_GEOLOCATIONS}_REJECTED`: return { ...state, fetchGeolocations: action.payload };
 
     // menu
-    case MENUS_FETCH_START: return { ...state, fetchMenu: null };
-    case MENUS_FETCH_ERROR: return { ...state, fetchMenu: action.error };
+    case `${FETCH_MENU}_PENDING`: return { ...state, fetchMenu: null };
+    case `${FETCH_MENU}_REJECTED`: return { ...state, fetchMenu: action.payload };
 
     // orders
     case `${RESOLVE_ORDER}_PENDING`: return { ...state, resolveOrder: null };

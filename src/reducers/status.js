@@ -10,6 +10,7 @@ import {
   FETCH_ADDRESSES,
 } from 'actions/session/addresses';
 import { FETCH_ALLERGENS } from 'actions/data/allergens';
+import { FETCH_MENU } from 'actions/session/menus';
 import {
   CREATE_FAVORITE,
   DELETE_FAVORITE,
@@ -72,12 +73,6 @@ const {
 } = Status;
 
 const {
-  MENUS_FETCH_START,
-  MENUS_FETCH_SUCCESS,
-  MENUS_FETCH_ERROR,
-} = reduxCrud.actionTypesFor('menus');
-
-const {
   PAYMENTS_FETCH_START,
   PAYMENTS_FETCH_SUCCESS,
   PAYMENTS_FETCH_ERROR,
@@ -136,7 +131,6 @@ const initialState = {
   fetchPastCustomerOrders: IDLE,
   fetchUpcomingCustomerOrders: IDLE,
   fetchMenu: IDLE,
-  fetchDisplayMenu: IDLE,
   resolveOrder: IDLE,
   setOrderLocationId: IDLE,
   submitOrder: IDLE,
@@ -230,9 +224,9 @@ export default function status(state = initialState, action) {
     case `${FETCH_UPCOMING_CUSTOMER_ORDERS}_FULFILLED`: return { ...state, fetchUpcomingCustomerOrders: FULFILLED };
     case `${FETCH_UPCOMING_CUSTOMER_ORDERS}_REJECTED`: return { ...state, fetchUpcomingCustomerOrders: REJECTED };
 
-    case MENUS_FETCH_START: return { ...state, fetchMenu: PENDING };
-    case MENUS_FETCH_SUCCESS: return { ...state, fetchMenu: FULFILLED };
-    case MENUS_FETCH_ERROR: return { ...state, fetchMenu: REJECTED };
+    case `${FETCH_MENU}_PENDING`: return { ...state, fetchMenu: PENDING };
+    case `${FETCH_MENU}_FULFILLED`: return { ...state, fetchMenu: FULFILLED };
+    case `${FETCH_MENU}_REJECTED`: return { ...state, fetchMenu: REJECTED };
 
     case `${RESOLVE_ORDER}_PENDING`: return { ...state, resolveOrder: PENDING };
     case `${RESOLVE_ORDER}_FULFILLED`: return { ...state, resolveOrder: FULFILLED };
