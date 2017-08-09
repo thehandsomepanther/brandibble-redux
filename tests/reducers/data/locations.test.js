@@ -1,6 +1,7 @@
 /* global describe it */
 import { expect } from 'chai';
 import { PUSH_GEOLOCATION, FETCH_LOCATIONS, FETCH_LOCATION } from 'actions/data/locations';
+import { RESOLVE_ORDER_LOCATION } from 'actions/session/order';
 import reducer, { initialState } from 'reducers/data/locations';
 import { locationsStub } from '../../config/stubs';
 
@@ -26,6 +27,23 @@ describe('reducers/data/locations', () => {
     });
     expect(reduced.locationsById[payload[0].location_id]).to.exist;
   });
+
+  it('handles the RESOLVE_LOCATION_FULFILLED action', () => {
+    const reduced = reducer(initialState, {
+      type: `${RESOLVE_ORDER_LOCATION}_FULFILLED`,
+      payload: payload[0],
+    });
+    expect(reduced.locationsById[payload[0].location_id]).to.exist;
+  });
+
+  it('handles the RESOLVE_LOCATION_FULFILLED action as null payload', () => {
+    const reduced = reducer(initialState, {
+      type: `${RESOLVE_ORDER_LOCATION}_FULFILLED`,
+      payload: null,
+    });
+    expect(reduced).to.equal(initialState);
+  });
+
 
   it('handles the FETCH_LOCATIONS_FULFILLED action', () => {
     const reduced = reducer(initialState, {

@@ -11,6 +11,7 @@ import {
   setOrderLocationId,
   setPaymentMethod,
   resolveOrder,
+  resolveOrderLocation,
   addLineItem,
   pushLineItem,
   bindCustomerToOrder,
@@ -65,6 +66,29 @@ describe('actions/session/order', () => {
       action = find(actionsCalled, { type: 'RESOLVE_ORDER_FULFILLED' });
       expect(action).to.have.property('payload');
       expect(action.payload).to.have.property('order').is.not.undefined.and.is.not.null;
+    });
+  });
+
+  describe('resolveOrderLocation', () => {
+    before(() => {
+      store = mockStore();
+      return resolveOrderLocation(brandibble)(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should call 2 actions', () => {
+      expect(actionsCalled).to.have.length.of(2);
+    });
+
+    it('should have RESOLVE_ORDER_LOCATION_PENDING action', () => {
+      action = find(actionsCalled, { type: 'RESOLVE_ORDER_LOCATION_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have RESOLVE_ORDER_LOCATION_FULFILLED action', () => {
+      action = find(actionsCalled, { type: 'RESOLVE_ORDER_LOCATION_FULFILLED' });
+      expect(action).to.exist;
     });
   });
 
