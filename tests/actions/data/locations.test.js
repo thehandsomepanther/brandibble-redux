@@ -5,8 +5,10 @@ import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
 import {
+  PUSH_GEOLOCATION,
   FETCH_LOCATION,
   FETCH_LOCATIONS,
+  pushGeolocation,
   fetchLocation,
   fetchLocations,
 } from 'actions/data/locations';
@@ -35,6 +37,21 @@ describe('actions/data/locations', () => {
 
     it(`last action should be ${FETCH_LOCATIONS}_FULFILLED`, () => {
       action = find(actionsCalled, { type: `${FETCH_LOCATIONS}_FULFILLED` });
+      expect(action).to.exist;
+    });
+  });
+
+  describe('pushGeolocation', () => {
+    before(() => {
+      store.clearActions();
+      pushGeolocation(data[0])(store.dispatch);
+      actionsCalled = store.getActions();
+    });
+
+    it('should call 1 action', () => expect(actionsCalled).to.have.length.of(1));
+
+    it(`action should be ${PUSH_GEOLOCATION}`, () => {
+      action = find(actionsCalled, { type: PUSH_GEOLOCATION });
       expect(action).to.exist;
     });
   });

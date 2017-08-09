@@ -4,6 +4,11 @@ import handleErrors from 'utils/handleErrors';
 
 export const FETCH_LOCATIONS = 'FETCH_LOCATIONS';
 export const FETCH_LOCATION = 'FETCH_LOCATION';
+export const PUSH_GEOLOCATION = 'PUSH_GEOLOCATION';
+
+export const pushGeolocation = location => dispatch => {
+  return dispatch(fireAction(PUSH_GEOLOCATION, location));
+};
 
 export const fetchLocation = (brandibble, locationId, lat, lng) => {
   return (dispatch) => {
