@@ -81,14 +81,14 @@ describe('actions/session/order', () => {
       expect(actionsCalled).to.have.length.of(2);
     });
 
-    it('should have RESOLVE_ORDER_PENDING action', () => {
+    it('should have RESOLVE_ORDER_LOCATION_PENDING action', () => {
       action = find(actionsCalled, { type: 'RESOLVE_ORDER_LOCATION_PENDING' });
       expect(action).to.exist;
     });
 
-    it('should have RESOLVE_ORDER_FULFILLED action', () => {
+    it('should have RESOLVE_ORDER_LOCATION_FULFILLED action', () => {
       action = find(actionsCalled, { type: 'RESOLVE_ORDER_LOCATION_FULFILLED' });
-      expect(action).to.have.property('payload');
+      expect(action).to.exist;
     });
   });
 
