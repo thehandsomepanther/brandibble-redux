@@ -133,7 +133,7 @@ export const initialState = {
   // locations
   fetchLocation: null,
   fetchLocations: null,
-  // locations
+  // geolocations
   fetchGeolocations: null,
   // menu
   fetchMenu: null,

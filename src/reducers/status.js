@@ -38,7 +38,7 @@ import {
 import {
   FETCH_GEOLOCATIONS,
   CLEAR_GEOLOCATIONS,
-} from 'actions/data/locations';
+} from 'actions/data/geolocations';
 import {
   AUTHENTICATE_USER,
   FETCH_LEVELUP_LOYALTY,
