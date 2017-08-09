@@ -1,5 +1,8 @@
 import Immutable from 'seamless-immutable';
 import {
+  RESOLVE_ORDER_LOCATION
+} from 'actions/session/order';
+import {
   PUSH_GEOLOCATION,
   FETCH_LOCATION,
   FETCH_LOCATIONS,
@@ -16,7 +19,9 @@ export default (state = initialState, action) => {
     case PUSH_GEOLOCATION:
       return state.setIn(['locationsById', payload.location_id], payload);
     case `${FETCH_LOCATION}_FULFILLED`:
-      return state.setIn(['locationsById', payload.location_id], payload);
+    case `${RESOLVE_ORDER_LOCATION}_FULFILLED`:
+      if (payload) return state.setIn(['locationsById', payload.location_id], payload);
+      return state;
     case `${FETCH_LOCATIONS}_FULFILLED`:
       return state.merge({
         locationsById: state.locationsById.replace(Immutable.asObject(payload, (location) => {

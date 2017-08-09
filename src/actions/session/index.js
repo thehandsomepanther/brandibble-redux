@@ -8,6 +8,7 @@ export {
   removeLineItem,
   removeOptionFromLineItem,
   resolveOrder,
+  resolveOrderLocation,
   setLineItemQuantity,
   setLineItemMadeFor,
   setLineItemInstructions,

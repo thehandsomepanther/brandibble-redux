@@ -3,6 +3,7 @@ import BrandibbleReduxException from 'utils/exception';
 import { Defaults } from 'utils/constants';
 
 export const RESOLVE_ORDER = 'RESOLVE_ORDER';
+export const RESOLVE_ORDER_LOCATION = 'RESOLVE_ORDER_LOCATION';
 export const ADD_LINE_ITEM = 'ADD_LINE_ITEM';
 export const PUSH_LINE_ITEM = 'PUSH_LINE_ITEM';
 export const SET_LINE_ITEM_QUANTITY = 'SET_LINE_ITEM_QUANTITY';
@@ -25,6 +26,10 @@ export const SET_LINE_ITEM_INSTRUCTIONS = 'SET_LINE_ITEM_INSTRUCTIONS';
 /* Private Action Creators */
 function _resolveOrder(payload) {
   return { type: RESOLVE_ORDER, payload };
+}
+
+function _resolveOrderLocation(payload) {
+  return { type: RESOLVE_ORDER_LOCATION, payload };
 }
 
 function _addLineItem(order, product, quantity) {
@@ -168,6 +173,13 @@ export function resolveOrder(brandibble, locationId = null, serviceType = 'deliv
   const order = orders.current();
   const payload = order ? Promise.resolve({ order }) : orders.create(locationId, serviceType, paymentType, miscOptions).then(res => ({ order: res }));
   return dispatch => dispatch(_resolveOrder(payload));
+}
+
+export function resolveOrderLocation(brandibble) {
+  const { orders } = brandibble;
+  const order = orders.current();
+  const payload = (order && order.locationId) ? brandibble.locations.show(order.locationId).then(({ data }) => data) : Promise.resolve(null);
+  return dispatch => dispatch(_resolveOrderLocation(payload));
 }
 
 export function validateCurrentCart(brandibble, data = {}) {
