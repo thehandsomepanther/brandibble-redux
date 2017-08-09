@@ -37,6 +37,10 @@ import {
   FETCH_LOCATION,
 } from 'actions/data/locations';
 import {
+  FETCH_GEOLOCATIONS,
+  CLEAR_GEOLOCATIONS,
+} from 'actions/data/geolocations';
+import {
   AUTHENTICATE_USER,
   FETCH_LEVELUP_LOYALTY,
   FETCH_LEVELUP_QR_CODE,
@@ -122,6 +126,7 @@ const initialState = {
   fetchLevelUpPaymentMethod: IDLE,
   fetchLocation: IDLE,
   fetchLocations: IDLE,
+  fetchGeolocations: IDLE,
   fetchAllCustomerOrders: IDLE,
   fetchPastCustomerOrders: IDLE,
   fetchUpcomingCustomerOrders: IDLE,
@@ -198,6 +203,10 @@ export default function status(state = initialState, action) {
     case `${FETCH_LOCATION}_PENDING`: return { ...state, fetchLocation: PENDING };
     case `${FETCH_LOCATION}_FULFILLED`: return { ...state, fetchLocation: FULFILLED };
     case `${FETCH_LOCATION}_REJECTED`: return { ...state, fetchLocation: REJECTED };
+
+    case `${FETCH_GEOLOCATIONS}_PENDING`: return { ...state, fetchGeolocations: PENDING };
+    case `${FETCH_GEOLOCATIONS}_FULFILLED`: return { ...state, fetchGeolocations: FULFILLED };
+    case `${FETCH_GEOLOCATIONS}_REJECTED`: return { ...state, fetchGeolocations: REJECTED };
 
     case `${SET_PAYMENT_METHOD}_PENDING`: return { ...state, setPaymentMethod: PENDING };
     case `${SET_PAYMENT_METHOD}_FULFILLED`: return { ...state, setPaymentMethod: FULFILLED };

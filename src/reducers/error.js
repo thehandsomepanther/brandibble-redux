@@ -46,6 +46,12 @@ import {
   FETCH_LOCATIONS,
 } from 'actions/data/locations';
 
+// geolocations
+import {
+  FETCH_GEOLOCATIONS,
+  CLEAR_GEOLOCATIONS,
+} from 'actions/data/geolocations';
+
 //  payments
 import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
 
@@ -124,6 +130,8 @@ export const initialState = {
   // locations
   fetchLocation: null,
   fetchLocations: null,
+  // geolocations
+  fetchGeolocations: null,
   // menu
   fetchMenu: null,
   // orders
@@ -213,6 +221,10 @@ export default function error(state = initialState, action) {
 
     case `${FETCH_LOCATION}_PENDING`: return { ...state, fetchLocation: null };
     case `${FETCH_LOCATION}_REJECTED`: return { ...state, fetchLocation: action.payload };
+
+    // geolocations
+    case `${FETCH_GEOLOCATIONS}_PENDING`: return { ...state, fetchGeolocations: null };
+    case `${FETCH_GEOLOCATIONS}_REJECTED`: return { ...state, fetchGeolocations: action.payload };
 
     // menu
     case `${FETCH_MENU}_PENDING`: return { ...state, fetchMenu: null };
