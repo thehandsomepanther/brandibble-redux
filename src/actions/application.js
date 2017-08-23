@@ -16,7 +16,7 @@ export const setupBrandibble = brandibble => (dispatch) => {
 // setupBrandibbleRedux
 const setupBrandibbleReduxDefaults = {
   locationId: null,
-  serviceType: 'delivery',
+  serviceType: 'pickup',
 };
 export const setupBrandibbleRedux = (brandibble, data = setupBrandibbleReduxDefaults) => (dispatch) => {
   const { locationId, serviceType } = Object.assign({}, setupBrandibbleReduxDefaults, data);
