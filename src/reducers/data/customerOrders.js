@@ -8,10 +8,14 @@ import {
   UNAUTHENTICATE_USER,
 } from '../../actions/session/user';
 
+import {
+  SUBMIT_ORDER,
+} from '../../actions/session/order';
+
 const initialState = {
   all: null,
   past: null,
-  session: [],
+  recentSubmission: null,
   upcoming: null,
 };
 
@@ -22,6 +26,12 @@ export default function customerOrders(state = initialState, action) {
         ...state,
         all: action.payload,
       };
+    case `${SUBMIT_ORDER}_FULFILLED`: {
+      return {
+        ...state,
+        recentSubmission: action.payload
+      };
+    }
     case `${FETCH_PAST_CUSTOMER_ORDERS}_FULFILLED`:
       return {
         ...state,
