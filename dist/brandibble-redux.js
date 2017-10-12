@@ -4928,7 +4928,7 @@ module.exports = {
   scan: __webpack_require__(428),
   sequence: __webpack_require__(142),
   set: __webpack_require__(429),
-  slice: __webpack_require__(26),
+  slice: __webpack_require__(27),
   sort: __webpack_require__(430),
   sortBy: __webpack_require__(431),
   sortWith: __webpack_require__(432),
@@ -5798,7 +5798,7 @@ exports.default = invariantsList;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var invariants_1 = __webpack_require__(148);
-var store_1 = __webpack_require__(28);
+var store_1 = __webpack_require__(29);
 function invariantsMap(invariantArgs, config, current, record) {
     var extra = {
         assertValidStore: store_1.default.assert,
@@ -5904,72 +5904,6 @@ exports.default = {
 
 /***/ }),
 /* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _checkForMethod = __webpack_require__(35);
-var _curry3 = __webpack_require__(3);
-
-
-/**
- * Returns the elements of the given list or string (or object with a `slice`
- * method) from `fromIndex` (inclusive) to `toIndex` (exclusive).
- *
- * Dispatches to the `slice` method of the third argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.4
- * @category List
- * @sig Number -> Number -> [a] -> [a]
- * @sig Number -> Number -> String -> String
- * @param {Number} fromIndex The start index (inclusive).
- * @param {Number} toIndex The end index (exclusive).
- * @param {*} list
- * @return {*}
- * @example
- *
- *      R.slice(1, 3, ['a', 'b', 'c', 'd']);        //=> ['b', 'c']
- *      R.slice(1, Infinity, ['a', 'b', 'c', 'd']); //=> ['b', 'c', 'd']
- *      R.slice(0, -1, ['a', 'b', 'c', 'd']);       //=> ['a', 'b', 'c']
- *      R.slice(-3, -1, ['a', 'b', 'c', 'd']);      //=> ['b', 'c']
- *      R.slice(0, 3, 'ramda');                     //=> 'ram'
- */
-module.exports = _curry3(_checkForMethod('slice', function slice(fromIndex, toIndex, list) {
-  return Array.prototype.slice.call(list, fromIndex, toIndex);
-}));
-
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _indexOf = __webpack_require__(106);
-
-
-module.exports = function _contains(a, list) {
-  return _indexOf(list, a, 0) >= 0;
-};
-
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var assert_1 = __webpack_require__(505);
-var merge_1 = __webpack_require__(506);
-var remove_1 = __webpack_require__(507);
-exports.default = {
-    assert: assert_1.default,
-    merge: merge_1.default,
-    remove: remove_1.default
-};
-
-
-/***/ }),
-/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_MADE_FOR=exports.VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_ORDER=exports.CREATE_NEW_ORDER=exports.SET_REQUESTED_AT=exports.SET_PROMO_CODE=exports.SET_ORDER_ADDRESS=exports.SET_PAYMENT_METHOD=exports.BIND_CUSTOMER_TO_ORDER=exports.SUBMIT_ORDER=exports.SET_ORDER_LOCATION_ID=exports.REMOVE_OPTION_FROM_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM=exports.REMOVE_LINE_ITEM=exports.SET_LINE_ITEM_QUANTITY=exports.PUSH_LINE_ITEM=exports.ADD_LINE_ITEM=exports.RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER=undefined;exports.
@@ -6251,6 +6185,72 @@ bindCustomerToOrder=bindCustomerToOrder;exports.
 submitOrder=submitOrder;var _exception=__webpack_require__(278);var _exception2=_interopRequireDefault(_exception);var _constants=__webpack_require__(68);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var RESOLVE_ORDER=exports.RESOLVE_ORDER='RESOLVE_ORDER';var RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER_LOCATION='RESOLVE_ORDER_LOCATION';var ADD_LINE_ITEM=exports.ADD_LINE_ITEM='ADD_LINE_ITEM';var PUSH_LINE_ITEM=exports.PUSH_LINE_ITEM='PUSH_LINE_ITEM';var SET_LINE_ITEM_QUANTITY=exports.SET_LINE_ITEM_QUANTITY='SET_LINE_ITEM_QUANTITY';var REMOVE_LINE_ITEM=exports.REMOVE_LINE_ITEM='REMOVE_LINE_ITEM';var ADD_OPTION_TO_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM='ADD_OPTION_TO_LINE_ITEM';var REMOVE_OPTION_FROM_LINE_ITEM=exports.REMOVE_OPTION_FROM_LINE_ITEM='REMOVE_OPTION_FROM_LINE_ITEM';var SET_ORDER_LOCATION_ID=exports.SET_ORDER_LOCATION_ID='SET_ORDER_LOCATION_ID';var SUBMIT_ORDER=exports.SUBMIT_ORDER='SUBMIT_ORDER';var BIND_CUSTOMER_TO_ORDER=exports.BIND_CUSTOMER_TO_ORDER='BIND_CUSTOMER_TO_ORDER';var SET_PAYMENT_METHOD=exports.SET_PAYMENT_METHOD='SET_PAYMENT_METHOD';var SET_ORDER_ADDRESS=exports.SET_ORDER_ADDRESS='SET_ORDER_ADDRESS';var SET_PROMO_CODE=exports.SET_PROMO_CODE='SET_PROMO_CODE';var SET_REQUESTED_AT=exports.SET_REQUESTED_AT='SET_REQUESTED_AT';var CREATE_NEW_ORDER=exports.CREATE_NEW_ORDER='CREATE_NEW_ORDER';var VALIDATE_CURRENT_ORDER=exports.VALIDATE_CURRENT_ORDER='VALIDATE_CURRENT_ORDER';var VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_CART='VALIDATE_CURRENT_CART';var SET_LINE_ITEM_MADE_FOR=exports.SET_LINE_ITEM_MADE_FOR='SET_LINE_ITEM_MADE_FOR';var SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_INSTRUCTIONS='SET_LINE_ITEM_INSTRUCTIONS';function _resolveOrder(payload){return{type:RESOLVE_ORDER,payload:payload};}function _resolveOrderLocation(payload){return{type:RESOLVE_ORDER_LOCATION,payload:payload};}function _addLineItem(order,product,quantity){return{type:ADD_LINE_ITEM,payload:order.addLineItem(product,quantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _pushLineItem(order,lineItem){return{type:PUSH_LINE_ITEM,payload:order.pushLineItem(lineItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemQuantity(order,lineItem,newQuantity){return{type:SET_LINE_ITEM_QUANTITY,payload:order.setLineItemQuantity(lineItem,newQuantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemMadeFor(order,lineItem,madeFor){return{type:SET_LINE_ITEM_MADE_FOR,payload:order.setLineItemMadeFor(lineItem,madeFor).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemInstructions(order,lineItem,instructions){return{type:SET_LINE_ITEM_INSTRUCTIONS,payload:order.setLineItemInstructions(lineItem,instructions).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeLineItem(order,lineItem){return{type:REMOVE_LINE_ITEM,payload:order.removeLineItem(lineItem).then(function(remainingLineItems){return{order:order,remainingLineItems:remainingLineItems};})};}function _addOptionToLineItem(order,lineItem,optionGroup,optionItem){return{type:ADD_OPTION_TO_LINE_ITEM,payload:order.addOptionToLineItem(lineItem,optionGroup,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeOptionFromLineItem(order,lineItem,optionItem){return{type:REMOVE_OPTION_FROM_LINE_ITEM,payload:order.removeOptionFromLineItem(lineItem,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setOrderLocationId(order,locationId){return{type:SET_ORDER_LOCATION_ID,payload:order.setLocation(locationId).then(function(order){return{order:order};})};}function _setOrderAddress(order,address){return{type:SET_ORDER_ADDRESS,payload:order.setAddress(address).then(function(order){return{order:order};})};}function _bindCustomerToOrder(order,customer){return{type:BIND_CUSTOMER_TO_ORDER,payload:order.setCustomer(customer).then(function(order){return{order:order};})};}function _setPaymentMethod(order,type,card){return{type:SET_PAYMENT_METHOD,payload:order.setPaymentMethod(type,card).then(function(order){return{order:order};})};}function _setPromoCode(order,promo){return{type:SET_PROMO_CODE,payload:order.setPromoCode(promo).then(function(order){return{order:order};})};}function _setRequestedAt(order,time,wantsFuture){return{type:SET_REQUESTED_AT,payload:order.setRequestedAt(time,wantsFuture).then(function(order){return{order:order};})};}function _submitOrder(brandibble,order){return{type:SUBMIT_ORDER,payload:brandibble.orders.submit(order).then(function(_ref){var data=_ref.data;return data;})};}function _createNewOrder(data){return{type:CREATE_NEW_ORDER,payload:data};}function _validateCurrentCart(data){return{type:VALIDATE_CURRENT_CART,payload:data};}function _validateCurrentOrder(data){return{type:VALIDATE_CURRENT_ORDER,payload:data};}function createNewOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments[2];var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;return function(dispatch){var orders=brandibble.orders;var payload=orders.create(locationId,serviceType,paymentType,miscOptions).then(function(order){return{order:order};});return dispatch(_createNewOrder(payload));};}function resolveOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'pickup';var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;var orders=brandibble.orders;var order=orders.current();var payload=order?Promise.resolve({order:order}):orders.create(locationId,serviceType,paymentType,miscOptions).then(function(res){return{order:res};});return function(dispatch){return dispatch(_resolveOrder(payload));};}function resolveOrderLocation(brandibble){var orders=brandibble.orders;var order=orders.current();var payload=order&&order.locationId?brandibble.locations.show(order.locationId).then(function(_ref2){var data=_ref2.data;return data;}):Promise.resolve(null);return function(dispatch){return dispatch(_resolveOrderLocation(payload));};}function validateCurrentCart(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validateCart(order,data).then(function(res){return res;});return dispatch(_validateCurrentCart(payload));};}function validateCurrentOrder(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validate(order,data).then(function(res){return res;});return dispatch(_validateCurrentOrder(payload));};}function setOrderLocationId(currentOrder,locationId){var _arguments=arguments;return function(dispatch){return dispatch(_setOrderLocationId.apply(undefined,_arguments));};}function setOrderAddress(){for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return function(dispatch){return dispatch(_setOrderAddress.apply(undefined,args));};}function addLineItem(currentOrder,product){var _arguments2=arguments;var quantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_addLineItem.apply(undefined,_arguments2));};}function pushLineItem(currentOrder,lineItem){var _arguments3=arguments;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_pushLineItem.apply(undefined,_arguments3));};}function setLineItemQuantity(currentOrder,lineItem){var _arguments4=arguments;var newQuantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(newQuantity<1){throw new _exception2.default('updateLineItemQuantity','Please pass quantity more than 1 to this action. Use removeLineItem to remove from order.');}return function(dispatch){return dispatch(_setLineItemQuantity.apply(undefined,_arguments4));};}function setLineItemMadeFor(currentOrder,lineItem){var _arguments5=arguments;var madeFor=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemMadeFor.apply(undefined,_arguments5));};}function setLineItemInstructions(currentOrder,lineItem){var _arguments6=arguments;var instructions=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemInstructions.apply(undefined,_arguments6));};}function setPaymentMethod(currentOrder,type,card){return function(dispatch){return dispatch(_setPaymentMethod(currentOrder,type,card));};}function setRequestedAt(currentOrder,time){var wantsFuture=arguments.length>2&&arguments[2]!==undefined?arguments[2]:false;return function(dispatch){return dispatch(_setRequestedAt(currentOrder,time,wantsFuture));};}function setPromoCode(currentOrder,promo){return function(dispatch){return dispatch(_setPromoCode(currentOrder,promo));};}function removeLineItem(currentOrder,lineItem){var _arguments7=arguments;return function(dispatch){return dispatch(_removeLineItem.apply(undefined,_arguments7));};}function addOptionToLineItem(currentOrder,lineItem,optionGroup,optionItem){var _arguments8=arguments;return function(dispatch){return dispatch(_addOptionToLineItem.apply(undefined,_arguments8));};}function removeOptionFromLineItem(currentOrder,lineItem,optionItem){var _arguments9=arguments;return function(dispatch){return dispatch(_removeOptionFromLineItem.apply(undefined,_arguments9));};}function bindCustomerToOrder(){for(var _len2=arguments.length,args=Array(_len2),_key2=0;_key2<_len2;_key2++){args[_key2]=arguments[_key2];}return function(dispatch){return dispatch(_bindCustomerToOrder.apply(undefined,args));};}function submitOrder(){for(var _len3=arguments.length,args=Array(_len3),_key3=0;_key3<_len3;_key3++){args[_key3]=arguments[_key3];}
 return function(dispatch){return dispatch(_submitOrder.apply(undefined,args));};
 }
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _checkForMethod = __webpack_require__(35);
+var _curry3 = __webpack_require__(3);
+
+
+/**
+ * Returns the elements of the given list or string (or object with a `slice`
+ * method) from `fromIndex` (inclusive) to `toIndex` (exclusive).
+ *
+ * Dispatches to the `slice` method of the third argument, if present.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.4
+ * @category List
+ * @sig Number -> Number -> [a] -> [a]
+ * @sig Number -> Number -> String -> String
+ * @param {Number} fromIndex The start index (inclusive).
+ * @param {Number} toIndex The end index (exclusive).
+ * @param {*} list
+ * @return {*}
+ * @example
+ *
+ *      R.slice(1, 3, ['a', 'b', 'c', 'd']);        //=> ['b', 'c']
+ *      R.slice(1, Infinity, ['a', 'b', 'c', 'd']); //=> ['b', 'c', 'd']
+ *      R.slice(0, -1, ['a', 'b', 'c', 'd']);       //=> ['a', 'b', 'c']
+ *      R.slice(-3, -1, ['a', 'b', 'c', 'd']);      //=> ['b', 'c']
+ *      R.slice(0, 3, 'ramda');                     //=> 'ram'
+ */
+module.exports = _curry3(_checkForMethod('slice', function slice(fromIndex, toIndex, list) {
+  return Array.prototype.slice.call(list, fromIndex, toIndex);
+}));
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _indexOf = __webpack_require__(106);
+
+
+module.exports = function _contains(a, list) {
+  return _indexOf(list, a, 0) >= 0;
+};
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var assert_1 = __webpack_require__(505);
+var merge_1 = __webpack_require__(506);
+var remove_1 = __webpack_require__(507);
+exports.default = {
+    assert: assert_1.default,
+    merge: merge_1.default,
+    remove: remove_1.default
+};
+
 
 /***/ }),
 /* 30 */
@@ -7386,7 +7386,7 @@ module.exports = function(module) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.sendSupportTicket=exports.setupBrandibbleRedux=exports.setupBrandibble=exports.SEND_SUPPORT_TICKET=exports.SETUP_BRANDIBBLE_REDUX=exports.SETUP_BRANDIBBLE=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _fireAction=__webpack_require__(21);var _fireAction2=_interopRequireDefault(_fireAction);
 var _handleErrors=__webpack_require__(22);var _handleErrors2=_interopRequireDefault(_handleErrors);
-var _order=__webpack_require__(29);
+var _order=__webpack_require__(26);
 var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 var SETUP_BRANDIBBLE=exports.SETUP_BRANDIBBLE='SETUP_BRANDIBBLE';
@@ -8630,7 +8630,7 @@ module.exports = function compose() {
 
 var _checkForMethod = __webpack_require__(35);
 var _curry1 = __webpack_require__(2);
-var slice = __webpack_require__(26);
+var slice = __webpack_require__(27);
 
 
 /**
@@ -9924,7 +9924,7 @@ module.exports = _curry2(function defaultTo(d, v) {
 /* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(27);
+var _contains = __webpack_require__(28);
 var _curry2 = __webpack_require__(0);
 
 
@@ -10047,7 +10047,7 @@ module.exports = _curry2(function dissoc(prop, obj) {
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
 var _xdrop = __webpack_require__(324);
-var slice = __webpack_require__(26);
+var slice = __webpack_require__(27);
 
 
 /**
@@ -10086,7 +10086,7 @@ module.exports = _curry2(_dispatchable(['drop'], _xdrop, function drop(n, xs) {
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
 var _xtake = __webpack_require__(327);
-var slice = __webpack_require__(26);
+var slice = __webpack_require__(27);
 
 
 /**
@@ -26324,7 +26324,7 @@ module.exports = function _pipeP(f, g) {
 /* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(27);
+var _contains = __webpack_require__(28);
 var _map = __webpack_require__(45);
 var _quote = __webpack_require__(312);
 var _toISOString = __webpack_require__(313);
@@ -26683,7 +26683,7 @@ module.exports = _curry1(function construct(Fn) {
 /* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(27);
+var _contains = __webpack_require__(28);
 var _curry2 = __webpack_require__(0);
 
 
@@ -28282,7 +28282,7 @@ module.exports = _curry2(function indexOf(target, xs) {
 /* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var slice = __webpack_require__(26);
+var slice = __webpack_require__(27);
 
 
 /**
@@ -28382,7 +28382,7 @@ module.exports = _curry3(function insertAll(idx, elts, list) {
 /* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(27);
+var _contains = __webpack_require__(28);
 var _curry2 = __webpack_require__(0);
 var _filter = __webpack_require__(109);
 var flip = __webpack_require__(55);
@@ -28423,7 +28423,7 @@ module.exports = _curry2(function intersection(list1, list2) {
 /* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(27);
+var _contains = __webpack_require__(28);
 
 
 // A simple Set type that honours R.equals semantics
@@ -29970,7 +29970,7 @@ module.exports = function _of(x) { return [x]; };
 /* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(27);
+var _contains = __webpack_require__(28);
 var _curry2 = __webpack_require__(0);
 
 
@@ -31106,7 +31106,7 @@ module.exports = invoker(1, 'split');
 
 var _curry2 = __webpack_require__(0);
 var length = __webpack_require__(128);
-var slice = __webpack_require__(26);
+var slice = __webpack_require__(27);
 
 
 /**
@@ -31137,7 +31137,7 @@ module.exports = _curry2(function splitAt(index, array) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var slice = __webpack_require__(26);
+var slice = __webpack_require__(27);
 
 
 /**
@@ -32382,7 +32382,7 @@ module.exports = _curry2(function whereEq(spec, testObj) {
 /* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(27);
+var _contains = __webpack_require__(28);
 var _curry2 = __webpack_require__(0);
 var flip = __webpack_require__(55);
 var reject = __webpack_require__(53);
@@ -34005,7 +34005,7 @@ exports.default = reducersFor;
 Object.defineProperty(exports, "__esModule", { value: true });
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(28);
+var store_1 = __webpack_require__(29);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34079,7 +34079,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var start_1 = __webpack_require__(150);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(28);
+var store_1 = __webpack_require__(29);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34164,7 +34164,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var start_1 = __webpack_require__(151);
 var invariants_1 = __webpack_require__(19);
 var constants_1 = __webpack_require__(4);
-var store_1 = __webpack_require__(28);
+var store_1 = __webpack_require__(29);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_START;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34253,7 +34253,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var error_1 = __webpack_require__(153);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(28);
+var store_1 = __webpack_require__(29);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34283,7 +34283,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var start_1 = __webpack_require__(154);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(28);
+var store_1 = __webpack_require__(29);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34308,7 +34308,7 @@ exports.default = start;
 Object.defineProperty(exports, "__esModule", { value: true });
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(28);
+var store_1 = __webpack_require__(29);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34336,7 +34336,7 @@ fetchImages;}});
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _addresses=__webpack_require__(63);Object.defineProperty(exports,'fetchAddresses',{enumerable:true,get:function get(){return _addresses.fetchAddresses;}});Object.defineProperty(exports,'createAddress',{enumerable:true,get:function get(){return _addresses.createAddress;}});Object.defineProperty(exports,'deleteAddress',{enumerable:true,get:function get(){return _addresses.deleteAddress;}});var _menus=__webpack_require__(86);Object.defineProperty(exports,'fetchMenu',{enumerable:true,get:function get(){return _menus.
-fetchMenu;}});var _order=__webpack_require__(29);Object.defineProperty(exports,'addLineItem',{enumerable:true,get:function get(){return _order.
+fetchMenu;}});var _order=__webpack_require__(26);Object.defineProperty(exports,'addLineItem',{enumerable:true,get:function get(){return _order.
 
 addLineItem;}});Object.defineProperty(exports,'pushLineItem',{enumerable:true,get:function get(){return _order.
 pushLineItem;}});Object.defineProperty(exports,'addOptionToLineItem',{enumerable:true,get:function get(){return _order.
@@ -80321,7 +80321,7 @@ return state;}
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(32);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
-var _order=__webpack_require__(29);
+var _order=__webpack_require__(26);
 
 
 var _locations=__webpack_require__(60);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
@@ -80396,13 +80396,23 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-customerOrders;var _customerOrders=__webpack_require__(62);var _user=__webpack_require__(11);var initialState={all:null,past:null,session:[],upcoming:null};function customerOrders(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+
+
+customerOrders;var _customerOrders=__webpack_require__(62);var _order=__webpack_require__(26);var _user=__webpack_require__(11);var initialState={all:null,past:null,recentSubmission:null,upcoming:null};function customerOrders(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_FULFILLED':
 return _extends({},
 state,{
 all:action.payload});
 
+case _order.SUBMIT_ORDER+'_FULFILLED':{
+return _extends({},
+state,{
+recentSubmission:action.payload});
+
+}
 case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_FULFILLED':
 return _extends({},
 state,{
@@ -80628,7 +80638,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=un
 
 
 
-error;var _reduxCrud=__webpack_require__(20);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(41);var _addresses=__webpack_require__(63);var _allergens=__webpack_require__(59);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(65);var _order=__webpack_require__(29);var _locations=__webpack_require__(60);var _geolocations=__webpack_require__(61);var _payments=__webpack_require__(64);var _customerOrders=__webpack_require__(62);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType2.PAYMENTS_FETCH_START,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType2.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType2.PAYMENTS_CREATE_START,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType2.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType2.PAYMENTS_DELETE_START,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType2.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType3.RATINGS_FETCH_START,RATINGS_FETCH_ERROR=_reduxCrud$actionType3.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType3.RATINGS_CREATE_START,RATINGS_CREATE_ERROR=_reduxCrud$actionType3.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType3.RATINGS_UPDATE_START,RATINGS_UPDATE_ERROR=_reduxCrud$actionType3.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType3.RATINGS_DELETE_START,RATINGS_DELETE_ERROR=_reduxCrud$actionType3.RATINGS_DELETE_ERROR;var initialState=exports.initialState={sendSupportTicket:null,setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAllCustomerOrders:null,fetchPastCustomerOrders:null,fetchUpcomingCustomerOrders:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocation:null,fetchLocations:null,fetchGeolocations:null,fetchMenu:null,addLineItem:null,resolveOrder:null,submitOrder:null,setLineItemMadeFor:null,setLineItemInstructions:null,fetchPayments:null,createPayment:null,deletePayment:null,setPaymentMethod:null,setDefaultPayment:null,fetchFavorites:null,createFavorite:null,updateFavorite:null,deleteFavorite:null,fetchRating:null,createRating:null,updateRating:null,deleteRating:null,authenticateUser:null,createUser:null,fetchLevelUpLoyalty:null,fetchLevelUpQRCode:null,updateLevelUpConnection:null,connectLevelUp:null,disconnectLevelUp:null,fetchLevelUpPaymentMethod:null,fetchUser:null,resetUserPassword:null,resetLevelUpPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null,validateCurrentCart:null,validateCurrentOrder:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+error;var _reduxCrud=__webpack_require__(20);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(41);var _addresses=__webpack_require__(63);var _allergens=__webpack_require__(59);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(65);var _order=__webpack_require__(26);var _locations=__webpack_require__(60);var _geolocations=__webpack_require__(61);var _payments=__webpack_require__(64);var _customerOrders=__webpack_require__(62);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType2.PAYMENTS_FETCH_START,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType2.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType2.PAYMENTS_CREATE_START,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType2.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType2.PAYMENTS_DELETE_START,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType2.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType3.RATINGS_FETCH_START,RATINGS_FETCH_ERROR=_reduxCrud$actionType3.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType3.RATINGS_CREATE_START,RATINGS_CREATE_ERROR=_reduxCrud$actionType3.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType3.RATINGS_UPDATE_START,RATINGS_UPDATE_ERROR=_reduxCrud$actionType3.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType3.RATINGS_DELETE_START,RATINGS_DELETE_ERROR=_reduxCrud$actionType3.RATINGS_DELETE_ERROR;var initialState=exports.initialState={sendSupportTicket:null,setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAllCustomerOrders:null,fetchPastCustomerOrders:null,fetchUpcomingCustomerOrders:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocation:null,fetchLocations:null,fetchGeolocations:null,fetchMenu:null,addLineItem:null,resolveOrder:null,submitOrder:null,setLineItemMadeFor:null,setLineItemInstructions:null,fetchPayments:null,createPayment:null,deletePayment:null,setPaymentMethod:null,setDefaultPayment:null,fetchFavorites:null,createFavorite:null,updateFavorite:null,deleteFavorite:null,fetchRating:null,createRating:null,updateRating:null,deleteRating:null,authenticateUser:null,createUser:null,fetchLevelUpLoyalty:null,fetchLevelUpQRCode:null,updateLevelUpConnection:null,connectLevelUp:null,disconnectLevelUp:null,fetchLevelUpPaymentMethod:null,fetchUser:null,resetUserPassword:null,resetLevelUpPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null,validateCurrentCart:null,validateCurrentOrder:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 
 case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:null});
@@ -80944,7 +80954,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-order;var _lodash=__webpack_require__(546);var _lodash2=_interopRequireDefault(_lodash);var _order=__webpack_require__(29);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState={ref:null,orderData:null,lineItemsData:null,validated:null,validatedCart:null};function _buildFormattedLineItemsHash(ref){return(0,_lodash2.default)(ref.cart.lineItems,function(li){var uuid=li.uuid,quantity=li.quantity,madeFor=li.madeFor,instructions=li.instructions,product=li.product,operationMaps=li.operationMaps;return{uuid:uuid,quantity:quantity,madeFor:madeFor,instructions:instructions,isValid:li.isValid(),errors:li.errors(),productData:product,optionGroupMappings:operationMaps};});}function order(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+order;var _lodash=__webpack_require__(546);var _lodash2=_interopRequireDefault(_lodash);var _order=__webpack_require__(26);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState={ref:null,orderData:null,lineItemsData:null,validated:null,validatedCart:null};function _buildFormattedLineItemsHash(ref){return(0,_lodash2.default)(ref.cart.lineItems,function(li){var uuid=li.uuid,quantity=li.quantity,madeFor=li.madeFor,instructions=li.instructions,product=li.product,operationMaps=li.operationMaps;return{uuid:uuid,quantity:quantity,madeFor:madeFor,instructions:instructions,isValid:li.isValid(),errors:li.errors(),productData:product,optionGroupMappings:operationMaps};});}function order(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _order.RESOLVE_ORDER+'_FULFILLED':
 case _order.BIND_CUSTOMER_TO_ORDER+'_FULFILLED':
@@ -83640,7 +83650,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-status;var _application=__webpack_require__(41);var _addresses=__webpack_require__(63);var _allergens=__webpack_require__(59);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(65);var _payments=__webpack_require__(64);var _order=__webpack_require__(29);var _locations=__webpack_require__(60);var _geolocations=__webpack_require__(61);var _user=__webpack_require__(11);var _customerOrders=__webpack_require__(62);var _constants=__webpack_require__(68);var _reduxCrud=__webpack_require__(20);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType.PAYMENTS_FETCH_START,PAYMENTS_FETCH_SUCCESS=_reduxCrud$actionType.PAYMENTS_FETCH_SUCCESS,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType.PAYMENTS_CREATE_START,PAYMENTS_CREATE_SUCCESS=_reduxCrud$actionType.PAYMENTS_CREATE_SUCCESS,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType.PAYMENTS_DELETE_START,PAYMENTS_DELETE_SUCCESS=_reduxCrud$actionType.PAYMENTS_DELETE_SUCCESS,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType2.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType2.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType2.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType2.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType2.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType2.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType2.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType2.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType2.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType2.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType2.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType2.RATINGS_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType3.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType3.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType3.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType3.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType3.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType3.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+status;var _application=__webpack_require__(41);var _addresses=__webpack_require__(63);var _allergens=__webpack_require__(59);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(65);var _payments=__webpack_require__(64);var _order=__webpack_require__(26);var _locations=__webpack_require__(60);var _geolocations=__webpack_require__(61);var _user=__webpack_require__(11);var _customerOrders=__webpack_require__(62);var _constants=__webpack_require__(68);var _reduxCrud=__webpack_require__(20);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType.PAYMENTS_FETCH_START,PAYMENTS_FETCH_SUCCESS=_reduxCrud$actionType.PAYMENTS_FETCH_SUCCESS,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType.PAYMENTS_CREATE_START,PAYMENTS_CREATE_SUCCESS=_reduxCrud$actionType.PAYMENTS_CREATE_SUCCESS,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType.PAYMENTS_DELETE_START,PAYMENTS_DELETE_SUCCESS=_reduxCrud$actionType.PAYMENTS_DELETE_SUCCESS,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType2.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType2.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType2.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType2.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType2.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType2.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType2.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType2.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType2.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType2.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType2.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType2.RATINGS_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType3.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType3.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType3.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType3.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType3.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType3.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:PENDING});
 case _application.SETUP_BRANDIBBLE+'_FULFILLED':return _extends({},state,{setupBrandibble:FULFILLED});
