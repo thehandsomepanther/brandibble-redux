@@ -1,6 +1,6 @@
 /* eslint no-shadow:1 */
-import fireAction from 'utils/fireAction';
-import handleErrors from 'utils/handleErrors';
+import fireAction from '../../utils/fireAction';
+import handleErrors from '../../utils/handleErrors';
 
 export const FETCH_PAYMENTS      = 'FETCH_PAYMENTS';
 export const CREATE_PAYMENT      = 'CREATE_PAYMENT';

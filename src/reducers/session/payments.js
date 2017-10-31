@@ -1,11 +1,11 @@
 import Immutable from 'seamless-immutable';
+import { UNAUTHENTICATE_USER } from '../../actions/session/user';
 import {
   CREATE_PAYMENT,
   DELETE_PAYMENT,
   FETCH_PAYMENTS,
   SET_DEFAULT_PAYMENT,
 } from '../../actions/session/payments';
-import { UNAUTHENTICATE_USER } from '../../actions/session/user';
 
 export const initialState = Immutable({
   paymentsById: Immutable({}),
