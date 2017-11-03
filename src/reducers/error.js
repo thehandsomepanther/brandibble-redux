@@ -248,13 +248,13 @@ export default function error(state = initialState, action) {
 
     // payments
     case `${FETCH_PAYMENTS}_PENDING`: return { ...state, fetchPayments: null };
-    case `${FETCH_PAYMENTS}_REJECTED`: return { ...state, fetchPayments: action.error };
+    case `${FETCH_PAYMENTS}_REJECTED`: return { ...state, fetchPayments: action.payload };
 
     case `${CREATE_PAYMENT}_PENDING`: return { ...state, createPayment: null };
-    case `${CREATE_PAYMENT}_REJECTED`: return { ...state, createPayment: action.error };
+    case `${CREATE_PAYMENT}_REJECTED`: return { ...state, createPayment: action.payload };
 
     case `${DELETE_PAYMENT}_PENDING`: return { ...state, deletePayment: null };
-    case `${DELETE_PAYMENT}_REJECTED`: return { ...state, deletePayment: action.error };
+    case `${DELETE_PAYMENT}_REJECTED`: return { ...state, deletePayment: action.payload };
 
     case `${SET_DEFAULT_PAYMENT}_PENDING`: return { ...state, setDefaultPayment: null };
     case `${SET_DEFAULT_PAYMENT}_REJECTED`: return { ...state, setDefaultPayment: action.payload };
