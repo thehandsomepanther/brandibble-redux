@@ -80677,13 +80677,13 @@ case _order.SET_LINE_ITEM_INSTRUCTIONS+'_REJECTED':return _extends({},state,{set
 
 
 case _payments.FETCH_PAYMENTS+'_PENDING':return _extends({},state,{fetchPayments:null});
-case _payments.FETCH_PAYMENTS+'_REJECTED':return _extends({},state,{fetchPayments:action.error});
+case _payments.FETCH_PAYMENTS+'_REJECTED':return _extends({},state,{fetchPayments:action.payload});
 
 case _payments.CREATE_PAYMENT+'_PENDING':return _extends({},state,{createPayment:null});
-case _payments.CREATE_PAYMENT+'_REJECTED':return _extends({},state,{createPayment:action.error});
+case _payments.CREATE_PAYMENT+'_REJECTED':return _extends({},state,{createPayment:action.payload});
 
 case _payments.DELETE_PAYMENT+'_PENDING':return _extends({},state,{deletePayment:null});
-case _payments.DELETE_PAYMENT+'_REJECTED':return _extends({},state,{deletePayment:action.error});
+case _payments.DELETE_PAYMENT+'_REJECTED':return _extends({},state,{deletePayment:action.payload});
 
 case _payments.SET_DEFAULT_PAYMENT+'_PENDING':return _extends({},state,{setDefaultPayment:null});
 case _payments.SET_DEFAULT_PAYMENT+'_REJECTED':return _extends({},state,{setDefaultPayment:action.payload});
