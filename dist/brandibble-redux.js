@@ -5885,7 +5885,15 @@ exports.default = {
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_MADE_FOR=exports.VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_ORDER=exports.CREATE_NEW_ORDER=exports.SET_REQUESTED_AT=exports.SET_PROMO_CODE=exports.SET_ORDER_ADDRESS=exports.SET_PAYMENT_METHOD=exports.BIND_CUSTOMER_TO_ORDER=exports.SUBMIT_ORDER=exports.SET_ORDER_LOCATION_ID=exports.REMOVE_OPTION_FROM_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM=exports.REMOVE_LINE_ITEM=exports.SET_LINE_ITEM_QUANTITY=exports.PUSH_LINE_ITEM=exports.ADD_LINE_ITEM=exports.RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER=undefined;exports.
+Object.defineProperty(exports,"__esModule",{value:true});exports.SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_MADE_FOR=exports.VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_ORDER=exports.CREATE_NEW_ORDER=exports.SET_REQUESTED_AT=exports.SET_MISC_OPTIONS=exports.SET_PROMO_CODE=exports.SET_ORDER_ADDRESS=exports.SET_PAYMENT_METHOD=exports.BIND_CUSTOMER_TO_ORDER=exports.SUBMIT_ORDER=exports.SET_ORDER_LOCATION_ID=exports.REMOVE_OPTION_FROM_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM=exports.REMOVE_LINE_ITEM=exports.SET_LINE_ITEM_QUANTITY=exports.PUSH_LINE_ITEM=exports.ADD_LINE_ITEM=exports.RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER=undefined;exports.
+
+
+
+
+
+
+
+
 
 
 
@@ -6145,6 +6153,10 @@ setPromoCode=setPromoCode;exports.
 
 
 
+setMiscOptions=setMiscOptions;exports.
+
+
+
 removeLineItem=removeLineItem;exports.
 
 
@@ -6161,7 +6173,7 @@ bindCustomerToOrder=bindCustomerToOrder;exports.
 
 
 
-submitOrder=submitOrder;var _exception=__webpack_require__(277);var _exception2=_interopRequireDefault(_exception);var _constants=__webpack_require__(68);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var RESOLVE_ORDER=exports.RESOLVE_ORDER='RESOLVE_ORDER';var RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER_LOCATION='RESOLVE_ORDER_LOCATION';var ADD_LINE_ITEM=exports.ADD_LINE_ITEM='ADD_LINE_ITEM';var PUSH_LINE_ITEM=exports.PUSH_LINE_ITEM='PUSH_LINE_ITEM';var SET_LINE_ITEM_QUANTITY=exports.SET_LINE_ITEM_QUANTITY='SET_LINE_ITEM_QUANTITY';var REMOVE_LINE_ITEM=exports.REMOVE_LINE_ITEM='REMOVE_LINE_ITEM';var ADD_OPTION_TO_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM='ADD_OPTION_TO_LINE_ITEM';var REMOVE_OPTION_FROM_LINE_ITEM=exports.REMOVE_OPTION_FROM_LINE_ITEM='REMOVE_OPTION_FROM_LINE_ITEM';var SET_ORDER_LOCATION_ID=exports.SET_ORDER_LOCATION_ID='SET_ORDER_LOCATION_ID';var SUBMIT_ORDER=exports.SUBMIT_ORDER='SUBMIT_ORDER';var BIND_CUSTOMER_TO_ORDER=exports.BIND_CUSTOMER_TO_ORDER='BIND_CUSTOMER_TO_ORDER';var SET_PAYMENT_METHOD=exports.SET_PAYMENT_METHOD='SET_PAYMENT_METHOD';var SET_ORDER_ADDRESS=exports.SET_ORDER_ADDRESS='SET_ORDER_ADDRESS';var SET_PROMO_CODE=exports.SET_PROMO_CODE='SET_PROMO_CODE';var SET_REQUESTED_AT=exports.SET_REQUESTED_AT='SET_REQUESTED_AT';var CREATE_NEW_ORDER=exports.CREATE_NEW_ORDER='CREATE_NEW_ORDER';var VALIDATE_CURRENT_ORDER=exports.VALIDATE_CURRENT_ORDER='VALIDATE_CURRENT_ORDER';var VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_CART='VALIDATE_CURRENT_CART';var SET_LINE_ITEM_MADE_FOR=exports.SET_LINE_ITEM_MADE_FOR='SET_LINE_ITEM_MADE_FOR';var SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_INSTRUCTIONS='SET_LINE_ITEM_INSTRUCTIONS';function _resolveOrder(payload){return{type:RESOLVE_ORDER,payload:payload};}function _resolveOrderLocation(payload){return{type:RESOLVE_ORDER_LOCATION,payload:payload};}function _addLineItem(order,product,quantity){return{type:ADD_LINE_ITEM,payload:order.addLineItem(product,quantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _pushLineItem(order,lineItem){return{type:PUSH_LINE_ITEM,payload:order.pushLineItem(lineItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemQuantity(order,lineItem,newQuantity){return{type:SET_LINE_ITEM_QUANTITY,payload:order.setLineItemQuantity(lineItem,newQuantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemMadeFor(order,lineItem,madeFor){return{type:SET_LINE_ITEM_MADE_FOR,payload:order.setLineItemMadeFor(lineItem,madeFor).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemInstructions(order,lineItem,instructions){return{type:SET_LINE_ITEM_INSTRUCTIONS,payload:order.setLineItemInstructions(lineItem,instructions).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeLineItem(order,lineItem){return{type:REMOVE_LINE_ITEM,payload:order.removeLineItem(lineItem).then(function(remainingLineItems){return{order:order,remainingLineItems:remainingLineItems};})};}function _addOptionToLineItem(order,lineItem,optionGroup,optionItem){return{type:ADD_OPTION_TO_LINE_ITEM,payload:order.addOptionToLineItem(lineItem,optionGroup,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeOptionFromLineItem(order,lineItem,optionItem){return{type:REMOVE_OPTION_FROM_LINE_ITEM,payload:order.removeOptionFromLineItem(lineItem,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setOrderLocationId(order,locationId){return{type:SET_ORDER_LOCATION_ID,payload:order.setLocation(locationId).then(function(order){return{order:order};})};}function _setOrderAddress(order,address){return{type:SET_ORDER_ADDRESS,payload:order.setAddress(address).then(function(order){return{order:order};})};}function _bindCustomerToOrder(order,customer){return{type:BIND_CUSTOMER_TO_ORDER,payload:order.setCustomer(customer).then(function(order){return{order:order};})};}function _setPaymentMethod(order,type,card){return{type:SET_PAYMENT_METHOD,payload:order.setPaymentMethod(type,card).then(function(order){return{order:order};})};}function _setPromoCode(order,promo){return{type:SET_PROMO_CODE,payload:order.setPromoCode(promo).then(function(order){return{order:order};})};}function _setRequestedAt(order,time,wantsFuture){return{type:SET_REQUESTED_AT,payload:order.setRequestedAt(time,wantsFuture).then(function(order){return{order:order};})};}function _submitOrder(brandibble,order){return{type:SUBMIT_ORDER,payload:brandibble.orders.submit(order).then(function(_ref){var data=_ref.data;return data;})};}function _createNewOrder(data){return{type:CREATE_NEW_ORDER,payload:data};}function _validateCurrentCart(data){return{type:VALIDATE_CURRENT_CART,payload:data};}function _validateCurrentOrder(data){return{type:VALIDATE_CURRENT_ORDER,payload:data};}function createNewOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments[2];var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;return function(dispatch){var orders=brandibble.orders;var payload=orders.create(locationId,serviceType,paymentType,miscOptions).then(function(order){return{order:order};});return dispatch(_createNewOrder(payload));};}function resolveOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'pickup';var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;var orders=brandibble.orders;var order=orders.current();var payload=order?Promise.resolve({order:order}):orders.create(locationId,serviceType,paymentType,miscOptions).then(function(res){return{order:res};});return function(dispatch){return dispatch(_resolveOrder(payload));};}function resolveOrderLocation(brandibble){var orders=brandibble.orders;var order=orders.current();var payload=order&&order.locationId?brandibble.locations.show(order.locationId).then(function(_ref2){var data=_ref2.data;return data;}):Promise.resolve(null);return function(dispatch){return dispatch(_resolveOrderLocation(payload));};}function validateCurrentCart(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validateCart(order,data).then(function(res){return res;});return dispatch(_validateCurrentCart(payload));};}function validateCurrentOrder(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validate(order,data).then(function(res){return res;});return dispatch(_validateCurrentOrder(payload));};}function setOrderLocationId(currentOrder,locationId){var _arguments=arguments;return function(dispatch){return dispatch(_setOrderLocationId.apply(undefined,_arguments));};}function setOrderAddress(){for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return function(dispatch){return dispatch(_setOrderAddress.apply(undefined,args));};}function addLineItem(currentOrder,product){var _arguments2=arguments;var quantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_addLineItem.apply(undefined,_arguments2));};}function pushLineItem(currentOrder,lineItem){var _arguments3=arguments;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_pushLineItem.apply(undefined,_arguments3));};}function setLineItemQuantity(currentOrder,lineItem){var _arguments4=arguments;var newQuantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(newQuantity<1){throw new _exception2.default('updateLineItemQuantity','Please pass quantity more than 1 to this action. Use removeLineItem to remove from order.');}return function(dispatch){return dispatch(_setLineItemQuantity.apply(undefined,_arguments4));};}function setLineItemMadeFor(currentOrder,lineItem){var _arguments5=arguments;var madeFor=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemMadeFor.apply(undefined,_arguments5));};}function setLineItemInstructions(currentOrder,lineItem){var _arguments6=arguments;var instructions=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemInstructions.apply(undefined,_arguments6));};}function setPaymentMethod(currentOrder,type,card){return function(dispatch){return dispatch(_setPaymentMethod(currentOrder,type,card));};}function setRequestedAt(currentOrder,time){var wantsFuture=arguments.length>2&&arguments[2]!==undefined?arguments[2]:false;return function(dispatch){return dispatch(_setRequestedAt(currentOrder,time,wantsFuture));};}function setPromoCode(currentOrder,promo){return function(dispatch){return dispatch(_setPromoCode(currentOrder,promo));};}function removeLineItem(currentOrder,lineItem){var _arguments7=arguments;return function(dispatch){return dispatch(_removeLineItem.apply(undefined,_arguments7));};}function addOptionToLineItem(currentOrder,lineItem,optionGroup,optionItem){var _arguments8=arguments;return function(dispatch){return dispatch(_addOptionToLineItem.apply(undefined,_arguments8));};}function removeOptionFromLineItem(currentOrder,lineItem,optionItem){var _arguments9=arguments;return function(dispatch){return dispatch(_removeOptionFromLineItem.apply(undefined,_arguments9));};}function bindCustomerToOrder(){for(var _len2=arguments.length,args=Array(_len2),_key2=0;_key2<_len2;_key2++){args[_key2]=arguments[_key2];}return function(dispatch){return dispatch(_bindCustomerToOrder.apply(undefined,args));};}function submitOrder(){for(var _len3=arguments.length,args=Array(_len3),_key3=0;_key3<_len3;_key3++){args[_key3]=arguments[_key3];}
+submitOrder=submitOrder;var _exception=__webpack_require__(277);var _exception2=_interopRequireDefault(_exception);var _constants=__webpack_require__(68);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var RESOLVE_ORDER=exports.RESOLVE_ORDER='RESOLVE_ORDER';var RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER_LOCATION='RESOLVE_ORDER_LOCATION';var ADD_LINE_ITEM=exports.ADD_LINE_ITEM='ADD_LINE_ITEM';var PUSH_LINE_ITEM=exports.PUSH_LINE_ITEM='PUSH_LINE_ITEM';var SET_LINE_ITEM_QUANTITY=exports.SET_LINE_ITEM_QUANTITY='SET_LINE_ITEM_QUANTITY';var REMOVE_LINE_ITEM=exports.REMOVE_LINE_ITEM='REMOVE_LINE_ITEM';var ADD_OPTION_TO_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM='ADD_OPTION_TO_LINE_ITEM';var REMOVE_OPTION_FROM_LINE_ITEM=exports.REMOVE_OPTION_FROM_LINE_ITEM='REMOVE_OPTION_FROM_LINE_ITEM';var SET_ORDER_LOCATION_ID=exports.SET_ORDER_LOCATION_ID='SET_ORDER_LOCATION_ID';var SUBMIT_ORDER=exports.SUBMIT_ORDER='SUBMIT_ORDER';var BIND_CUSTOMER_TO_ORDER=exports.BIND_CUSTOMER_TO_ORDER='BIND_CUSTOMER_TO_ORDER';var SET_PAYMENT_METHOD=exports.SET_PAYMENT_METHOD='SET_PAYMENT_METHOD';var SET_ORDER_ADDRESS=exports.SET_ORDER_ADDRESS='SET_ORDER_ADDRESS';var SET_PROMO_CODE=exports.SET_PROMO_CODE='SET_PROMO_CODE';var SET_MISC_OPTIONS=exports.SET_MISC_OPTIONS='SET_MISC_OPTIONS';var SET_REQUESTED_AT=exports.SET_REQUESTED_AT='SET_REQUESTED_AT';var CREATE_NEW_ORDER=exports.CREATE_NEW_ORDER='CREATE_NEW_ORDER';var VALIDATE_CURRENT_ORDER=exports.VALIDATE_CURRENT_ORDER='VALIDATE_CURRENT_ORDER';var VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_CART='VALIDATE_CURRENT_CART';var SET_LINE_ITEM_MADE_FOR=exports.SET_LINE_ITEM_MADE_FOR='SET_LINE_ITEM_MADE_FOR';var SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_INSTRUCTIONS='SET_LINE_ITEM_INSTRUCTIONS';function _resolveOrder(payload){return{type:RESOLVE_ORDER,payload:payload};}function _resolveOrderLocation(payload){return{type:RESOLVE_ORDER_LOCATION,payload:payload};}function _addLineItem(order,product,quantity){return{type:ADD_LINE_ITEM,payload:order.addLineItem(product,quantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _pushLineItem(order,lineItem){return{type:PUSH_LINE_ITEM,payload:order.pushLineItem(lineItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemQuantity(order,lineItem,newQuantity){return{type:SET_LINE_ITEM_QUANTITY,payload:order.setLineItemQuantity(lineItem,newQuantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemMadeFor(order,lineItem,madeFor){return{type:SET_LINE_ITEM_MADE_FOR,payload:order.setLineItemMadeFor(lineItem,madeFor).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemInstructions(order,lineItem,instructions){return{type:SET_LINE_ITEM_INSTRUCTIONS,payload:order.setLineItemInstructions(lineItem,instructions).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeLineItem(order,lineItem){return{type:REMOVE_LINE_ITEM,payload:order.removeLineItem(lineItem).then(function(remainingLineItems){return{order:order,remainingLineItems:remainingLineItems};})};}function _addOptionToLineItem(order,lineItem,optionGroup,optionItem){return{type:ADD_OPTION_TO_LINE_ITEM,payload:order.addOptionToLineItem(lineItem,optionGroup,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeOptionFromLineItem(order,lineItem,optionItem){return{type:REMOVE_OPTION_FROM_LINE_ITEM,payload:order.removeOptionFromLineItem(lineItem,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setOrderLocationId(order,locationId){return{type:SET_ORDER_LOCATION_ID,payload:order.setLocation(locationId).then(function(order){return{order:order};})};}function _setOrderAddress(order,address){return{type:SET_ORDER_ADDRESS,payload:order.setAddress(address).then(function(order){return{order:order};})};}function _bindCustomerToOrder(order,customer){return{type:BIND_CUSTOMER_TO_ORDER,payload:order.setCustomer(customer).then(function(order){return{order:order};})};}function _setPaymentMethod(order,type,card){return{type:SET_PAYMENT_METHOD,payload:order.setPaymentMethod(type,card).then(function(order){return{order:order};})};}function _setPromoCode(order,promo){return{type:SET_PROMO_CODE,payload:order.setPromoCode(promo).then(function(order){return{order:order};})};}function _setMiscOptions(order,opts){return{type:SET_MISC_OPTIONS,payload:order.setMiscOptions(opts).then(function(order){return{order:order};})};}function _setRequestedAt(order,time,wantsFuture){return{type:SET_REQUESTED_AT,payload:order.setRequestedAt(time,wantsFuture).then(function(order){return{order:order};})};}function _submitOrder(brandibble,order){return{type:SUBMIT_ORDER,payload:brandibble.orders.submit(order).then(function(_ref){var data=_ref.data;return data;})};}function _createNewOrder(data){return{type:CREATE_NEW_ORDER,payload:data};}function _validateCurrentCart(data){return{type:VALIDATE_CURRENT_CART,payload:data};}function _validateCurrentOrder(data){return{type:VALIDATE_CURRENT_ORDER,payload:data};}function createNewOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments[2];var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;return function(dispatch){var orders=brandibble.orders;var payload=orders.create(locationId,serviceType,paymentType,miscOptions).then(function(order){return{order:order};});return dispatch(_createNewOrder(payload));};}function resolveOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'pickup';var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;var orders=brandibble.orders;var order=orders.current();var payload=order?Promise.resolve({order:order}):orders.create(locationId,serviceType,paymentType,miscOptions).then(function(res){return{order:res};});return function(dispatch){return dispatch(_resolveOrder(payload));};}function resolveOrderLocation(brandibble){var orders=brandibble.orders;var order=orders.current();var payload=order&&order.locationId?brandibble.locations.show(order.locationId).then(function(_ref2){var data=_ref2.data;return data;}):Promise.resolve(null);return function(dispatch){return dispatch(_resolveOrderLocation(payload));};}function validateCurrentCart(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validateCart(order,data).then(function(res){return res;});return dispatch(_validateCurrentCart(payload));};}function validateCurrentOrder(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validate(order,data).then(function(res){return res;});return dispatch(_validateCurrentOrder(payload));};}function setOrderLocationId(currentOrder,locationId){var _arguments=arguments;return function(dispatch){return dispatch(_setOrderLocationId.apply(undefined,_arguments));};}function setOrderAddress(){for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return function(dispatch){return dispatch(_setOrderAddress.apply(undefined,args));};}function addLineItem(currentOrder,product){var _arguments2=arguments;var quantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_addLineItem.apply(undefined,_arguments2));};}function pushLineItem(currentOrder,lineItem){var _arguments3=arguments;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_pushLineItem.apply(undefined,_arguments3));};}function setLineItemQuantity(currentOrder,lineItem){var _arguments4=arguments;var newQuantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(newQuantity<1){throw new _exception2.default('updateLineItemQuantity','Please pass quantity more than 1 to this action. Use removeLineItem to remove from order.');}return function(dispatch){return dispatch(_setLineItemQuantity.apply(undefined,_arguments4));};}function setLineItemMadeFor(currentOrder,lineItem){var _arguments5=arguments;var madeFor=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemMadeFor.apply(undefined,_arguments5));};}function setLineItemInstructions(currentOrder,lineItem){var _arguments6=arguments;var instructions=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemInstructions.apply(undefined,_arguments6));};}function setPaymentMethod(currentOrder,type,card){return function(dispatch){return dispatch(_setPaymentMethod(currentOrder,type,card));};}function setRequestedAt(currentOrder,time){var wantsFuture=arguments.length>2&&arguments[2]!==undefined?arguments[2]:false;return function(dispatch){return dispatch(_setRequestedAt(currentOrder,time,wantsFuture));};}function setPromoCode(currentOrder,promo){return function(dispatch){return dispatch(_setPromoCode(currentOrder,promo));};}function setMiscOptions(currentOrder,opts){return function(dispatch){return dispatch(_setMiscOptions(currentOrder,opts));};}function removeLineItem(currentOrder,lineItem){var _arguments7=arguments;return function(dispatch){return dispatch(_removeLineItem.apply(undefined,_arguments7));};}function addOptionToLineItem(currentOrder,lineItem,optionGroup,optionItem){var _arguments8=arguments;return function(dispatch){return dispatch(_addOptionToLineItem.apply(undefined,_arguments8));};}function removeOptionFromLineItem(currentOrder,lineItem,optionItem){var _arguments9=arguments;return function(dispatch){return dispatch(_removeOptionFromLineItem.apply(undefined,_arguments9));};}function bindCustomerToOrder(){for(var _len2=arguments.length,args=Array(_len2),_key2=0;_key2<_len2;_key2++){args[_key2]=arguments[_key2];}return function(dispatch){return dispatch(_bindCustomerToOrder.apply(undefined,args));};}function submitOrder(){for(var _len3=arguments.length,args=Array(_len3),_key3=0;_key3<_len3;_key3++){args[_key3]=arguments[_key3];}
 return function(dispatch){return dispatch(_submitOrder.apply(undefined,args));};
 }
 
@@ -34306,7 +34318,8 @@ setOrderAddress;}});Object.defineProperty(exports,'setOrderLocationId',{enumerab
 setOrderLocationId;}});Object.defineProperty(exports,'setPaymentMethod',{enumerable:true,get:function get(){return _order.
 setPaymentMethod;}});Object.defineProperty(exports,'submitOrder',{enumerable:true,get:function get(){return _order.
 submitOrder;}});Object.defineProperty(exports,'setPromoCode',{enumerable:true,get:function get(){return _order.
-setPromoCode;}});Object.defineProperty(exports,'setRequestedAt',{enumerable:true,get:function get(){return _order.
+setPromoCode;}});Object.defineProperty(exports,'setMiscOptions',{enumerable:true,get:function get(){return _order.
+setMiscOptions;}});Object.defineProperty(exports,'setRequestedAt',{enumerable:true,get:function get(){return _order.
 setRequestedAt;}});Object.defineProperty(exports,'createNewOrder',{enumerable:true,get:function get(){return _order.
 createNewOrder;}});Object.defineProperty(exports,'validateCurrentCart',{enumerable:true,get:function get(){return _order.
 validateCurrentCart;}});Object.defineProperty(exports,'validateCurrentOrder',{enumerable:true,get:function get(){return _order.
@@ -37288,7 +37301,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 148);
+/******/ 	return __webpack_require__(__webpack_require__.s = 149);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -37382,7 +37395,7 @@ $exports.store = store;
 
 var global = __webpack_require__(3);
 var core = __webpack_require__(2);
-var ctx = __webpack_require__(19);
+var ctx = __webpack_require__(20);
 var hide = __webpack_require__(12);
 var PROTOTYPE = 'prototype';
 
@@ -37556,7 +37569,7 @@ module.exports = function (it, key) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(6);
-var createDesc = __webpack_require__(22);
+var createDesc = __webpack_require__(23);
 module.exports = __webpack_require__(10) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
@@ -37577,7 +37590,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ISO8601_PATTERN = exports.PaymentTypes = exports.TestCreditCards = undefined;
 
-var _assign = __webpack_require__(23);
+var _assign = __webpack_require__(18);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -37593,7 +37606,7 @@ exports.queryStringBuilder = queryStringBuilder;
 exports.applyPollyfills = applyPollyfills;
 exports.generateUUID = generateUUID;
 
-var _es6Promise = __webpack_require__(134);
+var _es6Promise = __webpack_require__(135);
 
 var _es6Promise2 = _interopRequireDefault(_es6Promise);
 
@@ -37767,7 +37780,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _typeof2 = __webpack_require__(91);
+var _typeof2 = __webpack_require__(92);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -37783,7 +37796,7 @@ var _lodash = __webpack_require__(31);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _lodash3 = __webpack_require__(137);
+var _lodash3 = __webpack_require__(138);
 
 var _lodash4 = _interopRequireDefault(_lodash3);
 
@@ -37791,19 +37804,19 @@ var _lodash5 = __webpack_require__(67);
 
 var _lodash6 = _interopRequireDefault(_lodash5);
 
-var _lodash7 = __webpack_require__(135);
+var _lodash7 = __webpack_require__(136);
 
 var _lodash8 = _interopRequireDefault(_lodash7);
 
-var _lodash9 = __webpack_require__(141);
+var _lodash9 = __webpack_require__(142);
 
 var _lodash10 = _interopRequireDefault(_lodash9);
 
-var _lodash11 = __webpack_require__(140);
+var _lodash11 = __webpack_require__(141);
 
 var _lodash12 = _interopRequireDefault(_lodash11);
 
-var _lodash13 = __webpack_require__(138);
+var _lodash13 = __webpack_require__(139);
 
 var _lodash14 = _interopRequireDefault(_lodash13);
 
@@ -38126,6 +38139,12 @@ exports.default = LineItem;
 
 /***/ }),
 /* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(96), __esModule: true };
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -38136,7 +38155,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
@@ -38162,14 +38181,14 @@ module.exports = function (fn, that, length) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = {};
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
@@ -38182,7 +38201,7 @@ module.exports = Object.keys || function keys(O) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = function (bitmap, value) {
@@ -38196,16 +38215,10 @@ module.exports = function (bitmap, value) {
 
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(95), __esModule: true };
-
-/***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(98), __esModule: true };
+module.exports = { "default": __webpack_require__(99), __esModule: true };
 
 /***/ }),
 /* 25 */
@@ -41882,11 +41895,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends2 = __webpack_require__(90);
+
+var _extends3 = _interopRequireDefault(_extends2);
+
 var _promise = __webpack_require__(24);
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var _assign = __webpack_require__(23);
+var _assign = __webpack_require__(18);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -42023,6 +42040,14 @@ var Order = function () {
     key: 'setPromoCode',
     value: function setPromoCode(promo) {
       this.miscOptions.promo_code = promo;
+      return this.adapter.persistCurrentOrder(this);
+    }
+  }, {
+    key: 'setMiscOptions',
+    value: function setMiscOptions() {
+      var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      this.miscOptions = (0, _extends3.default)({}, this.miscOptions, opts);
       return this.adapter.persistCurrentOrder(this);
     }
   }, {
@@ -42488,7 +42513,7 @@ exports.f = __webpack_require__(4);
 
 "use strict";
 
-var $at = __webpack_require__(121)(true);
+var $at = __webpack_require__(122)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
 __webpack_require__(54)(String, 'String', function (iterated) {
@@ -42600,7 +42625,7 @@ var productValidations = exports.productValidations = {
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(18);
+var cof = __webpack_require__(19);
 var TAG = __webpack_require__(4)('toStringTag');
 // ES3 wrong here
 var ARG = cof(function () { return arguments; }()) == 'Arguments';
@@ -42646,7 +42671,7 @@ module.exports = !__webpack_require__(10) && !__webpack_require__(14)(function (
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(18);
+var cof = __webpack_require__(19);
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
@@ -42658,7 +42683,7 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
-var Iterators = __webpack_require__(20);
+var Iterators = __webpack_require__(21);
 var ITERATOR = __webpack_require__(4)('iterator');
 var ArrayProto = Array.prototype;
 
@@ -42696,10 +42721,10 @@ var $export = __webpack_require__(5);
 var redefine = __webpack_require__(61);
 var hide = __webpack_require__(12);
 var has = __webpack_require__(11);
-var Iterators = __webpack_require__(20);
-var $iterCreate = __webpack_require__(109);
+var Iterators = __webpack_require__(21);
+var $iterCreate = __webpack_require__(110);
 var setToStringTag = __webpack_require__(28);
-var getPrototypeOf = __webpack_require__(117);
+var getPrototypeOf = __webpack_require__(118);
 var ITERATOR = __webpack_require__(4)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
 var FF_ITERATOR = '@@iterator';
@@ -42796,7 +42821,7 @@ module.exports = function (exec, skipClosing) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(9);
-var dPs = __webpack_require__(114);
+var dPs = __webpack_require__(115);
 var enumBugKeys = __webpack_require__(36);
 var IE_PROTO = __webpack_require__(39)('IE_PROTO');
 var Empty = function () { /* empty */ };
@@ -42856,7 +42881,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 var has = __webpack_require__(11);
 var toIObject = __webpack_require__(16);
-var arrayIndexOf = __webpack_require__(103)(false);
+var arrayIndexOf = __webpack_require__(104)(false);
 var IE_PROTO = __webpack_require__(39)('IE_PROTO');
 
 module.exports = function (object, names) {
@@ -42930,8 +42955,8 @@ module.exports = function (O, D) {
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx = __webpack_require__(19);
-var invoke = __webpack_require__(107);
+var ctx = __webpack_require__(20);
+var invoke = __webpack_require__(108);
 var html = __webpack_require__(49);
 var cel = __webpack_require__(35);
 var global = __webpack_require__(3);
@@ -42973,7 +42998,7 @@ if (!setTask || !clearTask) {
     delete queue[id];
   };
   // Node.js 0.8-
-  if (__webpack_require__(18)(process) == 'process') {
+  if (__webpack_require__(19)(process) == 'process') {
     defer = function (id) {
       process.nextTick(ctx(run, id, 1));
     };
@@ -43022,7 +43047,7 @@ module.exports = {
 
 var classof = __webpack_require__(48);
 var ITERATOR = __webpack_require__(4)('iterator');
-var Iterators = __webpack_require__(20);
+var Iterators = __webpack_require__(21);
 module.exports = __webpack_require__(2).getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
     || it['@@iterator']
@@ -43040,10 +43065,10 @@ module.exports = __webpack_require__(2).getIteratorMethod = function (it) {
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(124);
+__webpack_require__(125);
 var global = __webpack_require__(3);
 var hide = __webpack_require__(12);
-var Iterators = __webpack_require__(20);
+var Iterators = __webpack_require__(21);
 var TO_STRING_TAG = __webpack_require__(4)('toStringTag');
 
 var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
@@ -46134,7 +46159,7 @@ var _promise = __webpack_require__(24);
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var _assign = __webpack_require__(23);
+var _assign = __webpack_require__(18);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -46150,7 +46175,7 @@ var _order2 = __webpack_require__(33);
 
 var _order3 = _interopRequireDefault(_order2);
 
-var _circularJson = __webpack_require__(92);
+var _circularJson = __webpack_require__(93);
 
 var _circularJson2 = _interopRequireDefault(_circularJson);
 
@@ -46529,7 +46554,7 @@ var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _querystring = __webpack_require__(146);
+var _querystring = __webpack_require__(147);
 
 var _querystring2 = _interopRequireDefault(_querystring);
 
@@ -47088,7 +47113,7 @@ var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _lodash = __webpack_require__(136);
+var _lodash = __webpack_require__(137);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -47100,7 +47125,7 @@ var _lodash5 = __webpack_require__(67);
 
 var _lodash6 = _interopRequireDefault(_lodash5);
 
-var _lodash7 = __webpack_require__(139);
+var _lodash7 = __webpack_require__(140);
 
 var _lodash8 = _interopRequireDefault(_lodash7);
 
@@ -47224,11 +47249,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _toConsumableArray2 = __webpack_require__(90);
+var _toConsumableArray2 = __webpack_require__(91);
 
 var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-var _assign = __webpack_require__(23);
+var _assign = __webpack_require__(18);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -47252,7 +47277,7 @@ var _lineItem = __webpack_require__(17);
 
 var _lineItem2 = _interopRequireDefault(_lineItem);
 
-var _lodash3 = __webpack_require__(142);
+var _lodash3 = __webpack_require__(143);
 
 var _lodash4 = _interopRequireDefault(_lodash3);
 
@@ -47467,40 +47492,69 @@ exports.default = Ratings;
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(93), __esModule: true };
+module.exports = { "default": __webpack_require__(94), __esModule: true };
 
 /***/ }),
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(94), __esModule: true };
+module.exports = { "default": __webpack_require__(95), __esModule: true };
 
 /***/ }),
 /* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(96), __esModule: true };
+module.exports = { "default": __webpack_require__(97), __esModule: true };
 
 /***/ }),
 /* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(97), __esModule: true };
+module.exports = { "default": __webpack_require__(98), __esModule: true };
 
 /***/ }),
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(99), __esModule: true };
+module.exports = { "default": __webpack_require__(100), __esModule: true };
 
 /***/ }),
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(100), __esModule: true };
+module.exports = { "default": __webpack_require__(101), __esModule: true };
 
 /***/ }),
 /* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _assign = __webpack_require__(18);
+
+var _assign2 = _interopRequireDefault(_assign);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _assign2.default || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+/***/ }),
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47527,7 +47581,7 @@ exports.default = function (arr) {
 };
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47554,7 +47608,7 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 };
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports) {
 
 /*!
@@ -47744,16 +47798,16 @@ this.stringify = stringifyRecursion;
 this.parse = parseRecursion;
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(46);
-__webpack_require__(123);
+__webpack_require__(124);
 module.exports = __webpack_require__(2).Array.from;
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var core = __webpack_require__(2);
@@ -47764,22 +47818,11 @@ module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
 
 
 /***/ }),
-/* 95 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(125);
-module.exports = __webpack_require__(2).Object.assign;
-
-
-/***/ }),
 /* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(126);
-var $Object = __webpack_require__(2).Object;
-module.exports = function defineProperty(it, key, desc) {
-  return $Object.defineProperty(it, key, desc);
-};
+module.exports = __webpack_require__(2).Object.assign;
 
 
 /***/ }),
@@ -47787,35 +47830,46 @@ module.exports = function defineProperty(it, key, desc) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(127);
-module.exports = __webpack_require__(2).Object.keys;
+var $Object = __webpack_require__(2).Object;
+module.exports = function defineProperty(it, key, desc) {
+  return $Object.defineProperty(it, key, desc);
+};
 
 
 /***/ }),
 /* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(65);
-__webpack_require__(46);
-__webpack_require__(66);
 __webpack_require__(128);
-__webpack_require__(130);
-__webpack_require__(131);
-module.exports = __webpack_require__(2).Promise;
+module.exports = __webpack_require__(2).Object.keys;
 
 
 /***/ }),
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(129);
 __webpack_require__(65);
+__webpack_require__(46);
+__webpack_require__(66);
+__webpack_require__(129);
+__webpack_require__(131);
 __webpack_require__(132);
-__webpack_require__(133);
-module.exports = __webpack_require__(2).Symbol;
+module.exports = __webpack_require__(2).Promise;
 
 
 /***/ }),
 /* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(130);
+__webpack_require__(65);
+__webpack_require__(133);
+__webpack_require__(134);
+module.exports = __webpack_require__(2).Symbol;
+
+
+/***/ }),
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(46);
@@ -47824,14 +47878,14 @@ module.exports = __webpack_require__(45).f('iterator');
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports) {
 
 module.exports = function () { /* empty */ };
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports) {
 
 module.exports = function (it, Constructor, name, forbiddenField) {
@@ -47842,14 +47896,14 @@ module.exports = function (it, Constructor, name, forbiddenField) {
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(16);
 var toLength = __webpack_require__(42);
-var toAbsoluteIndex = __webpack_require__(122);
+var toAbsoluteIndex = __webpack_require__(123);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -47871,13 +47925,13 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $defineProperty = __webpack_require__(6);
-var createDesc = __webpack_require__(22);
+var createDesc = __webpack_require__(23);
 
 module.exports = function (object, index, value) {
   if (index in object) $defineProperty.f(object, index, createDesc(0, value));
@@ -47886,11 +47940,11 @@ module.exports = function (object, index, value) {
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(21);
+var getKeys = __webpack_require__(22);
 var gOPS = __webpack_require__(38);
 var pIE = __webpack_require__(27);
 module.exports = function (it) {
@@ -47907,10 +47961,10 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx = __webpack_require__(19);
+var ctx = __webpack_require__(20);
 var call = __webpack_require__(53);
 var isArrayIter = __webpack_require__(52);
 var anObject = __webpack_require__(9);
@@ -47938,7 +47992,7 @@ exports.RETURN = RETURN;
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports) {
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
@@ -47960,24 +48014,24 @@ module.exports = function (fn, args, that) {
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(18);
+var cof = __webpack_require__(19);
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var create = __webpack_require__(56);
-var descriptor = __webpack_require__(22);
+var descriptor = __webpack_require__(23);
 var setToStringTag = __webpack_require__(28);
 var IteratorPrototype = {};
 
@@ -47991,7 +48045,7 @@ module.exports = function (Constructor, NAME, next) {
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports) {
 
 module.exports = function (done, value) {
@@ -48000,7 +48054,7 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var META = __webpack_require__(30)('meta');
@@ -48059,7 +48113,7 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(3);
@@ -48067,7 +48121,7 @@ var macrotask = __webpack_require__(63).set;
 var Observer = global.MutationObserver || global.WebKitMutationObserver;
 var process = global.process;
 var Promise = global.Promise;
-var isNode = __webpack_require__(18)(process) == 'process';
+var isNode = __webpack_require__(19)(process) == 'process';
 
 module.exports = function () {
   var head, last, notify;
@@ -48133,13 +48187,13 @@ module.exports = function () {
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
-var getKeys = __webpack_require__(21);
+var getKeys = __webpack_require__(22);
 var gOPS = __webpack_require__(38);
 var pIE = __webpack_require__(27);
 var toObject = __webpack_require__(29);
@@ -48174,12 +48228,12 @@ module.exports = !$assign || __webpack_require__(14)(function () {
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(6);
 var anObject = __webpack_require__(9);
-var getKeys = __webpack_require__(21);
+var getKeys = __webpack_require__(22);
 
 module.exports = __webpack_require__(10) ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
@@ -48193,11 +48247,11 @@ module.exports = __webpack_require__(10) ? Object.defineProperties : function de
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var pIE = __webpack_require__(27);
-var createDesc = __webpack_require__(22);
+var createDesc = __webpack_require__(23);
 var toIObject = __webpack_require__(16);
 var toPrimitive = __webpack_require__(43);
 var has = __webpack_require__(11);
@@ -48215,7 +48269,7 @@ exports.f = __webpack_require__(10) ? gOPD : function getOwnPropertyDescriptor(O
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
@@ -48240,7 +48294,7 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
@@ -48259,7 +48313,7 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
@@ -48275,7 +48329,7 @@ module.exports = function (KEY, exec) {
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var hide = __webpack_require__(12);
@@ -48288,7 +48342,7 @@ module.exports = function (target, src, safe) {
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48309,7 +48363,7 @@ module.exports = function (KEY) {
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(41);
@@ -48332,7 +48386,7 @@ module.exports = function (TO_STRING) {
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(41);
@@ -48345,18 +48399,18 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ctx = __webpack_require__(19);
+var ctx = __webpack_require__(20);
 var $export = __webpack_require__(5);
 var toObject = __webpack_require__(29);
 var call = __webpack_require__(53);
 var isArrayIter = __webpack_require__(52);
 var toLength = __webpack_require__(42);
-var createProperty = __webpack_require__(104);
+var createProperty = __webpack_require__(105);
 var getIterFn = __webpack_require__(64);
 
 $export($export.S + $export.F * !__webpack_require__(55)(function (iter) { Array.from(iter); }), 'Array', {
@@ -48389,14 +48443,14 @@ $export($export.S + $export.F * !__webpack_require__(55)(function (iter) { Array
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(101);
-var step = __webpack_require__(110);
-var Iterators = __webpack_require__(20);
+var addToUnscopables = __webpack_require__(102);
+var step = __webpack_require__(111);
+var Iterators = __webpack_require__(21);
 var toIObject = __webpack_require__(16);
 
 // 22.1.3.4 Array.prototype.entries()
@@ -48430,17 +48484,17 @@ addToUnscopables('entries');
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
 var $export = __webpack_require__(5);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(113) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(114) });
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(5);
@@ -48449,14 +48503,14 @@ $export($export.S + $export.F * !__webpack_require__(10), 'Object', { defineProp
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 Object.keys(O)
 var toObject = __webpack_require__(29);
-var $keys = __webpack_require__(21);
+var $keys = __webpack_require__(22);
 
-__webpack_require__(118)('keys', function () {
+__webpack_require__(119)('keys', function () {
   return function keys(it) {
     return $keys(toObject(it));
   };
@@ -48464,23 +48518,23 @@ __webpack_require__(118)('keys', function () {
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var LIBRARY = __webpack_require__(26);
 var global = __webpack_require__(3);
-var ctx = __webpack_require__(19);
+var ctx = __webpack_require__(20);
 var classof = __webpack_require__(48);
 var $export = __webpack_require__(5);
 var isObject = __webpack_require__(15);
 var aFunction = __webpack_require__(25);
-var anInstance = __webpack_require__(102);
-var forOf = __webpack_require__(106);
+var anInstance = __webpack_require__(103);
+var forOf = __webpack_require__(107);
 var speciesConstructor = __webpack_require__(62);
 var task = __webpack_require__(63).set;
-var microtask = __webpack_require__(112)();
+var microtask = __webpack_require__(113)();
 var newPromiseCapabilityModule = __webpack_require__(37);
 var perform = __webpack_require__(59);
 var promiseResolve = __webpack_require__(60);
@@ -48653,7 +48707,7 @@ if (!USE_NATIVE) {
     this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
     this._n = false;          // <- notify
   };
-  Internal.prototype = __webpack_require__(119)($Promise.prototype, {
+  Internal.prototype = __webpack_require__(120)($Promise.prototype, {
     // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
     then: function then(onFulfilled, onRejected) {
       var reaction = newPromiseCapability(speciesConstructor(this, $Promise));
@@ -48685,7 +48739,7 @@ if (!USE_NATIVE) {
 
 $export($export.G + $export.W + $export.F * !USE_NATIVE, { Promise: $Promise });
 __webpack_require__(28)($Promise, PROMISE);
-__webpack_require__(120)(PROMISE);
+__webpack_require__(121)(PROMISE);
 Wrapper = __webpack_require__(2)[PROMISE];
 
 // statics
@@ -48751,7 +48805,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(55)(function
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48762,7 +48816,7 @@ var has = __webpack_require__(11);
 var DESCRIPTORS = __webpack_require__(10);
 var $export = __webpack_require__(5);
 var redefine = __webpack_require__(61);
-var META = __webpack_require__(111).KEY;
+var META = __webpack_require__(112).KEY;
 var $fails = __webpack_require__(14);
 var shared = __webpack_require__(40);
 var setToStringTag = __webpack_require__(28);
@@ -48770,17 +48824,17 @@ var uid = __webpack_require__(30);
 var wks = __webpack_require__(4);
 var wksExt = __webpack_require__(45);
 var wksDefine = __webpack_require__(44);
-var enumKeys = __webpack_require__(105);
-var isArray = __webpack_require__(108);
+var enumKeys = __webpack_require__(106);
+var isArray = __webpack_require__(109);
 var anObject = __webpack_require__(9);
 var toIObject = __webpack_require__(16);
 var toPrimitive = __webpack_require__(43);
-var createDesc = __webpack_require__(22);
+var createDesc = __webpack_require__(23);
 var _create = __webpack_require__(56);
-var gOPNExt = __webpack_require__(116);
-var $GOPD = __webpack_require__(115);
+var gOPNExt = __webpack_require__(117);
+var $GOPD = __webpack_require__(116);
 var $DP = __webpack_require__(6);
-var $keys = __webpack_require__(21);
+var $keys = __webpack_require__(22);
 var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
@@ -48992,7 +49046,7 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49019,7 +49073,7 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49038,21 +49092,21 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
 
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(44)('asyncIterator');
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(44)('observable');
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {var require;/*!
@@ -49192,7 +49246,7 @@ function flush() {
 function attemptVertx() {
   try {
     var r = require;
-    var vertx = __webpack_require__(147);
+    var vertx = __webpack_require__(148);
     vertxNext = vertx.runOnLoop || vertx.runOnContext;
     return useVertxTimer();
   } catch (e) {
@@ -50213,10 +50267,10 @@ return Promise$2;
 
 //# sourceMappingURL=es6-promise.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(143), __webpack_require__(7)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(144), __webpack_require__(7)))
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports) {
 
 /**
@@ -50261,7 +50315,7 @@ module.exports = compact;
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -52663,7 +52717,7 @@ module.exports = every;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(8)(module)))
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -55036,7 +55090,7 @@ module.exports = filter;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(8)(module)))
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -57415,7 +57469,7 @@ module.exports = reduce;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(8)(module)))
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -59820,7 +59874,7 @@ module.exports = reject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(8)(module)))
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports) {
 
 /**
@@ -59867,7 +59921,7 @@ module.exports = reverse;
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -62504,7 +62558,7 @@ module.exports = sortBy;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(8)(module)))
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -79596,7 +79650,7 @@ module.exports = sortBy;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(8)(module)))
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -79786,7 +79840,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79877,7 +79931,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79969,24 +80023,24 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(144);
-exports.encode = exports.stringify = __webpack_require__(145);
+exports.decode = exports.parse = __webpack_require__(145);
+exports.encode = exports.stringify = __webpack_require__(146);
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(70);
@@ -80934,6 +80988,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
+
 order;var _lodash=__webpack_require__(547);var _lodash2=_interopRequireDefault(_lodash);var _order=__webpack_require__(25);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState={ref:null,orderData:null,lineItemsData:null,validated:null,validatedCart:null};function _buildFormattedLineItemsHash(ref){return(0,_lodash2.default)(ref.cart.lineItems,function(li){var uuid=li.uuid,quantity=li.quantity,madeFor=li.madeFor,instructions=li.instructions,product=li.product,operationMaps=li.operationMaps;return{uuid:uuid,quantity:quantity,madeFor:madeFor,instructions:instructions,isValid:li.isValid(),errors:li.errors(),productData:product,optionGroupMappings:operationMaps};});}function order(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _order.RESOLVE_ORDER+'_FULFILLED':
@@ -80949,6 +81004,7 @@ case _order.REMOVE_LINE_ITEM+'_FULFILLED':
 case _order.ADD_OPTION_TO_LINE_ITEM+'_FULFILLED':
 case _order.SET_PAYMENT_METHOD+'_FULFILLED':
 case _order.SET_PROMO_CODE+'_FULFILLED':
+case _order.SET_MISC_OPTIONS+'_FULFILLED':
 case _order.SET_REQUESTED_AT+'_FULFILLED':
 case _order.REMOVE_OPTION_FROM_LINE_ITEM+'_FULFILLED':
 case _order.CREATE_NEW_ORDER+'_FULFILLED':{
@@ -83660,7 +83716,9 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-status;var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(66);var _payments=__webpack_require__(65);var _order=__webpack_require__(25);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _user=__webpack_require__(11);var _customerOrders=__webpack_require__(63);var _constants=__webpack_require__(68);var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType.RATINGS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType2.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType2.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType2.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType2.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType2.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType2.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+status;var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(66);var _payments=__webpack_require__(65);var _order=__webpack_require__(25);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _user=__webpack_require__(11);var _customerOrders=__webpack_require__(63);var _constants=__webpack_require__(68);var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType.RATINGS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType2.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType2.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType2.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType2.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType2.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType2.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,setMiscOptions:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:PENDING});
 case _application.SETUP_BRANDIBBLE+'_FULFILLED':return _extends({},state,{setupBrandibble:FULFILLED});
@@ -83753,6 +83811,10 @@ case _order.SET_ORDER_LOCATION_ID+'_REJECTED':return _extends({},state,{setOrder
 case _order.SET_PROMO_CODE+'_PENDING':return _extends({},state,{setPromoCode:PENDING});
 case _order.SET_PROMO_CODE+'_FULFILLED':return _extends({},state,{setPromoCode:FULFILLED});
 case _order.SET_PROMO_CODE+'_REJECTED':return _extends({},state,{setPromoCode:REJECTED});
+
+case _order.SET_MISC_OPTIONS+'_PENDING':return _extends({},state,{setMiscOptions:PENDING});
+case _order.SET_MISC_OPTIONS+'_FULFILLED':return _extends({},state,{setMiscOptions:FULFILLED});
+case _order.SET_MISC_OPTIONS+'_REJECTED':return _extends({},state,{setMiscOptions:REJECTED});
 
 case _order.SUBMIT_ORDER+'_PENDING':return _extends({},state,{submitOrder:PENDING});
 case _order.SUBMIT_ORDER+'_FULFILLED':return _extends({},state,{submitOrder:FULFILLED});
