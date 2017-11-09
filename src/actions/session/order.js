@@ -16,6 +16,7 @@ export const BIND_CUSTOMER_TO_ORDER = 'BIND_CUSTOMER_TO_ORDER';
 export const SET_PAYMENT_METHOD = 'SET_PAYMENT_METHOD';
 export const SET_ORDER_ADDRESS = 'SET_ORDER_ADDRESS';
 export const SET_PROMO_CODE = 'SET_PROMO_CODE';
+export const SET_MISC_OPTIONS = 'SET_MISC_OPTIONS';
 export const SET_REQUESTED_AT = 'SET_REQUESTED_AT';
 export const CREATE_NEW_ORDER = 'CREATE_NEW_ORDER';
 export const VALIDATE_CURRENT_ORDER = 'VALIDATE_CURRENT_ORDER';
@@ -121,6 +122,13 @@ function _setPromoCode(order, promo) {
   return {
     type: SET_PROMO_CODE,
     payload: order.setPromoCode(promo).then(order => ({ order })),
+  };
+}
+
+function _setMiscOptions(order, opts) {
+  return {
+    type: SET_MISC_OPTIONS,
+    payload: order.setMiscOptions(opts).then(order => ({ order })),
   };
 }
 
@@ -256,6 +264,10 @@ export function setRequestedAt(currentOrder, time, wantsFuture = false) {
 
 export function setPromoCode(currentOrder, promo) {
   return dispatch => dispatch(_setPromoCode(currentOrder, promo));
+}
+
+export function setMiscOptions(currentOrder, opts) {
+  return dispatch => dispatch(_setMiscOptions(currentOrder, opts));
 }
 
 export function removeLineItem(currentOrder, lineItem) {
