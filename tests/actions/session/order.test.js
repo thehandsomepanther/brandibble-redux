@@ -23,6 +23,7 @@ import {
   addOptionToLineItem,
   removeOptionFromLineItem,
   setPromoCode,
+  setMiscOptions,
   setRequestedAt,
   validateCurrentCart,
   validateCurrentOrder,
@@ -128,6 +129,25 @@ describe('actions/session/order', () => {
 
     it('should have a payload', () => {
       action = find(actionsCalled, { type: 'SET_PROMO_CODE_FULFILLED' });
+      expect(action).to.have.a.property('payload');
+    });
+  });
+
+  describe('setMiscOptions', () => {
+    before(() => {
+      store = mockStore();
+      return setMiscOptions(makeUnpersistedOrder(), { notes_for_store: 'sup store' })(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should have SET_MISC_OPTIONS_PENDING action', () => {
+      action = find(actionsCalled, { type: 'SET_MISC_OPTIONS_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have a payload', () => {
+      action = find(actionsCalled, { type: 'SET_MISC_OPTIONS_FULFILLED' });
       expect(action).to.have.a.property('payload');
     });
   });
