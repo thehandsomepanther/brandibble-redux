@@ -1,4 +1,3 @@
-import filter from 'lodash.filter';
 import fireAction from '../../utils/fireAction';
 import handleErrors from '../../utils/handleErrors';
 
