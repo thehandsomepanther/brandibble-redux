@@ -4751,23 +4751,23 @@ module.exports = {
   __: __webpack_require__(281),
   add: __webpack_require__(44),
   addIndex: __webpack_require__(282),
-  adjust: __webpack_require__(87),
+  adjust: __webpack_require__(88),
   all: __webpack_require__(283),
   allPass: __webpack_require__(285),
   always: __webpack_require__(31),
-  and: __webpack_require__(91),
-  any: __webpack_require__(92),
+  and: __webpack_require__(92),
+  any: __webpack_require__(93),
   anyPass: __webpack_require__(287),
   ap: __webpack_require__(71),
   aperture: __webpack_require__(288),
   append: __webpack_require__(291),
-  apply: __webpack_require__(94),
+  apply: __webpack_require__(95),
   applySpec: __webpack_require__(292),
   ascend: __webpack_require__(293),
   assoc: __webpack_require__(48),
-  assocPath: __webpack_require__(96),
+  assocPath: __webpack_require__(97),
   binary: __webpack_require__(294),
-  bind: __webpack_require__(89),
+  bind: __webpack_require__(90),
   both: __webpack_require__(295),
   call: __webpack_require__(296),
   chain: __webpack_require__(72),
@@ -4776,33 +4776,33 @@ module.exports = {
   comparator: __webpack_require__(302),
   complement: __webpack_require__(303),
   compose: __webpack_require__(74),
-  composeK: __webpack_require__(104),
+  composeK: __webpack_require__(105),
   composeP: __webpack_require__(305),
   concat: __webpack_require__(76),
   cond: __webpack_require__(314),
   construct: __webpack_require__(315),
-  constructN: __webpack_require__(111),
+  constructN: __webpack_require__(112),
   contains: __webpack_require__(316),
-  converge: __webpack_require__(112),
+  converge: __webpack_require__(113),
   countBy: __webpack_require__(317),
   curry: __webpack_require__(52),
   curryN: __webpack_require__(8),
   dec: __webpack_require__(319),
   descend: __webpack_require__(320),
-  defaultTo: __webpack_require__(113),
-  difference: __webpack_require__(114),
-  differenceWith: __webpack_require__(115),
-  dissoc: __webpack_require__(116),
+  defaultTo: __webpack_require__(114),
+  difference: __webpack_require__(115),
+  differenceWith: __webpack_require__(116),
+  dissoc: __webpack_require__(117),
   dissocPath: __webpack_require__(321),
   divide: __webpack_require__(322),
-  drop: __webpack_require__(117),
+  drop: __webpack_require__(118),
   dropLast: __webpack_require__(324),
   dropLastWhile: __webpack_require__(328),
   dropRepeats: __webpack_require__(331),
-  dropRepeatsWith: __webpack_require__(120),
+  dropRepeatsWith: __webpack_require__(121),
   dropWhile: __webpack_require__(332),
   either: __webpack_require__(334),
-  empty: __webpack_require__(123),
+  empty: __webpack_require__(124),
   eqBy: __webpack_require__(335),
   eqProps: __webpack_require__(336),
   equals: __webpack_require__(17),
@@ -4824,7 +4824,7 @@ module.exports = {
   has: __webpack_require__(354),
   hasIn: __webpack_require__(355),
   head: __webpack_require__(356),
-  identical: __webpack_require__(107),
+  identical: __webpack_require__(108),
   identity: __webpack_require__(79),
   ifElse: __webpack_require__(357),
   inc: __webpack_require__(358),
@@ -4840,23 +4840,23 @@ module.exports = {
   invert: __webpack_require__(371),
   invertObj: __webpack_require__(372),
   invoker: __webpack_require__(38),
-  is: __webpack_require__(126),
+  is: __webpack_require__(127),
   isArrayLike: __webpack_require__(34),
   isEmpty: __webpack_require__(373),
   isNil: __webpack_require__(374),
   join: __webpack_require__(375),
-  juxt: __webpack_require__(127),
+  juxt: __webpack_require__(128),
   keys: __webpack_require__(15),
   keysIn: __webpack_require__(376),
-  last: __webpack_require__(121),
+  last: __webpack_require__(122),
   lastIndexOf: __webpack_require__(377),
-  length: __webpack_require__(128),
+  length: __webpack_require__(129),
   lens: __webpack_require__(57),
   lensIndex: __webpack_require__(378),
   lensPath: __webpack_require__(379),
   lensProp: __webpack_require__(380),
   lift: __webpack_require__(51),
-  liftN: __webpack_require__(98),
+  liftN: __webpack_require__(99),
   lt: __webpack_require__(381),
   lte: __webpack_require__(382),
   map: __webpack_require__(10),
@@ -4867,29 +4867,29 @@ module.exports = {
   mathMod: __webpack_require__(387),
   max: __webpack_require__(32),
   maxBy: __webpack_require__(388),
-  mean: __webpack_require__(131),
+  mean: __webpack_require__(132),
   median: __webpack_require__(389),
   memoize: __webpack_require__(390),
   merge: __webpack_require__(391),
   mergeAll: __webpack_require__(392),
   mergeWith: __webpack_require__(393),
-  mergeWithKey: __webpack_require__(133),
+  mergeWithKey: __webpack_require__(134),
   min: __webpack_require__(394),
   minBy: __webpack_require__(395),
   modulo: __webpack_require__(396),
-  multiply: __webpack_require__(134),
+  multiply: __webpack_require__(135),
   nAry: __webpack_require__(49),
   negate: __webpack_require__(397),
   none: __webpack_require__(398),
-  not: __webpack_require__(102),
+  not: __webpack_require__(103),
   nth: __webpack_require__(37),
   nthArg: __webpack_require__(399),
-  objOf: __webpack_require__(125),
+  objOf: __webpack_require__(126),
   of: __webpack_require__(400),
   omit: __webpack_require__(402),
   once: __webpack_require__(403),
-  or: __webpack_require__(122),
-  over: __webpack_require__(135),
+  or: __webpack_require__(123),
+  over: __webpack_require__(136),
   pair: __webpack_require__(404),
   partial: __webpack_require__(405),
   partialRight: __webpack_require__(406),
@@ -4899,13 +4899,13 @@ module.exports = {
   pathOr: __webpack_require__(409),
   pathSatisfies: __webpack_require__(410),
   pick: __webpack_require__(411),
-  pickAll: __webpack_require__(137),
+  pickAll: __webpack_require__(138),
   pickBy: __webpack_require__(412),
-  pipe: __webpack_require__(103),
+  pipe: __webpack_require__(104),
   pipeK: __webpack_require__(413),
-  pipeP: __webpack_require__(105),
+  pipeP: __webpack_require__(106),
   pluck: __webpack_require__(33),
-  prepend: __webpack_require__(138),
+  prepend: __webpack_require__(139),
   product: __webpack_require__(414),
   project: __webpack_require__(415),
   prop: __webpack_require__(70),
@@ -4917,7 +4917,7 @@ module.exports = {
   range: __webpack_require__(421),
   reduce: __webpack_require__(16),
   reduceBy: __webpack_require__(55),
-  reduceRight: __webpack_require__(140),
+  reduceRight: __webpack_require__(141),
   reduceWhile: __webpack_require__(422),
   reduced: __webpack_require__(423),
   reject: __webpack_require__(54),
@@ -4926,7 +4926,7 @@ module.exports = {
   replace: __webpack_require__(426),
   reverse: __webpack_require__(53),
   scan: __webpack_require__(427),
-  sequence: __webpack_require__(142),
+  sequence: __webpack_require__(143),
   set: __webpack_require__(428),
   slice: __webpack_require__(27),
   sort: __webpack_require__(429),
@@ -4937,17 +4937,17 @@ module.exports = {
   splitEvery: __webpack_require__(434),
   splitWhen: __webpack_require__(435),
   subtract: __webpack_require__(436),
-  sum: __webpack_require__(132),
+  sum: __webpack_require__(133),
   symmetricDifference: __webpack_require__(437),
   symmetricDifferenceWith: __webpack_require__(438),
   tail: __webpack_require__(75),
-  take: __webpack_require__(118),
+  take: __webpack_require__(119),
   takeLast: __webpack_require__(439),
   takeLastWhile: __webpack_require__(440),
   takeWhile: __webpack_require__(441),
   tap: __webpack_require__(443),
   test: __webpack_require__(444),
-  times: __webpack_require__(141),
+  times: __webpack_require__(142),
   toLower: __webpack_require__(446),
   toPairs: __webpack_require__(447),
   toPairsIn: __webpack_require__(448),
@@ -4966,18 +4966,18 @@ module.exports = {
   union: __webpack_require__(459),
   unionWith: __webpack_require__(460),
   uniq: __webpack_require__(81),
-  uniqBy: __webpack_require__(124),
+  uniqBy: __webpack_require__(125),
   uniqWith: __webpack_require__(82),
   unless: __webpack_require__(461),
   unnest: __webpack_require__(462),
   until: __webpack_require__(463),
-  update: __webpack_require__(130),
-  useWith: __webpack_require__(139),
-  values: __webpack_require__(95),
+  update: __webpack_require__(131),
+  useWith: __webpack_require__(140),
+  values: __webpack_require__(96),
   valuesIn: __webpack_require__(464),
   view: __webpack_require__(465),
   when: __webpack_require__(466),
-  where: __webpack_require__(143),
+  where: __webpack_require__(144),
   whereEq: __webpack_require__(467),
   without: __webpack_require__(468),
   xprod: __webpack_require__(469),
@@ -5479,8 +5479,8 @@ return function(dispatch){return dispatch(_fetchLevelUpPaymentMethod(brandibble,
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _xwrap = __webpack_require__(88);
-var bind = __webpack_require__(89);
+var _xwrap = __webpack_require__(89);
+var bind = __webpack_require__(90);
 var isArrayLike = __webpack_require__(34);
 
 
@@ -5604,7 +5604,7 @@ module.exports = function _arity(n, fn) {
 
 var _curry1 = __webpack_require__(2);
 var _has = __webpack_require__(9);
-var _isArguments = __webpack_require__(90);
+var _isArguments = __webpack_require__(91);
 
 
 /**
@@ -5776,7 +5776,7 @@ module.exports = _curry2(function equals(a, b) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var invariants_1 = __webpack_require__(148);
+var invariants_1 = __webpack_require__(149);
 var store_1 = __webpack_require__(24);
 function invariantsList(invariantArgs, config, current, record) {
     var extra = {
@@ -5797,7 +5797,7 @@ exports.default = invariantsList;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var invariants_1 = __webpack_require__(148);
+var invariants_1 = __webpack_require__(149);
 var store_1 = __webpack_require__(29);
 function invariantsMap(invariantArgs, config, current, record) {
     var extra = {
@@ -5872,7 +5872,7 @@ module.exports = function _reduced(x) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var assert_1 = __webpack_require__(490);
-var remove_1 = __webpack_require__(149);
+var remove_1 = __webpack_require__(150);
 var merge_1 = __webpack_require__(491);
 exports.default = {
     assert: assert_1.default,
@@ -6239,7 +6239,7 @@ module.exports = _curry3(_checkForMethod('slice', function slice(fromIndex, toIn
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _indexOf = __webpack_require__(106);
+var _indexOf = __webpack_require__(107);
 
 
 module.exports = function _contains(a, list) {
@@ -7790,7 +7790,7 @@ module.exports = function _isFunction(x) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var liftN = __webpack_require__(98);
+var liftN = __webpack_require__(99);
 
 
 /**
@@ -7916,7 +7916,7 @@ module.exports = _curry1(function reverse(list) {
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _complement = __webpack_require__(108);
+var _complement = __webpack_require__(109);
 var _curry2 = __webpack_require__(0);
 var filter = __webpack_require__(77);
 
@@ -8156,7 +8156,7 @@ return dispatch((0,_fireAction2.default)(FETCH_ALLERGENS,payload));
 /* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.fetchLocations=exports.fetchLocation=exports.pushGeolocation=exports.PUSH_GEOLOCATION=exports.FETCH_LOCATION=exports.FETCH_LOCATIONS=undefined;var _lodash=__webpack_require__(155);var _lodash2=_interopRequireDefault(_lodash);
+Object.defineProperty(exports,"__esModule",{value:true});exports.fetchLocations=exports.fetchLocation=exports.pushGeolocation=exports.PUSH_GEOLOCATION=exports.FETCH_LOCATION=exports.FETCH_LOCATIONS=undefined;var _lodash=__webpack_require__(86);var _lodash2=_interopRequireDefault(_lodash);
 var _fireAction=__webpack_require__(20);var _fireAction2=_interopRequireDefault(_fireAction);
 var _handleErrors=__webpack_require__(21);var _handleErrors2=_interopRequireDefault(_handleErrors);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
@@ -8204,7 +8204,7 @@ return dispatch((0,_fireAction2.default)(FETCH_LOCATIONS,payload));
 /* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.clearGeolocations=exports.fetchGeolocations=exports.CLEAR_GEOLOCATIONS=exports.FETCH_GEOLOCATIONS=undefined;var _lodash=__webpack_require__(155);var _lodash2=_interopRequireDefault(_lodash);
+Object.defineProperty(exports,"__esModule",{value:true});exports.clearGeolocations=exports.fetchGeolocations=exports.CLEAR_GEOLOCATIONS=exports.FETCH_GEOLOCATIONS=undefined;var _lodash=__webpack_require__(86);var _lodash2=_interopRequireDefault(_lodash);
 var _fireAction=__webpack_require__(20);var _fireAction2=_interopRequireDefault(_fireAction);
 var _handleErrors=__webpack_require__(21);var _handleErrors2=_interopRequireDefault(_handleErrors);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
@@ -8212,17 +8212,7 @@ var FETCH_GEOLOCATIONS=exports.FETCH_GEOLOCATIONS='FETCH_GEOLOCATIONS';
 var CLEAR_GEOLOCATIONS=exports.CLEAR_GEOLOCATIONS='CLEAR_GEOLOCATIONS';
 
 var fetchGeolocations=exports.fetchGeolocations=function fetchGeolocations(brandibble){var query=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){
-var payload=brandibble.locations.index(query).
-then(function(_ref){var data=_ref.data;
-
-
-
-
-return(0,_lodash2.default)(data,function(location){
-return!location.is_closed&&!location.is_coming_soon;
-});
-}).catch(_handleErrors2.default);
-
+var payload=brandibble.locations.index(query).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(FETCH_GEOLOCATIONS,payload));
 };};
 
@@ -8477,7 +8467,7 @@ module.exports = _curry2(function ap(applicative, fn) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _makeFlat = __webpack_require__(99);
+var _makeFlat = __webpack_require__(100);
 var _xchain = __webpack_require__(297);
 var map = __webpack_require__(10);
 
@@ -8553,7 +8543,7 @@ module.exports = _curry1(function type(val) {
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pipe = __webpack_require__(103);
+var pipe = __webpack_require__(104);
 var reverse = __webpack_require__(53);
 
 
@@ -8681,8 +8671,8 @@ module.exports = _curry2(function concat(a, b) {
 
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _filter = __webpack_require__(109);
-var _isObject = __webpack_require__(110);
+var _filter = __webpack_require__(110);
+var _isObject = __webpack_require__(111);
 var _reduce = __webpack_require__(12);
 var _xfilter = __webpack_require__(313);
 var keys = __webpack_require__(15);
@@ -8789,7 +8779,7 @@ module.exports = function _identity(x) { return x; };
 /***/ (function(module, exports, __webpack_require__) {
 
 var identity = __webpack_require__(79);
-var uniqBy = __webpack_require__(124);
+var uniqBy = __webpack_require__(125);
 
 
 /**
@@ -8898,2441 +8888,6 @@ exports.default = findByKey;
 
 /***/ }),
 /* 86 */
-/***/ (function(module, exports, __webpack_require__) {
-
-Object.defineProperty(exports,"__esModule",{value:true});exports.fetchMenu=exports.FETCH_MENU=undefined;var _fireAction=__webpack_require__(20);var _fireAction2=_interopRequireDefault(_fireAction);
-var _handleErrors=__webpack_require__(21);var _handleErrors2=_interopRequireDefault(_handleErrors);
-var _moment=__webpack_require__(1);var _moment2=_interopRequireDefault(_moment);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
-
-var FETCH_MENU=exports.FETCH_MENU='FETCH_MENU';
-
-var NOW=new Date();
-
-var defaultMenuType={
-locationId:null,
-requestedAt:NOW,
-serviceType:'delivery'};
-
-
-var fetchMenu=exports.fetchMenu=function fetchMenu(brandibble){var menuType=arguments.length>1&&arguments[1]!==undefined?arguments[1]:defaultMenuType;return function(dispatch){var
-
-locationId=
-
-
-menuType.locationId,requestedAt=menuType.requestedAt,serviceType=menuType.serviceType;
-var requestedAtFormatted=new Date((0,_moment2.default)(requestedAt));
-
-var payload=brandibble.menus.build(locationId,serviceType,requestedAtFormatted).
-then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
-
-return dispatch((0,_fireAction2.default)(FETCH_MENU,payload));
-};};
-
-/***/ }),
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _concat = __webpack_require__(13);
-var _curry3 = __webpack_require__(3);
-
-
-/**
- * Applies a function to the value at the given index of an array, returning a
- * new copy of the array with the element at the given index replaced with the
- * result of the function application.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category List
- * @sig (a -> a) -> Number -> [a] -> [a]
- * @param {Function} fn The function to apply.
- * @param {Number} idx The index.
- * @param {Array|Arguments} list An array-like object whose value
- *        at the supplied index will be replaced.
- * @return {Array} A copy of the supplied array-like object with
- *         the element at index `idx` replaced with the value
- *         returned by applying `fn` to the existing element.
- * @see R.update
- * @example
- *
- *      R.adjust(R.add(10), 1, [1, 2, 3]);     //=> [1, 12, 3]
- *      R.adjust(R.add(10))(1)([1, 2, 3]);     //=> [1, 12, 3]
- * @symb R.adjust(f, -1, [a, b]) = [a, f(b)]
- * @symb R.adjust(f, 0, [a, b]) = [f(a), b]
- */
-module.exports = _curry3(function adjust(fn, idx, list) {
-  if (idx >= list.length || idx < -list.length) {
-    return list;
-  }
-  var start = idx < 0 ? list.length : 0;
-  var _idx = start + idx;
-  var _list = _concat(list);
-  _list[_idx] = fn(list[_idx]);
-  return _list;
-});
-
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports) {
-
-module.exports = (function() {
-  function XWrap(fn) {
-    this.f = fn;
-  }
-  XWrap.prototype['@@transducer/init'] = function() {
-    throw new Error('init not implemented on XWrap');
-  };
-  XWrap.prototype['@@transducer/result'] = function(acc) { return acc; };
-  XWrap.prototype['@@transducer/step'] = function(acc, x) {
-    return this.f(acc, x);
-  };
-
-  return function _xwrap(fn) { return new XWrap(fn); };
-}());
-
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _arity = __webpack_require__(14);
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Creates a function that is bound to a context.
- * Note: `R.bind` does not provide the additional argument-binding capabilities of
- * [Function.prototype.bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
- *
- * @func
- * @memberOf R
- * @since v0.6.0
- * @category Function
- * @category Object
- * @sig (* -> *) -> {*} -> (* -> *)
- * @param {Function} fn The function to bind to context
- * @param {Object} thisObj The context to bind `fn` to
- * @return {Function} A function that will execute in the context of `thisObj`.
- * @see R.partial
- * @example
- *
- *      var log = R.bind(console.log, console);
- *      R.pipe(R.assoc('a', 2), R.tap(log), R.assoc('a', 3))({a: 1}); //=> {a: 3}
- *      // logs {a: 2}
- * @symb R.bind(f, o)(a, b) = f.call(o, a, b)
- */
-module.exports = _curry2(function bind(fn, thisObj) {
-  return _arity(fn.length, function() {
-    return fn.apply(thisObj, arguments);
-  });
-});
-
-
-/***/ }),
-/* 90 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _has = __webpack_require__(9);
-
-
-module.exports = (function() {
-  var toString = Object.prototype.toString;
-  return toString.call(arguments) === '[object Arguments]' ?
-    function _isArguments(x) { return toString.call(x) === '[object Arguments]'; } :
-    function _isArguments(x) { return _has('callee', x); };
-}());
-
-
-/***/ }),
-/* 91 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Returns `true` if both arguments are `true`; `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Logic
- * @sig a -> b -> a | b
- * @param {Any} a
- * @param {Any} b
- * @return {Any} the first argument if it is falsy, otherwise the second argument.
- * @see R.both
- * @example
- *
- *      R.and(true, true); //=> true
- *      R.and(true, false); //=> false
- *      R.and(false, true); //=> false
- *      R.and(false, false); //=> false
- */
-module.exports = _curry2(function and(a, b) {
-  return a && b;
-});
-
-
-/***/ }),
-/* 92 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var _dispatchable = __webpack_require__(6);
-var _xany = __webpack_require__(93);
-
-
-/**
- * Returns `true` if at least one of elements of the list match the predicate,
- * `false` otherwise.
- *
- * Dispatches to the `any` method of the second argument, if present.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> Boolean
- * @param {Function} fn The predicate function.
- * @param {Array} list The array to consider.
- * @return {Boolean} `true` if the predicate is satisfied by at least one element, `false`
- *         otherwise.
- * @see R.all, R.none, R.transduce
- * @example
- *
- *      var lessThan0 = R.flip(R.lt)(0);
- *      var lessThan2 = R.flip(R.lt)(2);
- *      R.any(lessThan0)([1, 2]); //=> false
- *      R.any(lessThan2)([1, 2]); //=> true
- */
-module.exports = _curry2(_dispatchable(['any'], _xany, function any(fn, list) {
-  var idx = 0;
-  while (idx < list.length) {
-    if (fn(list[idx])) {
-      return true;
-    }
-    idx += 1;
-  }
-  return false;
-}));
-
-
-/***/ }),
-/* 93 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var _reduced = __webpack_require__(23);
-var _xfBase = __webpack_require__(7);
-
-
-module.exports = (function() {
-  function XAny(f, xf) {
-    this.xf = xf;
-    this.f = f;
-    this.any = false;
-  }
-  XAny.prototype['@@transducer/init'] = _xfBase.init;
-  XAny.prototype['@@transducer/result'] = function(result) {
-    if (!this.any) {
-      result = this.xf['@@transducer/step'](result, false);
-    }
-    return this.xf['@@transducer/result'](result);
-  };
-  XAny.prototype['@@transducer/step'] = function(result, input) {
-    if (this.f(input)) {
-      this.any = true;
-      result = _reduced(this.xf['@@transducer/step'](result, true));
-    }
-    return result;
-  };
-
-  return _curry2(function _xany(f, xf) { return new XAny(f, xf); });
-}());
-
-
-/***/ }),
-/* 94 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Applies function `fn` to the argument list `args`. This is useful for
- * creating a fixed-arity function from a variadic function. `fn` should be a
- * bound function if context is significant.
- *
- * @func
- * @memberOf R
- * @since v0.7.0
- * @category Function
- * @sig (*... -> a) -> [*] -> a
- * @param {Function} fn The function which will be called with `args`
- * @param {Array} args The arguments to call `fn` with
- * @return {*} result The result, equivalent to `fn(...args)`
- * @see R.call, R.unapply
- * @example
- *
- *      var nums = [1, 2, 3, -99, 42, 6, 7];
- *      R.apply(Math.max, nums); //=> 42
- * @symb R.apply(f, [a, b, c]) = f(a, b, c)
- */
-module.exports = _curry2(function apply(fn, args) {
-  return fn.apply(this, args);
-});
-
-
-/***/ }),
-/* 95 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry1 = __webpack_require__(2);
-var keys = __webpack_require__(15);
-
-
-/**
- * Returns a list of all the enumerable own properties of the supplied object.
- * Note that the order of the output array is not guaranteed across different
- * JS platforms.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig {k: v} -> [v]
- * @param {Object} obj The object to extract values from
- * @return {Array} An array of the values of the object's own properties.
- * @example
- *
- *      R.values({a: 1, b: 2, c: 3}); //=> [1, 2, 3]
- */
-module.exports = _curry1(function values(obj) {
-  var props = keys(obj);
-  var len = props.length;
-  var vals = [];
-  var idx = 0;
-  while (idx < len) {
-    vals[idx] = obj[props[idx]];
-    idx += 1;
-  }
-  return vals;
-});
-
-
-/***/ }),
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry3 = __webpack_require__(3);
-var _has = __webpack_require__(9);
-var _isArray = __webpack_require__(22);
-var _isInteger = __webpack_require__(97);
-var assoc = __webpack_require__(48);
-
-
-/**
- * Makes a shallow clone of an object, setting or overriding the nodes required
- * to create the given path, and placing the specific value at the tail end of
- * that path. Note that this copies and flattens prototype properties onto the
- * new object as well. All non-primitive properties are copied by reference.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Object
- * @typedefn Idx = String | Int
- * @sig [Idx] -> a -> {a} -> {a}
- * @param {Array} path the path to set
- * @param {*} val The new value
- * @param {Object} obj The object to clone
- * @return {Object} A new object equivalent to the original except along the specified path.
- * @see R.dissocPath
- * @example
- *
- *      R.assocPath(['a', 'b', 'c'], 42, {a: {b: {c: 0}}}); //=> {a: {b: {c: 42}}}
- *
- *      // Any missing or non-object keys in path will be overridden
- *      R.assocPath(['a', 'b', 'c'], 42, {a: 5}); //=> {a: {b: {c: 42}}}
- */
-module.exports = _curry3(function assocPath(path, val, obj) {
-  if (path.length === 0) {
-    return val;
-  }
-  var idx = path[0];
-  if (path.length > 1) {
-    var nextObj = _has(idx, obj) ? obj[idx] : _isInteger(path[1]) ? [] : {};
-    val = assocPath(Array.prototype.slice.call(path, 1), val, nextObj);
-  }
-  if (_isInteger(idx) && _isArray(obj)) {
-    var arr = [].concat(obj);
-    arr[idx] = val;
-    return arr;
-  } else {
-    return assoc(idx, val, obj);
-  }
-});
-
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports) {
-
-/**
- * Determine if the passed argument is an integer.
- *
- * @private
- * @param {*} n
- * @category Type
- * @return {Boolean}
- */
-module.exports = Number.isInteger || function _isInteger(n) {
-  return (n << 0) === n;
-};
-
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var _reduce = __webpack_require__(12);
-var ap = __webpack_require__(71);
-var curryN = __webpack_require__(8);
-var map = __webpack_require__(10);
-
-
-/**
- * "lifts" a function to be the specified arity, so that it may "map over" that
- * many lists, Functions or other objects that satisfy the [FantasyLand Apply spec](https://github.com/fantasyland/fantasy-land#apply).
- *
- * @func
- * @memberOf R
- * @since v0.7.0
- * @category Function
- * @sig Number -> (*... -> *) -> ([*]... -> [*])
- * @param {Function} fn The function to lift into higher context
- * @return {Function} The lifted function.
- * @see R.lift, R.ap
- * @example
- *
- *      var madd3 = R.liftN(3, (...args) => R.sum(args));
- *      madd3([1,2,3], [1,2,3], [1]); //=> [3, 4, 5, 4, 5, 6, 5, 6, 7]
- */
-module.exports = _curry2(function liftN(arity, fn) {
-  var lifted = curryN(arity, fn);
-  return curryN(arity, function() {
-    return _reduce(ap, map(lifted, arguments[0]), Array.prototype.slice.call(arguments, 1));
-  });
-});
-
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isArrayLike = __webpack_require__(34);
-
-
-/**
- * `_makeFlat` is a helper function that returns a one-level or fully recursive
- * function based on the flag passed in.
- *
- * @private
- */
-module.exports = function _makeFlat(recursive) {
-  return function flatt(list) {
-    var value, jlen, j;
-    var result = [];
-    var idx = 0;
-    var ilen = list.length;
-
-    while (idx < ilen) {
-      if (isArrayLike(list[idx])) {
-        value = recursive ? flatt(list[idx]) : list[idx];
-        j = 0;
-        jlen = value.length;
-        while (j < jlen) {
-          result[result.length] = value[j];
-          j += 1;
-        }
-      } else {
-        result[result.length] = list[idx];
-      }
-      idx += 1;
-    }
-    return result;
-  };
-};
-
-
-/***/ }),
-/* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _cloneRegExp = __webpack_require__(101);
-var type = __webpack_require__(73);
-
-
-/**
- * Copies an object.
- *
- * @private
- * @param {*} value The value to be copied
- * @param {Array} refFrom Array containing the source references
- * @param {Array} refTo Array containing the copied source references
- * @param {Boolean} deep Whether or not to perform deep cloning.
- * @return {*} The copied value.
- */
-module.exports = function _clone(value, refFrom, refTo, deep) {
-  var copy = function copy(copiedValue) {
-    var len = refFrom.length;
-    var idx = 0;
-    while (idx < len) {
-      if (value === refFrom[idx]) {
-        return refTo[idx];
-      }
-      idx += 1;
-    }
-    refFrom[idx + 1] = value;
-    refTo[idx + 1] = copiedValue;
-    for (var key in value) {
-      copiedValue[key] = deep ?
-        _clone(value[key], refFrom, refTo, true) : value[key];
-    }
-    return copiedValue;
-  };
-  switch (type(value)) {
-    case 'Object':  return copy({});
-    case 'Array':   return copy([]);
-    case 'Date':    return new Date(value.valueOf());
-    case 'RegExp':  return _cloneRegExp(value);
-    default:        return value;
-  }
-};
-
-
-/***/ }),
-/* 101 */
-/***/ (function(module, exports) {
-
-module.exports = function _cloneRegExp(pattern) {
-  return new RegExp(pattern.source, (pattern.global     ? 'g' : '') +
-                                    (pattern.ignoreCase ? 'i' : '') +
-                                    (pattern.multiline  ? 'm' : '') +
-                                    (pattern.sticky     ? 'y' : '') +
-                                    (pattern.unicode    ? 'u' : ''));
-};
-
-
-/***/ }),
-/* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry1 = __webpack_require__(2);
-
-
-/**
- * A function that returns the `!` of its argument. It will return `true` when
- * passed false-y value, and `false` when passed a truth-y one.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Logic
- * @sig * -> Boolean
- * @param {*} a any value
- * @return {Boolean} the logical inverse of passed argument.
- * @see R.complement
- * @example
- *
- *      R.not(true); //=> false
- *      R.not(false); //=> true
- *      R.not(0); //=> true
- *      R.not(1); //=> false
- */
-module.exports = _curry1(function not(a) {
-  return !a;
-});
-
-
-/***/ }),
-/* 103 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _arity = __webpack_require__(14);
-var _pipe = __webpack_require__(304);
-var reduce = __webpack_require__(16);
-var tail = __webpack_require__(75);
-
-
-/**
- * Performs left-to-right function composition. The leftmost function may have
- * any arity; the remaining functions must be unary.
- *
- * In some libraries this function is named `sequence`.
- *
- * **Note:** The result of pipe is not automatically curried.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (((a, b, ..., n) -> o), (o -> p), ..., (x -> y), (y -> z)) -> ((a, b, ..., n) -> z)
- * @param {...Function} functions
- * @return {Function}
- * @see R.compose
- * @example
- *
- *      var f = R.pipe(Math.pow, R.negate, R.inc);
- *
- *      f(3, 4); // -(3^4) + 1
- * @symb R.pipe(f, g, h)(a, b) = h(g(f(a, b)))
- */
-module.exports = function pipe() {
-  if (arguments.length === 0) {
-    throw new Error('pipe requires at least one argument');
-  }
-  return _arity(arguments[0].length,
-                reduce(_pipe, arguments[0], tail(arguments)));
-};
-
-
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var chain = __webpack_require__(72);
-var compose = __webpack_require__(74);
-var map = __webpack_require__(10);
-
-
-/**
- * Returns the right-to-left Kleisli composition of the provided functions,
- * each of which must return a value of a type supported by [`chain`](#chain).
- *
- * `R.composeK(h, g, f)` is equivalent to `R.compose(R.chain(h), R.chain(g), R.chain(f))`.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category Function
- * @sig Chain m => ((y -> m z), (x -> m y), ..., (a -> m b)) -> (a -> m z)
- * @param {...Function} ...functions The functions to compose
- * @return {Function}
- * @see R.pipeK
- * @example
- *
- *       //  get :: String -> Object -> Maybe *
- *       var get = R.curry((propName, obj) => Maybe(obj[propName]))
- *
- *       //  getStateCode :: Maybe String -> Maybe String
- *       var getStateCode = R.composeK(
- *         R.compose(Maybe.of, R.toUpper),
- *         get('state'),
- *         get('address'),
- *         get('user'),
- *       );
- *       getStateCode({"user":{"address":{"state":"ny"}}}); //=> Maybe.Just("NY")
- *       getStateCode({}); //=> Maybe.Nothing()
- * @symb R.composeK(f, g, h)(a) = R.chain(f, R.chain(g, h(a)))
- */
-module.exports = function composeK() {
-  if (arguments.length === 0) {
-    throw new Error('composeK requires at least one argument');
-  }
-  var init = Array.prototype.slice.call(arguments);
-  var last = init.pop();
-  return compose(compose.apply(this, map(chain, init)), last);
-};
-
-
-/***/ }),
-/* 105 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _arity = __webpack_require__(14);
-var _pipeP = __webpack_require__(306);
-var reduce = __webpack_require__(16);
-var tail = __webpack_require__(75);
-
-
-/**
- * Performs left-to-right composition of one or more Promise-returning
- * functions. The leftmost function may have any arity; the remaining functions
- * must be unary.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Function
- * @sig ((a -> Promise b), (b -> Promise c), ..., (y -> Promise z)) -> (a -> Promise z)
- * @param {...Function} functions
- * @return {Function}
- * @see R.composeP
- * @example
- *
- *      //  followersForUser :: String -> Promise [User]
- *      var followersForUser = R.pipeP(db.getUserById, db.getFollowers);
- */
-module.exports = function pipeP() {
-  if (arguments.length === 0) {
-    throw new Error('pipeP requires at least one argument');
-  }
-  return _arity(arguments[0].length,
-                reduce(_pipeP, arguments[0], tail(arguments)));
-};
-
-
-/***/ }),
-/* 106 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var equals = __webpack_require__(17);
-
-
-module.exports = function _indexOf(list, a, idx) {
-  var inf, item;
-  // Array.prototype.indexOf doesn't exist below IE9
-  if (typeof list.indexOf === 'function') {
-    switch (typeof a) {
-      case 'number':
-        if (a === 0) {
-          // manually crawl the list to distinguish between +0 and -0
-          inf = 1 / a;
-          while (idx < list.length) {
-            item = list[idx];
-            if (item === 0 && 1 / item === inf) {
-              return idx;
-            }
-            idx += 1;
-          }
-          return -1;
-        } else if (a !== a) {
-          // NaN
-          while (idx < list.length) {
-            item = list[idx];
-            if (typeof item === 'number' && item !== item) {
-              return idx;
-            }
-            idx += 1;
-          }
-          return -1;
-        }
-        // non-zero numbers can utilise Set
-        return list.indexOf(a, idx);
-
-      // all these types can utilise Set
-      case 'string':
-      case 'boolean':
-      case 'function':
-      case 'undefined':
-        return list.indexOf(a, idx);
-
-      case 'object':
-        if (a === null) {
-          // null can utilise Set
-          return list.indexOf(a, idx);
-        }
-    }
-  }
-  // anything else not covered above, defer to R.equals
-  while (idx < list.length) {
-    if (equals(list[idx], a)) {
-      return idx;
-    }
-    idx += 1;
-  }
-  return -1;
-};
-
-
-/***/ }),
-/* 107 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Returns true if its arguments are identical, false otherwise. Values are
- * identical if they reference the same memory. `NaN` is identical to `NaN`;
- * `0` and `-0` are not identical.
- *
- * @func
- * @memberOf R
- * @since v0.15.0
- * @category Relation
- * @sig a -> a -> Boolean
- * @param {*} a
- * @param {*} b
- * @return {Boolean}
- * @example
- *
- *      var o = {};
- *      R.identical(o, o); //=> true
- *      R.identical(1, 1); //=> true
- *      R.identical(1, '1'); //=> false
- *      R.identical([], []); //=> false
- *      R.identical(0, -0); //=> false
- *      R.identical(NaN, NaN); //=> true
- */
-module.exports = _curry2(function identical(a, b) {
-  // SameValue algorithm
-  if (a === b) { // Steps 1-5, 7-10
-    // Steps 6.b-6.e: +0 != -0
-    return a !== 0 || 1 / a === 1 / b;
-  } else {
-    // Step 6.a: NaN == NaN
-    return a !== a && b !== b;
-  }
-});
-
-
-/***/ }),
-/* 108 */
-/***/ (function(module, exports) {
-
-module.exports = function _complement(f) {
-  return function() {
-    return !f.apply(this, arguments);
-  };
-};
-
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports) {
-
-module.exports = function _filter(fn, list) {
-  var idx = 0;
-  var len = list.length;
-  var result = [];
-
-  while (idx < len) {
-    if (fn(list[idx])) {
-      result[result.length] = list[idx];
-    }
-    idx += 1;
-  }
-  return result;
-};
-
-
-/***/ }),
-/* 110 */
-/***/ (function(module, exports) {
-
-module.exports = function _isObject(x) {
-  return Object.prototype.toString.call(x) === '[object Object]';
-};
-
-
-/***/ }),
-/* 111 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var curry = __webpack_require__(52);
-var nAry = __webpack_require__(49);
-
-
-/**
- * Wraps a constructor function inside a curried function that can be called
- * with the same arguments and returns the same type. The arity of the function
- * returned is specified to allow using variadic constructor functions.
- *
- * @func
- * @memberOf R
- * @since v0.4.0
- * @category Function
- * @sig Number -> (* -> {*}) -> (* -> {*})
- * @param {Number} n The arity of the constructor function.
- * @param {Function} Fn The constructor function to wrap.
- * @return {Function} A wrapped, curried constructor function.
- * @example
- *
- *      // Variadic Constructor function
- *      function Salad() {
- *        this.ingredients = arguments;
- *      };
- *      Salad.prototype.recipe = function() {
- *        var instructions = R.map((ingredient) => (
- *          'Add a whollop of ' + ingredient, this.ingredients)
- *        )
- *        return R.join('\n', instructions)
- *      }
- *
- *      var ThreeLayerSalad = R.constructN(3, Salad)
- *
- *      // Notice we no longer need the 'new' keyword, and the constructor is curried for 3 arguments.
- *      var salad = ThreeLayerSalad('Mayonnaise')('Potato Chips')('Ketchup')
- *      console.log(salad.recipe());
- *      // Add a whollop of Mayonnaise
- *      // Add a whollop of Potato Chips
- *      // Add a whollop of Potato Ketchup
- */
-module.exports = _curry2(function constructN(n, Fn) {
-  if (n > 10) {
-    throw new Error('Constructor with greater than ten arguments');
-  }
-  if (n === 0) {
-    return function() { return new Fn(); };
-  }
-  return curry(nAry(n, function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
-    switch (arguments.length) {
-      case  1: return new Fn($0);
-      case  2: return new Fn($0, $1);
-      case  3: return new Fn($0, $1, $2);
-      case  4: return new Fn($0, $1, $2, $3);
-      case  5: return new Fn($0, $1, $2, $3, $4);
-      case  6: return new Fn($0, $1, $2, $3, $4, $5);
-      case  7: return new Fn($0, $1, $2, $3, $4, $5, $6);
-      case  8: return new Fn($0, $1, $2, $3, $4, $5, $6, $7);
-      case  9: return new Fn($0, $1, $2, $3, $4, $5, $6, $7, $8);
-      case 10: return new Fn($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
-    }
-  }));
-});
-
-
-/***/ }),
-/* 112 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var _map = __webpack_require__(46);
-var curryN = __webpack_require__(8);
-var max = __webpack_require__(32);
-var pluck = __webpack_require__(33);
-var reduce = __webpack_require__(16);
-
-
-/**
- * Accepts a converging function and a list of branching functions and returns
- * a new function. When invoked, this new function is applied to some
- * arguments, each branching function is applied to those same arguments. The
- * results of each branching function are passed as arguments to the converging
- * function to produce the return value.
- *
- * @func
- * @memberOf R
- * @since v0.4.2
- * @category Function
- * @sig (x1 -> x2 -> ... -> z) -> [(a -> b -> ... -> x1), (a -> b -> ... -> x2), ...] -> (a -> b -> ... -> z)
- * @param {Function} after A function. `after` will be invoked with the return values of
- *        `fn1` and `fn2` as its arguments.
- * @param {Array} functions A list of functions.
- * @return {Function} A new function.
- * @see R.useWith
- * @example
- *
- *      var average = R.converge(R.divide, [R.sum, R.length])
- *      average([1, 2, 3, 4, 5, 6, 7]) //=> 4
- *
- *      var strangeConcat = R.converge(R.concat, [R.toUpper, R.toLower])
- *      strangeConcat("Yodel") //=> "YODELyodel"
- *
- * @symb R.converge(f, [g, h])(a, b) = f(g(a, b), h(a, b))
- */
-module.exports = _curry2(function converge(after, fns) {
-  return curryN(reduce(max, 0, pluck('length', fns)), function() {
-    var args = arguments;
-    var context = this;
-    return after.apply(context, _map(function(fn) {
-      return fn.apply(context, args);
-    }, fns));
-  });
-});
-
-
-/***/ }),
-/* 113 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Returns the second argument if it is not `null`, `undefined` or `NaN`
- * otherwise the first argument is returned.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Logic
- * @sig a -> b -> a | b
- * @param {a} default The default value.
- * @param {b} val `val` will be returned instead of `default` unless `val` is `null`, `undefined` or `NaN`.
- * @return {*} The second value if it is not `null`, `undefined` or `NaN`, otherwise the default value
- * @example
- *
- *      var defaultTo42 = R.defaultTo(42);
- *
- *      defaultTo42(null);  //=> 42
- *      defaultTo42(undefined);  //=> 42
- *      defaultTo42('Ramda');  //=> 'Ramda'
- *      // parseInt('string') results in NaN
- *      defaultTo42(parseInt('string')); //=> 42
- */
-module.exports = _curry2(function defaultTo(d, v) {
-  return v == null || v !== v ? d : v;
-});
-
-
-/***/ }),
-/* 114 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _contains = __webpack_require__(28);
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Finds the set (i.e. no duplicates) of all elements in the first list not
- * contained in the second list. Objects and Arrays are compared are compared
- * in terms of value equality, not reference equality.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig [*] -> [*] -> [*]
- * @param {Array} list1 The first list.
- * @param {Array} list2 The second list.
- * @return {Array} The elements in `list1` that are not in `list2`.
- * @see R.differenceWith, R.symmetricDifference, R.symmetricDifferenceWith
- * @example
- *
- *      R.difference([1,2,3,4], [7,6,5,4,3]); //=> [1,2]
- *      R.difference([7,6,5,4,3], [1,2,3,4]); //=> [7,6,5]
- *      R.difference([{a: 1}, {b: 2}], [{a: 1}, {c: 3}]) //=> [{b: 2}]
- */
-module.exports = _curry2(function difference(first, second) {
-  var out = [];
-  var idx = 0;
-  var firstLen = first.length;
-  while (idx < firstLen) {
-    if (!_contains(first[idx], second) && !_contains(first[idx], out)) {
-      out[out.length] = first[idx];
-    }
-    idx += 1;
-  }
-  return out;
-});
-
-
-/***/ }),
-/* 115 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _containsWith = __webpack_require__(78);
-var _curry3 = __webpack_require__(3);
-
-
-/**
- * Finds the set (i.e. no duplicates) of all elements in the first list not
- * contained in the second list. Duplication is determined according to the
- * value returned by applying the supplied predicate to two list elements.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig ((a, a) -> Boolean) -> [a] -> [a] -> [a]
- * @param {Function} pred A predicate used to test whether two items are equal.
- * @param {Array} list1 The first list.
- * @param {Array} list2 The second list.
- * @return {Array} The elements in `list1` that are not in `list2`.
- * @see R.difference, R.symmetricDifference, R.symmetricDifferenceWith
- * @example
- *
- *      var cmp = (x, y) => x.a === y.a;
- *      var l1 = [{a: 1}, {a: 2}, {a: 3}];
- *      var l2 = [{a: 3}, {a: 4}];
- *      R.differenceWith(cmp, l1, l2); //=> [{a: 1}, {a: 2}]
- */
-module.exports = _curry3(function differenceWith(pred, first, second) {
-  var out = [];
-  var idx = 0;
-  var firstLen = first.length;
-  while (idx < firstLen) {
-    if (!_containsWith(pred, first[idx], second) &&
-        !_containsWith(pred, first[idx], out)) {
-      out.push(first[idx]);
-    }
-    idx += 1;
-  }
-  return out;
-});
-
-
-/***/ }),
-/* 116 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Returns a new object that does not contain a `prop` property.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Object
- * @sig String -> {k: v} -> {k: v}
- * @param {String} prop The name of the property to dissociate
- * @param {Object} obj The object to clone
- * @return {Object} A new object equivalent to the original but without the specified property
- * @see R.assoc
- * @example
- *
- *      R.dissoc('b', {a: 1, b: 2, c: 3}); //=> {a: 1, c: 3}
- */
-module.exports = _curry2(function dissoc(prop, obj) {
-  var result = {};
-  for (var p in obj) {
-    result[p] = obj[p];
-  }
-  delete result[prop];
-  return result;
-});
-
-
-/***/ }),
-/* 117 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var _dispatchable = __webpack_require__(6);
-var _xdrop = __webpack_require__(323);
-var slice = __webpack_require__(27);
-
-
-/**
- * Returns all but the first `n` elements of the given list, string, or
- * transducer/transformer (or object with a `drop` method).
- *
- * Dispatches to the `drop` method of the second argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig Number -> [a] -> [a]
- * @sig Number -> String -> String
- * @param {Number} n
- * @param {[a]} list
- * @return {[a]} A copy of list without the first `n` elements
- * @see R.take, R.transduce, R.dropLast, R.dropWhile
- * @example
- *
- *      R.drop(1, ['foo', 'bar', 'baz']); //=> ['bar', 'baz']
- *      R.drop(2, ['foo', 'bar', 'baz']); //=> ['baz']
- *      R.drop(3, ['foo', 'bar', 'baz']); //=> []
- *      R.drop(4, ['foo', 'bar', 'baz']); //=> []
- *      R.drop(3, 'ramda');               //=> 'da'
- */
-module.exports = _curry2(_dispatchable(['drop'], _xdrop, function drop(n, xs) {
-  return slice(Math.max(0, n), Infinity, xs);
-}));
-
-
-/***/ }),
-/* 118 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var _dispatchable = __webpack_require__(6);
-var _xtake = __webpack_require__(326);
-var slice = __webpack_require__(27);
-
-
-/**
- * Returns the first `n` elements of the given list, string, or
- * transducer/transformer (or object with a `take` method).
- *
- * Dispatches to the `take` method of the second argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig Number -> [a] -> [a]
- * @sig Number -> String -> String
- * @param {Number} n
- * @param {*} list
- * @return {*}
- * @see R.drop
- * @example
- *
- *      R.take(1, ['foo', 'bar', 'baz']); //=> ['foo']
- *      R.take(2, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
- *      R.take(3, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
- *      R.take(4, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
- *      R.take(3, 'ramda');               //=> 'ram'
- *
- *      var personnel = [
- *        'Dave Brubeck',
- *        'Paul Desmond',
- *        'Eugene Wright',
- *        'Joe Morello',
- *        'Gerry Mulligan',
- *        'Bob Bates',
- *        'Joe Dodge',
- *        'Ron Crotty'
- *      ];
- *
- *      var takeFive = R.take(5);
- *      takeFive(personnel);
- *      //=> ['Dave Brubeck', 'Paul Desmond', 'Eugene Wright', 'Joe Morello', 'Gerry Mulligan']
- * @symb R.take(-1, [a, b]) = [a, b]
- * @symb R.take(0, [a, b]) = []
- * @symb R.take(1, [a, b]) = [a]
- * @symb R.take(2, [a, b]) = [a, b]
- */
-module.exports = _curry2(_dispatchable(['take'], _xtake, function take(n, xs) {
-  return slice(0, n < 0 ? Infinity : n, xs);
-}));
-
-
-/***/ }),
-/* 119 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var _xfBase = __webpack_require__(7);
-
-
-module.exports = (function() {
-  function XDropRepeatsWith(pred, xf) {
-    this.xf = xf;
-    this.pred = pred;
-    this.lastValue = undefined;
-    this.seenFirstValue = false;
-  }
-
-  XDropRepeatsWith.prototype['@@transducer/init'] = _xfBase.init;
-  XDropRepeatsWith.prototype['@@transducer/result'] = _xfBase.result;
-  XDropRepeatsWith.prototype['@@transducer/step'] = function(result, input) {
-    var sameAsLast = false;
-    if (!this.seenFirstValue) {
-      this.seenFirstValue = true;
-    } else if (this.pred(this.lastValue, input)) {
-      sameAsLast = true;
-    }
-    this.lastValue = input;
-    return sameAsLast ? result : this.xf['@@transducer/step'](result, input);
-  };
-
-  return _curry2(function _xdropRepeatsWith(pred, xf) { return new XDropRepeatsWith(pred, xf); });
-}());
-
-
-/***/ }),
-/* 120 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var _dispatchable = __webpack_require__(6);
-var _xdropRepeatsWith = __webpack_require__(119);
-var last = __webpack_require__(121);
-
-
-/**
- * Returns a new list without any consecutively repeating elements. Equality is
- * determined by applying the supplied predicate to each pair of consecutive elements. The
- * first element in a series of equal elements will be preserved.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category List
- * @sig (a, a -> Boolean) -> [a] -> [a]
- * @param {Function} pred A predicate used to test whether two items are equal.
- * @param {Array} list The array to consider.
- * @return {Array} `list` without repeating elements.
- * @see R.transduce
- * @example
- *
- *      var l = [1, -1, 1, 3, 4, -4, -4, -5, 5, 3, 3];
- *      R.dropRepeatsWith(R.eqBy(Math.abs), l); //=> [1, 3, 4, -5, 3]
- */
-module.exports = _curry2(_dispatchable([], _xdropRepeatsWith, function dropRepeatsWith(pred, list) {
-  var result = [];
-  var idx = 1;
-  var len = list.length;
-  if (len !== 0) {
-    result[0] = list[0];
-    while (idx < len) {
-      if (!pred(last(result), list[idx])) {
-        result[result.length] = list[idx];
-      }
-      idx += 1;
-    }
-  }
-  return result;
-}));
-
-
-
-/***/ }),
-/* 121 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var nth = __webpack_require__(37);
-
-
-/**
- * Returns the last element of the given list or string.
- *
- * @func
- * @memberOf R
- * @since v0.1.4
- * @category List
- * @sig [a] -> a | Undefined
- * @sig String -> String
- * @param {*} list
- * @return {*}
- * @see R.init, R.head, R.tail
- * @example
- *
- *      R.last(['fi', 'fo', 'fum']); //=> 'fum'
- *      R.last([]); //=> undefined
- *
- *      R.last('abc'); //=> 'c'
- *      R.last(''); //=> ''
- */
-module.exports = nth(-1);
-
-
-/***/ }),
-/* 122 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Returns `true` if one or both of its arguments are `true`. Returns `false`
- * if both arguments are `false`.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Logic
- * @sig a -> b -> a | b
- * @param {Any} a
- * @param {Any} b
- * @return {Any} the first argument if truthy, otherwise the second argument.
- * @see R.either
- * @example
- *
- *      R.or(true, true); //=> true
- *      R.or(true, false); //=> true
- *      R.or(false, true); //=> true
- *      R.or(false, false); //=> false
- */
-module.exports = _curry2(function or(a, b) {
-  return a || b;
-});
-
-
-/***/ }),
-/* 123 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry1 = __webpack_require__(2);
-var _isArguments = __webpack_require__(90);
-var _isArray = __webpack_require__(22);
-var _isObject = __webpack_require__(110);
-var _isString = __webpack_require__(47);
-
-
-/**
- * Returns the empty value of its argument's type. Ramda defines the empty
- * value of Array (`[]`), Object (`{}`), String (`''`), and Arguments. Other
- * types are supported if they define `<Type>.empty` and/or
- * `<Type>.prototype.empty`.
- *
- * Dispatches to the `empty` method of the first argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category Function
- * @sig a -> a
- * @param {*} x
- * @return {*}
- * @example
- *
- *      R.empty(Just(42));      //=> Nothing()
- *      R.empty([1, 2, 3]);     //=> []
- *      R.empty('unicorns');    //=> ''
- *      R.empty({x: 1, y: 2});  //=> {}
- */
-module.exports = _curry1(function empty(x) {
-  return (
-    (x != null && typeof x.empty === 'function') ?
-      x.empty() :
-    (x != null && x.constructor != null && typeof x.constructor.empty === 'function') ?
-      x.constructor.empty() :
-    _isArray(x) ?
-      [] :
-    _isString(x) ?
-      '' :
-    _isObject(x) ?
-      {} :
-    _isArguments(x) ?
-      (function() { return arguments; }()) :
-    // else
-      void 0
-  );
-});
-
-
-/***/ }),
-/* 124 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Set = __webpack_require__(365);
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Returns a new list containing only one copy of each element in the original
- * list, based upon the value returned by applying the supplied function to
- * each list element. Prefers the first item if the supplied function produces
- * the same value on two items. `R.equals` is used for comparison.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category List
- * @sig (a -> b) -> [a] -> [a]
- * @param {Function} fn A function used to produce a value to use during comparisons.
- * @param {Array} list The array to consider.
- * @return {Array} The list of unique items.
- * @example
- *
- *      R.uniqBy(Math.abs, [-1, -5, 2, 10, 1, 2]); //=> [-1, -5, 2, 10]
- */
-module.exports = _curry2(function uniqBy(fn, list) {
-  var set = new _Set();
-  var result = [];
-  var idx = 0;
-  var appliedItem, item;
-
-  while (idx < list.length) {
-    item = list[idx];
-    appliedItem = fn(item);
-    if (set.add(appliedItem)) {
-      result.push(item);
-    }
-    idx += 1;
-  }
-  return result;
-});
-
-
-/***/ }),
-/* 125 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Creates an object containing a single key:value pair.
- *
- * @func
- * @memberOf R
- * @since v0.18.0
- * @category Object
- * @sig String -> a -> {String:a}
- * @param {String} key
- * @param {*} val
- * @return {Object}
- * @see R.pair
- * @example
- *
- *      var matchPhrases = R.compose(
- *        R.objOf('must'),
- *        R.map(R.objOf('match_phrase'))
- *      );
- *      matchPhrases(['foo', 'bar', 'baz']); //=> {must: [{match_phrase: 'foo'}, {match_phrase: 'bar'}, {match_phrase: 'baz'}]}
- */
-module.exports = _curry2(function objOf(key, val) {
-  var obj = {};
-  obj[key] = val;
-  return obj;
-});
-
-
-/***/ }),
-/* 126 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * See if an object (`val`) is an instance of the supplied constructor. This
- * function will check up the inheritance chain, if any.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category Type
- * @sig (* -> {*}) -> a -> Boolean
- * @param {Object} ctor A constructor
- * @param {*} val The value to test
- * @return {Boolean}
- * @example
- *
- *      R.is(Object, {}); //=> true
- *      R.is(Number, 1); //=> true
- *      R.is(Object, 1); //=> false
- *      R.is(String, 's'); //=> true
- *      R.is(String, new String('')); //=> true
- *      R.is(Object, new String('')); //=> true
- *      R.is(Object, 's'); //=> false
- *      R.is(Number, {}); //=> false
- */
-module.exports = _curry2(function is(Ctor, val) {
-  return val != null && val.constructor === Ctor || val instanceof Ctor;
-});
-
-
-/***/ }),
-/* 127 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry1 = __webpack_require__(2);
-var converge = __webpack_require__(112);
-
-
-/**
- * juxt applies a list of functions to a list of values.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category Function
- * @sig [(a, b, ..., m) -> n] -> ((a, b, ..., m) -> [n])
- * @param {Array} fns An array of functions
- * @return {Function} A function that returns a list of values after applying each of the original `fns` to its parameters.
- * @see R.applySpec
- * @example
- *
- *      var getRange = R.juxt([Math.min, Math.max]);
- *      getRange(3, 4, 9, -3); //=> [-3, 9]
- * @symb R.juxt([f, g, h])(a, b) = [f(a, b), g(a, b), h(a, b)]
- */
-module.exports = _curry1(function juxt(fns) {
-  return converge(function() { return Array.prototype.slice.call(arguments, 0); }, fns);
-});
-
-
-/***/ }),
-/* 128 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry1 = __webpack_require__(2);
-var _isNumber = __webpack_require__(129);
-
-
-/**
- * Returns the number of elements in the array by returning `list.length`.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category List
- * @sig [a] -> Number
- * @param {Array} list The array to inspect.
- * @return {Number} The length of the array.
- * @example
- *
- *      R.length([]); //=> 0
- *      R.length([1, 2, 3]); //=> 3
- */
-module.exports = _curry1(function length(list) {
-  return list != null && _isNumber(list.length) ? list.length : NaN;
-});
-
-
-/***/ }),
-/* 129 */
-/***/ (function(module, exports) {
-
-module.exports = function _isNumber(x) {
-  return Object.prototype.toString.call(x) === '[object Number]';
-};
-
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry3 = __webpack_require__(3);
-var adjust = __webpack_require__(87);
-var always = __webpack_require__(31);
-
-
-/**
- * Returns a new copy of the array with the element at the provided index
- * replaced with the given value.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category List
- * @sig Number -> a -> [a] -> [a]
- * @param {Number} idx The index to update.
- * @param {*} x The value to exist at the given index of the returned array.
- * @param {Array|Arguments} list The source array-like object to be updated.
- * @return {Array} A copy of `list` with the value at index `idx` replaced with `x`.
- * @see R.adjust
- * @example
- *
- *      R.update(1, 11, [0, 1, 2]);     //=> [0, 11, 2]
- *      R.update(1)(11)([0, 1, 2]);     //=> [0, 11, 2]
- * @symb R.update(-1, a, [b, c]) = [b, a]
- * @symb R.update(0, a, [b, c]) = [a, c]
- * @symb R.update(1, a, [b, c]) = [b, a]
- */
-module.exports = _curry3(function update(idx, x, list) {
-  return adjust(always(x), idx, list);
-});
-
-
-/***/ }),
-/* 131 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry1 = __webpack_require__(2);
-var sum = __webpack_require__(132);
-
-
-/**
- * Returns the mean of the given list of numbers.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category Math
- * @sig [Number] -> Number
- * @param {Array} list
- * @return {Number}
- * @example
- *
- *      R.mean([2, 7, 9]); //=> 6
- *      R.mean([]); //=> NaN
- */
-module.exports = _curry1(function mean(list) {
-  return sum(list) / list.length;
-});
-
-
-/***/ }),
-/* 132 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var add = __webpack_require__(44);
-var reduce = __webpack_require__(16);
-
-
-/**
- * Adds together all the elements of a list.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Math
- * @sig [Number] -> Number
- * @param {Array} list An array of numbers
- * @return {Number} The sum of all the numbers in the list.
- * @see R.reduce
- * @example
- *
- *      R.sum([2,4,6,8,100,1]); //=> 121
- */
-module.exports = reduce(add, 0);
-
-
-/***/ }),
-/* 133 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry3 = __webpack_require__(3);
-var _has = __webpack_require__(9);
-
-
-/**
- * Creates a new object with the own properties of the two provided objects. If
- * a key exists in both objects, the provided function is applied to the key
- * and the values associated with the key in each object, with the result being
- * used as the value associated with the key in the returned object. The key
- * will be excluded from the returned object if the resulting value is
- * `undefined`.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category Object
- * @sig (String -> a -> a -> a) -> {a} -> {a} -> {a}
- * @param {Function} fn
- * @param {Object} l
- * @param {Object} r
- * @return {Object}
- * @see R.merge, R.mergeWith
- * @example
- *
- *      let concatValues = (k, l, r) => k == 'values' ? R.concat(l, r) : r
- *      R.mergeWithKey(concatValues,
- *                     { a: true, thing: 'foo', values: [10, 20] },
- *                     { b: true, thing: 'bar', values: [15, 35] });
- *      //=> { a: true, b: true, thing: 'bar', values: [10, 20, 15, 35] }
- * @symb R.mergeWithKey(f, { x: 1, y: 2 }, { y: 5, z: 3 }) = { x: 1, y: f('y', 2, 5), z: 3 }
- */
-module.exports = _curry3(function mergeWithKey(fn, l, r) {
-  var result = {};
-  var k;
-
-  for (k in l) {
-    if (_has(k, l)) {
-      result[k] = _has(k, r) ? fn(k, l[k], r[k]) : l[k];
-    }
-  }
-
-  for (k in r) {
-    if (_has(k, r) && !(_has(k, result))) {
-      result[k] = r[k];
-    }
-  }
-
-  return result;
-});
-
-
-/***/ }),
-/* 134 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Multiplies two numbers. Equivalent to `a * b` but curried.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Math
- * @sig Number -> Number -> Number
- * @param {Number} a The first value.
- * @param {Number} b The second value.
- * @return {Number} The result of `a * b`.
- * @see R.divide
- * @example
- *
- *      var double = R.multiply(2);
- *      var triple = R.multiply(3);
- *      double(3);       //=>  6
- *      triple(4);       //=> 12
- *      R.multiply(2, 5);  //=> 10
- */
-module.exports = _curry2(function multiply(a, b) { return a * b; });
-
-
-/***/ }),
-/* 135 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry3 = __webpack_require__(3);
-
-
-/**
- * Returns the result of "setting" the portion of the given data structure
- * focused by the given lens to the result of applying the given function to
- * the focused value.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category Object
- * @typedefn Lens s a = Functor f => (a -> f a) -> s -> f s
- * @sig Lens s a -> (a -> a) -> s -> s
- * @param {Lens} lens
- * @param {*} v
- * @param {*} x
- * @return {*}
- * @see R.prop, R.lensIndex, R.lensProp
- * @example
- *
- *      var headLens = R.lensIndex(0);
- *
- *      R.over(headLens, R.toUpper, ['foo', 'bar', 'baz']); //=> ['FOO', 'bar', 'baz']
- */
-module.exports = (function() {
-  // `Identity` is a functor that holds a single value, where `map` simply
-  // transforms the held value with the provided function.
-  var Identity = function(x) {
-    return {value: x, map: function(f) { return Identity(f(x)); }};
-  };
-
-  return _curry3(function over(lens, f, x) {
-    // The value returned by the getter function is first transformed with `f`,
-    // then set as the value of an `Identity`. This is then mapped over with the
-    // setter function of the lens.
-    return lens(function(y) { return Identity(f(y)); })(x).value;
-  });
-}());
-
-
-/***/ }),
-/* 136 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _arity = __webpack_require__(14);
-var _curry2 = __webpack_require__(0);
-
-
-module.exports = function _createPartialApplicator(concat) {
-  return _curry2(function(fn, args) {
-    return _arity(Math.max(0, fn.length - args.length), function() {
-      return fn.apply(this, concat(args, arguments));
-    });
-  });
-};
-
-
-/***/ }),
-/* 137 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Similar to `pick` except that this one includes a `key: undefined` pair for
- * properties that don't exist.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig [k] -> {k: v} -> {k: v}
- * @param {Array} names an array of String property names to copy onto a new object
- * @param {Object} obj The object to copy from
- * @return {Object} A new object with only properties from `names` on it.
- * @see R.pick
- * @example
- *
- *      R.pickAll(['a', 'd'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1, d: 4}
- *      R.pickAll(['a', 'e', 'f'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1, e: undefined, f: undefined}
- */
-module.exports = _curry2(function pickAll(names, obj) {
-  var result = {};
-  var idx = 0;
-  var len = names.length;
-  while (idx < len) {
-    var name = names[idx];
-    result[name] = obj[name];
-    idx += 1;
-  }
-  return result;
-});
-
-
-/***/ }),
-/* 138 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _concat = __webpack_require__(13);
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Returns a new list with the given element at the front, followed by the
- * contents of the list.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig a -> [a] -> [a]
- * @param {*} el The item to add to the head of the output list.
- * @param {Array} list The array to add to the tail of the output list.
- * @return {Array} A new array.
- * @see R.append
- * @example
- *
- *      R.prepend('fee', ['fi', 'fo', 'fum']); //=> ['fee', 'fi', 'fo', 'fum']
- */
-module.exports = _curry2(function prepend(el, list) {
-  return _concat([el], list);
-});
-
-
-/***/ }),
-/* 139 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var curryN = __webpack_require__(8);
-
-
-/**
- * Accepts a function `fn` and a list of transformer functions and returns a
- * new curried function. When the new function is invoked, it calls the
- * function `fn` with parameters consisting of the result of calling each
- * supplied handler on successive arguments to the new function.
- *
- * If more arguments are passed to the returned function than transformer
- * functions, those arguments are passed directly to `fn` as additional
- * parameters. If you expect additional arguments that don't need to be
- * transformed, although you can ignore them, it's best to pass an identity
- * function so that the new function reports the correct arity.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (x1 -> x2 -> ... -> z) -> [(a -> x1), (b -> x2), ...] -> (a -> b -> ... -> z)
- * @param {Function} fn The function to wrap.
- * @param {Array} transformers A list of transformer functions
- * @return {Function} The wrapped function.
- * @see R.converge
- * @example
- *
- *      R.useWith(Math.pow, [R.identity, R.identity])(3, 4); //=> 81
- *      R.useWith(Math.pow, [R.identity, R.identity])(3)(4); //=> 81
- *      R.useWith(Math.pow, [R.dec, R.inc])(3, 4); //=> 32
- *      R.useWith(Math.pow, [R.dec, R.inc])(3)(4); //=> 32
- * @symb R.useWith(f, [g, h])(a, b) = f(g(a), h(b))
- */
-module.exports = _curry2(function useWith(fn, transformers) {
-  return curryN(transformers.length, function() {
-    var args = [];
-    var idx = 0;
-    while (idx < transformers.length) {
-      args.push(transformers[idx].call(this, arguments[idx]));
-      idx += 1;
-    }
-    return fn.apply(this, args.concat(Array.prototype.slice.call(arguments, transformers.length)));
-  });
-});
-
-
-/***/ }),
-/* 140 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry3 = __webpack_require__(3);
-
-
-/**
- * Returns a single item by iterating through the list, successively calling
- * the iterator function and passing it an accumulator value and the current
- * value from the array, and then passing the result to the next call.
- *
- * Similar to `reduce`, except moves through the input list from the right to
- * the left.
- *
- * The iterator function receives two values: *(value, acc)*, while the arguments'
- * order of `reduce`'s iterator function is *(acc, value)*.
- *
- * Note: `R.reduceRight` does not skip deleted or unassigned indices (sparse
- * arrays), unlike the native `Array.prototype.reduce` method. For more details
- * on this behavior, see:
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#Description
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a, b -> b) -> b -> [a] -> b
- * @param {Function} fn The iterator function. Receives two values, the current element from the array
- *        and the accumulator.
- * @param {*} acc The accumulator value.
- * @param {Array} list The list to iterate over.
- * @return {*} The final, accumulated value.
- * @see R.reduce, R.addIndex
- * @example
- *
- *      R.reduceRight(R.subtract, 0, [1, 2, 3, 4]) // => (1 - (2 - (3 - (4 - 0)))) = -2
- *          -               -2
- *         / \              / \
- *        1   -            1   3
- *           / \              / \
- *          2   -     ==>    2  -1
- *             / \              / \
- *            3   -            3   4
- *               / \              / \
- *              4   0            4   0
- *
- * @symb R.reduceRight(f, a, [b, c, d]) = f(b, f(c, f(d, a)))
- */
-module.exports = _curry3(function reduceRight(fn, acc, list) {
-  var idx = list.length - 1;
-  while (idx >= 0) {
-    acc = fn(list[idx], acc);
-    idx -= 1;
-  }
-  return acc;
-});
-
-
-/***/ }),
-/* 141 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-
-
-/**
- * Calls an input function `n` times, returning an array containing the results
- * of those function calls.
- *
- * `fn` is passed one argument: The current value of `n`, which begins at `0`
- * and is gradually incremented to `n - 1`.
- *
- * @func
- * @memberOf R
- * @since v0.2.3
- * @category List
- * @sig (Number -> a) -> Number -> [a]
- * @param {Function} fn The function to invoke. Passed one argument, the current value of `n`.
- * @param {Number} n A value between `0` and `n - 1`. Increments after each function call.
- * @return {Array} An array containing the return values of all calls to `fn`.
- * @example
- *
- *      R.times(R.identity, 5); //=> [0, 1, 2, 3, 4]
- * @symb R.times(f, 0) = []
- * @symb R.times(f, 1) = [f(0)]
- * @symb R.times(f, 2) = [f(0), f(1)]
- */
-module.exports = _curry2(function times(fn, n) {
-  var len = Number(n);
-  var idx = 0;
-  var list;
-
-  if (len < 0 || isNaN(len)) {
-    throw new RangeError('n must be a non-negative number');
-  }
-  list = new Array(len);
-  while (idx < len) {
-    list[idx] = fn(idx);
-    idx += 1;
-  }
-  return list;
-});
-
-
-/***/ }),
-/* 142 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var ap = __webpack_require__(71);
-var map = __webpack_require__(10);
-var prepend = __webpack_require__(138);
-var reduceRight = __webpack_require__(140);
-
-
-/**
- * Transforms a [Traversable](https://github.com/fantasyland/fantasy-land#traversable)
- * of [Applicative](https://github.com/fantasyland/fantasy-land#applicative) into an
- * Applicative of Traversable.
- *
- * Dispatches to the `sequence` method of the second argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category List
- * @sig (Applicative f, Traversable t) => (a -> f a) -> t (f a) -> f (t a)
- * @param {Function} of
- * @param {*} traversable
- * @return {*}
- * @see R.traverse
- * @example
- *
- *      R.sequence(Maybe.of, [Just(1), Just(2), Just(3)]);   //=> Just([1, 2, 3])
- *      R.sequence(Maybe.of, [Just(1), Just(2), Nothing()]); //=> Nothing()
- *
- *      R.sequence(R.of, Just([1, 2, 3])); //=> [Just(1), Just(2), Just(3)]
- *      R.sequence(R.of, Nothing());       //=> [Nothing()]
- */
-module.exports = _curry2(function sequence(of, traversable) {
-  return typeof traversable.sequence === 'function' ?
-    traversable.sequence(of) :
-    reduceRight(function(x, acc) { return ap(map(prepend, x), acc); },
-                of([]),
-                traversable);
-});
-
-
-/***/ }),
-/* 143 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(0);
-var _has = __webpack_require__(9);
-
-
-/**
- * Takes a spec object and a test object; returns true if the test satisfies
- * the spec. Each of the spec's own properties must be a predicate function.
- * Each predicate is applied to the value of the corresponding property of the
- * test object. `where` returns true if all the predicates return true, false
- * otherwise.
- *
- * `where` is well suited to declaratively expressing constraints for other
- * functions such as `filter` and `find`.
- *
- * @func
- * @memberOf R
- * @since v0.1.1
- * @category Object
- * @sig {String: (* -> Boolean)} -> {String: *} -> Boolean
- * @param {Object} spec
- * @param {Object} testObj
- * @return {Boolean}
- * @example
- *
- *      // pred :: Object -> Boolean
- *      var pred = R.where({
- *        a: R.equals('foo'),
- *        b: R.complement(R.equals('bar')),
- *        x: R.gt(__, 10),
- *        y: R.lt(__, 20)
- *      });
- *
- *      pred({a: 'foo', b: 'xxx', x: 11, y: 19}); //=> true
- *      pred({a: 'xxx', b: 'xxx', x: 11, y: 19}); //=> false
- *      pred({a: 'foo', b: 'bar', x: 11, y: 19}); //=> false
- *      pred({a: 'foo', b: 'xxx', x: 10, y: 19}); //=> false
- *      pred({a: 'foo', b: 'xxx', x: 11, y: 20}); //=> false
- */
-module.exports = _curry2(function where(spec, testObj) {
-  for (var prop in spec) {
-    if (_has(prop, spec) && !spec[prop](testObj[prop])) {
-      return false;
-    }
-  }
-  return true;
-});
-
-
-/***/ }),
-/* 144 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(module, global) {/**
- * lodash 3.0.1 (Custom Build) <https://lodash.com/>
- * Build: `lodash modularize exports="npm" -o ./`
- * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
- * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
- * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
- * Available under MIT license <https://lodash.com/license>
- */
-
-/** Used to determine if values are of the language type `Object`. */
-var objectTypes = {
-  'function': true,
-  'object': true
-};
-
-/** Detect free variable `exports`. */
-var freeExports = (objectTypes[typeof exports] && exports && !exports.nodeType)
-  ? exports
-  : undefined;
-
-/** Detect free variable `module`. */
-var freeModule = (objectTypes[typeof module] && module && !module.nodeType)
-  ? module
-  : undefined;
-
-/** Detect free variable `global` from Node.js. */
-var freeGlobal = checkGlobal(freeExports && freeModule && typeof global == 'object' && global);
-
-/** Detect free variable `self`. */
-var freeSelf = checkGlobal(objectTypes[typeof self] && self);
-
-/** Detect free variable `window`. */
-var freeWindow = checkGlobal(objectTypes[typeof window] && window);
-
-/** Detect `this` as the global object. */
-var thisGlobal = checkGlobal(objectTypes[typeof this] && this);
-
-/**
- * Used as a reference to the global object.
- *
- * The `this` value is used if it's the global object to avoid Greasemonkey's
- * restricted `window` object, otherwise the `window` object is used.
- */
-var root = freeGlobal ||
-  ((freeWindow !== (thisGlobal && thisGlobal.window)) && freeWindow) ||
-    freeSelf || thisGlobal || Function('return this')();
-
-/**
- * Checks if `value` is a global object.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {null|Object} Returns `value` if it's a global object, else `null`.
- */
-function checkGlobal(value) {
-  return (value && value.Object === Object) ? value : null;
-}
-
-module.exports = root;
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(40)(module), __webpack_require__(58)))
-
-/***/ }),
-/* 145 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var makeScope_1 = __webpack_require__(146);
-var r = __webpack_require__(5);
-function default_1(config, reducerName, record) {
-    var scope = makeScope_1.default(config, reducerName);
-    var isArray = r.is(Array, record);
-    if (isArray)
-        throw new TypeError(scope + ": Expected record not to be an array");
-}
-exports.default = default_1;
-
-
-/***/ }),
-/* 146 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-function makeScope(config, reducerName) {
-    return config.resourceName + "." + reducerName;
-}
-exports.default = makeScope;
-
-
-/***/ }),
-/* 147 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var r = __webpack_require__(5);
-var actionTypesFor_1 = __webpack_require__(84);
-var constants_1 = __webpack_require__(4);
-function reducersFor(resourceName, args, emptyState, reducers) {
-    if (args === void 0) { args = {}; }
-    if (resourceName == null)
-        throw new Error("reducersFor: Expected resourceName");
-    var defaults = {
-        key: constants_1.default.DEFAULT_KEY,
-        resourceName: resourceName
-    };
-    var config = r.merge(defaults, args);
-    return function getReducer(state, action) {
-        state = state || emptyState;
-        if (action == null)
-            throw new Error(resourceName + " reducers: Expected action");
-        var actionTypes = actionTypesFor_1.default(resourceName);
-        var record = action.record;
-        switch (action.type) {
-            case actionTypes.fetchSuccess:
-                return reducers.fetchSuccess(config, state, action.records, emptyState, action.data && action.data.replace);
-            case actionTypes.createStart:
-                return reducers.createStart(config, state, record);
-            case actionTypes.createSuccess:
-                return reducers.createSuccess(config, state, record, action.cid);
-            case actionTypes.createError:
-                return reducers.createError(config, state, record);
-            case actionTypes.updateStart:
-                return reducers.updateStart(config, state, record);
-            case actionTypes.updateSuccess:
-                return reducers.updateSuccess(config, state, record);
-            case actionTypes.updateError:
-                return reducers.updateError(config, state, record);
-            case actionTypes.deleteStart:
-                return reducers.deleteStart(config, state, record);
-            case actionTypes.deleteSuccess:
-                return reducers.deleteSuccess(config, state, record);
-            case actionTypes.deleteError:
-                return reducers.deleteError(config, state, record);
-            default:
-                return state;
-        }
-    };
-}
-exports.default = reducersFor;
-
-
-/***/ }),
-/* 148 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var assertHasKey_1 = __webpack_require__(489);
-var assertNotArray_1 = __webpack_require__(145);
-var makeScope_1 = __webpack_require__(146);
-function invariants(baseArgs, extraArgs) {
-    var config = extraArgs.config;
-    if (!config.resourceName)
-        throw new Error("Expected config.resourceName");
-    var scope = makeScope_1.default(config, baseArgs.reducerName);
-    if (!config.key)
-        throw new Error(scope + ": Expected config.key");
-    if (!extraArgs.record)
-        throw new Error(scope + ": Expected record/s");
-    extraArgs.assertValidStore(scope, extraArgs.current);
-    if (!baseArgs.canBeArray) {
-        assertNotArray_1.default(extraArgs.config, baseArgs.reducerName, extraArgs.record);
-    }
-    assertHasKey_1.default(extraArgs.config, scope, extraArgs.record);
-}
-exports.default = invariants;
-
-
-/***/ }),
-/* 149 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var r = __webpack_require__(5);
-function remove(config, current, addedRecord) {
-    var key = config.key;
-    function predicate(record) {
-        var recordKey = record[key];
-        var isSameKey = addedRecord[key] === recordKey;
-        return isSameKey;
-    }
-    return r.reject(predicate, current);
-}
-exports.default = remove;
-
-
-/***/ }),
-/* 150 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
-function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_CREATE] = true,
-        _a);
-    return r.merge(record, recordStatus);
-    var _a;
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 151 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
-function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.DELETED] = true,
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a);
-    return r.merge(record, recordStatus);
-    var _a;
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 152 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var r = __webpack_require__(5);
-function default_1(config, reducerName, records) {
-    // All given records must have a key
-    var haskey = r.has(config.key);
-    var allKeys = r.all(haskey, records);
-    if (!allKeys) {
-        throw new Error(reducerName +
-            ": Expected all records to have a value for the store's key `" +
-            config.key +
-            "`");
-    }
-}
-exports.default = default_1;
-
-
-/***/ }),
-/* 153 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
-function prepareRecord(record) {
-    return r.dissoc(constants_1.default.SPECIAL_KEYS.BUSY, record);
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 154 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var r = __webpack_require__(5);
-var constants_1 = __webpack_require__(4);
-function prepareRecord(record) {
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_UPDATE] = true,
-        _a);
-    return r.merge(record, recordStatus);
-    var _a;
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -13703,6 +11258,2441 @@ function property(path) {
 module.exports = filter;
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58), __webpack_require__(40)(module)))
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:true});exports.fetchMenu=exports.FETCH_MENU=undefined;var _fireAction=__webpack_require__(20);var _fireAction2=_interopRequireDefault(_fireAction);
+var _handleErrors=__webpack_require__(21);var _handleErrors2=_interopRequireDefault(_handleErrors);
+var _moment=__webpack_require__(1);var _moment2=_interopRequireDefault(_moment);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+
+var FETCH_MENU=exports.FETCH_MENU='FETCH_MENU';
+
+var NOW=new Date();
+
+var defaultMenuType={
+locationId:null,
+requestedAt:NOW,
+serviceType:'delivery'};
+
+
+var fetchMenu=exports.fetchMenu=function fetchMenu(brandibble){var menuType=arguments.length>1&&arguments[1]!==undefined?arguments[1]:defaultMenuType;return function(dispatch){var
+
+locationId=
+
+
+menuType.locationId,requestedAt=menuType.requestedAt,serviceType=menuType.serviceType;
+var requestedAtFormatted=new Date((0,_moment2.default)(requestedAt));
+
+var payload=brandibble.menus.build(locationId,serviceType,requestedAtFormatted).
+then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
+
+return dispatch((0,_fireAction2.default)(FETCH_MENU,payload));
+};};
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _concat = __webpack_require__(13);
+var _curry3 = __webpack_require__(3);
+
+
+/**
+ * Applies a function to the value at the given index of an array, returning a
+ * new copy of the array with the element at the given index replaced with the
+ * result of the function application.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.14.0
+ * @category List
+ * @sig (a -> a) -> Number -> [a] -> [a]
+ * @param {Function} fn The function to apply.
+ * @param {Number} idx The index.
+ * @param {Array|Arguments} list An array-like object whose value
+ *        at the supplied index will be replaced.
+ * @return {Array} A copy of the supplied array-like object with
+ *         the element at index `idx` replaced with the value
+ *         returned by applying `fn` to the existing element.
+ * @see R.update
+ * @example
+ *
+ *      R.adjust(R.add(10), 1, [1, 2, 3]);     //=> [1, 12, 3]
+ *      R.adjust(R.add(10))(1)([1, 2, 3]);     //=> [1, 12, 3]
+ * @symb R.adjust(f, -1, [a, b]) = [a, f(b)]
+ * @symb R.adjust(f, 0, [a, b]) = [f(a), b]
+ */
+module.exports = _curry3(function adjust(fn, idx, list) {
+  if (idx >= list.length || idx < -list.length) {
+    return list;
+  }
+  var start = idx < 0 ? list.length : 0;
+  var _idx = start + idx;
+  var _list = _concat(list);
+  _list[_idx] = fn(list[_idx]);
+  return _list;
+});
+
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports) {
+
+module.exports = (function() {
+  function XWrap(fn) {
+    this.f = fn;
+  }
+  XWrap.prototype['@@transducer/init'] = function() {
+    throw new Error('init not implemented on XWrap');
+  };
+  XWrap.prototype['@@transducer/result'] = function(acc) { return acc; };
+  XWrap.prototype['@@transducer/step'] = function(acc, x) {
+    return this.f(acc, x);
+  };
+
+  return function _xwrap(fn) { return new XWrap(fn); };
+}());
+
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _arity = __webpack_require__(14);
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Creates a function that is bound to a context.
+ * Note: `R.bind` does not provide the additional argument-binding capabilities of
+ * [Function.prototype.bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
+ *
+ * @func
+ * @memberOf R
+ * @since v0.6.0
+ * @category Function
+ * @category Object
+ * @sig (* -> *) -> {*} -> (* -> *)
+ * @param {Function} fn The function to bind to context
+ * @param {Object} thisObj The context to bind `fn` to
+ * @return {Function} A function that will execute in the context of `thisObj`.
+ * @see R.partial
+ * @example
+ *
+ *      var log = R.bind(console.log, console);
+ *      R.pipe(R.assoc('a', 2), R.tap(log), R.assoc('a', 3))({a: 1}); //=> {a: 3}
+ *      // logs {a: 2}
+ * @symb R.bind(f, o)(a, b) = f.call(o, a, b)
+ */
+module.exports = _curry2(function bind(fn, thisObj) {
+  return _arity(fn.length, function() {
+    return fn.apply(thisObj, arguments);
+  });
+});
+
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _has = __webpack_require__(9);
+
+
+module.exports = (function() {
+  var toString = Object.prototype.toString;
+  return toString.call(arguments) === '[object Arguments]' ?
+    function _isArguments(x) { return toString.call(x) === '[object Arguments]'; } :
+    function _isArguments(x) { return _has('callee', x); };
+}());
+
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Returns `true` if both arguments are `true`; `false` otherwise.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Logic
+ * @sig a -> b -> a | b
+ * @param {Any} a
+ * @param {Any} b
+ * @return {Any} the first argument if it is falsy, otherwise the second argument.
+ * @see R.both
+ * @example
+ *
+ *      R.and(true, true); //=> true
+ *      R.and(true, false); //=> false
+ *      R.and(false, true); //=> false
+ *      R.and(false, false); //=> false
+ */
+module.exports = _curry2(function and(a, b) {
+  return a && b;
+});
+
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var _dispatchable = __webpack_require__(6);
+var _xany = __webpack_require__(94);
+
+
+/**
+ * Returns `true` if at least one of elements of the list match the predicate,
+ * `false` otherwise.
+ *
+ * Dispatches to the `any` method of the second argument, if present.
+ *
+ * Acts as a transducer if a transformer is given in list position.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category List
+ * @sig (a -> Boolean) -> [a] -> Boolean
+ * @param {Function} fn The predicate function.
+ * @param {Array} list The array to consider.
+ * @return {Boolean} `true` if the predicate is satisfied by at least one element, `false`
+ *         otherwise.
+ * @see R.all, R.none, R.transduce
+ * @example
+ *
+ *      var lessThan0 = R.flip(R.lt)(0);
+ *      var lessThan2 = R.flip(R.lt)(2);
+ *      R.any(lessThan0)([1, 2]); //=> false
+ *      R.any(lessThan2)([1, 2]); //=> true
+ */
+module.exports = _curry2(_dispatchable(['any'], _xany, function any(fn, list) {
+  var idx = 0;
+  while (idx < list.length) {
+    if (fn(list[idx])) {
+      return true;
+    }
+    idx += 1;
+  }
+  return false;
+}));
+
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var _reduced = __webpack_require__(23);
+var _xfBase = __webpack_require__(7);
+
+
+module.exports = (function() {
+  function XAny(f, xf) {
+    this.xf = xf;
+    this.f = f;
+    this.any = false;
+  }
+  XAny.prototype['@@transducer/init'] = _xfBase.init;
+  XAny.prototype['@@transducer/result'] = function(result) {
+    if (!this.any) {
+      result = this.xf['@@transducer/step'](result, false);
+    }
+    return this.xf['@@transducer/result'](result);
+  };
+  XAny.prototype['@@transducer/step'] = function(result, input) {
+    if (this.f(input)) {
+      this.any = true;
+      result = _reduced(this.xf['@@transducer/step'](result, true));
+    }
+    return result;
+  };
+
+  return _curry2(function _xany(f, xf) { return new XAny(f, xf); });
+}());
+
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Applies function `fn` to the argument list `args`. This is useful for
+ * creating a fixed-arity function from a variadic function. `fn` should be a
+ * bound function if context is significant.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.7.0
+ * @category Function
+ * @sig (*... -> a) -> [*] -> a
+ * @param {Function} fn The function which will be called with `args`
+ * @param {Array} args The arguments to call `fn` with
+ * @return {*} result The result, equivalent to `fn(...args)`
+ * @see R.call, R.unapply
+ * @example
+ *
+ *      var nums = [1, 2, 3, -99, 42, 6, 7];
+ *      R.apply(Math.max, nums); //=> 42
+ * @symb R.apply(f, [a, b, c]) = f(a, b, c)
+ */
+module.exports = _curry2(function apply(fn, args) {
+  return fn.apply(this, args);
+});
+
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry1 = __webpack_require__(2);
+var keys = __webpack_require__(15);
+
+
+/**
+ * Returns a list of all the enumerable own properties of the supplied object.
+ * Note that the order of the output array is not guaranteed across different
+ * JS platforms.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Object
+ * @sig {k: v} -> [v]
+ * @param {Object} obj The object to extract values from
+ * @return {Array} An array of the values of the object's own properties.
+ * @example
+ *
+ *      R.values({a: 1, b: 2, c: 3}); //=> [1, 2, 3]
+ */
+module.exports = _curry1(function values(obj) {
+  var props = keys(obj);
+  var len = props.length;
+  var vals = [];
+  var idx = 0;
+  while (idx < len) {
+    vals[idx] = obj[props[idx]];
+    idx += 1;
+  }
+  return vals;
+});
+
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry3 = __webpack_require__(3);
+var _has = __webpack_require__(9);
+var _isArray = __webpack_require__(22);
+var _isInteger = __webpack_require__(98);
+var assoc = __webpack_require__(48);
+
+
+/**
+ * Makes a shallow clone of an object, setting or overriding the nodes required
+ * to create the given path, and placing the specific value at the tail end of
+ * that path. Note that this copies and flattens prototype properties onto the
+ * new object as well. All non-primitive properties are copied by reference.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.8.0
+ * @category Object
+ * @typedefn Idx = String | Int
+ * @sig [Idx] -> a -> {a} -> {a}
+ * @param {Array} path the path to set
+ * @param {*} val The new value
+ * @param {Object} obj The object to clone
+ * @return {Object} A new object equivalent to the original except along the specified path.
+ * @see R.dissocPath
+ * @example
+ *
+ *      R.assocPath(['a', 'b', 'c'], 42, {a: {b: {c: 0}}}); //=> {a: {b: {c: 42}}}
+ *
+ *      // Any missing or non-object keys in path will be overridden
+ *      R.assocPath(['a', 'b', 'c'], 42, {a: 5}); //=> {a: {b: {c: 42}}}
+ */
+module.exports = _curry3(function assocPath(path, val, obj) {
+  if (path.length === 0) {
+    return val;
+  }
+  var idx = path[0];
+  if (path.length > 1) {
+    var nextObj = _has(idx, obj) ? obj[idx] : _isInteger(path[1]) ? [] : {};
+    val = assocPath(Array.prototype.slice.call(path, 1), val, nextObj);
+  }
+  if (_isInteger(idx) && _isArray(obj)) {
+    var arr = [].concat(obj);
+    arr[idx] = val;
+    return arr;
+  } else {
+    return assoc(idx, val, obj);
+  }
+});
+
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports) {
+
+/**
+ * Determine if the passed argument is an integer.
+ *
+ * @private
+ * @param {*} n
+ * @category Type
+ * @return {Boolean}
+ */
+module.exports = Number.isInteger || function _isInteger(n) {
+  return (n << 0) === n;
+};
+
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var _reduce = __webpack_require__(12);
+var ap = __webpack_require__(71);
+var curryN = __webpack_require__(8);
+var map = __webpack_require__(10);
+
+
+/**
+ * "lifts" a function to be the specified arity, so that it may "map over" that
+ * many lists, Functions or other objects that satisfy the [FantasyLand Apply spec](https://github.com/fantasyland/fantasy-land#apply).
+ *
+ * @func
+ * @memberOf R
+ * @since v0.7.0
+ * @category Function
+ * @sig Number -> (*... -> *) -> ([*]... -> [*])
+ * @param {Function} fn The function to lift into higher context
+ * @return {Function} The lifted function.
+ * @see R.lift, R.ap
+ * @example
+ *
+ *      var madd3 = R.liftN(3, (...args) => R.sum(args));
+ *      madd3([1,2,3], [1,2,3], [1]); //=> [3, 4, 5, 4, 5, 6, 5, 6, 7]
+ */
+module.exports = _curry2(function liftN(arity, fn) {
+  var lifted = curryN(arity, fn);
+  return curryN(arity, function() {
+    return _reduce(ap, map(lifted, arguments[0]), Array.prototype.slice.call(arguments, 1));
+  });
+});
+
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isArrayLike = __webpack_require__(34);
+
+
+/**
+ * `_makeFlat` is a helper function that returns a one-level or fully recursive
+ * function based on the flag passed in.
+ *
+ * @private
+ */
+module.exports = function _makeFlat(recursive) {
+  return function flatt(list) {
+    var value, jlen, j;
+    var result = [];
+    var idx = 0;
+    var ilen = list.length;
+
+    while (idx < ilen) {
+      if (isArrayLike(list[idx])) {
+        value = recursive ? flatt(list[idx]) : list[idx];
+        j = 0;
+        jlen = value.length;
+        while (j < jlen) {
+          result[result.length] = value[j];
+          j += 1;
+        }
+      } else {
+        result[result.length] = list[idx];
+      }
+      idx += 1;
+    }
+    return result;
+  };
+};
+
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _cloneRegExp = __webpack_require__(102);
+var type = __webpack_require__(73);
+
+
+/**
+ * Copies an object.
+ *
+ * @private
+ * @param {*} value The value to be copied
+ * @param {Array} refFrom Array containing the source references
+ * @param {Array} refTo Array containing the copied source references
+ * @param {Boolean} deep Whether or not to perform deep cloning.
+ * @return {*} The copied value.
+ */
+module.exports = function _clone(value, refFrom, refTo, deep) {
+  var copy = function copy(copiedValue) {
+    var len = refFrom.length;
+    var idx = 0;
+    while (idx < len) {
+      if (value === refFrom[idx]) {
+        return refTo[idx];
+      }
+      idx += 1;
+    }
+    refFrom[idx + 1] = value;
+    refTo[idx + 1] = copiedValue;
+    for (var key in value) {
+      copiedValue[key] = deep ?
+        _clone(value[key], refFrom, refTo, true) : value[key];
+    }
+    return copiedValue;
+  };
+  switch (type(value)) {
+    case 'Object':  return copy({});
+    case 'Array':   return copy([]);
+    case 'Date':    return new Date(value.valueOf());
+    case 'RegExp':  return _cloneRegExp(value);
+    default:        return value;
+  }
+};
+
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports) {
+
+module.exports = function _cloneRegExp(pattern) {
+  return new RegExp(pattern.source, (pattern.global     ? 'g' : '') +
+                                    (pattern.ignoreCase ? 'i' : '') +
+                                    (pattern.multiline  ? 'm' : '') +
+                                    (pattern.sticky     ? 'y' : '') +
+                                    (pattern.unicode    ? 'u' : ''));
+};
+
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry1 = __webpack_require__(2);
+
+
+/**
+ * A function that returns the `!` of its argument. It will return `true` when
+ * passed false-y value, and `false` when passed a truth-y one.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Logic
+ * @sig * -> Boolean
+ * @param {*} a any value
+ * @return {Boolean} the logical inverse of passed argument.
+ * @see R.complement
+ * @example
+ *
+ *      R.not(true); //=> false
+ *      R.not(false); //=> true
+ *      R.not(0); //=> true
+ *      R.not(1); //=> false
+ */
+module.exports = _curry1(function not(a) {
+  return !a;
+});
+
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _arity = __webpack_require__(14);
+var _pipe = __webpack_require__(304);
+var reduce = __webpack_require__(16);
+var tail = __webpack_require__(75);
+
+
+/**
+ * Performs left-to-right function composition. The leftmost function may have
+ * any arity; the remaining functions must be unary.
+ *
+ * In some libraries this function is named `sequence`.
+ *
+ * **Note:** The result of pipe is not automatically curried.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Function
+ * @sig (((a, b, ..., n) -> o), (o -> p), ..., (x -> y), (y -> z)) -> ((a, b, ..., n) -> z)
+ * @param {...Function} functions
+ * @return {Function}
+ * @see R.compose
+ * @example
+ *
+ *      var f = R.pipe(Math.pow, R.negate, R.inc);
+ *
+ *      f(3, 4); // -(3^4) + 1
+ * @symb R.pipe(f, g, h)(a, b) = h(g(f(a, b)))
+ */
+module.exports = function pipe() {
+  if (arguments.length === 0) {
+    throw new Error('pipe requires at least one argument');
+  }
+  return _arity(arguments[0].length,
+                reduce(_pipe, arguments[0], tail(arguments)));
+};
+
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var chain = __webpack_require__(72);
+var compose = __webpack_require__(74);
+var map = __webpack_require__(10);
+
+
+/**
+ * Returns the right-to-left Kleisli composition of the provided functions,
+ * each of which must return a value of a type supported by [`chain`](#chain).
+ *
+ * `R.composeK(h, g, f)` is equivalent to `R.compose(R.chain(h), R.chain(g), R.chain(f))`.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.16.0
+ * @category Function
+ * @sig Chain m => ((y -> m z), (x -> m y), ..., (a -> m b)) -> (a -> m z)
+ * @param {...Function} ...functions The functions to compose
+ * @return {Function}
+ * @see R.pipeK
+ * @example
+ *
+ *       //  get :: String -> Object -> Maybe *
+ *       var get = R.curry((propName, obj) => Maybe(obj[propName]))
+ *
+ *       //  getStateCode :: Maybe String -> Maybe String
+ *       var getStateCode = R.composeK(
+ *         R.compose(Maybe.of, R.toUpper),
+ *         get('state'),
+ *         get('address'),
+ *         get('user'),
+ *       );
+ *       getStateCode({"user":{"address":{"state":"ny"}}}); //=> Maybe.Just("NY")
+ *       getStateCode({}); //=> Maybe.Nothing()
+ * @symb R.composeK(f, g, h)(a) = R.chain(f, R.chain(g, h(a)))
+ */
+module.exports = function composeK() {
+  if (arguments.length === 0) {
+    throw new Error('composeK requires at least one argument');
+  }
+  var init = Array.prototype.slice.call(arguments);
+  var last = init.pop();
+  return compose(compose.apply(this, map(chain, init)), last);
+};
+
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _arity = __webpack_require__(14);
+var _pipeP = __webpack_require__(306);
+var reduce = __webpack_require__(16);
+var tail = __webpack_require__(75);
+
+
+/**
+ * Performs left-to-right composition of one or more Promise-returning
+ * functions. The leftmost function may have any arity; the remaining functions
+ * must be unary.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.10.0
+ * @category Function
+ * @sig ((a -> Promise b), (b -> Promise c), ..., (y -> Promise z)) -> (a -> Promise z)
+ * @param {...Function} functions
+ * @return {Function}
+ * @see R.composeP
+ * @example
+ *
+ *      //  followersForUser :: String -> Promise [User]
+ *      var followersForUser = R.pipeP(db.getUserById, db.getFollowers);
+ */
+module.exports = function pipeP() {
+  if (arguments.length === 0) {
+    throw new Error('pipeP requires at least one argument');
+  }
+  return _arity(arguments[0].length,
+                reduce(_pipeP, arguments[0], tail(arguments)));
+};
+
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var equals = __webpack_require__(17);
+
+
+module.exports = function _indexOf(list, a, idx) {
+  var inf, item;
+  // Array.prototype.indexOf doesn't exist below IE9
+  if (typeof list.indexOf === 'function') {
+    switch (typeof a) {
+      case 'number':
+        if (a === 0) {
+          // manually crawl the list to distinguish between +0 and -0
+          inf = 1 / a;
+          while (idx < list.length) {
+            item = list[idx];
+            if (item === 0 && 1 / item === inf) {
+              return idx;
+            }
+            idx += 1;
+          }
+          return -1;
+        } else if (a !== a) {
+          // NaN
+          while (idx < list.length) {
+            item = list[idx];
+            if (typeof item === 'number' && item !== item) {
+              return idx;
+            }
+            idx += 1;
+          }
+          return -1;
+        }
+        // non-zero numbers can utilise Set
+        return list.indexOf(a, idx);
+
+      // all these types can utilise Set
+      case 'string':
+      case 'boolean':
+      case 'function':
+      case 'undefined':
+        return list.indexOf(a, idx);
+
+      case 'object':
+        if (a === null) {
+          // null can utilise Set
+          return list.indexOf(a, idx);
+        }
+    }
+  }
+  // anything else not covered above, defer to R.equals
+  while (idx < list.length) {
+    if (equals(list[idx], a)) {
+      return idx;
+    }
+    idx += 1;
+  }
+  return -1;
+};
+
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Returns true if its arguments are identical, false otherwise. Values are
+ * identical if they reference the same memory. `NaN` is identical to `NaN`;
+ * `0` and `-0` are not identical.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.15.0
+ * @category Relation
+ * @sig a -> a -> Boolean
+ * @param {*} a
+ * @param {*} b
+ * @return {Boolean}
+ * @example
+ *
+ *      var o = {};
+ *      R.identical(o, o); //=> true
+ *      R.identical(1, 1); //=> true
+ *      R.identical(1, '1'); //=> false
+ *      R.identical([], []); //=> false
+ *      R.identical(0, -0); //=> false
+ *      R.identical(NaN, NaN); //=> true
+ */
+module.exports = _curry2(function identical(a, b) {
+  // SameValue algorithm
+  if (a === b) { // Steps 1-5, 7-10
+    // Steps 6.b-6.e: +0 != -0
+    return a !== 0 || 1 / a === 1 / b;
+  } else {
+    // Step 6.a: NaN == NaN
+    return a !== a && b !== b;
+  }
+});
+
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports) {
+
+module.exports = function _complement(f) {
+  return function() {
+    return !f.apply(this, arguments);
+  };
+};
+
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports) {
+
+module.exports = function _filter(fn, list) {
+  var idx = 0;
+  var len = list.length;
+  var result = [];
+
+  while (idx < len) {
+    if (fn(list[idx])) {
+      result[result.length] = list[idx];
+    }
+    idx += 1;
+  }
+  return result;
+};
+
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports) {
+
+module.exports = function _isObject(x) {
+  return Object.prototype.toString.call(x) === '[object Object]';
+};
+
+
+/***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var curry = __webpack_require__(52);
+var nAry = __webpack_require__(49);
+
+
+/**
+ * Wraps a constructor function inside a curried function that can be called
+ * with the same arguments and returns the same type. The arity of the function
+ * returned is specified to allow using variadic constructor functions.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.4.0
+ * @category Function
+ * @sig Number -> (* -> {*}) -> (* -> {*})
+ * @param {Number} n The arity of the constructor function.
+ * @param {Function} Fn The constructor function to wrap.
+ * @return {Function} A wrapped, curried constructor function.
+ * @example
+ *
+ *      // Variadic Constructor function
+ *      function Salad() {
+ *        this.ingredients = arguments;
+ *      };
+ *      Salad.prototype.recipe = function() {
+ *        var instructions = R.map((ingredient) => (
+ *          'Add a whollop of ' + ingredient, this.ingredients)
+ *        )
+ *        return R.join('\n', instructions)
+ *      }
+ *
+ *      var ThreeLayerSalad = R.constructN(3, Salad)
+ *
+ *      // Notice we no longer need the 'new' keyword, and the constructor is curried for 3 arguments.
+ *      var salad = ThreeLayerSalad('Mayonnaise')('Potato Chips')('Ketchup')
+ *      console.log(salad.recipe());
+ *      // Add a whollop of Mayonnaise
+ *      // Add a whollop of Potato Chips
+ *      // Add a whollop of Potato Ketchup
+ */
+module.exports = _curry2(function constructN(n, Fn) {
+  if (n > 10) {
+    throw new Error('Constructor with greater than ten arguments');
+  }
+  if (n === 0) {
+    return function() { return new Fn(); };
+  }
+  return curry(nAry(n, function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
+    switch (arguments.length) {
+      case  1: return new Fn($0);
+      case  2: return new Fn($0, $1);
+      case  3: return new Fn($0, $1, $2);
+      case  4: return new Fn($0, $1, $2, $3);
+      case  5: return new Fn($0, $1, $2, $3, $4);
+      case  6: return new Fn($0, $1, $2, $3, $4, $5);
+      case  7: return new Fn($0, $1, $2, $3, $4, $5, $6);
+      case  8: return new Fn($0, $1, $2, $3, $4, $5, $6, $7);
+      case  9: return new Fn($0, $1, $2, $3, $4, $5, $6, $7, $8);
+      case 10: return new Fn($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
+    }
+  }));
+});
+
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var _map = __webpack_require__(46);
+var curryN = __webpack_require__(8);
+var max = __webpack_require__(32);
+var pluck = __webpack_require__(33);
+var reduce = __webpack_require__(16);
+
+
+/**
+ * Accepts a converging function and a list of branching functions and returns
+ * a new function. When invoked, this new function is applied to some
+ * arguments, each branching function is applied to those same arguments. The
+ * results of each branching function are passed as arguments to the converging
+ * function to produce the return value.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.4.2
+ * @category Function
+ * @sig (x1 -> x2 -> ... -> z) -> [(a -> b -> ... -> x1), (a -> b -> ... -> x2), ...] -> (a -> b -> ... -> z)
+ * @param {Function} after A function. `after` will be invoked with the return values of
+ *        `fn1` and `fn2` as its arguments.
+ * @param {Array} functions A list of functions.
+ * @return {Function} A new function.
+ * @see R.useWith
+ * @example
+ *
+ *      var average = R.converge(R.divide, [R.sum, R.length])
+ *      average([1, 2, 3, 4, 5, 6, 7]) //=> 4
+ *
+ *      var strangeConcat = R.converge(R.concat, [R.toUpper, R.toLower])
+ *      strangeConcat("Yodel") //=> "YODELyodel"
+ *
+ * @symb R.converge(f, [g, h])(a, b) = f(g(a, b), h(a, b))
+ */
+module.exports = _curry2(function converge(after, fns) {
+  return curryN(reduce(max, 0, pluck('length', fns)), function() {
+    var args = arguments;
+    var context = this;
+    return after.apply(context, _map(function(fn) {
+      return fn.apply(context, args);
+    }, fns));
+  });
+});
+
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Returns the second argument if it is not `null`, `undefined` or `NaN`
+ * otherwise the first argument is returned.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.10.0
+ * @category Logic
+ * @sig a -> b -> a | b
+ * @param {a} default The default value.
+ * @param {b} val `val` will be returned instead of `default` unless `val` is `null`, `undefined` or `NaN`.
+ * @return {*} The second value if it is not `null`, `undefined` or `NaN`, otherwise the default value
+ * @example
+ *
+ *      var defaultTo42 = R.defaultTo(42);
+ *
+ *      defaultTo42(null);  //=> 42
+ *      defaultTo42(undefined);  //=> 42
+ *      defaultTo42('Ramda');  //=> 'Ramda'
+ *      // parseInt('string') results in NaN
+ *      defaultTo42(parseInt('string')); //=> 42
+ */
+module.exports = _curry2(function defaultTo(d, v) {
+  return v == null || v !== v ? d : v;
+});
+
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _contains = __webpack_require__(28);
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Finds the set (i.e. no duplicates) of all elements in the first list not
+ * contained in the second list. Objects and Arrays are compared are compared
+ * in terms of value equality, not reference equality.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Relation
+ * @sig [*] -> [*] -> [*]
+ * @param {Array} list1 The first list.
+ * @param {Array} list2 The second list.
+ * @return {Array} The elements in `list1` that are not in `list2`.
+ * @see R.differenceWith, R.symmetricDifference, R.symmetricDifferenceWith
+ * @example
+ *
+ *      R.difference([1,2,3,4], [7,6,5,4,3]); //=> [1,2]
+ *      R.difference([7,6,5,4,3], [1,2,3,4]); //=> [7,6,5]
+ *      R.difference([{a: 1}, {b: 2}], [{a: 1}, {c: 3}]) //=> [{b: 2}]
+ */
+module.exports = _curry2(function difference(first, second) {
+  var out = [];
+  var idx = 0;
+  var firstLen = first.length;
+  while (idx < firstLen) {
+    if (!_contains(first[idx], second) && !_contains(first[idx], out)) {
+      out[out.length] = first[idx];
+    }
+    idx += 1;
+  }
+  return out;
+});
+
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _containsWith = __webpack_require__(78);
+var _curry3 = __webpack_require__(3);
+
+
+/**
+ * Finds the set (i.e. no duplicates) of all elements in the first list not
+ * contained in the second list. Duplication is determined according to the
+ * value returned by applying the supplied predicate to two list elements.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Relation
+ * @sig ((a, a) -> Boolean) -> [a] -> [a] -> [a]
+ * @param {Function} pred A predicate used to test whether two items are equal.
+ * @param {Array} list1 The first list.
+ * @param {Array} list2 The second list.
+ * @return {Array} The elements in `list1` that are not in `list2`.
+ * @see R.difference, R.symmetricDifference, R.symmetricDifferenceWith
+ * @example
+ *
+ *      var cmp = (x, y) => x.a === y.a;
+ *      var l1 = [{a: 1}, {a: 2}, {a: 3}];
+ *      var l2 = [{a: 3}, {a: 4}];
+ *      R.differenceWith(cmp, l1, l2); //=> [{a: 1}, {a: 2}]
+ */
+module.exports = _curry3(function differenceWith(pred, first, second) {
+  var out = [];
+  var idx = 0;
+  var firstLen = first.length;
+  while (idx < firstLen) {
+    if (!_containsWith(pred, first[idx], second) &&
+        !_containsWith(pred, first[idx], out)) {
+      out.push(first[idx]);
+    }
+    idx += 1;
+  }
+  return out;
+});
+
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Returns a new object that does not contain a `prop` property.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.10.0
+ * @category Object
+ * @sig String -> {k: v} -> {k: v}
+ * @param {String} prop The name of the property to dissociate
+ * @param {Object} obj The object to clone
+ * @return {Object} A new object equivalent to the original but without the specified property
+ * @see R.assoc
+ * @example
+ *
+ *      R.dissoc('b', {a: 1, b: 2, c: 3}); //=> {a: 1, c: 3}
+ */
+module.exports = _curry2(function dissoc(prop, obj) {
+  var result = {};
+  for (var p in obj) {
+    result[p] = obj[p];
+  }
+  delete result[prop];
+  return result;
+});
+
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var _dispatchable = __webpack_require__(6);
+var _xdrop = __webpack_require__(323);
+var slice = __webpack_require__(27);
+
+
+/**
+ * Returns all but the first `n` elements of the given list, string, or
+ * transducer/transformer (or object with a `drop` method).
+ *
+ * Dispatches to the `drop` method of the second argument, if present.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category List
+ * @sig Number -> [a] -> [a]
+ * @sig Number -> String -> String
+ * @param {Number} n
+ * @param {[a]} list
+ * @return {[a]} A copy of list without the first `n` elements
+ * @see R.take, R.transduce, R.dropLast, R.dropWhile
+ * @example
+ *
+ *      R.drop(1, ['foo', 'bar', 'baz']); //=> ['bar', 'baz']
+ *      R.drop(2, ['foo', 'bar', 'baz']); //=> ['baz']
+ *      R.drop(3, ['foo', 'bar', 'baz']); //=> []
+ *      R.drop(4, ['foo', 'bar', 'baz']); //=> []
+ *      R.drop(3, 'ramda');               //=> 'da'
+ */
+module.exports = _curry2(_dispatchable(['drop'], _xdrop, function drop(n, xs) {
+  return slice(Math.max(0, n), Infinity, xs);
+}));
+
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var _dispatchable = __webpack_require__(6);
+var _xtake = __webpack_require__(326);
+var slice = __webpack_require__(27);
+
+
+/**
+ * Returns the first `n` elements of the given list, string, or
+ * transducer/transformer (or object with a `take` method).
+ *
+ * Dispatches to the `take` method of the second argument, if present.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category List
+ * @sig Number -> [a] -> [a]
+ * @sig Number -> String -> String
+ * @param {Number} n
+ * @param {*} list
+ * @return {*}
+ * @see R.drop
+ * @example
+ *
+ *      R.take(1, ['foo', 'bar', 'baz']); //=> ['foo']
+ *      R.take(2, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
+ *      R.take(3, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
+ *      R.take(4, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
+ *      R.take(3, 'ramda');               //=> 'ram'
+ *
+ *      var personnel = [
+ *        'Dave Brubeck',
+ *        'Paul Desmond',
+ *        'Eugene Wright',
+ *        'Joe Morello',
+ *        'Gerry Mulligan',
+ *        'Bob Bates',
+ *        'Joe Dodge',
+ *        'Ron Crotty'
+ *      ];
+ *
+ *      var takeFive = R.take(5);
+ *      takeFive(personnel);
+ *      //=> ['Dave Brubeck', 'Paul Desmond', 'Eugene Wright', 'Joe Morello', 'Gerry Mulligan']
+ * @symb R.take(-1, [a, b]) = [a, b]
+ * @symb R.take(0, [a, b]) = []
+ * @symb R.take(1, [a, b]) = [a]
+ * @symb R.take(2, [a, b]) = [a, b]
+ */
+module.exports = _curry2(_dispatchable(['take'], _xtake, function take(n, xs) {
+  return slice(0, n < 0 ? Infinity : n, xs);
+}));
+
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var _xfBase = __webpack_require__(7);
+
+
+module.exports = (function() {
+  function XDropRepeatsWith(pred, xf) {
+    this.xf = xf;
+    this.pred = pred;
+    this.lastValue = undefined;
+    this.seenFirstValue = false;
+  }
+
+  XDropRepeatsWith.prototype['@@transducer/init'] = _xfBase.init;
+  XDropRepeatsWith.prototype['@@transducer/result'] = _xfBase.result;
+  XDropRepeatsWith.prototype['@@transducer/step'] = function(result, input) {
+    var sameAsLast = false;
+    if (!this.seenFirstValue) {
+      this.seenFirstValue = true;
+    } else if (this.pred(this.lastValue, input)) {
+      sameAsLast = true;
+    }
+    this.lastValue = input;
+    return sameAsLast ? result : this.xf['@@transducer/step'](result, input);
+  };
+
+  return _curry2(function _xdropRepeatsWith(pred, xf) { return new XDropRepeatsWith(pred, xf); });
+}());
+
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var _dispatchable = __webpack_require__(6);
+var _xdropRepeatsWith = __webpack_require__(120);
+var last = __webpack_require__(122);
+
+
+/**
+ * Returns a new list without any consecutively repeating elements. Equality is
+ * determined by applying the supplied predicate to each pair of consecutive elements. The
+ * first element in a series of equal elements will be preserved.
+ *
+ * Acts as a transducer if a transformer is given in list position.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.14.0
+ * @category List
+ * @sig (a, a -> Boolean) -> [a] -> [a]
+ * @param {Function} pred A predicate used to test whether two items are equal.
+ * @param {Array} list The array to consider.
+ * @return {Array} `list` without repeating elements.
+ * @see R.transduce
+ * @example
+ *
+ *      var l = [1, -1, 1, 3, 4, -4, -4, -5, 5, 3, 3];
+ *      R.dropRepeatsWith(R.eqBy(Math.abs), l); //=> [1, 3, 4, -5, 3]
+ */
+module.exports = _curry2(_dispatchable([], _xdropRepeatsWith, function dropRepeatsWith(pred, list) {
+  var result = [];
+  var idx = 1;
+  var len = list.length;
+  if (len !== 0) {
+    result[0] = list[0];
+    while (idx < len) {
+      if (!pred(last(result), list[idx])) {
+        result[result.length] = list[idx];
+      }
+      idx += 1;
+    }
+  }
+  return result;
+}));
+
+
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var nth = __webpack_require__(37);
+
+
+/**
+ * Returns the last element of the given list or string.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.4
+ * @category List
+ * @sig [a] -> a | Undefined
+ * @sig String -> String
+ * @param {*} list
+ * @return {*}
+ * @see R.init, R.head, R.tail
+ * @example
+ *
+ *      R.last(['fi', 'fo', 'fum']); //=> 'fum'
+ *      R.last([]); //=> undefined
+ *
+ *      R.last('abc'); //=> 'c'
+ *      R.last(''); //=> ''
+ */
+module.exports = nth(-1);
+
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Returns `true` if one or both of its arguments are `true`. Returns `false`
+ * if both arguments are `false`.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Logic
+ * @sig a -> b -> a | b
+ * @param {Any} a
+ * @param {Any} b
+ * @return {Any} the first argument if truthy, otherwise the second argument.
+ * @see R.either
+ * @example
+ *
+ *      R.or(true, true); //=> true
+ *      R.or(true, false); //=> true
+ *      R.or(false, true); //=> true
+ *      R.or(false, false); //=> false
+ */
+module.exports = _curry2(function or(a, b) {
+  return a || b;
+});
+
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry1 = __webpack_require__(2);
+var _isArguments = __webpack_require__(91);
+var _isArray = __webpack_require__(22);
+var _isObject = __webpack_require__(111);
+var _isString = __webpack_require__(47);
+
+
+/**
+ * Returns the empty value of its argument's type. Ramda defines the empty
+ * value of Array (`[]`), Object (`{}`), String (`''`), and Arguments. Other
+ * types are supported if they define `<Type>.empty` and/or
+ * `<Type>.prototype.empty`.
+ *
+ * Dispatches to the `empty` method of the first argument, if present.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.3.0
+ * @category Function
+ * @sig a -> a
+ * @param {*} x
+ * @return {*}
+ * @example
+ *
+ *      R.empty(Just(42));      //=> Nothing()
+ *      R.empty([1, 2, 3]);     //=> []
+ *      R.empty('unicorns');    //=> ''
+ *      R.empty({x: 1, y: 2});  //=> {}
+ */
+module.exports = _curry1(function empty(x) {
+  return (
+    (x != null && typeof x.empty === 'function') ?
+      x.empty() :
+    (x != null && x.constructor != null && typeof x.constructor.empty === 'function') ?
+      x.constructor.empty() :
+    _isArray(x) ?
+      [] :
+    _isString(x) ?
+      '' :
+    _isObject(x) ?
+      {} :
+    _isArguments(x) ?
+      (function() { return arguments; }()) :
+    // else
+      void 0
+  );
+});
+
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _Set = __webpack_require__(365);
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Returns a new list containing only one copy of each element in the original
+ * list, based upon the value returned by applying the supplied function to
+ * each list element. Prefers the first item if the supplied function produces
+ * the same value on two items. `R.equals` is used for comparison.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.16.0
+ * @category List
+ * @sig (a -> b) -> [a] -> [a]
+ * @param {Function} fn A function used to produce a value to use during comparisons.
+ * @param {Array} list The array to consider.
+ * @return {Array} The list of unique items.
+ * @example
+ *
+ *      R.uniqBy(Math.abs, [-1, -5, 2, 10, 1, 2]); //=> [-1, -5, 2, 10]
+ */
+module.exports = _curry2(function uniqBy(fn, list) {
+  var set = new _Set();
+  var result = [];
+  var idx = 0;
+  var appliedItem, item;
+
+  while (idx < list.length) {
+    item = list[idx];
+    appliedItem = fn(item);
+    if (set.add(appliedItem)) {
+      result.push(item);
+    }
+    idx += 1;
+  }
+  return result;
+});
+
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Creates an object containing a single key:value pair.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.18.0
+ * @category Object
+ * @sig String -> a -> {String:a}
+ * @param {String} key
+ * @param {*} val
+ * @return {Object}
+ * @see R.pair
+ * @example
+ *
+ *      var matchPhrases = R.compose(
+ *        R.objOf('must'),
+ *        R.map(R.objOf('match_phrase'))
+ *      );
+ *      matchPhrases(['foo', 'bar', 'baz']); //=> {must: [{match_phrase: 'foo'}, {match_phrase: 'bar'}, {match_phrase: 'baz'}]}
+ */
+module.exports = _curry2(function objOf(key, val) {
+  var obj = {};
+  obj[key] = val;
+  return obj;
+});
+
+
+/***/ }),
+/* 127 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * See if an object (`val`) is an instance of the supplied constructor. This
+ * function will check up the inheritance chain, if any.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.3.0
+ * @category Type
+ * @sig (* -> {*}) -> a -> Boolean
+ * @param {Object} ctor A constructor
+ * @param {*} val The value to test
+ * @return {Boolean}
+ * @example
+ *
+ *      R.is(Object, {}); //=> true
+ *      R.is(Number, 1); //=> true
+ *      R.is(Object, 1); //=> false
+ *      R.is(String, 's'); //=> true
+ *      R.is(String, new String('')); //=> true
+ *      R.is(Object, new String('')); //=> true
+ *      R.is(Object, 's'); //=> false
+ *      R.is(Number, {}); //=> false
+ */
+module.exports = _curry2(function is(Ctor, val) {
+  return val != null && val.constructor === Ctor || val instanceof Ctor;
+});
+
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry1 = __webpack_require__(2);
+var converge = __webpack_require__(113);
+
+
+/**
+ * juxt applies a list of functions to a list of values.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.19.0
+ * @category Function
+ * @sig [(a, b, ..., m) -> n] -> ((a, b, ..., m) -> [n])
+ * @param {Array} fns An array of functions
+ * @return {Function} A function that returns a list of values after applying each of the original `fns` to its parameters.
+ * @see R.applySpec
+ * @example
+ *
+ *      var getRange = R.juxt([Math.min, Math.max]);
+ *      getRange(3, 4, 9, -3); //=> [-3, 9]
+ * @symb R.juxt([f, g, h])(a, b) = [f(a, b), g(a, b), h(a, b)]
+ */
+module.exports = _curry1(function juxt(fns) {
+  return converge(function() { return Array.prototype.slice.call(arguments, 0); }, fns);
+});
+
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry1 = __webpack_require__(2);
+var _isNumber = __webpack_require__(130);
+
+
+/**
+ * Returns the number of elements in the array by returning `list.length`.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.3.0
+ * @category List
+ * @sig [a] -> Number
+ * @param {Array} list The array to inspect.
+ * @return {Number} The length of the array.
+ * @example
+ *
+ *      R.length([]); //=> 0
+ *      R.length([1, 2, 3]); //=> 3
+ */
+module.exports = _curry1(function length(list) {
+  return list != null && _isNumber(list.length) ? list.length : NaN;
+});
+
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports) {
+
+module.exports = function _isNumber(x) {
+  return Object.prototype.toString.call(x) === '[object Number]';
+};
+
+
+/***/ }),
+/* 131 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry3 = __webpack_require__(3);
+var adjust = __webpack_require__(88);
+var always = __webpack_require__(31);
+
+
+/**
+ * Returns a new copy of the array with the element at the provided index
+ * replaced with the given value.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.14.0
+ * @category List
+ * @sig Number -> a -> [a] -> [a]
+ * @param {Number} idx The index to update.
+ * @param {*} x The value to exist at the given index of the returned array.
+ * @param {Array|Arguments} list The source array-like object to be updated.
+ * @return {Array} A copy of `list` with the value at index `idx` replaced with `x`.
+ * @see R.adjust
+ * @example
+ *
+ *      R.update(1, 11, [0, 1, 2]);     //=> [0, 11, 2]
+ *      R.update(1)(11)([0, 1, 2]);     //=> [0, 11, 2]
+ * @symb R.update(-1, a, [b, c]) = [b, a]
+ * @symb R.update(0, a, [b, c]) = [a, c]
+ * @symb R.update(1, a, [b, c]) = [b, a]
+ */
+module.exports = _curry3(function update(idx, x, list) {
+  return adjust(always(x), idx, list);
+});
+
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry1 = __webpack_require__(2);
+var sum = __webpack_require__(133);
+
+
+/**
+ * Returns the mean of the given list of numbers.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.14.0
+ * @category Math
+ * @sig [Number] -> Number
+ * @param {Array} list
+ * @return {Number}
+ * @example
+ *
+ *      R.mean([2, 7, 9]); //=> 6
+ *      R.mean([]); //=> NaN
+ */
+module.exports = _curry1(function mean(list) {
+  return sum(list) / list.length;
+});
+
+
+/***/ }),
+/* 133 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var add = __webpack_require__(44);
+var reduce = __webpack_require__(16);
+
+
+/**
+ * Adds together all the elements of a list.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Math
+ * @sig [Number] -> Number
+ * @param {Array} list An array of numbers
+ * @return {Number} The sum of all the numbers in the list.
+ * @see R.reduce
+ * @example
+ *
+ *      R.sum([2,4,6,8,100,1]); //=> 121
+ */
+module.exports = reduce(add, 0);
+
+
+/***/ }),
+/* 134 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry3 = __webpack_require__(3);
+var _has = __webpack_require__(9);
+
+
+/**
+ * Creates a new object with the own properties of the two provided objects. If
+ * a key exists in both objects, the provided function is applied to the key
+ * and the values associated with the key in each object, with the result being
+ * used as the value associated with the key in the returned object. The key
+ * will be excluded from the returned object if the resulting value is
+ * `undefined`.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.19.0
+ * @category Object
+ * @sig (String -> a -> a -> a) -> {a} -> {a} -> {a}
+ * @param {Function} fn
+ * @param {Object} l
+ * @param {Object} r
+ * @return {Object}
+ * @see R.merge, R.mergeWith
+ * @example
+ *
+ *      let concatValues = (k, l, r) => k == 'values' ? R.concat(l, r) : r
+ *      R.mergeWithKey(concatValues,
+ *                     { a: true, thing: 'foo', values: [10, 20] },
+ *                     { b: true, thing: 'bar', values: [15, 35] });
+ *      //=> { a: true, b: true, thing: 'bar', values: [10, 20, 15, 35] }
+ * @symb R.mergeWithKey(f, { x: 1, y: 2 }, { y: 5, z: 3 }) = { x: 1, y: f('y', 2, 5), z: 3 }
+ */
+module.exports = _curry3(function mergeWithKey(fn, l, r) {
+  var result = {};
+  var k;
+
+  for (k in l) {
+    if (_has(k, l)) {
+      result[k] = _has(k, r) ? fn(k, l[k], r[k]) : l[k];
+    }
+  }
+
+  for (k in r) {
+    if (_has(k, r) && !(_has(k, result))) {
+      result[k] = r[k];
+    }
+  }
+
+  return result;
+});
+
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Multiplies two numbers. Equivalent to `a * b` but curried.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Math
+ * @sig Number -> Number -> Number
+ * @param {Number} a The first value.
+ * @param {Number} b The second value.
+ * @return {Number} The result of `a * b`.
+ * @see R.divide
+ * @example
+ *
+ *      var double = R.multiply(2);
+ *      var triple = R.multiply(3);
+ *      double(3);       //=>  6
+ *      triple(4);       //=> 12
+ *      R.multiply(2, 5);  //=> 10
+ */
+module.exports = _curry2(function multiply(a, b) { return a * b; });
+
+
+/***/ }),
+/* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry3 = __webpack_require__(3);
+
+
+/**
+ * Returns the result of "setting" the portion of the given data structure
+ * focused by the given lens to the result of applying the given function to
+ * the focused value.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.16.0
+ * @category Object
+ * @typedefn Lens s a = Functor f => (a -> f a) -> s -> f s
+ * @sig Lens s a -> (a -> a) -> s -> s
+ * @param {Lens} lens
+ * @param {*} v
+ * @param {*} x
+ * @return {*}
+ * @see R.prop, R.lensIndex, R.lensProp
+ * @example
+ *
+ *      var headLens = R.lensIndex(0);
+ *
+ *      R.over(headLens, R.toUpper, ['foo', 'bar', 'baz']); //=> ['FOO', 'bar', 'baz']
+ */
+module.exports = (function() {
+  // `Identity` is a functor that holds a single value, where `map` simply
+  // transforms the held value with the provided function.
+  var Identity = function(x) {
+    return {value: x, map: function(f) { return Identity(f(x)); }};
+  };
+
+  return _curry3(function over(lens, f, x) {
+    // The value returned by the getter function is first transformed with `f`,
+    // then set as the value of an `Identity`. This is then mapped over with the
+    // setter function of the lens.
+    return lens(function(y) { return Identity(f(y)); })(x).value;
+  });
+}());
+
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _arity = __webpack_require__(14);
+var _curry2 = __webpack_require__(0);
+
+
+module.exports = function _createPartialApplicator(concat) {
+  return _curry2(function(fn, args) {
+    return _arity(Math.max(0, fn.length - args.length), function() {
+      return fn.apply(this, concat(args, arguments));
+    });
+  });
+};
+
+
+/***/ }),
+/* 138 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Similar to `pick` except that this one includes a `key: undefined` pair for
+ * properties that don't exist.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Object
+ * @sig [k] -> {k: v} -> {k: v}
+ * @param {Array} names an array of String property names to copy onto a new object
+ * @param {Object} obj The object to copy from
+ * @return {Object} A new object with only properties from `names` on it.
+ * @see R.pick
+ * @example
+ *
+ *      R.pickAll(['a', 'd'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1, d: 4}
+ *      R.pickAll(['a', 'e', 'f'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1, e: undefined, f: undefined}
+ */
+module.exports = _curry2(function pickAll(names, obj) {
+  var result = {};
+  var idx = 0;
+  var len = names.length;
+  while (idx < len) {
+    var name = names[idx];
+    result[name] = obj[name];
+    idx += 1;
+  }
+  return result;
+});
+
+
+/***/ }),
+/* 139 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _concat = __webpack_require__(13);
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Returns a new list with the given element at the front, followed by the
+ * contents of the list.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category List
+ * @sig a -> [a] -> [a]
+ * @param {*} el The item to add to the head of the output list.
+ * @param {Array} list The array to add to the tail of the output list.
+ * @return {Array} A new array.
+ * @see R.append
+ * @example
+ *
+ *      R.prepend('fee', ['fi', 'fo', 'fum']); //=> ['fee', 'fi', 'fo', 'fum']
+ */
+module.exports = _curry2(function prepend(el, list) {
+  return _concat([el], list);
+});
+
+
+/***/ }),
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var curryN = __webpack_require__(8);
+
+
+/**
+ * Accepts a function `fn` and a list of transformer functions and returns a
+ * new curried function. When the new function is invoked, it calls the
+ * function `fn` with parameters consisting of the result of calling each
+ * supplied handler on successive arguments to the new function.
+ *
+ * If more arguments are passed to the returned function than transformer
+ * functions, those arguments are passed directly to `fn` as additional
+ * parameters. If you expect additional arguments that don't need to be
+ * transformed, although you can ignore them, it's best to pass an identity
+ * function so that the new function reports the correct arity.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Function
+ * @sig (x1 -> x2 -> ... -> z) -> [(a -> x1), (b -> x2), ...] -> (a -> b -> ... -> z)
+ * @param {Function} fn The function to wrap.
+ * @param {Array} transformers A list of transformer functions
+ * @return {Function} The wrapped function.
+ * @see R.converge
+ * @example
+ *
+ *      R.useWith(Math.pow, [R.identity, R.identity])(3, 4); //=> 81
+ *      R.useWith(Math.pow, [R.identity, R.identity])(3)(4); //=> 81
+ *      R.useWith(Math.pow, [R.dec, R.inc])(3, 4); //=> 32
+ *      R.useWith(Math.pow, [R.dec, R.inc])(3)(4); //=> 32
+ * @symb R.useWith(f, [g, h])(a, b) = f(g(a), h(b))
+ */
+module.exports = _curry2(function useWith(fn, transformers) {
+  return curryN(transformers.length, function() {
+    var args = [];
+    var idx = 0;
+    while (idx < transformers.length) {
+      args.push(transformers[idx].call(this, arguments[idx]));
+      idx += 1;
+    }
+    return fn.apply(this, args.concat(Array.prototype.slice.call(arguments, transformers.length)));
+  });
+});
+
+
+/***/ }),
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry3 = __webpack_require__(3);
+
+
+/**
+ * Returns a single item by iterating through the list, successively calling
+ * the iterator function and passing it an accumulator value and the current
+ * value from the array, and then passing the result to the next call.
+ *
+ * Similar to `reduce`, except moves through the input list from the right to
+ * the left.
+ *
+ * The iterator function receives two values: *(value, acc)*, while the arguments'
+ * order of `reduce`'s iterator function is *(acc, value)*.
+ *
+ * Note: `R.reduceRight` does not skip deleted or unassigned indices (sparse
+ * arrays), unlike the native `Array.prototype.reduce` method. For more details
+ * on this behavior, see:
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#Description
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category List
+ * @sig (a, b -> b) -> b -> [a] -> b
+ * @param {Function} fn The iterator function. Receives two values, the current element from the array
+ *        and the accumulator.
+ * @param {*} acc The accumulator value.
+ * @param {Array} list The list to iterate over.
+ * @return {*} The final, accumulated value.
+ * @see R.reduce, R.addIndex
+ * @example
+ *
+ *      R.reduceRight(R.subtract, 0, [1, 2, 3, 4]) // => (1 - (2 - (3 - (4 - 0)))) = -2
+ *          -               -2
+ *         / \              / \
+ *        1   -            1   3
+ *           / \              / \
+ *          2   -     ==>    2  -1
+ *             / \              / \
+ *            3   -            3   4
+ *               / \              / \
+ *              4   0            4   0
+ *
+ * @symb R.reduceRight(f, a, [b, c, d]) = f(b, f(c, f(d, a)))
+ */
+module.exports = _curry3(function reduceRight(fn, acc, list) {
+  var idx = list.length - 1;
+  while (idx >= 0) {
+    acc = fn(list[idx], acc);
+    idx -= 1;
+  }
+  return acc;
+});
+
+
+/***/ }),
+/* 142 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+
+
+/**
+ * Calls an input function `n` times, returning an array containing the results
+ * of those function calls.
+ *
+ * `fn` is passed one argument: The current value of `n`, which begins at `0`
+ * and is gradually incremented to `n - 1`.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.2.3
+ * @category List
+ * @sig (Number -> a) -> Number -> [a]
+ * @param {Function} fn The function to invoke. Passed one argument, the current value of `n`.
+ * @param {Number} n A value between `0` and `n - 1`. Increments after each function call.
+ * @return {Array} An array containing the return values of all calls to `fn`.
+ * @example
+ *
+ *      R.times(R.identity, 5); //=> [0, 1, 2, 3, 4]
+ * @symb R.times(f, 0) = []
+ * @symb R.times(f, 1) = [f(0)]
+ * @symb R.times(f, 2) = [f(0), f(1)]
+ */
+module.exports = _curry2(function times(fn, n) {
+  var len = Number(n);
+  var idx = 0;
+  var list;
+
+  if (len < 0 || isNaN(len)) {
+    throw new RangeError('n must be a non-negative number');
+  }
+  list = new Array(len);
+  while (idx < len) {
+    list[idx] = fn(idx);
+    idx += 1;
+  }
+  return list;
+});
+
+
+/***/ }),
+/* 143 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var ap = __webpack_require__(71);
+var map = __webpack_require__(10);
+var prepend = __webpack_require__(139);
+var reduceRight = __webpack_require__(141);
+
+
+/**
+ * Transforms a [Traversable](https://github.com/fantasyland/fantasy-land#traversable)
+ * of [Applicative](https://github.com/fantasyland/fantasy-land#applicative) into an
+ * Applicative of Traversable.
+ *
+ * Dispatches to the `sequence` method of the second argument, if present.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.19.0
+ * @category List
+ * @sig (Applicative f, Traversable t) => (a -> f a) -> t (f a) -> f (t a)
+ * @param {Function} of
+ * @param {*} traversable
+ * @return {*}
+ * @see R.traverse
+ * @example
+ *
+ *      R.sequence(Maybe.of, [Just(1), Just(2), Just(3)]);   //=> Just([1, 2, 3])
+ *      R.sequence(Maybe.of, [Just(1), Just(2), Nothing()]); //=> Nothing()
+ *
+ *      R.sequence(R.of, Just([1, 2, 3])); //=> [Just(1), Just(2), Just(3)]
+ *      R.sequence(R.of, Nothing());       //=> [Nothing()]
+ */
+module.exports = _curry2(function sequence(of, traversable) {
+  return typeof traversable.sequence === 'function' ?
+    traversable.sequence(of) :
+    reduceRight(function(x, acc) { return ap(map(prepend, x), acc); },
+                of([]),
+                traversable);
+});
+
+
+/***/ }),
+/* 144 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(0);
+var _has = __webpack_require__(9);
+
+
+/**
+ * Takes a spec object and a test object; returns true if the test satisfies
+ * the spec. Each of the spec's own properties must be a predicate function.
+ * Each predicate is applied to the value of the corresponding property of the
+ * test object. `where` returns true if all the predicates return true, false
+ * otherwise.
+ *
+ * `where` is well suited to declaratively expressing constraints for other
+ * functions such as `filter` and `find`.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.1
+ * @category Object
+ * @sig {String: (* -> Boolean)} -> {String: *} -> Boolean
+ * @param {Object} spec
+ * @param {Object} testObj
+ * @return {Boolean}
+ * @example
+ *
+ *      // pred :: Object -> Boolean
+ *      var pred = R.where({
+ *        a: R.equals('foo'),
+ *        b: R.complement(R.equals('bar')),
+ *        x: R.gt(__, 10),
+ *        y: R.lt(__, 20)
+ *      });
+ *
+ *      pred({a: 'foo', b: 'xxx', x: 11, y: 19}); //=> true
+ *      pred({a: 'xxx', b: 'xxx', x: 11, y: 19}); //=> false
+ *      pred({a: 'foo', b: 'bar', x: 11, y: 19}); //=> false
+ *      pred({a: 'foo', b: 'xxx', x: 10, y: 19}); //=> false
+ *      pred({a: 'foo', b: 'xxx', x: 11, y: 20}); //=> false
+ */
+module.exports = _curry2(function where(spec, testObj) {
+  for (var prop in spec) {
+    if (_has(prop, spec) && !spec[prop](testObj[prop])) {
+      return false;
+    }
+  }
+  return true;
+});
+
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module, global) {/**
+ * lodash 3.0.1 (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ * Available under MIT license <https://lodash.com/license>
+ */
+
+/** Used to determine if values are of the language type `Object`. */
+var objectTypes = {
+  'function': true,
+  'object': true
+};
+
+/** Detect free variable `exports`. */
+var freeExports = (objectTypes[typeof exports] && exports && !exports.nodeType)
+  ? exports
+  : undefined;
+
+/** Detect free variable `module`. */
+var freeModule = (objectTypes[typeof module] && module && !module.nodeType)
+  ? module
+  : undefined;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = checkGlobal(freeExports && freeModule && typeof global == 'object' && global);
+
+/** Detect free variable `self`. */
+var freeSelf = checkGlobal(objectTypes[typeof self] && self);
+
+/** Detect free variable `window`. */
+var freeWindow = checkGlobal(objectTypes[typeof window] && window);
+
+/** Detect `this` as the global object. */
+var thisGlobal = checkGlobal(objectTypes[typeof this] && this);
+
+/**
+ * Used as a reference to the global object.
+ *
+ * The `this` value is used if it's the global object to avoid Greasemonkey's
+ * restricted `window` object, otherwise the `window` object is used.
+ */
+var root = freeGlobal ||
+  ((freeWindow !== (thisGlobal && thisGlobal.window)) && freeWindow) ||
+    freeSelf || thisGlobal || Function('return this')();
+
+/**
+ * Checks if `value` is a global object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {null|Object} Returns `value` if it's a global object, else `null`.
+ */
+function checkGlobal(value) {
+  return (value && value.Object === Object) ? value : null;
+}
+
+module.exports = root;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(40)(module), __webpack_require__(58)))
+
+/***/ }),
+/* 146 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var makeScope_1 = __webpack_require__(147);
+var r = __webpack_require__(5);
+function default_1(config, reducerName, record) {
+    var scope = makeScope_1.default(config, reducerName);
+    var isArray = r.is(Array, record);
+    if (isArray)
+        throw new TypeError(scope + ": Expected record not to be an array");
+}
+exports.default = default_1;
+
+
+/***/ }),
+/* 147 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function makeScope(config, reducerName) {
+    return config.resourceName + "." + reducerName;
+}
+exports.default = makeScope;
+
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var r = __webpack_require__(5);
+var actionTypesFor_1 = __webpack_require__(84);
+var constants_1 = __webpack_require__(4);
+function reducersFor(resourceName, args, emptyState, reducers) {
+    if (args === void 0) { args = {}; }
+    if (resourceName == null)
+        throw new Error("reducersFor: Expected resourceName");
+    var defaults = {
+        key: constants_1.default.DEFAULT_KEY,
+        resourceName: resourceName
+    };
+    var config = r.merge(defaults, args);
+    return function getReducer(state, action) {
+        state = state || emptyState;
+        if (action == null)
+            throw new Error(resourceName + " reducers: Expected action");
+        var actionTypes = actionTypesFor_1.default(resourceName);
+        var record = action.record;
+        switch (action.type) {
+            case actionTypes.fetchSuccess:
+                return reducers.fetchSuccess(config, state, action.records, emptyState, action.data && action.data.replace);
+            case actionTypes.createStart:
+                return reducers.createStart(config, state, record);
+            case actionTypes.createSuccess:
+                return reducers.createSuccess(config, state, record, action.cid);
+            case actionTypes.createError:
+                return reducers.createError(config, state, record);
+            case actionTypes.updateStart:
+                return reducers.updateStart(config, state, record);
+            case actionTypes.updateSuccess:
+                return reducers.updateSuccess(config, state, record);
+            case actionTypes.updateError:
+                return reducers.updateError(config, state, record);
+            case actionTypes.deleteStart:
+                return reducers.deleteStart(config, state, record);
+            case actionTypes.deleteSuccess:
+                return reducers.deleteSuccess(config, state, record);
+            case actionTypes.deleteError:
+                return reducers.deleteError(config, state, record);
+            default:
+                return state;
+        }
+    };
+}
+exports.default = reducersFor;
+
+
+/***/ }),
+/* 149 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var assertHasKey_1 = __webpack_require__(489);
+var assertNotArray_1 = __webpack_require__(146);
+var makeScope_1 = __webpack_require__(147);
+function invariants(baseArgs, extraArgs) {
+    var config = extraArgs.config;
+    if (!config.resourceName)
+        throw new Error("Expected config.resourceName");
+    var scope = makeScope_1.default(config, baseArgs.reducerName);
+    if (!config.key)
+        throw new Error(scope + ": Expected config.key");
+    if (!extraArgs.record)
+        throw new Error(scope + ": Expected record/s");
+    extraArgs.assertValidStore(scope, extraArgs.current);
+    if (!baseArgs.canBeArray) {
+        assertNotArray_1.default(extraArgs.config, baseArgs.reducerName, extraArgs.record);
+    }
+    assertHasKey_1.default(extraArgs.config, scope, extraArgs.record);
+}
+exports.default = invariants;
+
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var r = __webpack_require__(5);
+function remove(config, current, addedRecord) {
+    var key = config.key;
+    function predicate(record) {
+        var recordKey = record[key];
+        var isSameKey = addedRecord[key] === recordKey;
+        return isSameKey;
+    }
+    return r.reject(predicate, current);
+}
+exports.default = remove;
+
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+function prepareRecord(record) {
+    var recordStatus = (_a = {},
+        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
+        _a[constants_1.default.SPECIAL_KEYS.PENDING_CREATE] = true,
+        _a);
+    return r.merge(record, recordStatus);
+    var _a;
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 152 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+function prepareRecord(record) {
+    var recordStatus = (_a = {},
+        _a[constants_1.default.SPECIAL_KEYS.DELETED] = true,
+        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
+        _a);
+    return r.merge(record, recordStatus);
+    var _a;
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 153 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var r = __webpack_require__(5);
+function default_1(config, reducerName, records) {
+    // All given records must have a key
+    var haskey = r.has(config.key);
+    var allKeys = r.all(haskey, records);
+    if (!allKeys) {
+        throw new Error(reducerName +
+            ": Expected all records to have a value for the store's key `" +
+            config.key +
+            "`");
+    }
+}
+exports.default = default_1;
+
+
+/***/ }),
+/* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+function prepareRecord(record) {
+    return r.dissoc(constants_1.default.SPECIAL_KEYS.BUSY, record);
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 155 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var r = __webpack_require__(5);
+var constants_1 = __webpack_require__(4);
+function prepareRecord(record) {
+    var recordStatus = (_a = {},
+        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
+        _a[constants_1.default.SPECIAL_KEYS.PENDING_UPDATE] = true,
+        _a);
+    return r.merge(record, recordStatus);
+    var _a;
+}
+exports.prepareRecord = prepareRecord;
+
 
 /***/ }),
 /* 156 */
@@ -25171,7 +25161,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var r = __webpack_require__(5);
 var invariant = __webpack_require__(473);
 var actionTypesFor_1 = __webpack_require__(84);
-var assertNotArray_1 = __webpack_require__(145);
+var assertNotArray_1 = __webpack_require__(146);
 var constants_1 = __webpack_require__(4);
 var getDefaultConfig_1 = __webpack_require__(485);
 // const invariant = require("invariant")
@@ -25778,13 +25768,13 @@ module.exports = _curry2(function append(el, list) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var apply = __webpack_require__(94);
+var apply = __webpack_require__(95);
 var curryN = __webpack_require__(8);
 var map = __webpack_require__(10);
 var max = __webpack_require__(32);
 var pluck = __webpack_require__(33);
 var reduce = __webpack_require__(16);
-var values = __webpack_require__(95);
+var values = __webpack_require__(96);
 
 
 /**
@@ -25904,7 +25894,7 @@ module.exports = _curry1(function binary(fn) {
 
 var _curry2 = __webpack_require__(0);
 var _isFunction = __webpack_require__(50);
-var and = __webpack_require__(91);
+var and = __webpack_require__(92);
 var lift = __webpack_require__(51);
 
 
@@ -26092,7 +26082,7 @@ module.exports = _curry3(function clamp(min, max, value) {
 /* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _clone = __webpack_require__(100);
+var _clone = __webpack_require__(101);
 var _curry1 = __webpack_require__(2);
 
 
@@ -26163,7 +26153,7 @@ module.exports = _curry1(function comparator(pred) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var lift = __webpack_require__(51);
-var not = __webpack_require__(102);
+var not = __webpack_require__(103);
 
 
 /**
@@ -26206,7 +26196,7 @@ module.exports = function _pipe(f, g) {
 /* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pipeP = __webpack_require__(105);
+var pipeP = __webpack_require__(106);
 var reverse = __webpack_require__(53);
 
 
@@ -26325,7 +26315,7 @@ module.exports = function _toString(x, seen) {
 var _arrayFromIterator = __webpack_require__(309);
 var _functionName = __webpack_require__(310);
 var _has = __webpack_require__(9);
-var identical = __webpack_require__(107);
+var identical = __webpack_require__(108);
 var keys = __webpack_require__(15);
 var type = __webpack_require__(73);
 
@@ -26586,7 +26576,7 @@ module.exports = _curry1(function cond(pairs) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var constructN = __webpack_require__(111);
+var constructN = __webpack_require__(112);
 
 
 /**
@@ -26802,7 +26792,7 @@ module.exports = _curry3(function descend(fn, a, b) {
 
 var _curry2 = __webpack_require__(0);
 var assoc = __webpack_require__(48);
-var dissoc = __webpack_require__(116);
+var dissoc = __webpack_require__(117);
 
 
 /**
@@ -26934,7 +26924,7 @@ module.exports = _curry2(_dispatchable([], _xdropLast, _dropLast));
 /* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var take = __webpack_require__(118);
+var take = __webpack_require__(119);
 
 module.exports = function dropLast(n, xs) {
   return take(n < xs.length ? xs.length - n : 0, xs);
@@ -27102,8 +27092,8 @@ module.exports = (function() {
 
 var _curry1 = __webpack_require__(2);
 var _dispatchable = __webpack_require__(6);
-var _xdropRepeatsWith = __webpack_require__(119);
-var dropRepeatsWith = __webpack_require__(120);
+var _xdropRepeatsWith = __webpack_require__(120);
+var dropRepeatsWith = __webpack_require__(121);
 var equals = __webpack_require__(17);
 
 
@@ -27208,7 +27198,7 @@ module.exports = (function() {
 var _curry2 = __webpack_require__(0);
 var _isFunction = __webpack_require__(50);
 var lift = __webpack_require__(51);
-var or = __webpack_require__(122);
+var or = __webpack_require__(123);
 
 
 /**
@@ -27667,7 +27657,7 @@ module.exports = (function() {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var _makeFlat = __webpack_require__(99);
+var _makeFlat = __webpack_require__(100);
 
 
 /**
@@ -28194,7 +28184,7 @@ module.exports = reduceBy(function(acc, elem) { return elem; }, null);
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _indexOf = __webpack_require__(106);
+var _indexOf = __webpack_require__(107);
 var _isArray = __webpack_require__(22);
 
 
@@ -28330,7 +28320,7 @@ module.exports = _curry3(function insertAll(idx, elts, list) {
 
 var _contains = __webpack_require__(28);
 var _curry2 = __webpack_require__(0);
-var _filter = __webpack_require__(109);
+var _filter = __webpack_require__(110);
 var flip = __webpack_require__(56);
 var uniq = __webpack_require__(81);
 
@@ -28652,7 +28642,7 @@ module.exports = _curry2(_checkForMethod('intersperse', function intersperse(sep
 /* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _clone = __webpack_require__(100);
+var _clone = __webpack_require__(101);
 var _curry3 = __webpack_require__(3);
 var _isTransformer = __webpack_require__(69);
 var _reduce = __webpack_require__(12);
@@ -28711,7 +28701,7 @@ var _assign = __webpack_require__(83);
 var _identity = __webpack_require__(80);
 var _isTransformer = __webpack_require__(69);
 var isArrayLike = __webpack_require__(34);
-var objOf = __webpack_require__(125);
+var objOf = __webpack_require__(126);
 
 
 module.exports = (function() {
@@ -28889,7 +28879,7 @@ module.exports = _curry1(function invertObj(obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var empty = __webpack_require__(123);
+var empty = __webpack_require__(124);
 var equals = __webpack_require__(17);
 
 
@@ -29063,7 +29053,7 @@ module.exports = _curry2(function lastIndexOf(target, xs) {
 var _curry1 = __webpack_require__(2);
 var lens = __webpack_require__(57);
 var nth = __webpack_require__(37);
-var update = __webpack_require__(130);
+var update = __webpack_require__(131);
 
 
 /**
@@ -29096,7 +29086,7 @@ module.exports = _curry1(function lensIndex(n) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var assocPath = __webpack_require__(96);
+var assocPath = __webpack_require__(97);
 var lens = __webpack_require__(57);
 var path = __webpack_require__(39);
 
@@ -29415,7 +29405,7 @@ module.exports = _curry2(function match(rx, str) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isInteger = __webpack_require__(97);
+var _isInteger = __webpack_require__(98);
 
 
 /**
@@ -29498,7 +29488,7 @@ module.exports = _curry3(function maxBy(f, a, b) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry1 = __webpack_require__(2);
-var mean = __webpack_require__(131);
+var mean = __webpack_require__(132);
 
 
 /**
@@ -29649,7 +29639,7 @@ module.exports = _curry1(function mergeAll(list) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var mergeWithKey = __webpack_require__(133);
+var mergeWithKey = __webpack_require__(134);
 
 
 /**
@@ -29809,11 +29799,11 @@ module.exports = _curry1(function negate(n) { return -n; });
 /* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _complement = __webpack_require__(108);
+var _complement = __webpack_require__(109);
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
-var _xany = __webpack_require__(93);
-var any = __webpack_require__(92);
+var _xany = __webpack_require__(94);
+var any = __webpack_require__(93);
 
 
 /**
@@ -30019,7 +30009,7 @@ module.exports = _curry2(function pair(fst, snd) { return [fst, snd]; });
 /***/ (function(module, exports, __webpack_require__) {
 
 var _concat = __webpack_require__(13);
-var _createPartialApplicator = __webpack_require__(136);
+var _createPartialApplicator = __webpack_require__(137);
 
 
 /**
@@ -30058,7 +30048,7 @@ module.exports = _createPartialApplicator(_concat);
 /***/ (function(module, exports, __webpack_require__) {
 
 var _concat = __webpack_require__(13);
-var _createPartialApplicator = __webpack_require__(136);
+var _createPartialApplicator = __webpack_require__(137);
 var flip = __webpack_require__(56);
 
 
@@ -30094,7 +30084,7 @@ module.exports = _createPartialApplicator(flip(_concat));
 /***/ (function(module, exports, __webpack_require__) {
 
 var filter = __webpack_require__(77);
-var juxt = __webpack_require__(127);
+var juxt = __webpack_require__(128);
 var reject = __webpack_require__(54);
 
 
@@ -30167,7 +30157,7 @@ module.exports = _curry3(function pathEq(_path, val, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var defaultTo = __webpack_require__(113);
+var defaultTo = __webpack_require__(114);
 var path = __webpack_require__(39);
 
 
@@ -30307,7 +30297,7 @@ module.exports = _curry2(function pickBy(test, obj) {
 /* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var composeK = __webpack_require__(104);
+var composeK = __webpack_require__(105);
 var reverse = __webpack_require__(53);
 
 /**
@@ -30356,7 +30346,7 @@ module.exports = function pipeK() {
 /* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var multiply = __webpack_require__(134);
+var multiply = __webpack_require__(135);
 var reduce = __webpack_require__(16);
 
 
@@ -30384,8 +30374,8 @@ module.exports = reduce(multiply, 1);
 
 var _map = __webpack_require__(46);
 var identity = __webpack_require__(79);
-var pickAll = __webpack_require__(137);
-var useWith = __webpack_require__(139);
+var pickAll = __webpack_require__(138);
+var useWith = __webpack_require__(140);
 
 
 /**
@@ -30452,7 +30442,7 @@ module.exports = _curry3(function propEq(name, val, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry3 = __webpack_require__(3);
-var is = __webpack_require__(126);
+var is = __webpack_require__(127);
 
 
 /**
@@ -30595,7 +30585,7 @@ module.exports = _curry2(function props(ps, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var _isNumber = __webpack_require__(129);
+var _isNumber = __webpack_require__(130);
 
 
 /**
@@ -30746,7 +30736,7 @@ module.exports = _curry3(function remove(start, count, list) {
 
 var _curry2 = __webpack_require__(0);
 var always = __webpack_require__(31);
-var times = __webpack_require__(141);
+var times = __webpack_require__(142);
 
 
 /**
@@ -30854,7 +30844,7 @@ module.exports = _curry3(function scan(fn, acc, list) {
 
 var _curry3 = __webpack_require__(3);
 var always = __webpack_require__(31);
-var over = __webpack_require__(135);
+var over = __webpack_require__(136);
 
 
 /**
@@ -31051,7 +31041,7 @@ module.exports = invoker(1, 'split');
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var length = __webpack_require__(128);
+var length = __webpack_require__(129);
 var slice = __webpack_require__(27);
 
 
@@ -31197,7 +31187,7 @@ module.exports = _curry2(function subtract(a, b) {
 
 var _curry2 = __webpack_require__(0);
 var concat = __webpack_require__(76);
-var difference = __webpack_require__(114);
+var difference = __webpack_require__(115);
 
 
 /**
@@ -31229,7 +31219,7 @@ module.exports = _curry2(function symmetricDifference(list1, list2) {
 
 var _curry3 = __webpack_require__(3);
 var concat = __webpack_require__(76);
-var differenceWith = __webpack_require__(115);
+var differenceWith = __webpack_require__(116);
 
 
 /**
@@ -31264,7 +31254,7 @@ module.exports = _curry3(function symmetricDifferenceWith(pred, list1, list2) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var drop = __webpack_require__(117);
+var drop = __webpack_require__(118);
 
 
 /**
@@ -31436,7 +31426,7 @@ module.exports = _curry2(function tap(fn, x) {
 /* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _cloneRegExp = __webpack_require__(101);
+var _cloneRegExp = __webpack_require__(102);
 var _curry2 = __webpack_require__(0);
 var _isRegExp = __webpack_require__(445);
 var toString = __webpack_require__(36);
@@ -31605,7 +31595,7 @@ module.exports = invoker(0, 'toUpperCase');
 /***/ (function(module, exports, __webpack_require__) {
 
 var _reduce = __webpack_require__(12);
-var _xwrap = __webpack_require__(88);
+var _xwrap = __webpack_require__(89);
 var curryN = __webpack_require__(8);
 
 
@@ -31715,7 +31705,7 @@ module.exports = _curry1(function transpose(outerlist) {
 
 var _curry3 = __webpack_require__(3);
 var map = __webpack_require__(10);
-var sequence = __webpack_require__(142);
+var sequence = __webpack_require__(143);
 
 
 /**
@@ -32289,7 +32279,7 @@ module.exports = _curry3(function when(pred, whenTrueFn, x) {
 var _curry2 = __webpack_require__(0);
 var equals = __webpack_require__(17);
 var map = __webpack_require__(10);
-var where = __webpack_require__(143);
+var where = __webpack_require__(144);
 
 
 /**
@@ -32708,7 +32698,7 @@ module.exports = snakeCase;
  * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <https://lodash.com/license>
  */
-var root = __webpack_require__(144);
+var root = __webpack_require__(145);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -32897,7 +32887,7 @@ module.exports = deburr;
  * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <https://lodash.com/license>
  */
-var root = __webpack_require__(144);
+var root = __webpack_require__(145);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -33501,7 +33491,7 @@ exports.default = {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var reducersFor_1 = __webpack_require__(147);
+var reducersFor_1 = __webpack_require__(148);
 var error_1 = __webpack_require__(488);
 var start_1 = __webpack_require__(492);
 var success_1 = __webpack_require__(493);
@@ -33542,7 +33532,7 @@ exports.default = reducersFor;
 Object.defineProperty(exports, "__esModule", { value: true });
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(18);
-var remove_1 = __webpack_require__(149);
+var remove_1 = __webpack_require__(150);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -33639,7 +33629,7 @@ exports.default = merge;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(150);
+var start_1 = __webpack_require__(151);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(24);
@@ -33734,7 +33724,7 @@ exports.default = error;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(151);
+var start_1 = __webpack_require__(152);
 var constants_1 = __webpack_require__(4);
 var findByKey_1 = __webpack_require__(85);
 var invariants_1 = __webpack_require__(18);
@@ -33789,7 +33779,7 @@ exports.default = success;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var assertAllHaveKeys_1 = __webpack_require__(152);
+var assertAllHaveKeys_1 = __webpack_require__(153);
 var constants_1 = __webpack_require__(4);
 var store_1 = __webpack_require__(24);
 var wrapArray_1 = __webpack_require__(59);
@@ -33818,7 +33808,7 @@ exports.default = success;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var error_1 = __webpack_require__(153);
+var error_1 = __webpack_require__(154);
 var constants_1 = __webpack_require__(4);
 var findByKey_1 = __webpack_require__(85);
 var invariants_1 = __webpack_require__(18);
@@ -33849,7 +33839,7 @@ exports.default = error;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(154);
+var start_1 = __webpack_require__(155);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(18);
 var store_1 = __webpack_require__(24);
@@ -33910,7 +33900,7 @@ exports.default = {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var reducersFor_1 = __webpack_require__(147);
+var reducersFor_1 = __webpack_require__(148);
 var error_1 = __webpack_require__(503);
 var start_1 = __webpack_require__(507);
 var success_1 = __webpack_require__(508);
@@ -34022,7 +34012,7 @@ exports.default = remove;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(150);
+var start_1 = __webpack_require__(151);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(29);
@@ -34107,7 +34097,7 @@ exports.default = error;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(151);
+var start_1 = __webpack_require__(152);
 var invariants_1 = __webpack_require__(19);
 var constants_1 = __webpack_require__(4);
 var store_1 = __webpack_require__(29);
@@ -34167,7 +34157,7 @@ exports.default = success;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var r = __webpack_require__(5);
-var assertAllHaveKeys_1 = __webpack_require__(152);
+var assertAllHaveKeys_1 = __webpack_require__(153);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
 var wrapArray_1 = __webpack_require__(59);
@@ -34196,7 +34186,7 @@ exports.default = success;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var error_1 = __webpack_require__(153);
+var error_1 = __webpack_require__(154);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(29);
@@ -34226,7 +34216,7 @@ exports.default = error;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(154);
+var start_1 = __webpack_require__(155);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
 var store_1 = __webpack_require__(29);
@@ -34300,7 +34290,7 @@ fetchImages;}});
 /* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});var _addresses=__webpack_require__(64);Object.defineProperty(exports,'fetchAddresses',{enumerable:true,get:function get(){return _addresses.fetchAddresses;}});Object.defineProperty(exports,'createAddress',{enumerable:true,get:function get(){return _addresses.createAddress;}});Object.defineProperty(exports,'deleteAddress',{enumerable:true,get:function get(){return _addresses.deleteAddress;}});var _menus=__webpack_require__(86);Object.defineProperty(exports,'fetchMenu',{enumerable:true,get:function get(){return _menus.
+Object.defineProperty(exports,"__esModule",{value:true});var _addresses=__webpack_require__(64);Object.defineProperty(exports,'fetchAddresses',{enumerable:true,get:function get(){return _addresses.fetchAddresses;}});Object.defineProperty(exports,'createAddress',{enumerable:true,get:function get(){return _addresses.createAddress;}});Object.defineProperty(exports,'deleteAddress',{enumerable:true,get:function get(){return _addresses.deleteAddress;}});var _menus=__webpack_require__(87);Object.defineProperty(exports,'fetchMenu',{enumerable:true,get:function get(){return _menus.
 fetchMenu;}});var _order=__webpack_require__(25);Object.defineProperty(exports,'addLineItem',{enumerable:true,get:function get(){return _order.
 
 addLineItem;}});Object.defineProperty(exports,'pushLineItem',{enumerable:true,get:function get(){return _order.
@@ -34728,15 +34718,24 @@ function(favorites){return Object.values(favorites);});
 /* 525 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.currentLocation=exports.locationsAsArray=exports.locationsCollection=undefined;var _reselect=__webpack_require__(41);
+Object.defineProperty(exports,"__esModule",{value:true});exports.currentLocation=exports.orderableLocationsAsArray=exports.locationsAsArray=exports.locationsCollection=undefined;var _reselect=__webpack_require__(41);
 var _get=__webpack_require__(526);var _get2=_interopRequireDefault(_get);
-var _lodash=__webpack_require__(527);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+var _lodash=__webpack_require__(527);var _lodash2=_interopRequireDefault(_lodash);
+var _lodash3=__webpack_require__(86);var _lodash4=_interopRequireDefault(_lodash3);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 var locationsCollection=exports.locationsCollection=function locationsCollection(state){return state.data.locations.locationsById;};
 
 var locationsAsArray=exports.locationsAsArray=(0,_reselect.createSelector)(
 locationsCollection,
 function(locations){return Object.values(locations);});
+
+
+
+var orderableLocationsAsArray=exports.orderableLocationsAsArray=(0,_reselect.createSelector)(
+locationsCollection,
+function(locations){return(0,_lodash4.default)(Object.values(locations),function(location){
+return!location.is_closed&&!location.is_coming_soon;
+});});
 
 
 var currentLocation=exports.currentLocation=(0,_reselect.createSelector)(
@@ -80672,7 +80671,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=un
 
 
 
-error;var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(66);var _order=__webpack_require__(25);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _payments=__webpack_require__(65);var _customerOrders=__webpack_require__(63);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType2.RATINGS_FETCH_START,RATINGS_FETCH_ERROR=_reduxCrud$actionType2.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType2.RATINGS_CREATE_START,RATINGS_CREATE_ERROR=_reduxCrud$actionType2.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType2.RATINGS_UPDATE_START,RATINGS_UPDATE_ERROR=_reduxCrud$actionType2.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType2.RATINGS_DELETE_START,RATINGS_DELETE_ERROR=_reduxCrud$actionType2.RATINGS_DELETE_ERROR;var initialState=exports.initialState={sendSupportTicket:null,setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAllCustomerOrders:null,fetchPastCustomerOrders:null,fetchUpcomingCustomerOrders:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocation:null,fetchLocations:null,fetchGeolocations:null,fetchMenu:null,addLineItem:null,resolveOrder:null,submitOrder:null,setLineItemMadeFor:null,setLineItemInstructions:null,fetchPayments:null,createPayment:null,deletePayment:null,setPaymentMethod:null,setDefaultPayment:null,fetchFavorites:null,createFavorite:null,updateFavorite:null,deleteFavorite:null,fetchRating:null,createRating:null,updateRating:null,deleteRating:null,authenticateUser:null,createUser:null,fetchLevelUpLoyalty:null,fetchLevelUpQRCode:null,updateLevelUpConnection:null,connectLevelUp:null,disconnectLevelUp:null,fetchLevelUpPaymentMethod:null,fetchUser:null,resetUserPassword:null,resetLevelUpPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null,validateCurrentCart:null,validateCurrentOrder:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+error;var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(87);var _favorites=__webpack_require__(66);var _order=__webpack_require__(25);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _payments=__webpack_require__(65);var _customerOrders=__webpack_require__(63);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType2.RATINGS_FETCH_START,RATINGS_FETCH_ERROR=_reduxCrud$actionType2.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType2.RATINGS_CREATE_START,RATINGS_CREATE_ERROR=_reduxCrud$actionType2.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType2.RATINGS_UPDATE_START,RATINGS_UPDATE_ERROR=_reduxCrud$actionType2.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType2.RATINGS_DELETE_START,RATINGS_DELETE_ERROR=_reduxCrud$actionType2.RATINGS_DELETE_ERROR;var initialState=exports.initialState={sendSupportTicket:null,setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAllCustomerOrders:null,fetchPastCustomerOrders:null,fetchUpcomingCustomerOrders:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocation:null,fetchLocations:null,fetchGeolocations:null,fetchMenu:null,addLineItem:null,resolveOrder:null,submitOrder:null,setLineItemMadeFor:null,setLineItemInstructions:null,fetchPayments:null,createPayment:null,deletePayment:null,setPaymentMethod:null,setDefaultPayment:null,fetchFavorites:null,createFavorite:null,updateFavorite:null,deleteFavorite:null,fetchRating:null,createRating:null,updateRating:null,deleteRating:null,authenticateUser:null,createUser:null,fetchLevelUpLoyalty:null,fetchLevelUpQRCode:null,updateLevelUpConnection:null,connectLevelUp:null,disconnectLevelUp:null,fetchLevelUpPaymentMethod:null,fetchUser:null,resetUserPassword:null,resetLevelUpPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null,validateCurrentCart:null,validateCurrentOrder:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 
 case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:null});
@@ -83718,7 +83717,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-status;var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(66);var _payments=__webpack_require__(65);var _order=__webpack_require__(25);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _user=__webpack_require__(11);var _customerOrders=__webpack_require__(63);var _constants=__webpack_require__(68);var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType.RATINGS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType2.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType2.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType2.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType2.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType2.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType2.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,setMiscOptions:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+status;var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(87);var _favorites=__webpack_require__(66);var _payments=__webpack_require__(65);var _order=__webpack_require__(25);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _user=__webpack_require__(11);var _customerOrders=__webpack_require__(63);var _constants=__webpack_require__(68);var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType.RATINGS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType2.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType2.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType2.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType2.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType2.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType2.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,setMiscOptions:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:PENDING});
 case _application.SETUP_BRANDIBBLE+'_FULFILLED':return _extends({},state,{setupBrandibble:FULFILLED});
