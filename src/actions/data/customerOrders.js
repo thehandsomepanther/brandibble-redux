@@ -2,24 +2,24 @@ export const FETCH_ALL_CUSTOMER_ORDERS = 'FETCH_ALL_CUSTOMER_ORDERS';
 export const FETCH_PAST_CUSTOMER_ORDERS = 'FETCH_PAST_CUSTOMER_ORDERS';
 export const FETCH_UPCOMING_CUSTOMER_ORDERS = 'FETCH_UPCOMING_CUSTOMER_ORDERS';
 
-function _fetchAllCustomerOrders(brandibble, customerId, include_item_details = false) {
+function _fetchAllCustomerOrders(brandibble, customerId) {
   return {
     type: FETCH_ALL_CUSTOMER_ORDERS,
-    payload: brandibble.customers.orders(customerId, { status: 'both', include_item_details }),
+    payload: brandibble.customers.orders(customerId, { status: 'both' }),
   };
 }
 
-function _fetchPastCustomerOrders(brandibble, customerId, limit = 10, include_item_details = false) {
+function _fetchPastCustomerOrders(brandibble, customerId, limit = 10) {
   return {
     type: FETCH_PAST_CUSTOMER_ORDERS,
-    payload: brandibble.customers.orders(customerId, { status: 'past', limit, include_item_details }),
+    payload: brandibble.customers.orders(customerId, { status: 'past', limit }),
   };
 }
 
-function _fetchUpcomingCustomerOrders(brandibble, customerId, limit = 10, include_item_details = false) {
+function _fetchUpcomingCustomerOrders(brandibble, customerId, limit = 10) {
   return {
     type: FETCH_UPCOMING_CUSTOMER_ORDERS,
-    payload: brandibble.customers.orders(customerId, { status: 'upcoming', limit, include_item_details }),
+    payload: brandibble.customers.orders(customerId, { status: 'upcoming', limit }),
   };
 }
 
