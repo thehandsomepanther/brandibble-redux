@@ -5,6 +5,7 @@ import {
   FETCH_LEVELUP_LOYALTY,
   FETCH_LEVELUP_QR_CODE,
   FETCH_LEVELUP_PAYMENT_METHOD,
+  FETCH_LEVELUP_CAMPAIGN,
 } from 'actions/session/user';
 import reducer from 'reducers/user/levelup';
 
@@ -12,7 +13,7 @@ const initialState = {
   loyalty: {},
   qr_code: null,
   payment_method: null,
-  campaignsById: Immutable({})
+  campaign: null,
 };
 
 describe('reducers/user/levelup', () => {
@@ -40,14 +41,12 @@ describe('reducers/user/levelup', () => {
 
 
   it('handles the FETCH_LEVELUP_CAMPAIGN_FULFILLED action', () => {
-    const payload = { campaign: '69', meta: { campaignId: '7', campaignType: 'basic_v1' }};
+    const payload = '69';
     const reduced = reducer(initialState, {
       type: `${FETCH_LEVELUP_CAMPAIGN}_FULFILLED`,
       payload,
     });
-    expect(reduced.campaignsById).to.deep.equal({
-      '7-basic_v1': '69'
-    });
+    expect(reduced.campaign).to.equal(payload);
   });
 
   it('handles the FETCH_LEVELUP_PAYMENT_METHOD_FULFILLED action', () => {

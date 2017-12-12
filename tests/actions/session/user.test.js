@@ -13,6 +13,7 @@ import {
   updateLevelUpConnection,
   connectLevelUp,
   disconnectLevelUp,
+  fetchLevelUpCampaign,
   fetchLevelUpPaymentMethod,
   fetchUser,
   resolveUser,
@@ -300,7 +301,7 @@ describe('actions/session/user', () => {
         describe('fetchLevelUpCampaign', () => {
           before(() => {
             store.clearActions();
-            return fetchLevelUpCampaign(brandibble, 'id', 'type')(store.dispatch).catch(() => {
+            return fetchLevelUpCampaign(brandibble)(store.dispatch).catch(() => {
               actionsCalled = store.getActions();
             });
           });

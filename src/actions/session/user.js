@@ -22,6 +22,7 @@ export const ADD_ALLERGENS = 'ADD_ALLERGENS';
 export const REMOVE_ALLERGENS = 'REMOVE_ALLERGENS';
 export const FETCH_LEVELUP_QR_CODE = 'FETCH_LEVELUP_QR_CODE';
 export const FETCH_LEVELUP_LOYALTY = 'FETCH_LEVELUP_LOYALTY';
+export const FETCH_LEVELUP_CAMPAIGN = 'FETCH_LEVELUP_CAMPAIGN';
 export const UPDATE_LEVELUP_CONNECTION = 'UPDATE_LEVELUP_CONNECTION';
 export const CONNECT_LEVELUP = 'CONNECT_LEVELUP';
 export const DISCONNECT_LEVELUP = 'DISCONNECT_LEVELUP';
@@ -144,13 +145,12 @@ const _fetchLevelUpQRCode = (brandibble, body, success, fail) => {
   };
 };
 
-const _fetchLevelUpCampaign = (brandibble, campaignId, campaignType, success, fail) => {
+const _fetchLevelUpCampaign = (brandibble, success, fail) => {
   return {
     type: FETCH_LEVELUP_CAMPAIGN,
-    payload: brandibble.customers.currentLevelUpCampaign(campaignId, campaignType).then(({ data }) => {
-      const responseWithMeta = { campaign: data.campaign, meta: { campaignId, campaignType } }
-      success(responseWithMeta);
-      return responseWithMeta;
+    payload: brandibble.customers.currentLevelUpCampaign().then(({ data }) => {
+      success(data.campaign);
+      return data.campaign;
     }).catch((response) => {
       const { errors } = response;
       throw fail(errors || response);
@@ -281,8 +281,8 @@ export const fetchLevelUpQRCode = (brandibble, data = {}, success = NO_OP, fail 
   return dispatch => dispatch(_fetchLevelUpQRCode(brandibble, data, success, fail));
 };
 
-export const fetchLevelUpCampaign = (brandibble, campaignId, campaignType, success = NO_OP, fail = NO_OP) => {
-  return dispatch => dispatch(_fetchLevelUpCampaign(brandibble, campaignId, campaignType, success, fail));
+export const fetchLevelUpCampaign = (brandibble, success = NO_OP, fail = NO_OP) => {
+  return dispatch => dispatch(_fetchLevelUpCampaign(brandibble, success, fail));
 };
 
 export const fetchLevelUpLoyalty = (brandibble, success = NO_OP, fail = NO_OP) => {
