@@ -72,6 +72,7 @@ import {
   AUTHENTICATE_USER,
   FETCH_LEVELUP_LOYALTY,
   FETCH_LEVELUP_QR_CODE,
+  FETCH_LEVELUP_CAMPAIGN,
   UPDATE_LEVELUP_CONNECTION,
   CONNECT_LEVELUP,
   DISCONNECT_LEVELUP,
@@ -156,6 +157,7 @@ export const initialState = {
   createUser: null,
   fetchLevelUpLoyalty: null,
   fetchLevelUpQRCode: null,
+  fetchLevelUpCampaign: null,
   updateLevelUpConnection: null,
   connectLevelUp: null,
   disconnectLevelUp: null,
@@ -306,6 +308,9 @@ export default function error(state = initialState, action) {
 
     case `${FETCH_LEVELUP_LOYALTY}_PENDING`: return { ...state, fetchLevelUpLoyalty: null };
     case `${FETCH_LEVELUP_LOYALTY}_REJECTED`: return { ...state, fetchLevelUpLoyalty: action.payload };
+
+    case `${FETCH_LEVELUP_CAMPAIGN}_PENDING`: return { ...state, fetchLevelUpCampaign: null };
+    case `${FETCH_LEVELUP_CAMPAIGN}_REJECTED`: return { ...state, fetchLevelUpCampaign: action.payload };
 
     case `${FETCH_LEVELUP_QR_CODE}_PENDING`: return { ...state, fetchLevelUpQRCode: null };
     case `${FETCH_LEVELUP_QR_CODE}_REJECTED`: return { ...state, fetchLevelUpQRCode: action.payload };

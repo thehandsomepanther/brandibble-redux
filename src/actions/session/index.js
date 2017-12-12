@@ -50,6 +50,7 @@ export {
   connectLevelUp,
   disconnectLevelUp,
   fetchLevelUpPaymentMethod,
+  fetchLevelUpCampaign,
   fetchUser,
   resetUserPassword,
   resetLevelUpPassword,

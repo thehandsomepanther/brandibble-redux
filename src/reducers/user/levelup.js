@@ -1,5 +1,6 @@
 import {
   FETCH_LEVELUP_LOYALTY,
+  FETCH_LEVELUP_CAMPAIGN,
   FETCH_LEVELUP_QR_CODE,
   FETCH_LEVELUP_PAYMENT_METHOD,
   DISCONNECT_LEVELUP,
@@ -13,6 +14,7 @@ const initialState = {
   loyalty: {},
   qr_code: null,
   payment_method: null,
+  campaign: null
 };
 
 export default function levelup(state = initialState, action) {
@@ -21,6 +23,11 @@ export default function levelup(state = initialState, action) {
       return {
         ...state,
         loyalty: action.payload,
+      };
+    case `${FETCH_LEVELUP_CAMPAIGN}_FULFILLED`:
+      return {
+        ...state,
+        campaign: action.payload,
       };
     case `${FETCH_LEVELUP_QR_CODE}_FULFILLED`:
       return {

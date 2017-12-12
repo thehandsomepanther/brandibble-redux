@@ -49,6 +49,7 @@ import {
 import {
   AUTHENTICATE_USER,
   FETCH_LEVELUP_LOYALTY,
+  FETCH_LEVELUP_CAMPAIGN,
   FETCH_LEVELUP_QR_CODE,
   UPDATE_LEVELUP_CONNECTION,
   CONNECT_LEVELUP,
@@ -116,6 +117,7 @@ const initialState = {
   fetchLevelUpQRCode: IDLE,
   updateLevelUpConnection: IDLE,
   connectLevelUp: IDLE,
+  fetchLevelUpCampaign: IDLE,
   disconnectLevelUp: IDLE,
   fetchLevelUpPaymentMethod: IDLE,
   fetchLocation: IDLE,
@@ -336,6 +338,10 @@ export default function status(state = initialState, action) {
     case `${FETCH_LEVELUP_LOYALTY}_PENDING`: return { ...state, fetchLevelUpLoyalty: PENDING };
     case `${FETCH_LEVELUP_LOYALTY}_FULFILLED`: return { ...state, fetchLevelUpLoyalty: FULFILLED };
     case `${FETCH_LEVELUP_LOYALTY}_REJECTED`: return { ...state, fetchLevelUpLoyalty: REJECTED };
+
+    case `${FETCH_LEVELUP_CAMPAIGN}_PENDING`: return { ...state, fetchLevelUpCampaign: PENDING };
+    case `${FETCH_LEVELUP_CAMPAIGN}_FULFILLED`: return { ...state, fetchLevelUpCampaign: FULFILLED };
+    case `${FETCH_LEVELUP_CAMPAIGN}_REJECTED`: return { ...state, fetchLevelUpCampaign: REJECTED };
 
     case `${FETCH_LEVELUP_QR_CODE}_PENDING`: return { ...state, fetchLevelUpQRCode: PENDING };
     case `${FETCH_LEVELUP_QR_CODE}_FULFILLED`: return { ...state, fetchLevelUpQRCode: FULFILLED };
