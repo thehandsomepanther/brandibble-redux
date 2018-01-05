@@ -810,7 +810,7 @@ braces@^1.8.2:
 
 "brandibble@github:sanctuarycomputer/brandibble.js":
   version "1.13.7"
-  resolved "https://codeload.github.com/sanctuarycomputer/brandibble.js/tar.gz/a0ee6c6226db6192a2cd120cfc357e4a129c8582"
+  resolved "https://codeload.github.com/sanctuarycomputer/brandibble.js/tar.gz/ea8f5fef22930da4e6780ea3cfa8d2c9c252a481"
 
 brorand@^1.0.1:
   version "1.1.0"
