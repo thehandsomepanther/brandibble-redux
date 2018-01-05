@@ -12,8 +12,8 @@ export const brandibble = new Brandibble({
   storage: localforage,
 });
 
-export function makeUnpersistedOrder() {
-  return new brandibble.Order(brandibble.adapter, 19);
+export function makeUnpersistedOrder(type = 'delivery') {
+  return new brandibble.Order(brandibble.adapter, 19, type);
 }
 
 export const customersValidateStub = {

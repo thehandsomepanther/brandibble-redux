@@ -4928,7 +4928,7 @@ module.exports = {
   scan: __webpack_require__(427),
   sequence: __webpack_require__(143),
   set: __webpack_require__(428),
-  slice: __webpack_require__(27),
+  slice: __webpack_require__(28),
   sort: __webpack_require__(429),
   sortBy: __webpack_require__(430),
   sortWith: __webpack_require__(431),
@@ -5397,6 +5397,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.fetchLevelUpPay
 
 
 
+
 validateUser=validateUser;exports.
 
 
@@ -5452,7 +5453,7 @@ createUser=createUser;exports.
 
 
 
-updateUser=updateUser;var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(516);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('user'),updateStart=_reduxCrud$actionCrea.updateStart,updateSuccess=_reduxCrud$actionCrea.updateSuccess,updateError=_reduxCrud$actionCrea.updateError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var FETCH_USER=exports.FETCH_USER='FETCH_USER';var RESET_USER_PASSWORD=exports.RESET_USER_PASSWORD='RESET_USER_PASSWORD';var RESET_LEVELUP_PASSWORD=exports.RESET_LEVELUP_PASSWORD='RESET_LEVELUP_PASSWORD';var ADD_ALLERGENS=exports.ADD_ALLERGENS='ADD_ALLERGENS';var REMOVE_ALLERGENS=exports.REMOVE_ALLERGENS='REMOVE_ALLERGENS';var FETCH_LEVELUP_QR_CODE=exports.FETCH_LEVELUP_QR_CODE='FETCH_LEVELUP_QR_CODE';var FETCH_LEVELUP_LOYALTY=exports.FETCH_LEVELUP_LOYALTY='FETCH_LEVELUP_LOYALTY';var FETCH_LEVELUP_CAMPAIGN=exports.FETCH_LEVELUP_CAMPAIGN='FETCH_LEVELUP_CAMPAIGN';var UPDATE_LEVELUP_CONNECTION=exports.UPDATE_LEVELUP_CONNECTION='UPDATE_LEVELUP_CONNECTION';var CONNECT_LEVELUP=exports.CONNECT_LEVELUP='CONNECT_LEVELUP';var DISCONNECT_LEVELUP=exports.DISCONNECT_LEVELUP='DISCONNECT_LEVELUP';var FETCH_LEVELUP_PAYMENT_METHOD=exports.FETCH_LEVELUP_PAYMENT_METHOD='FETCH_LEVELUP_PAYMENT_METHOD';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref2){var data=_ref2.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _addAllergens(brandibble,allergens,success,fail){return{type:ADD_ALLERGENS,payload:brandibble.allergens.create(allergens).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _removeAllergens(brandibble,allergens,success,fail){return{type:REMOVE_ALLERGENS,payload:brandibble.allergens.remove(allergens).then(function(_ref4){var data=_ref4.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function _fetchUser(brandibble,id){return{type:FETCH_USER,payload:brandibble.customers.show(id).then(function(_ref5){var data=_ref5.data;return data;}).catch(function(response){var errors=response.errors;return errors||response;})};}function _resetUserPassword(brandibble,email,success,fail){return{type:RESET_USER_PASSWORD,payload:brandibble.customers.resetPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resetLevelUpPassword(brandibble,email,success,fail){return{type:RESET_LEVELUP_PASSWORD,payload:brandibble.customers.resetLevelUpPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}var _fetchLevelUpQRCode=function _fetchLevelUpQRCode(brandibble,body,success,fail){return{type:FETCH_LEVELUP_QR_CODE,payload:brandibble.customers.currentLevelUpQRCode(body).then(function(_ref6){var data=_ref6.data;success(data.qr_code);return data.qr_code;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _fetchLevelUpCampaign=function _fetchLevelUpCampaign(brandibble,success,fail){return{type:FETCH_LEVELUP_CAMPAIGN,payload:brandibble.customers.currentLevelUpCampaign().then(function(_ref7){var data=_ref7.data;success(data.campaign);return data.campaign;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _fetchLevelUpLoyalty=function _fetchLevelUpLoyalty(brandibble,success,fail){return{type:FETCH_LEVELUP_LOYALTY,payload:brandibble.customers.currentLevelUpLoyalty().then(function(_ref8){var data=_ref8.data;success(data.loyalty);return data.loyalty;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _updateLevelUpConnection=function _updateLevelUpConnection(brandibble,customerId,password){return{type:UPDATE_LEVELUP_CONNECTION,payload:brandibble.customers.levelUpUpdate(customerId,password)};};var _connectLevelUp=function _connectLevelUp(brandibble,customerId,email,password){return{type:CONNECT_LEVELUP,payload:brandibble.customers.levelUpConnect(customerId,email,password)};};var _disconnectLevelUp=function _disconnectLevelUp(brandibble,customerId){return{type:DISCONNECT_LEVELUP,payload:brandibble.customers.levelUpDisconnect(customerId).catch(function(response){var errors=response.errors;throw errors||response;})};};var _fetchLevelUpPaymentMethod=function _fetchLevelUpPaymentMethod(brandibble,customerId){return{type:FETCH_LEVELUP_PAYMENT_METHOD,payload:brandibble.customers.levelUpPaymentMethod(customerId).then(function(_ref9){var data=_ref9.data;return data.payment_method;}).catch(function(response){var errors=response.errors;throw errors||response;})};};function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function addAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_addAllergens(brandibble,allergens,success,fail));};}function removeAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_removeAllergens(brandibble,allergens,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function fetchUser(brandibble,id){return function(dispatch){return dispatch(_fetchUser(brandibble,id));};}function resetUserPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetUserPassword(brandibble,email,success,fail));};}function resetLevelUpPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetLevelUpPassword(brandibble,email,success,fail));};}function resolveUser(brandibble){var adapter=brandibble.adapter,customers=brandibble.customers;var payload=adapter.customerToken?customers.current().then(function(_ref10){var data=_ref10.data;return data;}):Promise.resolve({});return function(dispatch){return dispatch(_resolveUser(payload));};}function createUser(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.customers.create(data).then(function(_ref11){var data=_ref11.data;return dispatch(createSuccess(_extends({id:id},data)));}).catch(function(response){var errors=response.errors;return dispatch(createError(errors||response,{id:id,data:data}));});};}function updateUser(brandibble,id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
+updateUser=updateUser;var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(516);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('user'),updateStart=_reduxCrud$actionCrea.updateStart,updateSuccess=_reduxCrud$actionCrea.updateSuccess,updateError=_reduxCrud$actionCrea.updateError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var FETCH_USER=exports.FETCH_USER='FETCH_USER';var RESET_USER_PASSWORD=exports.RESET_USER_PASSWORD='RESET_USER_PASSWORD';var RESET_LEVELUP_PASSWORD=exports.RESET_LEVELUP_PASSWORD='RESET_LEVELUP_PASSWORD';var ADD_ALLERGENS=exports.ADD_ALLERGENS='ADD_ALLERGENS';var REMOVE_ALLERGENS=exports.REMOVE_ALLERGENS='REMOVE_ALLERGENS';var FETCH_LEVELUP_QR_CODE=exports.FETCH_LEVELUP_QR_CODE='FETCH_LEVELUP_QR_CODE';var FETCH_LEVELUP_LOYALTY=exports.FETCH_LEVELUP_LOYALTY='FETCH_LEVELUP_LOYALTY';var FETCH_LEVELUP_CAMPAIGN=exports.FETCH_LEVELUP_CAMPAIGN='FETCH_LEVELUP_CAMPAIGN';var UPDATE_LEVELUP_CONNECTION=exports.UPDATE_LEVELUP_CONNECTION='UPDATE_LEVELUP_CONNECTION';var CONNECT_LEVELUP=exports.CONNECT_LEVELUP='CONNECT_LEVELUP';var DISCONNECT_LEVELUP=exports.DISCONNECT_LEVELUP='DISCONNECT_LEVELUP';var FETCH_LEVELUP_PAYMENT_METHOD=exports.FETCH_LEVELUP_PAYMENT_METHOD='FETCH_LEVELUP_PAYMENT_METHOD';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref2){var data=_ref2.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _addAllergens(brandibble,allergens,success,fail){return{type:ADD_ALLERGENS,payload:brandibble.allergens.create(allergens).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _removeAllergens(brandibble,allergens,success,fail){return{type:REMOVE_ALLERGENS,payload:brandibble.allergens.remove(allergens).then(function(_ref4){var data=_ref4.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function _fetchUser(brandibble,id){return{type:FETCH_USER,payload:brandibble.customers.show(id).then(function(_ref5){var data=_ref5.data;return data;}).catch(function(response){var errors=response.errors;return errors||response;})};}function _resetUserPassword(brandibble,email,success,fail){return{type:RESET_USER_PASSWORD,payload:brandibble.customers.resetPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resetLevelUpPassword(brandibble,email,success,fail){return{type:RESET_LEVELUP_PASSWORD,payload:brandibble.customers.resetLevelUpPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}var _fetchLevelUpQRCode=function _fetchLevelUpQRCode(brandibble,body,success,fail){return{type:FETCH_LEVELUP_QR_CODE,payload:brandibble.customers.currentLevelUpQRCode(body).then(function(_ref6){var data=_ref6.data;success(data.qr_code);return data.qr_code;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _fetchLevelUpCampaign=function _fetchLevelUpCampaign(brandibble,campaignId,campaignType,success,fail){return{type:FETCH_LEVELUP_CAMPAIGN,payload:brandibble.customers.currentLevelUpCampaign(campaignId,campaignType).then(function(_ref7){var data=_ref7.data;var responseWithMeta={campaign:data.campaign,meta:{campaignId:campaignId,campaignType:campaignType}};success(responseWithMeta);return responseWithMeta;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _fetchLevelUpLoyalty=function _fetchLevelUpLoyalty(brandibble,success,fail){return{type:FETCH_LEVELUP_LOYALTY,payload:brandibble.customers.currentLevelUpLoyalty().then(function(_ref8){var data=_ref8.data;success(data.loyalty);return data.loyalty;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _updateLevelUpConnection=function _updateLevelUpConnection(brandibble,customerId,password){return{type:UPDATE_LEVELUP_CONNECTION,payload:brandibble.customers.levelUpUpdate(customerId,password)};};var _connectLevelUp=function _connectLevelUp(brandibble,customerId,email,password){return{type:CONNECT_LEVELUP,payload:brandibble.customers.levelUpConnect(customerId,email,password)};};var _disconnectLevelUp=function _disconnectLevelUp(brandibble,customerId){return{type:DISCONNECT_LEVELUP,payload:brandibble.customers.levelUpDisconnect(customerId).catch(function(response){var errors=response.errors;throw errors||response;})};};var _fetchLevelUpPaymentMethod=function _fetchLevelUpPaymentMethod(brandibble,customerId){return{type:FETCH_LEVELUP_PAYMENT_METHOD,payload:brandibble.customers.levelUpPaymentMethod(customerId).then(function(_ref9){var data=_ref9.data;return data.payment_method;}).catch(function(response){var errors=response.errors;throw errors||response;})};};function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function addAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_addAllergens(brandibble,allergens,success,fail));};}function removeAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_removeAllergens(brandibble,allergens,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function fetchUser(brandibble,id){return function(dispatch){return dispatch(_fetchUser(brandibble,id));};}function resetUserPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetUserPassword(brandibble,email,success,fail));};}function resetLevelUpPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetLevelUpPassword(brandibble,email,success,fail));};}function resolveUser(brandibble){var adapter=brandibble.adapter,customers=brandibble.customers;var payload=adapter.customerToken?customers.current().then(function(_ref10){var data=_ref10.data;return data;}):Promise.resolve({});return function(dispatch){return dispatch(_resolveUser(payload));};}function createUser(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.customers.create(data).then(function(_ref11){var data=_ref11.data;return dispatch(createSuccess(_extends({id:id},data)));}).catch(function(response){var errors=response.errors;return dispatch(createError(errors||response,{id:id,data:data}));});};}function updateUser(brandibble,id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
 return function(dispatch){
 dispatch(updateStart({record:data,id:id}));
 return brandibble.customers.updateCurrent(data).
@@ -5469,8 +5470,8 @@ var fetchLevelUpQRCode=exports.fetchLevelUpQRCode=function fetchLevelUpQRCode(br
 return function(dispatch){return dispatch(_fetchLevelUpQRCode(brandibble,data,success,fail));};
 };
 
-var fetchLevelUpCampaign=exports.fetchLevelUpCampaign=function fetchLevelUpCampaign(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;
-return function(dispatch){return dispatch(_fetchLevelUpCampaign(brandibble,success,fail));};
+var fetchLevelUpCampaign=exports.fetchLevelUpCampaign=function fetchLevelUpCampaign(brandibble,campaignId,campaignType){var success=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;var fail=arguments.length>4&&arguments[4]!==undefined?arguments[4]:NO_OP;
+return function(dispatch){return dispatch(_fetchLevelUpCampaign(brandibble,campaignId,campaignType,success,fail));};
 };
 
 var fetchLevelUpLoyalty=exports.fetchLevelUpLoyalty=function fetchLevelUpLoyalty(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;
@@ -5816,7 +5817,7 @@ exports.default = invariantsList;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var invariants_1 = __webpack_require__(149);
-var store_1 = __webpack_require__(29);
+var store_1 = __webpack_require__(30);
 function invariantsMap(invariantArgs, config, current, record) {
     var extra = {
         assertValidStore: store_1.default.assert,
@@ -5901,389 +5902,6 @@ exports.default = {
 
 /***/ }),
 /* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-Object.defineProperty(exports,"__esModule",{value:true});exports.SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_MADE_FOR=exports.VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_ORDER=exports.CREATE_NEW_ORDER=exports.SET_REQUESTED_AT=exports.SET_MISC_OPTIONS=exports.SET_PROMO_CODE=exports.SET_ORDER_ADDRESS=exports.SET_PAYMENT_METHOD=exports.BIND_CUSTOMER_TO_ORDER=exports.SUBMIT_ORDER=exports.SET_ORDER_LOCATION_ID=exports.REMOVE_OPTION_FROM_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM=exports.REMOVE_LINE_ITEM=exports.SET_LINE_ITEM_QUANTITY=exports.PUSH_LINE_ITEM=exports.ADD_LINE_ITEM=exports.RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER=undefined;exports.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-createNewOrder=createNewOrder;exports.
-
-
-
-
-
-
-
-resolveOrder=resolveOrder;exports.
-
-
-
-
-
-
-resolveOrderLocation=resolveOrderLocation;exports.
-
-
-
-
-
-
-validateCurrentCart=validateCurrentCart;exports.
-
-
-
-
-
-
-
-
-validateCurrentOrder=validateCurrentOrder;exports.
-
-
-
-
-
-
-
-
-setOrderLocationId=setOrderLocationId;exports.
-
-
-
-setOrderAddress=setOrderAddress;exports.
-
-
-
-addLineItem=addLineItem;exports.
-
-
-
-
-
-
-
-
-
-pushLineItem=pushLineItem;exports.
-
-
-
-
-
-
-
-
-
-setLineItemQuantity=setLineItemQuantity;exports.
-
-
-
-
-
-
-
-
-
-setLineItemMadeFor=setLineItemMadeFor;exports.
-
-
-
-setLineItemInstructions=setLineItemInstructions;exports.
-
-
-
-setPaymentMethod=setPaymentMethod;exports.
-
-
-
-setRequestedAt=setRequestedAt;exports.
-
-
-
-setPromoCode=setPromoCode;exports.
-
-
-
-setMiscOptions=setMiscOptions;exports.
-
-
-
-removeLineItem=removeLineItem;exports.
-
-
-
-addOptionToLineItem=addOptionToLineItem;exports.
-
-
-
-removeOptionFromLineItem=removeOptionFromLineItem;exports.
-
-
-
-bindCustomerToOrder=bindCustomerToOrder;exports.
-
-
-
-submitOrder=submitOrder;var _exception=__webpack_require__(277);var _exception2=_interopRequireDefault(_exception);var _constants=__webpack_require__(68);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var RESOLVE_ORDER=exports.RESOLVE_ORDER='RESOLVE_ORDER';var RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER_LOCATION='RESOLVE_ORDER_LOCATION';var ADD_LINE_ITEM=exports.ADD_LINE_ITEM='ADD_LINE_ITEM';var PUSH_LINE_ITEM=exports.PUSH_LINE_ITEM='PUSH_LINE_ITEM';var SET_LINE_ITEM_QUANTITY=exports.SET_LINE_ITEM_QUANTITY='SET_LINE_ITEM_QUANTITY';var REMOVE_LINE_ITEM=exports.REMOVE_LINE_ITEM='REMOVE_LINE_ITEM';var ADD_OPTION_TO_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM='ADD_OPTION_TO_LINE_ITEM';var REMOVE_OPTION_FROM_LINE_ITEM=exports.REMOVE_OPTION_FROM_LINE_ITEM='REMOVE_OPTION_FROM_LINE_ITEM';var SET_ORDER_LOCATION_ID=exports.SET_ORDER_LOCATION_ID='SET_ORDER_LOCATION_ID';var SUBMIT_ORDER=exports.SUBMIT_ORDER='SUBMIT_ORDER';var BIND_CUSTOMER_TO_ORDER=exports.BIND_CUSTOMER_TO_ORDER='BIND_CUSTOMER_TO_ORDER';var SET_PAYMENT_METHOD=exports.SET_PAYMENT_METHOD='SET_PAYMENT_METHOD';var SET_ORDER_ADDRESS=exports.SET_ORDER_ADDRESS='SET_ORDER_ADDRESS';var SET_PROMO_CODE=exports.SET_PROMO_CODE='SET_PROMO_CODE';var SET_MISC_OPTIONS=exports.SET_MISC_OPTIONS='SET_MISC_OPTIONS';var SET_REQUESTED_AT=exports.SET_REQUESTED_AT='SET_REQUESTED_AT';var CREATE_NEW_ORDER=exports.CREATE_NEW_ORDER='CREATE_NEW_ORDER';var VALIDATE_CURRENT_ORDER=exports.VALIDATE_CURRENT_ORDER='VALIDATE_CURRENT_ORDER';var VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_CART='VALIDATE_CURRENT_CART';var SET_LINE_ITEM_MADE_FOR=exports.SET_LINE_ITEM_MADE_FOR='SET_LINE_ITEM_MADE_FOR';var SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_INSTRUCTIONS='SET_LINE_ITEM_INSTRUCTIONS';function _resolveOrder(payload){return{type:RESOLVE_ORDER,payload:payload};}function _resolveOrderLocation(payload){return{type:RESOLVE_ORDER_LOCATION,payload:payload};}function _addLineItem(order,product,quantity){return{type:ADD_LINE_ITEM,payload:order.addLineItem(product,quantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _pushLineItem(order,lineItem){return{type:PUSH_LINE_ITEM,payload:order.pushLineItem(lineItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemQuantity(order,lineItem,newQuantity){return{type:SET_LINE_ITEM_QUANTITY,payload:order.setLineItemQuantity(lineItem,newQuantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemMadeFor(order,lineItem,madeFor){return{type:SET_LINE_ITEM_MADE_FOR,payload:order.setLineItemMadeFor(lineItem,madeFor).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemInstructions(order,lineItem,instructions){return{type:SET_LINE_ITEM_INSTRUCTIONS,payload:order.setLineItemInstructions(lineItem,instructions).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeLineItem(order,lineItem){return{type:REMOVE_LINE_ITEM,payload:order.removeLineItem(lineItem).then(function(remainingLineItems){return{order:order,remainingLineItems:remainingLineItems};})};}function _addOptionToLineItem(order,lineItem,optionGroup,optionItem){return{type:ADD_OPTION_TO_LINE_ITEM,payload:order.addOptionToLineItem(lineItem,optionGroup,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeOptionFromLineItem(order,lineItem,optionItem){return{type:REMOVE_OPTION_FROM_LINE_ITEM,payload:order.removeOptionFromLineItem(lineItem,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setOrderLocationId(order,locationId){return{type:SET_ORDER_LOCATION_ID,payload:order.setLocation(locationId).then(function(order){return{order:order};})};}function _setOrderAddress(order,address){return{type:SET_ORDER_ADDRESS,payload:order.setAddress(address).then(function(order){return{order:order};})};}function _bindCustomerToOrder(order,customer){return{type:BIND_CUSTOMER_TO_ORDER,payload:order.setCustomer(customer).then(function(order){return{order:order};})};}function _setPaymentMethod(order,type,card){return{type:SET_PAYMENT_METHOD,payload:order.setPaymentMethod(type,card).then(function(order){return{order:order};})};}function _setPromoCode(order,promo){return{type:SET_PROMO_CODE,payload:order.setPromoCode(promo).then(function(order){return{order:order};})};}function _setMiscOptions(order,opts){return{type:SET_MISC_OPTIONS,payload:order.setMiscOptions(opts).then(function(order){return{order:order};})};}function _setRequestedAt(order,time,wantsFuture){return{type:SET_REQUESTED_AT,payload:order.setRequestedAt(time,wantsFuture).then(function(order){return{order:order};})};}function _submitOrder(brandibble,order){return{type:SUBMIT_ORDER,payload:brandibble.orders.submit(order).then(function(_ref){var data=_ref.data;return data;})};}function _createNewOrder(data){return{type:CREATE_NEW_ORDER,payload:data};}function _validateCurrentCart(data){return{type:VALIDATE_CURRENT_CART,payload:data};}function _validateCurrentOrder(data){return{type:VALIDATE_CURRENT_ORDER,payload:data};}function createNewOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments[2];var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;return function(dispatch){var orders=brandibble.orders;var payload=orders.create(locationId,serviceType,paymentType,miscOptions).then(function(order){return{order:order};});return dispatch(_createNewOrder(payload));};}function resolveOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'pickup';var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;var orders=brandibble.orders;var order=orders.current();var payload=order?Promise.resolve({order:order}):orders.create(locationId,serviceType,paymentType,miscOptions).then(function(res){return{order:res};});return function(dispatch){return dispatch(_resolveOrder(payload));};}function resolveOrderLocation(brandibble){var orders=brandibble.orders;var order=orders.current();var payload=order&&order.locationId?brandibble.locations.show(order.locationId).then(function(_ref2){var data=_ref2.data;return data;}):Promise.resolve(null);return function(dispatch){return dispatch(_resolveOrderLocation(payload));};}function validateCurrentCart(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validateCart(order,data).then(function(res){return res;});return dispatch(_validateCurrentCart(payload));};}function validateCurrentOrder(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validate(order,data).then(function(res){return res;});return dispatch(_validateCurrentOrder(payload));};}function setOrderLocationId(currentOrder,locationId){var _arguments=arguments;return function(dispatch){return dispatch(_setOrderLocationId.apply(undefined,_arguments));};}function setOrderAddress(){for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return function(dispatch){return dispatch(_setOrderAddress.apply(undefined,args));};}function addLineItem(currentOrder,product){var _arguments2=arguments;var quantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_addLineItem.apply(undefined,_arguments2));};}function pushLineItem(currentOrder,lineItem){var _arguments3=arguments;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_pushLineItem.apply(undefined,_arguments3));};}function setLineItemQuantity(currentOrder,lineItem){var _arguments4=arguments;var newQuantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(newQuantity<1){throw new _exception2.default('updateLineItemQuantity','Please pass quantity more than 1 to this action. Use removeLineItem to remove from order.');}return function(dispatch){return dispatch(_setLineItemQuantity.apply(undefined,_arguments4));};}function setLineItemMadeFor(currentOrder,lineItem){var _arguments5=arguments;var madeFor=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemMadeFor.apply(undefined,_arguments5));};}function setLineItemInstructions(currentOrder,lineItem){var _arguments6=arguments;var instructions=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemInstructions.apply(undefined,_arguments6));};}function setPaymentMethod(currentOrder,type,card){return function(dispatch){return dispatch(_setPaymentMethod(currentOrder,type,card));};}function setRequestedAt(currentOrder,time){var wantsFuture=arguments.length>2&&arguments[2]!==undefined?arguments[2]:false;return function(dispatch){return dispatch(_setRequestedAt(currentOrder,time,wantsFuture));};}function setPromoCode(currentOrder,promo){return function(dispatch){return dispatch(_setPromoCode(currentOrder,promo));};}function setMiscOptions(currentOrder,opts){return function(dispatch){return dispatch(_setMiscOptions(currentOrder,opts));};}function removeLineItem(currentOrder,lineItem){var _arguments7=arguments;return function(dispatch){return dispatch(_removeLineItem.apply(undefined,_arguments7));};}function addOptionToLineItem(currentOrder,lineItem,optionGroup,optionItem){var _arguments8=arguments;return function(dispatch){return dispatch(_addOptionToLineItem.apply(undefined,_arguments8));};}function removeOptionFromLineItem(currentOrder,lineItem,optionItem){var _arguments9=arguments;return function(dispatch){return dispatch(_removeOptionFromLineItem.apply(undefined,_arguments9));};}function bindCustomerToOrder(){for(var _len2=arguments.length,args=Array(_len2),_key2=0;_key2<_len2;_key2++){args[_key2]=arguments[_key2];}return function(dispatch){return dispatch(_bindCustomerToOrder.apply(undefined,args));};}function submitOrder(){for(var _len3=arguments.length,args=Array(_len3),_key3=0;_key3<_len3;_key3++){args[_key3]=arguments[_key3];}
-return function(dispatch){return dispatch(_submitOrder.apply(undefined,args));};
-}
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var actionCreatorsFor_1 = __webpack_require__(278);
-var actionTypesFor_1 = __webpack_require__(84);
-var constants_1 = __webpack_require__(4);
-var list_1 = __webpack_require__(486);
-var map_1 = __webpack_require__(501);
-exports.default = {
-    actionCreatorsFor: actionCreatorsFor_1.default,
-    actionTypesFor: actionTypesFor_1.default,
-    constants: constants_1.default,
-    List: list_1.default,
-    Map: map_1.default
-};
-
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _checkForMethod = __webpack_require__(35);
-var _curry3 = __webpack_require__(3);
-
-
-/**
- * Returns the elements of the given list or string (or object with a `slice`
- * method) from `fromIndex` (inclusive) to `toIndex` (exclusive).
- *
- * Dispatches to the `slice` method of the third argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.4
- * @category List
- * @sig Number -> Number -> [a] -> [a]
- * @sig Number -> Number -> String -> String
- * @param {Number} fromIndex The start index (inclusive).
- * @param {Number} toIndex The end index (exclusive).
- * @param {*} list
- * @return {*}
- * @example
- *
- *      R.slice(1, 3, ['a', 'b', 'c', 'd']);        //=> ['b', 'c']
- *      R.slice(1, Infinity, ['a', 'b', 'c', 'd']); //=> ['b', 'c', 'd']
- *      R.slice(0, -1, ['a', 'b', 'c', 'd']);       //=> ['a', 'b', 'c']
- *      R.slice(-3, -1, ['a', 'b', 'c', 'd']);      //=> ['b', 'c']
- *      R.slice(0, 3, 'ramda');                     //=> 'ram'
- */
-module.exports = _curry3(_checkForMethod('slice', function slice(fromIndex, toIndex, list) {
-  return Array.prototype.slice.call(list, fromIndex, toIndex);
-}));
-
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _indexOf = __webpack_require__(107);
-
-
-module.exports = function _contains(a, list) {
-  return _indexOf(list, a, 0) >= 0;
-};
-
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var assert_1 = __webpack_require__(504);
-var merge_1 = __webpack_require__(505);
-var remove_1 = __webpack_require__(506);
-exports.default = {
-    assert: assert_1.default,
-    merge: merge_1.default,
-    remove: remove_1.default
-};
-
-
-/***/ }),
-/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;(function() {
@@ -7042,6 +6660,389 @@ function immutableInit(config) {
 
 
 /***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:true});exports.SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_MADE_FOR=exports.VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_ORDER=exports.CREATE_NEW_ORDER=exports.SET_REQUESTED_AT=exports.SET_MISC_OPTIONS=exports.SET_PROMO_CODE=exports.SET_ORDER_ADDRESS=exports.SET_PAYMENT_METHOD=exports.BIND_CUSTOMER_TO_ORDER=exports.SUBMIT_ORDER=exports.SET_ORDER_LOCATION_ID=exports.REMOVE_OPTION_FROM_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM=exports.REMOVE_LINE_ITEM=exports.SET_LINE_ITEM_QUANTITY=exports.PUSH_LINE_ITEM=exports.ADD_LINE_ITEM=exports.RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER=undefined;exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+createNewOrder=createNewOrder;exports.
+
+
+
+
+
+
+
+resolveOrder=resolveOrder;exports.
+
+
+
+
+
+
+resolveOrderLocation=resolveOrderLocation;exports.
+
+
+
+
+
+
+validateCurrentCart=validateCurrentCart;exports.
+
+
+
+
+
+
+
+
+validateCurrentOrder=validateCurrentOrder;exports.
+
+
+
+
+
+
+
+
+setOrderLocationId=setOrderLocationId;exports.
+
+
+
+setOrderAddress=setOrderAddress;exports.
+
+
+
+addLineItem=addLineItem;exports.
+
+
+
+
+
+
+
+
+
+pushLineItem=pushLineItem;exports.
+
+
+
+
+
+
+
+
+
+setLineItemQuantity=setLineItemQuantity;exports.
+
+
+
+
+
+
+
+
+
+setLineItemMadeFor=setLineItemMadeFor;exports.
+
+
+
+setLineItemInstructions=setLineItemInstructions;exports.
+
+
+
+setPaymentMethod=setPaymentMethod;exports.
+
+
+
+setRequestedAt=setRequestedAt;exports.
+
+
+
+setPromoCode=setPromoCode;exports.
+
+
+
+setMiscOptions=setMiscOptions;exports.
+
+
+
+removeLineItem=removeLineItem;exports.
+
+
+
+addOptionToLineItem=addOptionToLineItem;exports.
+
+
+
+removeOptionFromLineItem=removeOptionFromLineItem;exports.
+
+
+
+bindCustomerToOrder=bindCustomerToOrder;exports.
+
+
+
+submitOrder=submitOrder;var _exception=__webpack_require__(277);var _exception2=_interopRequireDefault(_exception);var _constants=__webpack_require__(68);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var RESOLVE_ORDER=exports.RESOLVE_ORDER='RESOLVE_ORDER';var RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER_LOCATION='RESOLVE_ORDER_LOCATION';var ADD_LINE_ITEM=exports.ADD_LINE_ITEM='ADD_LINE_ITEM';var PUSH_LINE_ITEM=exports.PUSH_LINE_ITEM='PUSH_LINE_ITEM';var SET_LINE_ITEM_QUANTITY=exports.SET_LINE_ITEM_QUANTITY='SET_LINE_ITEM_QUANTITY';var REMOVE_LINE_ITEM=exports.REMOVE_LINE_ITEM='REMOVE_LINE_ITEM';var ADD_OPTION_TO_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM='ADD_OPTION_TO_LINE_ITEM';var REMOVE_OPTION_FROM_LINE_ITEM=exports.REMOVE_OPTION_FROM_LINE_ITEM='REMOVE_OPTION_FROM_LINE_ITEM';var SET_ORDER_LOCATION_ID=exports.SET_ORDER_LOCATION_ID='SET_ORDER_LOCATION_ID';var SUBMIT_ORDER=exports.SUBMIT_ORDER='SUBMIT_ORDER';var BIND_CUSTOMER_TO_ORDER=exports.BIND_CUSTOMER_TO_ORDER='BIND_CUSTOMER_TO_ORDER';var SET_PAYMENT_METHOD=exports.SET_PAYMENT_METHOD='SET_PAYMENT_METHOD';var SET_ORDER_ADDRESS=exports.SET_ORDER_ADDRESS='SET_ORDER_ADDRESS';var SET_PROMO_CODE=exports.SET_PROMO_CODE='SET_PROMO_CODE';var SET_MISC_OPTIONS=exports.SET_MISC_OPTIONS='SET_MISC_OPTIONS';var SET_REQUESTED_AT=exports.SET_REQUESTED_AT='SET_REQUESTED_AT';var CREATE_NEW_ORDER=exports.CREATE_NEW_ORDER='CREATE_NEW_ORDER';var VALIDATE_CURRENT_ORDER=exports.VALIDATE_CURRENT_ORDER='VALIDATE_CURRENT_ORDER';var VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_CART='VALIDATE_CURRENT_CART';var SET_LINE_ITEM_MADE_FOR=exports.SET_LINE_ITEM_MADE_FOR='SET_LINE_ITEM_MADE_FOR';var SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_INSTRUCTIONS='SET_LINE_ITEM_INSTRUCTIONS';function _resolveOrder(payload){return{type:RESOLVE_ORDER,payload:payload};}function _resolveOrderLocation(payload){return{type:RESOLVE_ORDER_LOCATION,payload:payload};}function _addLineItem(order,product,quantity){return{type:ADD_LINE_ITEM,payload:order.addLineItem(product,quantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _pushLineItem(order,lineItem){return{type:PUSH_LINE_ITEM,payload:order.pushLineItem(lineItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemQuantity(order,lineItem,newQuantity){return{type:SET_LINE_ITEM_QUANTITY,payload:order.setLineItemQuantity(lineItem,newQuantity).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemMadeFor(order,lineItem,madeFor){return{type:SET_LINE_ITEM_MADE_FOR,payload:order.setLineItemMadeFor(lineItem,madeFor).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setLineItemInstructions(order,lineItem,instructions){return{type:SET_LINE_ITEM_INSTRUCTIONS,payload:order.setLineItemInstructions(lineItem,instructions).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeLineItem(order,lineItem){return{type:REMOVE_LINE_ITEM,payload:order.removeLineItem(lineItem).then(function(remainingLineItems){return{order:order,remainingLineItems:remainingLineItems};})};}function _addOptionToLineItem(order,lineItem,optionGroup,optionItem){return{type:ADD_OPTION_TO_LINE_ITEM,payload:order.addOptionToLineItem(lineItem,optionGroup,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _removeOptionFromLineItem(order,lineItem,optionItem){return{type:REMOVE_OPTION_FROM_LINE_ITEM,payload:order.removeOptionFromLineItem(lineItem,optionItem).then(function(lineItem){return{order:order,lineItem:lineItem};})};}function _setOrderLocationId(order,locationId){return{type:SET_ORDER_LOCATION_ID,payload:order.setLocation(locationId).then(function(order){return{order:order};})};}function _setOrderAddress(order,address){return{type:SET_ORDER_ADDRESS,payload:order.setAddress(address).then(function(order){return{order:order};})};}function _bindCustomerToOrder(order,customer){return{type:BIND_CUSTOMER_TO_ORDER,payload:order.setCustomer(customer).then(function(order){return{order:order};})};}function _setPaymentMethod(order,type,card){return{type:SET_PAYMENT_METHOD,payload:order.setPaymentMethod(type,card).then(function(order){return{order:order};})};}function _setPromoCode(order,promo){return{type:SET_PROMO_CODE,payload:order.setPromoCode(promo).then(function(order){return{order:order};})};}function _setMiscOptions(order,opts){return{type:SET_MISC_OPTIONS,payload:order.setMiscOptions(opts).then(function(order){return{order:order};})};}function _setRequestedAt(order,time,wantsFuture){return{type:SET_REQUESTED_AT,payload:order.setRequestedAt(time,wantsFuture).then(function(order){return{order:order};})};}function _submitOrder(brandibble,order){return{type:SUBMIT_ORDER,payload:brandibble.orders.submit(order).then(function(_ref){var data=_ref.data;return data;})};}function _createNewOrder(data){return{type:CREATE_NEW_ORDER,payload:data};}function _validateCurrentCart(data){return{type:VALIDATE_CURRENT_CART,payload:data};}function _validateCurrentOrder(data){return{type:VALIDATE_CURRENT_ORDER,payload:data};}function createNewOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments[2];var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;return function(dispatch){var orders=brandibble.orders;var payload=orders.create(locationId,serviceType,paymentType,miscOptions).then(function(order){return{order:order};});return dispatch(_createNewOrder(payload));};}function resolveOrder(brandibble){var locationId=arguments.length>1&&arguments[1]!==undefined?arguments[1]:null;var serviceType=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'pickup';var paymentType=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var miscOptions=arguments.length>4&&arguments[4]!==undefined?arguments[4]:_constants.Defaults.miscOptions;var orders=brandibble.orders;var order=orders.current();var payload=order?Promise.resolve({order:order}):orders.create(locationId,serviceType,paymentType,miscOptions).then(function(res){return{order:res};});return function(dispatch){return dispatch(_resolveOrder(payload));};}function resolveOrderLocation(brandibble){var orders=brandibble.orders;var order=orders.current();var payload=order&&order.locationId?brandibble.locations.show(order.locationId).then(function(_ref2){var data=_ref2.data;return data;}):Promise.resolve(null);return function(dispatch){return dispatch(_resolveOrderLocation(payload));};}function validateCurrentCart(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validateCart(order,data).then(function(res){return res;});return dispatch(_validateCurrentCart(payload));};}function validateCurrentOrder(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var orders=brandibble.orders;var order=orders.current();var payload=orders.validate(order,data).then(function(res){return res;});return dispatch(_validateCurrentOrder(payload));};}function setOrderLocationId(currentOrder,locationId){var _arguments=arguments;return function(dispatch){return dispatch(_setOrderLocationId.apply(undefined,_arguments));};}function setOrderAddress(){for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return function(dispatch){return dispatch(_setOrderAddress.apply(undefined,args));};}function addLineItem(currentOrder,product){var _arguments2=arguments;var quantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_addLineItem.apply(undefined,_arguments2));};}function pushLineItem(currentOrder,lineItem){var _arguments3=arguments;if(!currentOrder.locationId){throw new _exception2.default('addLineItem','Please set a Location ID for this order.');}return function(dispatch){return dispatch(_pushLineItem.apply(undefined,_arguments3));};}function setLineItemQuantity(currentOrder,lineItem){var _arguments4=arguments;var newQuantity=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1;if(newQuantity<1){throw new _exception2.default('updateLineItemQuantity','Please pass quantity more than 1 to this action. Use removeLineItem to remove from order.');}return function(dispatch){return dispatch(_setLineItemQuantity.apply(undefined,_arguments4));};}function setLineItemMadeFor(currentOrder,lineItem){var _arguments5=arguments;var madeFor=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemMadeFor.apply(undefined,_arguments5));};}function setLineItemInstructions(currentOrder,lineItem){var _arguments6=arguments;var instructions=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'';return function(dispatch){return dispatch(_setLineItemInstructions.apply(undefined,_arguments6));};}function setPaymentMethod(currentOrder,type,card){return function(dispatch){return dispatch(_setPaymentMethod(currentOrder,type,card));};}function setRequestedAt(currentOrder,time){var wantsFuture=arguments.length>2&&arguments[2]!==undefined?arguments[2]:false;return function(dispatch){return dispatch(_setRequestedAt(currentOrder,time,wantsFuture));};}function setPromoCode(currentOrder,promo){return function(dispatch){return dispatch(_setPromoCode(currentOrder,promo));};}function setMiscOptions(currentOrder,opts){return function(dispatch){return dispatch(_setMiscOptions(currentOrder,opts));};}function removeLineItem(currentOrder,lineItem){var _arguments7=arguments;return function(dispatch){return dispatch(_removeLineItem.apply(undefined,_arguments7));};}function addOptionToLineItem(currentOrder,lineItem,optionGroup,optionItem){var _arguments8=arguments;return function(dispatch){return dispatch(_addOptionToLineItem.apply(undefined,_arguments8));};}function removeOptionFromLineItem(currentOrder,lineItem,optionItem){var _arguments9=arguments;return function(dispatch){return dispatch(_removeOptionFromLineItem.apply(undefined,_arguments9));};}function bindCustomerToOrder(){for(var _len2=arguments.length,args=Array(_len2),_key2=0;_key2<_len2;_key2++){args[_key2]=arguments[_key2];}return function(dispatch){return dispatch(_bindCustomerToOrder.apply(undefined,args));};}function submitOrder(){for(var _len3=arguments.length,args=Array(_len3),_key3=0;_key3<_len3;_key3++){args[_key3]=arguments[_key3];}
+return function(dispatch){return dispatch(_submitOrder.apply(undefined,args));};
+}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var actionCreatorsFor_1 = __webpack_require__(278);
+var actionTypesFor_1 = __webpack_require__(84);
+var constants_1 = __webpack_require__(4);
+var list_1 = __webpack_require__(486);
+var map_1 = __webpack_require__(501);
+exports.default = {
+    actionCreatorsFor: actionCreatorsFor_1.default,
+    actionTypesFor: actionTypesFor_1.default,
+    constants: constants_1.default,
+    List: list_1.default,
+    Map: map_1.default
+};
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _checkForMethod = __webpack_require__(35);
+var _curry3 = __webpack_require__(3);
+
+
+/**
+ * Returns the elements of the given list or string (or object with a `slice`
+ * method) from `fromIndex` (inclusive) to `toIndex` (exclusive).
+ *
+ * Dispatches to the `slice` method of the third argument, if present.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.4
+ * @category List
+ * @sig Number -> Number -> [a] -> [a]
+ * @sig Number -> Number -> String -> String
+ * @param {Number} fromIndex The start index (inclusive).
+ * @param {Number} toIndex The end index (exclusive).
+ * @param {*} list
+ * @return {*}
+ * @example
+ *
+ *      R.slice(1, 3, ['a', 'b', 'c', 'd']);        //=> ['b', 'c']
+ *      R.slice(1, Infinity, ['a', 'b', 'c', 'd']); //=> ['b', 'c', 'd']
+ *      R.slice(0, -1, ['a', 'b', 'c', 'd']);       //=> ['a', 'b', 'c']
+ *      R.slice(-3, -1, ['a', 'b', 'c', 'd']);      //=> ['b', 'c']
+ *      R.slice(0, 3, 'ramda');                     //=> 'ram'
+ */
+module.exports = _curry3(_checkForMethod('slice', function slice(fromIndex, toIndex, list) {
+  return Array.prototype.slice.call(list, fromIndex, toIndex);
+}));
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _indexOf = __webpack_require__(107);
+
+
+module.exports = function _contains(a, list) {
+  return _indexOf(list, a, 0) >= 0;
+};
+
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var assert_1 = __webpack_require__(504);
+var merge_1 = __webpack_require__(505);
+var remove_1 = __webpack_require__(506);
+exports.default = {
+    assert: assert_1.default,
+    merge: merge_1.default,
+    remove: remove_1.default
+};
+
+
+/***/ }),
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7547,7 +7548,7 @@ function createStructuredSelector(selectors) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.sendSupportTicket=exports.setupBrandibbleRedux=exports.setupBrandibble=exports.SEND_SUPPORT_TICKET=exports.SETUP_BRANDIBBLE_REDUX=exports.SETUP_BRANDIBBLE=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _fireAction=__webpack_require__(20);var _fireAction2=_interopRequireDefault(_fireAction);
 var _handleErrors=__webpack_require__(21);var _handleErrors2=_interopRequireDefault(_handleErrors);
-var _order=__webpack_require__(25);
+var _order=__webpack_require__(26);
 var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 var SETUP_BRANDIBBLE=exports.SETUP_BRANDIBBLE='SETUP_BRANDIBBLE';
@@ -8603,7 +8604,7 @@ module.exports = function compose() {
 
 var _checkForMethod = __webpack_require__(35);
 var _curry1 = __webpack_require__(2);
-var slice = __webpack_require__(27);
+var slice = __webpack_require__(28);
 
 
 /**
@@ -12270,7 +12271,7 @@ module.exports = _curry2(function defaultTo(d, v) {
 /* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(28);
+var _contains = __webpack_require__(29);
 var _curry2 = __webpack_require__(0);
 
 
@@ -12393,7 +12394,7 @@ module.exports = _curry2(function dissoc(prop, obj) {
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
 var _xdrop = __webpack_require__(323);
-var slice = __webpack_require__(27);
+var slice = __webpack_require__(28);
 
 
 /**
@@ -12432,7 +12433,7 @@ module.exports = _curry2(_dispatchable(['drop'], _xdrop, function drop(n, xs) {
 var _curry2 = __webpack_require__(0);
 var _dispatchable = __webpack_require__(6);
 var _xtake = __webpack_require__(326);
-var slice = __webpack_require__(27);
+var slice = __webpack_require__(28);
 
 
 /**
@@ -26278,7 +26279,7 @@ module.exports = function _pipeP(f, g) {
 /* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(28);
+var _contains = __webpack_require__(29);
 var _map = __webpack_require__(46);
 var _quote = __webpack_require__(311);
 var _toISOString = __webpack_require__(312);
@@ -26637,7 +26638,7 @@ module.exports = _curry1(function construct(Fn) {
 /* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(28);
+var _contains = __webpack_require__(29);
 var _curry2 = __webpack_require__(0);
 
 
@@ -28236,7 +28237,7 @@ module.exports = _curry2(function indexOf(target, xs) {
 /* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var slice = __webpack_require__(27);
+var slice = __webpack_require__(28);
 
 
 /**
@@ -28336,7 +28337,7 @@ module.exports = _curry3(function insertAll(idx, elts, list) {
 /* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(28);
+var _contains = __webpack_require__(29);
 var _curry2 = __webpack_require__(0);
 var _filter = __webpack_require__(110);
 var flip = __webpack_require__(56);
@@ -28377,7 +28378,7 @@ module.exports = _curry2(function intersection(list1, list2) {
 /* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(28);
+var _contains = __webpack_require__(29);
 
 
 // A simple Set type that honours R.equals semantics
@@ -29924,7 +29925,7 @@ module.exports = function _of(x) { return [x]; };
 /* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(28);
+var _contains = __webpack_require__(29);
 var _curry2 = __webpack_require__(0);
 
 
@@ -31060,7 +31061,7 @@ module.exports = invoker(1, 'split');
 
 var _curry2 = __webpack_require__(0);
 var length = __webpack_require__(129);
-var slice = __webpack_require__(27);
+var slice = __webpack_require__(28);
 
 
 /**
@@ -31091,7 +31092,7 @@ module.exports = _curry2(function splitAt(index, array) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(0);
-var slice = __webpack_require__(27);
+var slice = __webpack_require__(28);
 
 
 /**
@@ -32336,7 +32337,7 @@ module.exports = _curry2(function whereEq(spec, testObj) {
 /* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _contains = __webpack_require__(28);
+var _contains = __webpack_require__(29);
 var _curry2 = __webpack_require__(0);
 var flip = __webpack_require__(56);
 var reject = __webpack_require__(54);
@@ -33959,7 +33960,7 @@ exports.default = reducersFor;
 Object.defineProperty(exports, "__esModule", { value: true });
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(29);
+var store_1 = __webpack_require__(30);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34033,7 +34034,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var start_1 = __webpack_require__(151);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(29);
+var store_1 = __webpack_require__(30);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34118,7 +34119,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var start_1 = __webpack_require__(152);
 var invariants_1 = __webpack_require__(19);
 var constants_1 = __webpack_require__(4);
-var store_1 = __webpack_require__(29);
+var store_1 = __webpack_require__(30);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_START;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34207,7 +34208,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var error_1 = __webpack_require__(154);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(29);
+var store_1 = __webpack_require__(30);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34237,7 +34238,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var start_1 = __webpack_require__(155);
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(29);
+var store_1 = __webpack_require__(30);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34262,7 +34263,7 @@ exports.default = start;
 Object.defineProperty(exports, "__esModule", { value: true });
 var constants_1 = __webpack_require__(4);
 var invariants_1 = __webpack_require__(19);
-var store_1 = __webpack_require__(29);
+var store_1 = __webpack_require__(30);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -34309,7 +34310,7 @@ fetchImages;}});
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _addresses=__webpack_require__(64);Object.defineProperty(exports,'fetchAddresses',{enumerable:true,get:function get(){return _addresses.fetchAddresses;}});Object.defineProperty(exports,'createAddress',{enumerable:true,get:function get(){return _addresses.createAddress;}});Object.defineProperty(exports,'deleteAddress',{enumerable:true,get:function get(){return _addresses.deleteAddress;}});var _menus=__webpack_require__(87);Object.defineProperty(exports,'fetchMenu',{enumerable:true,get:function get(){return _menus.
-fetchMenu;}});var _order=__webpack_require__(25);Object.defineProperty(exports,'addLineItem',{enumerable:true,get:function get(){return _order.
+fetchMenu;}});var _order=__webpack_require__(26);Object.defineProperty(exports,'addLineItem',{enumerable:true,get:function get(){return _order.
 
 addLineItem;}});Object.defineProperty(exports,'pushLineItem',{enumerable:true,get:function get(){return _order.
 pushLineItem;}});Object.defineProperty(exports,'addOptionToLineItem',{enumerable:true,get:function get(){return _order.
@@ -34634,7 +34635,7 @@ webpackContext.id = 519;
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.deleteRating=exports.updateRating=exports.createRating=exports.fetchRating=undefined;
-var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=
+var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=
 
 
 
@@ -46629,8 +46630,8 @@ var Customers = function () {
     }
   }, {
     key: 'currentLevelUpCampaign',
-    value: function currentLevelUpCampaign() {
-      return this.levelUpCampaign(this.adapter.customerId());
+    value: function currentLevelUpCampaign(campaignId, campaignType) {
+      return this.levelUpCampaign(this.adapter.customerId(), campaignId, campaignType);
     }
 
     // STATELESS METHODS
@@ -46742,8 +46743,8 @@ var Customers = function () {
 
   }, {
     key: 'levelUpCampaign',
-    value: function levelUpCampaign(customerId) {
-      return this.adapter.request('GET', 'customers/' + customerId + '/levelup/campaign');
+    value: function levelUpCampaign(customerId, campaignId, campaignType) {
+      return this.adapter.request('GET', 'customers/' + customerId + '/levelup/campaigns/' + campaignId + '/' + campaignType);
     }
 
     /* disconnect level up account */
@@ -80366,7 +80367,7 @@ images:_images2.default});
 /* 536 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(30);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
+Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(25);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
 var _allergens=__webpack_require__(60);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 var initialState=exports.initialState=(0,_seamlessImmutable2.default)({
@@ -80390,8 +80391,8 @@ return state;}
 /* 537 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(30);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
-var _order=__webpack_require__(25);
+Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(25);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
+var _order=__webpack_require__(26);
 
 
 var _locations=__webpack_require__(61);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
@@ -80429,7 +80430,7 @@ return state;}
 /* 538 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(30);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
+Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(25);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
 var _geolocations=__webpack_require__(62);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 var initialState=exports.initialState=(0,_seamlessImmutable2.default)([]);exports.default=
@@ -80470,7 +80471,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-customerOrders;var _customerOrders=__webpack_require__(63);var _order=__webpack_require__(25);var _user=__webpack_require__(11);var initialState={all:null,past:null,recentSubmission:null,upcoming:null};function customerOrders(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+customerOrders;var _customerOrders=__webpack_require__(63);var _order=__webpack_require__(26);var _user=__webpack_require__(11);var initialState={all:null,past:null,recentSubmission:null,upcoming:null};function customerOrders(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_FULFILLED':
 return _extends({},
@@ -80504,7 +80505,7 @@ return state;}
 /* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(30);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
+Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(25);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
 var _images=__webpack_require__(156);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 var initialState=exports.initialState=(0,_seamlessImmutable2.default)({
@@ -80705,7 +80706,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=un
 
 
 
-error;var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(87);var _favorites=__webpack_require__(66);var _order=__webpack_require__(25);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _payments=__webpack_require__(65);var _customerOrders=__webpack_require__(63);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType2.RATINGS_FETCH_START,RATINGS_FETCH_ERROR=_reduxCrud$actionType2.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType2.RATINGS_CREATE_START,RATINGS_CREATE_ERROR=_reduxCrud$actionType2.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType2.RATINGS_UPDATE_START,RATINGS_UPDATE_ERROR=_reduxCrud$actionType2.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType2.RATINGS_DELETE_START,RATINGS_DELETE_ERROR=_reduxCrud$actionType2.RATINGS_DELETE_ERROR;var initialState=exports.initialState={sendSupportTicket:null,setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAllCustomerOrders:null,fetchPastCustomerOrders:null,fetchUpcomingCustomerOrders:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocation:null,fetchLocations:null,fetchGeolocations:null,fetchMenu:null,addLineItem:null,resolveOrder:null,submitOrder:null,setLineItemMadeFor:null,setLineItemInstructions:null,fetchPayments:null,createPayment:null,deletePayment:null,setPaymentMethod:null,setDefaultPayment:null,fetchFavorites:null,createFavorite:null,updateFavorite:null,deleteFavorite:null,fetchRating:null,createRating:null,updateRating:null,deleteRating:null,authenticateUser:null,createUser:null,fetchLevelUpLoyalty:null,fetchLevelUpQRCode:null,fetchLevelUpCampaign:null,updateLevelUpConnection:null,connectLevelUp:null,disconnectLevelUp:null,fetchLevelUpPaymentMethod:null,fetchUser:null,resetUserPassword:null,resetLevelUpPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null,validateCurrentCart:null,validateCurrentOrder:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+error;var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(87);var _favorites=__webpack_require__(66);var _order=__webpack_require__(26);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _payments=__webpack_require__(65);var _customerOrders=__webpack_require__(63);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType2.RATINGS_FETCH_START,RATINGS_FETCH_ERROR=_reduxCrud$actionType2.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType2.RATINGS_CREATE_START,RATINGS_CREATE_ERROR=_reduxCrud$actionType2.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType2.RATINGS_UPDATE_START,RATINGS_UPDATE_ERROR=_reduxCrud$actionType2.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType2.RATINGS_DELETE_START,RATINGS_DELETE_ERROR=_reduxCrud$actionType2.RATINGS_DELETE_ERROR;var initialState=exports.initialState={sendSupportTicket:null,setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAllCustomerOrders:null,fetchPastCustomerOrders:null,fetchUpcomingCustomerOrders:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocation:null,fetchLocations:null,fetchGeolocations:null,fetchMenu:null,addLineItem:null,resolveOrder:null,submitOrder:null,setLineItemMadeFor:null,setLineItemInstructions:null,fetchPayments:null,createPayment:null,deletePayment:null,setPaymentMethod:null,setDefaultPayment:null,fetchFavorites:null,createFavorite:null,updateFavorite:null,deleteFavorite:null,fetchRating:null,createRating:null,updateRating:null,deleteRating:null,authenticateUser:null,createUser:null,fetchLevelUpLoyalty:null,fetchLevelUpQRCode:null,fetchLevelUpCampaign:null,updateLevelUpConnection:null,connectLevelUp:null,disconnectLevelUp:null,fetchLevelUpPaymentMethod:null,fetchUser:null,resetUserPassword:null,resetLevelUpPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null,validateCurrentCart:null,validateCurrentOrder:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 
 case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:null});
@@ -80934,7 +80935,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=un
 
 
 
-addresses;var _seamlessImmutable=__webpack_require__(30);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);var _addresses=__webpack_require__(64);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState=exports.initialState=(0,_seamlessImmutable2.default)({addressesById:(0,_seamlessImmutable2.default)({})});function addresses(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];var
+addresses;var _seamlessImmutable=__webpack_require__(25);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);var _addresses=__webpack_require__(64);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState=exports.initialState=(0,_seamlessImmutable2.default)({addressesById:(0,_seamlessImmutable2.default)({})});function addresses(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];var
 payload=action.payload,type=action.type;
 
 switch(type){
@@ -80966,7 +80967,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
-allergens;var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('menus');var initialState={};function allergens(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+allergens;var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('menus');var initialState={};function allergens(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 default:
 return baseReducers(state,action);}
@@ -81025,7 +81026,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-order;var _lodash=__webpack_require__(547);var _lodash2=_interopRequireDefault(_lodash);var _order=__webpack_require__(25);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState={ref:null,orderData:null,lineItemsData:null,validated:null,validatedCart:null};function _buildFormattedLineItemsHash(ref){return(0,_lodash2.default)(ref.cart.lineItems,function(li){var uuid=li.uuid,quantity=li.quantity,madeFor=li.madeFor,instructions=li.instructions,product=li.product,operationMaps=li.operationMaps;return{uuid:uuid,quantity:quantity,madeFor:madeFor,instructions:instructions,isValid:li.isValid(),errors:li.errors(),productData:product,optionGroupMappings:operationMaps};});}function order(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+order;var _lodash=__webpack_require__(547);var _lodash2=_interopRequireDefault(_lodash);var _order=__webpack_require__(26);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState={ref:null,orderData:null,lineItemsData:null,validated:null,validatedCart:null};function _buildFormattedLineItemsHash(ref){return(0,_lodash2.default)(ref.cart.lineItems,function(li){var uuid=li.uuid,quantity=li.quantity,madeFor=li.madeFor,instructions=li.instructions,product=li.product,operationMaps=li.operationMaps;return{uuid:uuid,quantity:quantity,madeFor:madeFor,instructions:instructions,isValid:li.isValid(),errors:li.errors(),productData:product,optionGroupMappings:operationMaps};});}function order(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _order.RESOLVE_ORDER+'_FULFILLED':
 case _order.BIND_CUSTOMER_TO_ORDER+'_FULFILLED':
@@ -83457,7 +83458,7 @@ module.exports = map;
 /* 548 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(30);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
+Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(25);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
 
 var _payments=__webpack_require__(65);
 
@@ -83526,7 +83527,7 @@ return state;}
 /* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(30);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
+Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _seamlessImmutable=__webpack_require__(25);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);
 var _favorites=__webpack_require__(66);
 
 
@@ -83576,7 +83577,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
-favorites;var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('ratings',{key:'receipt_id'});var initialState={};function favorites(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+favorites;var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('ratings',{key:'receipt_id'});var initialState={};function favorites(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 
 case _user.UNAUTHENTICATE_USER+'_FULFILLED':
@@ -83756,7 +83757,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-status;var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(87);var _favorites=__webpack_require__(66);var _payments=__webpack_require__(65);var _order=__webpack_require__(25);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _user=__webpack_require__(11);var _customerOrders=__webpack_require__(63);var _constants=__webpack_require__(68);var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType.RATINGS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType2.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType2.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType2.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType2.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType2.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType2.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,fetchLevelUpCampaign:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,setMiscOptions:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+status;var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(87);var _favorites=__webpack_require__(66);var _payments=__webpack_require__(65);var _order=__webpack_require__(26);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _user=__webpack_require__(11);var _customerOrders=__webpack_require__(63);var _constants=__webpack_require__(68);var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType.RATINGS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType2.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType2.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType2.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType2.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType2.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType2.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,fetchLevelUpCampaign:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,setMiscOptions:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:PENDING});
 case _application.SETUP_BRANDIBBLE+'_FULFILLED':return _extends({},state,{setupBrandibble:FULFILLED});
@@ -84035,7 +84036,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-attributes;var _reduxCrud=__webpack_require__(26);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_CREATE_SUCCESS=_reduxCrud$actionType.USER_CREATE_SUCCESS,USER_UPDATE_SUCCESS=_reduxCrud$actionType.USER_UPDATE_SUCCESS;var initialState={};function removeAllergens(removeArr,currentArr){var newArr=[];for(var i=0;i<currentArr.length;i++){if(!removeArr.includes(currentArr[i]))newArr.push(currentArr[i]);}return newArr;}function attributes(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+attributes;var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_CREATE_SUCCESS=_reduxCrud$actionType.USER_CREATE_SUCCESS,USER_UPDATE_SUCCESS=_reduxCrud$actionType.USER_UPDATE_SUCCESS;var initialState={};function removeAllergens(removeArr,currentArr){var newArr=[];for(var i=0;i<currentArr.length;i++){if(!removeArr.includes(currentArr[i]))newArr.push(currentArr[i]);}return newArr;}function attributes(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _user.RESOLVE_USER+'_FULFILLED':
 case _user.AUTHENTICATE_USER+'_FULFILLED':
@@ -84087,7 +84088,9 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-levelup;var _user=__webpack_require__(11);var initialState={loyalty:{},qr_code:null,payment_method:null,campaign:null};function levelup(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+
+
+levelup;var _seamlessImmutable=__webpack_require__(25);var _seamlessImmutable2=_interopRequireDefault(_seamlessImmutable);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState={loyalty:{},qr_code:null,payment_method:null,campaignsById:(0,_seamlessImmutable2.default)({})};function levelup(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _user.FETCH_LEVELUP_LOYALTY+'_FULFILLED':
 return _extends({},
@@ -84095,9 +84098,7 @@ state,{
 loyalty:action.payload});
 
 case _user.FETCH_LEVELUP_CAMPAIGN+'_FULFILLED':
-return _extends({},
-state,{
-campaign:action.payload});
+return _seamlessImmutable2.default.setIn(state,['campaignsById',action.payload.meta.campaignId+'-'+action.payload.meta.campaignType],action.payload.campaign);
 
 case _user.FETCH_LEVELUP_QR_CODE+'_FULFILLED':
 return _extends({},

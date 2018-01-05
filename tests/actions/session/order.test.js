@@ -174,7 +174,7 @@ describe('actions/session/order', () => {
   describe('validateCurrentCart', () => {
     before(() => {
       store = mockStore();
-      const order = makeUnpersistedOrder();
+      const order = makeUnpersistedOrder('pickup');
 
       return fetchMenu(brandibble, { locationId: SAMPLE_MENU_LOCATION_ID })(store.dispatch).then(({ value: { menu }}) => {
         const product = menu[0].children[menu[0].children.length - 1].items[0];
@@ -209,7 +209,7 @@ describe('actions/session/order', () => {
   describe('validateCurrentOrder', () => {
     before(() => {
       store = mockStore();
-      const order = makeUnpersistedOrder();
+      const order = makeUnpersistedOrder('pickup');
 
       return fetchMenu(brandibble, { locationId: SAMPLE_MENU_LOCATION_ID })(store.dispatch).then(({ value: { menu }}) => {
         const product = menu[0].children[menu[0].children.length - 1].items[0];
@@ -505,7 +505,7 @@ describe('actions/session/order', () => {
   describe('submitOrder', () => {
     before(() => {
       store = mockStore();
-      const order = makeUnpersistedOrder();
+      const order = makeUnpersistedOrder('pickup');
 
       return fetchMenu(brandibble, { locationId: SAMPLE_MENU_LOCATION_ID })(store.dispatch).then(({ value: { menu }}) => {
         const product = menu[0].children[menu[0].children.length - 1].items[0];
