@@ -13,7 +13,7 @@ const initialState = {
   loyalty: {},
   qr_code: null,
   payment_method: null,
-  campaign: null,
+  campaignsById: Immutable({})
 };
 
 describe('reducers/user/levelup', () => {
@@ -41,12 +41,14 @@ describe('reducers/user/levelup', () => {
 
 
   it('handles the FETCH_LEVELUP_CAMPAIGN_FULFILLED action', () => {
-    const payload = '69';
+    const payload = { campaign: '69', meta: { campaignId: '7', campaignType: 'basic_v1' }};
     const reduced = reducer(initialState, {
       type: `${FETCH_LEVELUP_CAMPAIGN}_FULFILLED`,
       payload,
     });
-    expect(reduced.campaign).to.equal(payload);
+    expect(reduced.campaignsById).to.deep.equal({
+      '7-basic_v1': '69'
+    });
   });
 
   it('handles the FETCH_LEVELUP_PAYMENT_METHOD_FULFILLED action', () => {
