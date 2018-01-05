@@ -39,7 +39,6 @@ describe('reducers/user/levelup', () => {
     expect(reduced.qr_code).to.equal(payload);
   });
 
-
   it('handles the FETCH_LEVELUP_CAMPAIGN_FULFILLED action', () => {
     const payload = { campaign: '69', meta: { campaignId: '7', campaignType: 'basic_v1' }};
     const reduced = reducer(initialState, {
