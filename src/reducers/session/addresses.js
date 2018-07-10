@@ -16,21 +16,16 @@ export default function addresses(state = initialState, action) {
   switch (type) {
     case `${FETCH_ADDRESSES}_FULFILLED`:
       return state.merge({
-        addressesById: state.addressesById.replace(
-          Immutable.asObject(payload, (address) => {
-            return [address.customer_address_id, address];
-          }),
-        ),
+        addressesById: state.addressesById.replace(Immutable.asObject(payload, (address) => {
+          return [address.customer_address_id, address];
+        })),
       });
     case `${DELETE_ADDRESS}_FULFILLED`:
       return state.merge({
         addressesById: state.addressesById.without(payload),
       });
     case `${CREATE_ADDRESS}_FULFILLED`:
-      return state.setIn(
-        ['addressesById', payload.customer_address_id],
-        payload,
-      );
+      return state.setIn(['addressesById', payload.customer_address_id], payload);
     case `${UNAUTHENTICATE_USER}_FULFILLED`:
       return initialState;
     default:

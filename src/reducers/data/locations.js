@@ -18,17 +18,13 @@ export default (state = initialState, action) => {
       return state.setIn(['locationsById', payload.location_id], payload);
     case `${FETCH_LOCATION}_FULFILLED`:
     case `${RESOLVE_ORDER_LOCATION}_FULFILLED`:
-      if (payload) {
-        return state.setIn(['locationsById', payload.location_id], payload);
-      }
+      if (payload) return state.setIn(['locationsById', payload.location_id], payload);
       return state;
     case `${FETCH_LOCATIONS}_FULFILLED`:
       return state.merge({
-        locationsById: state.locationsById.replace(
-          Immutable.asObject(payload, (location) => {
-            return [location.location_id, location];
-          }),
-        ),
+        locationsById: state.locationsById.replace(Immutable.asObject(payload, (location) => {
+          return [location.location_id, location];
+        })),
       });
     default:
       return state;

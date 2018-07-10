@@ -9,9 +9,10 @@ import {
   REMOVE_ALLERGENS,
 } from '../../actions/session/user';
 
-const { USER_CREATE_SUCCESS, USER_UPDATE_SUCCESS } = reduxCrud.actionTypesFor(
-  'user',
-);
+const {
+  USER_CREATE_SUCCESS,
+  USER_UPDATE_SUCCESS,
+} = reduxCrud.actionTypesFor('user');
 const initialState = {};
 
 function removeAllergens(removeArr, currentArr) {

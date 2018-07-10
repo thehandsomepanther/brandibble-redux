@@ -5398,47 +5398,6 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.fetchLevelUpPay
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 validateUser=validateUser;exports.
 
 
@@ -5448,30 +5407,12 @@ authenticateUser=authenticateUser;exports.
 
 
 
-
-
-
-
-
-
 addAllergens=addAllergens;exports.
 
 
 
 
-
-
-
-
-
-
 removeAllergens=removeAllergens;exports.
-
-
-
-
-
-
 
 
 
@@ -5488,25 +5429,11 @@ resetUserPassword=resetUserPassword;exports.
 
 
 
-
-
-
-
-
-
 resetLevelUpPassword=resetLevelUpPassword;exports.
 
 
 
-
-
-
-
-
-
 resolveUser=resolveUser;exports.
-
-
 
 
 
@@ -5526,12 +5453,10 @@ createUser=createUser;exports.
 
 
 
-
 updateUser=updateUser;var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(516);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('user'),updateStart=_reduxCrud$actionCrea.updateStart,updateSuccess=_reduxCrud$actionCrea.updateSuccess,updateError=_reduxCrud$actionCrea.updateError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var FETCH_USER=exports.FETCH_USER='FETCH_USER';var RESET_USER_PASSWORD=exports.RESET_USER_PASSWORD='RESET_USER_PASSWORD';var RESET_LEVELUP_PASSWORD=exports.RESET_LEVELUP_PASSWORD='RESET_LEVELUP_PASSWORD';var ADD_ALLERGENS=exports.ADD_ALLERGENS='ADD_ALLERGENS';var REMOVE_ALLERGENS=exports.REMOVE_ALLERGENS='REMOVE_ALLERGENS';var FETCH_LEVELUP_QR_CODE=exports.FETCH_LEVELUP_QR_CODE='FETCH_LEVELUP_QR_CODE';var FETCH_LEVELUP_LOYALTY=exports.FETCH_LEVELUP_LOYALTY='FETCH_LEVELUP_LOYALTY';var FETCH_LEVELUP_CAMPAIGN=exports.FETCH_LEVELUP_CAMPAIGN='FETCH_LEVELUP_CAMPAIGN';var UPDATE_LEVELUP_CONNECTION=exports.UPDATE_LEVELUP_CONNECTION='UPDATE_LEVELUP_CONNECTION';var CONNECT_LEVELUP=exports.CONNECT_LEVELUP='CONNECT_LEVELUP';var DISCONNECT_LEVELUP=exports.DISCONNECT_LEVELUP='DISCONNECT_LEVELUP';var FETCH_LEVELUP_PAYMENT_METHOD=exports.FETCH_LEVELUP_PAYMENT_METHOD='FETCH_LEVELUP_PAYMENT_METHOD';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref2){var data=_ref2.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _addAllergens(brandibble,allergens,success,fail){return{type:ADD_ALLERGENS,payload:brandibble.allergens.create(allergens).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _removeAllergens(brandibble,allergens,success,fail){return{type:REMOVE_ALLERGENS,payload:brandibble.allergens.remove(allergens).then(function(_ref4){var data=_ref4.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function _fetchUser(brandibble,id){return{type:FETCH_USER,payload:brandibble.customers.show(id).then(function(_ref5){var data=_ref5.data;return data;}).catch(function(response){var errors=response.errors;return errors||response;})};}function _resetUserPassword(brandibble,email,success,fail){return{type:RESET_USER_PASSWORD,payload:brandibble.customers.resetPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resetLevelUpPassword(brandibble,email,success,fail){return{type:RESET_LEVELUP_PASSWORD,payload:brandibble.customers.resetLevelUpPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}var _fetchLevelUpQRCode=function _fetchLevelUpQRCode(brandibble,body,success,fail){return{type:FETCH_LEVELUP_QR_CODE,payload:brandibble.customers.currentLevelUpQRCode(body).then(function(_ref6){var data=_ref6.data;success(data.qr_code);return data.qr_code;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _fetchLevelUpCampaign=function _fetchLevelUpCampaign(brandibble,campaignId,campaignType,success,fail){return{type:FETCH_LEVELUP_CAMPAIGN,payload:brandibble.customers.currentLevelUpCampaign(campaignId,campaignType).then(function(_ref7){var data=_ref7.data;var responseWithMeta={campaign:data.campaign,meta:{campaignId:campaignId,campaignType:campaignType}};success(responseWithMeta);return responseWithMeta;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _fetchLevelUpLoyalty=function _fetchLevelUpLoyalty(brandibble,success,fail){return{type:FETCH_LEVELUP_LOYALTY,payload:brandibble.customers.currentLevelUpLoyalty().then(function(_ref8){var data=_ref8.data;success(data.loyalty);return data.loyalty;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _updateLevelUpConnection=function _updateLevelUpConnection(brandibble,customerId,password){return{type:UPDATE_LEVELUP_CONNECTION,payload:brandibble.customers.levelUpUpdate(customerId,password)};};var _connectLevelUp=function _connectLevelUp(brandibble,customerId,email,password){return{type:CONNECT_LEVELUP,payload:brandibble.customers.levelUpConnect(customerId,email,password)};};var _disconnectLevelUp=function _disconnectLevelUp(brandibble,customerId){return{type:DISCONNECT_LEVELUP,payload:brandibble.customers.levelUpDisconnect(customerId).catch(function(response){var errors=response.errors;throw errors||response;})};};var _fetchLevelUpPaymentMethod=function _fetchLevelUpPaymentMethod(brandibble,customerId){return{type:FETCH_LEVELUP_PAYMENT_METHOD,payload:brandibble.customers.levelUpPaymentMethod(customerId).then(function(_ref9){var data=_ref9.data;return data.payment_method;}).catch(function(response){var errors=response.errors;throw errors||response;})};};function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function addAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_addAllergens(brandibble,allergens,success,fail));};}function removeAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_removeAllergens(brandibble,allergens,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function fetchUser(brandibble,id){return function(dispatch){return dispatch(_fetchUser(brandibble,id));};}function resetUserPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetUserPassword(brandibble,email,success,fail));};}function resetLevelUpPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetLevelUpPassword(brandibble,email,success,fail));};}function resolveUser(brandibble){var adapter=brandibble.adapter,customers=brandibble.customers;var payload=adapter.customerToken?customers.current().then(function(_ref10){var data=_ref10.data;return data;}):Promise.resolve({});return function(dispatch){return dispatch(_resolveUser(payload));};}function createUser(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.customers.create(data).then(function(_ref11){var data=_ref11.data;return dispatch(createSuccess(_extends({id:id},data)));}).catch(function(response){var errors=response.errors;return dispatch(createError(errors||response,{id:id,data:data}));});};}function updateUser(brandibble,id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
 return function(dispatch){
 dispatch(updateStart({record:data,id:id}));
-return brandibble.customers.
-updateCurrent(data).
+return brandibble.customers.updateCurrent(data).
 then(function(_ref12){var data=_ref12.data;return dispatch(updateSuccess(_extends({id:id},data)));}).
 catch(function(response){var
 errors=response.errors;
@@ -5541,51 +5466,24 @@ return dispatch(updateError(errors||response,{id:id,data:data}));
 }
 
 
-var fetchLevelUpQRCode=exports.fetchLevelUpQRCode=function fetchLevelUpQRCode(
-brandibble)
-
-
-
-{var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;
-return function(dispatch){return(
-dispatch(_fetchLevelUpQRCode(brandibble,data,success,fail)));};
+var fetchLevelUpQRCode=exports.fetchLevelUpQRCode=function fetchLevelUpQRCode(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;
+return function(dispatch){return dispatch(_fetchLevelUpQRCode(brandibble,data,success,fail));};
 };
 
-var fetchLevelUpCampaign=exports.fetchLevelUpCampaign=function fetchLevelUpCampaign(
-brandibble,
-campaignId,
-campaignType)
-
-
-{var success=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;var fail=arguments.length>4&&arguments[4]!==undefined?arguments[4]:NO_OP;
-return function(dispatch){return(
-dispatch(
-_fetchLevelUpCampaign(
-brandibble,
-campaignId,
-campaignType,
-success,
-fail)));};
-
-
+var fetchLevelUpCampaign=exports.fetchLevelUpCampaign=function fetchLevelUpCampaign(brandibble,campaignId,campaignType){var success=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;var fail=arguments.length>4&&arguments[4]!==undefined?arguments[4]:NO_OP;
+return function(dispatch){return dispatch(_fetchLevelUpCampaign(brandibble,campaignId,campaignType,success,fail));};
 };
 
-var fetchLevelUpLoyalty=exports.fetchLevelUpLoyalty=function fetchLevelUpLoyalty(
-brandibble)
-
-
-{var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;
+var fetchLevelUpLoyalty=exports.fetchLevelUpLoyalty=function fetchLevelUpLoyalty(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;
 return function(dispatch){return dispatch(_fetchLevelUpLoyalty(brandibble,success,fail));};
 };
 
 var updateLevelUpConnection=exports.updateLevelUpConnection=function updateLevelUpConnection(brandibble,customerId,password){
-return function(dispatch){return(
-dispatch(_updateLevelUpConnection(brandibble,customerId,password)));};
+return function(dispatch){return dispatch(_updateLevelUpConnection(brandibble,customerId,password));};
 };
 
 var connectLevelUp=exports.connectLevelUp=function connectLevelUp(brandibble,customerId,email,password){
-return function(dispatch){return(
-dispatch(_connectLevelUp(brandibble,customerId,email,password)));};
+return function(dispatch){return dispatch(_connectLevelUp(brandibble,customerId,email,password));};
 };
 
 var disconnectLevelUp=exports.disconnectLevelUp=function disconnectLevelUp(brandibble,customerId){
@@ -5593,8 +5491,7 @@ return function(dispatch){return dispatch(_disconnectLevelUp(brandibble,customer
 };
 
 var fetchLevelUpPaymentMethod=exports.fetchLevelUpPaymentMethod=function fetchLevelUpPaymentMethod(brandibble,customerId){
-return function(dispatch){return(
-dispatch(_fetchLevelUpPaymentMethod(brandibble,customerId)));};
+return function(dispatch){return dispatch(_fetchLevelUpPaymentMethod(brandibble,customerId));};
 };
 
 /***/ }),
@@ -6936,31 +6833,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.SET_LINE_ITEM_I
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 createNewOrder=createNewOrder;exports.
-
-
-
-
-
-
-
-
 
 
 
@@ -6975,20 +6848,7 @@ resolveOrder=resolveOrder;exports.
 
 
 
-
-
-
-
-
-
-
-
-
-
 resolveOrderLocation=resolveOrderLocation;exports.
-
-
-
 
 
 
@@ -7059,10 +6919,6 @@ setLineItemInstructions=setLineItemInstructions;exports.
 
 
 
-
-
-
-
 setPaymentMethod=setPaymentMethod;exports.
 
 
@@ -7084,11 +6940,6 @@ removeLineItem=removeLineItem;exports.
 
 
 addOptionToLineItem=addOptionToLineItem;exports.
-
-
-
-
-
 
 
 
@@ -7715,27 +7566,18 @@ var setupBrandibbleReduxDefaults={
 locationId:null,
 serviceType:'pickup'};
 
-var setupBrandibbleRedux=exports.setupBrandibbleRedux=function setupBrandibbleRedux(
-brandibble){var
-data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:setupBrandibbleReduxDefaults;return(
-function(dispatch){var _Object$assign=
-_extends(
-{},
-setupBrandibbleReduxDefaults,
-data),locationId=_Object$assign.locationId,serviceType=_Object$assign.serviceType;
-
-var payload=dispatch(setupBrandibble(brandibble)).
-then(function(_ref){var value=_ref.value;
+var setupBrandibbleRedux=exports.setupBrandibbleRedux=function setupBrandibbleRedux(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:setupBrandibbleReduxDefaults;return function(dispatch){var _Object$assign=
+_extends({},setupBrandibbleReduxDefaults,data),locationId=_Object$assign.locationId,serviceType=_Object$assign.serviceType;
+var payload=dispatch(setupBrandibble(brandibble)).then(function(_ref){var value=_ref.value;
 return Promise.all([
 dispatch((0,_user.resolveUser)(value)),
 dispatch((0,_order.resolveOrder)(value,locationId,serviceType)),
 dispatch((0,_order.resolveOrderLocation)(value))]);
 
-}).
-catch(_handleErrors2.default);
+}).catch(_handleErrors2.default);
 
 return dispatch((0,_fireAction2.default)(SETUP_BRANDIBBLE_REDUX,payload));
-});};
+};};
 
 
 var sendSupportTicketDefaults={
@@ -7744,15 +7586,12 @@ email:null,
 name:null,
 subject:null};
 
-var sendSupportTicket=exports.sendSupportTicket=function sendSupportTicket(
-brandibble){var
-data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:sendSupportTicketDefaults;return(
-function(dispatch){
+var sendSupportTicket=exports.sendSupportTicket=function sendSupportTicket(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:sendSupportTicketDefaults;return function(dispatch){
 var payload=brandibble.
 sendSupportTicket(_extends({},sendSupportTicketDefaults,data)).
 catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(SEND_SUPPORT_TICKET,payload));
-});};
+};};
 
 /***/ }),
 /* 43 */
@@ -8328,10 +8167,7 @@ var _handleErrors=__webpack_require__(21);var _handleErrors2=_interopRequireDefa
 var FETCH_ALLERGENS=exports.FETCH_ALLERGENS='FETCH_ALLERGENS';
 
 var fetchAllergens=exports.fetchAllergens=function fetchAllergens(brandibble){return function(dispatch){
-var payload=brandibble.allergens.
-all().
-then(function(_ref){var data=_ref.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.allergens.all().then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(FETCH_ALLERGENS,payload));
 };};
 
@@ -8353,10 +8189,8 @@ return dispatch((0,_fireAction2.default)(PUSH_GEOLOCATION,location));
 
 var fetchLocation=exports.fetchLocation=function fetchLocation(brandibble,locationId,lat,lng){
 return function(dispatch){
-var payload=brandibble.locations.
-show(locationId,lat,lng).
-then(function(_ref){var data=_ref.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.locations.show(locationId,lat,lng).
+then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(FETCH_LOCATION,payload));
 };
 };
@@ -8371,9 +8205,7 @@ return dispatch((0,_fireAction2.default)(FETCH_LOCATION,payload));
 
 
 var fetchLocations=exports.fetchLocations=function fetchLocations(brandibble){var query=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){
-var payload=brandibble.locations.
-index(query).
-then(function(_ref2){var data=_ref2.data;
+var payload=brandibble.locations.index(query).then(function(_ref2){var data=_ref2.data;
 
 
 
@@ -8382,8 +8214,7 @@ var orderableLocations=(0,_lodash2.default)(data,function(location){
 return!location.is_closed&&!location.is_coming_soon;
 });
 return orderableLocations;
-}).
-catch(_handleErrors2.default);
+}).catch(_handleErrors2.default);
 
 return dispatch((0,_fireAction2.default)(FETCH_LOCATIONS,payload));
 };};
@@ -8399,10 +8230,7 @@ var FETCH_GEOLOCATIONS=exports.FETCH_GEOLOCATIONS='FETCH_GEOLOCATIONS';
 var CLEAR_GEOLOCATIONS=exports.CLEAR_GEOLOCATIONS='CLEAR_GEOLOCATIONS';
 
 var fetchGeolocations=exports.fetchGeolocations=function fetchGeolocations(brandibble){var query=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){
-var payload=brandibble.locations.
-index(query).
-then(function(_ref){var data=_ref.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.locations.index(query).then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(FETCH_GEOLOCATIONS,payload));
 };};
 
@@ -8415,31 +8243,6 @@ return dispatch((0,_fireAction2.default)(CLEAR_GEOLOCATIONS,null));
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -8489,26 +8292,17 @@ var CREATE_ADDRESS=exports.CREATE_ADDRESS='CREATE_ADDRESS';
 var DELETE_ADDRESS=exports.DELETE_ADDRESS='DELETE_ADDRESS';
 
 var fetchAddresses=exports.fetchAddresses=function fetchAddresses(brandibble){return function(dispatch){
-var payload=brandibble.addresses.
-all().
-then(function(_ref){var data=_ref.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.addresses.all().then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(FETCH_ADDRESSES,payload));
 };};
 
 var createAddress=exports.createAddress=function createAddress(brandibble){var address=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){
-var payload=brandibble.addresses.
-create(address).
-then(function(_ref2){var data=_ref2.data;return _extends({},data[0]);}).
-catch(_handleErrors2.default);
+var payload=brandibble.addresses.create(address).then(function(_ref2){var data=_ref2.data;return _extends({},data[0]);}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(CREATE_ADDRESS,payload));
 };};
 
 var deleteAddress=exports.deleteAddress=function deleteAddress(brandibble,id){return function(dispatch){
-var payload=brandibble.addresses.
-delete(id).
-then(function(){return id;}).
-catch(_handleErrors2.default);
+var payload=brandibble.addresses.delete(id).then(function(){return id;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(DELETE_ADDRESS,payload));
 };};
 
@@ -8525,34 +8319,23 @@ var SET_DEFAULT_PAYMENT=exports.SET_DEFAULT_PAYMENT='SET_DEFAULT_PAYMENT';
 var DELETE_PAYMENT=exports.DELETE_PAYMENT='DELETE_PAYMENT';
 
 var fetchPayments=exports.fetchPayments=function fetchPayments(brandibble){return function(dispatch){
-var payload=brandibble.payments.
-all().
-then(function(_ref){var data=_ref.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.payments.all().then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(FETCH_PAYMENTS,payload));
 };};
 
 var createPayment=exports.createPayment=function createPayment(brandibble){var payment=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){
-var payload=brandibble.payments.
-create(payment).
-then(function(_ref2){var data=_ref2.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.payments.create(payment).then(function(_ref2){var data=_ref2.data;return data;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(CREATE_PAYMENT,payload));
 };};
 
+
 var setDefaultPayment=exports.setDefaultPayment=function setDefaultPayment(brandibble,customer_card_id){return function(dispatch){
-var payload=brandibble.payments.
-setDefault(customer_card_id).
-then(function(){return customer_card_id;}).
-catch(_handleErrors2.default);
+var payload=brandibble.payments.setDefault(customer_card_id).then(function(){return customer_card_id;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(SET_DEFAULT_PAYMENT,payload));
 };};
 
 var deletePayment=exports.deletePayment=function deletePayment(brandibble,id){return function(dispatch){
-var payload=brandibble.payments.
-delete(id).
-then(function(){return id;}).
-catch(_handleErrors2.default);
+var payload=brandibble.payments.delete(id).then(function(){return id;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(DELETE_PAYMENT,payload));
 };};
 
@@ -8569,36 +8352,26 @@ var UPDATE_FAVORITE=exports.UPDATE_FAVORITE='UPDATE_FAVORITE';
 var DELETE_FAVORITE=exports.DELETE_FAVORITE='DELETE_FAVORITE';
 
 var fetchFavorites=exports.fetchFavorites=function fetchFavorites(brandibble){return function(dispatch){
-var payload=brandibble.favorites.
-all().
-then(function(_ref){var data=_ref.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.favorites.all().then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(FETCH_FAVORITES,payload));
 };};
 
 var createFavorite=exports.createFavorite=function createFavorite(brandibble){var favorite=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var
 lineItem=favorite.lineItem,name=favorite.name;
-var payload=brandibble.favorites.
-create(name,lineItem).
-then(function(_ref2){var data=_ref2.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.favorites.create(name,lineItem).then(function(_ref2){var data=_ref2.data;return data;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(CREATE_FAVORITE,payload));
 };};
 
 var updateFavorite=exports.updateFavorite=function updateFavorite(brandibble){var favorite=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var
 id=favorite.id,name=favorite.name,lineItem=favorite.lineItem;
-var payload=brandibble.favorites.
-update(id,name,lineItem).
+var payload=brandibble.favorites.update(id,name,lineItem).
 then(function(_ref3){var data=_ref3.data;return data;}).
 catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(UPDATE_FAVORITE,payload));
 };};
 
 var deleteFavorite=exports.deleteFavorite=function deleteFavorite(brandibble,id){return function(dispatch){
-var payload=brandibble.favorites.
-delete(id).
-then(function(){return id;}).
-catch(_handleErrors2.default);
+var payload=brandibble.favorites.delete(id).then(function(){return id;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(DELETE_FAVORITE,payload));
 };};
 
@@ -9149,20 +8922,19 @@ requestedAt:NOW,
 serviceType:'delivery'};
 
 
-var fetchMenu=exports.fetchMenu=function fetchMenu(
-brandibble){var
-menuType=arguments.length>1&&arguments[1]!==undefined?arguments[1]:defaultMenuType;return(
-function(dispatch){var
-locationId=menuType.locationId,requestedAt=menuType.requestedAt,serviceType=menuType.serviceType;
+var fetchMenu=exports.fetchMenu=function fetchMenu(brandibble){var menuType=arguments.length>1&&arguments[1]!==undefined?arguments[1]:defaultMenuType;return function(dispatch){var
+
+locationId=
+
+
+menuType.locationId,requestedAt=menuType.requestedAt,serviceType=menuType.serviceType;
 var requestedAtFormatted=new Date((0,_moment2.default)(requestedAt));
 
-var payload=brandibble.menus.
-build(locationId,serviceType,requestedAtFormatted).
-then(function(_ref){var data=_ref.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.menus.build(locationId,serviceType,requestedAtFormatted).
+then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
 
 return dispatch((0,_fireAction2.default)(FETCH_MENU,payload));
-});};
+};};
 
 /***/ }),
 /* 87 */
@@ -13950,10 +13722,7 @@ var _handleErrors=__webpack_require__(21);var _handleErrors2=_interopRequireDefa
 var FETCH_IMAGES=exports.FETCH_IMAGES='FETCH_IMAGES';
 
 var fetchImages=exports.fetchImages=function fetchImages(brandibble,ids,type){return function(dispatch){
-var payload=brandibble.images.
-show(ids,type).
-then(function(_ref){var data=_ref.data;return data;}).
-catch(_handleErrors2.default);
+var payload=brandibble.images.show(ids,type).then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
 return dispatch((0,_fireAction2.default)(FETCH_IMAGES,payload));
 };};
 
@@ -25396,8 +25165,7 @@ Object.keys(_session).forEach(function(key){if(key==="default"||key==="__esModul
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=BrandibbleReduxException;function BrandibbleReduxException(action,message){
-this.message='brandibble-redux: *'+action+'* '+(message||
-'An unknown exception was triggered.');
+this.message='brandibble-redux: *'+action+'* '+(message||'An unknown exception was triggered.');
 this.stack=new Error().stack;
 }
 
@@ -34533,11 +34301,7 @@ return uuid;
 Object.defineProperty(exports,"__esModule",{value:true});var _allergens=__webpack_require__(60);Object.defineProperty(exports,'fetchAllergens',{enumerable:true,get:function get(){return _allergens.fetchAllergens;}});var _locations=__webpack_require__(61);Object.defineProperty(exports,'fetchLocations',{enumerable:true,get:function get(){return _locations.
 fetchLocations;}});Object.defineProperty(exports,'fetchLocation',{enumerable:true,get:function get(){return _locations.fetchLocation;}});Object.defineProperty(exports,'pushGeolocation',{enumerable:true,get:function get(){return _locations.pushGeolocation;}});var _geolocations=__webpack_require__(62);Object.defineProperty(exports,'fetchGeolocations',{enumerable:true,get:function get(){return _geolocations.
 fetchGeolocations;}});Object.defineProperty(exports,'clearGeolocations',{enumerable:true,get:function get(){return _geolocations.clearGeolocations;}});var _customerOrders=__webpack_require__(63);Object.defineProperty(exports,'fetchAllCustomerOrders',{enumerable:true,get:function get(){return _customerOrders.
-
-fetchAllCustomerOrders;}});Object.defineProperty(exports,'fetchPastCustomerOrders',{enumerable:true,get:function get(){return _customerOrders.
-fetchPastCustomerOrders;}});Object.defineProperty(exports,'fetchUpcomingCustomerOrders',{enumerable:true,get:function get(){return _customerOrders.
-fetchUpcomingCustomerOrders;}});var _images=__webpack_require__(156);Object.defineProperty(exports,'fetchImages',{enumerable:true,get:function get(){return _images.
-
+fetchAllCustomerOrders;}});Object.defineProperty(exports,'fetchPastCustomerOrders',{enumerable:true,get:function get(){return _customerOrders.fetchPastCustomerOrders;}});Object.defineProperty(exports,'fetchUpcomingCustomerOrders',{enumerable:true,get:function get(){return _customerOrders.fetchUpcomingCustomerOrders;}});var _images=__webpack_require__(156);Object.defineProperty(exports,'fetchImages',{enumerable:true,get:function get(){return _images.
 fetchImages;}});
 
 /***/ }),
@@ -34890,8 +34654,7 @@ _reduxCrud2.default.actionCreatorsFor('ratings',{key:'receipt_id'}),fetchStart=_
 var fetchRating=exports.fetchRating=function fetchRating(brandibble,receipt_id){
 return function(dispatch){
 dispatch(fetchStart({receipt_id:receipt_id}));
-return brandibble.ratings.
-show(receipt_id).
+return brandibble.ratings.show(receipt_id).
 then(function(_ref){var data=_ref.data;return dispatch(fetchSuccess([data],{receipt_id:receipt_id}));}).
 catch(function(_ref2){var errors=_ref2.errors;return dispatch(fetchError(errors,{receipt_id:receipt_id}));});
 };
@@ -34900,8 +34663,7 @@ catch(function(_ref2){var errors=_ref2.errors;return dispatch(fetchError(errors,
 var createRating=exports.createRating=function createRating(brandibble,receipt_id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
 return function(dispatch){
 dispatch(createStart({receipt_id:receipt_id,record:data}));
-return brandibble.ratings.
-create(receipt_id,data).
+return brandibble.ratings.create(receipt_id,data).
 then(function(_ref3){var data=_ref3.data;return dispatch(createSuccess(data));}).
 catch(function(_ref4){var errors=_ref4.errors;return dispatch(createError(errors,{receipt_id:receipt_id}));});
 };
@@ -34910,8 +34672,7 @@ catch(function(_ref4){var errors=_ref4.errors;return dispatch(createError(errors
 var updateRating=exports.updateRating=function updateRating(brandibble,receipt_id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
 return function(dispatch){
 dispatch(updateStart({receipt_id:receipt_id,record:data}));
-return brandibble.ratings.
-update(receipt_id,data).
+return brandibble.ratings.update(receipt_id,data).
 then(function(_ref5){var data=_ref5.data;return dispatch(updateSuccess(data));}).
 catch(function(_ref6){var errors=_ref6.errors;return dispatch(updateError(errors,{receipt_id:receipt_id}));});
 };
@@ -34920,8 +34681,7 @@ catch(function(_ref6){var errors=_ref6.errors;return dispatch(updateError(errors
 var deleteRating=exports.deleteRating=function deleteRating(brandibble,receipt_id){
 return function(dispatch){
 dispatch(deleteStart({receipt_id:receipt_id}));
-return brandibble.ratings.
-delete(receipt_id).
+return brandibble.ratings.delete(receipt_id).
 then(function(){return dispatch(deleteSuccess({receipt_id:receipt_id}));}).
 catch(function(_ref7){var errors=_ref7.errors;return dispatch(deleteError(errors,{receipt_id:receipt_id}));});
 };
@@ -34945,8 +34705,9 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.addressesAsArra
 
 var addressesCollection=exports.addressesCollection=function addressesCollection(state){return state.data.addresses.addressesById;};
 
-var addressesAsArray=exports.addressesAsArray=(0,_reselect.createSelector)(addressesCollection,function(addresses){return(
-Object.values(addresses));});
+var addressesAsArray=exports.addressesAsArray=(0,_reselect.createSelector)(
+addressesCollection,
+function(addresses){return Object.values(addresses);});
 
 /***/ }),
 /* 523 */
@@ -34956,8 +34717,9 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.allergensAsArra
 
 var allergensCollection=exports.allergensCollection=function allergensCollection(state){return state.data.allergens.allergensById;};
 
-var allergensAsArray=exports.allergensAsArray=(0,_reselect.createSelector)(allergensCollection,function(allergens){return(
-Object.values(allergens));});
+var allergensAsArray=exports.allergensAsArray=(0,_reselect.createSelector)(
+allergensCollection,
+function(allergens){return Object.values(allergens);});
 
 /***/ }),
 /* 524 */
@@ -34965,11 +34727,11 @@ Object.values(allergens));});
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.favoritesAsArray=exports.favoritesCollection=undefined;var _reselect=__webpack_require__(41);
 
-var favoritesCollection=exports.favoritesCollection=function favoritesCollection(state){return(
-state.session.favorites.favoritesById);};
+var favoritesCollection=exports.favoritesCollection=function favoritesCollection(state){return state.session.favorites.favoritesById;};
 
-var favoritesAsArray=exports.favoritesAsArray=(0,_reselect.createSelector)(favoritesCollection,function(favorites){return(
-Object.values(favorites));});
+var favoritesAsArray=exports.favoritesAsArray=(0,_reselect.createSelector)(
+favoritesCollection,
+function(favorites){return Object.values(favorites);});
 
 /***/ }),
 /* 525 */
@@ -34982,17 +34744,17 @@ var _get=__webpack_require__(527);var _get2=_interopRequireDefault(_get);functio
 
 var locationsCollection=exports.locationsCollection=function locationsCollection(state){return state.data.locations.locationsById;};
 
-var locationsAsArray=exports.locationsAsArray=(0,_reselect.createSelector)(locationsCollection,function(locations){return(
-Object.values(locations));});
+var locationsAsArray=exports.locationsAsArray=(0,_reselect.createSelector)(
+locationsCollection,
+function(locations){return Object.values(locations);});
 
 
 
 var orderableLocationsAsArray=exports.orderableLocationsAsArray=(0,_reselect.createSelector)(
 locationsCollection,
-function(locations){return(
-(0,_lodash4.default)(Object.values(locations),function(location){
+function(locations){return(0,_lodash4.default)(Object.values(locations),function(location){
 return!location.is_closed&&!location.is_coming_soon;
-}));});
+});});
 
 
 var currentLocation=exports.currentLocation=(0,_reselect.createSelector)(
@@ -37464,10 +37226,7 @@ module.exports = find;
 /* 527 */
 /***/ (function(module, exports) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.default=function(obj){var path=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'';return(
-path.length?
-path.split('.').reduce(function(acc,part){return acc&&acc[part];},obj):
-obj);};
+Object.defineProperty(exports,"__esModule",{value:true});exports.default=function(obj){var path=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'';return path.length?path.split('.').reduce(function(acc,part){return acc&&acc[part];},obj):obj;};
 
 /***/ }),
 /* 528 */
@@ -37477,8 +37236,9 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.paymentsAsArray
 
 var paymentsCollection=exports.paymentsCollection=function paymentsCollection(state){return state.session.payments.paymentsById;};
 
-var paymentsAsArray=exports.paymentsAsArray=(0,_reselect.createSelector)(paymentsCollection,function(payments){return(
-Object.values(payments));});
+var paymentsAsArray=exports.paymentsAsArray=(0,_reselect.createSelector)(
+paymentsCollection,
+function(payments){return Object.values(payments);});
 
 /***/ }),
 /* 529 */
@@ -80329,7 +80089,9 @@ module.exports = __webpack_require__(69);
 Object.defineProperty(exports,"__esModule",{value:true});var _reduxThunk=__webpack_require__(531);var _reduxThunk2=_interopRequireDefault(_reduxThunk);
 var _reduxPromiseMiddleware=__webpack_require__(532);var _reduxPromiseMiddleware2=_interopRequireDefault(_reduxPromiseMiddleware);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
-[_reduxThunk2.default,(0,_reduxPromiseMiddleware2.default)()];
+[_reduxThunk2.default,
+
+(0,_reduxPromiseMiddleware2.default)()];
 
 /***/ }),
 /* 531 */
@@ -80615,11 +80377,9 @@ function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:i
 switch(action.type){
 case _allergens.FETCH_ALLERGENS+'_FULFILLED':
 return state.merge({
-allergensById:state.allergensById.replace(
-_seamlessImmutable2.default.asObject(action.payload,function(allergen){
+allergensById:state.allergensById.replace(_seamlessImmutable2.default.asObject(action.payload,function(allergen){
 return[allergen.id,allergen];
 }))});
-
 
 default:
 return state;}
@@ -80650,17 +80410,13 @@ case _locations.PUSH_GEOLOCATION:
 return state.setIn(['locationsById',payload.location_id],payload);
 case _locations.FETCH_LOCATION+'_FULFILLED':
 case _order.RESOLVE_ORDER_LOCATION+'_FULFILLED':
-if(payload){
-return state.setIn(['locationsById',payload.location_id],payload);
-}
+if(payload)return state.setIn(['locationsById',payload.location_id],payload);
 return state;
 case _locations.FETCH_LOCATIONS+'_FULFILLED':
 return state.merge({
-locationsById:state.locationsById.replace(
-_seamlessImmutable2.default.asObject(payload,function(location){
+locationsById:state.locationsById.replace(_seamlessImmutable2.default.asObject(payload,function(location){
 return[location.location_id,location];
 }))});
-
 
 default:
 return state;}
@@ -80758,11 +80514,9 @@ payload=action.payload,type=action.type;
 switch(type){
 case _images.FETCH_IMAGES+'_FULFILLED':
 return state.merge({
-imagesById:state.imagesById.replace(
-_seamlessImmutable2.default.asObject(payload,function(image){
+imagesById:state.imagesById.replace(_seamlessImmutable2.default.asObject(payload,function(image){
 return[image.id,image];
 }))});
-
 
 default:
 return state;}
@@ -80945,283 +80699,176 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=un
 error;var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(66);var _order=__webpack_require__(26);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _payments=__webpack_require__(65);var _customerOrders=__webpack_require__(63);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType2.RATINGS_FETCH_START,RATINGS_FETCH_ERROR=_reduxCrud$actionType2.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType2.RATINGS_CREATE_START,RATINGS_CREATE_ERROR=_reduxCrud$actionType2.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType2.RATINGS_UPDATE_START,RATINGS_UPDATE_ERROR=_reduxCrud$actionType2.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType2.RATINGS_DELETE_START,RATINGS_DELETE_ERROR=_reduxCrud$actionType2.RATINGS_DELETE_ERROR;var initialState=exports.initialState={sendSupportTicket:null,setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAllCustomerOrders:null,fetchPastCustomerOrders:null,fetchUpcomingCustomerOrders:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocation:null,fetchLocations:null,fetchGeolocations:null,fetchMenu:null,addLineItem:null,resolveOrder:null,submitOrder:null,setLineItemMadeFor:null,setLineItemInstructions:null,fetchPayments:null,createPayment:null,deletePayment:null,setPaymentMethod:null,setDefaultPayment:null,fetchFavorites:null,createFavorite:null,updateFavorite:null,deleteFavorite:null,fetchRating:null,createRating:null,updateRating:null,deleteRating:null,authenticateUser:null,createUser:null,fetchLevelUpLoyalty:null,fetchLevelUpQRCode:null,fetchLevelUpCampaign:null,updateLevelUpConnection:null,connectLevelUp:null,disconnectLevelUp:null,fetchLevelUpPaymentMethod:null,fetchUser:null,resetUserPassword:null,resetLevelUpPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null,validateCurrentCart:null,validateCurrentOrder:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 
-case _application.SETUP_BRANDIBBLE+'_PENDING':
-return _extends({},state,{setupBrandibble:null});
-case _application.SETUP_BRANDIBBLE+'_REJECTED':
-return _extends({},state,{setupBrandibble:action.payload});
+case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:null});
+case _application.SETUP_BRANDIBBLE+'_REJECTED':return _extends({},state,{setupBrandibble:action.payload});
 
-case _application.SETUP_BRANDIBBLE_REDUX+'_PENDING':
-return _extends({},state,{setupBrandibbleRedux:null});
-case _application.SETUP_BRANDIBBLE_REDUX+'_REJECTED':
-return _extends({},state,{setupBrandibbleRedux:action.payload});
+case _application.SETUP_BRANDIBBLE_REDUX+'_PENDING':return _extends({},state,{setupBrandibbleRedux:null});
+case _application.SETUP_BRANDIBBLE_REDUX+'_REJECTED':return _extends({},state,{setupBrandibbleRedux:action.payload});
 
-case _order.SET_PAYMENT_METHOD+'_PENDING':
-return _extends({},state,{setPaymentMethod:null});
-case _order.SET_PAYMENT_METHOD+'_REJECTED':
-return _extends({},state,{setPaymentMethod:action.payload});
+case _order.SET_PAYMENT_METHOD+'_PENDING':return _extends({},state,{setPaymentMethod:null});
+case _order.SET_PAYMENT_METHOD+'_REJECTED':return _extends({},state,{setPaymentMethod:action.payload});
 
-case _application.SEND_SUPPORT_TICKET+'_PENDING':
-return _extends({},state,{sendSupportTicket:null});
-case _application.SEND_SUPPORT_TICKET+'_REJECTED':
-return _extends({},state,{sendSupportTicket:action.payload});
+case _application.SEND_SUPPORT_TICKET+'_PENDING':return _extends({},state,{sendSupportTicket:null});
+case _application.SEND_SUPPORT_TICKET+'_REJECTED':return _extends({},state,{sendSupportTicket:action.payload});
 
 
-case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_PENDING':
-return _extends({},state,{fetchAllCustomerOrders:null});
-case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_REJECTED':
-return _extends({},state,{fetchAllCustomerOrders:action.payload});
+case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_PENDING':return _extends({},state,{fetchAllCustomerOrders:null});
+case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_REJECTED':return _extends({},state,{fetchAllCustomerOrders:action.payload});
 
-case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_PENDING':
-return _extends({},state,{fetchPastCustomerOrders:null});
-case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_REJECTED':
-return _extends({},state,{fetchPastCustomerOrders:action.payload});
+case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_PENDING':return _extends({},state,{fetchPastCustomerOrders:null});
+case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_REJECTED':return _extends({},state,{fetchPastCustomerOrders:action.payload});
 
-case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_PENDING':
-return _extends({},state,{fetchUpcomingCustomerOrders:null});
-case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_REJECTED':
-return _extends({},state,{fetchUpcomingCustomerOrders:action.payload});
+case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_PENDING':return _extends({},state,{fetchUpcomingCustomerOrders:null});
+case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_REJECTED':return _extends({},state,{fetchUpcomingCustomerOrders:action.payload});
 
 
-case _allergens.FETCH_ALLERGENS+'_PENDING':
-return _extends({},state,{fetchAllergens:null});
-case _allergens.FETCH_ALLERGENS+'_REJECTED':
-return _extends({},state,{fetchAllergens:action.payload});
+case _allergens.FETCH_ALLERGENS+'_PENDING':return _extends({},state,{fetchAllergens:null});
+case _allergens.FETCH_ALLERGENS+'_REJECTED':return _extends({},state,{fetchAllergens:action.payload});
 
 
-case _addresses.FETCH_ADDRESSES+'_PENDING':
-return _extends({},state,{fetchAddresses:null});
-case _addresses.FETCH_ADDRESSES+'_REJECTED':
-return _extends({},state,{fetchAddresses:action.payload});
+case _addresses.FETCH_ADDRESSES+'_PENDING':return _extends({},state,{fetchAddresses:null});
+case _addresses.FETCH_ADDRESSES+'_REJECTED':return _extends({},state,{fetchAddresses:action.payload});
 
-case _addresses.CREATE_ADDRESS+'_PENDING':
-return _extends({},state,{createAddress:null});
-case _addresses.CREATE_ADDRESS+'_REJECTED':
-return _extends({},state,{createAddress:action.payload});
+case _addresses.CREATE_ADDRESS+'_PENDING':return _extends({},state,{createAddress:null});
+case _addresses.CREATE_ADDRESS+'_REJECTED':return _extends({},state,{createAddress:action.payload});
 
-case _addresses.DELETE_ADDRESS+'_PENDING':
-return _extends({},state,{deleteAddress:null});
-case _addresses.DELETE_ADDRESS+'_REJECTED':
-return _extends({},state,{deleteAddress:action.payload});
+case _addresses.DELETE_ADDRESS+'_PENDING':return _extends({},state,{deleteAddress:null});
+case _addresses.DELETE_ADDRESS+'_REJECTED':return _extends({},state,{deleteAddress:action.payload});
 
 
-case _locations.FETCH_LOCATIONS+'_PENDING':
-return _extends({},state,{fetchLocations:null});
-case _locations.FETCH_LOCATIONS+'_REJECTED':
-return _extends({},state,{fetchLocations:action.payload});
+case _locations.FETCH_LOCATIONS+'_PENDING':return _extends({},state,{fetchLocations:null});
+case _locations.FETCH_LOCATIONS+'_REJECTED':return _extends({},state,{fetchLocations:action.payload});
 
-case _locations.FETCH_LOCATION+'_PENDING':
-return _extends({},state,{fetchLocation:null});
-case _locations.FETCH_LOCATION+'_REJECTED':
-return _extends({},state,{fetchLocation:action.payload});
+case _locations.FETCH_LOCATION+'_PENDING':return _extends({},state,{fetchLocation:null});
+case _locations.FETCH_LOCATION+'_REJECTED':return _extends({},state,{fetchLocation:action.payload});
 
 
-case _geolocations.FETCH_GEOLOCATIONS+'_PENDING':
-return _extends({},state,{fetchGeolocations:null});
-case _geolocations.FETCH_GEOLOCATIONS+'_REJECTED':
-return _extends({},state,{fetchGeolocations:action.payload});
+case _geolocations.FETCH_GEOLOCATIONS+'_PENDING':return _extends({},state,{fetchGeolocations:null});
+case _geolocations.FETCH_GEOLOCATIONS+'_REJECTED':return _extends({},state,{fetchGeolocations:action.payload});
 
 
-case _menus.FETCH_MENU+'_PENDING':
-return _extends({},state,{fetchMenu:null});
-case _menus.FETCH_MENU+'_REJECTED':
-return _extends({},state,{fetchMenu:action.payload});
+case _menus.FETCH_MENU+'_PENDING':return _extends({},state,{fetchMenu:null});
+case _menus.FETCH_MENU+'_REJECTED':return _extends({},state,{fetchMenu:action.payload});
 
 
-case _order.RESOLVE_ORDER+'_PENDING':
-return _extends({},state,{resolveOrder:null});
-case _order.RESOLVE_ORDER+'_REJECTED':
-return _extends({},state,{resolveOrder:action.payload});
+case _order.RESOLVE_ORDER+'_PENDING':return _extends({},state,{resolveOrder:null});
+case _order.RESOLVE_ORDER+'_REJECTED':return _extends({},state,{resolveOrder:action.payload});
 
-case _order.ADD_LINE_ITEM+'_PENDING':
-return _extends({},state,{addLineItem:null});
-case _order.ADD_LINE_ITEM+'_REJECTED':
-return _extends({},state,{addLineItem:action.payload});
+case _order.ADD_LINE_ITEM+'_PENDING':return _extends({},state,{addLineItem:null});
+case _order.ADD_LINE_ITEM+'_REJECTED':return _extends({},state,{addLineItem:action.payload});
 
-case _order.SUBMIT_ORDER+'_PENDING':
-return _extends({},state,{submitOrder:null});
-case _order.SUBMIT_ORDER+'_REJECTED':
-return _extends({},state,{submitOrder:action.payload});
+case _order.SUBMIT_ORDER+'_PENDING':return _extends({},state,{submitOrder:null});
+case _order.SUBMIT_ORDER+'_REJECTED':return _extends({},state,{submitOrder:action.payload});
 
-case _order.VALIDATE_CURRENT_CART+'_PENDING':
-return _extends({},state,{validateCurrentCart:null});
-case _order.VALIDATE_CURRENT_CART+'_REJECTED':
-return _extends({},state,{validateCurrentCart:action.payload});
+case _order.VALIDATE_CURRENT_CART+'_PENDING':return _extends({},state,{validateCurrentCart:null});
+case _order.VALIDATE_CURRENT_CART+'_REJECTED':return _extends({},state,{validateCurrentCart:action.payload});
 
-case _order.VALIDATE_CURRENT_ORDER+'_PENDING':
-return _extends({},state,{validateCurrentOrder:null});
-case _order.VALIDATE_CURRENT_ORDER+'_REJECTED':
-return _extends({},state,{validateCurrentOrder:action.payload});
+case _order.VALIDATE_CURRENT_ORDER+'_PENDING':return _extends({},state,{validateCurrentOrder:null});
+case _order.VALIDATE_CURRENT_ORDER+'_REJECTED':return _extends({},state,{validateCurrentOrder:action.payload});
 
-case _order.SET_LINE_ITEM_MADE_FOR+'_PENDING':
-return _extends({},state,{setLineItemMadeFor:null});
-case _order.SET_LINE_ITEM_MADE_FOR+'_REJECTED':
-return _extends({},state,{setLineItemMadeFor:action.payload});
+case _order.SET_LINE_ITEM_MADE_FOR+'_PENDING':return _extends({},state,{setLineItemMadeFor:null});
+case _order.SET_LINE_ITEM_MADE_FOR+'_REJECTED':return _extends({},state,{setLineItemMadeFor:action.payload});
 
-case _order.SET_LINE_ITEM_INSTRUCTIONS+'_PENDING':
-return _extends({},state,{setLineItemInstructions:null});
-case _order.SET_LINE_ITEM_INSTRUCTIONS+'_REJECTED':
-return _extends({},state,{setLineItemInstructions:action.payload});
+case _order.SET_LINE_ITEM_INSTRUCTIONS+'_PENDING':return _extends({},state,{setLineItemInstructions:null});
+case _order.SET_LINE_ITEM_INSTRUCTIONS+'_REJECTED':return _extends({},state,{setLineItemInstructions:action.payload});
 
 
-case _payments.FETCH_PAYMENTS+'_PENDING':
-return _extends({},state,{fetchPayments:null});
-case _payments.FETCH_PAYMENTS+'_REJECTED':
-return _extends({},state,{fetchPayments:action.payload});
+case _payments.FETCH_PAYMENTS+'_PENDING':return _extends({},state,{fetchPayments:null});
+case _payments.FETCH_PAYMENTS+'_REJECTED':return _extends({},state,{fetchPayments:action.payload});
 
-case _payments.CREATE_PAYMENT+'_PENDING':
-return _extends({},state,{createPayment:null});
-case _payments.CREATE_PAYMENT+'_REJECTED':
-return _extends({},state,{createPayment:action.payload});
+case _payments.CREATE_PAYMENT+'_PENDING':return _extends({},state,{createPayment:null});
+case _payments.CREATE_PAYMENT+'_REJECTED':return _extends({},state,{createPayment:action.payload});
 
-case _payments.DELETE_PAYMENT+'_PENDING':
-return _extends({},state,{deletePayment:null});
-case _payments.DELETE_PAYMENT+'_REJECTED':
-return _extends({},state,{deletePayment:action.payload});
+case _payments.DELETE_PAYMENT+'_PENDING':return _extends({},state,{deletePayment:null});
+case _payments.DELETE_PAYMENT+'_REJECTED':return _extends({},state,{deletePayment:action.payload});
 
-case _payments.SET_DEFAULT_PAYMENT+'_PENDING':
-return _extends({},state,{setDefaultPayment:null});
-case _payments.SET_DEFAULT_PAYMENT+'_REJECTED':
-return _extends({},state,{setDefaultPayment:action.payload});
+case _payments.SET_DEFAULT_PAYMENT+'_PENDING':return _extends({},state,{setDefaultPayment:null});
+case _payments.SET_DEFAULT_PAYMENT+'_REJECTED':return _extends({},state,{setDefaultPayment:action.payload});
 
 
-case _favorites.FETCH_FAVORITES+'_PENDING':
-return _extends({},state,{fetchFavorites:null});
-case _favorites.FETCH_FAVORITES+'_REJECTED':
-return _extends({},state,{fetchFavorites:action.payload});
+case _favorites.FETCH_FAVORITES+'_PENDING':return _extends({},state,{fetchFavorites:null});
+case _favorites.FETCH_FAVORITES+'_REJECTED':return _extends({},state,{fetchFavorites:action.payload});
 
-case _favorites.CREATE_FAVORITE+'_PENDING':
-return _extends({},state,{createFavorite:null});
-case _favorites.CREATE_FAVORITE+'_REJECTED':
-return _extends({},state,{createFavorite:action.payload});
+case _favorites.CREATE_FAVORITE+'_PENDING':return _extends({},state,{createFavorite:null});
+case _favorites.CREATE_FAVORITE+'_REJECTED':return _extends({},state,{createFavorite:action.payload});
 
-case _favorites.UPDATE_FAVORITE+'_PENDING':
-return _extends({},state,{updateFavorite:null});
-case _favorites.UPDATE_FAVORITE+'_REJECTED':
-return _extends({},state,{updateFavorite:action.payload});
+case _favorites.UPDATE_FAVORITE+'_PENDING':return _extends({},state,{updateFavorite:null});
+case _favorites.UPDATE_FAVORITE+'_REJECTED':return _extends({},state,{updateFavorite:action.payload});
 
-case _favorites.DELETE_FAVORITE+'_PENDING':
-return _extends({},state,{deleteFavorite:null});
-case _favorites.DELETE_FAVORITE+'_REJECTED':
-return _extends({},state,{deleteFavorite:action.payload});
+case _favorites.DELETE_FAVORITE+'_PENDING':return _extends({},state,{deleteFavorite:null});
+case _favorites.DELETE_FAVORITE+'_REJECTED':return _extends({},state,{deleteFavorite:action.payload});
 
 
-case RATINGS_FETCH_START:
-return _extends({},state,{fetchRating:null});
-case RATINGS_FETCH_ERROR:
-return _extends({},state,{fetchRating:action.error});
+case RATINGS_FETCH_START:return _extends({},state,{fetchRating:null});
+case RATINGS_FETCH_ERROR:return _extends({},state,{fetchRating:action.error});
 
-case RATINGS_CREATE_START:
-return _extends({},state,{createRating:null});
-case RATINGS_CREATE_ERROR:
-return _extends({},state,{createRating:action.error});
+case RATINGS_CREATE_START:return _extends({},state,{createRating:null});
+case RATINGS_CREATE_ERROR:return _extends({},state,{createRating:action.error});
 
-case RATINGS_UPDATE_START:
-return _extends({},state,{updateRating:null});
-case RATINGS_UPDATE_ERROR:
-return _extends({},state,{updateRating:action.error});
+case RATINGS_UPDATE_START:return _extends({},state,{updateRating:null});
+case RATINGS_UPDATE_ERROR:return _extends({},state,{updateRating:action.error});
 
-case RATINGS_DELETE_START:
-return _extends({},state,{deleteRating:null});
-case RATINGS_DELETE_ERROR:
-return _extends({},state,{deleteRating:action.error});
+case RATINGS_DELETE_START:return _extends({},state,{deleteRating:null});
+case RATINGS_DELETE_ERROR:return _extends({},state,{deleteRating:action.error});
 
 
-case _user.AUTHENTICATE_USER+'_PENDING':
-return _extends({},state,{authenticateUser:null});
-case _user.AUTHENTICATE_USER+'_REJECTED':
-return _extends({},state,{authenticateUser:action.payload});
+case _user.AUTHENTICATE_USER+'_PENDING':return _extends({},state,{authenticateUser:null});
+case _user.AUTHENTICATE_USER+'_REJECTED':return _extends({},state,{authenticateUser:action.payload});
 
-case _user.ADD_ALLERGENS+'_PENDING':
-return _extends({},state,{addAllergens:null});
-case _user.ADD_ALLERGENS+'_FULFILLED':
-return _extends({},state,{addAllergens:action.payload});
-case _user.ADD_ALLERGENS+'_REJECTED':
-return _extends({},state,{addAllergens:action.error});
+case _user.ADD_ALLERGENS+'_PENDING':return _extends({},state,{addAllergens:null});
+case _user.ADD_ALLERGENS+'_FULFILLED':return _extends({},state,{addAllergens:action.payload});
+case _user.ADD_ALLERGENS+'_REJECTED':return _extends({},state,{addAllergens:action.error});
 
-case _user.REMOVE_ALLERGENS+'_PENDING':
-return _extends({},state,{removeAllergens:null});
-case _user.REMOVE_ALLERGENS+'_FULFILLED':
-return _extends({},state,{removeAllergens:action.payload});
-case _user.REMOVE_ALLERGENS+'_REJECTED':
-return _extends({},state,{removeAllergens:action.error});
+case _user.REMOVE_ALLERGENS+'_PENDING':return _extends({},state,{removeAllergens:null});
+case _user.REMOVE_ALLERGENS+'_FULFILLED':return _extends({},state,{removeAllergens:action.payload});
+case _user.REMOVE_ALLERGENS+'_REJECTED':return _extends({},state,{removeAllergens:action.error});
 
-case _user.RESOLVE_USER+'_PENDING':
-return _extends({},state,{resolveUser:null});
-case _user.RESOLVE_USER+'_REJECTED':
-return _extends({},state,{resolveUser:action.payload});
+case _user.RESOLVE_USER+'_PENDING':return _extends({},state,{resolveUser:null});
+case _user.RESOLVE_USER+'_REJECTED':return _extends({},state,{resolveUser:action.payload});
 
-case _user.UNAUTHENTICATE_USER+'_PENDING':
-return _extends({},state,{unauthenticateUser:null});
-case _user.UNAUTHENTICATE_USER+'_REJECTED':
-return _extends({},state,{unauthenticateUser:action.payload});
+case _user.UNAUTHENTICATE_USER+'_PENDING':return _extends({},state,{unauthenticateUser:null});
+case _user.UNAUTHENTICATE_USER+'_REJECTED':return _extends({},state,{unauthenticateUser:action.payload});
 
-case _user.FETCH_LEVELUP_LOYALTY+'_PENDING':
-return _extends({},state,{fetchLevelUpLoyalty:null});
-case _user.FETCH_LEVELUP_LOYALTY+'_REJECTED':
-return _extends({},state,{fetchLevelUpLoyalty:action.payload});
+case _user.FETCH_LEVELUP_LOYALTY+'_PENDING':return _extends({},state,{fetchLevelUpLoyalty:null});
+case _user.FETCH_LEVELUP_LOYALTY+'_REJECTED':return _extends({},state,{fetchLevelUpLoyalty:action.payload});
 
-case _user.FETCH_LEVELUP_CAMPAIGN+'_PENDING':
-return _extends({},state,{fetchLevelUpCampaign:null});
-case _user.FETCH_LEVELUP_CAMPAIGN+'_REJECTED':
-return _extends({},state,{fetchLevelUpCampaign:action.payload});
+case _user.FETCH_LEVELUP_CAMPAIGN+'_PENDING':return _extends({},state,{fetchLevelUpCampaign:null});
+case _user.FETCH_LEVELUP_CAMPAIGN+'_REJECTED':return _extends({},state,{fetchLevelUpCampaign:action.payload});
 
-case _user.FETCH_LEVELUP_QR_CODE+'_PENDING':
-return _extends({},state,{fetchLevelUpQRCode:null});
-case _user.FETCH_LEVELUP_QR_CODE+'_REJECTED':
-return _extends({},state,{fetchLevelUpQRCode:action.payload});
+case _user.FETCH_LEVELUP_QR_CODE+'_PENDING':return _extends({},state,{fetchLevelUpQRCode:null});
+case _user.FETCH_LEVELUP_QR_CODE+'_REJECTED':return _extends({},state,{fetchLevelUpQRCode:action.payload});
 
-case _user.UPDATE_LEVELUP_CONNECTION+'_PENDING':
-return _extends({},state,{updateLevelUpConnection:null});
-case _user.UPDATE_LEVELUP_CONNECTION+'_REJECTED':
-return _extends({},state,{updateLevelUpConnection:action.payload});
+case _user.UPDATE_LEVELUP_CONNECTION+'_PENDING':return _extends({},state,{updateLevelUpConnection:null});
+case _user.UPDATE_LEVELUP_CONNECTION+'_REJECTED':return _extends({},state,{updateLevelUpConnection:action.payload});
 
-case _user.CONNECT_LEVELUP+'_PENDING':
-return _extends({},state,{connectLevelUp:null});
-case _user.CONNECT_LEVELUP+'_REJECTED':
-return _extends({},state,{connectLevelUp:action.payload});
+case _user.CONNECT_LEVELUP+'_PENDING':return _extends({},state,{connectLevelUp:null});
+case _user.CONNECT_LEVELUP+'_REJECTED':return _extends({},state,{connectLevelUp:action.payload});
 
-case _user.DISCONNECT_LEVELUP+'_PENDING':
-return _extends({},state,{disconnectLevelUp:null});
-case _user.DISCONNECT_LEVELUP+'_REJECTED':
-return _extends({},state,{disconnectLevelUp:action.payload});
+case _user.DISCONNECT_LEVELUP+'_PENDING':return _extends({},state,{disconnectLevelUp:null});
+case _user.DISCONNECT_LEVELUP+'_REJECTED':return _extends({},state,{disconnectLevelUp:action.payload});
 
-case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_PENDING':
-return _extends({},state,{fetchLevelUpPaymentMethod:null});
-case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_REJECTED':
-return _extends({},state,{fetchLevelUpPaymentMethod:action.payload});
+case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_PENDING':return _extends({},state,{fetchLevelUpPaymentMethod:null});
+case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_REJECTED':return _extends({},state,{fetchLevelUpPaymentMethod:action.payload});
 
-case _user.VALIDATE_USER+'_PENDING':
-return _extends({},state,{validateUser:null});
-case _user.VALIDATE_USER+'_REJECTED':
-return _extends({},state,{validateUser:action.payload});
+case _user.VALIDATE_USER+'_PENDING':return _extends({},state,{validateUser:null});
+case _user.VALIDATE_USER+'_REJECTED':return _extends({},state,{validateUser:action.payload});
 
-case _user.RESET_USER_PASSWORD+'_PENDING':
-return _extends({},state,{resetUserPassword:null});
-case _user.RESET_USER_PASSWORD+'_REJECTED':
-return _extends({},state,{resetUserPassword:action.payload});
+case _user.RESET_USER_PASSWORD+'_PENDING':return _extends({},state,{resetUserPassword:null});
+case _user.RESET_USER_PASSWORD+'_REJECTED':return _extends({},state,{resetUserPassword:action.payload});
 
-case _user.RESET_LEVELUP_PASSWORD+'_PENDING':
-return _extends({},state,{resetLevelUpPassword:null});
-case _user.RESET_LEVELUP_PASSWORD+'_REJECTED':
-return _extends({},state,{resetLevelUpPassword:action.payload});
+case _user.RESET_LEVELUP_PASSWORD+'_PENDING':return _extends({},state,{resetLevelUpPassword:null});
+case _user.RESET_LEVELUP_PASSWORD+'_REJECTED':return _extends({},state,{resetLevelUpPassword:action.payload});
 
-case _user.FETCH_USER+'_PENDING':
-return _extends({},state,{fetchUser:null});
-case _user.FETCH_USER+'_REJECTED':
-return _extends({},state,{fetchUser:action.payload});
+case _user.FETCH_USER+'_PENDING':return _extends({},state,{fetchUser:null});
+case _user.FETCH_USER+'_REJECTED':return _extends({},state,{fetchUser:action.payload});
 
-case USER_UPDATE_START:
-return _extends({},state,{updateUser:null});
-case USER_UPDATE_ERROR:
-return _extends({},state,{updateUser:action.error});
+case USER_UPDATE_START:return _extends({},state,{updateUser:null});
+case USER_UPDATE_ERROR:return _extends({},state,{updateUser:action.error});
 
-case USER_CREATE_START:
-return _extends({},state,{createUser:null});
-case USER_CREATE_ERROR:
-return _extends({},state,{createUser:action.error});
+case USER_CREATE_START:return _extends({},state,{createUser:null});
+case USER_CREATE_ERROR:return _extends({},state,{createUser:action.error});
 
-default:
-return state;}
+default:return state;}
 
 }
 
@@ -81284,21 +80931,16 @@ payload=action.payload,type=action.type;
 switch(type){
 case _addresses.FETCH_ADDRESSES+'_FULFILLED':
 return state.merge({
-addressesById:state.addressesById.replace(
-_seamlessImmutable2.default.asObject(payload,function(address){
+addressesById:state.addressesById.replace(_seamlessImmutable2.default.asObject(payload,function(address){
 return[address.customer_address_id,address];
 }))});
-
 
 case _addresses.DELETE_ADDRESS+'_FULFILLED':
 return state.merge({
 addressesById:state.addressesById.without(payload)});
 
 case _addresses.CREATE_ADDRESS+'_FULFILLED':
-return state.setIn(
-['addressesById',payload.customer_address_id],
-payload);
-
+return state.setIn(['addressesById',payload.customer_address_id],payload);
 case _user.UNAUTHENTICATE_USER+'_FULFILLED':
 return initialState;
 default:
@@ -81327,13 +80969,6 @@ return baseReducers(state,action);}
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
-
-
-
-
-
-
-
 
 
 
@@ -83840,11 +83475,9 @@ switch(type){
 case _payments.CREATE_PAYMENT+'_FULFILLED':
 case _payments.FETCH_PAYMENTS+'_FULFILLED':
 return state.merge({
-paymentsById:state.paymentsById.replace(
-_seamlessImmutable2.default.asObject(payload,function(payment){
+paymentsById:state.paymentsById.replace(_seamlessImmutable2.default.asObject(payload,function(payment){
 return[payment.customer_card_id,payment];
 }))});
-
 
 
 case _payments.DELETE_PAYMENT+'_FULFILLED':
@@ -83857,27 +83490,17 @@ return k===''+payload&&v.customer_card_id===payload;
 case _payments.SET_DEFAULT_PAYMENT+'_FULFILLED':
 var newState=state;
 
-var currentDefault=Object.values(state.paymentsById.asMutable()).find(
-function(p){return p.is_default;});
-
-if(currentDefault){
+var currentDefault=Object.values(state.paymentsById.asMutable()).find(function(p){return p.is_default;});
+if(!!currentDefault){
 newState=state.merge({
-paymentsById:newState.paymentsById.setIn(
-[currentDefault.customer_card_id,'is_default'],
-false)});
-
+paymentsById:newState.paymentsById.setIn([currentDefault.customer_card_id,'is_default'],false)});
 
 }
 
-var newDefault=Object.values(state.paymentsById.asMutable()).find(
-function(p){return p.customer_card_id===action.payload;});
-
-if(newDefault){
+var newDefault=Object.values(state.paymentsById.asMutable()).find(function(p){return p.customer_card_id===action.payload;});
+if(!!newDefault){
 newState=state.merge({
-paymentsById:newState.paymentsById.setIn(
-[newDefault.customer_card_id,'is_default'],
-true)});
-
+paymentsById:newState.paymentsById.setIn([newDefault.customer_card_id,'is_default'],true)});
 
 }
 
@@ -83913,11 +83536,9 @@ payload=action.payload,type=action.type;
 switch(type){
 case _favorites.FETCH_FAVORITES+'_FULFILLED':
 return state.merge({
-favoritesById:state.favoritesById.replace(
-_seamlessImmutable2.default.asObject(payload,function(favorite){
+favoritesById:state.favoritesById.replace(_seamlessImmutable2.default.asObject(payload,function(favorite){
 return[favorite.favorite_item_id,favorite];
 }))});
-
 
 case _favorites.DELETE_FAVORITE+'_FULFILLED':
 return state.merge({
@@ -83946,10 +83567,9 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
-
-
 favorites;var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _user=__webpack_require__(11);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var baseReducers=_reduxCrud2.default.Map.reducersFor('ratings',{key:'receipt_id'});var initialState={};function favorites(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
+
 case _user.UNAUTHENTICATE_USER+'_FULFILLED':
 return initialState;
 
@@ -84116,411 +83736,244 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
+
+
+
+
+
 status;var _reduxCrud=__webpack_require__(27);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(42);var _addresses=__webpack_require__(64);var _allergens=__webpack_require__(60);var _menus=__webpack_require__(86);var _favorites=__webpack_require__(66);var _payments=__webpack_require__(65);var _order=__webpack_require__(26);var _locations=__webpack_require__(61);var _geolocations=__webpack_require__(62);var _user=__webpack_require__(11);var _customerOrders=__webpack_require__(63);var _constants=__webpack_require__(68);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType.RATINGS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType2.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType2.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType2.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType2.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType2.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType2.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,fetchLevelUpCampaign:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,setMiscOptions:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
-case _application.SETUP_BRANDIBBLE+'_PENDING':
-return _extends({},state,{setupBrandibble:PENDING});
-case _application.SETUP_BRANDIBBLE+'_FULFILLED':
-return _extends({},state,{setupBrandibble:FULFILLED});
-case _application.SETUP_BRANDIBBLE+'_REJECTED':
-return _extends({},state,{setupBrandibble:REJECTED});
+case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:PENDING});
+case _application.SETUP_BRANDIBBLE+'_FULFILLED':return _extends({},state,{setupBrandibble:FULFILLED});
+case _application.SETUP_BRANDIBBLE+'_REJECTED':return _extends({},state,{setupBrandibble:REJECTED});
 
-case _application.SETUP_BRANDIBBLE_REDUX+'_PENDING':
-return _extends({},state,{setupBrandibbleRedux:PENDING});
-case _application.SETUP_BRANDIBBLE_REDUX+'_FULFILLED':
-return _extends({},state,{setupBrandibbleRedux:FULFILLED});
-case _application.SETUP_BRANDIBBLE_REDUX+'_REJECTED':
-return _extends({},state,{setupBrandibbleRedux:REJECTED});
+case _application.SETUP_BRANDIBBLE_REDUX+'_PENDING':return _extends({},state,{setupBrandibbleRedux:PENDING});
+case _application.SETUP_BRANDIBBLE_REDUX+'_FULFILLED':return _extends({},state,{setupBrandibbleRedux:FULFILLED});
+case _application.SETUP_BRANDIBBLE_REDUX+'_REJECTED':return _extends({},state,{setupBrandibbleRedux:REJECTED});
 
-case _application.SEND_SUPPORT_TICKET+'_PENDING':
-return _extends({},state,{sendSupportTicket:PENDING});
-case _application.SEND_SUPPORT_TICKET+'_FULFILLED':
-return _extends({},state,{sendSupportTicket:FULFILLED});
-case _application.SEND_SUPPORT_TICKET+'_REJECTED':
-return _extends({},state,{sendSupportTicket:REJECTED});
+case _application.SEND_SUPPORT_TICKET+'_PENDING':return _extends({},state,{sendSupportTicket:PENDING});
+case _application.SEND_SUPPORT_TICKET+'_FULFILLED':return _extends({},state,{sendSupportTicket:FULFILLED});
+case _application.SEND_SUPPORT_TICKET+'_REJECTED':return _extends({},state,{sendSupportTicket:REJECTED});
 
-case _allergens.FETCH_ALLERGENS+'_PENDING':
-return _extends({},state,{fetchAllergens:PENDING});
-case _allergens.FETCH_ALLERGENS+'_FULFILLED':
-return _extends({},state,{fetchAllergens:FULFILLED});
-case _allergens.FETCH_ALLERGENS+'_REJECTED':
-return _extends({},state,{fetchAllergens:REJECTED});
+case _allergens.FETCH_ALLERGENS+'_PENDING':return _extends({},state,{fetchAllergens:PENDING});
+case _allergens.FETCH_ALLERGENS+'_FULFILLED':return _extends({},state,{fetchAllergens:FULFILLED});
+case _allergens.FETCH_ALLERGENS+'_REJECTED':return _extends({},state,{fetchAllergens:REJECTED});
 
-case _addresses.FETCH_ADDRESSES+'_PENDING':
-return _extends({},state,{fetchAddresses:PENDING});
-case _addresses.FETCH_ADDRESSES+'_FULFILLED':
-return _extends({},state,{fetchAddresses:FULFILLED});
-case _addresses.FETCH_ADDRESSES+'_REJECTED':
-return _extends({},state,{fetchAddresses:REJECTED});
+case _addresses.FETCH_ADDRESSES+'_PENDING':return _extends({},state,{fetchAddresses:PENDING});
+case _addresses.FETCH_ADDRESSES+'_FULFILLED':return _extends({},state,{fetchAddresses:FULFILLED});
+case _addresses.FETCH_ADDRESSES+'_REJECTED':return _extends({},state,{fetchAddresses:REJECTED});
 
-case _addresses.CREATE_ADDRESS+'_PENDING':
-return _extends({},state,{createAddress:PENDING});
-case _addresses.CREATE_ADDRESS+'_FULFILLED':
-return _extends({},state,{createAddress:FULFILLED});
-case _addresses.CREATE_ADDRESS+'_REJECTED':
-return _extends({},state,{createAddress:REJECTED});
+case _addresses.CREATE_ADDRESS+'_PENDING':return _extends({},state,{createAddress:PENDING});
+case _addresses.CREATE_ADDRESS+'_FULFILLED':return _extends({},state,{createAddress:FULFILLED});
+case _addresses.CREATE_ADDRESS+'_REJECTED':return _extends({},state,{createAddress:REJECTED});
 
-case _addresses.DELETE_ADDRESS+'_PENDING':
-return _extends({},state,{deleteAddress:PENDING});
-case _addresses.DELETE_ADDRESS+'_FULFILLED':
-return _extends({},state,{deleteAddress:FULFILLED});
-case _addresses.DELETE_ADDRESS+'_REJECTED':
-return _extends({},state,{deleteAddress:REJECTED});
+case _addresses.DELETE_ADDRESS+'_PENDING':return _extends({},state,{deleteAddress:PENDING});
+case _addresses.DELETE_ADDRESS+'_FULFILLED':return _extends({},state,{deleteAddress:FULFILLED});
+case _addresses.DELETE_ADDRESS+'_REJECTED':return _extends({},state,{deleteAddress:REJECTED});
 
-case _locations.FETCH_LOCATIONS+'_PENDING':
-return _extends({},state,{fetchLocations:PENDING});
-case _locations.FETCH_LOCATIONS+'_FULFILLED':
-return _extends({},state,{fetchLocations:FULFILLED});
-case _locations.FETCH_LOCATIONS+'_REJECTED':
-return _extends({},state,{fetchLocations:REJECTED});
+case _locations.FETCH_LOCATIONS+'_PENDING':return _extends({},state,{fetchLocations:PENDING});
+case _locations.FETCH_LOCATIONS+'_FULFILLED':return _extends({},state,{fetchLocations:FULFILLED});
+case _locations.FETCH_LOCATIONS+'_REJECTED':return _extends({},state,{fetchLocations:REJECTED});
 
-case _locations.FETCH_LOCATION+'_PENDING':
-return _extends({},state,{fetchLocation:PENDING});
-case _locations.FETCH_LOCATION+'_FULFILLED':
-return _extends({},state,{fetchLocation:FULFILLED});
-case _locations.FETCH_LOCATION+'_REJECTED':
-return _extends({},state,{fetchLocation:REJECTED});
+case _locations.FETCH_LOCATION+'_PENDING':return _extends({},state,{fetchLocation:PENDING});
+case _locations.FETCH_LOCATION+'_FULFILLED':return _extends({},state,{fetchLocation:FULFILLED});
+case _locations.FETCH_LOCATION+'_REJECTED':return _extends({},state,{fetchLocation:REJECTED});
 
-case _geolocations.FETCH_GEOLOCATIONS+'_PENDING':
-return _extends({},state,{fetchGeolocations:PENDING});
-case _geolocations.FETCH_GEOLOCATIONS+'_FULFILLED':
-return _extends({},state,{fetchGeolocations:FULFILLED});
-case _geolocations.FETCH_GEOLOCATIONS+'_REJECTED':
-return _extends({},state,{fetchGeolocations:REJECTED});
+case _geolocations.FETCH_GEOLOCATIONS+'_PENDING':return _extends({},state,{fetchGeolocations:PENDING});
+case _geolocations.FETCH_GEOLOCATIONS+'_FULFILLED':return _extends({},state,{fetchGeolocations:FULFILLED});
+case _geolocations.FETCH_GEOLOCATIONS+'_REJECTED':return _extends({},state,{fetchGeolocations:REJECTED});
 
-case _order.SET_PAYMENT_METHOD+'_PENDING':
-return _extends({},state,{setPaymentMethod:PENDING});
-case _order.SET_PAYMENT_METHOD+'_FULFILLED':
-return _extends({},state,{setPaymentMethod:FULFILLED});
-case _order.SET_PAYMENT_METHOD+'_REJECTED':
-return _extends({},state,{setPaymentMethod:REJECTED});
+case _order.SET_PAYMENT_METHOD+'_PENDING':return _extends({},state,{setPaymentMethod:PENDING});
+case _order.SET_PAYMENT_METHOD+'_FULFILLED':return _extends({},state,{setPaymentMethod:FULFILLED});
+case _order.SET_PAYMENT_METHOD+'_REJECTED':return _extends({},state,{setPaymentMethod:REJECTED});
 
-case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_PENDING':
-return _extends({},state,{fetchAllCustomerOrders:PENDING});
-case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_FULFILLED':
-return _extends({},state,{fetchAllCustomerOrders:FULFILLED});
-case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_REJECTED':
-return _extends({},state,{fetchAllCustomerOrders:REJECTED});
+case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_PENDING':return _extends({},state,{fetchAllCustomerOrders:PENDING});
+case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_FULFILLED':return _extends({},state,{fetchAllCustomerOrders:FULFILLED});
+case _customerOrders.FETCH_ALL_CUSTOMER_ORDERS+'_REJECTED':return _extends({},state,{fetchAllCustomerOrders:REJECTED});
 
-case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_PENDING':
-return _extends({},state,{fetchPastCustomerOrders:PENDING});
-case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_FULFILLED':
-return _extends({},state,{fetchPastCustomerOrders:FULFILLED});
-case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_REJECTED':
-return _extends({},state,{fetchPastCustomerOrders:REJECTED});
+case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_PENDING':return _extends({},state,{fetchPastCustomerOrders:PENDING});
+case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_FULFILLED':return _extends({},state,{fetchPastCustomerOrders:FULFILLED});
+case _customerOrders.FETCH_PAST_CUSTOMER_ORDERS+'_REJECTED':return _extends({},state,{fetchPastCustomerOrders:REJECTED});
 
-case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_PENDING':
-return _extends({},state,{fetchUpcomingCustomerOrders:PENDING});
-case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_FULFILLED':
-return _extends({},state,{fetchUpcomingCustomerOrders:FULFILLED});
-case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_REJECTED':
-return _extends({},state,{fetchUpcomingCustomerOrders:REJECTED});
+case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_PENDING':return _extends({},state,{fetchUpcomingCustomerOrders:PENDING});
+case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_FULFILLED':return _extends({},state,{fetchUpcomingCustomerOrders:FULFILLED});
+case _customerOrders.FETCH_UPCOMING_CUSTOMER_ORDERS+'_REJECTED':return _extends({},state,{fetchUpcomingCustomerOrders:REJECTED});
 
-case _menus.FETCH_MENU+'_PENDING':
-return _extends({},state,{fetchMenu:PENDING});
-case _menus.FETCH_MENU+'_FULFILLED':
-return _extends({},state,{fetchMenu:FULFILLED});
-case _menus.FETCH_MENU+'_REJECTED':
-return _extends({},state,{fetchMenu:REJECTED});
+case _menus.FETCH_MENU+'_PENDING':return _extends({},state,{fetchMenu:PENDING});
+case _menus.FETCH_MENU+'_FULFILLED':return _extends({},state,{fetchMenu:FULFILLED});
+case _menus.FETCH_MENU+'_REJECTED':return _extends({},state,{fetchMenu:REJECTED});
 
-case _order.RESOLVE_ORDER+'_PENDING':
-return _extends({},state,{resolveOrder:PENDING});
-case _order.RESOLVE_ORDER+'_FULFILLED':
-return _extends({},state,{resolveOrder:FULFILLED});
-case _order.RESOLVE_ORDER+'_REJECTED':
-return _extends({},state,{resolveOrder:REJECTED});
+case _order.RESOLVE_ORDER+'_PENDING':return _extends({},state,{resolveOrder:PENDING});
+case _order.RESOLVE_ORDER+'_FULFILLED':return _extends({},state,{resolveOrder:FULFILLED});
+case _order.RESOLVE_ORDER+'_REJECTED':return _extends({},state,{resolveOrder:REJECTED});
 
-case _order.ADD_LINE_ITEM+'_PENDING':
-return _extends({},state,{addLineItem:PENDING});
-case _order.ADD_LINE_ITEM+'_FULFILLED':
-return _extends({},state,{addLineItem:FULFILLED});
-case _order.ADD_LINE_ITEM+'_REJECTED':
-return _extends({},state,{addLineItem:REJECTED});
+case _order.ADD_LINE_ITEM+'_PENDING':return _extends({},state,{addLineItem:PENDING});
+case _order.ADD_LINE_ITEM+'_FULFILLED':return _extends({},state,{addLineItem:FULFILLED});
+case _order.ADD_LINE_ITEM+'_REJECTED':return _extends({},state,{addLineItem:REJECTED});
 
-case _order.SET_REQUESTED_AT+'_PENDING':
-return _extends({},state,{setRequestedAt:PENDING});
-case _order.SET_REQUESTED_AT+'_FULFILLED':
-return _extends({},state,{setRequestedAt:FULFILLED});
-case _order.SET_REQUESTED_AT+'_REJECTED':
-return _extends({},state,{setRequestedAt:REJECTED});
+case _order.SET_REQUESTED_AT+'_PENDING':return _extends({},state,{setRequestedAt:PENDING});
+case _order.SET_REQUESTED_AT+'_FULFILLED':return _extends({},state,{setRequestedAt:FULFILLED});
+case _order.SET_REQUESTED_AT+'_REJECTED':return _extends({},state,{setRequestedAt:REJECTED});
 
-case _order.SET_LINE_ITEM_MADE_FOR+'_PENDING':
-return _extends({},state,{setLineItemMadeFor:PENDING});
-case _order.SET_LINE_ITEM_MADE_FOR+'_FULFILLED':
-return _extends({},state,{setLineItemMadeFor:FULFILLED});
-case _order.SET_LINE_ITEM_MADE_FOR+'_REJECTED':
-return _extends({},state,{setLineItemMadeFor:REJECTED});
+case _order.SET_LINE_ITEM_MADE_FOR+'_PENDING':return _extends({},state,{setLineItemMadeFor:PENDING});
+case _order.SET_LINE_ITEM_MADE_FOR+'_FULFILLED':return _extends({},state,{setLineItemMadeFor:FULFILLED});
+case _order.SET_LINE_ITEM_MADE_FOR+'_REJECTED':return _extends({},state,{setLineItemMadeFor:REJECTED});
 
-case _order.SET_LINE_ITEM_INSTRUCTIONS+'_PENDING':
-return _extends({},state,{setLineItemInstructions:PENDING});
-case _order.SET_LINE_ITEM_INSTRUCTIONS+'_FULFILLED':
-return _extends({},state,{setLineItemInstructions:FULFILLED});
-case _order.SET_LINE_ITEM_INSTRUCTIONS+'_REJECTED':
-return _extends({},state,{setLineItemInstructions:REJECTED});
+case _order.SET_LINE_ITEM_INSTRUCTIONS+'_PENDING':return _extends({},state,{setLineItemInstructions:PENDING});
+case _order.SET_LINE_ITEM_INSTRUCTIONS+'_FULFILLED':return _extends({},state,{setLineItemInstructions:FULFILLED});
+case _order.SET_LINE_ITEM_INSTRUCTIONS+'_REJECTED':return _extends({},state,{setLineItemInstructions:REJECTED});
 
-case _order.CREATE_NEW_ORDER+'_PENDING':
-return _extends({},state,{createNewOrder:PENDING});
-case _order.CREATE_NEW_ORDER+'_FULFILLED':
-return _extends({},state,{createNewOrder:FULFILLED});
-case _order.CREATE_NEW_ORDER+'_REJECTED':
-return _extends({},state,{createNewOrder:REJECTED});
+case _order.CREATE_NEW_ORDER+'_PENDING':return _extends({},state,{createNewOrder:PENDING});
+case _order.CREATE_NEW_ORDER+'_FULFILLED':return _extends({},state,{createNewOrder:FULFILLED});
+case _order.CREATE_NEW_ORDER+'_REJECTED':return _extends({},state,{createNewOrder:REJECTED});
 
-case _order.SET_ORDER_LOCATION_ID+'_PENDING':
-return _extends({},state,{setOrderLocationId:PENDING});
-case _order.SET_ORDER_LOCATION_ID+'_FULFILLED':
-return _extends({},state,{setOrderLocationId:FULFILLED});
-case _order.SET_ORDER_LOCATION_ID+'_REJECTED':
-return _extends({},state,{setOrderLocationId:REJECTED});
+case _order.SET_ORDER_LOCATION_ID+'_PENDING':return _extends({},state,{setOrderLocationId:PENDING});
+case _order.SET_ORDER_LOCATION_ID+'_FULFILLED':return _extends({},state,{setOrderLocationId:FULFILLED});
+case _order.SET_ORDER_LOCATION_ID+'_REJECTED':return _extends({},state,{setOrderLocationId:REJECTED});
 
-case _order.SET_PROMO_CODE+'_PENDING':
-return _extends({},state,{setPromoCode:PENDING});
-case _order.SET_PROMO_CODE+'_FULFILLED':
-return _extends({},state,{setPromoCode:FULFILLED});
-case _order.SET_PROMO_CODE+'_REJECTED':
-return _extends({},state,{setPromoCode:REJECTED});
+case _order.SET_PROMO_CODE+'_PENDING':return _extends({},state,{setPromoCode:PENDING});
+case _order.SET_PROMO_CODE+'_FULFILLED':return _extends({},state,{setPromoCode:FULFILLED});
+case _order.SET_PROMO_CODE+'_REJECTED':return _extends({},state,{setPromoCode:REJECTED});
 
-case _order.SET_MISC_OPTIONS+'_PENDING':
-return _extends({},state,{setMiscOptions:PENDING});
-case _order.SET_MISC_OPTIONS+'_FULFILLED':
-return _extends({},state,{setMiscOptions:FULFILLED});
-case _order.SET_MISC_OPTIONS+'_REJECTED':
-return _extends({},state,{setMiscOptions:REJECTED});
+case _order.SET_MISC_OPTIONS+'_PENDING':return _extends({},state,{setMiscOptions:PENDING});
+case _order.SET_MISC_OPTIONS+'_FULFILLED':return _extends({},state,{setMiscOptions:FULFILLED});
+case _order.SET_MISC_OPTIONS+'_REJECTED':return _extends({},state,{setMiscOptions:REJECTED});
 
-case _order.SUBMIT_ORDER+'_PENDING':
-return _extends({},state,{submitOrder:PENDING});
-case _order.SUBMIT_ORDER+'_FULFILLED':
-return _extends({},state,{submitOrder:FULFILLED});
-case _order.SUBMIT_ORDER+'_REJECTED':
-return _extends({},state,{submitOrder:REJECTED});
+case _order.SUBMIT_ORDER+'_PENDING':return _extends({},state,{submitOrder:PENDING});
+case _order.SUBMIT_ORDER+'_FULFILLED':return _extends({},state,{submitOrder:FULFILLED});
+case _order.SUBMIT_ORDER+'_REJECTED':return _extends({},state,{submitOrder:REJECTED});
 
 
-case _payments.FETCH_PAYMENTS+'_PENDING':
-return _extends({},state,{fetchPayments:PENDING});
-case _payments.FETCH_PAYMENTS+'_FULFILLED':
-return _extends({},state,{fetchPayments:FULFILLED});
-case _payments.FETCH_PAYMENTS+'_REJECTED':
-return _extends({},state,{fetchPayments:REJECTED});
+case _payments.FETCH_PAYMENTS+'_PENDING':return _extends({},state,{fetchPayments:PENDING});
+case _payments.FETCH_PAYMENTS+'_FULFILLED':return _extends({},state,{fetchPayments:FULFILLED});
+case _payments.FETCH_PAYMENTS+'_REJECTED':return _extends({},state,{fetchPayments:REJECTED});
 
-case _payments.CREATE_PAYMENT+'_PENDING':
-return _extends({},state,{createPayment:PENDING});
-case _payments.CREATE_PAYMENT+'_FULFILLED':
-return _extends({},state,{createPayment:FULFILLED});
-case _payments.CREATE_PAYMENT+'_REJECTED':
-return _extends({},state,{createPayment:REJECTED});
+case _payments.CREATE_PAYMENT+'_PENDING':return _extends({},state,{createPayment:PENDING});
+case _payments.CREATE_PAYMENT+'_FULFILLED':return _extends({},state,{createPayment:FULFILLED});
+case _payments.CREATE_PAYMENT+'_REJECTED':return _extends({},state,{createPayment:REJECTED});
 
-case _payments.DELETE_PAYMENT+'_PENDING':
-return _extends({},state,{deletePayment:PENDING});
-case _payments.DELETE_PAYMENT+'_FULFILLED':
-return _extends({},state,{deletePayment:FULFILLED});
-case _payments.DELETE_PAYMENT+'_REJECTED':
-return _extends({},state,{deletePayment:REJECTED});
+case _payments.DELETE_PAYMENT+'_PENDING':return _extends({},state,{deletePayment:PENDING});
+case _payments.DELETE_PAYMENT+'_FULFILLED':return _extends({},state,{deletePayment:FULFILLED});
+case _payments.DELETE_PAYMENT+'_REJECTED':return _extends({},state,{deletePayment:REJECTED});
 
-case _payments.SET_DEFAULT_PAYMENT+'_PENDING':
-return _extends({},state,{setDefaultPayment:PENDING});
-case _payments.SET_DEFAULT_PAYMENT+'_FULFILLED':
-return _extends({},state,{setDefaultPayment:FULFILLED});
-case _payments.SET_DEFAULT_PAYMENT+'_REJECTED':
-return _extends({},state,{setDefaultPayment:REJECTED});
+case _payments.SET_DEFAULT_PAYMENT+'_PENDING':return _extends({},state,{setDefaultPayment:PENDING});
+case _payments.SET_DEFAULT_PAYMENT+'_FULFILLED':return _extends({},state,{setDefaultPayment:FULFILLED});
+case _payments.SET_DEFAULT_PAYMENT+'_REJECTED':return _extends({},state,{setDefaultPayment:REJECTED});
 
 
-case _favorites.FETCH_FAVORITES+'_PENDING':
-return _extends({},state,{fetchFavorites:PENDING});
-case _favorites.FETCH_FAVORITES+'_FULFILLED':
-return _extends({},state,{fetchFavorites:FULFILLED});
-case _favorites.FETCH_FAVORITES+'_REJECTED':
-return _extends({},state,{fetchFavorites:REJECTED});
+case _favorites.FETCH_FAVORITES+'_PENDING':return _extends({},state,{fetchFavorites:PENDING});
+case _favorites.FETCH_FAVORITES+'_FULFILLED':return _extends({},state,{fetchFavorites:FULFILLED});
+case _favorites.FETCH_FAVORITES+'_REJECTED':return _extends({},state,{fetchFavorites:REJECTED});
 
-case _favorites.CREATE_FAVORITE+'_PENDING':
-return _extends({},state,{createFavorite:PENDING});
-case _favorites.CREATE_FAVORITE+'_FULFILLED':
-return _extends({},state,{createFavorite:FULFILLED});
-case _favorites.CREATE_FAVORITE+'_REJECTED':
-return _extends({},state,{createFavorite:REJECTED});
+case _favorites.CREATE_FAVORITE+'_PENDING':return _extends({},state,{createFavorite:PENDING});
+case _favorites.CREATE_FAVORITE+'_FULFILLED':return _extends({},state,{createFavorite:FULFILLED});
+case _favorites.CREATE_FAVORITE+'_REJECTED':return _extends({},state,{createFavorite:REJECTED});
 
-case _favorites.UPDATE_FAVORITE+'_PENDING':
-return _extends({},state,{updateFavorite:PENDING});
-case _favorites.UPDATE_FAVORITE+'_FULFILLED':
-return _extends({},state,{updateFavorite:FULFILLED});
-case _favorites.UPDATE_FAVORITE+'_REJECTED':
-return _extends({},state,{updateFavorite:REJECTED});
+case _favorites.UPDATE_FAVORITE+'_PENDING':return _extends({},state,{updateFavorite:PENDING});
+case _favorites.UPDATE_FAVORITE+'_FULFILLED':return _extends({},state,{updateFavorite:FULFILLED});
+case _favorites.UPDATE_FAVORITE+'_REJECTED':return _extends({},state,{updateFavorite:REJECTED});
 
-case _favorites.DELETE_FAVORITE+'_PENDING':
-return _extends({},state,{deleteFavorite:PENDING});
-case _favorites.DELETE_FAVORITE+'_FULFILLED':
-return _extends({},state,{deleteFavorite:FULFILLED});
-case _favorites.DELETE_FAVORITE+'_REJECTED':
-return _extends({},state,{deleteFavorite:REJECTED});
+case _favorites.DELETE_FAVORITE+'_PENDING':return _extends({},state,{deleteFavorite:PENDING});
+case _favorites.DELETE_FAVORITE+'_FULFILLED':return _extends({},state,{deleteFavorite:FULFILLED});
+case _favorites.DELETE_FAVORITE+'_REJECTED':return _extends({},state,{deleteFavorite:REJECTED});
 
-case RATINGS_FETCH_START:
-return _extends({},state,{fetchRating:PENDING});
-case RATINGS_FETCH_SUCCESS:
-return _extends({},state,{fetchRating:FULFILLED});
-case RATINGS_FETCH_ERROR:
-return _extends({},state,{fetchRating:REJECTED});
+case RATINGS_FETCH_START:return _extends({},state,{fetchRating:PENDING});
+case RATINGS_FETCH_SUCCESS:return _extends({},state,{fetchRating:FULFILLED});
+case RATINGS_FETCH_ERROR:return _extends({},state,{fetchRating:REJECTED});
 
-case RATINGS_CREATE_START:
-return _extends({},state,{createRating:PENDING});
-case RATINGS_CREATE_SUCCESS:
-return _extends({},state,{createRating:FULFILLED});
-case RATINGS_CREATE_ERROR:
-return _extends({},state,{createRating:REJECTED});
+case RATINGS_CREATE_START:return _extends({},state,{createRating:PENDING});
+case RATINGS_CREATE_SUCCESS:return _extends({},state,{createRating:FULFILLED});
+case RATINGS_CREATE_ERROR:return _extends({},state,{createRating:REJECTED});
 
-case RATINGS_UPDATE_START:
-return _extends({},state,{updateRating:PENDING});
-case RATINGS_UPDATE_SUCCESS:
-return _extends({},state,{updateRating:FULFILLED});
-case RATINGS_UPDATE_ERROR:
-return _extends({},state,{updateRating:REJECTED});
+case RATINGS_UPDATE_START:return _extends({},state,{updateRating:PENDING});
+case RATINGS_UPDATE_SUCCESS:return _extends({},state,{updateRating:FULFILLED});
+case RATINGS_UPDATE_ERROR:return _extends({},state,{updateRating:REJECTED});
 
-case RATINGS_DELETE_START:
-return _extends({},state,{deleteRating:PENDING});
-case RATINGS_DELETE_SUCCESS:
-return _extends({},state,{deleteRating:FULFILLED});
-case RATINGS_DELETE_ERROR:
-return _extends({},state,{deleteRating:REJECTED});
+case RATINGS_DELETE_START:return _extends({},state,{deleteRating:PENDING});
+case RATINGS_DELETE_SUCCESS:return _extends({},state,{deleteRating:FULFILLED});
+case RATINGS_DELETE_ERROR:return _extends({},state,{deleteRating:REJECTED});
 
-case _user.VALIDATE_USER+'_PENDING':
-return _extends({},state,{validateUser:PENDING});
-case _user.VALIDATE_USER+'_FULFILLED':
-return _extends({},state,{validateUser:FULFILLED});
-case _user.VALIDATE_USER+'_REJECTED':
-return _extends({},state,{validateUser:REJECTED});
+case _user.VALIDATE_USER+'_PENDING':return _extends({},state,{validateUser:PENDING});
+case _user.VALIDATE_USER+'_FULFILLED':return _extends({},state,{validateUser:FULFILLED});
+case _user.VALIDATE_USER+'_REJECTED':return _extends({},state,{validateUser:REJECTED});
 
-case _user.ADD_ALLERGENS+'_PENDING':
-return _extends({},state,{addAllergens:PENDING});
-case _user.ADD_ALLERGENS+'_FULFILLED':
-return _extends({},state,{addAllergens:FULFILLED});
-case _user.ADD_ALLERGENS+'_REJECTED':
-return _extends({},state,{addAllergens:REJECTED});
+case _user.ADD_ALLERGENS+'_PENDING':return _extends({},state,{addAllergens:PENDING});
+case _user.ADD_ALLERGENS+'_FULFILLED':return _extends({},state,{addAllergens:FULFILLED});
+case _user.ADD_ALLERGENS+'_REJECTED':return _extends({},state,{addAllergens:REJECTED});
 
-case _user.REMOVE_ALLERGENS+'_PENDING':
-return _extends({},state,{removeAllergens:PENDING});
-case _user.REMOVE_ALLERGENS+'_FULFILLED':
-return _extends({},state,{removeAllergens:FULFILLED});
-case _user.REMOVE_ALLERGENS+'_REJECTED':
-return _extends({},state,{removeAllergens:REJECTED});
+case _user.REMOVE_ALLERGENS+'_PENDING':return _extends({},state,{removeAllergens:PENDING});
+case _user.REMOVE_ALLERGENS+'_FULFILLED':return _extends({},state,{removeAllergens:FULFILLED});
+case _user.REMOVE_ALLERGENS+'_REJECTED':return _extends({},state,{removeAllergens:REJECTED});
 
-case _user.AUTHENTICATE_USER+'_PENDING':
-return _extends({},state,{authenticateUser:PENDING});
-case _user.AUTHENTICATE_USER+'_FULFILLED':
-return _extends({},state,{authenticateUser:FULFILLED});
-case _user.AUTHENTICATE_USER+'_REJECTED':
-return _extends({},state,{authenticateUser:REJECTED});
+case _user.AUTHENTICATE_USER+'_PENDING':return _extends({},state,{authenticateUser:PENDING});
+case _user.AUTHENTICATE_USER+'_FULFILLED':return _extends({},state,{authenticateUser:FULFILLED});
+case _user.AUTHENTICATE_USER+'_REJECTED':return _extends({},state,{authenticateUser:REJECTED});
 
-case _user.RESOLVE_USER+'_PENDING':
-return _extends({},state,{resolveUser:PENDING});
-case _user.RESOLVE_USER+'_FULFILLED':
-return _extends({},state,{resolveUser:FULFILLED});
-case _user.RESOLVE_USER+'_REJECTED':
-return _extends({},state,{resolveUser:REJECTED});
+case _user.RESOLVE_USER+'_PENDING':return _extends({},state,{resolveUser:PENDING});
+case _user.RESOLVE_USER+'_FULFILLED':return _extends({},state,{resolveUser:FULFILLED});
+case _user.RESOLVE_USER+'_REJECTED':return _extends({},state,{resolveUser:REJECTED});
 
-case _user.FETCH_LEVELUP_LOYALTY+'_PENDING':
-return _extends({},state,{fetchLevelUpLoyalty:PENDING});
-case _user.FETCH_LEVELUP_LOYALTY+'_FULFILLED':
-return _extends({},state,{fetchLevelUpLoyalty:FULFILLED});
-case _user.FETCH_LEVELUP_LOYALTY+'_REJECTED':
-return _extends({},state,{fetchLevelUpLoyalty:REJECTED});
+case _user.FETCH_LEVELUP_LOYALTY+'_PENDING':return _extends({},state,{fetchLevelUpLoyalty:PENDING});
+case _user.FETCH_LEVELUP_LOYALTY+'_FULFILLED':return _extends({},state,{fetchLevelUpLoyalty:FULFILLED});
+case _user.FETCH_LEVELUP_LOYALTY+'_REJECTED':return _extends({},state,{fetchLevelUpLoyalty:REJECTED});
 
-case _user.FETCH_LEVELUP_CAMPAIGN+'_PENDING':
-return _extends({},state,{fetchLevelUpCampaign:PENDING});
-case _user.FETCH_LEVELUP_CAMPAIGN+'_FULFILLED':
-return _extends({},state,{fetchLevelUpCampaign:FULFILLED});
-case _user.FETCH_LEVELUP_CAMPAIGN+'_REJECTED':
-return _extends({},state,{fetchLevelUpCampaign:REJECTED});
+case _user.FETCH_LEVELUP_CAMPAIGN+'_PENDING':return _extends({},state,{fetchLevelUpCampaign:PENDING});
+case _user.FETCH_LEVELUP_CAMPAIGN+'_FULFILLED':return _extends({},state,{fetchLevelUpCampaign:FULFILLED});
+case _user.FETCH_LEVELUP_CAMPAIGN+'_REJECTED':return _extends({},state,{fetchLevelUpCampaign:REJECTED});
 
-case _user.FETCH_LEVELUP_QR_CODE+'_PENDING':
-return _extends({},state,{fetchLevelUpQRCode:PENDING});
-case _user.FETCH_LEVELUP_QR_CODE+'_FULFILLED':
-return _extends({},state,{fetchLevelUpQRCode:FULFILLED});
-case _user.FETCH_LEVELUP_QR_CODE+'_REJECTED':
-return _extends({},state,{fetchLevelUpQRCode:REJECTED});
+case _user.FETCH_LEVELUP_QR_CODE+'_PENDING':return _extends({},state,{fetchLevelUpQRCode:PENDING});
+case _user.FETCH_LEVELUP_QR_CODE+'_FULFILLED':return _extends({},state,{fetchLevelUpQRCode:FULFILLED});
+case _user.FETCH_LEVELUP_QR_CODE+'_REJECTED':return _extends({},state,{fetchLevelUpQRCode:REJECTED});
 
-case _user.UPDATE_LEVELUP_CONNECTION+'_PENDING':
-return _extends({},state,{updateLevelUpConnection:PENDING});
-case _user.UPDATE_LEVELUP_CONNECTION+'_FULFILLED':
-return _extends({},state,{updateLevelUpConnection:FULFILLED});
-case _user.UPDATE_LEVELUP_CONNECTION+'_REJECTED':
-return _extends({},state,{updateLevelUpConnection:REJECTED});
+case _user.UPDATE_LEVELUP_CONNECTION+'_PENDING':return _extends({},state,{updateLevelUpConnection:PENDING});
+case _user.UPDATE_LEVELUP_CONNECTION+'_FULFILLED':return _extends({},state,{updateLevelUpConnection:FULFILLED});
+case _user.UPDATE_LEVELUP_CONNECTION+'_REJECTED':return _extends({},state,{updateLevelUpConnection:REJECTED});
 
-case _user.CONNECT_LEVELUP+'_PENDING':
-return _extends({},state,{connectLevelUp:PENDING});
-case _user.CONNECT_LEVELUP+'_FULFILLED':
-return _extends({},state,{connectLevelUp:FULFILLED});
-case _user.CONNECT_LEVELUP+'_REJECTED':
-return _extends({},state,{connectLevelUp:REJECTED});
+case _user.CONNECT_LEVELUP+'_PENDING':return _extends({},state,{connectLevelUp:PENDING});
+case _user.CONNECT_LEVELUP+'_FULFILLED':return _extends({},state,{connectLevelUp:FULFILLED});
+case _user.CONNECT_LEVELUP+'_REJECTED':return _extends({},state,{connectLevelUp:REJECTED});
 
-case _user.DISCONNECT_LEVELUP+'_PENDING':
-return _extends({},state,{disconnectLevelUp:PENDING});
-case _user.DISCONNECT_LEVELUP+'_FULFILLED':
-return _extends({},state,{disconnectLevelUp:FULFILLED});
-case _user.DISCONNECT_LEVELUP+'_REJECTED':
-return _extends({},state,{disconnectLevelUp:REJECTED});
+case _user.DISCONNECT_LEVELUP+'_PENDING':return _extends({},state,{disconnectLevelUp:PENDING});
+case _user.DISCONNECT_LEVELUP+'_FULFILLED':return _extends({},state,{disconnectLevelUp:FULFILLED});
+case _user.DISCONNECT_LEVELUP+'_REJECTED':return _extends({},state,{disconnectLevelUp:REJECTED});
 
-case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_PENDING':
-return _extends({},state,{fetchLevelUpPaymentMethod:PENDING});
-case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_FULFILLED':
-return _extends({},state,{fetchLevelUpPaymentMethod:FULFILLED});
-case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_REJECTED':
-return _extends({},state,{fetchLevelUpPaymentMethod:REJECTED});
+case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_PENDING':return _extends({},state,{fetchLevelUpPaymentMethod:PENDING});
+case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_FULFILLED':return _extends({},state,{fetchLevelUpPaymentMethod:FULFILLED});
+case _user.FETCH_LEVELUP_PAYMENT_METHOD+'_REJECTED':return _extends({},state,{fetchLevelUpPaymentMethod:REJECTED});
 
-case _order.VALIDATE_CURRENT_CART+'_PENDING':
-return _extends({},state,{validateCurrentCart:PENDING});
-case _order.VALIDATE_CURRENT_CART+'_FULFILLED':
-return _extends({},state,{validateCurrentCart:FULFILLED});
-case _order.VALIDATE_CURRENT_CART+'_REJECTED':
-return _extends({},state,{validateCurrentCart:REJECTED});
+case _order.VALIDATE_CURRENT_CART+'_PENDING':return _extends({},state,{validateCurrentCart:PENDING});
+case _order.VALIDATE_CURRENT_CART+'_FULFILLED':return _extends({},state,{validateCurrentCart:FULFILLED});
+case _order.VALIDATE_CURRENT_CART+'_REJECTED':return _extends({},state,{validateCurrentCart:REJECTED});
 
-case _order.VALIDATE_CURRENT_ORDER+'_PENDING':
-return _extends({},state,{validateCurrentOrder:PENDING});
-case _order.VALIDATE_CURRENT_ORDER+'_FULFILLED':
-return _extends({},state,{validateCurrentOrder:FULFILLED});
-case _order.VALIDATE_CURRENT_ORDER+'_REJECTED':
-return _extends({},state,{validateCurrentOrder:REJECTED});
+case _order.VALIDATE_CURRENT_ORDER+'_PENDING':return _extends({},state,{validateCurrentOrder:PENDING});
+case _order.VALIDATE_CURRENT_ORDER+'_FULFILLED':return _extends({},state,{validateCurrentOrder:FULFILLED});
+case _order.VALIDATE_CURRENT_ORDER+'_REJECTED':return _extends({},state,{validateCurrentOrder:REJECTED});
 
-case _user.UNAUTHENTICATE_USER+'_PENDING':
-return _extends({},state,{unauthenticateUser:PENDING});
-case _user.UNAUTHENTICATE_USER+'_FULFILLED':
-return _extends({},state,{unauthenticateUser:FULFILLED});
-case _user.UNAUTHENTICATE_USER+'_REJECTED':
-return _extends({},state,{unauthenticateUser:REJECTED});
+case _user.UNAUTHENTICATE_USER+'_PENDING':return _extends({},state,{unauthenticateUser:PENDING});
+case _user.UNAUTHENTICATE_USER+'_FULFILLED':return _extends({},state,{unauthenticateUser:FULFILLED});
+case _user.UNAUTHENTICATE_USER+'_REJECTED':return _extends({},state,{unauthenticateUser:REJECTED});
 
-case _user.RESET_USER_PASSWORD+'_PENDING':
-return _extends({},state,{resetUserPassword:PENDING});
-case _user.RESET_USER_PASSWORD+'_FULFILLED':
-return _extends({},state,{resetUserPassword:FULFILLED});
-case _user.RESET_USER_PASSWORD+'_REJECTED':
-return _extends({},state,{resetUserPassword:REJECTED});
+case _user.RESET_USER_PASSWORD+'_PENDING':return _extends({},state,{resetUserPassword:PENDING});
+case _user.RESET_USER_PASSWORD+'_FULFILLED':return _extends({},state,{resetUserPassword:FULFILLED});
+case _user.RESET_USER_PASSWORD+'_REJECTED':return _extends({},state,{resetUserPassword:REJECTED});
 
-case _user.RESET_LEVELUP_PASSWORD+'_PENDING':
-return _extends({},state,{resetLevelUpPassword:PENDING});
-case _user.RESET_LEVELUP_PASSWORD+'_FULFILLED':
-return _extends({},state,{resetLevelUpPassword:FULFILLED});
-case _user.RESET_LEVELUP_PASSWORD+'_REJECTED':
-return _extends({},state,{resetLevelUpPassword:REJECTED});
+case _user.RESET_LEVELUP_PASSWORD+'_PENDING':return _extends({},state,{resetLevelUpPassword:PENDING});
+case _user.RESET_LEVELUP_PASSWORD+'_FULFILLED':return _extends({},state,{resetLevelUpPassword:FULFILLED});
+case _user.RESET_LEVELUP_PASSWORD+'_REJECTED':return _extends({},state,{resetLevelUpPassword:REJECTED});
 
-case _user.FETCH_USER+'_PENDING':
-return _extends({},state,{fetchUser:PENDING});
-case _user.FETCH_USER+'_FULFILLED':
-return _extends({},state,{fetchUser:FULFILLED});
-case _user.FETCH_USER+'_REJECTED':
-return _extends({},state,{fetchUser:REJECTED});
+case _user.FETCH_USER+'_PENDING':return _extends({},state,{fetchUser:PENDING});
+case _user.FETCH_USER+'_FULFILLED':return _extends({},state,{fetchUser:FULFILLED});
+case _user.FETCH_USER+'_REJECTED':return _extends({},state,{fetchUser:REJECTED});
 
-case USER_UPDATE_START:
-return _extends({},state,{updateUser:PENDING});
-case USER_UPDATE_SUCCESS:
-return _extends({},state,{updateUser:FULFILLED});
-case USER_UPDATE_ERROR:
-return _extends({},state,{updateUser:REJECTED});
+case USER_UPDATE_START:return _extends({},state,{updateUser:PENDING});
+case USER_UPDATE_SUCCESS:return _extends({},state,{updateUser:FULFILLED});
+case USER_UPDATE_ERROR:return _extends({},state,{updateUser:REJECTED});
 
-case USER_CREATE_START:
-return _extends({},state,{createUser:PENDING});
-case USER_CREATE_SUCCESS:
-return _extends({},state,{createUser:FULFILLED});
-case USER_CREATE_ERROR:
-return _extends({},state,{createUser:REJECTED});
+case USER_CREATE_START:return _extends({},state,{createUser:PENDING});
+case USER_CREATE_SUCCESS:return _extends({},state,{createUser:FULFILLED});
+case USER_CREATE_ERROR:return _extends({},state,{createUser:REJECTED});
 
-default:
-return state;}
+default:return state;}
 
 }
 
@@ -84543,6 +83996,7 @@ validations:_validations2.default});
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
+
 
 
 
@@ -84625,16 +84079,7 @@ state,{
 loyalty:action.payload});
 
 case _user.FETCH_LEVELUP_CAMPAIGN+'_FULFILLED':
-return _seamlessImmutable2.default.setIn(
-state,
-[
-'campaignsById',
-action.payload.meta.campaignId+'-'+
-action.payload.meta.campaignType],
-
-
-action.payload.campaign);
-
+return _seamlessImmutable2.default.setIn(state,['campaignsById',action.payload.meta.campaignId+'-'+action.payload.meta.campaignType],action.payload.campaign);
 
 case _user.FETCH_LEVELUP_QR_CODE+'_FULFILLED':
 return _extends({},

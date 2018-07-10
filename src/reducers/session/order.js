@@ -32,14 +32,7 @@ const initialState = {
 
 function _buildFormattedLineItemsHash(ref) {
   return map(ref.cart.lineItems, (li) => {
-    const {
-      uuid,
-      quantity,
-      madeFor,
-      instructions,
-      product,
-      operationMaps,
-    } = li;
+    const { uuid, quantity, madeFor, instructions, product, operationMaps } = li;
     return {
       uuid,
       quantity,
@@ -86,7 +79,7 @@ export default function order(state = initialState, action) {
         ...state,
         validated: null,
         validatedCart: null,
-      };
+      }
     }
 
     case `${VALIDATE_CURRENT_ORDER}_FULFILLED`: {

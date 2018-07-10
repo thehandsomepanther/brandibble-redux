@@ -11,11 +11,9 @@ export default (state = initialState, action) => {
   switch (type) {
     case `${FETCH_IMAGES}_FULFILLED`:
       return state.merge({
-        imagesById: state.imagesById.replace(
-          Immutable.asObject(payload, (image) => {
-            return [image.id, image];
-          }),
-        ),
+        imagesById: state.imagesById.replace(Immutable.asObject(payload, (image) => {
+          return [image.id, image];
+        })),
       });
     default:
       return state;

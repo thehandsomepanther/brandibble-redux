@@ -25,11 +25,9 @@ export default (state = initialState, action) => {
     case `${CREATE_PAYMENT}_FULFILLED`:
     case `${FETCH_PAYMENTS}_FULFILLED`:
       return state.merge({
-        paymentsById: state.paymentsById.replace(
-          Immutable.asObject(payload, (payment) => {
-            return [payment.customer_card_id, payment];
-          }),
-        ),
+        paymentsById: state.paymentsById.replace(Immutable.asObject(payload, (payment) => {
+          return [payment.customer_card_id, payment];
+        })),
       });
 
     case `${DELETE_PAYMENT}_FULFILLED`:
@@ -42,27 +40,17 @@ export default (state = initialState, action) => {
     case `${SET_DEFAULT_PAYMENT}_FULFILLED`:
       let newState = state;
 
-      const currentDefault = Object.values(state.paymentsById.asMutable()).find(
-        p => p.is_default,
-      );
-      if (currentDefault) {
+      let currentDefault = Object.values(state.paymentsById.asMutable()).find(p => p.is_default);
+      if (!!currentDefault) {
         newState = state.merge({
-          paymentsById: newState.paymentsById.setIn(
-            [currentDefault.customer_card_id, 'is_default'],
-            false,
-          ),
+          paymentsById: newState.paymentsById.setIn([currentDefault.customer_card_id, 'is_default'], false)
         });
       }
 
-      const newDefault = Object.values(state.paymentsById.asMutable()).find(
-        p => p.customer_card_id === action.payload,
-      );
-      if (newDefault) {
+      let newDefault = Object.values(state.paymentsById.asMutable()).find(p => p.customer_card_id === action.payload);
+      if (!!newDefault) {
         newState = state.merge({
-          paymentsById: newState.paymentsById.setIn(
-            [newDefault.customer_card_id, 'is_default'],
-            true,
-          ),
+          paymentsById: newState.paymentsById.setIn([newDefault.customer_card_id, 'is_default'], true)
         });
       }
 
