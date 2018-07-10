@@ -1,4 +1,4 @@
-import { SETUP_BRANDIBBLE } from 'actions/application';
+import { SETUP_BRANDIBBLE } from '../actions/application';
 
 const initialState = {};
 

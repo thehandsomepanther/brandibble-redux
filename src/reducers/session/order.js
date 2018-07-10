@@ -19,8 +19,8 @@ import {
   VALIDATE_CURRENT_CART,
   SUBMIT_ORDER,
   SET_LINE_ITEM_MADE_FOR,
-  SET_LINE_ITEM_INSTRUCTIONS
-} from 'actions/session/order';
+  SET_LINE_ITEM_INSTRUCTIONS,
+} from '../../actions/session/order';
 
 const initialState = {
   ref: null,
@@ -32,7 +32,14 @@ const initialState = {
 
 function _buildFormattedLineItemsHash(ref) {
   return map(ref.cart.lineItems, (li) => {
-    const { uuid, quantity, madeFor, instructions, product, operationMaps } = li;
+    const {
+      uuid,
+      quantity,
+      madeFor,
+      instructions,
+      product,
+      operationMaps,
+    } = li;
     return {
       uuid,
       quantity,
@@ -79,7 +86,7 @@ export default function order(state = initialState, action) {
         ...state,
         validated: null,
         validatedCart: null,
-      }
+      };
     }
 
     case `${VALIDATE_CURRENT_ORDER}_FULFILLED`: {

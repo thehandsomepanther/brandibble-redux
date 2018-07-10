@@ -1,6 +1,6 @@
 /* eslint no-shadow:1, no-unused-vars:1, prefer-rest-params:1 */
-import BrandibbleReduxException from 'utils/exception';
-import { Defaults } from 'utils/constants';
+import BrandibbleReduxException from '../../utils/exception';
+import { Defaults } from '../../utils/constants';
 
 export const RESOLVE_ORDER = 'RESOLVE_ORDER';
 export const RESOLVE_ORDER_LOCATION = 'RESOLVE_ORDER_LOCATION';
@@ -36,7 +36,9 @@ function _resolveOrderLocation(payload) {
 function _addLineItem(order, product, quantity) {
   return {
     type: ADD_LINE_ITEM,
-    payload: order.addLineItem(product, quantity).then(lineItem => ({ order, lineItem })),
+    payload: order
+      .addLineItem(product, quantity)
+      .then(lineItem => ({ order, lineItem })),
   };
 }
 
@@ -44,49 +46,63 @@ function _addLineItem(order, product, quantity) {
 function _pushLineItem(order, lineItem) {
   return {
     type: PUSH_LINE_ITEM,
-    payload: order.pushLineItem(lineItem).then(lineItem => ({ order, lineItem })),
+    payload: order
+      .pushLineItem(lineItem)
+      .then(lineItem => ({ order, lineItem })),
   };
 }
 
 function _setLineItemQuantity(order, lineItem, newQuantity) {
   return {
     type: SET_LINE_ITEM_QUANTITY,
-    payload: order.setLineItemQuantity(lineItem, newQuantity).then(lineItem => ({ order, lineItem })),
+    payload: order
+      .setLineItemQuantity(lineItem, newQuantity)
+      .then(lineItem => ({ order, lineItem })),
   };
 }
 
 function _setLineItemMadeFor(order, lineItem, madeFor) {
   return {
     type: SET_LINE_ITEM_MADE_FOR,
-    payload: order.setLineItemMadeFor(lineItem, madeFor).then(lineItem => ({ order, lineItem })),
+    payload: order
+      .setLineItemMadeFor(lineItem, madeFor)
+      .then(lineItem => ({ order, lineItem })),
   };
 }
 
 function _setLineItemInstructions(order, lineItem, instructions) {
   return {
     type: SET_LINE_ITEM_INSTRUCTIONS,
-    payload: order.setLineItemInstructions(lineItem, instructions).then(lineItem => ({ order, lineItem })),
+    payload: order
+      .setLineItemInstructions(lineItem, instructions)
+      .then(lineItem => ({ order, lineItem })),
   };
 }
 
 function _removeLineItem(order, lineItem) {
   return {
     type: REMOVE_LINE_ITEM,
-    payload: order.removeLineItem(lineItem).then(remainingLineItems => ({ order, remainingLineItems })),
+    payload: order
+      .removeLineItem(lineItem)
+      .then(remainingLineItems => ({ order, remainingLineItems })),
   };
 }
 
 function _addOptionToLineItem(order, lineItem, optionGroup, optionItem) {
   return {
     type: ADD_OPTION_TO_LINE_ITEM,
-    payload: order.addOptionToLineItem(lineItem, optionGroup, optionItem).then(lineItem => ({ order, lineItem })),
+    payload: order
+      .addOptionToLineItem(lineItem, optionGroup, optionItem)
+      .then(lineItem => ({ order, lineItem })),
   };
 }
 
 function _removeOptionFromLineItem(order, lineItem, optionItem) {
   return {
     type: REMOVE_OPTION_FROM_LINE_ITEM,
-    payload: order.removeOptionFromLineItem(lineItem, optionItem).then(lineItem => ({ order, lineItem })),
+    payload: order
+      .removeOptionFromLineItem(lineItem, optionItem)
+      .then(lineItem => ({ order, lineItem })),
   };
 }
 
@@ -168,25 +184,46 @@ function _validateCurrentOrder(data) {
 }
 
 /* Public Functions */
-export function createNewOrder(brandibble, locationId = null, serviceType, paymentType = null, miscOptions = Defaults.miscOptions) {
+export function createNewOrder(
+  brandibble,
+  locationId = null,
+  serviceType,
+  paymentType = null,
+  miscOptions = Defaults.miscOptions,
+) {
   return (dispatch) => {
     const { orders } = brandibble;
-    const payload = orders.create(locationId, serviceType, paymentType, miscOptions).then(order => ({ order }));
+    const payload = orders
+      .create(locationId, serviceType, paymentType, miscOptions)
+      .then(order => ({ order }));
     return dispatch(_createNewOrder(payload));
   };
 }
 
-export function resolveOrder(brandibble, locationId = null, serviceType = 'pickup', paymentType = null, miscOptions = Defaults.miscOptions) {
+export function resolveOrder(
+  brandibble,
+  locationId = null,
+  serviceType = 'pickup',
+  paymentType = null,
+  miscOptions = Defaults.miscOptions,
+) {
   const { orders } = brandibble;
   const order = orders.current();
-  const payload = order ? Promise.resolve({ order }) : orders.create(locationId, serviceType, paymentType, miscOptions).then(res => ({ order: res }));
+  const payload = order
+    ? Promise.resolve({ order })
+    : orders
+        .create(locationId, serviceType, paymentType, miscOptions)
+        .then(res => ({ order: res }));
   return dispatch => dispatch(_resolveOrder(payload));
 }
 
 export function resolveOrderLocation(brandibble) {
   const { orders } = brandibble;
   const order = orders.current();
-  const payload = (order && order.locationId) ? brandibble.locations.show(order.locationId).then(({ data }) => data) : Promise.resolve(null);
+  const payload =
+    order && order.locationId
+      ? brandibble.locations.show(order.locationId).then(({ data }) => data)
+      : Promise.resolve(null);
   return dispatch => dispatch(_resolveOrderLocation(payload));
 }
 
@@ -250,7 +287,11 @@ export function setLineItemMadeFor(currentOrder, lineItem, madeFor = '') {
   return dispatch => dispatch(_setLineItemMadeFor(...arguments));
 }
 
-export function setLineItemInstructions(currentOrder, lineItem, instructions = '') {
+export function setLineItemInstructions(
+  currentOrder,
+  lineItem,
+  instructions = '',
+) {
   return dispatch => dispatch(_setLineItemInstructions(...arguments));
 }
 
@@ -274,7 +315,12 @@ export function removeLineItem(currentOrder, lineItem) {
   return dispatch => dispatch(_removeLineItem(...arguments));
 }
 
-export function addOptionToLineItem(currentOrder, lineItem, optionGroup, optionItem) {
+export function addOptionToLineItem(
+  currentOrder,
+  lineItem,
+  optionGroup,
+  optionItem,
+) {
   return dispatch => dispatch(_addOptionToLineItem(...arguments));
 }
 

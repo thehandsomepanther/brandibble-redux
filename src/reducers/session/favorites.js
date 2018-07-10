@@ -4,8 +4,8 @@ import {
   DELETE_FAVORITE,
   FETCH_FAVORITES,
   UPDATE_FAVORITE,
-} from 'actions/session/favorites';
-import { UNAUTHENTICATE_USER } from 'actions/session/user';
+} from '../../actions/session/favorites';
+import { UNAUTHENTICATE_USER } from '../../actions/session/user';
 
 export const initialState = Immutable({
   favoritesById: Immutable({}),
@@ -17,9 +17,11 @@ export default (state = initialState, action) => {
   switch (type) {
     case `${FETCH_FAVORITES}_FULFILLED`:
       return state.merge({
-        favoritesById: state.favoritesById.replace(Immutable.asObject(payload, (favorite) => {
-          return [favorite.favorite_item_id, favorite];
-        })),
+        favoritesById: state.favoritesById.replace(
+          Immutable.asObject(payload, (favorite) => {
+            return [favorite.favorite_item_id, favorite];
+          }),
+        ),
       });
     case `${DELETE_FAVORITE}_FULFILLED`:
       return state.merge({

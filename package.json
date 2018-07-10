@@ -7,7 +7,7 @@
     "node": ">=7.6.0",
     "npm": ">=4.3.0"
   },
-  "main": "dist/brandibble-redux.min.js",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint src",
     "build:lib": "babel src --out-dir lib",
@@ -18,14 +18,28 @@
   },
   "author": "Sanctuary Computer <hello@sanctuary.computer> (http://sanctuary.computer/)",
   "license": "MIT",
+  "dependencies": {
+    "brandibble": "github:sanctuarycomputer/brandibble.js#9917586d4b9e44afca23cf8734f1f54bf4b090e1",
+    "localforage": "^1.5.0",
+    "lodash.filter": "^4.6.0",
+    "lodash.find": "^4.6.0",
+    "lodash.map": "^4.6.0",
+    "moment": "^2.18.1",
+    "redux": "^3.7.2",
+    "redux-crud": "^3.0.5",
+    "redux-promise-middleware": "4.2.1",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "seamless-immutable": "^7.1.2"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react-native": "^1.9.1",
-    "brandibble": "github:sanctuarycomputer/brandibble.js#9917586d4b9e44afca23cf8734f1f54bf4b090e1",
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
@@ -39,20 +53,13 @@
     "karma-mocha": "^1.3.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.4",
-    "localforage": "^1.5.0",
-    "lodash.filter": "^4.6.0",
-    "lodash.find": "^4.6.0",
-    "lodash.map": "^4.6.0",
     "mocha": "^3.4.2",
-    "moment": "^2.18.1",
-    "redux": "^3.7.2",
-    "redux-crud": "^3.0.5",
     "redux-mock-store": "^1.2.3",
-    "redux-promise-middleware": "4.2.1",
-    "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1",
-    "seamless-immutable": "^7.1.2",
     "webpack": "^3.3.0"
   },
-  "dependencies": {}
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
 }

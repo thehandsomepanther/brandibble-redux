@@ -5,9 +5,9 @@ import {
   DELETE_PAYMENT,
   FETCH_PAYMENTS,
   SET_DEFAULT_PAYMENT,
-} from 'actions/session/payments';
+} from '../../actions/session/payments';
 
-import { UNAUTHENTICATE_USER } from 'actions/session/user';
+import { UNAUTHENTICATE_USER } from '../../actions/session/user';
 
 export const initialState = Immutable({
   paymentsById: Immutable({}),
@@ -25,9 +25,11 @@ export default (state = initialState, action) => {
     case `${CREATE_PAYMENT}_FULFILLED`:
     case `${FETCH_PAYMENTS}_FULFILLED`:
       return state.merge({
-        paymentsById: state.paymentsById.replace(Immutable.asObject(payload, (payment) => {
-          return [payment.customer_card_id, payment];
-        })),
+        paymentsById: state.paymentsById.replace(
+          Immutable.asObject(payload, (payment) => {
+            return [payment.customer_card_id, payment];
+          }),
+        ),
       });
 
     case `${DELETE_PAYMENT}_FULFILLED`:
@@ -40,17 +42,27 @@ export default (state = initialState, action) => {
     case `${SET_DEFAULT_PAYMENT}_FULFILLED`:
       let newState = state;
 
-      let currentDefault = Object.values(state.paymentsById.asMutable()).find(p => p.is_default);
-      if (!!currentDefault) {
+      const currentDefault = Object.values(state.paymentsById.asMutable()).find(
+        p => p.is_default,
+      );
+      if (currentDefault) {
         newState = state.merge({
-          paymentsById: newState.paymentsById.setIn([currentDefault.customer_card_id, 'is_default'], false)
+          paymentsById: newState.paymentsById.setIn(
+            [currentDefault.customer_card_id, 'is_default'],
+            false,
+          ),
         });
       }
 
-      let newDefault = Object.values(state.paymentsById.asMutable()).find(p => p.customer_card_id === action.payload);
-      if (!!newDefault) {
+      const newDefault = Object.values(state.paymentsById.asMutable()).find(
+        p => p.customer_card_id === action.payload,
+      );
+      if (newDefault) {
         newState = state.merge({
-          paymentsById: newState.paymentsById.setIn([newDefault.customer_card_id, 'is_default'], true)
+          paymentsById: newState.paymentsById.setIn(
+            [newDefault.customer_card_id, 'is_default'],
+            true,
+          ),
         });
       }
 

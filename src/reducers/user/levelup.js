@@ -6,17 +6,14 @@ import {
   FETCH_LEVELUP_QR_CODE,
   FETCH_LEVELUP_PAYMENT_METHOD,
   DISCONNECT_LEVELUP,
-} from 'actions/session/user';
-
-import {
-  UNAUTHENTICATE_USER
-} from 'actions/session/user';
+  UNAUTHENTICATE_USER,
+} from '../../actions/session/user';
 
 const initialState = {
   loyalty: {},
   qr_code: null,
   payment_method: null,
-  campaignsById: Immutable({})
+  campaignsById: Immutable({}),
 };
 
 export default function levelup(state = initialState, action) {
@@ -27,7 +24,16 @@ export default function levelup(state = initialState, action) {
         loyalty: action.payload,
       };
     case `${FETCH_LEVELUP_CAMPAIGN}_FULFILLED`:
-      return Immutable.setIn(state, ['campaignsById', `${action.payload.meta.campaignId}-${action.payload.meta.campaignType}`], action.payload.campaign);
+      return Immutable.setIn(
+        state,
+        [
+          'campaignsById',
+          `${action.payload.meta.campaignId}-${
+            action.payload.meta.campaignType
+          }`,
+        ],
+        action.payload.campaign,
+      );
 
     case `${FETCH_LEVELUP_QR_CODE}_FULFILLED`:
       return {

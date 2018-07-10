@@ -2,15 +2,11 @@ import {
   FETCH_ALL_CUSTOMER_ORDERS,
   FETCH_PAST_CUSTOMER_ORDERS,
   FETCH_UPCOMING_CUSTOMER_ORDERS,
-} from 'actions/data/customerOrders';
+} from '../../actions/data/customerOrders';
 
-import {
-  SUBMIT_ORDER
-} from 'actions/session/order';
+import { SUBMIT_ORDER } from '../../actions/session/order';
 
-import {
-  UNAUTHENTICATE_USER
-} from 'actions/session/user';
+import { UNAUTHENTICATE_USER } from '../../actions/session/user';
 
 const initialState = {
   all: null,
@@ -29,7 +25,7 @@ export default function customerOrders(state = initialState, action) {
     case `${SUBMIT_ORDER}_FULFILLED`: {
       return {
         ...state,
-        recentSubmission: action.payload
+        recentSubmission: action.payload,
       };
     }
     case `${FETCH_PAST_CUSTOMER_ORDERS}_FULFILLED`:

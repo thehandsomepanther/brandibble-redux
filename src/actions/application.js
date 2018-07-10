@@ -1,7 +1,7 @@
-import fireAction from 'utils/fireAction';
-import handleErrors from 'utils/handleErrors';
-import { resolveOrder, resolveOrderLocation } from 'actions/session/order';
-import { resolveUser } from 'actions/session/user';
+import fireAction from '../utils/fireAction';
+import handleErrors from '../utils/handleErrors';
+import { resolveOrder, resolveOrderLocation } from './session/order';
+import { resolveUser } from './session/user';
 
 export const SETUP_BRANDIBBLE = 'SETUP_BRANDIBBLE';
 export const SETUP_BRANDIBBLE_REDUX = 'SETUP_BRANDIBBLE_REDUX';
@@ -18,15 +18,24 @@ const setupBrandibbleReduxDefaults = {
   locationId: null,
   serviceType: 'pickup',
 };
-export const setupBrandibbleRedux = (brandibble, data = setupBrandibbleReduxDefaults) => (dispatch) => {
-  const { locationId, serviceType } = Object.assign({}, setupBrandibbleReduxDefaults, data);
-  const payload = dispatch(setupBrandibble(brandibble)).then(({ value }) => {
-    return Promise.all([
-      dispatch(resolveUser(value)),
-      dispatch(resolveOrder(value, locationId, serviceType)),
-      dispatch(resolveOrderLocation(value)),
-    ]);
-  }).catch(handleErrors);
+export const setupBrandibbleRedux = (
+  brandibble,
+  data = setupBrandibbleReduxDefaults,
+) => (dispatch) => {
+  const { locationId, serviceType } = Object.assign(
+    {},
+    setupBrandibbleReduxDefaults,
+    data,
+  );
+  const payload = dispatch(setupBrandibble(brandibble))
+    .then(({ value }) => {
+      return Promise.all([
+        dispatch(resolveUser(value)),
+        dispatch(resolveOrder(value, locationId, serviceType)),
+        dispatch(resolveOrderLocation(value)),
+      ]);
+    })
+    .catch(handleErrors);
 
   return dispatch(fireAction(SETUP_BRANDIBBLE_REDUX, payload));
 };
@@ -38,7 +47,10 @@ const sendSupportTicketDefaults = {
   name: null,
   subject: null,
 };
-export const sendSupportTicket = (brandibble, data = sendSupportTicketDefaults) => (dispatch) => {
+export const sendSupportTicket = (
+  brandibble,
+  data = sendSupportTicketDefaults,
+) => (dispatch) => {
   const payload = brandibble
     .sendSupportTicket(Object.assign({}, sendSupportTicketDefaults, data))
     .catch(handleErrors);
