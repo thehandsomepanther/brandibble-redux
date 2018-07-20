@@ -13,7 +13,7 @@ export const brandibble = new Brandibble({
 });
 
 export function makeUnpersistedOrder() {
-  return new brandibble.Order(brandibble.adapter, 19);
+  return new brandibble.Order(brandibble.adapter, SAMPLE_MENU_LOCATION_ID, 'pickup');
 }
 
 export const customersValidateStub = {
