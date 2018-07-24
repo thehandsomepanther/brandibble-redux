@@ -56,7 +56,7 @@ import {
   FETCH_PAYMENTS,
   CREATE_PAYMENT,
   DELETE_PAYMENT,
-  SET_DEFAULT_PAYMENT
+  SET_DEFAULT_PAYMENT,
 } from '../actions/session/payments';
 
 // customerOrders

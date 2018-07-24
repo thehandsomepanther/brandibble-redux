@@ -17,7 +17,7 @@ import {
   DELETE_FAVORITE,
   FETCH_FAVORITES,
   UPDATE_FAVORITE,
-} from 'actions/session/favorites';
+} from '../actions/session/favorites';
 import {
   FETCH_PAYMENTS,
   CREATE_PAYMENT,
@@ -44,7 +44,6 @@ import {
 } from '../actions/data/locations';
 import {
   FETCH_GEOLOCATIONS,
-  CLEAR_GEOLOCATIONS,
 } from '../actions/data/geolocations';
 import {
   AUTHENTICATE_USER,
