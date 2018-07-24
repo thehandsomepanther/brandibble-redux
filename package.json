@@ -31,8 +31,7 @@
     "redux-crud": "^3.0.5",
     "redux-promise-middleware": "4.2.1",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1",
-    "seamless-immutable": "^7.1.2"
+    "reselect": "^3.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

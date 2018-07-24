@@ -1,18 +1,18 @@
-import Immutable from 'seamless-immutable';
 import { FETCH_ALLERGENS } from '../../actions/data/allergens';
 
-export const initialState = Immutable({
-  allergensById: Immutable({}),
-});
+export const initialState = {
+  allergensById: {},
+};
 
 export default (state = initialState, action) => {
+  const { payload } = action;
+
   switch (action.type) {
     case `${FETCH_ALLERGENS}_FULFILLED`:
-      return state.merge({
-        allergensById: state.allergensById.replace(Immutable.asObject(action.payload, (allergen) => {
-          return [allergen.id, allergen];
-        })),
-      });
+      return {
+        ...state,
+        allergensById: payload.reduce((acc, curr) => ({ ...acc, [curr.id]: curr }), {}),
+      };
     default:
       return state;
   }
