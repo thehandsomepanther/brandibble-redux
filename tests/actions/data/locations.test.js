@@ -8,9 +8,11 @@ import {
   PUSH_GEOLOCATION,
   FETCH_LOCATION,
   FETCH_LOCATIONS,
+  FETCH_WAIT_TIMES,
   pushGeolocation,
   fetchLocation,
   fetchLocations,
+  fetchWaitTimes,
 } from 'actions/data/locations';
 import { brandibble } from '../../config/stubs';
 
@@ -73,6 +75,27 @@ describe('actions/data/locations', () => {
 
     it(`last action should be ${FETCH_LOCATION}_FULFILLED`, () => {
       action = find(actionsCalled, { type: `${FETCH_LOCATION}_FULFILLED` });
+      expect(action).to.exist;
+    });
+  });
+
+  describe('fetchWaitTimes', () => {
+    before(() => {
+      store.clearActions();
+      return fetchWaitTimes(brandibble, data[0].location_id)(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should call 2 actions', () => expect(actionsCalled).to.have.length.of(2));
+
+    it(`first action should be ${FETCH_WAIT_TIMES}_PENDING`, () => {
+      action = find(actionsCalled, { type: `${FETCH_WAIT_TIMES}_PENDING` });
+      expect(action).to.exist;
+    });
+
+    it(`last action should be ${FETCH_WAIT_TIMES}_FULFILLED`, () => {
+      action = find(actionsCalled, { type: `${FETCH_WAIT_TIMES}_FULFILLED` });
       expect(action).to.exist;
     });
   });
