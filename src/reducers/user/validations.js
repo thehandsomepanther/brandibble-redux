@@ -1,7 +1,7 @@
 import {
   VALIDATE_USER,
-  UNAUTHENTICATE_USER
-} from 'actions/session/user';
+  UNAUTHENTICATE_USER,
+} from '../../actions/session/user';
 
 const initialState = {};
 

@@ -1,12 +1,12 @@
 import Immutable from 'seamless-immutable';
 import {
-  RESOLVE_ORDER_LOCATION
-} from 'actions/session/order';
+  RESOLVE_ORDER_LOCATION,
+} from '../../actions/session/order';
 import {
   PUSH_GEOLOCATION,
   FETCH_LOCATION,
   FETCH_LOCATIONS,
-} from 'actions/data/locations';
+} from '../../actions/data/locations';
 
 export const initialState = Immutable({
   locationsById: Immutable({}),

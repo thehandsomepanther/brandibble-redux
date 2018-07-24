@@ -1,6 +1,6 @@
 import filter from 'lodash.filter';
-import fireAction from 'utils/fireAction';
-import handleErrors from 'utils/handleErrors';
+import fireAction from '../../utils/fireAction';
+import handleErrors from '../../utils/handleErrors';
 
 export const FETCH_LOCATIONS = 'FETCH_LOCATIONS';
 export const FETCH_LOCATION = 'FETCH_LOCATION';

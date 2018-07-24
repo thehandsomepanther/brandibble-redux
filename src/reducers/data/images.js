@@ -1,5 +1,5 @@
 import Immutable from 'seamless-immutable';
-import { FETCH_IMAGES } from 'actions/data/images';
+import { FETCH_IMAGES } from '../../actions/data/images';
 
 export const initialState = Immutable({
   imagesById: Immutable({}),

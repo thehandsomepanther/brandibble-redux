@@ -1,6 +1,6 @@
-import fireAction from 'utils/fireAction';
-import handleErrors from 'utils/handleErrors';
 import moment from 'moment';
+import fireAction from '../../utils/fireAction';
+import handleErrors from '../../utils/handleErrors';
 
 export const FETCH_MENU = 'FETCH_MENU';
 

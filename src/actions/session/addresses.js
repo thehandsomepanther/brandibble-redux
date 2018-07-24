@@ -1,5 +1,5 @@
-import fireAction from 'utils/fireAction';
-import handleErrors from 'utils/handleErrors';
+import fireAction from '../../utils/fireAction';
+import handleErrors from '../../utils/handleErrors';
 
 export const FETCH_ADDRESSES = 'FETCH_ADDRESSES';
 export const CREATE_ADDRESS = 'CREATE_ADDRESS';

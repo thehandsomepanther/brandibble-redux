@@ -3,21 +3,21 @@ import {
   SEND_SUPPORT_TICKET,
   SETUP_BRANDIBBLE,
   SETUP_BRANDIBBLE_REDUX,
-} from 'actions/application';
+} from '../actions/application';
 import {
   CREATE_ADDRESS,
   DELETE_ADDRESS,
   FETCH_ADDRESSES,
-} from 'actions/session/addresses';
-import { FETCH_ALLERGENS } from 'actions/data/allergens';
-import { FETCH_MENU } from 'actions/session/menus';
+} from '../actions/session/addresses';
+import { FETCH_ALLERGENS } from '../actions/data/allergens';
+import { FETCH_MENU } from '../actions/session/menus';
 import {
   CREATE_FAVORITE,
   DELETE_FAVORITE,
   FETCH_FAVORITES,
   UPDATE_FAVORITE,
-} from 'actions/session/favorites';
-import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
+} from '../actions/session/favorites';
+import { SET_DEFAULT_PAYMENT } from '../actions/session/payments';
 import {
   ADD_LINE_ITEM,
   RESOLVE_ORDER,
@@ -31,15 +31,15 @@ import {
   SET_LINE_ITEM_MADE_FOR,
   SET_LINE_ITEM_INSTRUCTIONS,
   SET_PAYMENT_METHOD,
-} from 'actions/session/order';
+} from '../actions/session/order';
 import {
   FETCH_LOCATIONS,
   FETCH_LOCATION,
-} from 'actions/data/locations';
+} from '../actions/data/locations';
 import {
   FETCH_GEOLOCATIONS,
   CLEAR_GEOLOCATIONS,
-} from 'actions/data/geolocations';
+} from '../actions/data/geolocations';
 import {
   AUTHENTICATE_USER,
   FETCH_LEVELUP_LOYALTY,
@@ -56,12 +56,12 @@ import {
   VALIDATE_USER,
   ADD_ALLERGENS,
   REMOVE_ALLERGENS,
-} from 'actions/session/user';
+} from '../actions/session/user';
 import {
   FETCH_ALL_CUSTOMER_ORDERS,
   FETCH_PAST_CUSTOMER_ORDERS,
   FETCH_UPCOMING_CUSTOMER_ORDERS,
-} from 'actions/data/customerOrders';
+} from '../actions/data/customerOrders';
 import { Status } from 'utils/constants';
 import reduxCrud from 'redux-crud';
 

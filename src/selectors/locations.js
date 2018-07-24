@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
-import get from 'utils/get';
 import find from 'lodash.find';
+import get from '../utils/get';
 
 export const locationsCollection = state => state.data.locations.locationsById;
 

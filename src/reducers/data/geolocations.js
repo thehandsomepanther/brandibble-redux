@@ -1,5 +1,5 @@
 import Immutable from 'seamless-immutable';
-import { FETCH_GEOLOCATIONS, CLEAR_GEOLOCATIONS } from 'actions/data/geolocations';
+import { FETCH_GEOLOCATIONS, CLEAR_GEOLOCATIONS } from '../../actions/data/geolocations';
 
 export const initialState = Immutable([]);
 

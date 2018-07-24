@@ -1,5 +1,5 @@
 import reduxCrud from 'redux-crud';
-import { UNAUTHENTICATE_USER } from 'actions/session/user';
+import { UNAUTHENTICATE_USER } from '../../actions/session/user';
 
 const baseReducers = reduxCrud.Map.reducersFor('ratings', { key: 'receipt_id' });
 const initialState = {};

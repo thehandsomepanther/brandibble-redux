@@ -1,5 +1,5 @@
 import Immutable from 'seamless-immutable';
-import { FETCH_ALLERGENS } from 'actions/data/allergens';
+import { FETCH_ALLERGENS } from '../../actions/data/allergens';
 
 export const initialState = Immutable({
   allergensById: Immutable({}),

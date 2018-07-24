@@ -1,7 +1,7 @@
-import fireAction from 'utils/fireAction';
-import handleErrors from 'utils/handleErrors';
-import { resolveOrder, resolveOrderLocation } from 'actions/session/order';
-import { resolveUser } from 'actions/session/user';
+import fireAction from '../utils/fireAction';
+import handleErrors from '../utils/handleErrors';
+import { resolveOrder, resolveOrderLocation } from './session/order';
+import { resolveUser } from './session/user';
 
 export const SETUP_BRANDIBBLE = 'SETUP_BRANDIBBLE';
 export const SETUP_BRANDIBBLE_REDUX = 'SETUP_BRANDIBBLE_REDUX';

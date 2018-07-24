@@ -3,8 +3,8 @@ import {
   CREATE_ADDRESS,
   DELETE_ADDRESS,
   FETCH_ADDRESSES,
-} from 'actions/session/addresses';
-import { UNAUTHENTICATE_USER } from 'actions/session/user';
+} from '../../actions/session/addresses';
+import { UNAUTHENTICATE_USER } from '../../actions/session/user';
 
 export const initialState = Immutable({
   addressesById: Immutable({}),

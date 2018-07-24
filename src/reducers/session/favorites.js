@@ -4,8 +4,8 @@ import {
   DELETE_FAVORITE,
   FETCH_FAVORITES,
   UPDATE_FAVORITE,
-} from 'actions/session/favorites';
-import { UNAUTHENTICATE_USER } from 'actions/session/user';
+} from '../../actions/session/favorites';
+import { UNAUTHENTICATE_USER } from '../../actions/session/user';
 
 export const initialState = Immutable({
   favoritesById: Immutable({}),

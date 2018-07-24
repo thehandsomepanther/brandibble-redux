@@ -7,7 +7,7 @@ import {
   UNAUTHENTICATE_USER,
   ADD_ALLERGENS,
   REMOVE_ALLERGENS,
-} from 'actions/session/user';
+} from '../../actions/session/user';
 
 const {
   USER_CREATE_SUCCESS,
