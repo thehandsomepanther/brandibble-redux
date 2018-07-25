@@ -1,5 +1,4 @@
 /* global describe it */
-import Immutable from 'seamless-immutable';
 import { expect } from 'chai';
 import {
   FETCH_LEVELUP_LOYALTY,
@@ -13,12 +12,12 @@ const initialState = {
   loyalty: {},
   qr_code: null,
   payment_method: null,
-  campaignsById: Immutable({})
+  campaignsById: {},
 };
 
 describe('reducers/user/levelup', () => {
   it('should return the initial state', () => {
-    expect(reducer(initialState, {})).to.equal(initialState);
+    expect(reducer(initialState, {})).to.deep.equal(initialState);
   });
 
   it('handles the FETCH_LEVELUP_LOYALTY_FULFILLED action', () => {
