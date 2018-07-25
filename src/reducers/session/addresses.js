@@ -1,3 +1,4 @@
+import reduce from 'lodash.reduce';
 import {
   CREATE_ADDRESS,
   DELETE_ADDRESS,
@@ -19,7 +20,7 @@ export default function addresses(state = initialState, action) {
         ...state,
         addressesById: {
           ...state.addressesById,
-          ...payload.reduce((acc, curr) => ({
+          ...reduce(payload, (acc, curr) => ({
             ...acc,
             [curr.customer_address_id]: curr,
           }), {}),

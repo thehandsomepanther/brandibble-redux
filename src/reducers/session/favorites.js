@@ -1,3 +1,4 @@
+import pickBy from 'lodash.pickby';
 import {
   CREATE_FAVORITE,
   DELETE_FAVORITE,
@@ -12,7 +13,6 @@ export const initialState = {
 
 export default (state = initialState, action) => {
   const { payload, type } = action;
-  const newState = { ...state };
 
   switch (type) {
     case `${FETCH_FAVORITES}_FULFILLED`:
@@ -38,16 +38,14 @@ export default (state = initialState, action) => {
       };
 
     case `${DELETE_FAVORITE}_FULFILLED`:
-      Object.keys(newState.favoritesById).forEach((key) => {
-        if (
-          key === `${payload}` &&
-          newState.favoritesById[key].favorite_item_id === payload
-        ) {
-          delete newState.favoritesById[key];
-        }
-      });
+      return {
+        ...state,
+        favoritesById: pickBy(
+          state.favoritesById,
+          (_, key) => !(key === `${payload}` || state.favoritesById[key].favorite_item_id === payload),
+        ),
+      };
 
-      return newState;
     case `${UNAUTHENTICATE_USER}_FULFILLED`:
       return { ...initialState };
     default:

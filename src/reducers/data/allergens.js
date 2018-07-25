@@ -1,3 +1,4 @@
+import reduce from 'lodash.reduce';
 import { FETCH_ALLERGENS } from '../../actions/data/allergens';
 
 export const initialState = {
@@ -11,7 +12,7 @@ export default (state = initialState, action) => {
     case `${FETCH_ALLERGENS}_FULFILLED`:
       return {
         ...state,
-        allergensById: payload.reduce((acc, curr) => ({ ...acc, [curr.id]: curr }), {}),
+        allergensById: reduce(payload, (acc, curr) => ({ ...acc, [curr.id]: curr }), {}),
       };
     default:
       return state;

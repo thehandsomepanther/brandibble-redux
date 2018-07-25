@@ -1,3 +1,4 @@
+import reduce from 'lodash.reduce';
 import { RESOLVE_ORDER_LOCATION } from '../../actions/session/order';
 import {
   PUSH_GEOLOCATION,
@@ -38,7 +39,7 @@ export default (state = initialState, action) => {
         ...state,
         locationsById: {
           ...state.locationsById,
-          ...payload.reduce((acc, curr) => ({
+          ...reduce(payload, (acc, curr) => ({
             ...acc,
             [curr.location_id]: curr,
           }), {}),
