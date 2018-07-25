@@ -1,3 +1,4 @@
+import reduxCrud from 'redux-crud';
 // TODO: this reducer is untested
 import {
   SEND_SUPPORT_TICKET,
@@ -62,8 +63,7 @@ import {
   FETCH_PAST_CUSTOMER_ORDERS,
   FETCH_UPCOMING_CUSTOMER_ORDERS,
 } from '../actions/data/customerOrders';
-import { Status } from 'utils/constants';
-import reduxCrud from 'redux-crud';
+import { Status } from '../utils/constants';
 
 const {
   FULFILLED,

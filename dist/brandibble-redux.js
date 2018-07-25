@@ -4584,7 +4584,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)(module)))
 
 /***/ }),
 /* 1 */
@@ -4919,7 +4919,7 @@ createUser=createUser;exports.
 
 
 
-updateUser=updateUser;var _reduxCrud=__webpack_require__(7);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(60);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('user'),updateStart=_reduxCrud$actionCrea.updateStart,updateSuccess=_reduxCrud$actionCrea.updateSuccess,updateError=_reduxCrud$actionCrea.updateError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var FETCH_USER=exports.FETCH_USER='FETCH_USER';var RESET_USER_PASSWORD=exports.RESET_USER_PASSWORD='RESET_USER_PASSWORD';var RESET_LEVELUP_PASSWORD=exports.RESET_LEVELUP_PASSWORD='RESET_LEVELUP_PASSWORD';var ADD_ALLERGENS=exports.ADD_ALLERGENS='ADD_ALLERGENS';var REMOVE_ALLERGENS=exports.REMOVE_ALLERGENS='REMOVE_ALLERGENS';var FETCH_LEVELUP_QR_CODE=exports.FETCH_LEVELUP_QR_CODE='FETCH_LEVELUP_QR_CODE';var FETCH_LEVELUP_LOYALTY=exports.FETCH_LEVELUP_LOYALTY='FETCH_LEVELUP_LOYALTY';var UPDATE_LEVELUP_CONNECTION=exports.UPDATE_LEVELUP_CONNECTION='UPDATE_LEVELUP_CONNECTION';var CONNECT_LEVELUP=exports.CONNECT_LEVELUP='CONNECT_LEVELUP';var DISCONNECT_LEVELUP=exports.DISCONNECT_LEVELUP='DISCONNECT_LEVELUP';var FETCH_LEVELUP_PAYMENT_METHOD=exports.FETCH_LEVELUP_PAYMENT_METHOD='FETCH_LEVELUP_PAYMENT_METHOD';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref2){var data=_ref2.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _addAllergens(brandibble,allergens,success,fail){return{type:ADD_ALLERGENS,payload:brandibble.allergens.create(allergens).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _removeAllergens(brandibble,allergens,success,fail){return{type:REMOVE_ALLERGENS,payload:brandibble.allergens.remove(allergens).then(function(_ref4){var data=_ref4.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function _fetchUser(brandibble,id){return{type:FETCH_USER,payload:brandibble.customers.show(id).then(function(_ref5){var data=_ref5.data;return data;}).catch(function(response){var errors=response.errors;return errors||response;})};}function _resetUserPassword(brandibble,email,success,fail){return{type:RESET_USER_PASSWORD,payload:brandibble.customers.resetPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resetLevelUpPassword(brandibble,email,success,fail){return{type:RESET_LEVELUP_PASSWORD,payload:brandibble.customers.resetLevelUpPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}var _fetchLevelUpQRCode=function _fetchLevelUpQRCode(brandibble,body,success,fail){return{type:FETCH_LEVELUP_QR_CODE,payload:brandibble.customers.currentLevelUpQRCode(body).then(function(_ref6){var data=_ref6.data;success(data.qr_code);return data.qr_code;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _fetchLevelUpLoyalty=function _fetchLevelUpLoyalty(brandibble,success,fail){return{type:FETCH_LEVELUP_LOYALTY,payload:brandibble.customers.currentLevelUpLoyalty().then(function(_ref7){var data=_ref7.data;success(data.loyalty);return data.loyalty;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _updateLevelUpConnection=function _updateLevelUpConnection(brandibble,customerId,password){return{type:UPDATE_LEVELUP_CONNECTION,payload:brandibble.customers.levelUpUpdate(customerId,password)};};var _connectLevelUp=function _connectLevelUp(brandibble,customerId,email,password){return{type:CONNECT_LEVELUP,payload:brandibble.customers.levelUpConnect(customerId,email,password)};};var _disconnectLevelUp=function _disconnectLevelUp(brandibble,customerId){return{type:DISCONNECT_LEVELUP,payload:brandibble.customers.levelUpDisconnect(customerId).catch(function(response){var errors=response.errors;throw errors||response;})};};var _fetchLevelUpPaymentMethod=function _fetchLevelUpPaymentMethod(brandibble,customerId){return{type:FETCH_LEVELUP_PAYMENT_METHOD,payload:brandibble.customers.levelUpPaymentMethod(customerId).then(function(_ref8){var data=_ref8.data;return data.payment_method;}).catch(function(response){var errors=response.errors;throw errors||response;})};};function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function addAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_addAllergens(brandibble,allergens,success,fail));};}function removeAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_removeAllergens(brandibble,allergens,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function fetchUser(brandibble,id){return function(dispatch){return dispatch(_fetchUser(brandibble,id));};}function resetUserPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetUserPassword(brandibble,email,success,fail));};}function resetLevelUpPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetLevelUpPassword(brandibble,email,success,fail));};}function resolveUser(brandibble){var adapter=brandibble.adapter,customers=brandibble.customers;var payload=adapter.customerToken?customers.current().then(function(_ref9){var data=_ref9.data;return data;}):Promise.resolve({});return function(dispatch){return dispatch(_resolveUser(payload));};}function createUser(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.customers.create(data).then(function(_ref10){var data=_ref10.data;return dispatch(createSuccess(_extends({id:id},data)));}).catch(function(response){var errors=response.errors;return dispatch(createError(errors||response,{id:id,data:data}));});};}function updateUser(brandibble,id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
+updateUser=updateUser;var _reduxCrud=__webpack_require__(7);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(59);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('user'),updateStart=_reduxCrud$actionCrea.updateStart,updateSuccess=_reduxCrud$actionCrea.updateSuccess,updateError=_reduxCrud$actionCrea.updateError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError;var VALIDATE_USER=exports.VALIDATE_USER='VALIDATE_USER';var AUTHENTICATE_USER=exports.AUTHENTICATE_USER='AUTHENTICATE_USER';var UNAUTHENTICATE_USER=exports.UNAUTHENTICATE_USER='UNAUTHENTICATE_USER';var RESOLVE_USER=exports.RESOLVE_USER='RESOLVE_USER';var FETCH_USER=exports.FETCH_USER='FETCH_USER';var RESET_USER_PASSWORD=exports.RESET_USER_PASSWORD='RESET_USER_PASSWORD';var RESET_LEVELUP_PASSWORD=exports.RESET_LEVELUP_PASSWORD='RESET_LEVELUP_PASSWORD';var ADD_ALLERGENS=exports.ADD_ALLERGENS='ADD_ALLERGENS';var REMOVE_ALLERGENS=exports.REMOVE_ALLERGENS='REMOVE_ALLERGENS';var FETCH_LEVELUP_QR_CODE=exports.FETCH_LEVELUP_QR_CODE='FETCH_LEVELUP_QR_CODE';var FETCH_LEVELUP_LOYALTY=exports.FETCH_LEVELUP_LOYALTY='FETCH_LEVELUP_LOYALTY';var UPDATE_LEVELUP_CONNECTION=exports.UPDATE_LEVELUP_CONNECTION='UPDATE_LEVELUP_CONNECTION';var CONNECT_LEVELUP=exports.CONNECT_LEVELUP='CONNECT_LEVELUP';var DISCONNECT_LEVELUP=exports.DISCONNECT_LEVELUP='DISCONNECT_LEVELUP';var FETCH_LEVELUP_PAYMENT_METHOD=exports.FETCH_LEVELUP_PAYMENT_METHOD='FETCH_LEVELUP_PAYMENT_METHOD';var NO_OP=function NO_OP(f){return f;};function _validateUser(brandibble,email,success,fail){return{type:VALIDATE_USER,payload:brandibble.customers.validateCustomer({email:email}).then(function(_ref){var data=_ref.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _authenticateUser(brandibble,loginData,success,fail){return{type:AUTHENTICATE_USER,payload:brandibble.customers.authenticate(loginData).then(function(_ref2){var data=_ref2.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _addAllergens(brandibble,allergens,success,fail){return{type:ADD_ALLERGENS,payload:brandibble.allergens.create(allergens).then(function(_ref3){var data=_ref3.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _removeAllergens(brandibble,allergens,success,fail){return{type:REMOVE_ALLERGENS,payload:brandibble.allergens.remove(allergens).then(function(_ref4){var data=_ref4.data;success(data);return data;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _unauthenticateUser(brandibble,success,fail){return{type:UNAUTHENTICATE_USER,payload:brandibble.customers.invalidate().then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resolveUser(payload){return{type:RESOLVE_USER,payload:payload};}function _fetchUser(brandibble,id){return{type:FETCH_USER,payload:brandibble.customers.show(id).then(function(_ref5){var data=_ref5.data;return data;}).catch(function(response){var errors=response.errors;return errors||response;})};}function _resetUserPassword(brandibble,email,success,fail){return{type:RESET_USER_PASSWORD,payload:brandibble.customers.resetPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function _resetLevelUpPassword(brandibble,email,success,fail){return{type:RESET_LEVELUP_PASSWORD,payload:brandibble.customers.resetLevelUpPassword(email).then(success).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}var _fetchLevelUpQRCode=function _fetchLevelUpQRCode(brandibble,body,success,fail){return{type:FETCH_LEVELUP_QR_CODE,payload:brandibble.customers.currentLevelUpQRCode(body).then(function(_ref6){var data=_ref6.data;success(data.qr_code);return data.qr_code;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _fetchLevelUpLoyalty=function _fetchLevelUpLoyalty(brandibble,success,fail){return{type:FETCH_LEVELUP_LOYALTY,payload:brandibble.customers.currentLevelUpLoyalty().then(function(_ref7){var data=_ref7.data;success(data.loyalty);return data.loyalty;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};};var _updateLevelUpConnection=function _updateLevelUpConnection(brandibble,customerId,password){return{type:UPDATE_LEVELUP_CONNECTION,payload:brandibble.customers.levelUpUpdate(customerId,password)};};var _connectLevelUp=function _connectLevelUp(brandibble,customerId,email,password){return{type:CONNECT_LEVELUP,payload:brandibble.customers.levelUpConnect(customerId,email,password)};};var _disconnectLevelUp=function _disconnectLevelUp(brandibble,customerId){return{type:DISCONNECT_LEVELUP,payload:brandibble.customers.levelUpDisconnect(customerId).catch(function(response){var errors=response.errors;throw errors||response;})};};var _fetchLevelUpPaymentMethod=function _fetchLevelUpPaymentMethod(brandibble,customerId){return{type:FETCH_LEVELUP_PAYMENT_METHOD,payload:brandibble.customers.levelUpPaymentMethod(customerId).then(function(_ref8){var data=_ref8.data;return data.payment_method;}).catch(function(response){var errors=response.errors;throw errors||response;})};};function validateUser(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_validateUser(brandibble,email,success,fail));};}function authenticateUser(brandibble,loginData){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_authenticateUser(brandibble,loginData,success,fail));};}function addAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_addAllergens(brandibble,allergens,success,fail));};}function removeAllergens(brandibble,allergens){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_removeAllergens(brandibble,allergens,success,fail));};}function unauthenticateUser(brandibble){var success=arguments.length>1&&arguments[1]!==undefined?arguments[1]:NO_OP;var fail=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;return function(dispatch){return dispatch(_unauthenticateUser(brandibble,success,fail));};}function fetchUser(brandibble,id){return function(dispatch){return dispatch(_fetchUser(brandibble,id));};}function resetUserPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetUserPassword(brandibble,email,success,fail));};}function resetLevelUpPassword(brandibble,email){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return function(dispatch){return dispatch(_resetLevelUpPassword(brandibble,email,success,fail));};}function resolveUser(brandibble){var adapter=brandibble.adapter,customers=brandibble.customers;var payload=adapter.customerToken?customers.current().then(function(_ref9){var data=_ref9.data;return data;}):Promise.resolve({});return function(dispatch){return dispatch(_resolveUser(payload));};}function createUser(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,id:id}));return brandibble.customers.create(data).then(function(_ref10){var data=_ref10.data;return dispatch(createSuccess(_extends({id:id},data)));}).catch(function(response){var errors=response.errors;return dispatch(createError(errors||response,{id:id,data:data}));});};}function updateUser(brandibble,id){var data=arguments.length>2&&arguments[2]!==undefined?arguments[2]:{};
 return function(dispatch){
 dispatch(updateStart({record:data,id:id}));
 return brandibble.customers.updateCurrent(data).
@@ -4999,7 +4999,7 @@ module.exports = _curry2(function merge(l, r) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var invariants_1 = __webpack_require__(50);
+var invariants_1 = __webpack_require__(49);
 var store_1 = __webpack_require__(11);
 function invariantsList(invariantArgs, config, current, record) {
     var extra = {
@@ -5020,8 +5020,8 @@ exports.default = invariantsList;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var invariants_1 = __webpack_require__(50);
-var store_1 = __webpack_require__(13);
+var invariants_1 = __webpack_require__(49);
+var store_1 = __webpack_require__(14);
 function invariantsMap(invariantArgs, config, current, record) {
     var extra = {
         assertValidStore: store_1.default.assert,
@@ -5106,7 +5106,7 @@ module.exports = function _curry1(fn) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var assert_1 = __webpack_require__(210);
-var remove_1 = __webpack_require__(51);
+var remove_1 = __webpack_require__(50);
 var merge_1 = __webpack_require__(222);
 exports.default = {
     assert: assert_1.default,
@@ -5126,6 +5126,34 @@ module.exports = function _has(prop, obj) {
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if(!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if(!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5142,7 +5170,7 @@ exports.default = {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.SET_LINE_ITEM_INSTRUCTIONS=exports.SET_LINE_ITEM_MADE_FOR=exports.VALIDATE_CURRENT_CART=exports.VALIDATE_CURRENT_ORDER=exports.CREATE_NEW_ORDER=exports.SET_REQUESTED_AT=exports.SET_PROMO_CODE=exports.SET_ORDER_ADDRESS=exports.SET_PAYMENT_METHOD=exports.BIND_CUSTOMER_TO_ORDER=exports.SUBMIT_ORDER=exports.SET_ORDER_LOCATION_ID=exports.REMOVE_OPTION_FROM_LINE_ITEM=exports.ADD_OPTION_TO_LINE_ITEM=exports.REMOVE_LINE_ITEM=exports.SET_LINE_ITEM_QUANTITY=exports.PUSH_LINE_ITEM=exports.ADD_LINE_ITEM=exports.RESOLVE_ORDER_LOCATION=exports.RESOLVE_ORDER=undefined;exports.
@@ -5426,34 +5454,6 @@ return function(dispatch){return dispatch(_submitOrder.apply(undefined,args));};
 }
 
 /***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if(!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if(!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
 /* 16 */
 /***/ (function(module, exports) {
 
@@ -5547,7 +5547,7 @@ module.exports = {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.sendSupportTicket=exports.setupBrandibbleRedux=exports.setupBrandibble=exports.SEND_SUPPORT_TICKET=exports.SETUP_BRANDIBBLE_REDUX=exports.SETUP_BRANDIBBLE=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _fireAction=__webpack_require__(8);var _fireAction2=_interopRequireDefault(_fireAction);
 var _handleErrors=__webpack_require__(9);var _handleErrors2=_interopRequireDefault(_handleErrors);
-var _order=__webpack_require__(14);
+var _order=__webpack_require__(15);
 var _user=__webpack_require__(3);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 var SETUP_BRANDIBBLE=exports.SETUP_BRANDIBBLE='SETUP_BRANDIBBLE';
@@ -5671,7 +5671,7 @@ return dispatch((0,_fireAction2.default)(FETCH_ALLERGENS,payload));
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.fetchLocations=exports.fetchLocation=exports.pushGeolocation=exports.PUSH_GEOLOCATION=exports.FETCH_LOCATION=exports.FETCH_LOCATIONS=undefined;var _lodash=__webpack_require__(44);var _lodash2=_interopRequireDefault(_lodash);
+Object.defineProperty(exports,"__esModule",{value:true});exports.fetchLocations=exports.fetchLocation=exports.pushGeolocation=exports.PUSH_GEOLOCATION=exports.FETCH_LOCATION=exports.FETCH_LOCATIONS=undefined;var _lodash=__webpack_require__(60);var _lodash2=_interopRequireDefault(_lodash);
 var _fireAction=__webpack_require__(8);var _fireAction2=_interopRequireDefault(_fireAction);
 var _handleErrors=__webpack_require__(9);var _handleErrors2=_interopRequireDefault(_handleErrors);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
@@ -5719,7 +5719,7 @@ return dispatch((0,_fireAction2.default)(FETCH_LOCATIONS,payload));
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.clearGeolocations=exports.fetchGeolocations=exports.CLEAR_GEOLOCATIONS=exports.FETCH_GEOLOCATIONS=undefined;var _lodash=__webpack_require__(44);var _lodash2=_interopRequireDefault(_lodash);
+Object.defineProperty(exports,"__esModule",{value:true});exports.clearGeolocations=exports.fetchGeolocations=exports.CLEAR_GEOLOCATIONS=exports.FETCH_GEOLOCATIONS=undefined;var _lodash=__webpack_require__(60);var _lodash2=_interopRequireDefault(_lodash);
 var _fireAction=__webpack_require__(8);var _fireAction2=_interopRequireDefault(_fireAction);
 var _handleErrors=__webpack_require__(9);var _handleErrors2=_interopRequireDefault(_handleErrors);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
@@ -5881,7 +5881,7 @@ setDefaultPayment=setDefaultPayment;exports.
 
 
 
-deletePayment=deletePayment;var _reduxCrud=__webpack_require__(7);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(60);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('payments',{key:'customer_card_id'}),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError,deleteStart=_reduxCrud$actionCrea.deleteStart,deleteSuccess=_reduxCrud$actionCrea.deleteSuccess,deleteError=_reduxCrud$actionCrea.deleteError;var SET_DEFAULT_PAYMENT=exports.SET_DEFAULT_PAYMENT='SET_DEFAULT_PAYMENT';var NO_OP=function NO_OP(f){return f;};function fetchPayments(brandibble){return function(dispatch){dispatch(fetchStart());return brandibble.payments.all().then(function(_ref){var data=_ref.data;return dispatch(fetchSuccess(data));}).catch(function(response){var errors=response.errors;return dispatch(fetchError(errors||response));});};}function createPayment(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,customer_card_id:id}));return brandibble.payments.create(data).then(function(_ref2){var data=_ref2.data;return dispatch(createSuccess(_extends({customer_card_id:id},data[0])));}).catch(function(response){var errors=response.errors;return dispatch(createError(errors||response,{customer_card_id:id,data:data}));});};}function _setDefaultPayment(brandibble,customer_card_id){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return{type:SET_DEFAULT_PAYMENT,payload:brandibble.payments.setDefault(customer_card_id).then(function(data){success(data);return customer_card_id;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function setDefaultPayment(brandibble,customer_card_id){return function(dispatch){return dispatch(_setDefaultPayment(brandibble,customer_card_id));};}function deletePayment(brandibble,id){
+deletePayment=deletePayment;var _reduxCrud=__webpack_require__(7);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _generateUUID=__webpack_require__(59);var _generateUUID2=_interopRequireDefault(_generateUUID);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionCrea=_reduxCrud2.default.actionCreatorsFor('payments',{key:'customer_card_id'}),fetchStart=_reduxCrud$actionCrea.fetchStart,fetchSuccess=_reduxCrud$actionCrea.fetchSuccess,fetchError=_reduxCrud$actionCrea.fetchError,createStart=_reduxCrud$actionCrea.createStart,createSuccess=_reduxCrud$actionCrea.createSuccess,createError=_reduxCrud$actionCrea.createError,deleteStart=_reduxCrud$actionCrea.deleteStart,deleteSuccess=_reduxCrud$actionCrea.deleteSuccess,deleteError=_reduxCrud$actionCrea.deleteError;var SET_DEFAULT_PAYMENT=exports.SET_DEFAULT_PAYMENT='SET_DEFAULT_PAYMENT';var NO_OP=function NO_OP(f){return f;};function fetchPayments(brandibble){return function(dispatch){dispatch(fetchStart());return brandibble.payments.all().then(function(_ref){var data=_ref.data;return dispatch(fetchSuccess(data));}).catch(function(response){var errors=response.errors;return dispatch(fetchError(errors||response));});};}function createPayment(brandibble){var data=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};return function(dispatch){var id=(0,_generateUUID2.default)();dispatch(createStart({record:data,customer_card_id:id}));return brandibble.payments.create(data).then(function(_ref2){var data=_ref2.data;return dispatch(createSuccess(_extends({customer_card_id:id},data[0])));}).catch(function(response){var errors=response.errors;return dispatch(createError(errors||response,{customer_card_id:id,data:data}));});};}function _setDefaultPayment(brandibble,customer_card_id){var success=arguments.length>2&&arguments[2]!==undefined?arguments[2]:NO_OP;var fail=arguments.length>3&&arguments[3]!==undefined?arguments[3]:NO_OP;return{type:SET_DEFAULT_PAYMENT,payload:brandibble.payments.setDefault(customer_card_id).then(function(data){success(data);return customer_card_id;}).catch(function(response){var errors=response.errors;throw fail(errors||response);})};}function setDefaultPayment(brandibble,customer_card_id){return function(dispatch){return dispatch(_setDefaultPayment(brandibble,customer_card_id));};}function deletePayment(brandibble,id){
 return function(dispatch){
 dispatch(deleteStart({customer_card_id:id}));
 return brandibble.payments.delete(id).
@@ -8443,7 +8443,7 @@ function property(path) {
 
 module.exports = reduce;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(13)(module)))
 
 /***/ }),
 /* 33 */
@@ -8849,6 +8849,428 @@ module.exports = function _curryN(length, received, fn) {
 
 /***/ }),
 /* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:true});exports.fetchMenu=exports.FETCH_MENU=undefined;var _moment=__webpack_require__(0);var _moment2=_interopRequireDefault(_moment);
+var _fireAction=__webpack_require__(8);var _fireAction2=_interopRequireDefault(_fireAction);
+var _handleErrors=__webpack_require__(9);var _handleErrors2=_interopRequireDefault(_handleErrors);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+
+var FETCH_MENU=exports.FETCH_MENU='FETCH_MENU';
+
+var NOW=new Date();
+
+var defaultMenuType={
+locationId:null,
+requestedAt:NOW,
+serviceType:'delivery'};
+
+
+var fetchMenu=exports.fetchMenu=function fetchMenu(brandibble){var menuType=arguments.length>1&&arguments[1]!==undefined?arguments[1]:defaultMenuType;return function(dispatch){var
+
+locationId=
+
+
+menuType.locationId,requestedAt=menuType.requestedAt,serviceType=menuType.serviceType;
+var requestedAtFormatted=new Date((0,_moment2.default)(requestedAt));
+
+var payload=brandibble.menus.build(locationId,serviceType,requestedAtFormatted).
+then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
+
+return dispatch((0,_fireAction2.default)(FETCH_MENU,payload));
+};};
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module, global) {/**
+ * lodash 3.0.1 (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ * Available under MIT license <https://lodash.com/license>
+ */
+
+/** Used to determine if values are of the language type `Object`. */
+var objectTypes = {
+  'function': true,
+  'object': true
+};
+
+/** Detect free variable `exports`. */
+var freeExports = (objectTypes[typeof exports] && exports && !exports.nodeType)
+  ? exports
+  : undefined;
+
+/** Detect free variable `module`. */
+var freeModule = (objectTypes[typeof module] && module && !module.nodeType)
+  ? module
+  : undefined;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = checkGlobal(freeExports && freeModule && typeof global == 'object' && global);
+
+/** Detect free variable `self`. */
+var freeSelf = checkGlobal(objectTypes[typeof self] && self);
+
+/** Detect free variable `window`. */
+var freeWindow = checkGlobal(objectTypes[typeof window] && window);
+
+/** Detect `this` as the global object. */
+var thisGlobal = checkGlobal(objectTypes[typeof this] && this);
+
+/**
+ * Used as a reference to the global object.
+ *
+ * The `this` value is used if it's the global object to avoid Greasemonkey's
+ * restricted `window` object, otherwise the `window` object is used.
+ */
+var root = freeGlobal ||
+  ((freeWindow !== (thisGlobal && thisGlobal.window)) && freeWindow) ||
+    freeSelf || thisGlobal || Function('return this')();
+
+/**
+ * Checks if `value` is a global object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {null|Object} Returns `value` if it's a global object, else `null`.
+ */
+function checkGlobal(value) {
+  return (value && value.Object === Object) ? value : null;
+}
+
+module.exports = root;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)(module), __webpack_require__(16)))
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var is = __webpack_require__(21);
+var makeScope_1 = __webpack_require__(47);
+function default_1(config, reducerName, record) {
+    var scope = makeScope_1.default(config, reducerName);
+    var isArray = is(Array, record);
+    if (isArray)
+        throw new TypeError(scope + ": Expected record not to be an array");
+}
+exports.default = default_1;
+
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function makeScope(config, reducerName) {
+    return config.resourceName + "." + reducerName;
+}
+exports.default = makeScope;
+
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var merge = __webpack_require__(4);
+var actionTypesFor_1 = __webpack_require__(34);
+var constants_1 = __webpack_require__(1);
+function reducersFor(resourceName, args, emptyState, reducers) {
+    if (args === void 0) { args = {}; }
+    if (resourceName == null)
+        throw new Error("reducersFor: Expected resourceName");
+    var defaults = {
+        key: constants_1.default.DEFAULT_KEY,
+        resourceName: resourceName
+    };
+    var config = merge(defaults, args);
+    return function getReducer(state, action) {
+        state = state || emptyState;
+        if (action == null)
+            throw new Error(resourceName + " reducers: Expected action");
+        var actionTypes = actionTypesFor_1.default(resourceName);
+        var record = action.record;
+        switch (action.type) {
+            case actionTypes.fetchSuccess:
+                return reducers.fetchSuccess(config, state, action.records, emptyState, action.data && action.data.replace);
+            case actionTypes.createStart:
+                return reducers.createStart(config, state, record);
+            case actionTypes.createSuccess:
+                return reducers.createSuccess(config, state, record, action.cid);
+            case actionTypes.createError:
+                return reducers.createError(config, state, record);
+            case actionTypes.updateStart:
+                return reducers.updateStart(config, state, record);
+            case actionTypes.updateSuccess:
+                return reducers.updateSuccess(config, state, record);
+            case actionTypes.updateError:
+                return reducers.updateError(config, state, record);
+            case actionTypes.deleteStart:
+                return reducers.deleteStart(config, state, record);
+            case actionTypes.deleteSuccess:
+                return reducers.deleteSuccess(config, state, record);
+            case actionTypes.deleteError:
+                return reducers.deleteError(config, state, record);
+            default:
+                return state;
+        }
+    };
+}
+exports.default = reducersFor;
+
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var assertHasKey_1 = __webpack_require__(207);
+var assertNotArray_1 = __webpack_require__(46);
+var makeScope_1 = __webpack_require__(47);
+function invariants(baseArgs, extraArgs) {
+    var config = extraArgs.config;
+    if (!config.resourceName)
+        throw new Error("Expected config.resourceName");
+    var scope = makeScope_1.default(config, baseArgs.reducerName);
+    if (!config.key)
+        throw new Error(scope + ": Expected config.key");
+    if (!extraArgs.record)
+        throw new Error(scope + ": Expected record/s");
+    extraArgs.assertValidStore(scope, extraArgs.current);
+    if (!baseArgs.canBeArray) {
+        assertNotArray_1.default(extraArgs.config, baseArgs.reducerName, extraArgs.record);
+    }
+    assertHasKey_1.default(extraArgs.config, scope, extraArgs.record);
+}
+exports.default = invariants;
+
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var reject = __webpack_require__(36);
+function remove(config, current, addedRecord) {
+    var key = config.key;
+    function predicate(record) {
+        var recordKey = record[key];
+        var isSameKey = addedRecord[key] === recordKey;
+        return isSameKey;
+    }
+    return reject(predicate, current);
+}
+exports.default = remove;
+
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var merge = __webpack_require__(4);
+var constants_1 = __webpack_require__(1);
+function prepareRecord(record) {
+    var _a;
+    var recordStatus = (_a = {},
+        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
+        _a[constants_1.default.SPECIAL_KEYS.PENDING_CREATE] = true,
+        _a);
+    return merge(record, recordStatus);
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports) {
+
+module.exports = function _reduced(x) {
+  return x && x['@@transducer/reduced'] ? x :
+    {
+      '@@transducer/value': x,
+      '@@transducer/reduced': true
+    };
+};
+
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var merge = __webpack_require__(4);
+var constants_1 = __webpack_require__(1);
+function prepareRecord(record) {
+    var _a;
+    var recordStatus = (_a = {},
+        _a[constants_1.default.SPECIAL_KEYS.DELETED] = true,
+        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
+        _a);
+    return merge(record, recordStatus);
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var has = __webpack_require__(239);
+var all = __webpack_require__(240);
+function default_1(config, reducerName, records) {
+    // All given records must have a key
+    var haskey = has(config.key);
+    var allKeys = all(haskey, records);
+    if (!allKeys) {
+        throw new Error(reducerName +
+            ": Expected all records to have a value for the store's key `" +
+            config.key +
+            "`");
+    }
+}
+exports.default = default_1;
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var dissoc = __webpack_require__(56);
+var constants_1 = __webpack_require__(1);
+function prepareRecord(record) {
+    return dissoc(constants_1.default.SPECIAL_KEYS.BUSY, record);
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(2);
+
+
+/**
+ * Returns a new object that does not contain a `prop` property.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.10.0
+ * @category Object
+ * @sig String -> {k: v} -> {k: v}
+ * @param {String} prop The name of the property to dissociate
+ * @param {Object} obj The object to clone
+ * @return {Object} A new object equivalent to the original but without the specified property
+ * @see R.assoc
+ * @example
+ *
+ *      R.dissoc('b', {a: 1, b: 2, c: 3}); //=> {a: 1, c: 3}
+ */
+module.exports = _curry2(function dissoc(prop, obj) {
+  var result = {};
+  for (var p in obj) {
+    result[p] = obj[p];
+  }
+  delete result[prop];
+  return result;
+});
+
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var merge = __webpack_require__(4);
+var constants_1 = __webpack_require__(1);
+function prepareRecord(record) {
+    var _a;
+    var recordStatus = (_a = {},
+        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
+        _a[constants_1.default.SPECIAL_KEYS.PENDING_UPDATE] = true,
+        _a);
+    return merge(record, recordStatus);
+}
+exports.prepareRecord = prepareRecord;
+
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _curry2 = __webpack_require__(2);
+
+
+/**
+ * Returns a function that when supplied an object returns the indicated
+ * property of that object, if it exists.
+ *
+ * @func
+ * @memberOf R
+ * @since v0.1.0
+ * @category Object
+ * @sig s -> {s: a} -> a | Undefined
+ * @param {String} p The property name
+ * @param {Object} obj The object to query
+ * @return {*} The value at `obj.p`.
+ * @see R.path
+ * @example
+ *
+ *      R.prop('x', {x: 100}); //=> 100
+ *      R.prop('x', {}); //=> undefined
+ */
+module.exports = _curry2(function prop(p, obj) { return obj[p]; });
+
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports) {
+
+Object.defineProperty(exports,"__esModule",{value:true});exports.default=
+
+function(){
+var d=new Date().getTime();
+if(window.performance&&typeof window.performance.now==='function'){
+d+=performance.now();
+}
+var uuid='xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){
+var r=(d+Math.random()*16)%16|0;
+d=Math.floor(d/16);
+return(c==='x'?r:r&0x3|0x8).toString(16);
+});
+return uuid;
+};
+
+/***/ }),
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -11218,429 +11640,7 @@ function property(path) {
 
 module.exports = filter;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(15)(module)))
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-Object.defineProperty(exports,"__esModule",{value:true});exports.fetchMenu=exports.FETCH_MENU=undefined;var _moment=__webpack_require__(0);var _moment2=_interopRequireDefault(_moment);
-var _fireAction=__webpack_require__(8);var _fireAction2=_interopRequireDefault(_fireAction);
-var _handleErrors=__webpack_require__(9);var _handleErrors2=_interopRequireDefault(_handleErrors);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
-
-var FETCH_MENU=exports.FETCH_MENU='FETCH_MENU';
-
-var NOW=new Date();
-
-var defaultMenuType={
-locationId:null,
-requestedAt:NOW,
-serviceType:'delivery'};
-
-
-var fetchMenu=exports.fetchMenu=function fetchMenu(brandibble){var menuType=arguments.length>1&&arguments[1]!==undefined?arguments[1]:defaultMenuType;return function(dispatch){var
-
-locationId=
-
-
-menuType.locationId,requestedAt=menuType.requestedAt,serviceType=menuType.serviceType;
-var requestedAtFormatted=new Date((0,_moment2.default)(requestedAt));
-
-var payload=brandibble.menus.build(locationId,serviceType,requestedAtFormatted).
-then(function(_ref){var data=_ref.data;return data;}).catch(_handleErrors2.default);
-
-return dispatch((0,_fireAction2.default)(FETCH_MENU,payload));
-};};
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(module, global) {/**
- * lodash 3.0.1 (Custom Build) <https://lodash.com/>
- * Build: `lodash modularize exports="npm" -o ./`
- * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
- * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
- * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
- * Available under MIT license <https://lodash.com/license>
- */
-
-/** Used to determine if values are of the language type `Object`. */
-var objectTypes = {
-  'function': true,
-  'object': true
-};
-
-/** Detect free variable `exports`. */
-var freeExports = (objectTypes[typeof exports] && exports && !exports.nodeType)
-  ? exports
-  : undefined;
-
-/** Detect free variable `module`. */
-var freeModule = (objectTypes[typeof module] && module && !module.nodeType)
-  ? module
-  : undefined;
-
-/** Detect free variable `global` from Node.js. */
-var freeGlobal = checkGlobal(freeExports && freeModule && typeof global == 'object' && global);
-
-/** Detect free variable `self`. */
-var freeSelf = checkGlobal(objectTypes[typeof self] && self);
-
-/** Detect free variable `window`. */
-var freeWindow = checkGlobal(objectTypes[typeof window] && window);
-
-/** Detect `this` as the global object. */
-var thisGlobal = checkGlobal(objectTypes[typeof this] && this);
-
-/**
- * Used as a reference to the global object.
- *
- * The `this` value is used if it's the global object to avoid Greasemonkey's
- * restricted `window` object, otherwise the `window` object is used.
- */
-var root = freeGlobal ||
-  ((freeWindow !== (thisGlobal && thisGlobal.window)) && freeWindow) ||
-    freeSelf || thisGlobal || Function('return this')();
-
-/**
- * Checks if `value` is a global object.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {null|Object} Returns `value` if it's a global object, else `null`.
- */
-function checkGlobal(value) {
-  return (value && value.Object === Object) ? value : null;
-}
-
-module.exports = root;
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module), __webpack_require__(16)))
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var is = __webpack_require__(21);
-var makeScope_1 = __webpack_require__(48);
-function default_1(config, reducerName, record) {
-    var scope = makeScope_1.default(config, reducerName);
-    var isArray = is(Array, record);
-    if (isArray)
-        throw new TypeError(scope + ": Expected record not to be an array");
-}
-exports.default = default_1;
-
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-function makeScope(config, reducerName) {
-    return config.resourceName + "." + reducerName;
-}
-exports.default = makeScope;
-
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var merge = __webpack_require__(4);
-var actionTypesFor_1 = __webpack_require__(34);
-var constants_1 = __webpack_require__(1);
-function reducersFor(resourceName, args, emptyState, reducers) {
-    if (args === void 0) { args = {}; }
-    if (resourceName == null)
-        throw new Error("reducersFor: Expected resourceName");
-    var defaults = {
-        key: constants_1.default.DEFAULT_KEY,
-        resourceName: resourceName
-    };
-    var config = merge(defaults, args);
-    return function getReducer(state, action) {
-        state = state || emptyState;
-        if (action == null)
-            throw new Error(resourceName + " reducers: Expected action");
-        var actionTypes = actionTypesFor_1.default(resourceName);
-        var record = action.record;
-        switch (action.type) {
-            case actionTypes.fetchSuccess:
-                return reducers.fetchSuccess(config, state, action.records, emptyState, action.data && action.data.replace);
-            case actionTypes.createStart:
-                return reducers.createStart(config, state, record);
-            case actionTypes.createSuccess:
-                return reducers.createSuccess(config, state, record, action.cid);
-            case actionTypes.createError:
-                return reducers.createError(config, state, record);
-            case actionTypes.updateStart:
-                return reducers.updateStart(config, state, record);
-            case actionTypes.updateSuccess:
-                return reducers.updateSuccess(config, state, record);
-            case actionTypes.updateError:
-                return reducers.updateError(config, state, record);
-            case actionTypes.deleteStart:
-                return reducers.deleteStart(config, state, record);
-            case actionTypes.deleteSuccess:
-                return reducers.deleteSuccess(config, state, record);
-            case actionTypes.deleteError:
-                return reducers.deleteError(config, state, record);
-            default:
-                return state;
-        }
-    };
-}
-exports.default = reducersFor;
-
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var assertHasKey_1 = __webpack_require__(207);
-var assertNotArray_1 = __webpack_require__(47);
-var makeScope_1 = __webpack_require__(48);
-function invariants(baseArgs, extraArgs) {
-    var config = extraArgs.config;
-    if (!config.resourceName)
-        throw new Error("Expected config.resourceName");
-    var scope = makeScope_1.default(config, baseArgs.reducerName);
-    if (!config.key)
-        throw new Error(scope + ": Expected config.key");
-    if (!extraArgs.record)
-        throw new Error(scope + ": Expected record/s");
-    extraArgs.assertValidStore(scope, extraArgs.current);
-    if (!baseArgs.canBeArray) {
-        assertNotArray_1.default(extraArgs.config, baseArgs.reducerName, extraArgs.record);
-    }
-    assertHasKey_1.default(extraArgs.config, scope, extraArgs.record);
-}
-exports.default = invariants;
-
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var reject = __webpack_require__(36);
-function remove(config, current, addedRecord) {
-    var key = config.key;
-    function predicate(record) {
-        var recordKey = record[key];
-        var isSameKey = addedRecord[key] === recordKey;
-        return isSameKey;
-    }
-    return reject(predicate, current);
-}
-exports.default = remove;
-
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var merge = __webpack_require__(4);
-var constants_1 = __webpack_require__(1);
-function prepareRecord(record) {
-    var _a;
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_CREATE] = true,
-        _a);
-    return merge(record, recordStatus);
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports) {
-
-module.exports = function _reduced(x) {
-  return x && x['@@transducer/reduced'] ? x :
-    {
-      '@@transducer/value': x,
-      '@@transducer/reduced': true
-    };
-};
-
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var merge = __webpack_require__(4);
-var constants_1 = __webpack_require__(1);
-function prepareRecord(record) {
-    var _a;
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.DELETED] = true,
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a);
-    return merge(record, recordStatus);
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var has = __webpack_require__(239);
-var all = __webpack_require__(240);
-function default_1(config, reducerName, records) {
-    // All given records must have a key
-    var haskey = has(config.key);
-    var allKeys = all(haskey, records);
-    if (!allKeys) {
-        throw new Error(reducerName +
-            ": Expected all records to have a value for the store's key `" +
-            config.key +
-            "`");
-    }
-}
-exports.default = default_1;
-
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var dissoc = __webpack_require__(57);
-var constants_1 = __webpack_require__(1);
-function prepareRecord(record) {
-    return dissoc(constants_1.default.SPECIAL_KEYS.BUSY, record);
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(2);
-
-
-/**
- * Returns a new object that does not contain a `prop` property.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Object
- * @sig String -> {k: v} -> {k: v}
- * @param {String} prop The name of the property to dissociate
- * @param {Object} obj The object to clone
- * @return {Object} A new object equivalent to the original but without the specified property
- * @see R.assoc
- * @example
- *
- *      R.dissoc('b', {a: 1, b: 2, c: 3}); //=> {a: 1, c: 3}
- */
-module.exports = _curry2(function dissoc(prop, obj) {
-  var result = {};
-  for (var p in obj) {
-    result[p] = obj[p];
-  }
-  delete result[prop];
-  return result;
-});
-
-
-/***/ }),
-/* 58 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var merge = __webpack_require__(4);
-var constants_1 = __webpack_require__(1);
-function prepareRecord(record) {
-    var _a;
-    var recordStatus = (_a = {},
-        _a[constants_1.default.SPECIAL_KEYS.BUSY] = true,
-        _a[constants_1.default.SPECIAL_KEYS.PENDING_UPDATE] = true,
-        _a);
-    return merge(record, recordStatus);
-}
-exports.prepareRecord = prepareRecord;
-
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _curry2 = __webpack_require__(2);
-
-
-/**
- * Returns a function that when supplied an object returns the indicated
- * property of that object, if it exists.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig s -> {s: a} -> a | Undefined
- * @param {String} p The property name
- * @param {Object} obj The object to query
- * @return {*} The value at `obj.p`.
- * @see R.path
- * @example
- *
- *      R.prop('x', {x: 100}); //=> 100
- *      R.prop('x', {}); //=> undefined
- */
-module.exports = _curry2(function prop(p, obj) { return obj[p]; });
-
-
-/***/ }),
-/* 60 */
-/***/ (function(module, exports) {
-
-Object.defineProperty(exports,"__esModule",{value:true});exports.default=
-
-function(){
-var d=new Date().getTime();
-if(window.performance&&typeof window.performance.now==='function'){
-d+=performance.now();
-}
-var uuid='xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){
-var r=(d+Math.random()*16)%16|0;
-d=Math.floor(d/16);
-return(c==='x'?r:r&0x3|0x8).toString(16);
-});
-return uuid;
-};
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(13)(module)))
 
 /***/ }),
 /* 61 */
@@ -23543,7 +23543,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var merge = __webpack_require__(4);
 var invariant = __webpack_require__(191);
 var actionTypesFor_1 = __webpack_require__(34);
-var assertNotArray_1 = __webpack_require__(47);
+var assertNotArray_1 = __webpack_require__(46);
 var constants_1 = __webpack_require__(1);
 var getDefaultConfig_1 = __webpack_require__(203);
 // const invariant = require("invariant")
@@ -23916,7 +23916,7 @@ module.exports = snakeCase;
  * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <https://lodash.com/license>
  */
-var root = __webpack_require__(46);
+var root = __webpack_require__(45);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -24105,7 +24105,7 @@ module.exports = deburr;
  * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <https://lodash.com/license>
  */
-var root = __webpack_require__(46);
+var root = __webpack_require__(45);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -24710,7 +24710,7 @@ exports.default = {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var merge = __webpack_require__(4);
-var reducersFor_1 = __webpack_require__(49);
+var reducersFor_1 = __webpack_require__(48);
 var error_1 = __webpack_require__(206);
 var start_1 = __webpack_require__(223);
 var success_1 = __webpack_require__(224);
@@ -24750,7 +24750,7 @@ exports.default = reducersFor;
 Object.defineProperty(exports, "__esModule", { value: true });
 var constants_1 = __webpack_require__(1);
 var invariants_1 = __webpack_require__(5);
-var remove_1 = __webpack_require__(51);
+var remove_1 = __webpack_require__(50);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -25178,7 +25178,7 @@ exports.default = merge;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(52);
+var start_1 = __webpack_require__(51);
 var constants_1 = __webpack_require__(1);
 var invariants_1 = __webpack_require__(5);
 var store_1 = __webpack_require__(11);
@@ -25654,7 +25654,7 @@ module.exports = _curry2(_dispatchable(['find'], _xfind, function find(fn, list)
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(2);
-var _reduced = __webpack_require__(53);
+var _reduced = __webpack_require__(52);
 var _xfBase = __webpack_require__(18);
 
 
@@ -25690,7 +25690,7 @@ module.exports = (function() {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(54);
+var start_1 = __webpack_require__(53);
 var constants_1 = __webpack_require__(1);
 var findByKey_1 = __webpack_require__(41);
 var invariants_1 = __webpack_require__(5);
@@ -25745,7 +25745,7 @@ exports.default = success;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var assertAllHaveKeys_1 = __webpack_require__(55);
+var assertAllHaveKeys_1 = __webpack_require__(54);
 var constants_1 = __webpack_require__(1);
 var store_1 = __webpack_require__(11);
 var wrapArray_1 = __webpack_require__(22);
@@ -25852,7 +25852,7 @@ module.exports = _curry2(_dispatchable(['all'], _xall, function all(fn, list) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var _curry2 = __webpack_require__(2);
-var _reduced = __webpack_require__(53);
+var _reduced = __webpack_require__(52);
 var _xfBase = __webpack_require__(18);
 
 
@@ -25888,7 +25888,7 @@ module.exports = (function() {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var error_1 = __webpack_require__(56);
+var error_1 = __webpack_require__(55);
 var constants_1 = __webpack_require__(1);
 var findByKey_1 = __webpack_require__(41);
 var invariants_1 = __webpack_require__(5);
@@ -25919,7 +25919,7 @@ exports.default = error;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(58);
+var start_1 = __webpack_require__(57);
 var constants_1 = __webpack_require__(1);
 var invariants_1 = __webpack_require__(5);
 var store_1 = __webpack_require__(11);
@@ -25981,7 +25981,7 @@ exports.default = {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var merge = __webpack_require__(4);
-var reducersFor_1 = __webpack_require__(49);
+var reducersFor_1 = __webpack_require__(48);
 var error_1 = __webpack_require__(247);
 var start_1 = __webpack_require__(251);
 var success_1 = __webpack_require__(252);
@@ -26021,7 +26021,7 @@ exports.default = reducersFor;
 Object.defineProperty(exports, "__esModule", { value: true });
 var constants_1 = __webpack_require__(1);
 var invariants_1 = __webpack_require__(6);
-var store_1 = __webpack_require__(13);
+var store_1 = __webpack_require__(14);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -26092,10 +26092,10 @@ exports.default = remove;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(52);
+var start_1 = __webpack_require__(51);
 var constants_1 = __webpack_require__(1);
 var invariants_1 = __webpack_require__(6);
-var store_1 = __webpack_require__(13);
+var store_1 = __webpack_require__(14);
 var reducerName = constants_1.default.REDUCER_NAMES.CREATE_START;
 var invariantArgs = {
     reducerName: reducerName,
@@ -26117,7 +26117,7 @@ exports.default = start;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var dissoc = __webpack_require__(57);
+var dissoc = __webpack_require__(56);
 var lensProp = __webpack_require__(253);
 var set = __webpack_require__(260);
 var constants_1 = __webpack_require__(1);
@@ -26145,7 +26145,7 @@ exports.default = success;
 var _curry1 = __webpack_require__(10);
 var assoc = __webpack_require__(254);
 var lens = __webpack_require__(255);
-var prop = __webpack_require__(59);
+var prop = __webpack_require__(58);
 
 
 /**
@@ -26575,10 +26575,10 @@ exports.default = error;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(54);
+var start_1 = __webpack_require__(53);
 var invariants_1 = __webpack_require__(6);
 var constants_1 = __webpack_require__(1);
-var store_1 = __webpack_require__(13);
+var store_1 = __webpack_require__(14);
 var reducerName = constants_1.default.REDUCER_NAMES.DELETE_START;
 var invariantArgs = {
     reducerName: reducerName,
@@ -26635,9 +26635,9 @@ exports.default = success;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var indexBy = __webpack_require__(267);
-var prop = __webpack_require__(59);
+var prop = __webpack_require__(58);
 var merge = __webpack_require__(4);
-var assertAllHaveKeys_1 = __webpack_require__(55);
+var assertAllHaveKeys_1 = __webpack_require__(54);
 var constants_1 = __webpack_require__(1);
 var invariants_1 = __webpack_require__(6);
 var wrapArray_1 = __webpack_require__(22);
@@ -26809,10 +26809,10 @@ module.exports = (function() {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var error_1 = __webpack_require__(56);
+var error_1 = __webpack_require__(55);
 var constants_1 = __webpack_require__(1);
 var invariants_1 = __webpack_require__(6);
-var store_1 = __webpack_require__(13);
+var store_1 = __webpack_require__(14);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_ERROR;
 var invariantArgs = {
     reducerName: reducerName,
@@ -26839,10 +26839,10 @@ exports.default = error;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var start_1 = __webpack_require__(58);
+var start_1 = __webpack_require__(57);
 var constants_1 = __webpack_require__(1);
 var invariants_1 = __webpack_require__(6);
-var store_1 = __webpack_require__(13);
+var store_1 = __webpack_require__(14);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_START;
 var invariantArgs = {
     reducerName: reducerName,
@@ -26867,7 +26867,7 @@ exports.default = start;
 Object.defineProperty(exports, "__esModule", { value: true });
 var constants_1 = __webpack_require__(1);
 var invariants_1 = __webpack_require__(6);
-var store_1 = __webpack_require__(13);
+var store_1 = __webpack_require__(14);
 var reducerName = constants_1.default.REDUCER_NAMES.UPDATE_SUCCESS;
 var invariantArgs = {
     reducerName: reducerName,
@@ -26894,8 +26894,8 @@ fetchImages;}});
 /* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});var _addresses=__webpack_require__(27);Object.defineProperty(exports,'fetchAddresses',{enumerable:true,get:function get(){return _addresses.fetchAddresses;}});Object.defineProperty(exports,'createAddress',{enumerable:true,get:function get(){return _addresses.createAddress;}});Object.defineProperty(exports,'deleteAddress',{enumerable:true,get:function get(){return _addresses.deleteAddress;}});var _menus=__webpack_require__(45);Object.defineProperty(exports,'fetchMenu',{enumerable:true,get:function get(){return _menus.
-fetchMenu;}});var _order=__webpack_require__(14);Object.defineProperty(exports,'addLineItem',{enumerable:true,get:function get(){return _order.
+Object.defineProperty(exports,"__esModule",{value:true});var _addresses=__webpack_require__(27);Object.defineProperty(exports,'fetchAddresses',{enumerable:true,get:function get(){return _addresses.fetchAddresses;}});Object.defineProperty(exports,'createAddress',{enumerable:true,get:function get(){return _addresses.createAddress;}});Object.defineProperty(exports,'deleteAddress',{enumerable:true,get:function get(){return _addresses.deleteAddress;}});var _menus=__webpack_require__(44);Object.defineProperty(exports,'fetchMenu',{enumerable:true,get:function get(){return _menus.
+fetchMenu;}});var _order=__webpack_require__(15);Object.defineProperty(exports,'addLineItem',{enumerable:true,get:function get(){return _order.
 
 addLineItem;}});Object.defineProperty(exports,'pushLineItem',{enumerable:true,get:function get(){return _order.
 pushLineItem;}});Object.defineProperty(exports,'addOptionToLineItem',{enumerable:true,get:function get(){return _order.
@@ -29804,7 +29804,7 @@ function property(path) {
 
 module.exports = find;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(13)(module)))
 
 /***/ }),
 /* 283 */
@@ -72903,8 +72903,8 @@ var _data=__webpack_require__(290);var _data2=_interopRequireDefault(_data);
 var _error=__webpack_require__(296);var _error2=_interopRequireDefault(_error);
 var _ref=__webpack_require__(297);var _ref2=_interopRequireDefault(_ref);
 var _session=__webpack_require__(298);var _session2=_interopRequireDefault(_session);
-var _status=__webpack_require__(306);var _status2=_interopRequireDefault(_status);
-var _user=__webpack_require__(307);var _user2=_interopRequireDefault(_user);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
+var _status=__webpack_require__(307);var _status2=_interopRequireDefault(_status);
+var _user=__webpack_require__(308);var _user2=_interopRequireDefault(_user);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
 (0,_redux.combineReducers)({
 data:_data2.default,
@@ -72962,7 +72962,7 @@ return state;}
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _lodash=__webpack_require__(32);var _lodash2=_interopRequireDefault(_lodash);
-var _order=__webpack_require__(14);
+var _order=__webpack_require__(15);
 var _locations=__webpack_require__(24);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}
 
 
@@ -73286,7 +73286,7 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=un
 
 
 
-error;var _reduxCrud=__webpack_require__(7);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(19);var _addresses=__webpack_require__(27);var _allergens=__webpack_require__(23);var _menus=__webpack_require__(45);var _favorites=__webpack_require__(29);var _order=__webpack_require__(14);var _locations=__webpack_require__(24);var _geolocations=__webpack_require__(25);var _payments=__webpack_require__(28);var _customerOrders=__webpack_require__(26);var _user=__webpack_require__(3);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType2.PAYMENTS_FETCH_START,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType2.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType2.PAYMENTS_CREATE_START,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType2.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType2.PAYMENTS_DELETE_START,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType2.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType3.RATINGS_FETCH_START,RATINGS_FETCH_ERROR=_reduxCrud$actionType3.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType3.RATINGS_CREATE_START,RATINGS_CREATE_ERROR=_reduxCrud$actionType3.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType3.RATINGS_UPDATE_START,RATINGS_UPDATE_ERROR=_reduxCrud$actionType3.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType3.RATINGS_DELETE_START,RATINGS_DELETE_ERROR=_reduxCrud$actionType3.RATINGS_DELETE_ERROR;var initialState=exports.initialState={sendSupportTicket:null,setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAllCustomerOrders:null,fetchPastCustomerOrders:null,fetchUpcomingCustomerOrders:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocation:null,fetchLocations:null,fetchGeolocations:null,fetchMenu:null,addLineItem:null,resolveOrder:null,submitOrder:null,setLineItemMadeFor:null,setLineItemInstructions:null,fetchPayments:null,createPayment:null,deletePayment:null,setPaymentMethod:null,setDefaultPayment:null,fetchFavorites:null,createFavorite:null,updateFavorite:null,deleteFavorite:null,fetchRating:null,createRating:null,updateRating:null,deleteRating:null,authenticateUser:null,createUser:null,fetchLevelUpLoyalty:null,fetchLevelUpQRCode:null,updateLevelUpConnection:null,connectLevelUp:null,disconnectLevelUp:null,fetchLevelUpPaymentMethod:null,fetchUser:null,resetUserPassword:null,resetLevelUpPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null,validateCurrentCart:null,validateCurrentOrder:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+error;var _reduxCrud=__webpack_require__(7);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(19);var _addresses=__webpack_require__(27);var _allergens=__webpack_require__(23);var _menus=__webpack_require__(44);var _favorites=__webpack_require__(29);var _order=__webpack_require__(15);var _locations=__webpack_require__(24);var _geolocations=__webpack_require__(25);var _payments=__webpack_require__(28);var _customerOrders=__webpack_require__(26);var _user=__webpack_require__(3);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType.USER_UPDATE_START,USER_UPDATE_ERROR=_reduxCrud$actionType.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType.USER_CREATE_START,USER_CREATE_ERROR=_reduxCrud$actionType.USER_CREATE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType2.PAYMENTS_FETCH_START,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType2.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType2.PAYMENTS_CREATE_START,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType2.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType2.PAYMENTS_DELETE_START,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType2.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType3.RATINGS_FETCH_START,RATINGS_FETCH_ERROR=_reduxCrud$actionType3.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType3.RATINGS_CREATE_START,RATINGS_CREATE_ERROR=_reduxCrud$actionType3.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType3.RATINGS_UPDATE_START,RATINGS_UPDATE_ERROR=_reduxCrud$actionType3.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType3.RATINGS_DELETE_START,RATINGS_DELETE_ERROR=_reduxCrud$actionType3.RATINGS_DELETE_ERROR;var initialState=exports.initialState={sendSupportTicket:null,setupBrandibble:null,setupBrandibbleRedux:null,fetchAllergens:null,addAllergens:null,removeAllergens:null,fetchAllCustomerOrders:null,fetchPastCustomerOrders:null,fetchUpcomingCustomerOrders:null,fetchAddresses:null,createAddress:null,deleteAddress:null,fetchLocation:null,fetchLocations:null,fetchGeolocations:null,fetchMenu:null,addLineItem:null,resolveOrder:null,submitOrder:null,setLineItemMadeFor:null,setLineItemInstructions:null,fetchPayments:null,createPayment:null,deletePayment:null,setPaymentMethod:null,setDefaultPayment:null,fetchFavorites:null,createFavorite:null,updateFavorite:null,deleteFavorite:null,fetchRating:null,createRating:null,updateRating:null,deleteRating:null,authenticateUser:null,createUser:null,fetchLevelUpLoyalty:null,fetchLevelUpQRCode:null,updateLevelUpConnection:null,connectLevelUp:null,disconnectLevelUp:null,fetchLevelUpPaymentMethod:null,fetchUser:null,resetUserPassword:null,resetLevelUpPassword:null,resolveUser:null,unauthenticateUser:null,updateUser:null,validateUser:null,validateCurrentCart:null,validateCurrentOrder:null};function error(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 
 case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:null});
@@ -73486,7 +73486,7 @@ var _menus=__webpack_require__(300);var _menus2=_interopRequireDefault(_menus);
 var _order=__webpack_require__(301);var _order2=_interopRequireDefault(_order);
 var _payments=__webpack_require__(303);var _payments2=_interopRequireDefault(_payments);
 var _favorites=__webpack_require__(304);var _favorites2=_interopRequireDefault(_favorites);
-var _ratings=__webpack_require__(305);var _ratings2=_interopRequireDefault(_ratings);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
+var _ratings=__webpack_require__(306);var _ratings2=_interopRequireDefault(_ratings);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
 (0,_redux.combineReducers)({
 addresses:_addresses2.default,
@@ -73613,7 +73613,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-order;var _lodash=__webpack_require__(302);var _lodash2=_interopRequireDefault(_lodash);var _order=__webpack_require__(14);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState={ref:null,orderData:null,lineItemsData:null,validated:null,validatedCart:null};function _buildFormattedLineItemsHash(ref){return(0,_lodash2.default)(ref.cart.lineItems,function(li){var uuid=li.uuid,quantity=li.quantity,madeFor=li.madeFor,instructions=li.instructions,product=li.product,operationMaps=li.operationMaps;return{uuid:uuid,quantity:quantity,madeFor:madeFor,instructions:instructions,isValid:li.isValid(),errors:li.errors(),productData:product,optionGroupMappings:operationMaps};});}function order(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+order;var _lodash=__webpack_require__(302);var _lodash2=_interopRequireDefault(_lodash);var _order=__webpack_require__(15);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var initialState={ref:null,orderData:null,lineItemsData:null,validated:null,validatedCart:null};function _buildFormattedLineItemsHash(ref){return(0,_lodash2.default)(ref.cart.lineItems,function(li){var uuid=li.uuid,quantity=li.quantity,madeFor=li.madeFor,instructions=li.instructions,product=li.product,operationMaps=li.operationMaps;return{uuid:uuid,quantity:quantity,madeFor:madeFor,instructions:instructions,isValid:li.isValid(),errors:li.errors(),productData:product,optionGroupMappings:operationMaps};});}function order(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _order.RESOLVE_ORDER+'_FULFILLED':
 case _order.BIND_CUSTOMER_TO_ORDER+'_FULFILLED':
@@ -76038,7 +76038,7 @@ function property(path) {
 
 module.exports = map;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(13)(module)))
 
 /***/ }),
 /* 303 */
@@ -76076,7 +76076,7 @@ return baseReducers(state,action);}
 /* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _lodash=__webpack_require__(44);var _lodash2=_interopRequireDefault(_lodash);
+Object.defineProperty(exports,"__esModule",{value:true});exports.initialState=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _lodash=__webpack_require__(305);var _lodash2=_interopRequireDefault(_lodash);
 var _favorites=__webpack_require__(29);
 
 
@@ -76091,7 +76091,6 @@ favoritesById:{}};exports.default=
 
 function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];var
 payload=action.payload,type=action.type;
-var newState=_extends({},state);
 
 switch(type){
 case _favorites.FETCH_FAVORITES+'_FULFILLED':
@@ -76117,16 +76116,14 @@ payload.favorite_item_id,payload))});
 
 
 case _favorites.DELETE_FAVORITE+'_FULFILLED':
-Object.keys(newState.favoritesById).forEach(function(key){
-if(
-key===''+payload&&
-newState.favoritesById[key].favorite_item_id===payload)
-{
-delete newState.favoritesById[key];
-}
-});
+return _extends({},
+state,{
+favoritesById:(0,_lodash2.default)(
+state.favoritesById,
+function(_,key){return!(key===''+payload||state.favoritesById[key].favorite_item_id===payload);})});
 
-return newState;
+
+
 case _user.UNAUTHENTICATE_USER+'_FULFILLED':
 return _extends({},initialState);
 default:
@@ -76136,6 +76133,2418 @@ return state;}
 
 /***/ }),
 /* 305 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, module) {/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the size to enable large array optimizations. */
+var LARGE_ARRAY_SIZE = 200;
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/** Used to compose bitmasks for comparison styles. */
+var UNORDERED_COMPARE_FLAG = 1,
+    PARTIAL_COMPARE_FLAG = 2;
+
+/** Used as references for various `Number` constants. */
+var INFINITY = 1 / 0,
+    MAX_SAFE_INTEGER = 9007199254740991;
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    objectTag = '[object Object]',
+    promiseTag = '[object Promise]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    symbolTag = '[object Symbol]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    dataViewTag = '[object DataView]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/** Used to match property names within property paths. */
+var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+    reIsPlainProp = /^\w*$/,
+    reLeadingDot = /^\./,
+    rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to match backslashes in property paths. */
+var reEscapeChar = /\\(\\)?/g;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/** Used to identify `toStringTag` values of typed arrays. */
+var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] =
+typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+typedArrayTags[setTag] = typedArrayTags[stringTag] =
+typedArrayTags[weakMapTag] = false;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Detect free variable `exports`. */
+var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    return freeProcess && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+/* Node.js helper references. */
+var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */
+function arrayPush(array, values) {
+  var index = -1,
+      length = values.length,
+      offset = array.length;
+
+  while (++index < length) {
+    array[offset + index] = values[index];
+  }
+  return array;
+}
+
+/**
+ * A specialized version of `_.some` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {boolean} Returns `true` if any element passes the predicate check,
+ *  else `false`.
+ */
+function arraySome(array, predicate) {
+  var index = -1,
+      length = array ? array.length : 0;
+
+  while (++index < length) {
+    if (predicate(array[index], index, array)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * The base implementation of `_.property` without support for deep paths.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */
+function baseProperty(key) {
+  return function(object) {
+    return object == null ? undefined : object[key];
+  };
+}
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+/**
+ * Checks if `value` is a host object in IE < 9.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+ */
+function isHostObject(value) {
+  // Many host objects are `Object` objects that can coerce to strings
+  // despite having improperly defined `toString` methods.
+  var result = false;
+  if (value != null && typeof value.toString != 'function') {
+    try {
+      result = !!(value + '');
+    } catch (e) {}
+  }
+  return result;
+}
+
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */
+function mapToArray(map) {
+  var index = -1,
+      result = Array(map.size);
+
+  map.forEach(function(value, key) {
+    result[++index] = [key, value];
+  });
+  return result;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */
+function setToArray(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = value;
+  });
+  return result;
+}
+
+/** Used for built-in method references. */
+var arrayProto = Array.prototype,
+    funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = root['__core-js_shared__'];
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = (function() {
+  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+  return uid ? ('Symbol(src)_1.' + uid) : '';
+}());
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' +
+  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+);
+
+/** Built-in value references. */
+var Symbol = root.Symbol,
+    Uint8Array = root.Uint8Array,
+    getPrototype = overArg(Object.getPrototypeOf, Object),
+    propertyIsEnumerable = objectProto.propertyIsEnumerable,
+    splice = arrayProto.splice;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeGetSymbols = Object.getOwnPropertySymbols,
+    nativeKeys = overArg(Object.keys, Object);
+
+/* Built-in method references that are verified to be native. */
+var DataView = getNative(root, 'DataView'),
+    Map = getNative(root, 'Map'),
+    Promise = getNative(root, 'Promise'),
+    Set = getNative(root, 'Set'),
+    WeakMap = getNative(root, 'WeakMap'),
+    nativeCreate = getNative(Object, 'create');
+
+/** Used to detect maps, sets, and weakmaps. */
+var dataViewCtorString = toSource(DataView),
+    mapCtorString = toSource(Map),
+    promiseCtorString = toSource(Promise),
+    setCtorString = toSource(Set),
+    weakMapCtorString = toSource(WeakMap);
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol ? Symbol.prototype : undefined,
+    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined,
+    symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Hash(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */
+function hashClear() {
+  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+}
+
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function hashDelete(key) {
+  return this.has(key) && delete this.__data__[key];
+}
+
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function hashGet(key) {
+  var data = this.__data__;
+  if (nativeCreate) {
+    var result = data[key];
+    return result === HASH_UNDEFINED ? undefined : result;
+  }
+  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function hashHas(key) {
+  var data = this.__data__;
+  return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+}
+
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */
+function hashSet(key, value) {
+  var data = this.__data__;
+  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+  return this;
+}
+
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function ListCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */
+function listCacheClear() {
+  this.__data__ = [];
+}
+
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function listCacheDelete(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    return false;
+  }
+  var lastIndex = data.length - 1;
+  if (index == lastIndex) {
+    data.pop();
+  } else {
+    splice.call(data, index, 1);
+  }
+  return true;
+}
+
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function listCacheGet(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  return index < 0 ? undefined : data[index][1];
+}
+
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function listCacheHas(key) {
+  return assocIndexOf(this.__data__, key) > -1;
+}
+
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */
+function listCacheSet(key, value) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    data.push([key, value]);
+  } else {
+    data[index][1] = value;
+  }
+  return this;
+}
+
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function MapCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */
+function mapCacheClear() {
+  this.__data__ = {
+    'hash': new Hash,
+    'map': new (Map || ListCache),
+    'string': new Hash
+  };
+}
+
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function mapCacheDelete(key) {
+  return getMapData(this, key)['delete'](key);
+}
+
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapCacheGet(key) {
+  return getMapData(this, key).get(key);
+}
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function mapCacheHas(key) {
+  return getMapData(this, key).has(key);
+}
+
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */
+function mapCacheSet(key, value) {
+  getMapData(this, key).set(key, value);
+  return this;
+}
+
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+
+/**
+ *
+ * Creates an array cache object to store unique values.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
+ */
+function SetCache(values) {
+  var index = -1,
+      length = values ? values.length : 0;
+
+  this.__data__ = new MapCache;
+  while (++index < length) {
+    this.add(values[index]);
+  }
+}
+
+/**
+ * Adds `value` to the array cache.
+ *
+ * @private
+ * @name add
+ * @memberOf SetCache
+ * @alias push
+ * @param {*} value The value to cache.
+ * @returns {Object} Returns the cache instance.
+ */
+function setCacheAdd(value) {
+  this.__data__.set(value, HASH_UNDEFINED);
+  return this;
+}
+
+/**
+ * Checks if `value` is in the array cache.
+ *
+ * @private
+ * @name has
+ * @memberOf SetCache
+ * @param {*} value The value to search for.
+ * @returns {number} Returns `true` if `value` is found, else `false`.
+ */
+function setCacheHas(value) {
+  return this.__data__.has(value);
+}
+
+// Add methods to `SetCache`.
+SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+SetCache.prototype.has = setCacheHas;
+
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Stack(entries) {
+  this.__data__ = new ListCache(entries);
+}
+
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */
+function stackClear() {
+  this.__data__ = new ListCache;
+}
+
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function stackDelete(key) {
+  return this.__data__['delete'](key);
+}
+
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function stackGet(key) {
+  return this.__data__.get(key);
+}
+
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function stackHas(key) {
+  return this.__data__.has(key);
+}
+
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */
+function stackSet(key, value) {
+  var cache = this.__data__;
+  if (cache instanceof ListCache) {
+    var pairs = cache.__data__;
+    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+      pairs.push([key, value]);
+      return this;
+    }
+    cache = this.__data__ = new MapCache(pairs);
+  }
+  cache.set(key, value);
+  return this;
+}
+
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  // Safari 9 makes `arguments.length` enumerable in strict mode.
+  var result = (isArray(value) || isArguments(value))
+    ? baseTimes(value.length, String)
+    : [];
+
+  var length = result.length,
+      skipIndexes = !!length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty.call(value, key)) &&
+        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+/**
+ * The base implementation of `_.get` without support for default values.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @returns {*} Returns the resolved value.
+ */
+function baseGet(object, path) {
+  path = isKey(path, object) ? [path] : castPath(path);
+
+  var index = 0,
+      length = path.length;
+
+  while (object != null && index < length) {
+    object = object[toKey(path[index++])];
+  }
+  return (index && index == length) ? object : undefined;
+}
+
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+  var result = keysFunc(object);
+  return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+}
+
+/**
+ * The base implementation of `getTag`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  return objectToString.call(value);
+}
+
+/**
+ * The base implementation of `_.hasIn` without support for deep paths.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */
+function baseHasIn(object, key) {
+  return object != null && key in Object(object);
+}
+
+/**
+ * The base implementation of `_.isEqual` which supports partial comparisons
+ * and tracks traversed objects.
+ *
+ * @private
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {boolean} [bitmask] The bitmask of comparison flags.
+ *  The bitmask may be composed of the following flags:
+ *     1 - Unordered comparison
+ *     2 - Partial comparison
+ * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ */
+function baseIsEqual(value, other, customizer, bitmask, stack) {
+  if (value === other) {
+    return true;
+  }
+  if (value == null || other == null || (!isObject(value) && !isObjectLike(other))) {
+    return value !== value && other !== other;
+  }
+  return baseIsEqualDeep(value, other, baseIsEqual, customizer, bitmask, stack);
+}
+
+/**
+ * A specialized version of `baseIsEqual` for arrays and objects which performs
+ * deep comparisons and tracks traversed objects enabling objects with circular
+ * references to be compared.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {number} [bitmask] The bitmask of comparison flags. See `baseIsEqual`
+ *  for more details.
+ * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function baseIsEqualDeep(object, other, equalFunc, customizer, bitmask, stack) {
+  var objIsArr = isArray(object),
+      othIsArr = isArray(other),
+      objTag = arrayTag,
+      othTag = arrayTag;
+
+  if (!objIsArr) {
+    objTag = getTag(object);
+    objTag = objTag == argsTag ? objectTag : objTag;
+  }
+  if (!othIsArr) {
+    othTag = getTag(other);
+    othTag = othTag == argsTag ? objectTag : othTag;
+  }
+  var objIsObj = objTag == objectTag && !isHostObject(object),
+      othIsObj = othTag == objectTag && !isHostObject(other),
+      isSameTag = objTag == othTag;
+
+  if (isSameTag && !objIsObj) {
+    stack || (stack = new Stack);
+    return (objIsArr || isTypedArray(object))
+      ? equalArrays(object, other, equalFunc, customizer, bitmask, stack)
+      : equalByTag(object, other, objTag, equalFunc, customizer, bitmask, stack);
+  }
+  if (!(bitmask & PARTIAL_COMPARE_FLAG)) {
+    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
+
+    if (objIsWrapped || othIsWrapped) {
+      var objUnwrapped = objIsWrapped ? object.value() : object,
+          othUnwrapped = othIsWrapped ? other.value() : other;
+
+      stack || (stack = new Stack);
+      return equalFunc(objUnwrapped, othUnwrapped, customizer, bitmask, stack);
+    }
+  }
+  if (!isSameTag) {
+    return false;
+  }
+  stack || (stack = new Stack);
+  return equalObjects(object, other, equalFunc, customizer, bitmask, stack);
+}
+
+/**
+ * The base implementation of `_.isMatch` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to inspect.
+ * @param {Object} source The object of property values to match.
+ * @param {Array} matchData The property names, values, and compare flags to match.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @returns {boolean} Returns `true` if `object` is a match, else `false`.
+ */
+function baseIsMatch(object, source, matchData, customizer) {
+  var index = matchData.length,
+      length = index,
+      noCustomizer = !customizer;
+
+  if (object == null) {
+    return !length;
+  }
+  object = Object(object);
+  while (index--) {
+    var data = matchData[index];
+    if ((noCustomizer && data[2])
+          ? data[1] !== object[data[0]]
+          : !(data[0] in object)
+        ) {
+      return false;
+    }
+  }
+  while (++index < length) {
+    data = matchData[index];
+    var key = data[0],
+        objValue = object[key],
+        srcValue = data[1];
+
+    if (noCustomizer && data[2]) {
+      if (objValue === undefined && !(key in object)) {
+        return false;
+      }
+    } else {
+      var stack = new Stack;
+      if (customizer) {
+        var result = customizer(objValue, srcValue, key, object, source, stack);
+      }
+      if (!(result === undefined
+            ? baseIsEqual(srcValue, objValue, customizer, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG, stack)
+            : result
+          )) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!isObject(value) || isMasked(value)) {
+    return false;
+  }
+  var pattern = (isFunction(value) || isHostObject(value)) ? reIsNative : reIsHostCtor;
+  return pattern.test(toSource(value));
+}
+
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */
+function baseIsTypedArray(value) {
+  return isObjectLike(value) &&
+    isLength(value.length) && !!typedArrayTags[objectToString.call(value)];
+}
+
+/**
+ * The base implementation of `_.iteratee`.
+ *
+ * @private
+ * @param {*} [value=_.identity] The value to convert to an iteratee.
+ * @returns {Function} Returns the iteratee.
+ */
+function baseIteratee(value) {
+  // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.
+  // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.
+  if (typeof value == 'function') {
+    return value;
+  }
+  if (value == null) {
+    return identity;
+  }
+  if (typeof value == 'object') {
+    return isArray(value)
+      ? baseMatchesProperty(value[0], value[1])
+      : baseMatches(value);
+  }
+  return property(value);
+}
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!isPrototype(object)) {
+    return nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeysIn(object) {
+  if (!isObject(object)) {
+    return nativeKeysIn(object);
+  }
+  var isProto = isPrototype(object),
+      result = [];
+
+  for (var key in object) {
+    if (!(key == 'constructor' && (isProto || !hasOwnProperty.call(object, key)))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `_.matches` which doesn't clone `source`.
+ *
+ * @private
+ * @param {Object} source The object of property values to match.
+ * @returns {Function} Returns the new spec function.
+ */
+function baseMatches(source) {
+  var matchData = getMatchData(source);
+  if (matchData.length == 1 && matchData[0][2]) {
+    return matchesStrictComparable(matchData[0][0], matchData[0][1]);
+  }
+  return function(object) {
+    return object === source || baseIsMatch(object, source, matchData);
+  };
+}
+
+/**
+ * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
+ *
+ * @private
+ * @param {string} path The path of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */
+function baseMatchesProperty(path, srcValue) {
+  if (isKey(path) && isStrictComparable(srcValue)) {
+    return matchesStrictComparable(toKey(path), srcValue);
+  }
+  return function(object) {
+    var objValue = get(object, path);
+    return (objValue === undefined && objValue === srcValue)
+      ? hasIn(object, path)
+      : baseIsEqual(srcValue, objValue, undefined, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG);
+  };
+}
+
+/**
+ * The base implementation of  `_.pickBy` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The source object.
+ * @param {string[]} props The property identifiers to pick from.
+ * @param {Function} predicate The function invoked per property.
+ * @returns {Object} Returns the new object.
+ */
+function basePickBy(object, props, predicate) {
+  var index = -1,
+      length = props.length,
+      result = {};
+
+  while (++index < length) {
+    var key = props[index],
+        value = object[key];
+
+    if (predicate(value, key)) {
+      result[key] = value;
+    }
+  }
+  return result;
+}
+
+/**
+ * A specialized version of `baseProperty` which supports deep paths.
+ *
+ * @private
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */
+function basePropertyDeep(path) {
+  return function(object) {
+    return baseGet(object, path);
+  };
+}
+
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */
+function baseToString(value) {
+  // Exit early for strings to avoid a performance hit in some environments.
+  if (typeof value == 'string') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return symbolToString ? symbolToString.call(value) : '';
+  }
+  var result = (value + '');
+  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+}
+
+/**
+ * Casts `value` to a path array if it's not one.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {Array} Returns the cast property path array.
+ */
+function castPath(value) {
+  return isArray(value) ? value : stringToPath(value);
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for arrays with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Array} array The array to compare.
+ * @param {Array} other The other array to compare.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+ *  for more details.
+ * @param {Object} stack Tracks traversed `array` and `other` objects.
+ * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+ */
+function equalArrays(array, other, equalFunc, customizer, bitmask, stack) {
+  var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+      arrLength = array.length,
+      othLength = other.length;
+
+  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+    return false;
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(array);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var index = -1,
+      result = true,
+      seen = (bitmask & UNORDERED_COMPARE_FLAG) ? new SetCache : undefined;
+
+  stack.set(array, other);
+  stack.set(other, array);
+
+  // Ignore non-index properties.
+  while (++index < arrLength) {
+    var arrValue = array[index],
+        othValue = other[index];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, arrValue, index, other, array, stack)
+        : customizer(arrValue, othValue, index, array, other, stack);
+    }
+    if (compared !== undefined) {
+      if (compared) {
+        continue;
+      }
+      result = false;
+      break;
+    }
+    // Recursively compare arrays (susceptible to call stack limits).
+    if (seen) {
+      if (!arraySome(other, function(othValue, othIndex) {
+            if (!seen.has(othIndex) &&
+                (arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack))) {
+              return seen.add(othIndex);
+            }
+          })) {
+        result = false;
+        break;
+      }
+    } else if (!(
+          arrValue === othValue ||
+            equalFunc(arrValue, othValue, customizer, bitmask, stack)
+        )) {
+      result = false;
+      break;
+    }
+  }
+  stack['delete'](array);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for comparing objects of
+ * the same `toStringTag`.
+ *
+ * **Note:** This function only supports comparing values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {string} tag The `toStringTag` of the objects to compare.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+ *  for more details.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalByTag(object, other, tag, equalFunc, customizer, bitmask, stack) {
+  switch (tag) {
+    case dataViewTag:
+      if ((object.byteLength != other.byteLength) ||
+          (object.byteOffset != other.byteOffset)) {
+        return false;
+      }
+      object = object.buffer;
+      other = other.buffer;
+
+    case arrayBufferTag:
+      if ((object.byteLength != other.byteLength) ||
+          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+        return false;
+      }
+      return true;
+
+    case boolTag:
+    case dateTag:
+    case numberTag:
+      // Coerce booleans to `1` or `0` and dates to milliseconds.
+      // Invalid dates are coerced to `NaN`.
+      return eq(+object, +other);
+
+    case errorTag:
+      return object.name == other.name && object.message == other.message;
+
+    case regexpTag:
+    case stringTag:
+      // Coerce regexes to strings and treat strings, primitives and objects,
+      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+      // for more details.
+      return object == (other + '');
+
+    case mapTag:
+      var convert = mapToArray;
+
+    case setTag:
+      var isPartial = bitmask & PARTIAL_COMPARE_FLAG;
+      convert || (convert = setToArray);
+
+      if (object.size != other.size && !isPartial) {
+        return false;
+      }
+      // Assume cyclic values are equal.
+      var stacked = stack.get(object);
+      if (stacked) {
+        return stacked == other;
+      }
+      bitmask |= UNORDERED_COMPARE_FLAG;
+
+      // Recursively compare objects (susceptible to call stack limits).
+      stack.set(object, other);
+      var result = equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask, stack);
+      stack['delete'](object);
+      return result;
+
+    case symbolTag:
+      if (symbolValueOf) {
+        return symbolValueOf.call(object) == symbolValueOf.call(other);
+      }
+  }
+  return false;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for objects with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual`
+ *  for more details.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalObjects(object, other, equalFunc, customizer, bitmask, stack) {
+  var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+      objProps = keys(object),
+      objLength = objProps.length,
+      othProps = keys(other),
+      othLength = othProps.length;
+
+  if (objLength != othLength && !isPartial) {
+    return false;
+  }
+  var index = objLength;
+  while (index--) {
+    var key = objProps[index];
+    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
+      return false;
+    }
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(object);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var result = true;
+  stack.set(object, other);
+  stack.set(other, object);
+
+  var skipCtor = isPartial;
+  while (++index < objLength) {
+    key = objProps[index];
+    var objValue = object[key],
+        othValue = other[key];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, objValue, key, other, object, stack)
+        : customizer(objValue, othValue, key, object, other, stack);
+    }
+    // Recursively compare objects (susceptible to call stack limits).
+    if (!(compared === undefined
+          ? (objValue === othValue || equalFunc(objValue, othValue, customizer, bitmask, stack))
+          : compared
+        )) {
+      result = false;
+      break;
+    }
+    skipCtor || (skipCtor = key == 'constructor');
+  }
+  if (result && !skipCtor) {
+    var objCtor = object.constructor,
+        othCtor = other.constructor;
+
+    // Non `Object` object instances with different constructors are not equal.
+    if (objCtor != othCtor &&
+        ('constructor' in object && 'constructor' in other) &&
+        !(typeof objCtor == 'function' && objCtor instanceof objCtor &&
+          typeof othCtor == 'function' && othCtor instanceof othCtor)) {
+      result = false;
+    }
+  }
+  stack['delete'](object);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * Creates an array of own and inherited enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function getAllKeysIn(object) {
+  return baseGetAllKeys(object, keysIn, getSymbolsIn);
+}
+
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */
+function getMapData(map, key) {
+  var data = map.__data__;
+  return isKeyable(key)
+    ? data[typeof key == 'string' ? 'string' : 'hash']
+    : data.map;
+}
+
+/**
+ * Gets the property names, values, and compare flags of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the match data of `object`.
+ */
+function getMatchData(object) {
+  var result = keys(object),
+      length = result.length;
+
+  while (length--) {
+    var key = result[length],
+        value = object[key];
+
+    result[length] = [key, value, isStrictComparable(value)];
+  }
+  return result;
+}
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = getValue(object, key);
+  return baseIsNative(value) ? value : undefined;
+}
+
+/**
+ * Creates an array of the own enumerable symbol properties of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */
+var getSymbols = nativeGetSymbols ? overArg(nativeGetSymbols, Object) : stubArray;
+
+/**
+ * Creates an array of the own and inherited enumerable symbol properties
+ * of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */
+var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
+  var result = [];
+  while (object) {
+    arrayPush(result, getSymbols(object));
+    object = getPrototype(object);
+  }
+  return result;
+};
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+var getTag = baseGetTag;
+
+// Fallback for data views, maps, sets, and weak maps in IE 11,
+// for data views in Edge < 14, and promises in Node.js.
+if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+    (Map && getTag(new Map) != mapTag) ||
+    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+    (Set && getTag(new Set) != setTag) ||
+    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+  getTag = function(value) {
+    var result = objectToString.call(value),
+        Ctor = result == objectTag ? value.constructor : undefined,
+        ctorString = Ctor ? toSource(Ctor) : undefined;
+
+    if (ctorString) {
+      switch (ctorString) {
+        case dataViewCtorString: return dataViewTag;
+        case mapCtorString: return mapTag;
+        case promiseCtorString: return promiseTag;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
+      }
+    }
+    return result;
+  };
+}
+
+/**
+ * Checks if `path` exists on `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @param {Function} hasFunc The function to check properties.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ */
+function hasPath(object, path, hasFunc) {
+  path = isKey(path, object) ? [path] : castPath(path);
+
+  var result,
+      index = -1,
+      length = path.length;
+
+  while (++index < length) {
+    var key = toKey(path[index]);
+    if (!(result = object != null && hasFunc(object, key))) {
+      break;
+    }
+    object = object[key];
+  }
+  if (result) {
+    return result;
+  }
+  var length = object ? object.length : 0;
+  return !!length && isLength(length) && isIndex(key, length) &&
+    (isArray(object) || isArguments(object));
+}
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */
+function isKey(value, object) {
+  if (isArray(value)) {
+    return false;
+  }
+  var type = typeof value;
+  if (type == 'number' || type == 'symbol' || type == 'boolean' ||
+      value == null || isSymbol(value)) {
+    return true;
+  }
+  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
+    (object != null && value in Object(object));
+}
+
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */
+function isKeyable(value) {
+  var type = typeof value;
+  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
+    ? (value !== '__proto__')
+    : (value === null);
+}
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && (maskSrcKey in func);
+}
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
+}
+
+/**
+ * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` if suitable for strict
+ *  equality comparisons, else `false`.
+ */
+function isStrictComparable(value) {
+  return value === value && !isObject(value);
+}
+
+/**
+ * A specialized version of `matchesProperty` for source values suitable
+ * for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */
+function matchesStrictComparable(key, srcValue) {
+  return function(object) {
+    if (object == null) {
+      return false;
+    }
+    return object[key] === srcValue &&
+      (srcValue !== undefined || (key in Object(object)));
+  };
+}
+
+/**
+ * This function is like
+ * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * except that it includes inherited enumerable properties.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function nativeKeysIn(object) {
+  var result = [];
+  if (object != null) {
+    for (var key in Object(object)) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Converts `string` to a property path array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the property path array.
+ */
+var stringToPath = memoize(function(string) {
+  string = toString(string);
+
+  var result = [];
+  if (reLeadingDot.test(string)) {
+    result.push('');
+  }
+  string.replace(rePropName, function(match, number, quote, string) {
+    result.push(quote ? string.replace(reEscapeChar, '$1') : (number || match));
+  });
+  return result;
+});
+
+/**
+ * Converts `value` to a string key if it's not a string or symbol.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {string|symbol} Returns the key.
+ */
+function toKey(value) {
+  if (typeof value == 'string' || isSymbol(value)) {
+    return value;
+  }
+  var result = (value + '');
+  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+}
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to process.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return (func + '');
+    } catch (e) {}
+  }
+  return '';
+}
+
+/**
+ * Creates a function that memoizes the result of `func`. If `resolver` is
+ * provided, it determines the cache key for storing the result based on the
+ * arguments provided to the memoized function. By default, the first argument
+ * provided to the memoized function is used as the map cache key. The `func`
+ * is invoked with the `this` binding of the memoized function.
+ *
+ * **Note:** The cache is exposed as the `cache` property on the memoized
+ * function. Its creation may be customized by replacing the `_.memoize.Cache`
+ * constructor with one whose instances implement the
+ * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+ * method interface of `delete`, `get`, `has`, and `set`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to have its output memoized.
+ * @param {Function} [resolver] The function to resolve the cache key.
+ * @returns {Function} Returns the new memoized function.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': 2 };
+ * var other = { 'c': 3, 'd': 4 };
+ *
+ * var values = _.memoize(_.values);
+ * values(object);
+ * // => [1, 2]
+ *
+ * values(other);
+ * // => [3, 4]
+ *
+ * object.a = 2;
+ * values(object);
+ * // => [1, 2]
+ *
+ * // Modify the result cache.
+ * values.cache.set(object, ['a', 'b']);
+ * values(object);
+ * // => ['a', 'b']
+ *
+ * // Replace `_.memoize.Cache`.
+ * _.memoize.Cache = WeakMap;
+ */
+function memoize(func, resolver) {
+  if (typeof func != 'function' || (resolver && typeof resolver != 'function')) {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  var memoized = function() {
+    var args = arguments,
+        key = resolver ? resolver.apply(this, args) : args[0],
+        cache = memoized.cache;
+
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    var result = func.apply(this, args);
+    memoized.cache = cache.set(key, result);
+    return result;
+  };
+  memoized.cache = new (memoize.Cache || MapCache);
+  return memoized;
+}
+
+// Assign cache to `_.memoize`.
+memoize.Cache = MapCache;
+
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */
+function eq(value, other) {
+  return value === other || (value !== value && other !== other);
+}
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+function isArguments(value) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
+}
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+/**
+ * This method is like `_.isArrayLike` except that it also checks if `value`
+ * is an object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array-like object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArrayLikeObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLikeObject(document.body.children);
+ * // => true
+ *
+ * _.isArrayLikeObject('abc');
+ * // => false
+ *
+ * _.isArrayLikeObject(_.noop);
+ * // => false
+ */
+function isArrayLikeObject(value) {
+  return isObjectLike(value) && isArrayLike(value);
+}
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+  var tag = isObject(value) ? objectToString.call(value) : '';
+  return tag == funcTag || tag == genTag;
+}
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+}
+
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */
+var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */
+function toString(value) {
+  return value == null ? '' : baseToString(value);
+}
+
+/**
+ * Gets the value at `path` of `object`. If the resolved value is
+ * `undefined`, the `defaultValue` is returned in its place.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.7.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+ * @returns {*} Returns the resolved value.
+ * @example
+ *
+ * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+ *
+ * _.get(object, 'a[0].b.c');
+ * // => 3
+ *
+ * _.get(object, ['a', '0', 'b', 'c']);
+ * // => 3
+ *
+ * _.get(object, 'a.b.c', 'default');
+ * // => 'default'
+ */
+function get(object, path, defaultValue) {
+  var result = object == null ? undefined : baseGet(object, path);
+  return result === undefined ? defaultValue : result;
+}
+
+/**
+ * Checks if `path` is a direct or inherited property of `object`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ * @example
+ *
+ * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+ *
+ * _.hasIn(object, 'a');
+ * // => true
+ *
+ * _.hasIn(object, 'a.b');
+ * // => true
+ *
+ * _.hasIn(object, ['a', 'b']);
+ * // => true
+ *
+ * _.hasIn(object, 'b');
+ * // => false
+ */
+function hasIn(object, path) {
+  return object != null && hasPath(object, path, baseHasIn);
+}
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+/**
+ * Creates an array of the own and inherited enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keysIn(new Foo);
+ * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
+ */
+function keysIn(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
+}
+
+/**
+ * Creates an object composed of the `object` properties `predicate` returns
+ * truthy for. The predicate is invoked with two arguments: (value, key).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Object
+ * @param {Object} object The source object.
+ * @param {Function} [predicate=_.identity] The function invoked per property.
+ * @returns {Object} Returns the new object.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': '2', 'c': 3 };
+ *
+ * _.pickBy(object, _.isNumber);
+ * // => { 'a': 1, 'c': 3 }
+ */
+function pickBy(object, predicate) {
+  return object == null ? {} : basePickBy(object, getAllKeysIn(object), baseIteratee(predicate));
+}
+
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */
+function identity(value) {
+  return value;
+}
+
+/**
+ * Creates a function that returns the value at `path` of a given object.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ * @example
+ *
+ * var objects = [
+ *   { 'a': { 'b': 2 } },
+ *   { 'a': { 'b': 1 } }
+ * ];
+ *
+ * _.map(objects, _.property('a.b'));
+ * // => [2, 1]
+ *
+ * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
+ * // => [1, 2]
+ */
+function property(path) {
+  return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
+}
+
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */
+function stubArray() {
+  return [];
+}
+
+module.exports = pickBy;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(13)(module)))
+
+/***/ }),
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=
@@ -76156,7 +78565,7 @@ return baseReducers(state,action);}
 }
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
@@ -76327,7 +78736,7 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
-status;var _application=__webpack_require__(19);var _addresses=__webpack_require__(27);var _allergens=__webpack_require__(23);var _menus=__webpack_require__(45);var _favorites=__webpack_require__(29);var _payments=__webpack_require__(28);var _order=__webpack_require__(14);var _locations=__webpack_require__(24);var _geolocations=__webpack_require__(25);var _user=__webpack_require__(3);var _customerOrders=__webpack_require__(26);var _constants=__webpack_require__(33);var _reduxCrud=__webpack_require__(7);var _reduxCrud2=_interopRequireDefault(_reduxCrud);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType.PAYMENTS_FETCH_START,PAYMENTS_FETCH_SUCCESS=_reduxCrud$actionType.PAYMENTS_FETCH_SUCCESS,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType.PAYMENTS_CREATE_START,PAYMENTS_CREATE_SUCCESS=_reduxCrud$actionType.PAYMENTS_CREATE_SUCCESS,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType.PAYMENTS_DELETE_START,PAYMENTS_DELETE_SUCCESS=_reduxCrud$actionType.PAYMENTS_DELETE_SUCCESS,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType2.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType2.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType2.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType2.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType2.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType2.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType2.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType2.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType2.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType2.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType2.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType2.RATINGS_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType3.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType3.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType3.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType3.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType3.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType3.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
+status;var _reduxCrud=__webpack_require__(7);var _reduxCrud2=_interopRequireDefault(_reduxCrud);var _application=__webpack_require__(19);var _addresses=__webpack_require__(27);var _allergens=__webpack_require__(23);var _menus=__webpack_require__(44);var _favorites=__webpack_require__(29);var _payments=__webpack_require__(28);var _order=__webpack_require__(15);var _locations=__webpack_require__(24);var _geolocations=__webpack_require__(25);var _user=__webpack_require__(3);var _customerOrders=__webpack_require__(26);var _constants=__webpack_require__(33);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FULFILLED=_constants.Status.FULFILLED,IDLE=_constants.Status.IDLE,PENDING=_constants.Status.PENDING,REJECTED=_constants.Status.REJECTED;var _reduxCrud$actionType=_reduxCrud2.default.actionTypesFor('payments'),PAYMENTS_FETCH_START=_reduxCrud$actionType.PAYMENTS_FETCH_START,PAYMENTS_FETCH_SUCCESS=_reduxCrud$actionType.PAYMENTS_FETCH_SUCCESS,PAYMENTS_FETCH_ERROR=_reduxCrud$actionType.PAYMENTS_FETCH_ERROR,PAYMENTS_CREATE_START=_reduxCrud$actionType.PAYMENTS_CREATE_START,PAYMENTS_CREATE_SUCCESS=_reduxCrud$actionType.PAYMENTS_CREATE_SUCCESS,PAYMENTS_CREATE_ERROR=_reduxCrud$actionType.PAYMENTS_CREATE_ERROR,PAYMENTS_DELETE_START=_reduxCrud$actionType.PAYMENTS_DELETE_START,PAYMENTS_DELETE_SUCCESS=_reduxCrud$actionType.PAYMENTS_DELETE_SUCCESS,PAYMENTS_DELETE_ERROR=_reduxCrud$actionType.PAYMENTS_DELETE_ERROR;var _reduxCrud$actionType2=_reduxCrud2.default.actionTypesFor('ratings'),RATINGS_FETCH_START=_reduxCrud$actionType2.RATINGS_FETCH_START,RATINGS_FETCH_SUCCESS=_reduxCrud$actionType2.RATINGS_FETCH_SUCCESS,RATINGS_FETCH_ERROR=_reduxCrud$actionType2.RATINGS_FETCH_ERROR,RATINGS_CREATE_START=_reduxCrud$actionType2.RATINGS_CREATE_START,RATINGS_CREATE_SUCCESS=_reduxCrud$actionType2.RATINGS_CREATE_SUCCESS,RATINGS_CREATE_ERROR=_reduxCrud$actionType2.RATINGS_CREATE_ERROR,RATINGS_UPDATE_START=_reduxCrud$actionType2.RATINGS_UPDATE_START,RATINGS_UPDATE_SUCCESS=_reduxCrud$actionType2.RATINGS_UPDATE_SUCCESS,RATINGS_UPDATE_ERROR=_reduxCrud$actionType2.RATINGS_UPDATE_ERROR,RATINGS_DELETE_START=_reduxCrud$actionType2.RATINGS_DELETE_START,RATINGS_DELETE_SUCCESS=_reduxCrud$actionType2.RATINGS_DELETE_SUCCESS,RATINGS_DELETE_ERROR=_reduxCrud$actionType2.RATINGS_DELETE_ERROR;var _reduxCrud$actionType3=_reduxCrud2.default.actionTypesFor('user'),USER_UPDATE_START=_reduxCrud$actionType3.USER_UPDATE_START,USER_UPDATE_SUCCESS=_reduxCrud$actionType3.USER_UPDATE_SUCCESS,USER_UPDATE_ERROR=_reduxCrud$actionType3.USER_UPDATE_ERROR,USER_CREATE_START=_reduxCrud$actionType3.USER_CREATE_START,USER_CREATE_SUCCESS=_reduxCrud$actionType3.USER_CREATE_SUCCESS,USER_CREATE_ERROR=_reduxCrud$actionType3.USER_CREATE_ERROR;var initialState={setupBrandibble:IDLE,setupBrandibbleRedux:IDLE,sendSupportTicket:IDLE,fetchAddresses:IDLE,createAddress:IDLE,deleteAddress:IDLE,fetchAllergens:IDLE,addAllergens:IDLE,removeAllergens:IDLE,fetchLevelUpLoyalty:IDLE,fetchLevelUpQRCode:IDLE,updateLevelUpConnection:IDLE,connectLevelUp:IDLE,disconnectLevelUp:IDLE,fetchLevelUpPaymentMethod:IDLE,fetchLocation:IDLE,fetchLocations:IDLE,fetchGeolocations:IDLE,fetchAllCustomerOrders:IDLE,fetchPastCustomerOrders:IDLE,fetchUpcomingCustomerOrders:IDLE,fetchMenu:IDLE,resolveOrder:IDLE,setOrderLocationId:IDLE,submitOrder:IDLE,addLineItem:IDLE,setRequestedAt:IDLE,fetchPayments:IDLE,setPromoCode:IDLE,createPayment:IDLE,setDefaultPayment:IDLE,setPaymentMethod:IDLE,deletePayment:IDLE,fetchFavorites:IDLE,createFavorite:IDLE,updateFavorite:IDLE,deleteFavorite:IDLE,fetchRating:IDLE,createRating:IDLE,updateRating:IDLE,deleteRating:IDLE,authenticateUser:IDLE,createUser:IDLE,fetchUser:IDLE,resetUserPassword:IDLE,resetLevelUpPassword:IDLE,resolveUser:IDLE,unauthenticateUser:IDLE,updateUser:IDLE,validateUser:IDLE,validateCurrentCart:IDLE,validateCurrentOrder:IDLE,setLineItemMadeFor:IDLE,setLineItemInstructions:IDLE,createNewOrder:IDLE};function status(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case _application.SETUP_BRANDIBBLE+'_PENDING':return _extends({},state,{setupBrandibble:PENDING});
 case _application.SETUP_BRANDIBBLE+'_FULFILLED':return _extends({},state,{setupBrandibble:FULFILLED});
@@ -76554,13 +78963,13 @@ default:return state;}
 }
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _redux=__webpack_require__(31);
-var _attributes=__webpack_require__(308);var _attributes2=_interopRequireDefault(_attributes);
-var _levelup=__webpack_require__(309);var _levelup2=_interopRequireDefault(_levelup);
-var _validations=__webpack_require__(310);var _validations2=_interopRequireDefault(_validations);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
+var _attributes=__webpack_require__(309);var _attributes2=_interopRequireDefault(_attributes);
+var _levelup=__webpack_require__(310);var _levelup2=_interopRequireDefault(_levelup);
+var _validations=__webpack_require__(311);var _validations2=_interopRequireDefault(_validations);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
 (0,_redux.combineReducers)({
 attributes:_attributes2.default,
@@ -76568,7 +78977,7 @@ levelup:_levelup2.default,
 validations:_validations2.default});
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
@@ -76626,7 +79035,7 @@ return state;}
 }
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
@@ -76669,7 +79078,7 @@ return state;}
 }
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports,"__esModule",{value:true});exports.default=
