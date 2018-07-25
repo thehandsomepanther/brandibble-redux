@@ -297,6 +297,11 @@ export const locationsStub = [
   },
 ];
 
+export const waitTimesStub = {
+  delivery: 45,
+  pickup: 10,
+};
+
 export const productStub = {
   allergen_classes: '',
   allergens: '',

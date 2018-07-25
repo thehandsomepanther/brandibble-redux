@@ -5,6 +5,7 @@ import handleErrors from '../../utils/handleErrors';
 export const FETCH_LOCATIONS = 'FETCH_LOCATIONS';
 export const FETCH_LOCATION = 'FETCH_LOCATION';
 export const PUSH_GEOLOCATION = 'PUSH_GEOLOCATION';
+export const FETCH_WAIT_TIMES = 'FETCH_WAIT_TIMES';
 
 export const pushGeolocation = location => dispatch => {
   return dispatch(fireAction(PUSH_GEOLOCATION, location));
@@ -15,6 +16,14 @@ export const fetchLocation = (brandibble, locationId, lat, lng) => {
     const payload = brandibble.locations.show(locationId, lat, lng)
       .then(({ data }) => data).catch(handleErrors);
     return dispatch(fireAction(FETCH_LOCATION, payload));
+  };
+};
+
+export const fetchWaitTimes = (brandibble, locationId) => {
+  return (dispatch) => {
+    const payload = brandibble.locations.waitTimes(locationId)
+      .then(({ data }) => ({ data, locationId })).catch(handleErrors);
+    return dispatch(fireAction(FETCH_WAIT_TIMES, payload));
   };
 };
 

@@ -4,6 +4,7 @@ import {
   PUSH_GEOLOCATION,
   FETCH_LOCATION,
   FETCH_LOCATIONS,
+  FETCH_WAIT_TIMES,
 } from '../../actions/data/locations';
 
 export const initialState = {
@@ -30,6 +31,20 @@ export default (state = initialState, action) => {
           locationsById: {
             ...state.locationsById,
             [`${payload.location_id}`]: payload,
+          },
+        };
+      }
+      return { ...state };
+    case `${FETCH_WAIT_TIMES}_FULFILLED`:
+      if (payload) {
+        return {
+          ...state,
+          locationsById: {
+            ...state.locationsById,
+            [`${payload.locationId}`]: {
+              ...[state.locationsById[`${payload.locationId}`]],
+              waitTimes: payload.data,
+            },
           },
         };
       }
