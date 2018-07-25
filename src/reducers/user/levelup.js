@@ -3,11 +3,8 @@ import {
   FETCH_LEVELUP_QR_CODE,
   FETCH_LEVELUP_PAYMENT_METHOD,
   DISCONNECT_LEVELUP,
-} from 'actions/session/user';
-
-import {
-  UNAUTHENTICATE_USER
-} from 'actions/session/user';
+  UNAUTHENTICATE_USER,
+} from '../../actions/session/user';
 
 const initialState = {
   loyalty: {},

@@ -1,6 +1,6 @@
 /* eslint no-shadow:1 */
 import reduxCrud from 'redux-crud';
-import generateUUID from 'utils/generateUUID';
+import generateUUID from '../../utils/generateUUID';
 
 const {
   fetchStart,

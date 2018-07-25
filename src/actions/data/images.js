@@ -1,5 +1,5 @@
-import fireAction from 'utils/fireAction';
-import handleErrors from 'utils/handleErrors';
+import fireAction from '../../utils/fireAction';
+import handleErrors from '../../utils/handleErrors';
 
 export const FETCH_IMAGES = 'FETCH_IMAGES';
 

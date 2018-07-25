@@ -83,7 +83,7 @@ export default class Main extends Component {
 ```
 
 ### Working on Brandibble Redux
-**IMPORTANT:** Set an environment variable called `BRANDIBBLE_API_KEY` with your Brandibble API key before running tests.
+**IMPORTANT:** Set an environment variable called `BRANDIBBLE_API_KEY` by making a file named `.env` in the root of this directory and filling it out with your Brandibble API key before running tests (see `.env.example` for an example).
 ```
 git clone https://github.com/sanctuarycomputer/brandibble-redux
 cd brandibble-redux

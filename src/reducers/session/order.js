@@ -19,7 +19,7 @@ import {
   SUBMIT_ORDER,
   SET_LINE_ITEM_MADE_FOR,
   SET_LINE_ITEM_INSTRUCTIONS
-} from 'actions/session/order';
+} from '../../actions/session/order';
 
 const initialState = {
   ref: null,

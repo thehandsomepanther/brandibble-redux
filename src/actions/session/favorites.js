@@ -1,5 +1,5 @@
-import fireAction from 'utils/fireAction';
-import handleErrors from 'utils/handleErrors';
+import fireAction from '../../utils/fireAction';
+import handleErrors from '../../utils/handleErrors';
 
 export const FETCH_FAVORITES = 'FETCH_FAVORITES';
 export const CREATE_FAVORITE = 'CREATE_FAVORITE';

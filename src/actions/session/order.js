@@ -1,6 +1,6 @@
 /* eslint no-shadow:1, no-unused-vars:1, prefer-rest-params:1 */
-import BrandibbleReduxException from 'utils/exception';
-import { Defaults } from 'utils/constants';
+import BrandibbleReduxException from '../../utils/exception';
+import { Defaults } from '../../utils/constants';
 
 export const RESOLVE_ORDER = 'RESOLVE_ORDER';
 export const RESOLVE_ORDER_LOCATION = 'RESOLVE_ORDER_LOCATION';

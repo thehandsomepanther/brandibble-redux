@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const webpack = require('webpack');
 const path = require('path');
 
@@ -24,6 +26,6 @@ module.exports = {
     redux: 'redux',
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['BRANDIBBLE_API_KEY']),
+    new webpack.EnvironmentPlugin({ BRANDIBBLE_API_KEY: process.env.BRANDIBBLE_API_KEY }),
   ],
 };

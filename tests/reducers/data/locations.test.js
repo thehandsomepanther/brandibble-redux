@@ -41,9 +41,8 @@ describe('reducers/data/locations', () => {
       type: `${RESOLVE_ORDER_LOCATION}_FULFILLED`,
       payload: null,
     });
-    expect(reduced).to.equal(initialState);
+    expect(reduced).to.deep.equal(initialState);
   });
-
 
   it('handles the FETCH_LOCATIONS_FULFILLED action', () => {
     const reduced = reducer(initialState, {

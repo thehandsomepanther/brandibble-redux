@@ -5,20 +5,20 @@ import {
   SEND_SUPPORT_TICKET,
   SETUP_BRANDIBBLE,
   SETUP_BRANDIBBLE_REDUX,
-} from 'actions/application';
+} from '../actions/application';
 
 // addresses
 import {
   CREATE_ADDRESS,
   DELETE_ADDRESS,
   FETCH_ADDRESSES,
-} from 'actions/session/addresses';
+} from '../actions/session/addresses';
 
 // allergens
-import { FETCH_ALLERGENS } from 'actions/data/allergens';
+import { FETCH_ALLERGENS } from '../actions/data/allergens';
 
 // menu
-import { FETCH_MENU } from 'actions/session/menus';
+import { FETCH_MENU } from '../actions/session/menus';
 
 // favorites
 import {
@@ -26,7 +26,7 @@ import {
   DELETE_FAVORITE,
   FETCH_FAVORITES,
   UPDATE_FAVORITE,
-} from 'actions/session/favorites';
+} from '../actions/session/favorites';
 
 // orders
 import {
@@ -38,29 +38,28 @@ import {
   SET_LINE_ITEM_MADE_FOR,
   SET_PAYMENT_METHOD,
   SET_LINE_ITEM_INSTRUCTIONS,
-} from 'actions/session/order';
+} from '../actions/session/order';
 
 // locations
 import {
   FETCH_LOCATION,
   FETCH_LOCATIONS,
-} from 'actions/data/locations';
+} from '../actions/data/locations';
 
 // geolocations
 import {
   FETCH_GEOLOCATIONS,
-  CLEAR_GEOLOCATIONS,
-} from 'actions/data/geolocations';
+} from '../actions/data/geolocations';
 
 //  payments
-import { SET_DEFAULT_PAYMENT } from 'actions/session/payments';
+import { SET_DEFAULT_PAYMENT } from '../actions/session/payments';
 
 // customerOrders
 import {
   FETCH_ALL_CUSTOMER_ORDERS,
   FETCH_PAST_CUSTOMER_ORDERS,
   FETCH_UPCOMING_CUSTOMER_ORDERS,
-} from 'actions/data/customerOrders';
+} from '../actions/data/customerOrders';
 
 // user
 import {
@@ -79,7 +78,7 @@ import {
   VALIDATE_USER,
   ADD_ALLERGENS,
   REMOVE_ALLERGENS,
-} from 'actions/session/user';
+} from '../actions/session/user';
 
 const {
   USER_UPDATE_START,
