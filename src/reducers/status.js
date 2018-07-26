@@ -17,7 +17,7 @@ import {
   DELETE_FAVORITE,
   FETCH_FAVORITES,
   UPDATE_FAVORITE,
-} from 'actions/session/favorites';
+} from '../actions/session/favorites';
 import {
   FETCH_PAYMENTS,
   CREATE_PAYMENT,
