@@ -13,7 +13,7 @@
     "build:lib": "babel src --out-dir lib",
     "build:umd": "webpack src/index.js dist/brandibble-redux.js --config webpack.config.development.js",
     "build:umd:min": "webpack src/index.js dist/brandibble-redux.min.js --config webpack.config.production.js",
-    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min",
+    "build": "npm run build:lib",
     "prepare": "npm run build",
     "test": "node ./node_modules/karma/bin/karma start",
     "format": "prettier-eslint \"src/**/*.js\" --write"
@@ -21,7 +21,7 @@
   "author": "Sanctuary Computer <hello@sanctuary.computer> (http://sanctuary.computer/)",
   "license": "MIT",
   "dependencies": {
-    "brandibble": "github:sanctuarycomputer/brandibble.js",
+    "brandibble": "git+https://git@github.com/sanctuarycomputer/brandibble.js",
     "localforage": "^1.5.0",
     "lodash.filter": "^4.6.0",
     "lodash.find": "^4.6.0",
