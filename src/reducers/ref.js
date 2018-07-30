@@ -2,11 +2,13 @@ import { SETUP_BRANDIBBLE } from '../actions/application';
 
 const initialState = {};
 
-export default function ref(state = initialState, action) {
-  switch (action.type) {
+export default (state = initialState, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
     case `${SETUP_BRANDIBBLE}_FULFILLED`:
-      return action.payload;
+      return payload;
     default:
       return state;
   }
-}
+};

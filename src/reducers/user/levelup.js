@@ -14,30 +14,32 @@ const initialState = {
   campaignsById: {},
 };
 
-export default function levelup(state = initialState, action) {
-  switch (action.type) {
+export default (state = initialState, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
     case `${FETCH_LEVELUP_LOYALTY}_FULFILLED`:
       return {
         ...state,
-        loyalty: action.payload,
+        loyalty: payload,
       };
     case `${FETCH_LEVELUP_CAMPAIGN}_FULFILLED`:
       return {
         ...state,
         campaignsById: {
           ...state.campaignsById,
-          [`${action.payload.meta.campaignId}-${action.payload.meta.campaignType}`]: action.payload.campaign,
+          [`${payload.meta.campaignId}-${payload.meta.campaignType}`]: payload.campaign,
         },
       };
     case `${FETCH_LEVELUP_QR_CODE}_FULFILLED`:
       return {
         ...state,
-        qr_code: action.payload,
+        qr_code: payload,
       };
     case `${FETCH_LEVELUP_PAYMENT_METHOD}_FULFILLED`:
       return {
         ...state,
-        payment_method: action.payload,
+        payment_method: payload,
       };
     case `${UNAUTHENTICATE_USER}_FULFILLED`:
     case `${DISCONNECT_LEVELUP}_FULFILLED`:
@@ -45,4 +47,4 @@ export default function levelup(state = initialState, action) {
     default:
       return state;
   }
-}
+};

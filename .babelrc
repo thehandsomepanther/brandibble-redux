@@ -1,4 +1,4 @@
 {
-  "presets": ["react-native"],
-  "plugins": ["transform-class-properties"]
+  "presets": ["env"],
+  "plugins": ["transform-class-properties", "transform-object-rest-spread"]
 }
