@@ -17,6 +17,7 @@ export {
   setPaymentMethod,
   submitOrder,
   setPromoCode,
+  setMiscOptions,
   setRequestedAt,
   createNewOrder,
   validateCurrentCart,

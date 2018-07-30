@@ -1,11 +1,17 @@
-import reduxCrud from 'redux-crud';
+import { FETCH_MENU } from '../../actions/session/menus';
 
-const baseReducers = reduxCrud.Map.reducersFor('menus');
 const initialState = {};
 
-export default function allergens(state = initialState, action) {
-  switch (action.type) {
+export default (state = initialState, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
+    case `${FETCH_MENU}_FULFILLED`:
+      return {
+        ...state,
+        [`${payload.id}`]: payload,
+      };
     default:
-      return baseReducers(state, action);
+      return state;
   }
-}
+};

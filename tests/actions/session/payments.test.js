@@ -4,10 +4,7 @@ import { expect } from 'chai';
 import find from 'lodash.find';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
-import { fetchPayments, createPayment, deletePayment } from 'actions/session/payments';
 import { authenticateUser } from 'actions/session/user';
-import { brandibble, cardStub, validCredentialsStub } from '../../config/stubs';
-
 import {
   FETCH_PAYMENTS,
   CREATE_PAYMENT,
@@ -18,6 +15,7 @@ import {
   deletePayment,
   setDefaultPayment,
 } from 'actions/session/payments';
+import { brandibble, cardStub, validCredentialsStub } from '../../config/stubs';
 
 const mockStore = configureStore(reduxMiddleware);
 

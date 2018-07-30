@@ -12,13 +12,14 @@ import {
   SET_ORDER_LOCATION_ID,
   SET_PAYMENT_METHOD,
   SET_PROMO_CODE,
+  SET_MISC_OPTIONS,
   SET_REQUESTED_AT,
   CREATE_NEW_ORDER,
   VALIDATE_CURRENT_ORDER,
   VALIDATE_CURRENT_CART,
   SUBMIT_ORDER,
   SET_LINE_ITEM_MADE_FOR,
-  SET_LINE_ITEM_INSTRUCTIONS
+  SET_LINE_ITEM_INSTRUCTIONS,
 } from '../../actions/session/order';
 
 const initialState = {
@@ -45,8 +46,10 @@ function _buildFormattedLineItemsHash(ref) {
   });
 }
 
-export default function order(state = initialState, action) {
-  switch (action.type) {
+export default (state = initialState, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
     case `${RESOLVE_ORDER}_FULFILLED`:
     case `${BIND_CUSTOMER_TO_ORDER}_FULFILLED`:
     case `${SET_ORDER_LOCATION_ID}_FULFILLED`:
@@ -60,10 +63,11 @@ export default function order(state = initialState, action) {
     case `${ADD_OPTION_TO_LINE_ITEM}_FULFILLED`:
     case `${SET_PAYMENT_METHOD}_FULFILLED`:
     case `${SET_PROMO_CODE}_FULFILLED`:
+    case `${SET_MISC_OPTIONS}_FULFILLED`:
     case `${SET_REQUESTED_AT}_FULFILLED`:
     case `${REMOVE_OPTION_FROM_LINE_ITEM}_FULFILLED`:
     case `${CREATE_NEW_ORDER}_FULFILLED`: {
-      const ref = action.payload.order;
+      const ref = payload.order;
       return {
         ...state,
         ref,
@@ -77,24 +81,24 @@ export default function order(state = initialState, action) {
         ...state,
         validated: null,
         validatedCart: null,
-      }
+      };
     }
 
     case `${VALIDATE_CURRENT_ORDER}_FULFILLED`: {
       return {
         ...state,
-        validated: action.payload,
+        validated: payload,
       };
     }
 
     case `${VALIDATE_CURRENT_CART}_FULFILLED`: {
       return {
         ...state,
-        validatedCart: action.payload,
+        validatedCart: payload,
       };
     }
 
     default:
       return state;
   }
-}
+};

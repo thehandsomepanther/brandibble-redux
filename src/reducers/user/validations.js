@@ -5,13 +5,15 @@ import {
 
 const initialState = {};
 
-export default function validations(state = initialState, action) {
-  switch (action.type) {
+export default (state = initialState, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
     case `${VALIDATE_USER}_FULFILLED`:
-      return action.payload;
+      return payload;
     case `${UNAUTHENTICATE_USER}_FULFILLED`:
       return initialState;
     default:
       return state;
   }
-}
+};

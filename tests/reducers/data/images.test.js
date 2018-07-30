@@ -9,7 +9,7 @@ describe('reducers/data/images', () => {
     expect(reduced).to.equal(initialState);
   });
 
-  it('handles the IMAGES_FETCH_SUCCESS action', () => {
+  it('handles the IMAGES_FETCH_FULFILLED action', () => {
     const payload = [{ id: 1, name: 'bird flu' }];
     const reduced = reducer(initialState, {
       type: `${FETCH_IMAGES}_FULFILLED`,

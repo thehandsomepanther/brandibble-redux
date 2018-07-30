@@ -9,7 +9,7 @@ describe('reducers/data/allergens', () => {
     expect(reduced).to.equal(initialState);
   });
 
-  it('handles the ALLERGENS_FETCH_SUCCESS action', () => {
+  it('handles the ALLERGENS_FETCH_FULFILLED action', () => {
     const payload = [{ id: 1, name: 'bird flu' }];
     const reduced = reducer(initialState, {
       type: `${FETCH_ALLERGENS}_FULFILLED`,

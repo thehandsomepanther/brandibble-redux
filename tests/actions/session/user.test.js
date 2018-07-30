@@ -1,8 +1,7 @@
-/* global describe afterEach before beforeEach it */
+/* global describe before it */
 /* eslint one-var-declaration-per-line:1, one-var:1 */
 import { expect } from 'chai';
 import find from 'lodash.find';
-import reduxCrud from 'redux-crud';
 import configureStore from 'redux-mock-store';
 import reduxMiddleware from 'config/middleware';
 import {
@@ -23,17 +22,7 @@ import {
 } from 'actions/session/user';
 import { brandibble, SAMPLE_EMAIL, validCredentialsStub } from '../../config/stubs';
 
-const {
-  USER_CREATE_START,
-  USER_CREATE_SUCCESS,
-  USER_CREATE_ERROR,
-  USER_UPDATE_START,
-  USER_UPDATE_SUCCESS,
-} = reduxCrud.actionTypesFor('user');
-
 const mockStore = configureStore(reduxMiddleware);
-const success = () => this.status = 'success';
-const fail = () => this.status = 'fail';
 
 describe('actions/session/user', () => {
   describe('validateUser', () => {
@@ -61,22 +50,6 @@ describe('actions/session/user', () => {
         expect(action).to.exist;
       });
     });
-
-    describe('handles callbacks', () => {
-      beforeEach(() => store = mockStore());
-
-      it('should handle success callback', () => {
-        validateUser(brandibble, SAMPLE_EMAIL, success)(store.dispatch).then(() => {
-          expect(this.status).to.equal('success');
-        });
-      });
-
-      it('should handle fail callback', () => {
-        validateUser(brandibble, null, success, fail)(store.dispatch).then(() => {
-          expect(this.status).to.equal('fail');
-        });
-      });
-    });
   });
 
   describe('authenticateUser', () => {
@@ -100,22 +73,6 @@ describe('actions/session/user', () => {
       it('should have AUTHENTICATE_USER_FULFILLED action', () => {
         action = find(actionsCalled, { type: 'AUTHENTICATE_USER_FULFILLED' });
         expect(action).to.exist;
-      });
-    });
-
-    describe('handles callbacks', () => {
-      beforeEach(() => store = mockStore());
-
-      it('should handle success callback', () => {
-        authenticateUser(brandibble, validCredentialsStub, success)(store.dispatch).then(() => {
-          expect(this.status).to.equal('success');
-        });
-      });
-
-      it('should handle fail callback', () => {
-        authenticateUser(brandibble, null, success, fail)(store.dispatch).then(() => {
-          expect(this.status).to.equal('fail');
-        });
       });
     });
 
@@ -150,7 +107,7 @@ describe('actions/session/user', () => {
     describe('calls actions', () => {
       before(() => {
         store = mockStore();
-        return unauthenticateUser(brandibble, success)(store.dispatch).then(({ value }) => {
+        return unauthenticateUser(brandibble)(store.dispatch).then(({ value }) => {
           actionsCalled = store.getActions();
           response = value;
         });
@@ -166,10 +123,6 @@ describe('actions/session/user', () => {
       it('should have AUTHENTICATE_USER_FULFILLED action', () => {
         action = find(actionsCalled, { type: 'UNAUTHENTICATE_USER_FULFILLED' });
         expect(action).to.exist;
-      });
-
-      it('should handle success callback', () => {
-        expect(response).to.equal('success');
       });
     });
   });
@@ -239,13 +192,13 @@ describe('actions/session/user', () => {
 
       it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
 
-      it('should have USER_CREATE_START action', () => {
-        action = find(actionsCalled, { type: USER_CREATE_START });
+      it('should have CREATE_USER_PENDING action', () => {
+        action = find(actionsCalled, { type: 'CREATE_USER_PENDING' });
         expect(action).to.exist;
       });
 
-      it('should have USER_CREATE_SUCCESS action', () => {
-        action = find(actionsCalled, { type: USER_CREATE_SUCCESS });
+      it('should have CREATE_USER_FULFILLED action', () => {
+        action = find(actionsCalled, { type: 'CREATE_USER_FULFILLED' });
         expect(action).to.exist;
       });
 
@@ -253,8 +206,8 @@ describe('actions/session/user', () => {
         let id;
 
         before(() => {
-          action = find(actionsCalled, { type: USER_CREATE_SUCCESS });
-          id = action.record.customer_id;
+          action = find(actionsCalled, { type: 'CREATE_USER_FULFILLED' });
+          id = action.payload.customer_id;
 
           return authenticateUser(brandibble, userData)(store.dispatch).then(() => {
             actionsCalled = store.getActions();
@@ -410,13 +363,13 @@ describe('actions/session/user', () => {
 
           it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
 
-          it('should have USER_UPDATE_START action', () => {
-            action = find(actionsCalled, { type: USER_UPDATE_START });
+          it('should have UPDATE_USER_PENDING action', () => {
+            action = find(actionsCalled, { type: 'UPDATE_USER_PENDING' });
             expect(action).to.exist;
           });
 
-          it('should have USER_UPDATE_SUCCESS action', () => {
-            action = find(actionsCalled, { type: USER_UPDATE_SUCCESS });
+          it('should have UPDATE_USER_FULFILLED action', () => {
+            action = find(actionsCalled, { type: 'UPDATE_USER_FULFILLED' });
             expect(action).to.exist;
           });
         });
@@ -433,7 +386,7 @@ describe('actions/session/user', () => {
           password: 'password',
         };
 
-        return createUser(brandibble, userData)(store.dispatch).then(() => {
+        return createUser(brandibble, userData)(store.dispatch).catch(() => {
           actionsCalled = store.getActions();
         });
       });
@@ -442,13 +395,13 @@ describe('actions/session/user', () => {
         expect(actionsCalled).to.have.length.of.at.least(2);
       });
 
-      it('should have USER_CREATE_START action', () => {
-        action = find(actionsCalled, { type: USER_CREATE_START });
+      it('should have CREATE_USER_PENDING action', () => {
+        action = find(actionsCalled, { type: 'CREATE_USER_PENDING' });
         expect(action).to.exist;
       });
 
-      it('should have USER_CREATE_ERROR action', () => {
-        action = find(actionsCalled, { type: USER_CREATE_ERROR });
+      it('should have CREATE_USER_REJECTED action', () => {
+        action = find(actionsCalled, { type: 'CREATE_USER_REJECTED' });
         expect(action).to.exist;
       });
     });

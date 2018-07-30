@@ -14,6 +14,7 @@ module.exports = (config) => {
       },
     },
     files: [
+      'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
       'tests/setup.test.js',
       'tests/**/*.test.js',
     ],

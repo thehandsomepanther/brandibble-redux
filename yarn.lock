@@ -37,13 +37,6 @@ acorn@^5.0.0, acorn@^5.5.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.1.tgz#f095829297706a7c9776958c0afc8930a9b9d9d8"
 
-action-names@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/action-names/-/action-names-0.4.0.tgz#d8dbb58d24e281c379203e8f330b1f7321a416a2"
-  dependencies:
-    lodash.snakecase "^3.0.1"
-    lodash.trim "^3.0.1"
-
 after@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
@@ -695,7 +688,7 @@ babel-plugin-transform-object-assign@^6.5.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-object-rest-spread@^6.5.0:
+babel-plugin-transform-object-rest-spread@^6.26.0, babel-plugin-transform-object-rest-spread@^6.5.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-object-rest-spread/-/babel-plugin-transform-object-rest-spread-6.26.0.tgz#0f36692d50fef6b7e2d4b3ac1478137a963b7b06"
   dependencies:
@@ -984,7 +977,7 @@ braces@^2.3.0, braces@^2.3.1:
 
 "brandibble@git+https://git@github.com/sanctuarycomputer/brandibble.js":
   version "1.13.7"
-  resolved "git+https://git@github.com/sanctuarycomputer/brandibble.js#d88ba1f330523681fd5a60ba2e8ad085f65143d1"
+  resolved "git+https://git@github.com/sanctuarycomputer/brandibble.js#a052917735aaa6d73424e89eb5b685a16b359cdd"
   dependencies:
     circular-json "^0.3.1"
     es6-promise "^4.0.5"
@@ -2687,7 +2680,7 @@ interpret@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
-invariant@^2.1.0, invariant@^2.2.2:
+invariant@^2.2.2:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   dependencies:
@@ -3181,18 +3174,6 @@ lodash._basecreate@^3.0.0:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/lodash._basecreate/-/lodash._basecreate-3.0.3.tgz#1bc661614daa7fc311b7d03bf16806a0213cf821"
 
-lodash._basetostring@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/lodash._basetostring/-/lodash._basetostring-3.0.1.tgz#d1861d877f824a52f669832dcaf3ee15566a07d5"
-
-lodash._charsleftindex@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash._charsleftindex/-/lodash._charsleftindex-3.0.0.tgz#dba03352c0f276b4acc73321c51702e4cb40fd79"
-
-lodash._charsrightindex@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash._charsrightindex/-/lodash._charsrightindex-3.0.0.tgz#f7a0295dd6c798cd0b79cdf2fbc0da04bacb2534"
-
 lodash._getnative@^3.0.0:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/lodash._getnative/-/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
@@ -3200,18 +3181,6 @@ lodash._getnative@^3.0.0:
 lodash._isiterateecall@^3.0.0:
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/lodash._isiterateecall/-/lodash._isiterateecall-3.0.9.tgz#5203ad7ba425fae842460e696db9cf3e6aac057c"
-
-lodash._root@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/lodash._root/-/lodash._root-3.0.1.tgz#fba1c4524c19ee9a5f8136b4609f017cf4ded692"
-
-lodash._trimmedleftindex@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash._trimmedleftindex/-/lodash._trimmedleftindex-3.0.0.tgz#0997991139251132ca8d3f24e857fef4f01d8619"
-
-lodash._trimmedrightindex@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash._trimmedrightindex/-/lodash._trimmedrightindex-3.0.0.tgz#94f7c32374b51f425226bec0e8f21002f8f0caed"
 
 lodash.compact@^3.0.1:
   version "3.0.1"
@@ -3228,12 +3197,6 @@ lodash.create@3.1.1:
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
-
-lodash.deburr@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.deburr/-/lodash.deburr-3.2.0.tgz#6da8f54334a366a7cf4c4c76ef8d80aa1b365ed5"
-  dependencies:
-    lodash._root "^3.0.0"
 
 lodash.every@^4.6.0:
   version "4.6.0"
@@ -3299,37 +3262,13 @@ lodash.reverse@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.reverse/-/lodash.reverse-4.0.1.tgz#1f2afedace2e16e660f3aa7c59d3300a6f25d13c"
 
-lodash.snakecase@^3.0.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.snakecase/-/lodash.snakecase-3.1.1.tgz#c0db98e080796f0cc47b7744b168bdf8e23c27d3"
-  dependencies:
-    lodash.deburr "^3.0.0"
-    lodash.words "^3.0.0"
-
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
 
-lodash.trim@^3.0.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.trim/-/lodash.trim-3.1.1.tgz#403c82163adbb611f7c491e916bbdcc9934c1681"
-  dependencies:
-    lodash._basetostring "^3.0.0"
-    lodash._charsleftindex "^3.0.0"
-    lodash._charsrightindex "^3.0.0"
-    lodash._isiterateecall "^3.0.0"
-    lodash._trimmedleftindex "^3.0.0"
-    lodash._trimmedrightindex "^3.0.0"
-
 lodash.unescape@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.unescape/-/lodash.unescape-4.0.1.tgz#bf2249886ce514cda112fae9218cdc065211fc9c"
-
-lodash.words@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.words/-/lodash.words-3.2.0.tgz#4e2a8649bc08745b17c695b1a3ce8fee596623b3"
-  dependencies:
-    lodash._root "^3.0.0"
 
 lodash@^3.8.0:
   version "3.10.1"
@@ -4109,8 +4048,8 @@ prettier-eslint@^8.5.0:
     vue-eslint-parser "^2.0.2"
 
 prettier@^1.7.0:
-  version "1.13.7"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.7.tgz#850f3b8af784a49a6ea2d2eaa7ed1428a34b7281"
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.0.tgz#847c235522035fd988100f1f43cf20a7d24f9372"
 
 pretty-format@^23.0.1:
   version "23.2.0"
@@ -4192,10 +4131,6 @@ querystring@0.2.0:
 quick-lru@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-1.1.0.tgz#4360b17c61136ad38078397ff11416e186dcfbb8"
-
-ramda@^0.24.1:
-  version "0.24.1"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.24.1.tgz#c3b7755197f35b8dc3502228262c4c91ddb6b857"
 
 randomatic@^3.0.0:
   version "3.0.0"
@@ -4316,14 +4251,6 @@ rechoir@^0.6.2:
   resolved "https://registry.yarnpkg.com/rechoir/-/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
   dependencies:
     resolve "^1.1.6"
-
-redux-crud@^3.0.5:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/redux-crud/-/redux-crud-3.3.0.tgz#26dfd656c6149fec8a07db48a5ce929d16750c3c"
-  dependencies:
-    action-names "^0.4.0"
-    invariant "^2.1.0"
-    ramda "^0.24.1"
 
 redux-mock-store@^1.2.3:
   version "1.5.3"

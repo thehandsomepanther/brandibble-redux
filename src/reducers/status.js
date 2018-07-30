@@ -1,4 +1,3 @@
-import reduxCrud from 'redux-crud';
 // TODO: this reducer is untested
 import {
   SEND_SUPPORT_TICKET,
@@ -30,6 +29,7 @@ import {
   SET_ORDER_LOCATION_ID,
   SUBMIT_ORDER,
   SET_PROMO_CODE,
+  SET_MISC_OPTIONS,
   VALIDATE_CURRENT_CART,
   VALIDATE_CURRENT_ORDER,
   SET_REQUESTED_AT,
@@ -44,9 +44,10 @@ import {
 } from '../actions/data/locations';
 import {
   FETCH_GEOLOCATIONS,
-  CLEAR_GEOLOCATIONS,
 } from '../actions/data/geolocations';
 import {
+  UPDATE_USER,
+  CREATE_USER,
   AUTHENTICATE_USER,
   FETCH_LEVELUP_LOYALTY,
   FETCH_LEVELUP_QR_CODE,
@@ -68,6 +69,12 @@ import {
   FETCH_PAST_CUSTOMER_ORDERS,
   FETCH_UPCOMING_CUSTOMER_ORDERS,
 } from '../actions/data/customerOrders';
+import {
+  FETCH_RATING,
+  CREATE_RATING,
+  UPDATE_RATING,
+  DELETE_RATING,
+} from '../actions/session/ratings';
 import { Status } from '../utils/constants';
 
 const {
@@ -76,30 +83,6 @@ const {
   PENDING,
   REJECTED,
 } = Status;
-
-const {
-  RATINGS_FETCH_START,
-  RATINGS_FETCH_SUCCESS,
-  RATINGS_FETCH_ERROR,
-  RATINGS_CREATE_START,
-  RATINGS_CREATE_SUCCESS,
-  RATINGS_CREATE_ERROR,
-  RATINGS_UPDATE_START,
-  RATINGS_UPDATE_SUCCESS,
-  RATINGS_UPDATE_ERROR,
-  RATINGS_DELETE_START,
-  RATINGS_DELETE_SUCCESS,
-  RATINGS_DELETE_ERROR,
-} = reduxCrud.actionTypesFor('ratings');
-
-const {
-  USER_UPDATE_START,
-  USER_UPDATE_SUCCESS,
-  USER_UPDATE_ERROR,
-  USER_CREATE_START,
-  USER_CREATE_SUCCESS,
-  USER_CREATE_ERROR,
-} = reduxCrud.actionTypesFor('user');
 
 const initialState = {
   setupBrandibble: IDLE,
@@ -131,6 +114,7 @@ const initialState = {
   setRequestedAt: IDLE,
   fetchPayments: IDLE,
   setPromoCode: IDLE,
+  setMiscOptions: IDLE,
   createPayment: IDLE,
   setDefaultPayment: IDLE,
   setPaymentMethod: IDLE,
@@ -159,8 +143,10 @@ const initialState = {
   createNewOrder: IDLE,
 };
 
-export default function status(state = initialState, action) {
-  switch (action.type) {
+export default (state = initialState, action) => {
+  const { type } = action;
+
+  switch (type) {
     case `${SETUP_BRANDIBBLE}_PENDING`: return { ...state, setupBrandibble: PENDING };
     case `${SETUP_BRANDIBBLE}_FULFILLED`: return { ...state, setupBrandibble: FULFILLED };
     case `${SETUP_BRANDIBBLE}_REJECTED`: return { ...state, setupBrandibble: REJECTED };
@@ -253,6 +239,10 @@ export default function status(state = initialState, action) {
     case `${SET_PROMO_CODE}_FULFILLED`: return { ...state, setPromoCode: FULFILLED };
     case `${SET_PROMO_CODE}_REJECTED`: return { ...state, setPromoCode: REJECTED };
 
+    case `${SET_MISC_OPTIONS}_PENDING`: return { ...state, setMiscOptions: PENDING };
+    case `${SET_MISC_OPTIONS}_FULFILLED`: return { ...state, setMiscOptions: FULFILLED };
+    case `${SET_MISC_OPTIONS}_REJECTED`: return { ...state, setMiscOptions: REJECTED };
+
     case `${SUBMIT_ORDER}_PENDING`: return { ...state, submitOrder: PENDING };
     case `${SUBMIT_ORDER}_FULFILLED`: return { ...state, submitOrder: FULFILLED };
     case `${SUBMIT_ORDER}_REJECTED`: return { ...state, submitOrder: REJECTED };
@@ -291,21 +281,21 @@ export default function status(state = initialState, action) {
     case `${DELETE_FAVORITE}_FULFILLED`: return { ...state, deleteFavorite: FULFILLED };
     case `${DELETE_FAVORITE}_REJECTED`: return { ...state, deleteFavorite: REJECTED };
 
-    case RATINGS_FETCH_START: return { ...state, fetchRating: PENDING };
-    case RATINGS_FETCH_SUCCESS: return { ...state, fetchRating: FULFILLED };
-    case RATINGS_FETCH_ERROR: return { ...state, fetchRating: REJECTED };
+    case `${FETCH_RATING}_PENDING`: return { ...state, fetchRating: PENDING };
+    case `${FETCH_RATING}_FULFILLED`: return { ...state, fetchRating: FULFILLED };
+    case `${FETCH_RATING}_REJECTED`: return { ...state, fetchRating: REJECTED };
 
-    case RATINGS_CREATE_START: return { ...state, createRating: PENDING };
-    case RATINGS_CREATE_SUCCESS: return { ...state, createRating: FULFILLED };
-    case RATINGS_CREATE_ERROR: return { ...state, createRating: REJECTED };
+    case `${CREATE_RATING}_PENDING`: return { ...state, createRating: PENDING };
+    case `${CREATE_RATING}_FULFILLED`: return { ...state, createRating: FULFILLED };
+    case `${CREATE_RATING}_REJECTED`: return { ...state, createRating: REJECTED };
 
-    case RATINGS_UPDATE_START: return { ...state, updateRating: PENDING };
-    case RATINGS_UPDATE_SUCCESS: return { ...state, updateRating: FULFILLED };
-    case RATINGS_UPDATE_ERROR: return { ...state, updateRating: REJECTED };
+    case `${UPDATE_RATING}_PENDING`: return { ...state, updateRating: PENDING };
+    case `${UPDATE_RATING}_FULFILLED`: return { ...state, updateRating: FULFILLED };
+    case `${UPDATE_RATING}_REJECTED`: return { ...state, updateRating: REJECTED };
 
-    case RATINGS_DELETE_START: return { ...state, deleteRating: PENDING };
-    case RATINGS_DELETE_SUCCESS: return { ...state, deleteRating: FULFILLED };
-    case RATINGS_DELETE_ERROR: return { ...state, deleteRating: REJECTED };
+    case `${DELETE_RATING}_PENDING`: return { ...state, deleteRating: PENDING };
+    case `${DELETE_RATING}_FULFILLED`: return { ...state, deleteRating: FULFILLED };
+    case `${DELETE_RATING}_REJECTED`: return { ...state, deleteRating: REJECTED };
 
     case `${VALIDATE_USER}_PENDING`: return { ...state, validateUser: PENDING };
     case `${VALIDATE_USER}_FULFILLED`: return { ...state, validateUser: FULFILLED };
@@ -375,14 +365,14 @@ export default function status(state = initialState, action) {
     case `${FETCH_USER}_FULFILLED`: return { ...state, fetchUser: FULFILLED };
     case `${FETCH_USER}_REJECTED`: return { ...state, fetchUser: REJECTED };
 
-    case USER_UPDATE_START: return { ...state, updateUser: PENDING };
-    case USER_UPDATE_SUCCESS: return { ...state, updateUser: FULFILLED };
-    case USER_UPDATE_ERROR: return { ...state, updateUser: REJECTED };
+    case `${UPDATE_USER}_PENDING`: return { ...state, updateUser: PENDING };
+    case `${UPDATE_USER}_FULFILLED`: return { ...state, updateUser: FULFILLED };
+    case `${UPDATE_USER}_REJECTED`: return { ...state, updateUser: REJECTED };
 
-    case USER_CREATE_START: return { ...state, createUser: PENDING };
-    case USER_CREATE_SUCCESS: return { ...state, createUser: FULFILLED };
-    case USER_CREATE_ERROR: return { ...state, createUser: REJECTED };
+    case `${CREATE_USER}_PENDING`: return { ...state, createUser: PENDING };
+    case `${CREATE_USER}_FULFILLED`: return { ...state, createUser: FULFILLED };
+    case `${CREATE_USER}_REJECTED`: return { ...state, createUser: REJECTED };
 
     default: return state;
   }
-}
+};

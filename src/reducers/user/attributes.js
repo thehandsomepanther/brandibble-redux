@@ -1,6 +1,7 @@
 /* eslint no-plusplus:1 */
-import reduxCrud from 'redux-crud';
 import {
+  CREATE_USER,
+  UPDATE_USER,
   AUTHENTICATE_USER,
   FETCH_USER,
   RESOLVE_USER,
@@ -9,10 +10,6 @@ import {
   REMOVE_ALLERGENS,
 } from '../../actions/session/user';
 
-const {
-  USER_CREATE_SUCCESS,
-  USER_UPDATE_SUCCESS,
-} = reduxCrud.actionTypesFor('user');
 const initialState = {};
 
 function removeAllergens(removeArr, currentArr) {
@@ -23,31 +20,33 @@ function removeAllergens(removeArr, currentArr) {
   return newArr;
 }
 
-export default function attributes(state = initialState, action) {
-  switch (action.type) {
+export default (state = initialState, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
     case `${RESOLVE_USER}_FULFILLED`:
     case `${AUTHENTICATE_USER}_FULFILLED`:
     case `${FETCH_USER}_FULFILLED`:
-      return action.payload;
+      return payload;
 
     case `${ADD_ALLERGENS}_FULFILLED`:
       return {
         ...state,
-        allergens: state.allergens.concat(action.payload.added),
+        allergens: state.allergens.concat(payload.added),
       };
 
     case `${REMOVE_ALLERGENS}_FULFILLED`:
       return {
         ...state,
-        allergens: removeAllergens(action.payload.removed, state.allergens),
+        allergens: removeAllergens(payload.removed, state.allergens),
       };
 
-    case USER_CREATE_SUCCESS:
-    case USER_UPDATE_SUCCESS:
-      return action.record;
+    case `${CREATE_USER}_FULFILLED`:
+    case `${UPDATE_USER}_FULFILLED`:
+      return payload;
     case `${UNAUTHENTICATE_USER}_FULFILLED`:
       return initialState;
     default:
       return state;
   }
-}
+};

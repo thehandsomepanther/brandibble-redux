@@ -19,7 +19,7 @@ const initialState = {
   upcoming: null,
 };
 
-export default function customerOrders(state = initialState, action) {
+export default (state = initialState, action) => {
   switch (action.type) {
     case `${FETCH_ALL_CUSTOMER_ORDERS}_FULFILLED`:
       return {
@@ -29,7 +29,7 @@ export default function customerOrders(state = initialState, action) {
     case `${SUBMIT_ORDER}_FULFILLED`: {
       return {
         ...state,
-        recentSubmission: action.payload
+        recentSubmission: action.payload,
       };
     }
     case `${FETCH_PAST_CUSTOMER_ORDERS}_FULFILLED`:
@@ -47,4 +47,4 @@ export default function customerOrders(state = initialState, action) {
     default:
       return state;
   }
-}
+};

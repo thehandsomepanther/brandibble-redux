@@ -46,13 +46,13 @@ describe('actions/session/ratings', () => {
         expect(actionsCalled).to.have.length.of.at.least(2);
       });
 
-      it('should have RATINGS_CREATE_START action', () => {
-        action = find(actionsCalled, { type: 'RATINGS_CREATE_START' });
+      it('should have CREATE_RATING_PENDING action', () => {
+        action = find(actionsCalled, { type: 'CREATE_RATING_PENDING' });
         expect(action).to.exist;
       });
 
-      it('should have RATINGS_CREATE_SUCCESS action', () => {
-        action = find(actionsCalled, { type: 'RATINGS_CREATE_SUCCESS' });
+      it('should have CREATE_RATING_FULFILLED action', () => {
+        action = find(actionsCalled, { type: 'CREATE_RATING_FULFILLED' });
         expect(action).to.exist;
       });
 
@@ -68,13 +68,13 @@ describe('actions/session/ratings', () => {
             expect(actionsCalled).to.have.length.of.at.least(2);
           });
 
-          it('should have RATINGS_FETCH_START action', () => {
-            action = find(actionsCalled, { type: 'RATINGS_FETCH_START' });
+          it('should have FETCH_RATING_PENDING action', () => {
+            action = find(actionsCalled, { type: 'FETCH_RATING_PENDING' });
             expect(action).to.exist;
           });
 
-          it('should have RATINGS_FETCH_SUCCESS action', () => {
-            action = find(actionsCalled, { type: 'RATINGS_FETCH_SUCCESS' });
+          it('should have FETCH_RATING_FULFILLED action', () => {
+            action = find(actionsCalled, { type: 'FETCH_RATING_FULFILLED' });
             expect(action).to.exist;
           });
         });
@@ -92,13 +92,13 @@ describe('actions/session/ratings', () => {
             expect(actionsCalled).to.have.length.of.at.least(2);
           });
 
-          it('should have RATINGS_UPDATE_START action', () => {
-            action = find(actionsCalled, { type: 'RATINGS_UPDATE_START' });
+          it('should have UPDATE_RATING_PENDING action', () => {
+            action = find(actionsCalled, { type: 'UPDATE_RATING_PENDING' });
             expect(action).to.exist;
           });
 
-          it('should have RATINGS_UPDATE_SUCCESS action', () => {
-            action = find(actionsCalled, { type: 'RATINGS_UPDATE_SUCCESS' });
+          it('should have UPDATE_RATING_FULFILLED action', () => {
+            action = find(actionsCalled, { type: 'UPDATE_RATING_FULFILLED' });
             expect(action).to.exist;
           });
         });
@@ -116,13 +116,13 @@ describe('actions/session/ratings', () => {
             expect(actionsCalled).to.have.length.of.at.least(2);
           });
 
-          it('should have RATINGS_DELETE_START action', () => {
-            action = find(actionsCalled, { type: 'RATINGS_DELETE_START' });
+          it('should have DELETE_RATING_PENDING action', () => {
+            action = find(actionsCalled, { type: 'DELETE_RATING_PENDING' });
             expect(action).to.exist;
           });
 
-          it('should have RATINGS_DELETE_SUCCESS action', () => {
-            action = find(actionsCalled, { type: 'RATINGS_DELETE_SUCCESS' });
+          it('should have DELETE_RATING_FULFILLED action', () => {
+            action = find(actionsCalled, { type: 'DELETE_RATING_FULFILLED' });
             expect(action).to.exist;
           });
         });

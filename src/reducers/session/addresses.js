@@ -10,7 +10,7 @@ export const initialState = {
   addressesById: {},
 };
 
-export default function addresses(state = initialState, action) {
+export default (state = initialState, action) => {
   const { payload, type } = action;
   const newState = { ...state };
 
@@ -42,4 +42,4 @@ export default function addresses(state = initialState, action) {
     default:
       return state;
   }
-}
+};
