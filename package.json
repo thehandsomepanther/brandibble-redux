@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "brandibble": "git+https://git@github.com/sanctuarycomputer/brandibble.js",
+    "brandibble": "git+https://git@github.com/thehandsomepanther/brandibble.js#rollup",
     "localforage": "^1.5.0",
     "lodash.filter": "^4.6.0",
     "lodash.find": "^4.6.0",
