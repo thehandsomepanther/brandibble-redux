@@ -1,6 +1,6 @@
 {
   "name": "brandibble-redux",
-  "version": "1.13.8",
+  "version": "1.13.9",
   "description": "A Redux Framework for Brandibble.co",
   "repository": "https://github.com/sanctuarycomputer/brandibble-redux",
   "engines": {
@@ -15,8 +15,7 @@
     "build:umd:min": "webpack src/index.js dist/brandibble-redux.min.js --config webpack.config.production.js",
     "test": "node ./node_modules/karma/bin/karma start",
     "format": "prettier-eslint \"src/**/*.js\" --write",
-    "prepublish": "npm run build",
-    "precommit": "npm run build"
+    "prepare": "npm run build"
   },
   "author": "Sanctuary Computer <hello@sanctuary.computer> (http://sanctuary.computer/)",
   "license": "MIT",
