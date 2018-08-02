@@ -20,7 +20,7 @@ export default (state = initialState, action) => {
         ...state,
         locationsById: {
           ...state.locationsById,
-          [payload.location_id]: payload,
+          [`${payload.location_id}`]: payload,
         },
       };
     case `${FETCH_LOCATION}_FULFILLED`:
@@ -42,7 +42,7 @@ export default (state = initialState, action) => {
           locationsById: {
             ...state.locationsById,
             [`${payload.locationId}`]: {
-              ...[state.locationsById[`${payload.locationId}`]],
+              ...state.locationsById[`${payload.locationId}`],
               waitTimes: payload.data,
             },
           },
@@ -56,7 +56,7 @@ export default (state = initialState, action) => {
           ...state.locationsById,
           ...reduce(payload, (acc, curr) => ({
             ...acc,
-            [curr.location_id]: curr,
+            [`${curr.location_id}`]: curr,
           }), {}),
         },
       };
