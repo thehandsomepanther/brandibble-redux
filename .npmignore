@@ -1,7 +1,5 @@
 node_modules/
-src/
 dist/
-lib/
 tests/
 .babelrc
 .editorconfig
