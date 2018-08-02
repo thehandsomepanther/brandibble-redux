@@ -37,6 +37,7 @@ import {
   SET_LINE_ITEM_MADE_FOR,
   SET_LINE_ITEM_INSTRUCTIONS,
   SET_PAYMENT_METHOD,
+  BIND_CUSTOMER_TO_ORDER,
 } from '../actions/session/order';
 import {
   FETCH_LOCATIONS,
@@ -118,6 +119,7 @@ const initialState = {
   createPayment: IDLE,
   setDefaultPayment: IDLE,
   setPaymentMethod: IDLE,
+  bindCustomerToOrder: IDLE,
   deletePayment: IDLE,
   fetchFavorites: IDLE,
   createFavorite: IDLE,
@@ -190,6 +192,10 @@ export default (state = initialState, action) => {
     case `${SET_PAYMENT_METHOD}_PENDING`: return { ...state, setPaymentMethod: PENDING };
     case `${SET_PAYMENT_METHOD}_FULFILLED`: return { ...state, setPaymentMethod: FULFILLED };
     case `${SET_PAYMENT_METHOD}_REJECTED`: return { ...state, setPaymentMethod: REJECTED };
+
+    case `${BIND_CUSTOMER_TO_ORDER}_PENDING`: return { ...state, bindCustomerToOrder: PENDING };
+    case `${BIND_CUSTOMER_TO_ORDER}_FULFILLED`: return { ...state, bindCustomerToOrder: FULFILLED };
+    case `${BIND_CUSTOMER_TO_ORDER}_REJECTED`: return { ...state, bindCustomerToOrder: REJECTED };
 
     case `${FETCH_ALL_CUSTOMER_ORDERS}_PENDING`: return { ...state, fetchAllCustomerOrders: PENDING };
     case `${FETCH_ALL_CUSTOMER_ORDERS}_FULFILLED`: return { ...state, fetchAllCustomerOrders: FULFILLED };
