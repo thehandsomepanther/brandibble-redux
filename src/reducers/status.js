@@ -3,6 +3,7 @@ import {
   SEND_SUPPORT_TICKET,
   SETUP_BRANDIBBLE,
   SETUP_BRANDIBBLE_REDUX,
+  RESET_APPLICATION,
 } from '../actions/application';
 import {
   CREATE_ADDRESS,
@@ -88,6 +89,7 @@ const initialState = {
   setupBrandibble: IDLE,
   setupBrandibbleRedux: IDLE,
   sendSupportTicket: IDLE,
+  resetApplication: IDLE,
   fetchAddresses: IDLE,
   createAddress: IDLE,
   deleteAddress: IDLE,
@@ -372,6 +374,9 @@ export default (state = initialState, action) => {
     case `${CREATE_USER}_PENDING`: return { ...state, createUser: PENDING };
     case `${CREATE_USER}_FULFILLED`: return { ...state, createUser: FULFILLED };
     case `${CREATE_USER}_REJECTED`: return { ...state, createUser: REJECTED };
+
+    case `${RESET_APPLICATION}_PENDING`: return { ...state, resetApplication: PENDING };
+    case `${RESET_APPLICATION}_REJECTED`: return { ...state, resetApplication: REJECTED };
 
     default: return state;
   }

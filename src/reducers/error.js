@@ -3,6 +3,7 @@ import {
   SEND_SUPPORT_TICKET,
   SETUP_BRANDIBBLE,
   SETUP_BRANDIBBLE_REDUX,
+  RESET_APPLICATION,
 } from '../actions/application';
 
 // addresses
@@ -98,6 +99,7 @@ export const initialState = {
   sendSupportTicket: null,
   setupBrandibble: null,
   setupBrandibbleRedux: null,
+  resetApplication: null,
   // allergens
   fetchAllergens: null,
   addAllergens: null,
@@ -329,6 +331,9 @@ export default (state = initialState, action) => {
 
     case `${CREATE_USER}_PENDING`: return { ...state, createUser: null };
     case `${CREATE_USER}_REJECTED`: return { ...state, createUser: action.error };
+
+    case `${RESET_APPLICATION}_PENDING`: return { ...state, resetApplication: null };
+    case `${RESET_APPLICATION}_REJECTED`: return { ...state, resetApplication: action.error };
 
     default: return state;
   }

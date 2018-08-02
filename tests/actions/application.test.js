@@ -8,6 +8,7 @@ import {
   sendSupportTicket,
   setupBrandibble,
   setupBrandibbleRedux,
+  resetApplication,
 } from 'actions/application';
 import { brandibble } from '../config/stubs';
 
@@ -79,6 +80,38 @@ describe('actions/application', () => {
 
     it('should have SEND_SUPPORT_TICKET_FULFILLED action', () => {
       action = find(actionsCalled, { type: 'SEND_SUPPORT_TICKET_FULFILLED' });
+      expect(action).to.exist;
+    });
+  });
+
+  describe('resetApplication', () => {
+    before(() => {
+      return resetApplication(brandibble)(store.dispatch).then(() => {
+        actionsCalled = store.getActions();
+      });
+    });
+
+    it('should call at least 4 actions', () => {
+      expect(actionsCalled).to.have.length.of.at.least(4);
+    });
+
+    it('should have the RESET_APPLICATION_PENDING action', () => {
+      action = find(actionsCalled, { type: 'RESET_APPLICATION_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have the RESET_APPLICATION_FULFILLED action', () => {
+      action = find(actionsCalled, { type: 'RESET_APPLICATION_FULFILLED' });
+      expect(action).to.exist;
+    });
+
+    it('should have SETUP_BRANDIBBLE_REDUX_PENDING action', () => {
+      action = find(actionsCalled, { type: 'SETUP_BRANDIBBLE_REDUX_PENDING' });
+      expect(action).to.exist;
+    });
+
+    it('should have SETUP_BRANDIBBLE_REDUX_FULFILLED action', () => {
+      action = find(actionsCalled, { type: 'SETUP_BRANDIBBLE_REDUX_FULFILLED' });
       expect(action).to.exist;
     });
   });
