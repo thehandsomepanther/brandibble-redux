@@ -1,7 +1,6 @@
 import reduce from 'lodash.reduce';
 import pickBy from 'lodash.pickby';
 import { UNAUTHENTICATE_USER } from '../../actions/session/user';
-
 import {
   CREATE_PAYMENT,
   DELETE_PAYMENT,

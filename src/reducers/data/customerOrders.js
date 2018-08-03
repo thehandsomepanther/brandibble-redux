@@ -3,11 +3,9 @@ import {
   FETCH_PAST_CUSTOMER_ORDERS,
   FETCH_UPCOMING_CUSTOMER_ORDERS,
 } from '../../actions/data/customerOrders';
-
 import {
   UNAUTHENTICATE_USER,
 } from '../../actions/session/user';
-
 import {
   SUBMIT_ORDER,
 } from '../../actions/session/order';

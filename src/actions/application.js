@@ -6,6 +6,7 @@ import { resolveUser } from './session/user';
 export const SETUP_BRANDIBBLE = 'SETUP_BRANDIBBLE';
 export const SETUP_BRANDIBBLE_REDUX = 'SETUP_BRANDIBBLE_REDUX';
 export const SEND_SUPPORT_TICKET = 'SEND_SUPPORT_TICKET';
+export const RESET_APPLICATION = 'RESET_APPLICATION';
 
 // setupBrandibble
 export const setupBrandibble = brandibble => (dispatch) => {
@@ -43,4 +44,11 @@ export const sendSupportTicket = (brandibble, data = sendSupportTicketDefaults) 
     .sendSupportTicket(Object.assign({}, sendSupportTicketDefaults, data))
     .catch(handleErrors);
   return dispatch(fireAction(SEND_SUPPORT_TICKET, payload));
+};
+
+export const resetApplication = brandibble => (dispatch) => {
+  const payload = brandibble.reset().catch(handleErrors);
+  return dispatch(fireAction(RESET_APPLICATION, payload)).then(() => {
+    return dispatch(setupBrandibbleRedux(brandibble));
+  }).catch(handleErrors);
 };
