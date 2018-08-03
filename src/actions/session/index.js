@@ -46,7 +46,7 @@ export {
   createUser,
   fetchLevelUpLoyalty,
   fetchLevelUpQRCode,
-  fetchLevelUpCampaign.
+  fetchLevelUpCampaign,
   updateLevelUpConnection,
   connectLevelUp,
   disconnectLevelUp,
