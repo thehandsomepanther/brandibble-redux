@@ -1,5 +1,4 @@
 import BrandibbleRef from 'brandibble';
-import 'babel-polyfill';
 
 import middleware from './config/middleware';
 import reducers from './reducers';
