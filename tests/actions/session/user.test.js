@@ -14,6 +14,8 @@ import {
   disconnectLevelUp,
   fetchLevelUpPaymentMethod,
   fetchUser,
+  resetUserPassword,
+  updateUserPassword,
   resolveUser,
   unauthenticateUser,
   updateUser,
@@ -348,6 +350,52 @@ describe('actions/session/user', () => {
 
           it('should have FETCH_USER_FULFILLED action', () => {
             action = find(actionsCalled, { type: 'FETCH_USER_FULFILLED' });
+            expect(action).to.exist;
+          });
+        });
+
+        describe('resetUserPassword', () => {
+          before(() => {
+            store.clearActions();
+            return resetUserPassword(brandibble, {
+              email: 'sanctuary-testing-customer@example.com',
+            })(store.dispatch).then(() => {
+              actionsCalled = store.getActions();
+            });
+          });
+
+          it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
+
+          it('should have RESET_USER_PASSWORD_PENDING action', () => {
+            action = find(actionsCalled, { type: 'RESET_USER_PASSWORD_PENDING' });
+            expect(action).to.exist;
+          });
+
+          it('should have RESET_USER_PASSWORD_FULFILLED action', () => {
+            action = find(actionsCalled, { type: 'RESET_USER_PASSWORD_FULFILLED' });
+            expect(action).to.exist;
+          });
+        });
+
+        describe('updateUserPassword', () => {
+          before(() => {
+            store.clearActions();
+            return updateUserPassword(brandibble, '123141254jlasdfjwqer', {
+              password: 'newpassword',
+            })(store.dispatch).then(() => {
+              actionsCalled = store.getActions();
+            });
+          });
+
+          it('should call at least 2 actions', () => expect(actionsCalled).to.have.length.of.at.least(2));
+
+          it('should have UPDATE_USER_PASSWORD_PENDING action', () => {
+            action = find(actionsCalled, { type: 'UPDATE_USER_PASSWORD_PENDING' });
+            expect(action).to.exist;
+          });
+
+          it('should have UPDATE_USER_PASSWORD_FULFILLED action', () => {
+            action = find(actionsCalled, { type: 'UPDATE_USER_PASSWORD_FULFILLED' });
             expect(action).to.exist;
           });
         });
