@@ -4,21 +4,7 @@ import pkg from './package.json';
 
 export default {
   input: 'src/index.js',
-  external: [
-    'babel-polyfill',
-    'brandibble',
-    'localforage',
-    'lodash.filter',
-    'lodash.find',
-    'lodash.map',
-    'lodash.pickby',
-    'lodash.reduce',
-    'moment',
-    'redux',
-    'redux-promise-middleware',
-    'redux-thunk',
-    'reselect',
-  ],
+  external: Object.keys(pkg.dependencies),
   output: {
     file: pkg.main,
     format: 'cjs',
