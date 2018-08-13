@@ -78,6 +78,7 @@ import {
   FETCH_LEVELUP_PAYMENT_METHOD,
   FETCH_USER,
   RESET_USER_PASSWORD,
+  UPDATE_USER_PASSWORD,
   RESET_LEVELUP_PASSWORD,
   RESOLVE_USER,
   UNAUTHENTICATE_USER,
@@ -319,6 +320,9 @@ export default (state = initialState, action) => {
 
     case `${RESET_USER_PASSWORD}_PENDING`: return { ...state, resetUserPassword: null };
     case `${RESET_USER_PASSWORD}_REJECTED`: return { ...state, resetUserPassword: payload };
+
+    case `${UPDATE_USER_PASSWORD}_PENDING`: return { ...state, updateUserPassword: null };
+    case `${UPDATE_USER_PASSWORD}_REJECTED`: return { ...state, updateUserPassword: payload };
 
     case `${RESET_LEVELUP_PASSWORD}_PENDING`: return { ...state, resetLevelUpPassword: null };
     case `${RESET_LEVELUP_PASSWORD}_REJECTED`: return { ...state, resetLevelUpPassword: payload };
